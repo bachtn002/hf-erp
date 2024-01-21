@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="product_supplier_info_form_inherit" model="ir.ui.view">
+        <field name="name">product.supplierinfo.listed.price</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[2]//div[1]" position="after">
+                <field name="x_listed_price"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="before">
+                <field name="x_price_location"/>
+                <field name="x_check_required" invisible="1"/>
+                <field name="x_region_ids" widget="many2many_tags"
+                       attrs="{'invisible': [('x_price_location', '=', False)], 'required': [('x_check_required', '=', True)]}"
+                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                <field name="x_warehouse_ids" widget="many2many_tags"
+                       attrs="{'invisible': [('x_price_location', '=', False)], 'required': [('x_check_required', '=', True)]}"
+                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_supplier_ref_tree_inherit" model="ir.ui.view">
+        <field name="name">product.supplierinfo.ref.tree</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="x_partner_ref"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_supplier_ref_search_inherit" model="ir.ui.view">
+        <field name="name">product.supplierinfo.ref.tree</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="x_partner_ref"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

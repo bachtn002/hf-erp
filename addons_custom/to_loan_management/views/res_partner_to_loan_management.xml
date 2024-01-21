@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_to_loan_management_view">
+            <field name="name">res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bank_ids']//tree//field[@name='acc_number']" position="before">
+					<field name="x_branch_bank"/>
+                </xpath>
+                <xpath expr="//field[@name='bank_ids']//tree//field[@name='acc_number']" position="after">
+					<field name="x_swift_bank"/>
+	            </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_bank_form_inherit_swift" model="ir.ui.view">
+            <field name="name">res.partner.bank.view.form.inherit.swift</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+                <field name="acc_number" position="after">
+					<field name="x_swift_bank"/>
+                </field>
+                <field name="bank_id" position="after">
+					<field name="x_branch_bank"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

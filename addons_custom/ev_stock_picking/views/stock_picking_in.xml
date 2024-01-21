@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_picking_tree_in" model="ir.actions.act_window">
+        <field name="name">Picking In</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,kanban,form,calendar</field>
+        <field name="domain">[('picking_type_id.code', '=', 'incoming')]</field>
+        <field name="context">{'create': False, 'contact_display': 'partner_address', 'default_company_id':
+            allowed_company_ids[0]}
+        </field>
+        <field name="search_view_id" ref="stock.view_picking_internal_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Picking In found. Let's create one!
+            </p>
+            <p>
+                Transfers allow you to move products from one location to another.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_stock_picking_in" sequence="6" name="Stock Picking In" parent="stock.menu_stock_warehouse_mgmt" groups="stock.group_stock_user" action="action_picking_tree_in"/>
+
+    <record id="view_picking_form_inherit_button_header" model="ir.ui.view">
+        <field name="name">view.picking.form.inherit.button.header</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_scrap']" position="replace">
+            </xpath>
+            <xpath expr="//button[@name='action_toggle_is_locked']" position="replace">
+            </xpath>
+            <xpath expr="//button[@name='do_print_picking']" position="replace">
+                <button name="do_print_bill_picking" string="Print" groups="stock.group_stock_user" type="object" attrs="{'invisible': ['|','|',('state', 'not in', ('done')),('picking_type_code', '!=', 'incoming'),('partner_id', '=', False)]}"/>
+                <button name="do_print_bill_transfer" string="Print bill transef" groups="stock.group_stock_user" type="object" attrs="{'invisible': ['|',('state', 'not in', ('done')),('x_check_warehouse', '=', False)]}"/>
+                <button name="do_print_picking" string="Print Picking In" groups="account.group_account_user" type="object" attrs="{'invisible': ['|',('state', 'not in', ('assigned', 'partially_available','done')),('picking_type_code', '!=', 'incoming')]}"/>
+                <button name="do_print_picking" string="Print Picking Out" groups="stock.group_stock_user" type="object" attrs="{'invisible': ['|',('state', 'not in', ('assigned', 'partially_available','done')),('picking_type_code', '!=', 'outgoing')]}"/>
+                <button name="do_print_picking_user" string="Print Picking In User" groups="stock.group_stock_user" type="object" attrs="{'invisible': ['|',('state', 'not in', ('assigned', 'partially_available','done')),('picking_type_code', '!=', 'incoming')]}"/>
+
+                <button name="do_print_picking_return" type="object" states="done" string="Print Bill picking return" />
+            </xpath>
+            <xpath expr="//button[@name='%(stock.action_report_delivery)d']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field name="x_warehouse_out_id" attrs="{'invisible': [('x_check_warehouse', '=', False)]}"/>
+                <field name="x_warehouse_in_id" attrs="{'invisible': [('x_check_warehouse', '=', False)]}"/>
+                <field name="x_check_warehouse" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='date_done']" position="attributes">
+                <attribute name="string">Effective Date</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_view_stock_valuation_layers']" position="attributes">
+                <attribute name="groups">
+                    account.group_account_user,account.group_account_invoice,account.group_account_manager
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='do_unreserve']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_cancel']" position="attributes">
+                <attribute name="groups">ev_stock_picking_cancel.group_stock_picking_cancel</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_picking_custom_tree_view_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.custom.tree.view.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-info">state == 'draft'</attribute>
+                <attribute name="decoration-muted">state == 'cancel'</attribute>
+                <attribute name="decoration-danger">state not in ('draft','done','cancel','assigned')</attribute>
+                <attribute name="decoration-success">state == 'assigned'</attribute>
+
+                <attribute name="default_order">create_date desc</attribute>
+
+            </xpath>
+            <xpath expr="//field[@name='location_dest_id']" position="after">
+                <field name="x_warehouse_in_name"/>
+                <field name="x_warehouse_out_name"/>
+
+                <!--                <field name="x_location_in_name" invisible="1"/>-->
+                <!--                <field name="x_location_out_name" invisible="1"/>-->
+            </xpath>
+            <xpath expr="//field[@name='scheduled_date']" position="attributes">
+                <attribute name="widget"></attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="stock_picking_custom_search_view_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.custom.search.view.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='picking_type_id']" position="after">
+                <field name="x_warehouse_in_name" operator="ilike"/>
+                <field name="x_warehouse_out_name" operator="ilike"/>
+                <field name="location_id" filter_domain="[('location_id.complete_name', 'ilike', self)]"/>
+                <field name="location_dest_id" filter_domain="[('location_dest_id.complete_name', 'ilike', self)]"/>
+            </xpath>
+        </field>
+    </record>
+    <menuitem id="stock.all_picking" name="All Transfers" parent="stock.menu_stock_warehouse_mgmt" sequence="5" action="stock.action_picking_tree_all" groups="stock.group_stock_manager,stock.group_stock_user"/>
+</odoo>

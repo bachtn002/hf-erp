@@ -1,0 +1,450 @@
+
+#. module: ev_payment_qrcode
+#: code:addons/ev_payment_qrcode/helpers/Response.py:0
+#, python-format
+msgid "An error occurred, please try again later."
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.actions.act_window,name:ev_payment_qrcode.callback_payment_log_action
+#: model:ir.model,name:ev_payment_qrcode.model_callback_payment_log
+#: model:ir.ui.menu,name:ev_payment_qrcode.callback_payment_log_menu
+msgid "Callback Payment Log"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__payment_qrcode_transaction__state__checked
+msgid "Checked"
+msgstr "Đã đối soát"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__callback_payment_log__type__log_checked_payment_result
+msgid "Checked Payment Result"
+msgstr "Đối soát kết quả thanh toán"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__create_uid
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__create_date
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_create_order_qrcode_res__create_date
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__display_name
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__display_name
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_shop__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__callback_payment_log__state__done
+msgid "Done"
+msgstr "Hoàn thành  "
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__callback_payment_log__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__callback_payment_log__state__error
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__error_code
+msgid "Error Code"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#. openerp-web
+#: code:addons/ev_payment_qrcode/static/src/xml/qrcode_popup.xml:0
+#, python-format
+msgid "Huỷ"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__id
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__id
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_payment_method__id
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_shop__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: code:addons/ev_payment_qrcode/controllers/api_payment_result.py:0
+#, python-format
+msgid "INTERNAL_SERVER_ERROR"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__ip_request
+msgid "Ip request"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_payment_method__is_qrcode_payment
+msgid "Is QRCode Payment"
+msgstr "Là phương thức thanh toán QRCode"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_payment_channel
+msgid "Kênh thực hiện giao dịch của khách hàng"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log____last_update
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction____last_update
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_shop____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__write_uid
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__write_date
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__mac
+msgid "MAC"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__mac_type
+msgid "MAC Type"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__callback_payment_log__type__log_mb_payment_result
+msgid "MB Payment Result"
+msgstr "Kết quả thanh toán MB"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_shop__merchant_id
+msgid "Merchant"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_issuer_response_code
+msgid "Mã code issuer trả về"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__error_code
+msgid "Mã code trả về cho merchant"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_transaction_number
+msgid "Mã giao dịch phía MB"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_issuer_txn_reference
+msgid "Mã giao dịch phía issuer"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_payment_method
+msgid "Mã phương thức thanh toaán"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__session_id
+msgid "Mã session thanh toán định danh cho giao dịch thanh toán vừa tạo"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_order_reference
+msgid "Mã tham chiếu giao dịch phía merchant"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_issuer_code
+msgid "Mã tổ chức phát hành"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_merchant_id
+msgid "Mã định danh merchant do MB cấp"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#. openerp-web
+#: code:addons/ev_payment_qrcode/static/src/xml/qrcode_popup.xml:0
+#, python-format
+msgid "Mở"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_order_info
+msgid "Nội dung thanh toán"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__order_reference
+msgid "Order Reference"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_amount
+msgid "PG Amount"
+msgstr "Số tiền thanh toán"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_card_holder_name
+msgid "PG Card Holder Name"
+msgstr "Tên chủ thẻ"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_card_number
+msgid "PG Card Number"
+msgstr "Số tài khoản ngân hàng"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_currency
+msgid "PG Currency"
+msgstr "Đơn vị tiền tệ"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_issuer_code
+msgid "PG Issuer Code"
+msgstr "Mã tổ chức phát hành"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_issuer_response_code
+msgid "PG Issuer Response Code"
+msgstr "Mã code issuer trả về"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_issuer_txn_reference
+msgid "PG Issuer TXN Reference"
+msgstr "Mã giao dịch phía issuer"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_merchant_id
+msgid "PG Merchant ID"
+msgstr "Mã định danh merchant do MB cấp"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_order_info
+msgid "PG Order Info"
+msgstr "Nội dung thanh toán"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_create_order_qrcode_res__pg_order_reference
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_order_reference
+msgid "PG Order Reference"
+msgstr "Mã tham chiếu giao dịch phía merchant"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_payment_channel
+msgid "PG Payment Channel"
+msgstr "Kênh thực hiện giao dịch của khách hàng"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_payment_method
+msgid "PG Payment Method"
+msgstr "Mã phương thức thanh toán"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_paytime
+msgid "PG Paytime"
+msgstr "Thời gian giao dịch"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pg_transaction_number
+msgid "PG Transaction Number"
+msgstr "Mã giao dịch phía MB"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__payment_qrcode_transaction__state__paid
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: ev_payment_qrcode
+#: model:ir.actions.act_window,name:ev_payment_qrcode.payment_qrcode_transaction_new_action
+#: model:ir.ui.menu,name:ev_payment_qrcode.payment_qrcode_transaction_new_menu
+msgid "Payment QR Trans New"
+msgstr "Thông tin thanh toán QRCode"
+
+#. module: ev_payment_qrcode
+#: model:ir.model,name:ev_payment_qrcode.model_payment_qrcode_transaction
+msgid "Payment QRCode Transaction"
+msgstr "Thông tin thanh toán QRCode"
+
+#. module: ev_payment_qrcode
+#: model:ir.model,name:ev_payment_qrcode.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_payment_qrcode
+#: model:ir.model,name:ev_payment_qrcode.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Phương thức thanh toán Điểm bán hàng"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__order_id
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pos_session_id
+msgid "Pos Session"
+msgstr "Phiên bán hàng"
+
+#. module: ev_payment_qrcode
+#: model:ir.model,name:ev_payment_qrcode.model_pos_shop
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__pos_shop_id
+msgid "Pos Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields.selection,name:ev_payment_qrcode.selection__callback_payment_log__state__queue
+msgid "Queue"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__response
+msgid "Response"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: code:addons/ev_payment_qrcode/controllers/api_payment_result.py:0
+#, python-format
+msgid "SUCCESS"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__session_id
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_create_order_qrcode_res__session_id
+msgid "Session ID"
+msgstr "Mã session định danh"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__state
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_amount
+msgid "Số tiền thanh toán"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_card_number
+msgid "Số tài khoản ngân hàng/Số thẻ sử dụng thanh toán"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#. openerp-web
+#: code:addons/ev_payment_qrcode/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_payment_qrcode/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_payment_qrcode/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_payment_qrcode/static/src/js/QRCodePopup.js:0
+#: code:addons/ev_payment_qrcode/static/src/js/QRCodePopup.js:0
+#, python-format
+msgid "Thông báo"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_paytime
+msgid "Thời gian giao dịch - <ddMMyyyyHHmiss>"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#. openerp-web
+#: code:addons/ev_payment_qrcode/static/src/xml/qrcode_popup.xml:0
+#, python-format
+msgid "Thời hạn thanh toán"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_callback_payment_log__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_card_holder_name
+msgid "Tên chủ thẻ"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_qrcode_transaction__x_view_all_shop
+msgid "X View All Shop"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#. openerp-web
+#: code:addons/ev_payment_qrcode/static/src/xml/qrcode_popup.xml:0
+#, python-format
+msgid "Xác nhận"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: code:addons/ev_payment_qrcode/controllers/api_payment_result.py:0
+#, python-format
+msgid "YOUR_IP_ADDRESS_NOT_ALLOWED_TO_ACCESS_API"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#. openerp-web
+#: code:addons/ev_payment_qrcode/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "message"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,help:ev_payment_qrcode.field_payment_qrcode_transaction__pg_currency
+msgid "Đơn vị tiền tệ"
+msgstr ""
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_pos_order__pg_order_reference
+msgid "Pg Order Reference"
+msgstr "Mã tham chiếu giao dịch phía merchant"
+
+#. module: ev_payment_qrcode
+#: model:ir.model,name:ev_payment_qrcode.model_payment_create_order_qrcode_res
+msgid "Payment Create Order QRCode Response"
+msgstr "Kết quả tạo mới mã qrcode"
+
+#. module: ev_payment_qrcode
+#: model:ir.actions.act_window,name:ev_payment_qrcode.payment_create_order_qrcode_res_action
+msgid "payment_create_order_qrcode_res_action"
+msgstr "Kết quả tạo mới mã qrcode"
+
+#. module: ev_payment_qrcode
+#: model:ir.ui.menu,name:ev_payment_qrcode.payment_create_order_qrcode_res_menu
+msgid "Create QRCode Response"
+msgstr "Kết quả tạo mới mã qrcode"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_create_order_qrcode_res__time_received_response_create_order
+msgid "Time Received Response"
+msgstr "Thời điểm nhận phản hồi"
+
+#. module: ev_payment_qrcode
+#: model:ir.model.fields,field_description:ev_payment_qrcode.field_payment_create_order_qrcode_res__time_sent_request_create_order
+msgid "Time Sent Request"
+msgstr "Thời điểm gửi yêu cầu lấy mã QR"
+

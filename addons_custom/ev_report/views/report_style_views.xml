@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="report_style_tree" model="ir.ui.view">
+            <field name="name">Report Style Tree</field>
+            <field name="model">report.style</field>
+            <field name="arch" type="xml">
+                <tree string="Report Style Tree">
+                    <field name="name" />
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="report_style_form" model="ir.ui.view">
+            <field name="name">Report Style Form</field>
+            <field name="model">report.style</field>
+            <field name="arch" type="xml">
+                <form string="Report Style Form">
+                    <sheet>
+                        <group col="1">
+                            <field name="name" />
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                            <field name="thead_line_ids" domain="[('type', '=', 'thead')]" context="{'default_type': 'thead'}">
+                                <tree editable="bottom">
+                                    <field name="css_key" />
+                                    <field name="css_value" />
+                                </tree>
+                            </field>
+                            <field name="tbody_line_ids" domain="[('type', '=', 'tbody')]" context="{'default_type': 'tbody'}">
+                                <tree editable="bottom">
+                                    <field name="css_key" />
+                                    <field name="css_value" />
+                                </tree>
+                            </field>
+                            <field name="tfoot_line_ids" domain="[('type', '=', 'tfoot')]" context="{'default_type': 'tfoot'}">
+                                <tree editable="bottom">
+                                    <field name="css_key" />
+                                    <field name="css_value" />
+                                </tree>
+                            </field>
+                            <field name="index_line_ids" domain="[('type', '=', 'index')]" context="{'default_type': 'index'}">
+                                <tree editable="bottom">
+                                    <field name="css_key" />
+                                    <field name="css_value" />
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="report_style_action" model="ir.actions.act_window">
+            <field name="name">Report Style Action</field>
+            <field name="res_model">report.style</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="report_style_menu" name="Report Style" action="report_style_action" parent="ev_report.ev_report_menu_categ" sequence="10" />
+    </data>
+</odoo>

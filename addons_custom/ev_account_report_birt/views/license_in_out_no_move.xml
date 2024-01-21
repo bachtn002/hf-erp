@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_license_in_out_no_move_view_form" model="ir.ui.view">
+            <field name="name">license.in.no.move</field>
+            <field name="model">license.in.out.no.move</field>
+            <field name="arch" type="xml">
+                <form string="License In Out No Move">
+                    <group>
+                        <group>
+                            <field name="date_from" required="1" string="From date"/>
+                            <field name="date_to" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="type" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_license_in_out_no_move" model="ir.actions.act_window">
+            <field name="name">License In Out No Move</field>
+            <field name="res_model">license.in.out.no.move</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_license_in_out_no_move_view_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_license_in_out_no_move" groups="account.group_account_user"
+                  name="License In Out No Move" action="action_license_in_out_no_move"
+                  parent="account.account_reports_legal_statements_menu"
+                  sequence="100"/>
+
+    </data>
+</odoo>

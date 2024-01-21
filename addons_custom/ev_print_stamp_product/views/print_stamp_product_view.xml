@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="print_stamp_product_view_form" model="ir.ui.view">
+            <field name="name">Print Stamp Product Form</field>
+            <field name="model">print.stamp</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div>
+                            <h1 style="text-align: center;">
+                                <b>Print Stamp Product</b>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="shop_id" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                <field name="company_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="pricelist_id" required="1" readonly="1" force_save="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                <field name="stamp_type" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <span style="width: 30px; padding-left:10px">
+                                    <button name="print_stamp_product" type="object" string="Print" class="oe_highlight" attrs="{'invisible': [('stamp_type', '!=', 'product')]}" style="width: 50px"/>
+                                </span>
+                                <field name="print_stamp_line_ids">
+                                    <tree editable="bottom" create="0" delete="0">
+                                        <field name="qty_printing" width="100px" force_save="1" style="text-align: center"/>
+                                        <field name="product_id" width="420px" force_save="1" readonly="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                        <field name="origin" width="" force_save="1" readonly="1"/>
+                                        <field name="price_unit"  width="130px" force_save="1" readonly="1"/>
+                                        <field name="uom_id" width="70px"  force_save="1" readonly="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                        <field name="packed_date" width="130px" force_save="1" required="0" readonly="1"/>
+                                        <field name="expire_date" width="130px" force_save="1" readonly="1"/>
+                                        <field name="print_stamp_id" invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="product_id" force_save="1" readonly="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                                <field name="uom_id" readonly="1" force_save="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                                <field name="origin" width="" force_save="1" readonly="0"/>
+                                                <field name="price_unit" readonly="1" force_save="1"/>
+                                            </group>
+                                            <group>
+                                                <field name="packed_date" force_save="1" required="1"/>
+                                                <field name="expire_date" force_save="1"/>
+                                                <field name="print_stamp_id" invisible="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="print_stamp_product_action" model="ir.actions.act_window">
+            <field name="name">Print Stamp Product Action</field>
+            <field name="res_model">print.stamp</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('print_stamp_product_view_form')})]"/>
+            <field name="domain">[('stamp_type','=','product')]</field>
+            <field name="context">{'default_stamp_type': 'product'}</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_print_stamp_product" name="Print Stamp Product" parent="stock.menu_stock_inventory_control" action="print_stamp_product_action" sequence="2"/>
+        <menuitem id="menu_print_stamp_product_2" name="Print Stamp Product" parent="point_of_sale.pos_config_menu_catalog" action="print_stamp_product_action" sequence="20"/>
+    </data>
+
+
+</odoo>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_stock_product_detail_form" model="ir.ui.view">
+            <field name="name">Stock Product Detail Report</field>
+            <field name="model">rpt.stock.product.detail</field>
+            <field name="arch" type="xml">
+                <form string="Stock Product Detail Report">
+                    <group>
+                        <div>
+                            <h1 style="text-align: center;">Sổ chi tiết Vật tư hàng hóa</h1>
+                        </div>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                            <field name="branch_id" required="1" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                            <field name="product_ids" widget="many2many_tags"
+                                options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                        </group>
+                    </group>
+                    <button name="action_generate" type="object" class="oe_highlight" string="View Report"/>
+                    -
+                    <button name="action_export_excel" type="object" class="oe_highlight" string="Export Excel"/>
+                    <notebook>
+                        <page string="Details">
+                            <field name="detail_line" readonly="1" force_save="1">
+                                <tree limit="1000" decoration-danger="seq_num == 2">
+                                    <field name="seq_num" invisible="1"/>
+                                    <field name="product_id"/>
+                                    <field name="order_name"/>
+                                    <field name="partner_name"/>
+                                    <field name="move_id" widget="many2one"/>
+                                    <field name="date_accounting"/>
+                                    <field name="date_document"/>
+                                    <field name="move_note"/>
+                                    <field name="uom_id"/>
+                                    <field name="price_unit"/>
+                                    <field name="in_quantity"/>
+                                    <field name="in_value"/>
+                                    <field name="out_quantity"/>
+                                    <field name="out_value"/>
+                                    <field name="stock_quantity"/>
+                                    <field name="stock_value"/>
+                                    <field name="account_code"/>
+                                    <field name="contra_account_code"/>
+                                </tree>
+                                <form readonly="1">
+                                    <group>
+                                        <group>
+                                            <field name="seq_num" invisible="1"/>
+                                            <field name="product_id"/>
+                                            <field name="move_id"/>
+                                            <field name="date_accounting"/>
+                                            <field name="date_document"/>
+                                            <field name="move_note"/>
+                                            <field name="uom_id"/>
+                                            <field name="price_unit"/>
+                                        </group>
+                                        <group>
+                                            <field name="in_quantity"/>
+                                            <field name="in_value"/>
+                                            <field name="out_quantity"/>
+                                            <field name="out_value"/>
+                                            <field name="stock_quantity"/>
+                                            <field name="stock_value"/>
+                                            <field name="account_code"/>
+                                            <field name="contra_account_code"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_stock_product_detail" model="ir.actions.act_window">
+            <field name="name">Stock Product Detail Report</field>
+            <field name="res_model">rpt.stock.product.detail</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_stock_product_detail_form"/>
+            <field name="target">current</field>
+        </record>
+        <!-- menu -->
+        <menuitem id="menu_rpt_stock_product_detail"
+                  name="Stock Product Detail Report" action="action_rpt_stock_product_detail"
+                  parent="stock.menu_warehouse_report"
+                  sequence="38"/>
+        <menuitem id="menu_rpt_stock_product_detail_account" name="Stock Product Detail Report"
+                  action="action_rpt_stock_product_detail"
+                  parent="menu_report_stock"
+                  sequence="15"/>
+    </data>
+</odoo>

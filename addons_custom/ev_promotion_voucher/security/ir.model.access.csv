@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_promotion_voucher,access_promotion_voucher,model_promotion_voucher,,1,1,1,1
+access_promotion_voucher_line,access_promotion_voucher_line,model_promotion_voucher_line,,1,1,1,1
+access_promotion_voucher_status,access_promotion_voucher_status,model_promotion_voucher_status,,1,1,1,1
+access_promotion_voucher_count,access_promotion_voucher_count,model_promotion_voucher_count,,1,1,1,1
+access_update_promotion_code,access_update_promotion_code_name,model_update_promotion_code,,1,1,1,1

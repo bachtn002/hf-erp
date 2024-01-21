@@ -1,0 +1,90 @@
+<odoo>
+    <data>
+        <record id="zns_information_view_tree" model="ir.ui.view">
+            <field name="name">ZNS Information Tree</field>
+            <field name="model">zns.information</field>
+            <field name="arch" type="xml">
+                <tree string="ZNS Information Tree">
+                    <field name="tracking_id"/>
+                    <field name="template_id"/>
+                    <field name="order_id"/>
+                    <field name="msg_id"/>
+                    <field name="sent_time"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="zns_information_view_from" model="ir.ui.view">
+            <field name="name">ZNS Information Form</field>
+            <field name="model">zns.information</field>
+            <field name="arch" type="xml">
+                <form string="ZNS Information Form">
+                    <header>
+                        <button name="action_send_zns" type="object" states="draft"
+                                string="Send ZNS" class="oe_highlight"/>
+                        <button name="back_to_draft" type="object" states="error"
+                                string="Back to draft" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,queue,error,done"
+                               clickable="False"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="tracking_id" readonly="1"/>
+                                <field name="template_id"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="type"/>
+                                <field name="type_send_id"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+
+                                <field name="order_id"
+                                       domain="[('state', '=', 'paid')]"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="msg_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="sent_time" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="mess_error" attrs="{'invisible': [('state', '!=', 'error')]}"/>
+                            </group>
+                            <group>
+                                <field name="order_code"/>
+                                <field name="order_date"/>
+                                <field name="phone"/>
+                                <field name="customer_name"/>
+                                <field name="order_value"/>
+                                <field name="point_plus"/>
+                                <field name="point_value"/>
+                                <field name="shop_id"  options="{'no_create': 1, 'no_create_edit': 1}"/>
+                            </group>
+                            <group col="2">
+                                <field name="data" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       style="word-wrap: break-word"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="zns_information_view_search" model="ir.ui.view">
+            <field name="name">Zalo Information Search</field>
+            <field name="model">zns.information</field>
+            <field name="arch" type="xml">
+                <search string="ZNS Information Search">
+                    <field name="order_id" filter_domain="[('order_id.name','ilike',self)]"/>
+                    <field name="msg_id" filter_domain="[('msg_id','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="zns_information_action" model="ir.actions.act_window">
+            <field name="name">ZNS Information</field>
+            <field name="res_model">zns.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="zns_information_view_search"/>
+        </record>
+    </data>
+</odoo>

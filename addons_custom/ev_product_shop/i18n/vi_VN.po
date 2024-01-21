@@ -1,0 +1,183 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_shop
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-04 06:35+0000\n"
+"PO-Revision-Date: 2022-03-04 06:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/stock_request.py:0
+#: code:addons/ev_product_shop/wizard/sale_request_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Not service type, line (%s)"
+msgstr ""
+"\n"
+"Không thể chọn sản phẩm là dịch vụ, dòng (%s)"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Price must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Đơn giá phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/stock_request.py:0
+#: code:addons/ev_product_shop/wizard/sale_request_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Product does not exist in warehouse, line (%s)"
+msgstr ""
+"\n"
+"Sản phẩm không tồn tại trong kho, line (%s)"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/stock_request.py:0
+#: code:addons/ev_product_shop/wizard/sale_request_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Quantity must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Số lượng phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_product_shop
+#: model:ir.model.fields,field_description:ev_product_shop.field_import_xls_wizard_stock__display_name
+#: model:ir.model.fields,field_description:ev_product_shop.field_sale_request__display_name
+#: model:ir.model.fields,field_description:ev_product_shop.field_sale_request_line__display_name
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_inventory__display_name
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_request__display_name
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_request_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/stock_request.py:0
+#, python-format
+msgid ""
+"File not found or in incorrect format. Please check the .xls or .xlsx file "
+"format"
+msgstr ""
+"File không đúng định dạng. Vui lòng kiểm tra lại định dang .xls hoặc .xlsx"
+
+#. module: ev_product_shop
+#: model:ir.model.fields,field_description:ev_product_shop.field_import_xls_wizard_stock__id
+#: model:ir.model.fields,field_description:ev_product_shop.field_sale_request__id
+#: model:ir.model.fields,field_description:ev_product_shop.field_sale_request_line__id
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_inventory__id
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_request__id
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_request_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/wizard/sale_request_line_imp.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr "File import phải là file excel"
+
+#. module: ev_product_shop
+#: model:ir.model,name:ev_product_shop.model_stock_inventory
+msgid "Inventory"
+msgstr "Kho vận"
+
+#. module: ev_product_shop
+#: model:ir.model.fields,field_description:ev_product_shop.field_import_xls_wizard_stock____last_update
+#: model:ir.model.fields,field_description:ev_product_shop.field_sale_request____last_update
+#: model:ir.model.fields,field_description:ev_product_shop.field_sale_request_line____last_update
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_inventory____last_update
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_request____last_update
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_request_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/sale_request.py:0
+#: code:addons/ev_product_shop/models/stock_request.py:0
+#, python-format
+msgid "Product can not send request : %s"
+msgstr "Không thể gửi với sản phẩm: %s"
+
+#. module: ev_product_shop
+#: model:ir.model.fields,field_description:ev_product_shop.field_stock_inventory__product_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_product_shop
+#: model:ir.model.fields,help:ev_product_shop.field_stock_inventory__product_ids
+msgid "Specify Products to focus your inventory on particular Products."
+msgstr "Chỉ định sản phẩm để tập trung kho của bạn vào một Sản phẩm cụ thể."
+
+#. module: ev_product_shop
+#: model:ir.model,name:ev_product_shop.model_stock_request
+msgid "Stock Request"
+msgstr "Yêu cầu chuyển Kho nội bộ"
+
+#. module: ev_product_shop
+#: model:ir.model,name:ev_product_shop.model_stock_request_line
+msgid "Stock Request Detail"
+msgstr "Chi tiết Yêu cầu"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/product_template.py:0
+#: code:addons/ev_product_shop/models/product_template.py:0
+#, python-format
+msgid "You can choose Shop"
+msgstr "Bạn phải chọn cửa hàng"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/sale_request_line.py:0
+#: code:addons/ev_product_shop/models/stock_request_line.py:0
+#, python-format
+msgid "You have not selected warehouse! Please choose warehouse."
+msgstr "Bạn chưa chọn kho! Vui lòng chọn lại."
+
+#. module: ev_product_shop
+#: model:ir.model,name:ev_product_shop.model_import_xls_wizard_stock
+msgid "import.xls.wizard.stock"
+msgstr "Import chi tiết yêu cầu hàng"
+
+#. module: ev_product_shop
+#: model:ir.model,name:ev_product_shop.model_sale_request
+msgid "sale.request"
+msgstr "Yêu cầu hàng bán"
+
+#. module: ev_product_shop
+#: model:ir.model,name:ev_product_shop.model_sale_request_line
+msgid "sale.request.line"
+msgstr "Chi tiết yêu cầu hàng"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/sale_online_order_line.py:0
+#, python-format
+msgid "Please choose a POS!"
+msgstr "Hãy chọn điểm bán lẻ"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/sale_online.py:0
+#, python-format
+msgid "Product not in shop"
+msgstr "Sản phẩm không có trong cửa hàng"
+
+#. module: ev_product_shop
+#: code:addons/ev_product_shop/models/sale_request.py:0
+#, python-format
+msgid "You can only edit in draft"
+msgstr "Bạn chỉ có thể chính sửa ở trạng thái nháp"

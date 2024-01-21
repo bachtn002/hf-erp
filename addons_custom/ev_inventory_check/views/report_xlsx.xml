@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+                id="action_export_stock_inventory_check"
+                string="In Excel"
+                model="stock.inventory"
+                report_type="xlsx"
+                file="ev_inventory_check.export_stock_inventory"
+                name="ev_inventory_check.export_stock_inventory"
+                print_report_name="'%s' %(object.name)"/>
+    </data>
+</odoo>

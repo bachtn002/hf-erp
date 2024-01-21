@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_release,access_product_release_name,model_product_release,,1,1,1,1
+access_product_card_allow,access_product_card_allow_name,model_product_card_allow,,1,1,1,1
+access_product_category_card_allow,access_product_category_card_allow_name,model_product_category_card_allow,,1,1,1,1
+access_stock_production_lot_rule,access_stock_production_lot_rule_name,model_stock_production_lot_rule,,1,1,1,1
+access_stock_production_lot_rule_line,access_stock_production_lot_rule_line_name,model_stock_production_lot_rule_line,,1,1,1,1
+access_update_product_release,access_update_product_release_name,model_update_product_release,,1,1,1,1

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_stock_document_form" model="ir.ui.view">
+            <field name="name">Inventory Document Report</field>
+            <field name="model">rpt.stock.document</field>
+            <field name="arch" type="xml">
+                <form string="Inventory Document Report">
+                    <group>
+                        <group>
+                            <field name="from_date" required="1" string="From date"/>
+                            <field name="to_date" required="1" string="To date"/>
+                            <field name="x_all_internal"
+                                   groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"/>
+                        </group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                            <field name="location_ids" string="Locations" widget="many2many_tags" required="1"
+                                   domain="[('usage', '=', 'internal'), ('company_id','=', company_id)]"
+                                   options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                   attrs="{'invisible': [('x_all_internal','=', True)]}"/>
+                            <field name="product_ids" string="Products" widget="many2many_tags"
+                                   options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                            <field name="state" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button name="action_export_report_accountent" type="object" class="oe_highlight"
+                                string="View Report Account"
+                                groups="account.group_account_readonly,account.group_account_user,account.group_account_invoice,account.group_account_manager"
+                        />
+                        <button name="action_report_excel" type="object" class="oe_highlight" string="Export Excel"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_stock_document" model="ir.actions.act_window">
+            <field name="name">Inventory Document Report</field>
+            <field name="res_model">rpt.stock.document</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_stock_document_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+        <!-- menu -->
+        <menuitem id="menu_rpt_stock_document"
+                  name="Inventory Document Report" action="action_rpt_stock_document"
+                  parent="stock.menu_warehouse_report"
+                  sequence="36"/>
+
+        <menuitem id="menu_rpt_stock_document_account"
+                  name="Inventory Document Report" action="action_rpt_stock_document"
+                  parent="menu_report_stock"
+                  sequence="10"/>
+    </data>
+</odoo>

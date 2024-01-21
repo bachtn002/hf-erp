@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="account_reports_purchase_reports_menu" name="Purchase Reports" parent="account.menu_finance_reports" sequence="5" groups="account.group_account_user"/>
+        <!-- form view -->
+        <record id="rpt_tong_hop_phat_sinh_cong_no_form" model="ir.ui.view">
+            <field name="name">Báo cáo tổng hợp phát sinh công nợ NCC</field>
+            <field name="model">report.tong.hop.phat.sinh.cong.no</field>
+            <field name="arch" type="xml">
+                <form string="Báo cáo tổng hợp phát sinh công nợ NCC">
+                    <group>
+                        <group>
+                            <field name="date_from" required="1" string="From date"/>
+                            <field name="date_to" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="account_id" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                   domain="[('company_id','=', company_id)]" required="1"/>
+                            <field name="partner_ids" string="Vendors" widget="many2many_tags"
+                                   options="{'no_create':1, 'no_edit':1}"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button name="action_report_excel" type="object" class="oe_highlight" string="Export Excel"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_tong_hop_phat_sinh_cong_no_NCC" model="ir.actions.act_window">
+            <field name="name">Báo cáo tổng hợp phát sinh công nợ NCC</field>
+            <field name="res_model">report.tong.hop.phat.sinh.cong.no</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_tong_hop_phat_sinh_cong_no_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_rpt_tong_hop_phat_sinh_cong_no_NCC_1_action" groups="account.group_account_user"
+                  name="Synthesize incurred debt NCC" action="action_rpt_tong_hop_phat_sinh_cong_no_NCC"
+                  parent="account_reports_purchase_reports_menu"
+                  sequence="45"/>
+
+    </data>
+</odoo>

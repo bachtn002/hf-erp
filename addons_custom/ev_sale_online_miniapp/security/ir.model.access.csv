@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_online_payment_info,access_sale_online_payment_info,model_sale_online_payment_info,,1,1,1,1
+access_sale_online_discount,access_sale_online_discount,model_sale_online_discount,,1,1,1,1
+access_sale_online_discount_on_product,access_sale_online_discount_on_product,model_sale_online_discount_on_product,,1,1,1,1

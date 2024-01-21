@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="stock_region_tree_view" model="ir.ui.view">
+            <field name="name">Stock Region</field>
+            <field name="model">stock.region</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_region_form_view" model="ir.ui.view">
+            <field name="name">Stock Region</field>
+            <field name="model">stock.region</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code" required="1"/>
+                            <field name="name" required="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_stock_region" model="ir.actions.act_window">
+            <field name="name">Stock Region</field>
+            <field name="res_model">stock.region</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_stock_region"
+                  name="Stock Region"
+                  action="action_stock_region"
+                  parent="stock.menu_warehouse_config"
+                  sequence="1"/>
+
+    </data>
+</odoo>

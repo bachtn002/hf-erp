@@ -1,0 +1,343 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_api_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200517\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-15 02:46+0000\n"
+"PO-Revision-Date: 2020-09-15 02:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "A record already exists, please check it again."
+msgstr "Bản ghi đã tồn tại, vui lòng kiểm tra lại."
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__name
+msgid "API"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.ui.menu,name:ev_api_base.api_logger_menu_item
+msgid "API logger"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users__device_ids
+#: model_terms:ir.ui.view,arch_db:ev_api_base.res_users_form_inherit
+msgid "Access device"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__access_token
+msgid "Access token"
+msgstr ""
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "Access token has expired, please log in again."
+msgstr "Access token đã hết hạn, vui lòng đăng nhập lại."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Authentication.py:0
+#, python-format
+msgid "Access token is not valid."
+msgstr "Access token truy cập không hợp lệ."
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__user_id
+msgid "Action User"
+msgstr ""
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "Action has not been defined."
+msgstr "Hành động chưa được xác định."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Response.py:0
+#, python-format
+msgid "An error occurred, please try again later."
+msgstr "Có lỗi xảy ra, xin vui lòng thử lại sau."
+
+#. module: ev_api_base
+#: model:ir.actions.act_window,name:ev_api_base.api_logger_action
+msgid "Api loger"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_api_logger
+msgid "Api logger"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_banner_slider
+msgid "Banner Slider"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_blog_post
+msgid "Blog Post"
+msgstr "Bài Blog"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__create_uid
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__create_date
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__device_id
+msgid "Device"
+msgstr "Thiết bị"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__device_info
+msgid "Device info"
+msgstr "Thông tin thiết bị"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__display_name
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Email.py:0
+#, python-format
+msgid "Email format is incorrect"
+msgstr "Định dạng email không chính xác"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__exception
+msgid "Exception"
+msgstr "Ngoại lệ"
+
+#. module: ev_api_base
+#: model_terms:ir.ui.view,arch_db:ev_api_base.api_logger_form
+msgid "Exception api"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__exception_data
+msgid "Exception data"
+msgstr ""
+
+#. module: ev_api_base
+#: model_terms:ir.ui.view,arch_db:ev_api_base.api_logger_form
+msgid "Exception log"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__exception_message
+msgid "Exception message"
+msgstr ""
+
+#. module: ev_api_base
+#: model_terms:ir.ui.view,arch_db:ev_api_base.api_logger_form
+msgid "Exception time"
+msgstr ""
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Authentication.py:0
+#, python-format
+msgid "Existing accounts are not allowed to log in on mobile devices."
+msgstr "Tài khoản hiện tại không được phép đăng nhập trên thiết bị di động."
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__expired
+msgid "Expired"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__firebase_token
+msgid "Firebase Token"
+msgstr ""
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__id
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__id
+msgid "ID"
+msgstr "Id"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger____last_update
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__write_uid
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật gần đây bởi"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__write_date
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật gần đây vào"
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_api_logger__params
+msgid "Params"
+msgstr "Tham số"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/PhoneNumber.py:0
+#, python-format
+msgid "Phone number must be start with \"0\" and it's length between 10 and 11"
+msgstr "Số điện thoại phải được bắt đầu là \"0\" và độ dài từ 10 đến 11"
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_product_image
+msgid "Product Image"
+msgstr "Ảnh sản phẩm"
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_product_template
+msgid "Product Template"
+msgstr "Bản mẫu sản phẩm"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/models/res_users.py:0
+#, python-format
+msgid ""
+"Reset password error: This email was registered through the social network "
+"account."
+msgstr "Lỗi đổi mật khẩu: Email này đã được đăng kí thông qua tài khoản mạng xã hội."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "The account or password is incorrect, please try again."
+msgstr "Tài khoản hoặc mật khẩu không chính xác, vui lòng thử lại."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Authentication.py:0
+#, python-format
+msgid ""
+"The current login account exceeds the number of mobile devices allowed."
+msgstr ""
+"Tài khoản đăng nhập hiện tại vượt quá số lượng thiết bị di động được phép."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Params.py:0
+#, python-format
+msgid "The data (%s) of field (%s) is not in the allowed format."
+msgstr "Dữ liệu (%s) của trường (%s) không đúng định dạng cho phép."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Params.py:0
+#: code:addons/ev_api_base/helpers/Params.py:0
+#, python-format
+msgid "The parameter %s are missing"
+msgstr "Tham số %s đang bị thiếu"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Params.py:0
+#: code:addons/ev_api_base/helpers/Params.py:0
+#: code:addons/ev_api_base/helpers/Params.py:0
+#, python-format
+msgid "The parameter %s donn't allow blank data !"
+msgstr "Tham số %s không được để trống !"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Params.py:0
+#: code:addons/ev_api_base/helpers/Params.py:0
+#, python-format
+msgid "The parameter %s has a data type of %s, not %s"
+msgstr "Tham số %s có kiểu dữ liệu là %s, không phải %s"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Params.py:0
+#, python-format
+msgid "The parameter %s is not in the format %s"
+msgstr "Tham số %s không đúng định dạng %s"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid ""
+"The system does not identify this login application. Please check the "
+"configuration section"
+msgstr ""
+"Hệ thống không xác định ứng dụng đăng nhập này. Vui lòng kiểm tra phần cấu "
+"hình"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "The system does not support logging in with this app yet!"
+msgstr "Hệ thống chưa hỗ trợ đăng nhập bằng ứng dụng này!"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "The system is experiencing problems, please try again later."
+msgstr "Hệ thống đang gặp sự cố, vui lòng thử lại sau."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "Unable to log in with this account, please try again."
+msgstr "Không thể đăng nhập bằng tài khoản này, vui lòng thử lại."
+
+#. module: ev_api_base
+#: model:ir.model.fields,field_description:ev_api_base.field_res_users_device__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_res_users_device
+msgid "User access device"
+msgstr "Thiết bị người dùng truy cập"
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: ev_api_base
+#: model:ir.model,name:ev_api_base.model_product_public_category
+msgid "Website Product Category"
+msgstr "Nhóm sản phẩm trên Website"
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid "You do not have access to current data."
+msgstr "Bạn không có quyền truy cập vào dữ liệu hiện tại."
+
+#. module: ev_api_base
+#: code:addons/ev_api_base/helpers/Dispatch.py:0
+#, python-format
+msgid ""
+"Your account is already connected to another social network, please check "
+"again."
+msgstr ""
+"Tài khoản của bạn đã được kết nối với mạng xã hội khác.Vui lòng kiểm tra "
+"lại."

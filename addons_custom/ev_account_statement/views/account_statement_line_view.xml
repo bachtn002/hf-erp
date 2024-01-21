@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_statement_line_form" model="ir.ui.view">
+            <field name="name">account_statement_line_form</field>
+            <field name="model">account.statement.line</field>
+            <field name="arch" type="xml">
+                <form string="Upload" editable="True">
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="amount" widget="integer"/>
+                            <field name="account_analytic_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                            <field name="account_statement_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                            <field name="account_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                            <field name="account_move_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                        </group>
+                        <label for="description" string="description"/>
+                        <field name="description"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="account_statement_line_act" model="ir.actions.act_window">
+            <field name="name">Account Statement Line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.statement.line</field>
+            <field name="view_mode">form</field>
+        </record>
+    </data>
+</odoo>

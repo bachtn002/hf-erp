@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template>
+    <t t-name="ev_gmap_marker">
+        <input id="input_navigate" class="controls" type="text" placeholder="Search Box" />
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+        <div id="gmap"/>
+    </t>
+</template>

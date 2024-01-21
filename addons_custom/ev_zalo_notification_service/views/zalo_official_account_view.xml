@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+        <record id="zalo_official_account_view_tree" model="ir.ui.view">
+            <field name="name">Zalo Official Account Tree</field>
+            <field name="model">zalo.official.account</field>
+            <field name="arch" type="xml">
+                <tree string="Zalo Official Account Tree">
+                    <field name="name"/>
+<!--                    <field name="oa_id"/>-->
+                    <field name="app_id"/>
+                    <field name="secret_key" widget="password"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="zalo_official_account__view_from" model="ir.ui.view">
+            <field name="name">Zalo Official Account Form</field>
+            <field name="model">zalo.official.account</field>
+            <field name="arch" type="xml">
+                <form string="Zalo Official Account Form">
+<!--                    <header>-->
+<!--                        <button name="get_access_token" type="object"-->
+<!--                                string="Get Access Token" class="oe_highlight"-->
+<!--                                attrs="{'invisible': [('active', '=',False)]}"/>-->
+<!--                        <button name="%(param_get_template_action)d" type="action"-->
+<!--                                string="Get Template" class="oe_highlight"-->
+<!--                                attrs="{'invisible': [('active', '=',False)]}"/>-->
+<!--                    </header>-->
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+<!--                                <field name="oa_id"/>-->
+                            </group>
+                            <group>
+                                <field name="app_id"/>
+                                <field name="secret_key" widget="password"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="zalo_official_account_view_search" model="ir.ui.view">
+            <field name="name">Zalo Official Account</field>
+            <field name="model">zalo.official.account</field>
+            <field name="arch" type="xml">
+                <search string="Zalo Official Account Search">
+                    <field name="name" filter_domain="[('name','ilike',self)]"/>
+<!--                    <field name="oa_id" filter_domain="[('oa_id','ilike',self)]"/>-->
+                    <field name="app_id" filter_domain="[('app_id','ilike',self)]"/>
+                    <!--                    <field name="secret_key" filter_domain="[('secret_key','ilike',self)]"/>-->
+                </search>
+            </field>
+        </record>
+
+        <record id="zalo_official_account_action" model="ir.actions.act_window">
+            <field name="name">Zalo Official Account</field>
+            <field name="res_model">zalo.official.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="zalo_official_account_view_search"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="crm_team_branch_rule" model="ir.rule">
+            <field name="name">CRM Team</field>
+            <field name="model_id" ref="crm.model_crm_team"/>
+            <field name="domain_force">[('branch_id','=',user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('ev_branch.group_branch_user'))]"/>
+        </record>
+
+        <record id="crm_team_branch_manager_rule" model="ir.rule">
+            <field name="name">CRM Team Manager</field>
+            <field name="model_id" ref="crm.model_crm_team"/>
+            <field name="domain_force">[('branch_id','in',[branch.id for branch in user.branch_ids])]</field>
+            <field name="groups" eval="[(4, ref('ev_branch.group_branch_user_manager'))]"/>
+        </record>
+    </data>
+</odoo>

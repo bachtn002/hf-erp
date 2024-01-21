@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="config_connection_view_tree" model="ir.ui.view">
+            <field name="name">config_connection_view_tree</field>
+            <field name="model">config.connection</field>
+            <field name="arch" type="xml">
+                <tree string="Config Connection" default_order='create_date desc'>
+                    <field name="name"/>
+                    <field name="port"/>
+                    <field name="database"/>
+                    <field name="user"/>
+                    <field name="password" password="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="config_connection_view_form" model="ir.ui.view">
+            <field name="name">config_connection_view_form</field>
+            <field name="model">config.connection</field>
+            <field name="arch" type="xml">
+                <form string="Config Connection">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="port"/>
+                                <field name="database"/>
+                            </group>
+                            <group>
+                                <field name="user"/>
+                                <field name="password" password="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="config_connection_view_search" model="ir.ui.view">
+            <field name="name">config_connection_view_search</field>
+            <field name="model">config.connection</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="name"/>
+                    <field name="user"/>
+                    <field name="database"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="config_connection_action" model="ir.actions.act_window">
+            <field name="name">config_connection_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.connection</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="config_connection_view_search"/>
+        </record>
+
+        <menuitem id="connection_api_menu"
+                  name="API"
+                  parent="base.menu_administration"
+                  sequence="4"
+        />
+        <menuitem id="config_connection_menu"
+                  name="Config Connection"
+                  action="config_connection_action"
+                  parent="ev_config_connect_api.connection_api_menu"
+                  sequence="4"/>
+    </data>
+</odoo>

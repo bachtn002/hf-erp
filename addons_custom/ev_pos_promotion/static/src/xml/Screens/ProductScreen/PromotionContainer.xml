@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preverse">
+
+    <t t-name="PromotionContainer" owl="1">
+        <div t-if="show" class="o_ev_pos_promotion__promotion-container">
+<!--            <h2 class="o_ev_pos_promotion__promotion-container__title">-->
+<!--                <t t-esc="state.title"/>-->
+<!--            </h2>-->
+            <PromotionList onClickPromotionItem="handleOnClickPromotionItem"
+                           promotions="props.promotions"/>
+        </div>
+        <div t-else=""></div>
+    </t>
+    
+</templates>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_pos_confirm_order_refund" model="res.groups">
+        <field name="name">Confirm Order Refund</field>
+        <field name="category_id" ref="base.module_category_sales_point_of_sale"/>
+        <field name="implied_ids" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>
+    </record>
+</odoo>

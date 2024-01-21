@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_balance_vendor_tree_view" model="ir.ui.view">
+            <field name="name">Account_balance_vendor</field>
+            <field name="model">account.balance.vendor</field>
+            <field name="arch" type="xml">
+                <tree string="Account balance vendor" editable="top">
+                    <field name="partner_id" required="1"/>
+                    <field name="branch_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                    <field name="account_id" required="1" force_save="1" options="{'no_create':1, 'no_create_edit':1}" />
+                    <field name="vendor_code" readonly="1" force_save="1"/>
+                    <field name="debit" required="1"/>
+                    <field name="credit" required="1"/>
+                    <field name="currency_id"/>
+                    <field name="amount_currency"/>
+                    <field name="date" readonly="1" force_save="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_balance_vendor_action" model="ir.actions.act_window">
+            <field name="name">Account_balance_vendor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.balance.vendor</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account_balance_vendor_tree_view"/>
+        </record>
+
+        <menuitem id="account_balance_vendor_menu" name="Account balance vendor" parent="menu_ev_opening_balance"
+                  action="account_balance_vendor_action" sequence="6" groups="account.group_account_user,account.group_account_manager"/>
+    </data>
+</odoo>

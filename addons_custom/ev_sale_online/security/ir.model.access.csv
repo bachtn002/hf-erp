@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_sale_online,sale_online_name,model_sale_online,,1,1,1,1
+access_sale_online_order_line,sale_online_order_line,model_sale_online_order_line,,1,1,1,1
+access_pos_config_sale_online,pos_config_sale_online_name,point_of_sale.model_pos_config,group_sale_online,1,0,0,0
+

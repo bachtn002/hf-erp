@@ -1,0 +1,285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_merge_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-09 10:13+0000\n"
+"PO-Revision-Date: 2021-12-09 10:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields.selection,name:ev_merge_partner.selection__merge_partner__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields.selection,name:ev_merge_partner.selection__merge_partner__state__draft
+msgid "Draft"
+msgstr "Dự Thảo"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__message_needaction
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model_terms:ir.ui.view,arch_db:ev_merge_partner.merge_partner_view_form
+msgid "Merge"
+msgstr "Hợp nhất"
+
+#. module: ev_merge_partner
+#: model:ir.ui.menu,name:ev_merge_partner.merge_partner_menu
+#: model_terms:ir.ui.view,arch_db:ev_merge_partner.merge_partner_view_form
+#: model_terms:ir.ui.view,arch_db:ev_merge_partner.merge_partner_view_tree
+msgid "Merge Partner"
+msgstr "Hợp nhất khách hàng"
+
+#. module: ev_merge_partner
+#: code:addons/ev_merge_partner/models/merge_partner.py:0
+#, python-format
+msgid "Merge partner date: "
+msgstr "Hợp nhất khách hàng ngày: "
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__partner_merge_id
+msgid "Partner Merge"
+msgstr "Khách hàng hợp nhất"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model_terms:ir.ui.view,arch_db:ev_merge_partner.merge_partner_view_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,help:ev_merge_partner.field_merge_partner__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_merge_partner
+#: model:ir.model.fields,field_description:ev_merge_partner.field_merge_partner__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_merge_partner
+#: code:addons/ev_merge_partner/models/merge_partner.py:0
+#, python-format
+msgid "You can not merge one partner"
+msgstr "Khách hàng không đồng nhất không thể hợp nhất"
+
+#. module: ev_merge_partner
+#: model:ir.model,name:ev_merge_partner.model_merge_partner
+msgid "merge.partner"
+msgstr "Hợp nhất khách hàng"
+
+#. module: ev_merge_partner
+#: model:ir.actions.act_window,name:ev_merge_partner.merge_partner_action
+msgid "merge_partner_action"
+msgstr "Hợp nhất khách hàng"

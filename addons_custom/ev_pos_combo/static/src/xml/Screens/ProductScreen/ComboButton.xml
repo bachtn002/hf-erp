@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ComboButton" owl="1">
+        <span>
+            <t t-if="env.pos.config.x_enable_combo">
+                <t t-if="isCombo">
+                    <span class="combo-popup-icon" t-on-click="_onClickComboButton">Combo</span>
+                </t>
+            </t>
+        </span>
+    </t>
+
+</templates>

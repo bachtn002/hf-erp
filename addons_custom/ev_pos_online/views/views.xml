@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+      <record id="pos_config_online" model="ir.ui.view">
+            <field name="name">pos.config.online</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[5]" position="inside">
+                    <div class="col-12 col-lg-6 o_setting_box" id="x_limit_partner">
+                        <div class="o_setting_left_pane">
+
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="x_limit_partner" string="Limit Partner"/>
+                            <div class="text-muted" id="x_limit_partner">
+                                Number of clients downloaded when loading pos
+                            </div>
+                            <div class="content-group mt16">
+                                <div class="row mt16">
+                                    <label string="Limit Partner" for="x_limit_partner"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="x_limit_partner"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>

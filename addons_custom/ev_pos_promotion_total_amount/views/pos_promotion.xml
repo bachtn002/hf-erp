@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		
+		<record id="pos_promotion_amount_total_promotion_form-view" model="ir.ui.view">
+			<field name="name">pos_promotion_amount_total_promotion</field>
+			<field name="model">pos.promotion</field>
+			<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='promotion_detail']" position="inside">
+					<field name="pos_promotion_total_amount_ids"
+					       attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'total_amount')]}">
+						<tree editable="bottom">
+							<field name="total_amount" required="1"/>
+							<field name="check_discount_price"/>
+							<field name="price_discount" attrs="{'invisible': [('check_discount_price','not in',('price'))]}"/>
+							<field name="discount" attrs="{'invisible': [('check_discount_price','not in',('discount'))]}"/>
+							<field name="max_discount" attrs="{'invisible': [('check_discount_price','not in',('discount'))]}"/>
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+		
+<!--		<record id="pos_promotion_form_view_inherit" model="ir.ui.view">-->
+<!--			<field name="name">pos_promotion_form_view_inherit</field>-->
+<!--			<field name="model">pos.promotion</field>-->
+<!--			<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>-->
+<!--			<field name="arch" type="xml">-->
+<!--				<xpath expr="//field[@name='product_id']" position='replace'>-->
+<!--					<field name="product_id"-->
+<!--					       attrs="{'readonly': [('state', '!=', ('draft'))], 'required': [('type','=','total_amount')]}"/>-->
+<!--				</xpath>-->
+<!--			</field>-->
+<!--		</record>-->
+	
+	</data>
+</odoo>

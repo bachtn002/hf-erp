@@ -1,0 +1,415 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_card
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-14 01:27+0000\n"
+"PO-Revision-Date: 2021-10-14 01:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_card
+#: code:addons/ev_stock_card/models/stock_card.py:0
+#, python-format
+msgid "\"From date\" must not be greater than \"To date\"."
+msgstr "\"Ngày bắt đầu\" phải nhỏ hơn \"Ngày kết thúc\"."
+
+#. module: ev_stock_card
+#: code:addons/ev_stock_card/models/stock_card.py:0
+#, python-format
+msgid "\"To date\" must not be greater than \"Today\"."
+msgstr "\"Ngày kết thúc\" phải nhỏ hơn \"Ngày hiện tại\"."
+
+#. module: ev_stock_card
+#: model:ir.actions.report,print_report_name:ev_stock_card.stock_card_report_xlsx
+msgid "'Báo cáo test'"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "(Ban hành theo Thông tư số: 200/2014/TT-BTC"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "(Ký, họ tên, đóng dấu)"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "- Kho:"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "- Mã số:"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "- Tên, nhãn hiệu, quy cách vật tư:"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "- Đơn vị tính:"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "<b>Cộng:</b>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid ""
+"<b>Giám đốc</b>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "<b>Mẫu Số S12-DN</b>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid ""
+"<b>Người ghi sổ</b>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid ""
+"<b>Người kế toán trưởng</b>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "<b>THẺ KHO (SỔ KHO)</b>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "<b>Tồn cuối kỳ:</b>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "<b>Tồn đầu kỳ:</b>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid ""
+"<b>Đơn vị: ...........................................................</b>\n"
+"                                    <br/>\n"
+"                                    <b>Bộ phận: ........................................................</b>"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__closing_stock
+msgid "Closing stock"
+msgstr "Tồn cuối kỳ"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__create_uid
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__create_date
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__name
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_report_ev_stock_card_stock_card_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__display_name
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Diễn giải"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__from_date
+msgid "From date"
+msgstr "Ngày bắt đầu"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "Generate"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_report_ev_stock_card_stock_card_xlsx__id
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__id
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.actions.report,name:ev_stock_card.stock_card_report_xlsx
+msgid "In excel"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Ký xác nhận của kế toán"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_report_ev_stock_card_stock_card_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card____last_update
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__write_uid
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__write_date
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Lập thẻ kho từ ngày"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__move_lines
+msgid "Move Lines"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Ngày"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Ngày 22/12/2014 của BTC)"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Ngày nhập, xuất"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Ngày, tháng"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Nhập"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__opening_stock
+msgid "Opening stock"
+msgstr "Tồn đầu kỳ"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__partner_name
+msgid "Partner name"
+msgstr "Tên đối tượng"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__picking_name
+msgid "Picking"
+msgstr "Dịch chuyển"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "Print Excel"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "Print PDF"
+msgstr "In PDF"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__qty_inventory
+msgid "Qty Inventory"
+msgstr "SL kho"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__qty_in
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "Qty in"
+msgstr "SL nhập"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__qty_out
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "Qty out"
+msgstr "SL xuất"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__reference
+msgid "Reference"
+msgstr "Số chứng từ"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "STT"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.actions.report,name:ev_stock_card.qweb_stock_card_rpt
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__stock_card_id
+#: model:ir.ui.menu,name:ev_stock_card.menu_sc_stock_card
+msgid "Stock Card"
+msgstr "Thẻ kho"
+
+#. module: ev_stock_card
+#: model:ir.actions.act_window,name:ev_stock_card.action_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "Stock card"
+msgstr "Thẻ kho"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__move_id
+msgid "Stock move"
+msgstr "Dịch chuyển"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Số hiệu chứng từ"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Số lượng"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.stock_card_form_view
+msgid "THẺ KHO (SỔ KHO)"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__to_date
+msgid "To date"
+msgstr "Ngày kết thúc"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__x_description
+msgid "Type"
+msgstr "Loại chứng từ"
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Tồn"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Tờ số: ..........."
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card__product_uom
+msgid "Unit of measurement"
+msgstr "Đơn vị"
+
+#. module: ev_stock_card
+#: model:ir.model.fields,field_description:ev_stock_card.field_stock_card_line__user
+msgid "User"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "Xuất"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "năm"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model,name:ev_stock_card.model_report_ev_stock_card_stock_card_xlsx
+msgid "report.ev_stock_card.stock_card_xlsx"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model,name:ev_stock_card.model_stock_card
+msgid "stock.card"
+msgstr ""
+
+#. module: ev_stock_card
+#: model:ir.model,name:ev_stock_card.model_stock_card_line
+msgid "stock.card.line"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "tháng"
+msgstr ""
+
+#. module: ev_stock_card
+#: model_terms:ir.ui.view,arch_db:ev_stock_card.report_template_stock_card_view
+msgid "đến ngày"
+msgstr ""

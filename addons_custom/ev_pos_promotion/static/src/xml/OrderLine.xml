@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="OrderLinePromotion" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('info-list')]" position="after">
+            <t t-if="props.line.getPromotionId()">
+                <t t-set="promotion" t-value="env.pos.getPromotionById(props.line.getPromotionId())"/>
+                <t t-if="promotion">
+                    <li style="font-size: 13px; color: #6EC89B;">
+                        <b>---Promotion:</b>
+                        <i style="margin-left: 5px;"><t t-esc="promotion.name"/></i>
+                    </li>
+                </t>
+            </t>
+        </xpath>
+    </t>
+    
+</templates>

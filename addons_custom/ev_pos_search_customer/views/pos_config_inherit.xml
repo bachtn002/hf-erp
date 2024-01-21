@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="pos_config_inherit_form_inherit" model="ir.ui.view">
+            <field name="name">pos_config_inherit_form_inherit.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <div id="multicurrencies_setting" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box" id="account_pos_config">
+                        <div class="o_setting_right_pane">
+                            <field name="x_number_search_limit" force_save="1"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="x_number_search_limit" class="oe_edit_only"/>
+                        </div>
+                    </div>
+                     <div class="col-12 col-lg-6 o_setting_box" id="account_pos_config">
+                        <div class="o_setting_right_pane">
+                            <field name="x_apply_fix_customer" force_save="1"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="x_apply_fix_customer" class="oe_edit_only"/>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template name="ev_pos_display.assets" id="ev_pos_display.assets" inherit_id="point_of_sale.assets">
+        <xpath expr="script[last()]" position="after">
+
+            <script text="text/javascript" src="/ev_pos_display/static/src/js/ProductScreen.js"/>
+        </xpath>
+    </template>
+
+</odoo>

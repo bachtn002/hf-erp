@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+        <record id="zns_template_line_view_tree" model="ir.ui.view">
+            <field name="name">ZNS Template Line Tree</field>
+            <field name="model">zns.template.line</field>
+            <field name="arch" type="xml">
+                <tree string="ZNS Template Line Tree">
+                    <field name="template_id"/>
+                    <field name="template_name"/>
+                    <field name="timeout"/>
+                    <field name="preview_url" widget="url"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+        <record id="zns_template_line_view_from" model="ir.ui.view">
+            <field name="name">ZNS Template Line Form</field>
+            <field name="model">zns.template.line</field>
+            <field name="arch" type="xml">
+                <form string="ZNS Template Line Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="template_id" options="{'no_create_edit': True,'no_create': True}"/>
+                                <field name="template_name"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+                                <field name="timeout"/>
+                                <field name="preview_url" widget="url"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+                            </group>
+                            <group>
+                                <field name="price"/>
+                                <field name="status"/>
+                                <field name="template_quality"/>
+                                <field name="template_tag"/>
+                            </group>
+                            <group>
+
+                                <field name="apply_template_quota"/>
+                                <field name="template_daily_quota"
+                                       attrs="{'invisible': [('apply_template_quota', '=', False)]}"/>
+                                <field name="template_remaining_quota"
+                                       attrs="{'invisible': [('apply_template_quota', '=', False)]}"/>
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page name="params" string="Params">
+                                <field name="list_params">
+                                    <tree editable="bottom">
+                                        <field name="zns_template_line_id" invisible="1"/>
+                                        <field name="name"/>
+                                        <field name="type"/>
+                                        <field name="max_length"/>
+                                        <field name="min_length"/>
+                                        <field name="require"/>
+                                        <field name="accept_null"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="zns_template_line_id" invisible="1"/>
+                                                <field name="name"/>
+                                                <field name="require"/>
+                                                <field name="type"/>
+                                            </group>
+                                            <group>
+                                                <field name="max_length"/>
+                                                <field name="min_length"/>
+                                                <field name="accept_null"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="zns_template_line_view_search" model="ir.ui.view">
+            <field name="name">Zalo Template Line</field>
+            <field name="model">zns.template.line</field>
+            <field name="arch" type="xml">
+                <search string="ZNS Template line Search">
+                    <field name="template_id" filter_domain="[('template_id','ilike',self)]"/>
+                    <field name="template_name" filter_domain="[('template_name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="zns_template_line_action" model="ir.actions.act_window">
+            <field name="name">ZNS Template Line</field>
+            <field name="res_model">zns.template.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="zns_template_line_view_search"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_detail_debit_NCC_form" model="ir.ui.view">
+            <field name="name">Detail Debt NCC</field>
+            <field name="model">report.detail.debit.ncc</field>
+            <field name="arch" type="xml">
+                <form string="Detail Debit NCC Report">
+                    <group>
+                        <group>
+                            <field name="date_from" required="1" string="From date"/>
+                            <field name="date_to" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="partner_id" widget="many2many_tags"/>
+                            <field name="account_id" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                   domain="[('company_id','=', company_id)]" required="1"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button name="action_report_excel" type="object" class="oe_highlight" string="Export Excel"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_detail_debit_NCC" model="ir.actions.act_window">
+            <field name="name">Detail Debt NCC</field>
+            <field name="res_model">report.detail.debit.ncc</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_detail_debit_NCC_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="account_reports_purchase_reports_menu" name="Purchase Reports" parent="account.menu_finance_reports" sequence="5"/>
+
+        <!-- menu -->
+        <menuitem id="menu_rpt_detail_debit_NCC_action" groups="account.group_account_user"
+                  name="Detail Debit NCC" action="action_rpt_detail_debit_NCC"
+                  parent="account_reports_purchase_reports_menu"
+                  sequence="40"/>
+
+    </data>
+</odoo>

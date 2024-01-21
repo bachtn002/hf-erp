@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductListInherit" t-inherit="point_of_sale.ProductList" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='props.products']" position="replace">
+            <t t-if="show_list">
+                <table class="hoverTable tableFixHead">
+                    <thead>
+                        <tr style="font-size: 15px; text-align: center;">
+                            <th class="text">CODE</th>
+                            <th class="text">NAME</th>
+                            <th class="text">PRICE</th>
+                            <th class="text">UOM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="props.products" t-as="product" t-key="product.id">
+                            <ProductItem product="product" show_list="show_list"/>
+                        </t>
+                    </tbody>
+                </table>
+            </t>
+	        <t t-else="">
+                <t t-foreach="props.products" t-as="product" t-key="product.id">
+                    <ProductItem product="product" show_list="show_list"/>
+                </t>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

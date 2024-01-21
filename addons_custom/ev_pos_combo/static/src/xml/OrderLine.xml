@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="OrderLineCombo" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-esc='props.line.get_full_product_name()']" position="after">
+            <ComboButton line="props.line"/>
+        </xpath>
+        <xpath expr="//span[hasclass('price')]" position="after">
+            <t t-if="props.line.has_combo_prod_info()">
+                <li><b>---Combo</b></li>
+                <li class="info">
+                    <t t-foreach="props.line.get_combo_prod_info()" t-as="prod_info">
+                        <div style="margin-left: 15px;">
+                            &#8594;<t t-esc="prod_info.product.display_name"/> : <t t-esc="props.line.get_quantity_str()" /> x <t t-esc="prod_info.qty"/>
+                            <t t-if="env.pos.config.hide_uom">
+                                <span>Quantity</span>
+                            </t>
+                            <t t-if="!env.pos.config.hide_uom">
+                                <t t-if="prod_info.product and prod_info.product.uom_id and prod_info.product.uom_id[0]">
+                                     <t t-esc="prod_info.product.uom_id[1]"/>
+                                </t>
+                            </t>
+                        </div>
+                    </t>
+                </li>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

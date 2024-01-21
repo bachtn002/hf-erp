@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pos_promotion_quantity_price_view_from_inherit">
+            <field name="name">pos_promotion_quantity_price_view_from_inherit</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_pos_promotion_qty_price.pos_promotion_form_view_quantity_price"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='pos_promotion_qty_price_ids']//field[@name='promotion_id']"
+                       position="after">
+                    <field name="note"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

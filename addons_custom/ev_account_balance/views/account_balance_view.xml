@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_balance_tree" model="ir.ui.view">
+            <field name="name">Account Balance</field>
+            <field name="model">account.balance</field>
+            <field name="arch" type="xml">
+                <tree string="Account Balance" editable="top">
+                    <field name="name" required="1"/>
+                    <field name="account_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                    <field name="debit" required="1"/>
+                    <field name="credit" required="1"/>
+                    <field name="currency_id"/>
+                    <field name="amount_currency"/>
+                    <field name="date" readonly="1" force_save="1"/>
+                    <field name="move_id" readonly="1" force_save="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_balance_action" model="ir.actions.act_window">
+            <field name="name">Account Balance</field>
+            <field name="res_model">account.balance</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account_balance_tree"/>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_ev_opening_balance" name="Opening Balance" parent="account.menu_finance_configuration" sequence="8" groups="base.group_no_one"/>
+        <menuitem id="account_balance_menu" name="Account Balance" parent="menu_ev_opening_balance" action="account_balance_action" sequence="1" groups="account.group_account_user,account.group_account_manager"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="pos_receipt_custom_assets" inherit_id="point_of_sale.assets">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" href="/ev_pos_receipt/static/src/css/custom_style.css"/>
+				<script type="text/javascript"
+				        src="/ev_pos_receipt/static/src/js/receipt/custom_js_product_screen.js"/>
+				<script type="text/javascript"
+				        src="/ev_pos_receipt/static/src/js/receipt/models.js"/>
+				<script type="text/javascript"
+				        src="/ev_pos_receipt/static/src/js/receipt/OrderLine.js"/>
+				<script type="text/javascript"
+				        src="/ev_pos_receipt/static/src/js/receipt/Order.js"/>
+				<script type="text/javascript"
+				        src="/ev_pos_receipt/static/src/js/receipt/jquery-barcode.js"/>
+			</xpath>
+		</template>
+	</data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ev_pos_next_screen_after_print.ev_form_inherit" model="ir.ui.view">
+            <field name="name">ev_pos_next_screen_after_print.ev_form_inherit.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='function']" position="after">
+                    <field name="date_of_birth" widget ='date'></field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

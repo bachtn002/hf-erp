@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="act_report_excel_xml_view_inherit" model="ir.ui.view">
+            <field name="name">ir.actions.report.inherit</field>
+            <field name="model">ir.actions.report</field>
+            <field name="inherit_id" ref="base.act_report_xml_view"/>
+            <field name="arch" type="xml">
+                <field name="report_type" position="after">
+                    <field name="export_excel"/>
+                    <field name="report_excel_template_id" domain="[('print_menu','=', True)]" attrs="{'required': [('export_excel','=', True)], 'invisible': [('export_excel','!=', True)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="product_category_return_account_form">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_expense_categ_id']" position="after">
+                    <field name="property_customer_return_account_id" invisible="1"/>
+                    <field name="property_return_vendor_account_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[1]" position="before">
+                    <button class="oe_stat_button" string="Active Category" type="object" name="toggle_active"
+                            icon="fa-archive">
+                        <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="options">{'no_create':1, 'no_create_edit':1,'no_open': 1}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_category_inherit_view_search" model="ir.ui.view">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_search_view"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <separator/>
+                    <filter string="Active Category" name="inactive" domain="[('active', '=', False)]"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_category_form_view_inherit_stock" model="ir.ui.view">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="stock.product_category_form_view_inherit"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='route_ids']" position="attributes">
+                    <attribute name="options">{'no_create':1, 'no_create_edit':1,'no_open': 1}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_category_form_view_inherit_account" model="ir.ui.view">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="account.view_category_property_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_income_categ_id']" position="attributes">
+                    <attribute name="options">{'no_create':1, 'no_create_edit':1,'no_open': 1}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='property_account_expense_categ_id']" position="attributes">
+                    <attribute name="options">{'no_create':1, 'no_create_edit':1,'no_open': 1}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

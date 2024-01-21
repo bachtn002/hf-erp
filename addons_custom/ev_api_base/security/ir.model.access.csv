@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_res_users_device,access_res_users_device,model_res_users_device,,1,1,1,1
+access_api_logger,access_api_logger,model_api_logger,,1,1,1,1

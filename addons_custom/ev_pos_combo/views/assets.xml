@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="assets_frontend" name="ev_pos_combo assets" inherit_id="point_of_sale.assets">
+
+            <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/ev_pos_combo/static/src/scss/pos.scss"/>
+            </xpath>
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/models.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Screens/ProductScreen/ComboButton.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Screens/ProductScreen/ProductItemCombo.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Screens/ProductScreen/ProductScreen.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Popups/PopupCombo.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Popups/PopupWarning.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Popups/ProductCombo.js"/>
+                <script type="text/javascript" src="/ev_pos_combo/static/src/js/Popups/ProductGroupCombo.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

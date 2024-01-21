@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_ev_res_bank" name="Bank" parent="account.account_account_menu" sequence="100" groups="account.group_account_user,account.group_account_manager"
+                action="base.action_res_bank_form"/>
+    </data>
+</odoo>

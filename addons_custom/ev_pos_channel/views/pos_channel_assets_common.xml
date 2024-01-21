@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="ev_pos_channel_assets"
+              inherit_id="point_of_sale.assets"
+              name="ev_pos_channel.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelDb.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelModel.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelPayment.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelConfirmPaymentPopup.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelPosModel.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelActionpadWidget.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelButtonPromotionVoucher.js"/>
+            <script type="text/javascript" src="/ev_pos_channel/static/src/js/ChannelPosSaleOnline.js"/>
+            <link rel="stylesheet" href="/ev_pos_channel/static/src/css/ChannelButton.css"/>
+        </xpath>
+    </template>
+</odoo>

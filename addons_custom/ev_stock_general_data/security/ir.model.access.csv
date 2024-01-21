@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_general_monthly,stock_general_monthly_name,model_stock_general_monthly,,1,1,1,1
+access_stock_sync_monthly,stock_sync_monthly_name,model_stock_sync_monthly,,1,1,1,1
+access_stock_sync_monthly_line,stock_sync_monthly_line_name,model_stock_sync_monthly_line,,1,1,1,1
+
+access_stock_inventory_report,stock_inventory_report_name,model_stock_inventory_report,,1,1,1,1
+access_stock_in_out_report,stock_in_out_report_name,model_stock_in_out_report,,1,1,1,1
+access_stock_inventory_detail_report,stock_inventory_detail_report_name,model_stock_inventory_detail_report,,1,1,1,1
+

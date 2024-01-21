@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="loan_report_pivot_view" model="ir.ui.view">
+			<field name="name">loan.report.pivot</field>
+			<field name="model">loan.report</field>
+			<field name="arch" type="xml">
+				<pivot string="Loan Interests">
+					<field name="date" type="col" />
+					<field name="loan_type" type="row" />
+					<field name="amount" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="loan_report_graph_view">
+			<field name="name">loan.report.graph</field>
+			<field name="model">loan.report</field>
+			<field name="arch" type="xml">
+				<graph string="Disbursements Graph" type="bar">
+					<field name="partner_id" type="row" />
+					<field name="loan_type" type="col" />
+					<field name="amount" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="loan_report_search_view">
+			<field name="name">loan.report.search</field>
+			<field name="model">loan.report</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="date" />
+					<field name="date_confirmed" />
+					<field name="date_maturity" />
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="loan_report_action">
+			<field name="name">Loan Report &amp; Analysis</field>
+			<field name="res_model">loan.report</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">No data yet! Please create a Loan contract and confirm it
+					to see some data here
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="loan_report_menu" name="Loan Analysis"
+			parent="loan_management_report" sequence="10"
+			action="loan_report_action" />
+	</data>
+</odoo>

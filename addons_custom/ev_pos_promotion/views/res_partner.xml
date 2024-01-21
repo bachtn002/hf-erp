@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="res_partner_pos_promotion_form_inherit" model="ir.ui.view">
+            <field name="name">Res partner pos promotion form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sale']" position="before">
+                    <group string="Partner group"
+                           name="partner_group"
+                           priority="2">
+                        <field name="partner_groups" widget="many2many_tags" readonly="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_partner_pricelist_form_inherit" model="ir.ui.view">
+            <field name="name">Res partner Pricelist form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="product.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_product_pricelist']" position="attributes">
+                    <attribute name="options">{'no_open': 1}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

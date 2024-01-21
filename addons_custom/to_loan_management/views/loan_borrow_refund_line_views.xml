@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="loan_borrowing_refund_line_form_view"
+			model="ir.ui.view">
+			<field name="name">loan.borrow.refund.line.form</field>
+			<field name="model">loan.borrow.refund.line</field>
+			<field name="inherit_id" ref="abstract_loan_refund_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='grp_org']" position="inside">
+					<field name="disbursement_id" />
+					<field name="order_id" />
+				</xpath>
+				<xpath expr="//notebook" position="inside">
+					<page string="Payments" name="pg_payment">
+						<field name="payment_match_ids">
+							<tree>
+								<field name="name" string="Payment Ref." />
+								<field name="matched_amount" string="Amount" />
+								<field name="payment_date" />
+								<field name="currency_id" invisible="1" />
+<!--								<button name="action_print_uy_nhiem_chi" class="oe_highlight" string="Print" type="object"/>-->
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="loan_borrowing_refund_line_tree_view"
+			model="ir.ui.view">
+			<field name="name">loan.borrow.refund.line.tree</field>
+			<field name="model">loan.borrow.refund.line</field>
+			<field name="inherit_id" ref="abstract_loan_refund_tree_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="disbursement_id" />
+					<field name="order_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="loan_borrowing_refund_line_simple_tree_view"
+			model="ir.ui.view">
+			<field name="name">loan.borrow.refund.line.tree.simple</field>
+			<field name="model">loan.borrow.refund.line</field>
+			<field name="inherit_id"
+				ref="abstract_loan_refund_simple_tree_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='currency_id']"
+					position="attributes">
+					<attribute name="invisible" eval="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="loan_borrowing_refund_line_pivot_view"
+			model="ir.ui.view">
+			<field name="name">loan.borrow.refund.line.pivot</field>
+			<field name="model">loan.borrow.refund.line</field>
+			<field name="inherit_id" ref="abstract_loan_refund_pivot_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="before">
+					<field name="order_id" type="row" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="loan_borrow_refund_search_view">
+			<field name="name">loan.borrow.refund.line.search</field>
+			<field name="model">loan.borrow.refund.line</field>
+			<field name="inherit_id" ref="abstract_loan_refund_search_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date_maturity']" position="after">
+					<separator />
+					<field name="disbursement_id" />
+					<field name="order_id" />
+				</xpath>
+				<xpath expr="//group/filter[@name='grp_partner']"
+					position="after">
+					<filter string="Disbursement" name="grp_disbursement"
+						context="{'group_by':'disbursement_id'}" />
+					<filter string="Contract" name="grp_order"
+						context="{'group_by':'order_id'}" />
+				</xpath>
+
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="loan_borrowing_refund_line_action">
+			<field name="name">Borrowing Loan Refund</field>
+			<field name="res_model">loan.borrow.refund.line</field>
+			<field name="view_mode">tree,pivot,form</field>
+		</record>
+
+		<menuitem id="loan_borrowing_refund_line_menu" groups="group_loan_management_user"
+			name="Principal Refunds" parent="loan_borrowing_order_main_menu"
+			sequence="30" action="loan_borrowing_refund_line_action" />
+	</data>
+</odoo>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="helpdesk_tickets_view_tree" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.tree.inherit.ev_helpdesk</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="before">
+                <field name="create_date"/>
+                <field name="close_date"/>
+                <field name="helpdesk_department_id"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="helpdesk_ticket_partner_view_form_inherit" model="ir.ui.view">
+        <field name='name'>helpdesk.ticket.form.inherit.partner</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+                <field name="partner_id" string="User"/>
+                <field name="x_phone"/>
+                <field name="x_app_sp_id" options="{'no_create': 1,'no_create_edit': 1}"/>
+                <field name="x_id_sp"/>
+                <field name="x_pass_sp"/>
+<!--                <field name="x_partner_email"/>-->
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="replace">
+                 <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True, 'no_quick_create': true}"/>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <field name="team_id" invisble="1"/>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="before">
+                <field name="create_date"/>
+                <field name="helpdesk_department_id" options="{'no_create_edit': true}"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="close_date" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_name']" position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </xpath>
+<!--            <xpath expr="//field[@name='partner_email']" position="attributes">-->
+<!--                <attribute name="attrs">{'invisible': True}</attribute>-->
+<!--            </xpath>-->
+            <xpath expr="//field[@name='email_cc']" position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='description']" position="replace">
+                <group col="2">
+                    <field name="description" placeholder="Description of the ticket..."/>
+                    <field name="x_problem_solution" placeholder="Problem solution of the ticket..."/>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="helpdesk_tickets_view_search" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.inherit.ev_helpdesk</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_ticket']" position="replace">
+                <filter string="Assign for me" domain="[('user_id','=',uid)]" name="my_ticket"/>
+                <filter string="My Tickets Created" domain="[('create_uid','=',uid)]" name="my_ticket_created"/>
+            </xpath>
+            <xpath expr="//filter[@name='stage']" position="after">
+                <filter string="Created by" name="created_by" context="{'group_by':'create_uid'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model='ir.ui.menu' id='helpdesk.helpdesk_tag_menu'>
+        <field name="groups_id" eval="[(4,ref('helpdesk.group_helpdesk_manager'))]"/>
+    </record>
+
+
+    <!-- Menu Xử lý ticket: Lọc ticket được giao cho phòng ban hiện tại -->
+
+    <record id="action_server_ticket_department_assigned_filter" model="ir.actions.server">
+        <field name="name">Ticket Department Assigned</field>
+        <field name="model_id" ref="model_helpdesk_ticket"/>
+        <field name="state">code</field>
+        <field name="code">action = env.get('helpdesk.ticket').ticket_department_assigned_filter_act()</field>
+    </record>
+
+    <record id="helpdesk.helpdesk_ticket_menu_my" model="ir.ui.menu">
+        <field name="action" ref="action_server_ticket_department_assigned_filter"/>
+    </record>
+
+    <!--Menu Ticket của tôi: Lọc ticket của user login tạo + User thuộc phòng ban của user login tạo-->
+    <record id="action_server_ticket_department_filter" model="ir.actions.server">
+        <field name="name">Ticket Department Filter</field>
+        <field name="model_id" ref="model_helpdesk_ticket"/>
+        <field name="state">code</field>
+        <field name="code">action = env.get('helpdesk.ticket').ticket_department_created_filter_act()</field>
+    </record>
+
+    <menuitem id="helpdesk_ticket_menu_own_create" action="action_server_ticket_department_filter"
+        sequence="9" parent="helpdesk.helpdesk_ticket_menu_main"/>
+
+    <!-- Menu tất cả ticket: Tất cả ticket của tất cả các phòng ban - User quản trị -->
+    <record model='ir.ui.menu' id='helpdesk.helpdesk_ticket_menu_all'>
+        <field name="groups_id" eval="[(4,ref('helpdesk.group_helpdesk_manager'))]"/>
+    </record>
+
+    <!--menu download template import -->
+    <record id="download_template_import_action" model="ir.actions.act_window">
+        <field name="name">Download import template</field>
+        <field name="res_model">wizard.download.import.template</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="download_template_import_menu" action="download_template_import_action"
+        sequence="9" parent="question_answer_menu"/>
+
+</odoo>

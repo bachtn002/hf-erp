@@ -1,0 +1,3095 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-08 09:49+0000\n"
+"PO-Revision-Date: 2020-12-08 09:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_account_payment
+#: model:ir.actions.report,print_report_name:ev_account_payment.action_report_cash_management
+msgid ""
+"'Income - %s - %s' % (object.partner_id.name, (object.name).replace('/', "
+"''))"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid ""
+"(Ban hành theo TT số 200/2014/QĐ-BTC<br/>ngày\n"
+"                                                22/12/2014 của Bộ trưởng Bộ Tài Chính)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "(In figures)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "(In words)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "(Ký, họ tên, đóng dấu)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "), are you sure to create a new one?"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "+ Số tiền quy đổi:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "+ Tỉ giá ngoại tệ (vàng bạc, đá quý):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid ""
+"<b attrs=\"{'invisible': [('type', '!=', 'contact')]}\">Company Address</b>\n"
+"                                    <b attrs=\"{'invisible': [('type', '!=', 'invoice')]}\">Invoice Address</b>\n"
+"                                    <b attrs=\"{'invisible': [('type', '!=', 'delivery')]}\">Delivery Address</b>\n"
+"                                    <b attrs=\"{'invisible': [('type', '!=', 'other')]}\">Other Address</b>\n"
+"                                    <b attrs=\"{'invisible': [('type', '!=', 'private')]}\">Private Address</b>\n"
+"                                    <b attrs=\"{'invisible': [('type', '!=', False)]}\">Address</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\" style=\"text-transform:uppercase\">Dành cho ngân hàng</b>\n"
+"                                        <span class=\"font-10\">(For bank use only)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\" style=\"text-transform:uppercase\">Giao dịch viên</b>\n"
+"                                        <b class=\"font-12\" style=\"text-transform:uppercase; padding-left: 25%;\">Kiểm\n"
+"                                            soát\n"
+"                                        </b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "<b class=\"font-12\">Bằng chữ</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "<b class=\"font-12\">Bằng số</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Ngày</b>\n"
+"                                        <span class=\"font-10\">(Date)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Ngân hàng</b>\n"
+"                                        <span class=\"font-10\">(With bank)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Phí ngoài</b>\n"
+"                                            <br/>\n"
+"                                            <i>Excluding</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Phí ngân hàng</b>\n"
+"                                        <span class=\"font-10\">(Bank charges)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Phí trong</b>\n"
+"                                            <br/>\n"
+"                                            <i>Including</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "<b class=\"font-12\">Số bút toán</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Số tiền</b>\n"
+"                                        <span class=\"font-10\">(With amount)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Số tài khoản</b>\n"
+"                                        <span class=\"font-10\">(A/C number)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "<b class=\"font-12\">Tài khoản ghi có</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "<b class=\"font-12\">Tài khoản ghi nợ</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Tên tài khoản</b>\n"
+"                                        <span class=\"font-10\">(A/C name)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-12\">Địa chỉ</b>\n"
+"                                        <span class=\"font-10\">(Address)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-13\" style=\"text-transform:uppercase\">Chủ tài khoản ký và đóng\n"
+"                                            dấu\n"
+"                                        </b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "<b class=\"font-13\" style=\"text-transform:uppercase\">Kế toán trưởng</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-13\" style=\"text-transform:uppercase\">Nội dung</b>\n"
+"                                        <span class=\"font-10\">(Details of payment)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-13\" style=\"text-transform:uppercase\">Đề nghị ghi nợ tài khoản</b>\n"
+"                                        <span class=\"font-10\">(Please debit account)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b class=\"font-13\">Ngày</b>\n"
+"                                        <span class=\"font-10\">(Date)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid ""
+"<b style=\"text-transform:uppercase\">Và ghi có tài khoản</b>\n"
+"                                        <span class=\"font-10\">(Please credit account)</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>&amp; GHI CÓ TÀI KHOẢN</b>\n"
+"                                                (&amp; Credit account)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid "<b>BẰNG CHỮ</b>:(<i>In words</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>BẰNG SỐ</b>\n"
+"                                                    (<i>In figures</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>CHỦ TÀI KHOẢN KÝ VÀ ĐÓNG GIẤU</b>\n"
+"                                                <br/>\n"
+"                                                <i>Acc.Holder &amp; Stamp</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "<b>Chủ tài khoản</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<b>Chủ tài khoản</b>\n"
+"                                        <span style=\"padding-left: 7px;font-size:11px\">A/C holder</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<b>Giao dịch viên</b>\n"
+"                                        <span style=\"padding-left: 7px;font-size:11px\">Teller</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<b>Kiểm soát viên</b>\n"
+"                                        <span style=\"padding-left: 7px;font-size:11px\">Supervisor</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>KẾ TOÁN TRƯỞNG KÝ</b>\n"
+"                                                <br/>\n"
+"                                                <i style=\"margin-left: 20px;\">Chief Accountant</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "<b>Kế toán</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<b>Kế toán</b>\n"
+"                                        <span style=\"padding-left: 7px;font-size:11px\">Accountant</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid "<b>Ngân Hàng TMCP Công Thương Việt Nam</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>NỘI DUNG</b>\n"
+"                                            (<i>Details of Payment</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "<b>Phí NH</b>:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "<b>Phí ngoài</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>Phí ngoài</b>\n"
+"                                                    <br/>\n"
+"                                                    <i>Excluding</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "<b>Phí trong</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>Phí trong</b>\n"
+"                                                    <br/>\n"
+"                                                    <i>Including</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "<b>Phần do NH ghi</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>SỐ TIỀN</b>(<i>With amount</i>): <b style=\"padding-left:35%\">PHÍ "
+"NH</b>(<i>Bank Charges</i>)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>SỐ TK</b>\n"
+"                                                    (<i>A/C No</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "<b>TP.Kế toán</b>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>TÊN TK</b>\n"
+"                                                    (<i>A/C name</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>TẠI NH</b>\n"
+"                                                    (<i>With Bank</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>ĐỀ NGHỊ GHI NỢ TÀI KHOẢN</b>\n"
+"                                                (<i>Please Debit\n"
+"                                                account</i>)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<b>ĐỊA CHỈ</b>\n"
+"                                                    (<i>Address</i>):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid ""
+"<em>\n"
+"                                                                        <span style=\"text-align: center;\">(Ký, họ tên)\n"
+"                                                                        </span>\n"
+"                                                                    </em>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid ""
+"<em>\n"
+"                                                                    <span style=\"text-align: center;\">(Ký, họ tên)\n"
+"                                                                    </span>\n"
+"                                                                </em>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid ""
+"<em>\n"
+"                                                                    <span style=\"text-align: center;\">(Ký, họ tên, đóng dấu)\n"
+"                                                                    </span>\n"
+"                                                                </em>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<em>(Ký, họ tên)</em>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_expense_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_reason_in_form_view
+msgid ""
+"<i class=\"text-muted oe_edit_only\">Use [Reference] as a subject prefix for"
+" incoming receipts</i>"
+msgstr ""
+"<i class=\"text-muted oe_edit_only\">Sử dụng [Tham chiếu] làm tiền tố tiêu "
+"đề cho biên lai đến</i>"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid ""
+"<i style=\"padding-right: 190px\">ID/Passport No</i>\n"
+"                                        <i>Date of issue</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid ""
+"<i style=\"padding-right: 200px\">Place of issue</i>\n"
+"                                        <i>Tel</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Account No</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Account holder</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Amount in figures</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Amount in words</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Applicant</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>At bank</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Beneficiary</i>"
+msgstr "Người thụ hưởng"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Chief Accountant</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Credit account</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Curenty</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Date</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Debit account</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Details</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>No</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Original Bank</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Seq No</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Supervisor</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "<i>Teller</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "<i>Tỉnh, TP</i>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid ""
+"<span class=\"fa fa-plus-square\"/>\n"
+"                                           Create company"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible': [('state','not in',('draft','sent'))]}\">\n"
+"                                Request for Quotation\n"
+"                            </span>\n"
+"                            <span class=\"o_form_label\" attrs=\"{'invisible': [('state','in',('draft','sent'))]}\">Purchase\n"
+"                                Order\n"
+"                            </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible': [('state','not in',('draft','sent'))]}\">Request for Quotation </span>\n"
+"                                                <span class=\"o_form_label\" attrs=\"{'invisible': [('state','in',('draft','sent'))]}\">Purchase Order </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<span style=\"color: #0B3B0B ;font-size: 18px;line-height: 28px;\">\n"
+"                                            <b>CHỨNG TỪ GIAO DỊCH</b>\n"
+"                                        </span>\n"
+"                                        <br/>\n"
+"                                        <span style=\"margin-top: 3px;color:#0B3B0B; font-size: 18px;\">\n"
+"                                            <b>ỦY NHIỆM CHI</b>\n"
+"                                            - PAYMENT ORDER\n"
+"                                        </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">\n"
+"                                                <b>Tên người hưởng</b>\n"
+"                                            </span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">Beneficiary Name</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">\n"
+"                                                Số tiền bằng số\n"
+"                                            </span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">Amount in figures</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">\n"
+"                                                Tại ngân hàng\n"
+"                                            </span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">With Bank</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">Nội dung</span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">Remarks</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">Số tiền bằng chữ</span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">Amount in word</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">Số tài khoản</span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">Debit account No</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">Tài khoản có</span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">Credit account No</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-size: 12px\">Tại ngân hàng</span>\n"
+"                                            <span style=\"font-size: 10px; padding-left: 7px;\">With Bank</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid ""
+"<span style=\"font-size:18px;float:right\">\n"
+"                                                    <strong>\n"
+"                                                        Quyển sổ:....................\n"
+"                                                    </strong>\n"
+"                                                </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"<span style=\"font-weight:bold\">Tên người trả tiền</span>\n"
+"                                            <span style=\"font-size:11px; padding-left: 7px;\">Applicant Name</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<strong>Giám đốc</strong>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<strong>Người lập phiếu</strong>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<strong>Người nhận tiền</strong>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<strong>Người nộp tiền</strong>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "<strong>Thủ quỹ</strong>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid ""
+"<u>DÀNH CHO NGÂN HÀNG <i style=\"font-weight: 400;\">(For Bank's Use only)</i> MÃ\n"
+"                                                VAT:\n"
+"                                            </u>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid ""
+"A partner with the same <span><span class=\"o_vat_label\">Tax "
+"ID</span></span> already exists ("
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "A/C holder signature and stamp"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_company__x_account_deposit_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_config_settings__x_account_deposit_id
+msgid "Account Deposit"
+msgstr "Tài khoản đặt cọc"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_journal_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__journal_id
+msgid "Account Journal"
+msgstr "Sổ nhật ký tài khoản"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_move_ids
+msgid "Account Moves"
+msgstr "Các bút toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Account No"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__x_account_number
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Account Number"
+msgstr "Số tài khoản"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_move__x_account_payment_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__payment_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__payment_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__payment_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__payment_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__payment_id
+msgid "Account Payment"
+msgstr "Thanh toán"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__account_tax_id
+msgid "Account Tax"
+msgstr "TK thuế GTGT"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__account_id
+msgid "Account credit"
+msgstr "TK có"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Account holder"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_expense_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_reason_in_form_view
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_tree
+msgid "Accounting date"
+msgstr "Ngày hạch toán"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_needaction
+msgid "Action Needed"
+msgstr "Hành động cần thiết"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hành động ngoại lệ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_address
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_bank_rpt
+msgid "Agribank_Report"
+msgstr "UNC Agribank"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Allocate"
+msgstr "Phân bổ"
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/purchase_order.py:0
+#: code:addons/ev_account_payment/models/res_partner_legal_representation.py:0
+#: model:ir.actions.act_window,name:ev_account_payment.action_allocate_deposit_supplier
+#, python-format
+msgid "Allocate Deposit Supplier"
+msgstr "Phân bổ đặt cọc"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__purchase_order__x_status_deposit__allocated
+msgid "Allocated"
+msgstr "Đã phân bổ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_purchase_order__x_allocated_amount
+msgid "Allocated amount"
+msgstr "Giá trị đã phân bổ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__purchase_order__x_status_deposit__allocating
+msgid "Allocating"
+msgstr "Đang phân bổ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_allocation_type
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__allocation_type
+msgid "Allocation Type"
+msgstr "Loại phân bổ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__amount_total
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_tree
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_amount_cost
+msgid "Amount cost"
+msgstr "Tổng chi phí"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Amount in figures"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Amount in words"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__amount_invoice
+msgid "Amount invoice before tax"
+msgstr "Giá trị HDDV chưa thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__amount_tax
+msgid "Amount tax"
+msgstr "Tiền thuế GTGT"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__analytic_account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__analytic_account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "Khoản mục phí"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng tập tin đính kèm"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__account_payment__x_allocation_type__auto
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general_line__allocation_type__auto
+msgid "Automatic"
+msgstr "Tự động"
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_bank_bidv_vendor
+msgid "BIDV Report Vendor"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_bank_bidv
+msgid "BIDV_Report"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_bank_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__x_bank_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__x_bank_id
+#: model:ir.ui.menu,name:ev_account_payment.menu_ev_finance_bank
+#: model:ir.ui.menu,name:ev_account_payment.menu_ev_res_bank
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.bank_expense_action_account_payments
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_bank_expense
+#: model:ir.ui.menu,name:ev_account_payment.menu_bank_expense_account_payments
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+msgid "Bank Expense"
+msgstr "Chi tiền"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+msgid "Bank Expense Line"
+msgstr "Chi tiết"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.bank_in_action_account_payments
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_bank_in
+#: model:ir.ui.menu,name:ev_account_payment.menu_bank_in_account_payments
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+msgid "Bank In"
+msgstr "Thu tiền"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+msgid "Bank In Line"
+msgstr "Chi tiết"
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_credit_notices
+msgid "Bao Cao Co"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_debt_notices
+msgid "Bao Cao No"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_currency__x_base_currency_id
+msgid "Base Currency"
+msgstr "Tiền tệ gốc"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__beneficiary
+msgid "Beneficiary"
+msgstr "Người thụ hưởng"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Beneficiary's Name"
+msgstr ""
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#, python-format
+msgid "Bạn chỉ có thể xóa khi ở trạng thái Nháp"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "CHUYỂN KHOẢN,CHUYỂN TIỀN THƯ,ĐIỆN"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid ""
+"CHUYỂN KHOẢN/\n"
+"                                        <span style=\"font-style: italic; font-size: 12\">Transfer</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "CMND/Hộ chiếu:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid ""
+"CMT/Hộ\n"
+"                                        chiếu:.................................................\n"
+"                                        <span>\n"
+"                                            Ngày cấp:..................................................................\n"
+"                                        </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "CN"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_product_product__x_can_be_expensed
+#: model:ir.model.fields,field_description:ev_account_payment.field_product_template__x_can_be_expensed
+msgid "Can be expensed"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_allocate_deposit_supplier
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.wizard_account_payment_vendor_unc_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.wizard_standing_order_general_unc_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__state__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: ev_account_payment
+#: model:ir.ui.menu,name:ev_account_payment.menu_ev_finance_cash
+msgid "Cash"
+msgstr "Tiền mặt"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.cash_expense_action_account_payments
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_cash_expense
+#: model:ir.ui.menu,name:ev_account_payment.menu_cash_expense_account_payments
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+msgid "Cash Expense"
+msgstr "Chi tiền"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+msgid "Cash Expense Line"
+msgstr "Chi tiết chi"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.cash_in_action_account_payments
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_cash_in
+#: model:ir.ui.menu,name:ev_account_payment.menu_cash_in_account_payments
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Cash In"
+msgstr "Thu tiền"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Cash In Line"
+msgstr "Chi tiết thu"
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.action_report_cash_management
+msgid "Cash Report"
+msgstr "Báo cáo Thu_Chi"
+
+#. module: ev_account_payment
+#: model:ir.ui.menu,name:ev_account_payment.menu_ev_finance_cash_bank
+msgid "Cash and bank"
+msgstr "Tiền mặt và ngân hàng"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Cash in line"
+msgstr "Chi tiết thu"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Chi nhánh:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "Chief Accountant"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Chủ tài khoản"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid "Chứng từ giao dịch"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "City"
+msgstr "Thành phố"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__code_invoice
+msgid "Code Invoice"
+msgstr "Ký hiệu hóa đơn"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__company_id
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_allocate_deposit_supplier
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_allocate_deposit_supplier
+msgid "Confirm Date"
+msgstr "Xác nhận ngày"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_res_partner
+msgid "Contact"
+msgstr "Danh bạ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__origin
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__purchase_order_id
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+msgid "Cost Line"
+msgstr "Chi phí"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__cost_lines
+msgid "Cost Lines"
+msgstr "Chi tiết"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+msgid "Cost line"
+msgstr "Chi phí"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+msgid "Costs"
+msgstr "Chi phí"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: ev_account_payment
+#: model_terms:ir.actions.act_window,help:ev_account_payment.hr_expense_product_custom
+#: model_terms:ir.actions.act_window,help:ev_account_payment.reason_in_product
+msgid "Create a new expense category"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__create_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__create_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__default_credit_account_id
+msgid "Credit Account"
+msgstr "Tài khoản Có"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_res_currency
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__currency_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__currency_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__currency_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.bank_customer_action_account_payments
+#: model:ir.actions.act_window,name:ev_account_payment.cash_customer_action_account_payments
+#: model:ir.ui.menu,name:ev_account_payment.menu_bank_customer_account_payments
+#: model:ir.ui.menu,name:ev_account_payment.menu_cash_customer_account_payments
+msgid "Customer Payments"
+msgstr "Thanh toán của Khách hàng"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Có:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__date_invoice
+msgid "Date Invoice"
+msgstr "Ngày hóa đơn"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_account_default
+msgid "Default account"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Define your terms and conditions ..."
+msgstr "Xác định điều khoản và điều kiện của bạn ..."
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__part_id
+msgid "Department"
+msgstr "Phòng/Ban"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__account_payment__x_payment_type__deposit
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__purchase_order__x_status_deposit__deposit
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__payment_type__deposit
+msgid "Deposit"
+msgstr "Đặt cọc"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.res_config_settings_deposit_account_view_form
+msgid "Deposit Account."
+msgstr "Tài khoản đặt cọc."
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_purchase_order__x_deposit_amount
+msgid "Deposit Amount"
+msgstr "Tài khoản đặt cọc"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Deposit Management"
+msgstr "Quản lý đặt cọc"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.deposit_management_purchase_order_action
+#: model:ir.ui.menu,name:ev_account_payment.menu_deposit_management_purchase_order
+msgid "Deposit Management Purchase Order"
+msgstr "Quản lý đặt cọc theo hợp đồng"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.deposit_supplier_action
+#: model:ir.ui.menu,name:ev_account_payment.menu_deposit_supplier
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_tree
+msgid "Deposit Management Supplier"
+msgstr "Quản lý đặt cọc"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_description
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__name
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__description
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__name
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__destination_account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__destination_account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__destination_account_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__destination_account_id
+msgid "Destination account"
+msgstr "TK Nợ"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__lines
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__display_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Diễn giải"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_tree
+msgid "Document date"
+msgstr "Ngày chứng từ"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Download Import Template"
+msgstr "Tải file mẫu"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Dành cho ngân hàng(for use bank only)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__product_id
+msgid "Expense"
+msgstr "Chi phí"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.hr_expense_product_custom
+#: model:ir.ui.menu,name:ev_account_payment.hr_expense_product_menu
+msgid "Expense Products"
+msgstr "Lý do chi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__field_binary_import
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__field_binary_import_cost
+msgid "Field Binary Import"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__field_binary_name
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__field_binary_name_cost
+msgid "Field Binary Name"
+msgstr "Tên tệp tải lên"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Kênh)"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+msgid "GIẤY BÁO CÓ"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "GIẤY BÁO NỢ"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__general_id
+msgid "General"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_expense_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_reason_in_form_view
+msgid "General Information"
+msgstr "Thông tin chung"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__general_lines
+msgid "General Lines"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Ghi có"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Ghi nợ"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Ghi sổ ngày(<i>Settled date</i>).........../.........../............."
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Ghi sổ ngày: ......................."
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Giao dịch viên"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid "Giám đốc"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Họ và tên người nhận tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Họ và tên người nộp tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "I.D No./PP No."
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__message_needaction
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu chọn, các tin nhắn mới yêu cầu sự có mặt của bạn."
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu thì một số thông điệp có lỗi."
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+msgid "Import"
+msgstr "Nhập"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_tree
+msgid "Interpretation"
+msgstr "Diễn giải"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__account_move_id
+msgid "Invoice"
+msgstr "Công nợ"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Invoices"
+msgstr "Hóa đơn"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_is_follower
+msgid "Is Follower"
+msgstr "Trở thành người theo dõi"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Issued date"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Issued place"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__default_credit_account_id
+msgid "It acts as a default account for credit amount"
+msgstr "Nó hoạt động như là một tài khoản mặc định cho tổng có"
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#, python-format
+msgid ""
+"It is not allowed to delete a payment that already created a journal entry "
+"since it would create a gap in the numbering. You should create the journal "
+"entry again and cancel it thanks to a regular revert."
+msgstr ""
+"Không được phép xóa khoản thanh toán đã tạo mục nhật ký vì nó sẽ tạo ra "
+"khoảng trống trong việc đánh số. Bạn nên tạo lại mục nhật ký và hủy nó nhờ "
+"hoàn nguyên thường xuyên."
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_move
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Journal Entries"
+msgstr "Bút toán phát sinh"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_move_line
+msgid "Journal Item"
+msgstr "Bút toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Journal Items"
+msgstr "Bút toán phát sinh"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Keep Business Accounts"
+msgstr "Hạch toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Khách hàng"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid "Kiểm soát"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Kèm theo: .......... chứng từ gốc"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"Ký hiệu\n"
+"                                        <span style=\"padding-left:5px;padding-right:5px;\">Invoice sign\n"
+"                                        </span>\n"
+"                                        <span style=\"padding-left: 6%;\">Số HĐ\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;\">Invoice No\n"
+"                                            </span>\n"
+"                                        </span>\n"
+"                                        <span style=\"padding-left: 15%;\">Mẫu số\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;\">01HTKT2/003\n"
+"                                            </span>\n"
+"                                        </span>\n"
+"                                        <span style=\"padding-left: 4%;\">Liên 1. Lưu.\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;\">Copy 1, Bank's Copy\n"
+"                                            </span>\n"
+"                                        </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Kế toán trưởng"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line____last_update
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__write_uid
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_general__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_unc_wizard__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__write_date
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_unc__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_partner__x_legal_representation
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_users__x_legal_representation
+msgid "Legal Representation"
+msgstr "Người đại diện"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Liên 1: Ngân hàng"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Loại tiền tệ:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Loại tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Lý do chi:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Lý do nộp:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Lý do thanh toán:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Lập ngày:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Tệp đính kèm chính"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__account_payment__x_allocation_type__manual
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general_line__allocation_type__manual
+msgid "Manual"
+msgstr "Thủ công"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_ids
+msgid "Messages"
+msgstr "Thông báo"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "More languages"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Mẫu import có định dạng là xls hoặc xlsx"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid ""
+"NH A <span style=\"font-size: 11px;font-style: italic\">(Eximbank)</span> ghi sổ\n"
+"                                        ngày ............................"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid ""
+"NH B <span style=\"font-size: 11px; font-style: italic;\">(Beneficiary's Bank)\n"
+"                                    </span> ghi sổ ngày ............"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__name
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__name
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_tree
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Name, TIN, Email, or Reference"
+msgstr "Tên, MST, Email, hoặc Mã"
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/standing_order_general.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót cho hành động kế tiếp"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hoạt động kế tiếp"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Ngày"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Ngày / <i>Date</i> :........................................."
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Ngày cấp:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid "Ngày(<i>Date</i>):....................................."
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Ngày/<span style=\"font-size: 10px; font-style:italic\">Date</span>:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid "Ngày:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Ngân hàng"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Ngân hàng A"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Ngân hàng A (<i>Bank of Applicant</i>)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Ngân hàng B"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Ngân hàng B (<i>Bank of Beneficiary</i>)"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Người hưởng:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Người lập phiếu"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Người nhận tiền"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Người nhận tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+msgid "Người nộp tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng hành động"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông báo cần xử lý"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng tin gửi đi bị lỗi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số tin chưa đọc"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid ""
+"Nơi\n"
+"                                        cấp:.............................................................\n"
+"                                        <span>\n"
+"                                            Điện\n"
+"                                            thoại:................................................................\n"
+"                                        </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Nơi cấp:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Nội dung thanh toán:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Nội dung:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Nợ:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__object_cost_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__object_cost_id
+msgid "Object cost"
+msgstr "Đối tượng THCP"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Order's Name"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Ordered on"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__origin
+msgid "Origin"
+msgstr "Tham chiếu"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "PHIẾU CHI"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "PHIẾU THU"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__part_id
+msgid "Part"
+msgstr "Bộ phận"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_partner_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__partner_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__partner_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__partner_id
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__allocate_deposit_supplier__view_type__partner
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_partner_bank_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__partner_bank_id
+msgid "Partner bank"
+msgstr "TK Ngân hàng"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Partners"
+msgstr "Đối tác"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__account_payment__x_payment_type__pay
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__payment_type__pay
+msgid "Pay"
+msgstr "Thanh toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Payer"
+msgstr "Người nộp"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"Payment\n"
+"                                            Order"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_amount
+msgid "Payment Amount"
+msgstr "Tổng giá trị sau thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_amount_tax
+msgid "Payment Amount Tax"
+msgstr "Tổng giá trị thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_amount_before_tax
+msgid "Payment Amount before tax"
+msgstr "Tổng giá trị trước thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_payment_customer_bank
+msgid "Payment Customer Bank"
+msgstr "Thu tiền khách hàng"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_payment_customer_cash
+msgid "Payment Customer Cash"
+msgstr "Thu tiền khách hàng"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__payment_lines
+#: model:ir.model.fields,field_description:ev_account_payment.field_purchase_order__x_payment_line_ids
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__payment_ids
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Payment Lines"
+msgstr "Chi tiết"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Payment Matching"
+msgstr "Khớp thanh toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vib_template
+msgid "Payment Order"
+msgstr "Các thanh toán"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_payment_type
+#: model:ir.model.fields,field_description:ev_account_payment.field_purchase_order__x_status_deposit
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__payment_type
+msgid "Payment Type"
+msgstr "Loại thanh toán"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_payment_vendor_bank
+msgid "Payment Vendor Bank"
+msgstr "Trả tiền nhà cung cấp"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_is_payment_vendor_cash
+msgid "Payment Vendor Cash"
+msgstr "Trả tiền nhà cung cấp"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Payment card line"
+msgstr "Dòng thẻ thanh toán"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.view_standing_order_general_action
+#: model:ir.ui.menu,name:ev_account_payment.view_standing_order_general_menu
+msgid "Payments Multi Suppliers"
+msgstr "Thanh toán cho nhiều NCC"
+
+#. module: ev_account_payment
+#: model_terms:ir.actions.act_window,help:ev_account_payment.bank_customer_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.bank_supplier_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.cash_customer_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.cash_supplier_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.view_standing_order_general_action
+msgid ""
+"Payments are used to register liquidity movements. You can process those payments by your own means\n"
+"                    or by using installed facilities."
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__percent_tax
+msgid "Percent Tax"
+msgstr "% thuế GTGT"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"Phí ngân hàng\n"
+"                                        <span style=\"padding-left:5px;padding-right:5px;font-size:10px\">Fee\n"
+"                                        </span>\n"
+"\n"
+"                                        <span style=\"padding-left: 15%;\">\n"
+"                                            <span style=\"padding: 0px 8px;border: 1px solid;margin-right: 10px;\"/>\n"
+"                                            Phí trong\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;font-size:11px\">Including\n"
+"                                            </span>\n"
+"                                        </span>\n"
+"                                        <span style=\"padding-left: 15%;\">\n"
+"                                            <span style=\"padding: 0px 8px;border: 1px solid;margin-right: 10px;\"/>\n"
+"                                            Phí ngoài\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;font-size:11px\">Excluding\n"
+"                                            </span>\n"
+"                                        </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Phần dành cho NH"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+msgid "Print"
+msgstr "In"
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/standing_order_general.py:0
+#: model:ir.model,name:ev_account_payment.model_account_payment_unc_wizard
+#: model:ir.model,name:ev_account_payment.model_standing_order_general_unc
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.wizard_account_payment_vendor_unc_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.wizard_standing_order_general_unc_view_form
+#, python-format
+msgid "Print UNC"
+msgstr "In ủy nhiệm chi"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Province City"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__allocate_deposit_supplier__view_type__purchase
+msgid "Purchase"
+msgstr "Mua"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_purchase_order
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_move_line__x_purchase_order_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__purchase_order_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_partner__x_purchase_order_ids
+#: model:ir.model.fields,field_description:ev_account_payment.field_res_users__x_purchase_order_ids
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__purchase_order_id
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_rate
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__rate
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__rate
+msgid "Rate"
+msgstr "Tỷ giá"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_expense_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_tree
+msgid "Reason Expense"
+msgstr "Lý do chi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_product_product__is_reason_in
+#: model:ir.model.fields,field_description:ev_account_payment.field_product_template__is_reason_in
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_reason_in_form_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_tree
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_tree
+msgid "Reason In"
+msgstr "Lý do thu"
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.reason_in_product
+#: model:ir.ui.menu,name:ev_account_payment.reason_in_product_menu
+msgid "Reason In Products"
+msgstr "Lý do thu"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_receiver
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__receiver
+msgid "Receiver"
+msgstr "Người nhận"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__state__reconciled
+msgid "Reconciled"
+msgstr "Đã được đối soát"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_tree
+msgid "Reference"
+msgstr "Mã phiếu"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Register Payment"
+msgstr "Ghi nhận thanh toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.actions.act_window,help:ev_account_payment.bank_customer_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.bank_supplier_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.cash_customer_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.cash_supplier_action_account_payments
+#: model_terms:ir.actions.act_window,help:ev_account_payment.view_standing_order_general_action
+msgid "Register a payment"
+msgstr "Ghi nhận thanh toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Registered by Bank A (Eximbank) on"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Registered by Bank B on"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_purchase_order__x_remaining_amount
+msgid "Remaining Amount"
+msgstr "Số tiền chưa phân bổ"
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_general_bidv_unc
+msgid "Report BIDV"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_eximbank_order
+msgid "Report EximBank"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_general_vcb_unc
+msgid "Report VCB"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_order
+msgid "Report VietComBank Vendor"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_general_vietinbank_unc
+msgid "Report VietinBank"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.actions.report,name:ev_account_payment.report_order_vietinbank
+msgid "Report VietinBank Vendor"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: ev_account_payment
+#: model:ir.ui.menu,name:ev_account_payment.menu_ev_revenue_expense_config
+msgid "Revenue and expense config"
+msgstr "Cấu hình lý do thu/chi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__state__sent
+msgid "Sent"
+msgstr "Đã gửi"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_customer_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_standing_order_general_form
+msgid "Set To Draft"
+msgstr "Đưa về Nháp"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_standing_order_id
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__standing_order_id
+msgid "Standing Order"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__date
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__date
+msgid "State of Asset"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn phải được chuyển\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Kế hoạch: Các hoạt động trong tương lai."
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Street 2..."
+msgstr "Địa chỉ, đường..."
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Street..."
+msgstr "Địa chỉ..."
+
+#. module: ev_account_payment
+#: model:ir.actions.act_window,name:ev_account_payment.bank_supplier_action_account_payments
+#: model:ir.actions.act_window,name:ev_account_payment.cash_supplier_action_account_payments
+#: model:ir.ui.menu,name:ev_account_payment.menu_bank_supplier_account_payments
+#: model:ir.ui.menu,name:ev_account_payment.menu_cash_supplier_account_payments
+msgid "Supplier Payments"
+msgstr "Thanh toán cho nhà cung cấp"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid ""
+"Số\n"
+"                                    <span style=\"padding-left: 20%;\">.....................</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid ""
+"Số /\n"
+"                                            <i>Seq No</i>\n"
+"                                            :........................................."
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+msgid ""
+"Số /\n"
+"                                        <i>Seq No</i>\n"
+"                                        :........................................."
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid ""
+"Số CMND/ HC:................ Ngày cấp:................ Nơi\n"
+"                                                    cấp:................"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+msgid ""
+"Số CMND/ HC:................ Ngày cấp:................ Nơi\n"
+"                                        cấp:................"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+msgid ""
+"Số CMND/ HC:................ Ngày cấp:................ Nơi\n"
+"                                    cấp:................"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid ""
+"Số CMT/HC\n"
+"                                        <span style=\"padding-left:5px;padding-right:5px; font-size:10px\">ID/PP No\n"
+"                                        </span>\n"
+"                                        <span style=\"padding-left: 20%;\">Ngày cấp\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;font-size:10px\">Date of\n"
+"                                                Issue\n"
+"                                            </span>\n"
+"                                        </span>\n"
+"                                        <span style=\"padding-left: 15%;\">Nơi cấp\n"
+"                                            <span style=\"padding-left:5px;padding-right:5px;font-size:10px\">Place of\n"
+"                                                Issue\n"
+"                                            </span>\n"
+"                                        </span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Số TK trích Nợ:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Số TK:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Số bút toán:........................"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Số tiền ("
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Số tiền bằng chữ :"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Số tiền bằng chữ:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Số tiền bằng số"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Số tiền bằng số :"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Số tiền bằng số:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Số tiền nguyên tệ ("
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Số tiền phí:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Số tiền(thực thu):"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "Số tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Số tài khoản"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+msgid "Số tài khoản đơn vị thụ hưởng:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Số tài khoản đơn vị trả tiền:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Số tài khoản:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Số/<span style=\"font-size: 10px; font-style:italic\">No</span>:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vietinbank_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vtb_unc_vendor
+msgid "Số:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid ""
+"Số:\n"
+"                                                        <span style=\"color:white\">...</span>"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Tags..."
+msgstr "Từ khóa..."
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__tax_code
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__tax_code
+msgid "Tax Code"
+msgstr "Mã số thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__tax_lines
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+msgid "Tax Lines"
+msgstr "Chi tiết thuế"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_bank_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_account_payment_vendor_cash_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_bank_expense_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_cash_expense_form
+msgid "Tax line"
+msgstr "Thuế"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Teller"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_VietComBank_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_vcb_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_vcb_unc_vendor
+msgid "Thanh toán viên"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Thủ quỹ"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment__x_total_entries
+msgid "Total Entries"
+msgstr "Tổng bút toán"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_tree
+msgid "Total Untaxed amount"
+msgstr "Tổng trước thuế"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_tree
+msgid "Total amount"
+msgstr "Tổng số tiền"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên hồ sơ."
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Tài khoản có"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Tài khoản ghi có:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_agribank_view2
+msgid "Tài khoản ghi nợ:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_mb_template
+msgid "Tài khoản nợ"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.credit_notices_view
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.debt_notices_view
+msgid "Tài khoản:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_bidv_unc_template
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.template_bidv_unc_vendor
+msgid "Tên tài khoản trích Nợ:"
+msgstr ""
+
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Tại Ngân Hàng Xuất Nhập Khẩu Việt Nam - SGD/Chi nhánh/PGD:"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_unread
+msgid "Unread Messages"
+msgstr "Tin chưa đọc"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm tin chưa đọc"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_tree
+msgid "Untaxed"
+msgstr "Trước thuế"
+
+#. module: ev_account_payment
+#: model:ir.model.fields.selection,name:ev_account_payment.selection__standing_order_general__state__posted
+msgid "Validated"
+msgstr "Đã xác nhận"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_cost__value
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__value
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__value
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_line__value_natural_currency
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general_line__value_natural_currency
+msgid "Value natural currency"
+msgstr "GT Quy đổi"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__partner_id
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.deposit_management_purchase_order_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "Vendor Bills"
+msgstr "Công nợ nhà cung cấp"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_EximBank_template
+msgid "Verifier"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_allocate_deposit_supplier__view_type
+msgid "View Type"
+msgstr "Dạng hiển thị"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_standing_order_general__website_message_ids
+msgid "Website Messages"
+msgstr "Thông báo Website"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,help:ev_account_payment.field_standing_order_general__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/standing_order_general.py:0
+#: code:addons/ev_account_payment/models/standing_order_general.py:0
+#, python-format
+msgid "You cannot back a payment that is already posted."
+msgstr ""
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#, python-format
+msgid "You cannot delete a payment that is already posted."
+msgstr ""
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/standing_order_general.py:0
+#, python-format
+msgid "You cannot delete record if the state is not 'Draft'."
+msgstr ""
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#, python-format
+msgid "You cannot return when contract allocated."
+msgstr "Bạn không thể quay lại vì hợp đồng đã được phân bổ."
+
+#. module: ev_account_payment
+#: code:addons/ev_account_payment/models/account_payment_expense.py:0
+#: code:addons/ev_account_payment/models/allocate_deposit_supplier.py:0
+#: code:addons/ev_account_payment/models/standing_order_general.py:0
+#, python-format
+msgid "You have not configured a deposit account."
+msgstr "Bạn chưa cấu hình tài khoản đặt cọc trong cấu hình."
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "ZIP"
+msgstr "Mã bưu điện"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_payment_cost
+msgid "account.payment.cost"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_payment_general
+msgid "account.payment.general"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_payment_line
+msgid "account.payment.line"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_account_payment_tax
+msgid "account.payment.tax"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_allocate_deposit_supplier
+msgid "allocate.deposit.supplier"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "e.g. BE0477472701"
+msgstr "ví dụ: BE0477472701"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.product_product_expense_custom_form_view
+msgid "e.g. Lunch"
+msgstr "vd: Ăn trưa"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "e.g. Mister"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "e.g. Sales Director"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.view_partner_deposit_management_form
+msgid "e.g. https://www.odoo.com"
+msgstr "vd: https://www.odoo.com"
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "năm"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.wizard_account_payment_vendor_unc_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.wizard_standing_order_general_unc_view_form
+msgid "or"
+msgstr "hoặc"
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_standing_order_general
+msgid "standing.order.general"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model,name:ev_account_payment.model_standing_order_general_line
+msgid "standing.order.general.line"
+msgstr ""
+
+#. module: ev_account_payment
+#: model_terms:ir.ui.view,arch_db:ev_account_payment.report_account_cash_management
+msgid "tháng"
+msgstr ""
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__number_invoice
+msgid "Number Invoice"
+msgstr "Số hóa đơn"
+
+#. module: ev_account_payment
+#: model:ir.model.fields,field_description:ev_account_payment.field_account_payment_tax__number_invoice_form
+msgid "Number Invoice Form"
+msgstr "Mẫu số hóa đơn"

@@ -1,0 +1,671 @@
+
+#. module: ev_account_sinvoice
+#: model:ir.actions.act_window,name:ev_account_sinvoice.account_sinvoice_action
+#: model:ir.model,name:ev_account_sinvoice.model_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_id
+msgid "Account SInvoice"
+msgstr "Hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.ui.menu,name:ev_account_sinvoice.account_sinvoice_menu
+msgid "Account Sinvoice"
+msgstr "Hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__action_type
+msgid "Action Type"
+msgstr "Hành động"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__amount_tax
+msgid "Amount Tax"
+msgstr "Tiền thuế"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__amount_untax
+msgid "Amount Untax"
+msgstr "Tiền chưa thuế"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_address_line
+msgid "Buyer Address Line"
+msgstr "Địa chỉ người mua"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_bank_account
+msgid "Buyer Bank Account"
+msgstr "Tài khoản ngân hàng người mua"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_bank_name
+msgid "Buyer Bank Name"
+msgstr "Tên ngân hàng người mua"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_code
+msgid "Buyer Code"
+msgstr "Mã khách hàng"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_email
+msgid "Buyer Email"
+msgstr "Email người mua"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_id_no
+msgid "Buyer Id No"
+msgstr "Số giấy tờ"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_id_type
+msgid "Buyer Id Type"
+msgstr "Loại giấy tờ"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_name
+msgid "Buyer Name"
+msgstr "Tên người mua"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_not_get_invoice
+msgid "Buyer Not Get Invoice"
+msgstr "Người mua không lấy hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__buyer_tax_code
+msgid "Buyer Tax Code"
+msgstr "Mã số thuế người mua"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__buyer_id_no
+msgid ""
+"Buyer document number, can be identity card, business license, passport"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__buyer_not_get_invoice__1
+msgid "Buyer does not take invoice"
+msgstr "Người mua không lấy hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__buyer_name
+msgid ""
+"Buyer name in case of retail or individual buyers. Buyer or unit name is "
+"required when buyer_not_get_invoice = 0"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__buyer_not_get_invoice__0
+msgid "Buyer take invoice"
+msgstr "Người mua có lấy hoá đơn"
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Bạn đã nhập một email không hợp lệ."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__action_type__cancel
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__state__cancel
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__sinvoice_state__cancel_release
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__pos_order__sinvoice_state__cancel_release
+msgid "Cancel Release"
+msgstr "Hủy phát hành"
+
+#. module: ev_account_sinvoice
+#: model:ir.model,name:ev_account_sinvoice.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_lot_id
+msgid "Create SInvoice Lot"
+msgstr "Lô/Series"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__create_uid
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__create_date
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__display_name
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__display_name
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_session__display_name
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Email:"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__state__error
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid ""
+"Hóa đơn điện tử sẽ được xuất tự động trong ngày, Quý khách có thể tra cứu "
+"thông tin hóa đơn điện tử sau 24H từ thời điểm mua hàng"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__id
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__id
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_session__id
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_product_template__id
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__buyer_id_type__identify_card
+msgid "Identity Card Number"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__sinvoice_no
+#: model:ir.model.fields,help:ev_account_sinvoice.field_pos_order__sinvoice_no
+msgid ""
+"Invoice No (eg: K23TAA00000001, K23TAA: invoice symbol, 00000001: incre "
+"number)"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_pos_order__sinvoice_issued_date
+msgid "Invoice issued date"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_pos_order__sinvoice_series
+#: model:ir.model.fields,help:ev_account_sinvoice.field_res_company__sinvoice_series
+msgid "Invoice symbol, eg: K23TAA"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_res_company__sinvoice_template_code
+msgid "Invoice template symbol, eg: 0/001"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_res_company__sinvoice_type
+msgid "Invoice type code, eg: 1, 2, 3, or 4"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Khách lẻ không lấy hóa đơn"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Không tìm thấy thông tin lấy hoá đơn gần nhất."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice____last_update
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot____last_update
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_session____last_update
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__write_uid
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__write_date
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__sinvoice_lot_id
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Mã số thuế:"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Mã tra cứu:"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__sinvoice_state__no_release
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__pos_order__sinvoice_state__no_release
+msgid "No Release"
+msgstr "Chưa phát hành"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__number_pos_per_lot
+msgid "Number Pos Order Per Lot"
+msgstr "Số đơn hàng trên một lô"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__line_ids
+#: model_terms:ir.ui.view,arch_db:ev_account_sinvoice.create_sinvoice_lot_view_form
+msgid "Orders"
+msgstr "Đơn hàng"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__params
+msgid "Params"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__params_api_get_invoice
+msgid "Params Api Get Invoice"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__res_partner_bank_id
+msgid "Partner Bank"
+msgstr "Ngân hàng"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__buyer_id_type__passport
+msgid "Passport"
+msgstr "Hộ chiếu"
+
+#. module: ev_account_sinvoice
+#: model:ir.model,name:ev_account_sinvoice.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_account_sinvoice
+#: model:ir.model,name:ev_account_sinvoice.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Ca bán hàng"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__config_id
+msgid "Pos Config"
+msgstr "Cửa hàng"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__order_id
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: ev_account_sinvoice
+#: model:ir.model,name:ev_account_sinvoice.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__sinvoice_state__queue
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__state__queue
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__pos_order__sinvoice_state__queue
+msgid "Queue"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__buyer_id_type__registration_cer
+msgid "Registration Certificate"
+msgstr "Chứng thư số"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__create_sinvoice_lot__action_type__release
+msgid "Release"
+msgstr "Phát hành"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__account_sinvoice__sinvoice_state__released
+#: model:ir.model.fields.selection,name:ev_account_sinvoice.selection__pos_order__sinvoice_state__released
+msgid "Released"
+msgstr "Đã phát hành"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__buyer_address_line
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__buyer_tax_code
+msgid "Required when buyer_not_get_invoice = 0"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__reservation_code
+msgid "Reservation Code"
+msgstr "Mã số bí mật"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__response
+msgid "Response"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__response_api_get_invoice
+msgid "Response Api Get Invoice"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.ui.menu,name:ev_account_sinvoice.sinvoice_menu_root
+msgid "SInvoice"
+msgstr "Hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_address
+msgid "SInvoice Address"
+msgstr "Địa chỉ"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__sinvoice_cancel_date
+msgid "SInvoice Cancel Date"
+msgstr "Ngày hủy hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_company_name
+msgid "SInvoice Company Name"
+msgstr "Tên công ty"
+
+#. module: ev_account_sinvoice
+#: model_terms:ir.ui.view,arch_db:ev_account_sinvoice.res_company_sinvoice_view_inherit
+msgid "SInvoice Config"
+msgstr "Cấu hình Hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__sinvoice_date
+msgid "SInvoice Date"
+msgstr "Ngày lập hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_email
+msgid "SInvoice Email"
+msgstr "Email"
+
+#. module: ev_account_sinvoice
+#: model_terms:ir.ui.view,arch_db:ev_account_sinvoice.pos_order_view_sinvoice_inherit
+msgid "SInvoice Info"
+msgstr "Hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_issued_date
+msgid "SInvoice Issued Date"
+msgstr "Ngày lập hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.actions.act_window,name:ev_account_sinvoice.create_sinvoice_lot_action
+#: model:ir.ui.menu,name:ev_account_sinvoice.create_sinvoice_lot_menu
+msgid "SInvoice Lot"
+msgstr "Lô hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.model,name:ev_account_sinvoice.model_create_sinvoice_lot
+msgid "SInvoice Lot - Logging API SInvoice"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__sinvoice_no
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_no
+msgid "SInvoice No"
+msgstr "Số hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_password
+msgid "SInvoice Password"
+msgstr "Mật khẩu"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__sinvoice_payment_method
+msgid "SInvoice Payment"
+msgstr "Phương thức thanh toán"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_production_url
+msgid "SInvoice Production Url"
+msgstr "API Production"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_search_url
+msgid "SInvoice Search Url"
+msgstr "Link tra cứu"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_series
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_series
+msgid "SInvoice Series"
+msgstr "Ký hiệu hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__sinvoice_state
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_state
+msgid "SInvoice State"
+msgstr "Trạng thái hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_template_code
+msgid "SInvoice Template Code"
+msgstr "Ký hiệu mẫu hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_type
+msgid "SInvoice Type"
+msgstr "Loại hoá đơn"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_res_company__sinvoice_username
+msgid "SInvoice Username"
+msgstr "Tài khoản"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__sinvoice_vat
+msgid "SInvoice VAT"
+msgstr "Mã số thuế"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__start_at
+msgid "Start At"
+msgstr "Ngày đầu kỳ"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_create_sinvoice_lot__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "THÔNG TIN HÓA ĐƠN ĐIỆN TỬ"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_create_sinvoice_lot__config_id
+msgid "The physical point of sale you will use."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Thông báo"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__total_amount_tax
+msgid "Total Amount Tax"
+msgstr "Tiền sau thuế"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__total_amount_tax
+msgid "Total amount after tax"
+msgstr "Tổng tiền sau thuế"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__amount_tax
+msgid "Total amount of tax"
+msgstr "Tổng tiền thuế"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,help:ev_account_sinvoice.field_account_sinvoice__amount_untax
+msgid "Total pre-tax money"
+msgstr "Tổng tiền trước thuế"
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Tra cứu tại:"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__transaction_id
+msgid "Transaction Id"
+msgstr "TransactionID"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__transaction_uuid
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order__transaction_uuid
+msgid "Transaction Uuid"
+msgstr "TransactionUUID"
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Tên đơn vị:"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Vui lòng chọn khách hàng để lấy hoá đơn điện tử"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Vui lòng nhập email."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Vui lòng nhập mã số thuế."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Vui lòng nhập tên công ty."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Vui lòng nhập địa chỉ."
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "desc"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#. openerp-web
+#: code:addons/ev_account_sinvoice/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Địa chỉ:"
+msgstr ""
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_pos_order_line__sinvoice_tax_amount
+msgid "Sinvoice Tax Amount"
+msgstr "Thuế sau khuyến mại"
+
+#. module: ev_account_sinvoice
+#: model:ir.model.fields,field_description:ev_account_sinvoice.field_account_sinvoice__reservation_code
+msgid "Reservation Code"
+msgstr "Mã số bí mật"
+
+#. module: ev_account_sinvoice
+#: model_terms:ir.ui.view,arch_db:ev_account_sinvoice.pos_order_view_sinvoice_inherit
+msgid "Action Destroy SInvoice"
+msgstr "Hủy hoá đơn điện tử"
+
+#. module: ev_account_sinvoice
+#: model:ir.actions.server,name:ev_account_sinvoice.action_update_invoice_no_ir_actions_server
+#: model:ir.cron,cron_name:ev_account_sinvoice.action_update_invoice_no
+#: model:ir.cron,name:ev_account_sinvoice.action_update_invoice_no
+msgid "SInvoice: Update Invoice No"
+msgstr "Hoá đơn điện tử: Cập nhập số hoá đơn"

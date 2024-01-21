@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="view_warehouse_form_inherit" model="ir.ui.view">
+            <field name="name">stock.warehouse.form.inherit</field>
+            <field name="model">stock.warehouse</field>
+            <field name="inherit_id" ref="stock.view_warehouse"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[2]" position="after">
+                    <page string="Users">
+                        <field name="user_ids" string="Users">
+                            <tree editable="1">
+                                <field name="login" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='warehouse_config']" position="replace">
+                    <page string="Warehouse Configuration" name="warehouse_config" colspan="4">
+                        <group colspan="4">
+                            <group string="Shipments">
+                                <group string="Shipments" colspan="2">
+                                    <field name="reception_steps" widget='radio'/>
+                                    <field name="delivery_steps" widget='radio'/>
+                                </group>
+                                <group>
+                                    <field name="out_minus"/>
+                                    <field name="max_qty_process"/>
+                                </group>
+                            </group>
+                            <field name="show_resupply" invisible="1"/>
+                            <group name="group_resupply" string="Resupply"
+                                   attrs="{'invisible': [('show_resupply', '!=', True)]}">
+                                <field name="warehouse_count" invisible="1"/>
+                                <field name="resupply_wh_ids" attrs="{'invisible': [('show_resupply', '!=', True)]}"
+                                       domain="[('id', '!=', id)]" widget='many2many_checkboxes'/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

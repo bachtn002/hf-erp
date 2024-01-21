@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_users_form">
+            <field name="name">res.users.form.inherit.ev_helpdesk</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="ev_helpdesk.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_helpdesk_department_id']" position="after">
+                    <field name="x_helpdesk_department_ids" widget="many2many_tags" options="{'no_create': 1, 'no_edit': 1}"/>
+                    <field name="x_is_allow_helpdesk_department"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

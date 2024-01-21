@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <act_window
+                name="Print stamps"
+                res_model="production.lot.print.stamp"
+                binding_model="stock.production.lot"
+                view_mode="form"
+                target="new"
+                id="action_stock_picking_print_stamp"/>
+
+        <record id="view_stock_picking_production_lot_form" model="ir.ui.view">
+            <field name="name">stock.production.lot.inherit.income.form</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="print_stamp_production_lot" string="Stamp printing" type="object"
+                                class="oe_highlight"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

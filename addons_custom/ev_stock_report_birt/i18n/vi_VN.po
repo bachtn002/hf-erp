@@ -1,0 +1,623 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_report_birt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-10 01:36+0000\n"
+"PO-Revision-Date: 2021-12-10 01:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.report,print_report_name:ev_stock_report_birt.stock_quant_current_xlsx
+msgid "'Báo cáo tồn kho hiện tại'"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__account_code
+msgid "Account Code"
+msgstr "TK kho"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__x_all_internal
+msgid "All Internal"
+msgstr "Tất cả địa điểm nội bộ"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__x_all_internal
+msgid "All Location Internal"
+msgstr "Tất cả địa điểm nội bộ"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__branch_id
+msgid "Branch"
+msgstr "Chi nhánh"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_cash_statement_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__categ_ids
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+msgid "Category"
+msgstr "Nhóm SP"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.stock_inventory_by_product_form
+msgid "Check"
+msgstr "Lấy dữ liệu"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__inventory_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__inventory_id
+msgid "Check Inventory"
+msgstr "Lấy dữ liệu"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__company_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__company_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__company_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__company_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__contra_account_code
+msgid "Contra Account Code"
+msgstr "TK Đối ứng"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__create_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__create_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__date
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_cash_statement_form
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__date_accounting
+msgid "Date Accounting"
+msgstr "Ngày hoạch toán"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__date_document
+msgid "Date Document"
+msgstr "Ngày chứng từ"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__detail_line
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_report_ev_stock_report_birt_stock_quant_current_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__display_name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_document__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+msgid "Export Excel"
+msgstr "Xuất Excel"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__from_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__from_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__from_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__from_date
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_move__type__general
+msgid "General account of input – output – inventory"
+msgstr "Nhập xuất tồn"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_move__type__general_value
+msgid "General account of input – output – inventory value"
+msgstr "Nhập xuất tồn có giá trị"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.stock_quant_current_form_view
+msgid "Generate"
+msgstr "Lấy dữ liệu"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__to_lot
+msgid "Get Lot"
+msgstr "Có lot"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_report_ev_stock_report_birt_stock_quant_current_xlsx__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__in_quantity
+msgid "In Quantity"
+msgstr "SL Nhập"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__in_value
+msgid "In Value"
+msgstr "Giá trị Nhập"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.report,name:ev_stock_report_birt.stock_quant_current_xlsx
+msgid "In excel"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.act_window,name:ev_stock_report_birt.action_rpt_stock_document
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_stock_document
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_stock_document_account
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+msgid "Inventory Document Report"
+msgstr "Bảng kê chi tiết nhập xuất"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.act_window,name:ev_stock_report_birt.action_rpt_stock_move
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__name
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_stock_move_2
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_stock_move_account
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+msgid "Inventory Report"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.act_window,name:ev_stock_report_birt.action_rpt_stock_transfer
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__name
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_stock_transfer
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_stock_transfer_account
+msgid "Inventory Report Stock transfer"
+msgstr "Báo cáo tồn kho trung chuyển"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_move__type__inventory
+msgid "Inventory report"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_report_ev_stock_report_birt_stock_quant_current_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current____last_update
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__write_uid
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_cash_statement__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__write_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.stock_inventory_by_product_form
+msgid "Line"
+msgstr "Chi tiết"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.stock_inventory_by_product_form
+msgid "Lines"
+msgstr "Chi tiết"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_move__type_view__list
+msgid "List"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: code:addons/ev_stock_report_birt/models/rpt_stock_move.py:0
+#: code:addons/ev_stock_report_birt/models/rpt_stock_move.py:0
+#, python-format
+msgid "Location not in region! Please choose location"
+msgstr ""
+"Địa điểm bạn quả lý không có trong vùng! Vui lòng chọn lại vùng hoặc địa "
+"điểm"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__location_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__location_ids
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__move_id
+msgid "Move"
+msgstr "Chứng từ"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__move_note
+msgid "Move Note"
+msgstr "Diễn giải"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__name
+msgid "Name"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__order_name
+msgid "Name Order"
+msgstr "Đơn hàng"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_document__state__no_done
+msgid "No Done"
+msgstr "Chưa hoàn thành"
+
+#. module: ev_stock_report_birt
+#: code:addons/ev_stock_report_birt/models/stock_inventory_by_product.py:0
+#, python-format
+msgid "Notification! Product code not found!"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: code:addons/ev_stock_report_birt/models/stock_inventory_by_product.py:0
+#, python-format
+msgid "Notification! The product is no available in Stock!"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__out_quantity
+msgid "Out Quantity"
+msgstr "SL Xuất"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__out_value
+msgid "Out Value"
+msgstr "Giá trị Xuất"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__partner_name
+msgid "Partner Name"
+msgstr "Đối tác"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields.selection,name:ev_stock_report_birt.selection__rpt_stock_move__type_view__pivot
+msgid "Pivot"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__price_unit
+msgid "Price unit"
+msgstr "Giá bán"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.stock_quant_current_form_view
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__product_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__product_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__name
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__product_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__product_ids
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__product_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__product_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__line_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__product_id
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__quantity
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__quantity
+msgid "Quantity"
+msgstr "SL"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__region_ids
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+msgid "Region"
+msgstr "Vùng miền"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.act_window,name:ev_stock_report_birt.action_rpt_cash_statement
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_rpt_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_cash_statement_form
+msgid "Report Cash Statement"
+msgstr "Báo cáo kiểm quỹ cuối ngày"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__rpt_detail_id
+msgid "Report Id"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__name
+msgid "Report Stock Product Detail"
+msgstr "Sổ chi tiết Vật tư, Hàng hóa"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__type
+msgid "Report Type"
+msgstr "Loại báo cáo"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__type_view
+msgid "Report view"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__seq_num
+msgid "Sequence Number"
+msgstr "STT"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.act_window,name:ev_stock_report_birt.action_stock_inventory_by_product
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_stock_inventory_by_product_2
+msgid "Stock Inventory By Product"
+msgstr "Kiểm tra tồn theo SP"
+
+#. module: ev_stock_report_birt
+#: model:ir.actions.act_window,name:ev_stock_report_birt.stock_quant_current_action
+msgid "Stock Quant Curent"
+msgstr "Báo cáo tồn kho hiện tại"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__stock_quant_current_id
+#: model:ir.ui.menu,name:ev_stock_report_birt.stock_quant_current_menu
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.stock_quant_current_form_view
+msgid "Stock Quant Current"
+msgstr "Báo cáo tồn kho hiện tại"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__stock_quantity
+msgid "Stock Quantity"
+msgstr "SL Tồn kho"
+
+#. module: ev_stock_report_birt
+#: model:ir.ui.menu,name:ev_stock_report_birt.menu_report_stock
+msgid "Stock Reports"
+msgstr "Báo cáo Kho"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__stock_value
+msgid "Stock Value"
+msgstr "Giá trị kho"
+
+#. module: ev_stock_report_birt
+#: code:addons/ev_stock_report_birt/models/stock_config.py:0
+#: code:addons/ev_stock_report_birt/models/stock_config.py:0
+#, python-format
+msgid "Sumary stock inventory "
+msgstr "Dữ liệu tồn kho từ "
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_document__to_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_move__to_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail__to_date
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__to_date
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product__total_quantity
+msgid "Total quantity"
+msgstr "Tổng SL"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_product_detail_line__uom_id
+msgid "UOM"
+msgstr "Đơn vị"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current_line__uom_id
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__user_id
+msgid "User"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_cash_statement_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_move_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+msgid "View Report"
+msgstr "Xem báo cáo"
+
+#. module: ev_stock_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_document_form
+msgid "View Report Account"
+msgstr "Kế toán xem báo cáo"
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__warehouse_ids
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_inventory_by_product_line__warehouse_id
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_stock_quant_current__warehouse_id
+#: model_terms:ir.ui.view,arch_db:ev_stock_report_birt.rpt_stock_transfer_form
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_stock_report_birt
+#: code:addons/ev_stock_report_birt/models/rpt_stock_move.py:0
+#: code:addons/ev_stock_report_birt/models/rpt_stock_move.py:0
+#, python-format
+msgid "You can not view report!"
+msgstr "Bạn không thể xem báo cáo này"
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_report_ev_stock_report_birt_stock_quant_current_xlsx
+msgid "report.ev_stock_report_birt.stock_quant_current_xlsx"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_rpt_cash_statement
+msgid "rpt.cash.statement"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_rpt_stock_document
+msgid "rpt.stock.document"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_rpt_stock_move
+msgid "rpt.stock.move"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_rpt_stock_product_detail
+msgid "rpt.stock.product.detail"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_rpt_stock_product_detail_line
+msgid "rpt.stock.product.detail.line"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_rpt_stock_transfer
+msgid "rpt.stock.transfer"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_stock_inventory_by_product
+msgid "stock.inventory.by.product"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_stock_inventory_by_product_line
+msgid "stock.inventory.by.product.line"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_stock_quant_current
+msgid "stock.quant.current"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model,name:ev_stock_report_birt.model_stock_quant_current_line
+msgid "stock.quant.current.line"
+msgstr ""
+
+#. module: ev_stock_report_birt
+#: model:ir.model.fields,field_description:ev_stock_report_birt.field_rpt_stock_transfer__user_id
+msgid "user"
+msgstr ""

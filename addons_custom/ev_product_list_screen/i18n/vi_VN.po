@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_list_screen
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-07 06:44+0000\n"
+"PO-Revision-Date: 2021-07-07 06:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_list_screen
+#. openerp-web
+#: code:addons/ev_product_list_screen/static/src/xml/Screens/ProductScreen/ProductList.xml:0
+#, python-format
+msgid "CODE"
+msgstr "Mã"
+
+#. module: ev_product_list_screen
+#: model:ir.model.fields,field_description:ev_product_list_screen.field_pos_config__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_list_screen
+#: model:ir.model.fields,field_description:ev_product_list_screen.field_pos_config__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_list_screen
+#: model:ir.model.fields,field_description:ev_product_list_screen.field_pos_config____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_list_screen
+#. openerp-web
+#: code:addons/ev_product_list_screen/static/src/xml/Screens/ProductScreen/ProductList.xml:0
+#, python-format
+msgid "NAME"
+msgstr "Tên sản phẩm"
+
+#. module: ev_product_list_screen
+#. openerp-web
+#: code:addons/ev_product_list_screen/static/src/xml/Screens/ProductScreen/ProductList.xml:0
+#, python-format
+msgid "PRICE"
+msgstr "Đơn giá"
+
+#. module: ev_product_list_screen
+#: model:ir.model,name:ev_product_list_screen.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_product_list_screen
+#: model_terms:ir.ui.view,arch_db:ev_product_list_screen.pos_config_view_form_product_list_screen_inherit
+msgid "Show Product Screen in Listview"
+msgstr "Hiển thị sản phẩm dạng danh sách"
+
+#. module: ev_product_list_screen
+#: model:ir.model.fields,field_description:ev_product_list_screen.field_pos_config__x_show_product_list
+msgid "Show list Product Screen"
+msgstr "Hiển thị sản phẩm dạng danh sách"
+
+#. module: ev_product_list_screen
+#. openerp-web
+#: code:addons/ev_product_list_screen/static/src/xml/Screens/ProductScreen/ProductList.xml:0
+#, python-format
+msgid "UOM"
+msgstr "Đơn vị"

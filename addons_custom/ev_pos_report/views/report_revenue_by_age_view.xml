@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="report_revenue_by_age_graph" model="ir.ui.view">
+            <field name="name">report.revenue.by.age.graph</field>
+            <field name="model">report.revenue.by.age</field>
+            <field name="arch" type="xml">
+                <graph string="Revenue by age report">
+                    <field name="group_age" type="row"/>
+                    <field name="total_order" type="measure"/>
+                    <field name="amount_total" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="top_selling_customers_pivot" model="ir.ui.view">
+            <field name="name">report.revenue.by.age.pivot</field>
+            <field name="model">report.revenue.by.age</field>
+            <field name="arch" type="xml">
+                <pivot string="Revenue by age">
+                    <field name="group_age" type="row"/>
+                    <field name="total_order" type="measure"/>
+                    <field name="amount_total" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="action_report_revenue_by_age" model="ir.actions.act_window">
+            <field name="name">Revenue by age report</field>
+            <field name="res_model">report.revenue.by.age</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,pivot</field>
+            <field name="view_id" ref="report_revenue_by_age_graph"/>
+            <field name="context">{'group_by_no_leaf':1,'group_by':[]}</field>
+            <field name="domain">[('create_uid','=',uid)]</field>
+        </record>
+
+        <menuitem id="menu_report_revenue_by_age" name="Revenue by age" sequence="100" action="action_report_revenue_by_age"
+                  parent="point_of_sale.menu_point_rep" groups="point_of_sale.group_pos_manager"/>
+
+    </data>
+</odoo>

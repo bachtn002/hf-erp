@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+    
+        <record id="ev_style" model="report.style">
+            <field name="name">ERPVIET Style</field>
+        </record>
+
+        <!-- Header -->
+
+        <record id="header_font_size" model="report.style.line">
+            <field name="css_key">font-size</field>
+            <field name="css_value">14px</field>
+            <field name="type">thead</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="header_font_weight" model="report.style.line">
+            <field name="css_key">font-weight</field>
+            <field name="css_value">bold</field>
+            <field name="type">thead</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="header_font_size" model="report.style.line">
+            <field name="css_key">font-size</field>
+            <field name="css_value">14px</field>
+            <field name="type">thead</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="header_background_color" model="report.style.line">
+            <field name="css_key">background-color</field>
+            <field name="css_value">#edf5ff</field>
+            <field name="type">thead</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="header_color" model="report.style.line">
+            <field name="css_key">color</field>
+            <field name="css_value">#000000</field>
+            <field name="type">thead</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="header_font_family" model="report.style.line">
+            <field name="css_key">font-family</field>
+            <field name="css_value">Times New Roman</field>
+            <field name="type">thead</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <!-- Body -->
+
+        <record id="body_font_size" model="report.style.line">
+            <field name="css_key">font-size</field>
+            <field name="css_value">14px</field>
+            <field name="type">tbody</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="body_font_family" model="report.style.line">
+            <field name="css_key">font-family</field>
+            <field name="css_value">Times New Roman</field>
+            <field name="type">tbody</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <!-- Total/Index -->
+
+        <record id="index_font_weight" model="report.style.line">
+            <field name="css_key">font-weight</field>
+            <field name="css_value">bold</field>
+            <field name="type">index</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="index_color" model="report.style.line">
+            <field name="css_key">color</field>
+            <field name="css_value">#000000</field>
+            <field name="type">index</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="index_background_color" model="report.style.line">
+            <field name="css_key">background-color</field>
+            <field name="css_value">#eeeeee</field>
+            <field name="type">index</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <!-- Footer -->
+
+        <record id="footer_font_size" model="report.style.line">
+            <field name="css_key">font-size</field>
+            <field name="css_value">14px</field>
+            <field name="type">tfoot</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="footer_font_weight" model="report.style.line">
+            <field name="css_key">font-weight</field>
+            <field name="css_value">bold</field>
+            <field name="type">tfoot</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="footer_font_size" model="report.style.line">
+            <field name="css_key">font-size</field>
+            <field name="css_value">14px</field>
+            <field name="type">tfoot</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="footer_background_color" model="report.style.line">
+            <field name="css_key">background-color</field>
+            <field name="css_value">#edf5ff</field>
+            <field name="type">tfoot</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="footer_color" model="report.style.line">
+            <field name="css_key">color</field>
+            <field name="css_value">#000000</field>
+            <field name="type">tfoot</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+
+        <record id="footer_font_family" model="report.style.line">
+            <field name="css_key">font-family</field>
+            <field name="css_value">Times New Roman</field>
+            <field name="type">tfoot</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,740 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_report_view
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-20 04:45+0000\n"
+"PO-Revision-Date: 2022-07-20 04:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_report_view
+#: model:ir.actions.report,print_report_name:ev_report_view.sale_detail_report_wizard_xlsx
+msgid ""
+"'Bảng kê chi tiết bán hàng %s - %s' % (object.from_date, object.to_date)"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__amount_promotion
+msgid "Amount Promotion"
+msgstr "Discount"
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_sale_details_report
+msgid "Bang ke chi tiet ban hang"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_cash_statement_report
+msgid "Bao cao kiem quy cuoi ngay"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_stock_transfer_report
+msgid "Bao cao ton kho trung chuyen"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_cash_statement_report_wizard
+msgid "Báo cáo kiểm quỹ cuối ngày"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_stock_transfer_report_wizard
+msgid "Báo cáo tồn kho trung chuyển"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.actions.report,name:ev_report_view.sale_detail_report_wizard_xlsx
+#: model:ir.model,name:ev_report_view.model_report_sale_detail_report_wizard
+msgid "Bảng kê chi tiết bán hàng"
+msgstr ""
+
+#. module: ev_report_view
+#: model_terms:ir.ui.view,arch_db:ev_report_view.bang_tinh_khau_hao_tscd_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.cash_statement_form_list
+#: model_terms:ir.ui.view,arch_db:ev_report_view.report_pre_tax_revenue_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.sale_detail_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.theo_doi_tai_san_co_dinh_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.bang_tinh_ccdc_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/cash_statement_report.py:0
+#: model:ir.actions.act_window,name:ev_report_view.cash_statement_report_action
+#, python-format
+msgid "Cash Statement Report Action"
+msgstr "Báo cáo kiểm quỹ cuối ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__category_name
+msgid "Category name"
+msgstr "Danh mục"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__cost_price
+msgid "Cost price"
+msgstr "Giá vốn"
+
+#. module: ev_report_view
+#: model_terms:ir.ui.view,arch_db:ev_report_view.sale_detail_report_view_form
+msgid "Create Report"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh_wizard__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__create_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh_wizard__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__create_date
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__customer
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__date
+#: model_terms:ir.ui.view,arch_db:ev_report_view.cash_statement_form_list
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__date_order
+msgid "Date order"
+msgstr "Ngày tạo"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__default_code
+msgid "Default Code"
+msgstr "Mã hàng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__default_code
+msgid "Default code"
+msgstr "Mã sản phẩm"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh_wizard__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__display_name
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__execution_time
+msgid "Execution Time"
+msgstr "Thời gian thực hiện"
+
+#. module: ev_report_view
+#: model_terms:ir.ui.view,arch_db:ev_report_view.sale_detail_report_view_form
+msgid "Export Excel"
+msgstr "In Excel"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__from_date
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__from_date
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh_wizard__from_date
+msgid "From Date"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__from_date
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__from_date
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh_wizard__from_date
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc_wizard__from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__full_product_name
+msgid "Full Product Name"
+msgstr "Tên sản phẩm"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__id
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__id
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__id
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__id
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__id
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__id
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__id
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__id
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__id
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report____last_update
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report_wizard__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__write_date
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__name
+msgid "Name"
+msgstr "Mã phiếu"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__name_partner
+msgid "Name Partner"
+msgstr "Người tạo"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__order_name
+msgid "Order name"
+msgstr "Đơn hàng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__out_quantity
+msgid "Out Quantity"
+msgstr "Số lượng"
+
+#. module: ev_report_view
+#: model:ir.actions.act_window,name:ev_report_view.rpt_pre_tax_revenue_atc
+#: model:ir.ui.menu,name:ev_report_view.rpt_pre_tax_revenue
+#: model_terms:ir.ui.view,arch_db:ev_report_view.report_pre_tax_revenue_wizard_form
+msgid "Pre Tax Renvenue"
+msgstr "Báo cáo doanh thu trước thuế"
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_pre_tax_revenue_report_wizard
+msgid "Pre tax revenue Report Wizard"
+msgstr "Báo cáo doanh thu trước thuế"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/pre_tax_revenue_report.py:0
+#: model:ir.actions.act_window,name:ev_report_view.pre_tax_revenue_report_action
+#: model:ir.model,name:ev_report_view.model_pre_tax_revenue_report
+#, python-format
+msgid "Pre tax revenue report"
+msgstr "Báo cáo doanh thu trước thuế"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__price_promotion
+msgid "Price Promotion"
+msgstr "Khuyến mãi"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__price_unit
+msgid "Price Unit"
+msgstr ""
+
+#. module: ev_report_view
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+msgid "Print Excel"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__product_name
+msgid "Product Name"
+msgstr "Tên hàng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__profit
+msgid "Profit"
+msgstr "Lợi nhuận"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__product_promotion
+msgid "Promotion name"
+msgstr "CTKM"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__qty
+msgid "Quantiy"
+msgstr "Số lượng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__reason_money_difference
+msgid "Reason Money Difference"
+msgstr "Giải trình chênh lệch"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__region_name
+msgid "Region name"
+msgstr "Vùng/miền"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__report_id
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__report_id
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: ev_report_view
+#: model:ir.actions.act_window,name:ev_report_view.action_cash_statement_report_list
+#: model:ir.ui.menu,name:ev_report_view.menu_cash_statement_report_list
+#: model_terms:ir.ui.view,arch_db:ev_report_view.cash_statement_form_list
+msgid "Report Cash Statement"
+msgstr "Báo cáo kiểm quỹ cuối ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__report_id
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__report_id
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__report_id
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__report_id
+msgid "Report ID"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__residual_value
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__gtconlai
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__gtconlai
+msgid "Residual Value"
+msgstr "Giá trị còn lại"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__revenue
+msgid "Revenue"
+msgstr "Doanh thu trước thuế"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__revenue_refund
+msgid "Revenue refund"
+msgstr "Doanh thu hàng trả lại trước thuế"
+
+#. module: ev_report_view
+#: model:ir.actions.act_window,name:ev_report_view.sale_detail_report_action
+msgid "Sale Detail Report Action"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.ui.menu,name:ev_report_view.menu_sale_detail_report_wizard
+msgid "Sale Detail Report Wizard"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.actions.act_window,name:ev_report_view.sale_detail_report_wizard_action
+msgid "Sale Detail Report Wizard Action"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__pos_shop_code
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__pos_shop_code
+msgid "Shop Code"
+msgstr "Mã cửa hàng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__pos_shop_id
+msgid "Shop ID"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__pos_name
+msgid "Shop Name"
+msgstr "Tên cửa hàng"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report__shop_name
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__pos_name
+msgid "Shop name"
+msgstr "Tên cửa hàng"
+
+#. module: ev_report_view
+#: model:ir.actions.act_window,name:ev_report_view.rpt_spreadsheet_depreciation_atc
+#: model:ir.ui.menu,name:ev_report_view.rpt_spreadsheet_depreciation
+msgid "Spreadsheet Depreciation"
+msgstr "Bảng tính khấu hao TSCĐ"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/bang_tinh_khau_hao_tscd.py:0
+#: model:ir.actions.act_window,name:ev_report_view.bang_tinh_khau_hao_tscd_action
+#: model_terms:ir.ui.view,arch_db:ev_report_view.bang_tinh_khau_hao_tscd_wizard_form
+#, python-format
+msgid "Spreadsheet depreciation"
+msgstr "Bảng tính khấu hao TSCĐ"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__start_at
+msgid "Start At"
+msgstr "Ngày mở phiên"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/bang_ke_chi_tiet_ban_hang_report.py:0
+#: code:addons/ev_report_view/models/stock_transfer_report.py:0
+#: code:addons/ev_report_view/models/stock_transfer_report.py:0
+#, python-format
+msgid "Start date must be less than end date"
+msgstr "Ngày bắt đầu phải nhỏ hơn ngày kết thúc"
+
+#. module: ev_report_view
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+msgid "Stock Transfer Report"
+msgstr ""
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/stock_transfer_report.py:0
+#: model:ir.actions.act_window,name:ev_report_view.stock_transfer_report_action
+#, python-format
+msgid "Stock Transfer Report Action"
+msgstr "Báo cáo tồn kho trung chuyển"
+
+#. module: ev_report_view
+#: model:ir.ui.menu,name:ev_report_view.menu_stock_transfer_report_wizard
+msgid "Stock Transfer Report Wizard"
+msgstr "Báo cáo tồn kho trung chuyển"
+
+#. module: ev_report_view
+#: model:ir.actions.act_window,name:ev_report_view.stock_transfer_report_wizard_action
+msgid "Stock Transfer Report Wizard Action"
+msgstr "Báo cáo tồn kho trung chuyển"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__stop_at
+msgid "Stop At"
+msgstr "Ngày đóng phiên"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_report_sale_detail_report_wizard__to_date
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__to_date
+msgid "To Date"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd_wizard__to_date
+#: model:ir.model.fields,field_description:ev_report_view.field_pre_tax_revenue_report_wizard__to_date
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh_wizard__to_date
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc_wizard__to_date
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__total_cash_app
+msgid "Total Cash App"
+msgstr "Doanh thu TM ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__total_cash_deviant
+msgid "Total Cash Deviant"
+msgstr "Số chênh lệch"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_cash_statement_report__total_cash_end_day
+msgid "Total Cash End Day"
+msgstr "Số chốt quỹ cuối ngày"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__unit
+msgid "Unit"
+msgstr "Đơn vị"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__uom
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/bang_ke_chi_tiet_ban_hang_report.py:0
+#: code:addons/ev_report_view/models/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "User does not have access pos shop"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__user_name
+msgid "User name"
+msgstr "Nhân viên"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_sale_details_report__vat
+msgid "VAT"
+msgstr ""
+
+#. module: ev_report_view
+#: model_terms:ir.ui.view,arch_db:ev_report_view.bang_tinh_khau_hao_tscd_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.cash_statement_form_list
+#: model_terms:ir.ui.view,arch_db:ev_report_view.report_pre_tax_revenue_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.theo_doi_tai_san_co_dinh_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_report_view.bang_tinh_ccdc_wizard_form
+msgid "View Report"
+msgstr "Xem báo cáo"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__warehouse_ids
+#: model_terms:ir.ui.view,arch_db:ev_report_view.stock_transfer_report_wizard_form
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__warehouse_dest_id
+msgid "Warehouse Dest Id"
+msgstr "Kho đích"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report__warehouse_id
+msgid "Warehouse Id"
+msgstr "Kho nguồn"
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_bang_tinh_khau_hao_tscd
+msgid "bang.tinh.khau.hao.tscd"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_bang_tinh_khau_hao_tscd_wizard
+msgid "bang.tinh.khau.hao.tscd.wizard"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_stock_transfer_report_wizard__user_id
+msgid "user"
+msgstr ""
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__gtkhtrongky
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__gtkhtrongky
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__gtkhtrongky
+msgid "Depreciated Value Period"
+msgstr "Giá trị khấu hao trong kỳ"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__ngaytinhkh
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__ngaytinhkh
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__ngaytinhkh
+msgid "First Description Date"
+msgstr "Ngày tính khấu hao"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__mats
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__mats
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__mats
+msgid "X code"
+msgstr "Số thẻ ts"
+
+#. module: ev_report_view
+#: model:ir.model,name:ev_report_view.model_theo_doi_tai_san_co_dinh_wizard
+msgid "theo.doi.tai.san.co.dinh.wizard"
+msgstr "Theo dõi tài sản cố định"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__tkkhauhao
+msgid "Account Depreciation"
+msgstr "Tk khấu hao"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__tktaisan
+msgid "Account Properties"
+msgstr "Tk tài sản"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__gttbtrongky
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__gttbtrongky
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__gttbtrongky
+msgid "Average value period"
+msgstr "TB Kh trong kỳ"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__ngaymua
+msgid "Date Buy"
+msgstr "Ngày mua"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__gtbatdaukh
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__gtbatdaukh
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__gtbatdaukh
+msgid "Depreciated start value"
+msgstr "Gt bắt đầu khấu hao"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__gtdakh
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__gtdakh
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__gtdakh
+msgid "Depreciated value"
+msgstr "Gt đã khấu hao"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__ngayct
+msgid "Document date"
+msgstr "Ngày ct"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__tkchiphi
+msgid "Expense Account"
+msgstr "Tk chi phí"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__maphi
+msgid "Fee Code"
+msgstr "Mã phí"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__tenphi
+msgid "Fee Name"
+msgstr "Tên phí"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/theo_doi_tai_san_co_dinh.py:0
+#: model:ir.actions.act_window,name:ev_report_view.rpt_fixed_asset_tracking_atc
+#: model:ir.actions.act_window,name:ev_report_view.theo_doi_tai_san_co_dinh_action
+#: model:ir.model,name:ev_report_view.model_theo_doi_tai_san_co_dinh
+#: model:ir.ui.menu,name:ev_report_view.rpt_fixed_asset_tracking
+#: model_terms:ir.ui.view,arch_db:ev_report_view.theo_doi_tai_san_co_dinh_wizard_form
+#, python-format
+msgid "Fixed Asset Tracking"
+msgstr "Theo dõi tài sản cố định"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__soct
+msgid "License"
+msgstr "Số chứng từ"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__sokyhk
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__sokyhk
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__sokyhk
+msgid "Method number"
+msgstr "Thời lượng khấu hao"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__trangthai
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__trangthai
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__trangthai
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__tents
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__tents
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__tents
+msgid "Name"
+msgstr "Tên tài sản"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_khau_hao_tscd__nguyengia
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__nguyengia
+#: model:ir.model.fields,field_description:ev_report_view.field_bang_tinh_ccdc__nguyengia
+msgid "Original value"
+msgstr "Nguyên giá"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__mabp
+msgid "Part Code"
+msgstr "Mã bộ phận"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__tenbp
+msgid "Part Name"
+msgstr "Tên bộ phận"
+
+#. module: ev_report_view
+#: model:ir.model.fields,field_description:ev_report_view.field_theo_doi_tai_san_co_dinh__ngaygiam
+msgid "Reduced date"
+msgstr "Ngày giảm"
+
+#. module: ev_report_view
+#: code:addons/ev_report_view/models/bang_tinh_ccdc.py:0
+#: model:ir.actions.act_window,name:ev_report_view.bang_tinh_ccdc_action
+#: model:ir.actions.act_window,name:ev_report_view.rpt_spreadsheet_tools_atc
+#: model_terms:ir.ui.view,arch_db:ev_report_view.bang_tinh_ccdc_wizard_form
+#, python-format
+msgid "Spreadsheet tools"
+msgstr "Bảng tính chi phí CCDC"
+
+#. module: ev_report_view
+#: model:ir.ui.menu,name:ev_report_view.rpt_spreadsheet_tools
+msgid "Spreadsheet Tools"
+msgstr "Bảng tính chi phí CCDC"

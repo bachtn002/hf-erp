@@ -1,0 +1,1039 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_promotion_voucher
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-17 02:37+0000\n"
+"PO-Revision-Date: 2022-05-17 02:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/inherit_pos_promotion.py:0
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion__x_accumulate
+#, python-format
+msgid "Accumulate"
+msgstr "Lũy kế"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_needaction
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_needaction
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_needaction
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Activate"
+msgstr "Kích hoạt"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher__state__active
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher_line__state_promotion_code__active
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Active"
+msgstr "Đã kích hoạt"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_exception_decoration
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_exception_decoration
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_state
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_state
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_state
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_type_icon
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_type_icon
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_type_icon
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/click_all_promotion_payment_custom.js:0
+#, python-format
+msgid "Apply all"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/click_all_promotion_payment_custom.js:0
+#, python-format
+msgid "Apply all promotions or selected promotion"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Are you sure you want to enable all in-release Promotion Voucher?"
+msgstr "Bạn có muốn kích hoạt tất cả các mã khuyến mại không?"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_attachment_count
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_attachment_count
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_attachment_count
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher_line__state_promotion_code__available
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Available"
+msgstr "Có thể sử dụng"
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/click_all_promotion_payment_custom.js:0
+#: code:addons/ev_promotion_voucher/static/src/xml/button/VoucherPopup.xml:0
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.update_promotion_code_view_form
+#, python-format
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Chương trình khuyến mại"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher_count.py:0
+#, python-format
+msgid "Code \"%s\" expired date."
+msgstr "Mã \"%s\" đã hết hạn"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher_count.py:0
+#, python-format
+msgid "Code \"%s\" not exist in database. Please check!"
+msgstr "Mã Promotion code %s không tồn tại trên hệ thống."
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher_count.py:0
+#: code:addons/ev_promotion_voucher/models/promotion_voucher_count.py:0
+#, python-format
+msgid "Code \"%s\" not use promotion. Please check!"
+msgstr "Mã Promotion code %s Đã sử dụng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__production_lot_rule_id
+msgid "Code generation rules"
+msgstr "Quy tắc sinh mã"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_line_tree_view_custom
+msgid "Code voucher"
+msgstr "Mã omotion Code"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/click_all_promotion_payment_custom.js:0
+#, python-format
+msgid "Confirm payment"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher__state__created
+msgid "Created"
+msgstr "Đã tạo"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__create_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__create_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__create_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__create_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__create_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__create_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__create_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__create_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__customer_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__date
+msgid "Date"
+msgstr "Ngày sử dụng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__date
+msgid "Date start"
+msgstr "Ngày kích hoạt"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher_line__state_promotion_code__destroy
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Destroy"
+msgstr "Hủy"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_payment__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_report_promotion_code_report__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_report_promotion_code_status_report__display_name
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Download Import Template"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid "Error"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__expired_date
+msgid "Expired Date"
+msgstr "Ngày hết hạn"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#: code:addons/ev_promotion_voucher/wizard/update_promotion_code.py:0
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__expired_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__expired_date
+#, python-format
+msgid "Expired date"
+msgstr "Ngày hết hạn"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#: code:addons/ev_promotion_voucher/wizard/update_promotion_code.py:0
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__expired_type
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__expired_type
+#, python-format
+msgid "Expired type selection"
+msgstr "Phương thức hết hạn"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__field_binary_import_promotion_code
+msgid "Field Binary Import"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__field_binary_name_promotion_code
+msgid "Field Binary Name"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid ""
+"File không được tìm thấy hoặc không đúng định dạng. Vui lòng kiểm tra lại "
+"định dạng file .xls hoặc .xlsx"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "File must in the format of xls or xlsx"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher__expired_type__fixed
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__update_promotion_code__expired_type__fixed
+msgid "Fixed"
+msgstr "Cố định"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher__expired_type__flexible
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__update_promotion_code__expired_type__flexible
+msgid "Flexible"
+msgstr "Linh hoạt"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#: code:addons/ev_promotion_voucher/wizard/update_promotion_code.py:0
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__expired_type
+#: model:ir.model.fields,help:ev_promotion_voucher.field_update_promotion_code__expired_type
+#, python-format
+msgid ""
+"Flexible : applies to the number of months entered from the activation date "
+"- Fixed : applies to the date entered from the activation date"
+msgstr ""
+"Linh hoạt : áp dụng trong số tháng được nhập từ ngày kích hoạt - Cố định : "
+"áp dụng tới ngày được nhập từ ngày kích hoạt"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_follower_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_follower_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_follower_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_channel_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_channel_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_channel_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_partner_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_partner_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_partner_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__activity_type_icon
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__activity_type_icon
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__activity_type_icon
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "General Code"
+msgstr "Tạo mã"
+
+#. module: ev_promotion_voucher
+#: model:ir.ui.menu,name:ev_promotion_voucher.menu_item_promotion_code
+msgid "General Promotion Code"
+msgstr "Phát hành Promotion Code"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Group By"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order_line__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_payment__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_report_promotion_code_report__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_report_promotion_code_status_report__id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_exception_icon
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_exception_icon
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_exception_icon
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__activity_exception_icon
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__activity_exception_icon
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__activity_exception_icon
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_needaction
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_unread
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_needaction
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_unread
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_needaction
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_unread
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_needaction
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_has_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_has_sms_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_has_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_has_sms_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_has_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_has_sms_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_has_error
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__pos_configs
+msgid "If not setting, apply promotion for all pos"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Import"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__import_file
+msgid "Import file"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_is_follower
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_is_follower
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_is_follower
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_payment____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_report_promotion_code_report____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_report_promotion_code_status_report____last_update
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__write_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__write_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__write_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__write_uid
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__write_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__write_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__write_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__write_date
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid ""
+"Length of Voucher's code is different with allowable length : 14. Please "
+"check those again.\n"
+msgstr "Độ dài mã Promotion Code không vượt quá 14 ký tự"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "Length of Voucher's code is different with allowable length : {}"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__limit_voucher
+msgid "Limit number of promotion voucher apply in the order"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_line_tree_view_custom
+msgid "Lots/Serial Numbers"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid "Lỗi"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_has_error
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_has_error
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_has_error
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__validity
+msgid "Month Validity"
+msgstr "Số tháng hiệu lực"
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid ""
+"Mã khuyến mại ko nằm trong chương trình khuyến mại áp dụng tại cửa hàng"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__name
+msgid "Name"
+msgstr "Mã"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid ""
+"Name code is existed. Please check those again.\n"
+" {}"
+msgstr "Mã Promotion Code đã tồn tại. Vui lòng thử lại"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher_line__state_promotion_code__new
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_date_deadline
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_date_deadline
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_date_deadline
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_summary
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_summary
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_summary
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_type_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_type_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_type_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__date
+msgid "Ngày sử dụng"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid "Nhập mã CTKM!"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_needaction_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_needaction_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_needaction_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_has_error_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_has_error_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_has_error_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__message_unread_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__message_unread_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__message_unread_counter
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/xml/button/VoucherPopup.xml:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher_count.py:0
+#, python-format
+msgid "Order used promotion code. Please check!"
+msgstr "Đơn hàng đã áp dụng promotion code"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Phiếu phát hành"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid "Please type promotion code!"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Chi tiết đơn hàng bán lẻ"
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Thanh toán Điểm bán hàng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__pos_order
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__pos_order
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__promotion_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__promotion_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__promotion_id
+msgid "Pos Promotion"
+msgstr "Chương trình khuyến mại"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__pos_configs
+#, python-format
+msgid "Pos config"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_pos_promotion
+msgid "Pos promotion"
+msgstr "Chường trình khuyến mại"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Print Promotion Code"
+msgstr "In Excel"
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/models/inherit_pos_promotion.py:0
+#: code:addons/ev_promotion_voucher/static/src/xml/button/ButtonPromotionVoucher.xml:0
+#: model:ir.model,name:ev_promotion_voucher.model_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_order_line__promotion_code
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion__check_promotion
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__promotion_code
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__promotion_code
+#: model:ir.ui.menu,name:ev_promotion_voucher.menu_promotion_code
+#, python-format
+msgid "Promotion Code"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.report,print_report_name:ev_promotion_voucher.promotion_code_report_xlsx
+msgid "Promotion Code Excel Report"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_promotion_voucher_line
+msgid "Promotion Code Line"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.report,name:ev_promotion_voucher.promotion_code_report_xlsx
+msgid "Promotion Code Report"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.report,print_report_name:ev_promotion_voucher.promotion_code_status_report_xlsx
+msgid "Promotion Code Status Excel Report"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.report,name:ev_promotion_voucher.promotion_code_status_report_xlsx
+msgid "Promotion Code Status Report"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__promotion_use_code
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_update_promotion_code__promotion_use_code
+msgid "Promotion Use Code"
+msgstr "Số lần sử dụng"
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.act_window,name:ev_promotion_voucher.promotion_voucher_act
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_payment__x_promotion_voucher_id
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_tree
+msgid "Promotion Voucher"
+msgstr "Promotion Code"
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_promotion_voucher_count
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__promotion_voucher_count
+msgid "Promotion Voucher Count"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__promotion_voucher_line
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__promotion_voucher_line_use
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__promotion_voucher_status
+msgid "Promotion Voucher Lines"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__promotion_voucher_name
+msgid "Promotion Voucher Name"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__promotion_voucher_count_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__promotion_voucher_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__promotion_voucher_status_id
+msgid "Promotion Voucher Reference"
+msgstr "Mã phát hành"
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_promotion_voucher_status
+msgid "Promotion Voucher Status"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid "Promotion code not appiled at shop"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "Promotion code not same. Please check those again"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__promotion_use_code
+msgid "Promotion use"
+msgstr "Số lần sử dụng"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "Promotion use must is greater 0"
+msgstr "Số lần sử dụng phải lớn hơn 0"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__limit_qty
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "Quantity must is greater 0"
+msgstr "Số lượng phải lớn hơn 0"
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "Quantity {} is greater than max number of rule {} can create"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__activity_user_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__activity_user_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__activity_user_id
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Search"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__date
+msgid "Start Date"
+msgstr "Ngày phát hành"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__state
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__state_promotion_code
+msgid "Status"
+msgstr "Trạng thái sử dụng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__activity_state
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__activity_state
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__activity_state
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.constraint,message:ev_promotion_voucher.constraint_promotion_voucher_line_promotion_code_name_uniq
+msgid "The promotion code name must be unique!"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Trạng thái"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+msgid "Trạng thái sử dụng"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__activity_exception_decoration
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__activity_exception_decoration
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__activity_exception_decoration
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_promotion_voucher
+#. openerp-web
+#: code:addons/ev_promotion_voucher/static/src/js/button/ButtonPromotionVoucher.js:0
+#, python-format
+msgid "Unable use more 2 promotion code on 1 CTKM"
+msgstr "Không thể áp dụng từ 2 mã Promotion Code trên 1 CTKM"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__name
+msgid "Unique Lot/Serial Number Promotion Code"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_unread
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_unread
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_unread
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__message_unread_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__message_unread_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__message_unread_counter
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_form
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.update_promotion_code_view_form
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.act_window,name:ev_promotion_voucher.update_promotion_code_act
+msgid "Update Promotion Code"
+msgstr "Cập nhật Promotion Code"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__use_customer_id
+msgid "Use Customer"
+msgstr "Khách hàng sử dụng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields.selection,name:ev_promotion_voucher.selection__promotion_voucher_line__state_promotion_code__used
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.search_promotion_code
+msgid "Used"
+msgstr "Đã sử dụng"
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher__website_message_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__website_message_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__website_message_ids
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_status__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher__website_message_ids
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_count__website_message_ids
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_line__website_message_ids
+#: model:ir.model.fields,help:ev_promotion_voucher.field_promotion_voucher_status__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.constraint,message:ev_promotion_voucher.constraint_promotion_voucher_code_uniq
+msgid "You can not have two users with the same code !"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "You can only delete when state is draft "
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher.py:0
+#, python-format
+msgid "You did not config Voucher code rule length."
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: code:addons/ev_promotion_voucher/models/promotion_voucher_line.py:0
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_line__name
+#, python-format
+msgid "promotion code"
+msgstr "Mã promotion code"
+
+#. module: ev_promotion_voucher
+#: model:ir.actions.act_window,name:ev_promotion_voucher.promotion_voucher_line_action
+#: model:ir.ui.menu,name:ev_promotion_voucher.menu_action_promotion_voucher_line__inherit
+msgid "promotion_voucher_line"
+msgstr "Mã promotion code"
+
+#. module: ev_promotion_voucher
+#: model_terms:ir.ui.view,arch_db:ev_promotion_voucher.promotion_voucher_line_view_form
+msgid "promotion_voucher_line_form"
+msgstr "Mã promotion code"
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_report_promotion_code_report
+msgid "report.promotion.code.report"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_report_promotion_code_status_report
+msgid "report.promotion.code.status.report"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model,name:ev_promotion_voucher.model_update_promotion_code
+msgid "update.promotion.code"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion__x_promotion_apply_or
+msgid "Áp dụng hoặc"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_pos_promotion__x_promotion_condition_or
+msgid "Điều kiện hoặc"
+msgstr ""
+
+#. module: ev_promotion_voucher
+#: model:ir.model.fields,field_description:ev_promotion_voucher.field_promotion_voucher_count__pos_order_uid
+msgid "Đơn hàng"
+msgstr ""

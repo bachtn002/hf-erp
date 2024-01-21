@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rate_zns,rate_zns_name,model_rate_zns,,1,1,1,1
+access_param_rate_zns,param_rate_zns_name,model_param_rate_zns,,1,1,1,1
+

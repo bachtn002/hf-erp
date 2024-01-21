@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <template id="assets_backend" name="ev_stock_package assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/css" href="/ev_stock_package/static/src/libs/print.min.css"/>
+                <script type="text/javascript" src="/ev_stock_package/static/src/libs/print.min.js"/>
+                <!-- Template handle -->
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/client_action/header_widget.js"/>
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/client_action/lines_widget.js"/>
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/client_action/views_widget.js"/>
+                <!-- Register Client Action -->
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/client_action/abstract_client_action.js"/>
+                <!-- Scan Transfer Create Package-->
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/stock_transfer_main_barcode.js"/>
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js"/>
+                <script type="text/javascript" src="/ev_stock_package/static/src/js/transfer_client_action/stock_transfer_client_action.js"/>
+                <!--Css -->
+                <link rel="stylesheet" type="text/scss" href="/ev_stock_package/static/src/css/popup.css"/>
+             </xpath>
+        </template>
+    </data>
+</odoo>

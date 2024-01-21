@@ -1,0 +1,137 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_google_maps
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-08 02:44+0000\n"
+"PO-Revision-Date: 2022-04-08 02:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_google_maps
+#: model_terms:ir.ui.view,arch_db:ev_google_maps.view_pos_order_map
+msgid "Delivery"
+msgstr "Thông tin vận chuyển"
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_shop__display_name
+#: model:ir.model.fields,field_description:ev_google_maps.field_sale_online__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_google_maps
+#. openerp-web
+#: code:addons/ev_google_maps/static/src/xml/pos_map.xml:0
+#, python-format
+msgid "Giao hàng tại nhà"
+msgstr ""
+
+#. module: ev_google_maps
+#. openerp-web
+#: code:addons/ev_google_maps/static/src/xml/pos_map.xml:0
+#, python-format
+msgid "Gọi Ship"
+msgstr ""
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_shop__id
+#: model:ir.model.fields,field_description:ev_google_maps.field_sale_online__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_shop____last_update
+#: model:ir.model.fields,field_description:ev_google_maps.field_sale_online____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_shop__lat
+#: model:ir.model.fields,field_description:ev_google_maps.field_sale_online__lat
+msgid "Lat"
+msgstr ""
+
+#. module: ev_google_maps
+#. openerp-web
+#: code:addons/ev_google_maps/static/src/xml/pos_map.xml:0
+#, python-format
+msgid "Lat:"
+msgstr ""
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_google_maps.field_pos_shop__long
+#: model:ir.model.fields,field_description:ev_google_maps.field_sale_online__long
+msgid "Long"
+msgstr ""
+
+#. module: ev_google_maps
+#. openerp-web
+#: code:addons/ev_google_maps/static/src/xml/pos_map.xml:0
+#, python-format
+msgid "Long:"
+msgstr ""
+
+#. module: ev_google_maps
+#: model:ir.model,name:ev_google_maps.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_google_maps
+#: model:ir.model,name:ev_google_maps.model_pos_shop
+msgid "Pos Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_google_maps
+#. openerp-web
+#: code:addons/ev_google_maps/static/src/xml/pos_map.xml:0
+#: model_terms:ir.ui.view,arch_db:ev_google_maps.view_pos_shop_map_form_inherit
+#: model_terms:ir.ui.view,arch_db:ev_google_maps.view_sale_online_map_form_inherit
+#, python-format
+msgid "Search Box"
+msgstr "Tìm kiếm"
+
+#. module: ev_google_maps
+#: model:ir.model,name:ev_google_maps.model_sale_online
+msgid "sale.online"
+msgstr "Bán hàng online"
+
+#. module: ev_google_maps
+#. openerp-web
+#: code:addons/ev_google_maps/static/src/xml/pos_map.xml:0
+#, python-format
+msgid "Địa chỉ:"
+msgstr ""
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_google_maps.field_sale_online__x_distance
+msgid "Distance Delivery"
+msgstr "Khoảng cách (km)"
+
+#. module: ev_google_maps
+#: code:addons/ev_google_maps/models/sale_online.py:0
+#, python-format
+msgid "Current Shop wasn't config lat long yet!"
+msgstr "Cửa hàng chưa được cấu hình thông tin giao hàng vui lòng liên hệ với quản trị viên"
+
+#. module: ev_google_maps
+#: code:addons/ev_google_maps/models/sale_online.py:0
+#, python-format
+msgid "You cannot submit a home delivery order with a point of sale that lacks delivery information. Please contact your administrator!"
+msgstr "Cửa hàng chưa được cấu hình thông tin giao hàng vui lòng liên hệ với quản trị viên"
+
+#. module: ev_google_maps
+#: model:ir.model.fields,field_description:ev_delivery_management.field_pos_shop__country_state_id
+msgid "Country"
+msgstr "Tỉnh"
+
+

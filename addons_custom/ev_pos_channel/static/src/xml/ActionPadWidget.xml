@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ActionpadWidget" t-inherit="point_of_sale.ActionpadWidget" t-inherit-mode="extension" owl="1">
+        <xpath expr="//button[@class='button set-customer']" position="replace">
+            <script>
+                control_button = $('.control-button');
+                var button_sorted = control_button.sort(function (a,b){
+                   var button_name_a = a.innerText;
+                   var button_name_b = b.innerText;
+                    if (button_name_a == "Điểm thưởng"){
+                        return -1;
+                    }
+                    else if (button_name_a > button_name_b){
+                        return 1;
+                    }
+                    else if (button_name_a &lt; button_name_b)
+                        return -1;
+                    else
+                        return 0;
+                });
+                $('.control-buttons').html(button_sorted);
+            </script>
+            <div class="row select-channel" style="display: flex;">
+                <button class="button set-customer" style="width: 50%;" t-att-class="{'decentered': isLongName}"
+                        t-on-click="trigger('click-customer')">
+                    <t t-if="!env.isMobile"><i class="fa fa-user" role="img" aria-label="Customer" title="Customer" /></t>
+                    <t t-if="client">
+                        <t t-esc="client.name"/>
+                    </t>
+                    <t t-else="">
+                        Customer
+                    </t>
+                </button>
+                <select id="select-channel" class="set-customer" style="width: 50%; cursor: pointer"
+                        t-on-change="trigger('change-select-channel')" t-on-click="trigger('click-select-channel')">
+                    <t t-if="returnPickSelectedChannel()[0].length &gt; 0">
+                        <t t-if="returnPickSelectedChannel()[1] &gt; 0">
+                            <option value="0">------------------</option>
+                            <t t-foreach="returnPickSelectedChannel()[0]" t-as="item">
+                                <t t-if="returnPickSelectedChannel()[1] == item.id">
+                                    <option t-att-value="item.id" selected="true"><t t-esc="item.name"/></option>
+                                </t>
+                                <t t-else="">
+                                    <option t-att-value="item.id"><t t-esc="item.name"/></option>
+                                </t>
+                            </t>
+                        </t>
+                        <t t-if="returnPickSelectedChannel()[1] == 0">
+                            <option value="0">------------------</option>
+                            <t t-foreach="returnPickSelectedChannel()[0]" t-as="item">
+                                <t t-if="item.is_default_pos">
+                                    <option t-att-value="item.id" selected="true"><t t-esc="item.name"/></option>
+                                </t>
+                                <t t-else="">
+                                    <option t-att-value="item.id"><t t-esc="item.name"/></option>
+                                </t>
+                            </t>
+                        </t>
+
+                        <t t-if="returnPickSelectedChannel()[1] &lt; 0">
+                            <t t-foreach="returnPickSelectedChannel()[0]" t-as="item">
+                                <t t-if="returnPickSelectedChannel()[2] == item.id">
+                                    <option t-att-value="item.id" selected="true"><t t-esc="item.name"/></option>
+                                </t>
+                            </t>
+                            <t t-esc="clickSelectChannel()"/>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <option value="0">Không có kênh được kích hoạt</option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+    </t>
+</templates>

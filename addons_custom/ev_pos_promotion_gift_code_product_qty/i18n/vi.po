@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_promotion_gift_code_product_qty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-04 16:12+0000\n"
+"PO-Revision-Date: 2023-01-04 16:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code_product_qty.pos_promotion_form_view
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code_product_qty.pos_promotion_form_view
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__create_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__create_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_pos_promotion__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields.selection,name:ev_pos_promotion_gift_code_product_qty.selection__pos_promotion__type__gift_code_product_qty
+msgid "Gift Code Product qty"
+msgstr "Tặng Code theo số lượng sản phẩm mua"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model,name:ev_pos_promotion_gift_code_product_qty.model_gift_code_product_qty_applies
+msgid "Gift Code product Qty Applies"
+msgstr "Áp dụng"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model,name:ev_pos_promotion_gift_code_product_qty.model_gift_code_product_qty_conditions
+msgid "Gift Code product Qty Conditions"
+msgstr "Điều kiện"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__gift_qty
+msgid "Gift quanty"
+msgstr "Số lượng code tặng"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_pos_promotion__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code_product_qty/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid ""
+"Không tìm thấy mã code có thể áp dụng cho CTKM: . Vui lòng xóa CTKM để tiếp "
+"tục!"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_pos_promotion____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__write_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__write_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__min_qty
+msgid "Min quanty"
+msgstr "Số lượng"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_pos_promotion__gift_code_product_qty_applies
+msgid "Gift Code product Qty Applies"
+msgstr "Áp dụng tặng code"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_pos_promotion__gift_code_product_qty_conditions
+msgid "Gift Code product Qty Conditions"
+msgstr "Điều kiện sản phẩm mua tặng code"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model,name:ev_pos_promotion_gift_code_product_qty.model_pos_promotion
+msgid "Pos promotion"
+msgstr "Chương trình khuyến mại"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__promotion_id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_conditions__promotion_id
+msgid "Promotion"
+msgstr "CTKM"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_gift_code_product_qty_applies__promotion_gift_id
+msgid "Promotion Gift"
+msgstr "CTKM được tặng"
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code_product_qty/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Thông báo"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code_product_qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code_product_qty.field_pos_promotion__type
+msgid "Type"
+msgstr "Loại"

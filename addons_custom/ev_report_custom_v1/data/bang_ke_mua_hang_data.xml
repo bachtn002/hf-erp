@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="ev_report_custom_v1.bang_ke_mua_hang_data" model="report.template">
+            <field name="name">Bang Ke Mua Hang Template</field>
+            <field name="code">T-RBDI</field>
+            <field name="description">Bang Ke Mua Hang Template</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+            <field name="active" eval="True"/>
+            <field name="header_html" type="html">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <span style="font-size: 16px; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-weight: 700;">
+                                    ERPViet - {self.env.company.name}
+                                </span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 21.33333396911621px; font-weight: 700; text-align: center;">
+                                    Bảng kê mua hàng
+                                </span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 14.6667px; font-style: italic; text-align: center; text-size-adjust: auto;">
+                                    Ngày: {self.to_date}
+                                </span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+            <field name="footer_html" type="html">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 17.3333px; font-weight: 700; text-align: center; text-size-adjust: auto;">
+                                    Kế toán quỹ
+                                </span>
+                            </td>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 17.3333px; font-weight: 700; text-align: center; text-size-adjust: auto;">
+                                    Thủ quỹ
+                                </span>
+                            </td>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 17.3333px; font-weight: 700; text-align: center; text-size-adjust: auto;">
+                                    Kế toán
+                                </span>
+                            </td>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 17.3333px; font-weight: 700; text-align: center; text-size-adjust: auto;">
+                                    Phó giám đốc
+                                </span>
+                            </td>
+                            <td colspan="2" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                                font-family: 'Times New Roman'; font-size: 17.3333px; font-weight: 700; text-align: center; text-size-adjust: auto;">
+                                    Giám đốc
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

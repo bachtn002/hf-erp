@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="pos_combo_pos_config_view_form_inherit" model="ir.ui.view">
+            <field name="name">pos_combo_pos_config_view_form_inherit</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[5]" position="inside">
+                    <div class="col-12 col-lg-6 o_setting_box" id="x_enable_combo">
+                        <div class="o_setting_left_pane">
+                            <field name="x_enable_combo"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="x_enable_combo" string="Enable Combo"/>
+                            <div class="text-muted" id="x_enable_combo">
+                                Use combo feature in restaurant
+                            </div>
+                            <div class="content-group mt16"
+                                 attrs="{'invisible' : [('x_enable_combo', '=', False)]}">
+                                <div class="row mt16">
+                                    <label string="Single Click Product for Edit Combo" for="x_edit_combo"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="x_edit_combo"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

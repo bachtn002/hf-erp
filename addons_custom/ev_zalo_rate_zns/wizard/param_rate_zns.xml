@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record id="param_rate_zns_view_from" model="ir.ui.view">
+            <field name="name">Param Rate ZNS View</field>
+            <field name="model">param.rate.zns</field>
+            <field name="arch" type="xml">
+                <form string="Param Rate ZNS">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_date"/>
+                                <field name="to_date"/>
+                                <field name="offset"/>
+                                <field name="limit"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="get_rate" string="Get Rate" type="object" class="btn-primary"/>
+                            <button special="cancel" string="Cancel" class="btn-secondary"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="param_rate_zns_action" model="ir.actions.act_window">
+            <field name="name">Param Rate ZNS Action</field>
+            <field name="res_model">param.rate.zns</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

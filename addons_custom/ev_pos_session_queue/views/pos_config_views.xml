@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_config_kanban">
+            <field name="name">pos.config.view.kanban.inherit.ev_pos_session_queue</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_config_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='open_session_cb']" position="replace">
+                    <button t-if="(!record.current_session_id.raw_value &amp;&amp; !record.pos_session_username.value) || (record.current_session_state.raw_value === 'queued' &amp;&amp; !record.pos_session_username.value)"
+                            class="btn btn-primary oe_clear_localstorage" name="open_session_cb" type="object">New Session
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

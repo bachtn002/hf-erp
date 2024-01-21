@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_ev_revenue_expense_config" name="Revenue and expense config" parent="account.menu_finance_configuration" sequence="100"
+                  groups="account.group_account_manager"/>
+
+        <record id="product_product_expense_custom_form_view" model="ir.ui.view">
+            <field name="name">product.product.expense.custom.form</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <form string="Reason Expense">
+                    <sheet>
+                        <field name='product_variant_count' invisible='1'/>
+                        <field name="id" invisible="True"/>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <field name="image_512" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name" string="Reason Expense"/>
+                            <h1><field name="name" placeholder="e.g. Lunch"/></h1>
+                            <div name="options" groups="base.group_user" invisible="1">
+                                <div>
+                                    <field name="x_can_be_expensed"/>
+                                    <label for="x_can_be_expensed"/>
+                                </div>
+                            </div>
+                        </div>
+                        <group name="product_details">
+                            <group string="General Information">
+                                <field name="type"/>
+                                <field name="list_price"/>
+                                <field name="uom_id" groups="uom.group_uom" options="{'no_create': True}"/>
+                                <field name="uom_po_id" invisible="1"/>
+                                <label for="default_code"/>
+                                <div>
+                                    <field name="default_code"/>
+                                    <i class="text-muted oe_edit_only">Use [Reference] as a subject prefix for incoming receipts</i>
+                                </div>
+                            </group>
+                            <group string="Accounting">
+                                <field name="property_account_expense_id" groups="account.group_account_user,account.group_account_manager"/>
+                                <field name="supplier_taxes_id" widget="many2many_tags"/>
+                                <field name="taxes_id" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_expense_product_custom" model="ir.actions.act_window">
+            <field name="name">Expense Products</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="product.product_search_form_view"/>
+            <field name="context">{"default_x_can_be_expensed": 1, 'default_type': 'service'}</field>
+            <field name="domain">[('x_can_be_expensed', '=', True)]</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new expense category
+              </p>
+            </field>
+        </record>
+
+        <record id="hr_expense_product_custom_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="hr_expense_product_custom"/>
+        </record>
+
+        <record id="hr_expense_product_custom_kanban" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="act_window_id" ref="hr_expense_product_custom"/>
+        </record>
+
+        <record id="hr_expense_product_custom_form" model="ir.actions.act_window.view">
+            <field name="sequence" eval="3"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_product_expense_custom_form_view"/>
+            <field name="act_window_id" ref="hr_expense_product_custom"/>
+        </record>
+
+        <menuitem string="Reason Expense"
+                  id="hr_expense_product_menu"
+                  parent="menu_ev_revenue_expense_config"
+                  action="hr_expense_product_custom" sequence="101"/>
+
+
+<!--        Reason In-->
+
+        <record id="product_product_reason_in_form_view" model="ir.ui.view">
+            <field name="name">product.product.reason.in.form</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <form string="Reason In">
+                    <sheet>
+                        <field name='product_variant_count' invisible='1'/>
+                        <field name="id" invisible="True"/>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <field name="image_512" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name" string="Reason In"/>
+                            <h1><field name="name"/></h1>
+                            <div name="options" groups="base.group_user" invisible="1">
+                                <div>
+                                    <field name="is_reason_in"/>
+                                    <label for="is_reason_in"/>
+                                </div>
+                            </div>
+                        </div>
+                        <group name="product_details">
+                            <group string="General Information">
+                                <field name="type"/>
+                                <field name="list_price"/>
+                                <field name="uom_id" groups="uom.group_uom" options="{'no_create': True}"/>
+                                <field name="uom_po_id" invisible="1"/>
+                                <label for="default_code"/>
+                                <div>
+                                    <field name="default_code"/>
+                                    <i class="text-muted oe_edit_only">Use [Reference] as a subject prefix for incoming receipts</i>
+                                </div>
+                            </group>
+                            <group string="Accounting">
+                                <field name="property_account_income_id" groups="account.group_account_user,account.group_account_manager"/>
+                                <field name="supplier_taxes_id" widget="many2many_tags"/>
+                                <field name="taxes_id" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="reason_in_product" model="ir.actions.act_window">
+            <field name="name">Reason In Products</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="product.product_search_form_view"/>
+            <field name="context">{"default_is_reason_in": 1, 'default_type': 'service'}</field>
+            <field name="domain">[('is_reason_in', '=', True)]</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new expense category
+              </p>
+            </field>
+        </record>
+
+        <record id="reason_in_product_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="reason_in_product"/>
+        </record>
+
+        <record id="reason_in_product_form" model="ir.actions.act_window.view">
+            <field name="sequence" eval="3"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_product_reason_in_form_view"/>
+            <field name="act_window_id" ref="reason_in_product"/>
+        </record>
+
+        <menuitem string="Reason In"
+                  id="reason_in_product_menu"
+                  parent="menu_ev_revenue_expense_config"
+                  action="reason_in_product" sequence="102"/>
+
+    </data>
+</odoo>

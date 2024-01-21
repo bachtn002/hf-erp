@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_statement_tree" model="ir.ui.view">
+            <field name="name">account.statement.tree</field>
+            <field name="model">account.statement</field>
+            <field name="arch" type="xml">
+                <tree string="Account Statement">
+                    <field name="name"/>
+                    <field name="journal_id"/>
+                    <field name="date"/>
+                    <field name="amount_total" sum="Amount total" widget="monetary" decoration-bf="1"/>
+                    <field name="state" widget="badge" decoration-info="state == 'draft'"
+                           decoration-success="state not in ('draft','done')"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="account_statement_form" model="ir.ui.view">
+            <field name="name">account.statement.form</field>
+            <field name="model">account.statement</field>
+            <field name="arch" type="xml">
+                <form string="Account Statement">
+                    <header>
+                        <button name="action_confirm" type="object" string="confirm"
+                                class="oe_highlight" attrs="{'invisible':[('state','=','done')]}"/>
+                        <button name="set_to_draft" type="object" string="Set to draft"
+                                class="oe_highlight" attrs="{'invisible':[('state','!=','done')]}"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,done"
+                               clickable="False"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_view_move" type="object"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible':[('count_move', '=', 0)]}"
+                            >
+                                <field name="count_move" widget="statinfo" string="Account Move"
+                                       attrs="{'invisible': [('count_move', '=', 0)]}"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" force_save="1" attrs="{'readonly' : [('state', '=', 'done')]}"/>
+                                <field name="journal_id" attrs="{'readonly' : [('state', '=', 'done')]}"
+                                       domain="[('type','=','bank'),('x_corporate_funds', '=', True)]"
+                                       options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="detail">
+                                <button name="%(account_statement_import_act)d" type="action" string="Import Statement"
+                                        icon="fa-upload" class="oe_highlight"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="The import form is in xls or xlsx format"/>
+                                <field name="account_statement_ids" create="False"
+                                       attrs="{'readonly' : [('state', '=', 'done')]}" delete="False">
+                                    <tree editable="bottom">
+                                        <field name="code"/>
+                                        <field name="name"/>
+                                        <field name="date"/>
+                                        <field name="description"/>
+                                        <field name="amount" widget="integer"/>
+                                        <field name="account_analytic_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                                        <field name="account_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                                        <field name="account_move_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="account_statement_act" model="ir.actions.act_window">
+            <field name="name">Account Statement</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.statement</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_account_statement" name="Account Statement"
+                  action="account_statement_act" groups="account.group_account_user"
+                  parent="account.menu_finance_entries_actions"
+                  sequence="30"/>
+
+
+    </data>
+</odoo>

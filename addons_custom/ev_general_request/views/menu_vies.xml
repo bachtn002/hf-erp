@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="sale_general_request_id" name="Sale Request Management"
+                  parent="stock.menu_stock_root" sequence="1" groups="stock.group_stock_manager,stock.group_stock_user"/>
+        <menuitem id="general_sale_menu" name="General Request"
+                  parent="sale_general_request_id"
+                  action="general_request_act" sequence="1" groups="stock.group_stock_manager"/>
+<!--        <menuitem id="allotment_request_menu" name="Alotment Request"-->
+<!--                  parent="sale_general_request_id"-->
+<!--                  action="allotment_request_action" sequence="1" groups="stock.group_stock_manager"/>-->
+    </data>
+</odoo>

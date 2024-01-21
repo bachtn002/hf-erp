@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+                id="promotion_code_phone_report_xlsx"
+                model="promotion.voucher"
+                string="Promotion Code Phone Report"
+                report_type="xlsx"
+                name="promotion.code.phone"
+                file="promotion.code.phone"
+                print_report_name="Promotion Code Phone Excel Report"
+        />
+    </data>
+</odoo>

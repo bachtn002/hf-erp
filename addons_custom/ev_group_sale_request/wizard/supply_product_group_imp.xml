@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="supply_product_group_import_wizard_form" model="ir.ui.view">
+            <field name="name">supply_product_group_import_wizard_form</field>
+            <field name="model">supply.product.group.import</field>
+            <field name="arch" type="xml">
+                <form string="Import a excel file">
+                    <group name="main">
+                        <field name="upload_file"/>
+                    </group>
+
+                    <footer>
+                        <button name="import_supply_product_group" type="object"
+                                string="Upload" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="supply_product_group_import_action" model="ir.actions.act_window">
+            <field name="name">Import Supply Product Group</field>
+            <field name="res_model">supply.product.group.import</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

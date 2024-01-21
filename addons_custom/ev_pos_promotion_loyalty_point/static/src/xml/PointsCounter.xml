@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-inherit="pos_loyalty.PointsCounter" t-inherit-mode="extension" owl="1">
+        <xpath expr="//table[hasclass('loyalty-tbl')]" position="replace">
+			<table class="loyalty-tbl">
+				<tr>
+					<th style="width: 16%">Điểm Cũ</th>
+					<th style="width: 16%">Đổi</th>
+					<th style="width: 16%">Còn lại</th>
+					<th style="width: 16%">Cộng</th>
+					<th style="width: 16%">CTKM</th>
+					<th style="width: 17%">Điểm Mới</th>
+				</tr>
+				<tr>
+					<td>
+						<t t-esc="env.pos.format_currency_no_symbol(get_points_total())"/>
+					</td>
+					<td>
+						<t t-if="get_points_spent()">- <t
+								t-esc="env.pos.format_currency_no_symbol(get_points_spent())"/>
+						</t>
+					</td>
+					<td>
+<!--						<t t-esc="env.pos.format_currency_no_symbol(get_total_before_if_spent())"/>-->
+						<t t-esc="env.pos.format_currency_no_symbol(get_points_total_if_spent())"/>
+					</td>
+					<td>
+						<t t-if="get_points_won()">+ <t t-esc="env.pos.format_currency_no_symbol(get_points_won())"/>
+						</t>
+					</td>
+					<td>
+						<t t-if="get_points_promotion_loyalty()">+ <t t-esc="env.pos.format_currency_no_symbol(get_points_promotion_loyalty())"/>
+						</t>
+					</td>
+					<td>
+						<t t-esc="env.pos.format_currency_no_symbol(get_total_before())"/>
+					</td>
+				</tr>
+			</table>
+		</xpath>
+					</t>
+
+		</templates>

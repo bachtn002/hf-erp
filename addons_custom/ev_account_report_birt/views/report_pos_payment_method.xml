@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+        <record id="report_pos_payment_method_view_form" model="ir.ui.view">
+            <field name="name">Report Pos Payment Method</field>
+            <field name="model">report.pos.payment.method</field>
+            <field name="arch" type="xml">
+                <form string="Report Pos Payment Method">
+                    <header>
+                    </header>
+                    <sheet>
+                        <h2 class="text-center">Report Pos Payment Method</h2>
+                        <group string="Report Condition">
+                            <group>
+                                <field name="from_date" required="1"/>
+                            </group>
+                            <group>
+                                <field name="to_date" required="1"/>
+                            </group>
+                        </group>
+                        <group string="Payment Method">
+                            <group>
+                                <field name="pos_payment_method_id" required="1"
+                                       options="{'no_create':1, 'no_create_edit':1,'no_open':1}"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="action_filter_all" string="Report" type="object" class="btn-primary"/>
+                            -
+                            <button name="print_report_payment_method_xlsx" string="Report xlsx" type="object"
+                                    class="btn-primary"/>
+                        </footer>
+                        <notebook>
+                            <page string="Detail">
+                                <field name="report_pos_payment_method_line_ids" readonly="1">
+                                    <tree>
+                                        <field name="pos_payment_method_id"/>
+                                        <field name="account_analytic_id"/>
+                                        <field name="intital_balance" sum="Total"/>
+                                        <field name="debit" sum="Total"/>
+                                        <field name="credit" sum="Total"/>
+                                        <field name="balance" sum=  "Total"/>
+                                        <field name="report_pos_payment_method_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="report_pos_payment_method_action" model="ir.actions.act_window">
+            <field name="name">Report Pos Payment Method</field>
+            <field name="res_model">report.pos.payment.method</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_pos_payment_method_view_form"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="report_pos_payment_method_menu"
+                  name="Report Pos Payment Method"
+                  action="report_pos_payment_method_action"
+                  parent="ev_account_cash_bank.menu_cash_bank_report"
+                  groups="account.group_account_user"
+                  sequence="20"/>
+
+    </data>
+</odoo>

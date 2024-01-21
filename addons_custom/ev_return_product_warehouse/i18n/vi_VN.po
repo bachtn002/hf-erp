@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_return_product_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-29 02:31+0000\n"
+"PO-Revision-Date: 2022-03-29 02:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Not service type, line (%s)"
+msgstr ""
+"\n"
+"Không thể chọn sản phẩm là dịch vụ, dòng (%s)"
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Product does not exist in warehouse, line (%s)"
+msgstr ""
+"\n"
+"Sản phẩm không tồn tại trong kho, line (%s)"
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Quantity must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Số lượng phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_tree
+msgid "Destination warehouse"
+msgstr "Kho nhận"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_return_product_warehouse
+#: model:ir.model.fields,field_description:ev_return_product_warehouse.field_stock_request__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Download Import Template"
+msgstr "Tải mẫu"
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid ""
+"File not found or in incorrect format. Please check the .xls or .xlsx file "
+"format"
+msgstr ""
+"Không tim thấy file hoặc sai format file. Vui lòng kiểm tra format .xls hoặc"
+" .xlsx của file"
+
+#. module: ev_return_product_warehouse
+#: model:ir.model.fields,field_description:ev_return_product_warehouse.field_stock_request__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Import"
+msgstr ""
+
+#. module: ev_return_product_warehouse
+#: model:ir.model.fields,field_description:ev_return_product_warehouse.field_stock_request__is_return_product
+msgid "Is return goods to the warehouse"
+msgstr "Là phiếu trả hàng kho tổng"
+
+#. module: ev_return_product_warehouse
+#: model:ir.model.fields,field_description:ev_return_product_warehouse.field_stock_request____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Number"
+msgstr ""
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid "Please insert quantity for confirm"
+msgstr "Vui lòng nhập số lượng xác nhận"
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid "Product can not send request : (%s)"
+msgstr "Không thể gửi với sản phẩm : (%s)"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Quantity Return"
+msgstr "Số lượng"
+
+#. module: ev_return_product_warehouse
+#: model:ir.actions.act_window,name:ev_return_product_warehouse.stock_return_product_warehouse_action
+#: model:ir.ui.menu,name:ev_return_product_warehouse.menu_stock_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Request Return Product Warehouse"
+msgstr "Yêu cầu chuyển hàng về kho tổng"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_tree
+msgid "Source warehouse"
+msgstr "Kho xuất"
+
+#. module: ev_return_product_warehouse
+#: model:ir.model,name:ev_return_product_warehouse.model_stock_request
+msgid "Stock Request"
+msgstr "Yêu cầu chuyển Kho nội bộ"
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "The import form is in xls or xlsx format"
+msgstr "Mẫu import có định dạng là xls hoặc xlsx"
+
+#. module: ev_return_product_warehouse
+#: code:addons/ev_return_product_warehouse/models/stock_request.py:0
+#, python-format
+msgid ""
+"The quantity done for the product \"%s\" doesn't respect the rounding "
+"precision"
+"                                                                           "
+"defined on the unit of measure \"%s\". Please change the quantity done or "
+"the"
+"                                                                           "
+"rounding precision of your unit of measure."
+msgstr ""
+"Số lượng thực hiện cho sản phẩm \"%s\" không tuân theo độ chính xác làm tròn"
+" được xác định trên đơn vị đo \"%s\". Vui lòng thay đổi số lượng thực hiện "
+"hoặc độ chính xác làm tròn của đơn vị đo lường của bạn."
+
+#. module: ev_return_product_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_return_product_warehouse.stock_return_product_warehouse_view_form
+msgid "Transfer Out"
+msgstr "Phiếu xuất"

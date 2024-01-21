@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="pos_config_price_correction_assets" inherit_id="point_of_sale.assets" name="ev_pos_shop.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/ev_pos_shop/static/src/js/PosConfigPriceCorrection.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_shop/static/src/js/numberbuffer.js"/>
+        </xpath>
+    </template>
+</odoo>

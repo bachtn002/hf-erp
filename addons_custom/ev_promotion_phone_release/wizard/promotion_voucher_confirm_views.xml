@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+
+	<!--Wizard For Message Box -->
+		<record id="promotion_voucher_confirm_form" model="ir.ui.view">
+			<field name="name">promotion.voucher.confirm.form.view</field>
+			<field name="model">promotion.voucher.confirm</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Message" version="7.0">
+					<field name="message" colspan="4" nolabel="1" readonly="1" widget="html"/>
+					<field name="promotion_voucher_id" invisible="1" force_save="1"/>
+					<footer>
+						<button name="btn_yes" type="object" string="Yes" class="oe_highlight"/>
+						<button special="cancel" string="No"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <record id="stock_general_monthly_view_tree" model="ir.ui.view">
+            <field name="name">Stock General Monthly View Tree</field>
+            <field name="model">stock.general.monthly</field>
+            <field name="arch" type="xml">
+                <tree string="Stock General Monthly View Tree" create="0" delete="0">
+                    <field name="synthesis_id"/>
+                    <field name="location_id"/>
+                    <field name="default_code"/>
+                    <field name="product_name"/>
+                    <field name="date"/>
+                    <field name="month"/>
+                    <field name="year"/>
+                    <field name="qty_begin"/>
+                    <field name="qty_in"/>
+                    <field name="qty_out"/>
+                    <field name="qty_end"/>
+                </tree>
+            </field>
+        </record>
+        <record id="stock_general_monthly_view_form" model="ir.ui.view">
+            <field name="name">Stock General Monthly View Form</field>
+            <field name="model">stock.general.monthly</field>
+            <field name="arch" type="xml">
+                <form string="Stock General Monthly View Form" create="0" edit="0" delete="0" duplicate="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="location_id" readonly="1"
+                                       options="{'no_create': 1,'no_create_edit': 1, 'no_open':1}"/>
+                                <field name="default_code"/>
+                                <field name="product_name"/>
+                                <field name="product_id" readonly="1"
+                                       options="{'no_create': 1,'no_create_edit': 1, 'no_open':1}"/>
+                                <field name="synthesis_id" readonly="1"/>
+                                <field name="date" readonly="1"/>
+                                <field name="month" readonly="1"/>
+                                <field name="year" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="qty_begin" readonly="1"/>
+                                <field name="qty_in" readonly="1"/>
+                                <field name="qty_out" readonly="1"/>
+                                <field name="qty_end" readonly="1"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="stock_general_monthly_view_search" model="ir.ui.view">
+            <field name="name">Stock General Monthly View Search</field>
+            <field name="model">stock.general.monthly</field>
+            <field name="arch" type="xml">
+                <search string="Stock General Monthly View Search">
+                    <field name="location_id" filter_domain="[('location_id.name','ilike',self)]"/>
+                    <field name="product_id" string="Default Code"
+                           filter_domain="[('product_id.default_code','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="stock_general_monthly_action" model="ir.actions.act_window">
+            <field name="name">Stock General Monthly Action</field>
+            <field name="res_model">stock.general.monthly</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="stock_general_monthly_view_search"/>
+        </record>
+    </data>
+</odoo>

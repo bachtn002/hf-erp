@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_zalo_sale_online
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-14 08:49+0000\n"
+"PO-Revision-Date: 2022-10-14 08:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_information__type__delivery
+msgid "Delivery"
+msgstr ""
+
+#. module: ev_zalo_sale_online
+#: model:ir.model,name:ev_zalo_sale_online.model_delivery_management
+msgid "Delivery Management"
+msgstr "Quản lý vận đơn"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_delivery_management__display_name
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_sale_online__display_name
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_information__display_name
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_delivery_management__id
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_sale_online__id
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_information__id
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_delivery_management____last_update
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_sale_online____last_update
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_information____last_update
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__mini_game
+msgid "Mini Game"
+msgstr ""
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_information__minute
+msgid "Minute"
+msgstr "Phút"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__otp
+msgid "OTP"
+msgstr "OTP"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_information__order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__order_delivery
+msgid "Order Delivery"
+msgstr "Đang giao hàng"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__order_online_confirm
+msgid "Order Online Confirm"
+msgstr "Xác nhận đơn hàng online"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__order_waiting_delivery
+msgid "Order Waiting Delivery"
+msgstr "Chờ giao hàng"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model,name:ev_zalo_sale_online.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__rating_service
+msgid "Rating Service"
+msgstr "Đánh giá dịch vụ"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_information__type__sale_online
+msgid "Sale Online"
+msgstr ""
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__send_promotion
+msgid "Send Promotion"
+msgstr "Gửi chương trình khuyến mại"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_template__template_type
+msgid "Template Type"
+msgstr "Loại template"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_template__template_type__thanks_for_purchase
+msgid "Thanks For Purchase"
+msgstr "Cảm ơn khách hàng mua sắm tại Homefarm"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields,field_description:ev_zalo_sale_online.field_zns_information__type
+msgid "Type"
+msgstr "Định dạng validate"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model.fields.selection,name:ev_zalo_sale_online.selection__zns_information__type__waiting_delivery
+msgid "Waiting Delivery"
+msgstr "Chờ giao hàng"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model,name:ev_zalo_sale_online.model_zns_information
+msgid "Zalo Notification Service Information"
+msgstr "Thông tin Zalo Notification Service"
+
+#. module: ev_zalo_sale_online
+#: model:ir.model,name:ev_zalo_sale_online.model_zns_template
+msgid "Zalo Notification Service Template"
+msgstr ""
+
+#. module: ev_zalo_sale_online
+#: model:ir.model,name:ev_zalo_sale_online.model_sale_online
+msgid "sale.online"
+msgstr "Bán hàng online"

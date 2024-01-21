@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PopupCombo" owl="1">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput product-combo-popup">
+                <header class="title">Combo Product</header>
+                <main class="combo-product-container">
+                    <ProductGroupCombo name="'Required Products'" type="'required'" products="new_combo_products_details"/>
+                    <ProductGroupCombo name="'Optional Products'" type="'optional'" products="new_combo_products_details"/>
+                </main>
+                <footer class="footer">
+                    <div class="button confirm" t-on-click="confirm">
+                        OK
+                    </div>
+                    <div class="button cancel" t-on-click="cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductScreenDisplay" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('control-buttons')]" position="replace">
+        </xpath>
+        <xpath expr="//div[hasclass('leftpane')]" position="before">
+            <div class="toggle-controll-buttons">
+                <div class="control-buttons-display">
+                    <div class="control-buttons">
+                        <t t-foreach="controlButtons" t-as="cb" t-key="cb.name">
+                            <t t-component="cb.component" t-key="cb.name"/>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template id="template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='receipt.note != &quot;&quot;']" position="before">
+            <t t-if="receipt.list_code_gave_away.length > 0 ">
+                <table style="width:100%; padding: 0px; margin: 0px;font-size:13px;font-family: Arial, Helvetica, sans-serif; border: 2px dotted;"
+                       class="table table-bordered">
+                    <tr>
+                        <th colspan="2">
+                            <h3 style="text-align: center;"><b>THẺ QUÀ TẶNG</b></h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding: 10px;">
+                            <t t-foreach="receipt.list_code_gave_away[0]" t-as="item">
+                                <t t-if="item['code'] == ''">
+                                    Tặng riêng quý khách mã ưu đãi</t>
+                                <t t-else="">
+                                    Tặng riêng quý khách mã ưu đãi:</t>
+                                <t t-esc="item['code']"/>. Điều kiện áp dụng:
+                                    <t t-esc="item['condition']"/>. Thời hạn sử dụng:
+                                    <t t-esc="item['expired_date']"/>
+                                    <br/>
+                                    <br/>
+                            </t>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">Quý khách vui lòng tra cứu ví ưu đãi trên Zalo OA Homefarm để xem ưu đãi. Hãy quét ngay để truy cập</td>
+                        <td>
+                            <img width="100" height="100"
+                                 t-attf-src="data:image/png;base64,{{receipt.x_base64_image}}"/>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </xpath>
+    </t>
+</template>

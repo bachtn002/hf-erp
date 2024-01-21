@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+5,5,model_account_personnel_expenses,account.group_account_user,1,1,1,1
+6,6,model_account_personnel_expenses,account.group_account_manager,1,1,1,1
+7,7,model_account_personnel_expenses_line,account.group_account_user,1,1,1,1
+8,8,model_account_personnel_expenses_line,account.group_account_manager,1,1,1,1
+
+
+

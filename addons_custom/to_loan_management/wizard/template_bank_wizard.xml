@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="word_template_wizard_form" model="ir.ui.view">
+        <field name="name">word_template_wizard_view_form</field>
+        <field name="model">template.bank.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="borrow_disbursement_id" invisible="1"/>
+                <field name="disbursement_payment_match_id" invisible="1"/>
+                <field name="file_name" invisible="1"/>
+                <field name="disbursement_detail_id" invisible="1"/>
+                <group>
+                    <field name="word_template_id" required="1"/>
+                </group>
+                <footer>
+                    <button name="action_print_template" type="object" string="Print"
+                            class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,154 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_transfer_to_tree_view">
+            <field name="name">stock_transfer_to_tree</field>
+            <field name="model">stock.transfer</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'" decoration-muted="state == 'cancel'"
+                      decoration-danger="state not in ('cancel', 'done','draft')">
+                    <field name="name"/>
+                    <field name="warehouse_id"/>
+                    <field name="warehouse_dest_id"/>
+                    <field name="origin"/>
+                    <field name="date"/>
+                    <field name="out_date"/>
+                    <field name="in_date"/>
+                    <field name="total_quantity_out" sum="Total quantity out"/>
+                    <field name="total_quantity_in" sum="Total quantity in"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="stock_transfer_to_form_view">
+            <field name="name">stock_transfer_to_form_view</field>
+            <field name="model">stock.transfer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_choose_in_date" states="transfer" string="Confirm" type="object"
+                                class="oe_highlight" groups="base.group_user"/>
+                        <button name="action_print" states="transfer,done" string="Print" type="object" invisible="1"/>
+                        <button name="action_print_transfer_to_pdf" states="done" string="Print transfer in" type="object"/>
+                        <button name="action_print_excel" states="draft,confirmed,ready,transfer,done" string="Print Excel" type="object"/>
+                        <button name="do_print_bill_transfer_in" states="done" string="Print Bill transfer in"
+                                type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,ready,transfer,done"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <div class="oe_button_box" name="button_box">
+                                <button name="action_view_in_transfer"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-truck"
+                                    attrs="{'invisible': [('in_transfer_count', '=', 0)]}">
+                                    <field name="in_transfer_count" widget="statinfo" string="In Transfer"/>
+                                </button>
+                            </div>
+                            <div>
+                                <h3 style="text-align: center;">INTERNAL TRANSFER</h3>
+                                <h3 class="text-center">
+                                    <field name="name" readonly="1" required="1"
+                                           style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                           placeholder="Number"/>
+                                </h3>
+                            </div>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" required="1"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="warehouse_dest_id" required="1"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="out_picking_id" invisible="1"/>
+                                <field name="in_picking_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="out_date" readonly="1"/>
+                                <field name="in_date" force_save="1"/>
+                                <field name="origin" readonly="1" force_save="1"/>
+                                <field name="create_uid" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <field name="note" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <notebook string="Detail">
+                            <page string="Operations">
+                                <field name="transfer_line_ids" readonly="1">
+                                    <tree editable="bottom">
+                                        <field name="product_id" readonly="1" force_save="1"
+                                               options="{'no_create':1, 'no_create_edit':1}"/>
+                                        <field name="out_quantity" readonly="1" force_save="1" sum="Out Quantity"/>
+                                        <field name="in_quantity"  sum="In Quantity"
+                                        attrs="{'readonly': [('parent.state', '!=', 'transfer')], 'required': [('parent.state','=','transfer')]}"/>
+                                        <field name="product_uom" required="1"
+                                               options="{'no_create':1, 'no_create_edit':1}" readonly="1" force_save="1"/>
+                                        <field name="note"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="stock_transfer_id"/>
+                                                <field name="product_id"/>
+                                                <field name="product_uom"/>
+                                            </group>
+                                            <group>
+                                                <field name="out_quantity"/>
+                                                <field name="in_quantity"/>
+                                                <field name="note"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_quantity_out" readonly="1"/>
+                                    <field name="total_quantity_in" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_stock_transfer_to" model="ir.actions.act_window">
+            <field name="name">Stock transfer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.transfer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create':False,'delete':False,'receive': True}</field>
+            <field name="domain">[('state','in',('transfer','done'))]</field>
+            <field name="help" type="html">
+                <p>
+                    Stock transfer allow you to move goods from one warehouse to another,
+                    allowing you to control the goods on the road
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_stock_transfer_to_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="stock_transfer_to_tree_view"/>
+            <field name="act_window_id" ref="action_stock_transfer_to"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="action_stock_transfer_to_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock_transfer_to_form_view"/>
+            <field name="act_window_id" ref="action_stock_transfer_to"/>
+        </record>
+
+        <menuitem id="menu_stock_transfer_to" name="Incoming" parent="menu_stock_warehouse_internal" sequence="2"
+                  action="action_stock_transfer_to" groups="stock.group_stock_user"/>
+
+    </data>
+</odoo>

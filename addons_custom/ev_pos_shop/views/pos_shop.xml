@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <record id="pos_shop_tree_view" model="ir.ui.view">
+            <field name="name">Pos shop tree</field>
+            <field name="model">pos.shop</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                    <field name="manage_shop_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_shop_form_view" model="ir.ui.view">
+            <field name="name">Pos shop form</field>
+            <field name="model">pos.shop</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" string="active" type="object" name="toggle_active" icon="fa-archive">
+                                <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" required="1"/>
+                                <field name="name" required="1"/>
+                                <field name="warehouse_id" required="1"/>
+                                <field name="x_pos_shop_region_id"/>
+                            </group>
+                            <group>
+                                <field name="address" required="1"/>
+                                <field name="phone" required="1"/>
+                                <field name="manage_shop_id" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Pos config">
+                                <field name="pos_config_ids">
+                                </field>
+                            </page>
+                            <page string="List user">
+                                <field name="user_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="phone"/>
+                                        <field name="login"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_pos_shop" model="ir.actions.act_window">
+            <field name="name">Pos shop</field>
+            <field name="res_model">pos.shop</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_pos_shop"
+                  name="Pos shop"
+                  action="action_pos_shop"
+                  parent="point_of_sale.menu_point_config_product" sequence="1"/>
+
+    </data>
+</odoo>

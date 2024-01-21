@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <template id="assets_backend" name="Survey Assets Custom" inherit_id="survey.survey_assets">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/ev_elearning_custom/static/src/js/survey_form_custom.js"/>
+            </xpath>
+        </template>
+</odoo>

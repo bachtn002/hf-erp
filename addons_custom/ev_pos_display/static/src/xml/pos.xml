@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="PaymentScreenInherit" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='paymentmethods-container']" position="replace">
+            <div class="paymentmethods-container">
+                <div class="paymentmethods">
+                    <t t-foreach="env.pos.payment_methods" t-as="paymentMethod"
+                       t-key="paymentMethod.id">
+                        <PaymentMethodButton paymentMethod="paymentMethod" />
+                    </t>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='right-content']//section[@class='paymentlines-container']" position="inside">
+            <PaymentScreenPaymentLines paymentLines="paymentLines" />
+        </xpath>
+        <xpath expr="//div[@class='customer-button']" position="replace">
+            <div class="customer-button"></div>
+        </xpath>
+    </t>
+</templates>

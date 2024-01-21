@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_accountant_bill_tree" model="ir.ui.view">
+            <field name="name">accountant.bill.tree</field>
+            <field name="model">accountant.bill</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" default_order="create_date desc">
+                    <field name="date_accounting" string="Accounting date"/>
+                    <field name="date_document" string="Document date"/>
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="amount_natural_currency" sum="Amount_natural_currency" invisible="1"/>
+                    <field name="description" string="Interpretation"/>
+                    <field name="state"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_accountant_bill_form" model="ir.ui.view">
+            <field name="name">accountant.bill.form</field>
+            <field name="model">accountant.bill</field>
+            <field eval="1000" name="priority"/>
+            <field name="arch" type="xml">
+                <form string="Accountant Bill">
+                    <header>
+                        <!--                        <button name="action_import_line" class="oe_highlight" string="Import" type="object"-->
+                        <!--                        attrs="{'invisible': [('field_binary_import', '=', False)]}"/>-->
+                        <button name="action_confirm" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                        <button name="action_back" states="posted" string="Back" type="object"/>
+                        <button name="action_print" class="oe_highlight" states="posted" string="IN" type="object"/>
+
+                        <!--                        <button name="button_open_wizard_import_accountant_bill_line" type="object" string="Import Accountant Bill Line"-->
+                        <!--                                class="oe_highlight" states="draft"/>-->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_view_move"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible': [('total_entries', '=', 0)]}">
+                                <field name="total_entries" widget="statinfo" string="Journal Entries"/>
+                                <field name='move_ids' invisible="1"/>
+                            </button>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1" force_save="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="date_accounting" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="date_document" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+
+                            </group>
+                            <group>
+                                <field name="journal_id" options="{'no_create': True, 'no_open': True}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}" domain="[('company_id', '=', company_id)]"
+                                       required="1"/>
+                                <field name="currency_id" options="{'no_create':1, 'no_create_edit':1}" groups="base.group_multi_currency"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="rate" force_save="1" groups="base.group_multi_currency"
+                                       attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('currency_id', '=', 23)]}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description" required="1" force_save="1"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}" string="Interpretation"/>
+                        </group>
+                        <field name="field_binary_import" filename="field_binary_name"/>
+                        <field name="field_binary_name" invisible="1"/>
+                        <button name="action_import_line" type="object" class="oe_highlight" string="Import"
+                                attrs="{'invisible': [('field_binary_import', '=', False)]}"/>
+                        <button name='get_contract_template' string="Sample file"
+                                icon="fa-download" class="oe-highlight"
+                                onclick="window.open('ev_accountant_bill/static/template/accountant_bill_import.xlsx')"/>
+                        <notebook colspan="1">
+                            <page string="Keep Business Accounts">
+                                <!--                                <field name="field_binary_import" filename="field_binary_name"-->
+                                <!--                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>-->
+                                <!--                                <field name="field_binary_name" invisible="1"/>-->
+                                <!--                                <button name="download_template" type="object" string="Download Import Template"-->
+                                <!--                                        class="btn btn-link" style="text-decoration: underline;"-->
+                                <!--                                        help="Mẫu import có định dạng là xls hoặc xlsx"/>-->
+                                <field name="lines" colspan="4" nolabel="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       context="{'default_name': description, 'default_currency_id': currency_id,'default_rate': rate}">
+                                    <tree string="Accountant Bill Line" editable="bottom">
+                                        <field name="debit_acc_required_product" invisible="1"/>
+                                        <field name="debit_acc_required_analytic" invisible="1"/>
+                                        <field name="debit_acc_required_expense_item" invisible="1"/>
+                                        <field name="credit_acc_required_product" invisible="1"/>
+                                        <field name="credit_acc_required_analytic" invisible="1"/>
+                                        <field name="credit_acc_required_expense_item" invisible="1"/>
+                                        <field name="name" required="1" string="Interpretation"/>
+                                        <field name="product_id" options="{'no_create': True, 'no_open': True}"
+                                               attrs="{'required': ['|', ('debit_acc_required_product', '=', True), ('credit_acc_required_product', '=', True)]}"/>
+                                        <field name="accountant_bill_id" invisible="1"/>
+                                        <field name="debit_partner_id" options='{"no_create": 1, "no_create_edit": 1, "no_open": True}'/>
+                                        <field name="credit_partner_id" options='{"no_create": 1, "no_create_edit": 1, "no_open": True}'/>
+                                        <field name="debit_acc_id" required="1" options='{"no_create": 1, "no_create_edit": 1, "no_open": True}'/>
+                                        <field name="credit_acc_id" required="1" options='{"no_create": 1, "no_create_edit": 1, "no_open": True}'/>
+                                        <field name="quantity"/>
+                                        <field name="value"/>
+                                        <field name="value_natural_currency" force_save="1" invisible="1"/>
+                                        <field name="currency_id" invisible="1" force_save="1"/>
+                                        <field name="rate" invisible="1" force_save="1"/>
+                                        <field name="analytic_account_id" colspan="4" groups="analytic.group_analytic_accounting"
+                                               options='{"no_create": 1, "no_create_edit": 1, "no_open": True}'
+                                               attrs="{'required': ['|', ('debit_acc_required_analytic', '=', True),
+                                               ('credit_acc_required_analytic', '=', True)]}"/>
+                                        <field name="account_expense_item_id"
+                                               options='{"no_create": 1, "no_create_edit": 1, "no_open": True}'
+                                               attrs="{'required': ['|', ('debit_acc_required_expense_item', '=', True),
+                                               ('credit_acc_required_expense_item', '=', True)]}"/>
+                                    </tree>
+                                    <form string="Keep Business Accounts">
+                                        <group col="4">
+                                            <field name="accountant_bill_id" invisible="1"/>
+                                            <field name="name" string="Interpretation"/>
+                                            <field name="value"/>
+                                            <field name="debit_acc_id" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                            <field name="credit_acc_id" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}"/>
+                                            <field name="currency_id" invisible="1" force_save="1"/>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2">
+                                    <field name="amount" readonly="1"/>
+                                    <field name="amount_natural_currency" widget="monetary"
+                                           options="{'currency_field': 'company_id.currency_id'}" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_accountant_bill" model="ir.actions.act_window">
+            <field name="name">Accountant Bill</field>
+            <field name="res_model">accountant.bill</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('view_accountant_bill_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_accountant_bill_form')}),
+                ]"/>
+        </record>
+
+        <menuitem id="menu_accountant_bill" name="Accountant Bill" parent="account.menu_finance_entries"
+                  sequence="5" groups="account.group_account_manager"
+                  action="action_accountant_bill"/>
+    </data>
+</odoo>

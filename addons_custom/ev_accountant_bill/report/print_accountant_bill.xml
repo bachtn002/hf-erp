@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_accountant_bill">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="10"/>
+                <t t-set="data_report_header_spacing" t-value="9"/>
+                <t t-set="data_report_dpi" t-value="110"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <div class="page" style="font-size: 15px; font-family: 'Times New Roman', Times, serif;">
+                            <style type="text/css">
+                                .tb-header {
+                                width: 100%;
+                                font-size: 14px;
+                                }
+
+                                .tb-master
+                                {
+                                width: 100%;
+                                line-height: 1.5;
+                                }
+
+                                .tb-content {
+                                width: 100%;
+                                border-collapse: collapse;
+                                line-height: 1.8;
+                                }
+
+                                .tb-content td {
+                                border-collapse: collapse;
+                                border: 1px solid black;
+                                font-size: 14px;
+                                }
+
+                                .tb-content th {
+                                border-collapse: collapse;
+                                border: 1px solid black;
+                                text-align: center;
+                                }
+
+                                .tb-footer
+                                {
+                                width: 100%;
+                                line-height: 1.5;
+                                }
+                                .span{
+                                font-size: 14px;
+                                }
+                                .div{
+                                font-size: 14px;
+                                }
+
+                            </style>
+
+                            <table class="tb-header">
+                                <tr>
+                                    <td class="pull-left">
+                                        <div style="width:380px">
+                                            <div>
+                                                <span t-esc="res_company.name"/>
+                                            </div>
+                                            <span t-esc="res_company.partner_id.street"/>
+                                        </div>
+                                    </td>
+                                    <td style="padding-left: 10px; width: 280px" align="center">
+                                        <div class="pull-left">
+                                            <div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <div style="text-align: center;">
+                                <h4 style="margin:0px">
+                                    <b>PHIẾU KẾ TOÁN TỔNG HỢP</b>
+                                </h4>
+                                <div style="position:relative">
+                                    NGÀY
+                                    <span t-esc="o.date.day"/>
+                                    THÁNG
+                                    <span t-esc="o.date.month"/>
+                                    NĂM
+                                    <span t-esc="o.date.year"/>
+                                    <div style="position:absolute; right: 0; top: 0; bottom: 0;">
+                                        Số phiếu:
+                                        <span t-esc="o.name"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <table class="tb-content"
+                                   style="width:100%;border:1px solid black;border-collapse: collapse;">
+                                <tr>
+                                    <th style="border:1px solid black;text-align:center;width:20%">TÊN ĐỐI TƯỢNG</th>
+                                    <th style="border:1px solid black;text-align:center;width:25%">DIỄN GIẢI</th>
+                                    <th style="border:1px solid black;text-align:center;width:11%">TK</th>
+                                    <th style="border:1px solid black;text-align:center;width:14%">PHÁT SINH NỢ</th>
+                                    <th style="border:1px solid black;text-align:center;width:14%">PHÁT SINH CÓ</th>
+                                </tr>
+                                <t t-foreach="o.get_data_report()" t-as="line">
+                                    <t t-if="line.debit > 0">
+                                        <tr>
+                                            <td style="border:1px solid;border-bottom: dotted;padding:5px">
+                                                <t t-if="line.partner_id">
+                                                    <span t-esc="line.partner_id.name"/>
+                                                </t>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px">
+                                                <span t-esc="line.name"/>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px;text-align:center">
+                                                <span t-esc="line.account_id.code"/>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px;text-align:right">
+                                                <span t-esc="'{0:,.0f}'.format(line.debit)"/>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px;text-align:right"></td>
+                                        </tr>
+                                    </t>
+                                    <t t-if="line.credit > 0">
+                                        <tr>
+                                            <td style="border:1px solid;border-bottom: dotted;padding:5px">
+                                                <t t-if="line.partner_id">
+                                                    <span t-esc="line.partner_id.name"/>
+                                                </t>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px">
+                                                <span t-esc="line.name"/>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px;text-align:center">
+                                                <span t-esc="line.account_id.code"/>
+                                            </td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px;text-align:right"></td>
+                                            <td style="border:1px solid;border-bottom:dotted;padding:5px;text-align:right">
+                                                <span t-esc="'{0:,.0f}'.format(line.credit)"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <tr style="height:25px">
+                                    <td style="border:1px solid"></td>
+                                    <td style="border:1px solid"></td>
+                                    <td style="border:1px solid"></td>
+                                    <td style="border:1px solid"></td>
+                                    <td style="border:1px solid"></td>
+                                </tr>
+                                <tr style="height:25px">
+                                    <td style="border:1px solid;padding:5px;text-align:right" colspan="3">
+                                        <b>TỔNG CỘNG</b>
+                                    </td>
+                                    <td style="border:1px solid;padding:5px;text-align:right">
+                                        <b>
+                                            <span t-esc="'{0:,.0f}'.format(o.amount_natural_currency)"/>
+                                        </b>
+                                    </td>
+                                    <td style="border:1px solid;padding:5px;text-align:right">
+                                        <b>
+                                            <span t-esc="'{0:,.0f}'.format(o.amount_natural_currency)"/>
+                                        </b>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="font-style: italic; text-align: right; padding:5px">
+                                Bằng chữ :
+                                <span t-esc="o.get_amount_word(o.amount_natural_currency)"/>
+                            </div>
+                            <div style="text-align: right; padding-top:25px; padding-right:50px">
+                                Ngày ....... tháng ....... năm ...........
+                            </div>
+                            <table style="width:100%">
+                                <tr>
+                                    <td style="text-align:center;width:30%">KẾ TOÁN TRƯỞNG</td>
+                                    <td style="text-align:center;width:40%"></td>
+                                    <td style="text-align:center;width:30%">NGƯỜI LẬP BIỂU</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;width:30%">(Ký, họ tên)</td>
+                                    <td style="text-align:center;width:40%"></td>
+                                    <td style="text-align:center;width:30%">(Ký, họ tên)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+                string="Phiếu kế toán"
+                id="action_report_accountant_bill"
+                model="accountant.bill"
+                report_type="qweb-pdf"
+                name="ev_accountant_bill.report_accountant_bill"
+                file="ev_accountant_bill.report_accountant_bill"
+                print_report_name="'Phiếu kế toán - %s' % (object.name)"
+                menu="False"
+        />
+
+    </data>
+</odoo>

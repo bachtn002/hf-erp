@@ -1,0 +1,199 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_zalo_rate_zns
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-16 04:32+0000\n"
+"PO-Revision-Date: 2022-06-16 04:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_zalo_rate_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.param_rate_zns_view_from
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model,name:ev_zalo_rate_zns.model_param_rate_zns
+msgid "Create a Param get list zns"
+msgstr "Tạo một param lấy danh sách đánh giá zns"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__create_date
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model,name:ev_zalo_rate_zns.model_rate_zns
+msgid "Customer rating zns management"
+msgstr "Quản lý thông tin đánh giá zns"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__display_name
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__feed_back
+msgid "Feedback"
+msgstr "Phản hồi"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: ev_zalo_rate_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.param_rate_zns_view_from
+msgid "Get Rate"
+msgstr "Lấy đánh giá"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.actions.server,name:ev_zalo_rate_zns.get_rate_zns_cron_ir_actions_server
+#: model:ir.cron,cron_name:ev_zalo_rate_zns.get_rate_zns_cron
+#: model:ir.cron,name:ev_zalo_rate_zns.get_rate_zns_cron
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.zns_template_view_from_inherit_rate
+msgid "Get Rate ZNS"
+msgstr "Lấy dữ liệu đánh giá zns"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__id
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns____last_update
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__write_date
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__limit
+msgid "Limit"
+msgstr "Số lượng đánh giá"
+
+#. module: ev_zalo_rate_zns
+#: code:addons/ev_zalo_rate_zns/wizard/param_rate_zns.py:0
+#, python-format
+msgid "Limit must be less than 10000"
+msgstr "Số lượng  đánh giá tối đa phải nhỏ hơn 10000"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,help:ev_zalo_rate_zns.field_param_rate_zns__limit
+msgid "Maximum 10000"
+msgstr "Tối đa 10000"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__msg_id
+msgid "Message ID"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: code:addons/ev_zalo_rate_zns/models/rate_zns.py:0
+#, python-format
+msgid "No usable refresh token! You can Callback URL"
+msgstr "Không thể sử dụng refresh token! Bạn cần cập nhật lại"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__oa_id
+msgid "OA ID"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__offset
+msgid "Offset"
+msgstr "Thứ tự đánh giá đầu tiên"
+
+#. module: ev_zalo_rate_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.param_rate_zns_view_from
+msgid "Param Rate ZNS"
+msgstr "Thông tin lấy đánh giá"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.actions.act_window,name:ev_zalo_rate_zns.param_rate_zns_action
+msgid "Param Rate ZNS Action"
+msgstr "Thông tin lấy đánh giá"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__rate
+msgid "Rate"
+msgstr "Đánh giá"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.actions.act_window,name:ev_zalo_rate_zns.rate_zns_action
+#: model:ir.ui.menu,name:ev_zalo_rate_zns.rate_zns_menu
+msgid "Rate ZNS"
+msgstr "Đánh giá ZNS"
+
+#. module: ev_zalo_rate_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.rate_zns_view_from
+msgid "Rate ZNS Form"
+msgstr "Đánh giá ZNS"
+
+#. module: ev_zalo_rate_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.rate_zns_view_search
+msgid "Rate ZNS Search"
+msgstr "Đánh giá ZNS"
+
+#. module: ev_zalo_rate_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_rate_zns.rate_zns_view_tree
+msgid "Rate ZNS Tree"
+msgstr "Đánh giá ZNS"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__submit_date
+msgid "Submit Date"
+msgstr "Thời gian đánh giá"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__template_id
+msgid "Template ID"
+msgstr ""
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,help:ev_zalo_rate_zns.field_param_rate_zns__offset
+msgid "The order of the first rate in the returned list"
+msgstr "Thứ tự của đánh giá đầu tiên trong danh sách trả về"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_param_rate_zns__to_date
+msgid "To Date"
+msgstr "Tới ngày"
+
+#. module: ev_zalo_rate_zns
+#: model:ir.model.fields,field_description:ev_zalo_rate_zns.field_rate_zns__tracking_id
+msgid "Tracking ID"
+msgstr ""

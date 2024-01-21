@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="sale_request_menu" name="Sale request"
+                  parent="ev_general_request.sale_general_request_id"
+                  action="sale_request_act" sequence="2" groups="stock.group_stock_user"/>
+    </data>
+</odoo>

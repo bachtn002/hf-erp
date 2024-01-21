@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="product_process_form_view" model="ir.ui.view">
+            <field name="name">product.process.view.form.inherit.ev_product_process_access_right</field>
+            <field name="model">product.process</field>
+            <field name="inherit_id" ref="ev_product_process.product_process_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='note']" position="after">
+                    <field name="rule_ids" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='process_line_ids']//form//field[@name='rule_id']" position="replace">
+                    <field name="rule_id" required="1" options="{'no_create':1, 'no_create_edit':1}" domain="[('id', 'in', parent.rule_ids)]"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

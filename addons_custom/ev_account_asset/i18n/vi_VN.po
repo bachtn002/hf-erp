@@ -1,0 +1,588 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_asset
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-11 15:46+0000\n"
+"PO-Revision-Date: 2021-11-11 15:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_asset_inventory.py:0
+#, python-format
+msgid "%(name)s: %(asset)s"
+msgstr ""
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_move.py:0
+#, python-format
+msgid "%s created from invoice"
+msgstr ""
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_report_form_view
+msgid "<b>Account Asset Report</b>"
+msgstr "<b>BÁO CÁO TỒN TẢI SẢN/CCDC</b>"
+
+#. module: ev_account_asset
+#: model:ir.actions.act_window,name:ev_account_asset.account_asset_inventory_action
+#: model:ir.ui.menu,name:ev_account_asset.menu_account_asset_inventory
+#: model:ir.ui.menu,name:ev_account_asset.menu_account_asset_inventory_accounting
+msgid "Account Asset Inventory"
+msgstr "Kiểm kê tài sản / CCDC"
+
+#. module: ev_account_asset
+#: model:ir.actions.act_window,name:ev_account_asset.account_asset_report_action
+#: model:ir.ui.menu,name:ev_account_asset.menu_account_asset_report_inventory
+msgid "Account Asset Report"
+msgstr "Báo cáo tồn tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_account_expense_item_id
+msgid "Account Expense Item"
+msgstr "Khoản mục chi phí"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__accounting_date
+msgid "Accounting Date"
+msgstr "Ngày kế toán"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__actual_quantity
+msgid "Actual Quantity"
+msgstr "Số lượng thực tế"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__account_analytic_id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__account_analytic_id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__account_analytic_id
+msgid "Analytic Account"
+msgstr "Bộ phận chi phí"
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_move.py:0
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__asset_id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__asset_id
+#, python-format
+msgid "Asset"
+msgstr "Tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__name
+msgid "Asset Inventory"
+msgstr "Kiểm kê tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__uom_id
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_product_product__asset_product_id
+msgid "Asset Product"
+msgstr "Sản phẩm tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_asset_type
+msgid "Asset Type"
+msgstr "Loại tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_account_asset
+msgid "Asset/Revenue Recognition"
+msgstr "Ghi nhận tài sản/Doanh thu"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__lines
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset__x_asset_type__assets
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Assets"
+msgstr "Tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__book_value
+msgid "Book Value"
+msgstr "Giá trị sổ sách"
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Bạn có chắc chắn muốn thực hiện hủy phiếu?"
+msgstr ""
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Bạn có chắc chắn muốn thực hiện xác nhận ?"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset_inventory__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__check_data
+msgid "Check Data"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_code
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__x_code
+msgid "Code"
+msgstr "Mã tài sản"
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.view_account_asset_product_form
+msgid "Config Asset"
+msgstr "Cấu hình"
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset_inventory__state__confirm
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "Confirm Department"
+msgstr "Xác nhận của bộ phận"
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset_inventory__state__confirm_part
+msgid "Confirm Part"
+msgstr "Bộ phận đã xác nhận"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__create_uid
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__create_uid
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__create_uid
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__create_date
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__create_date
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__create_date
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__date
+msgid "Date"
+msgstr "Ngày kểm kê"
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_move.py:0
+#, python-format
+msgid "Deferred expense"
+msgstr ""
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_move.py:0
+#, python-format
+msgid "Deferred revenue"
+msgstr ""
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_asset_inventory.py:0
+#, python-format
+msgid "Depreciation board modified"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__display_name
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__display_name
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__display_name
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__display_name
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__display_name
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_account_asset.field_product_product__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset_inventory__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset_inventory__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset__x_asset_type__expenses
+msgid "Expenses Cost"
+msgstr "Chi phí"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__id
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_move__id
+#: model:ir.model.fields,field_description:ev_account_asset.field_product_product__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_needaction
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_has_error
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__inventory_id
+msgid "Inventory"
+msgstr "Tồn tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_inventory_loss_account_id
+msgid "Inventory Loss Account"
+msgstr "Tài khoản thất thoát kiểm kê"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_move.py:0
+#: code:addons/ev_account_asset/models/account_move.py:0
+#, python-format
+msgid ""
+"Journal Items of {account} should have a label in order to generate an asset"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset____last_update
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory____last_update
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line____last_update
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report____last_update
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line____last_update
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_account_asset.field_product_product____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__write_uid
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__write_uid
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__write_uid
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__write_date
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__write_date
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__write_date
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report__lines
+msgid "Lines"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__name
+msgid "Name"
+msgstr "Kể kê tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__price
+msgid "Price"
+msgstr "Giá"
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_product_asset_id
+msgid "Product Asset"
+msgstr "Sản phẩm hình thành tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_quantity
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_remaining_quantity
+msgid "Remaining Quantity"
+msgstr "Số lượng còn lại"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__report_id
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_report_form_view
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_report_line__uom_id
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_account_asset
+#: code:addons/ev_account_asset/models/account_asset_inventory.py:0
+#: code:addons/ev_account_asset/models/account_move.py:0
+#, python-format
+msgid "Some fields are missing {}"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__quantity
+msgid "Theoretical Quantity"
+msgstr "Số lượng lý thuyết"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory_line__asset_code
+msgid "Asset Code"
+msgstr "Mã tài sản"
+
+
+#. module: ev_account_asset
+#: model:ir.model.fields.selection,name:ev_account_asset.selection__account_asset__x_asset_type__tools
+msgid "Tools"
+msgstr "Công cụ dụng cụ"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_value_allocated
+msgid "Value Allocated"
+msgstr "Giá trị đã PB"
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset__x_value_per_period
+msgid "Value Per Period"
+msgstr "Giá trị PB hàng kỳ"
+
+#. module: ev_account_asset
+#: model_terms:ir.actions.act_window,help:ev_account_asset.account_asset_inventory_action
+msgid "Waiting for a new Account Asset Inventory."
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,field_description:ev_account_asset.field_account_asset_inventory__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model.fields,help:ev_account_asset.field_account_asset_inventory__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_account_asset_inventory
+msgid "account.asset.inventory"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_account_asset_inventory_line
+msgid "account.asset.inventory.line"
+msgstr ""
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_account_asset_report
+msgid "account.asset.report"
+msgstr "Báo cáo tồn tài sản"
+
+#. module: ev_account_asset
+#: model:ir.model,name:ev_account_asset.model_account_asset_report_line
+msgid "account.asset.report.line"
+msgstr ""
+
+#. module: ev_account_asset
+#: model_terms:ir.ui.view,arch_db:ev_account_asset.account_asset_inventory_form_view
+msgid "e.g. Annual Asset inventory"
+msgstr "e.g. Kiểm kê tài sản thực tế"

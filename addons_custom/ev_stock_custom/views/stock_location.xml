@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_location_form_x_code_inherit">
+            <field name="name">stock.location.form.x.code.inherit</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_form"/>
+            <field name="arch" type="xml">
+	            <field name="usage" position="before">
+					<field name="x_code"/>
+                    <field name="x_warehouse_id" readonly="1" force_save="1"/>
+                    <field name="x_region_id" readonly="1" force_save="1"/>
+	            </field>
+                <xpath expr="//field[@name='removal_strategy_id']" position="after">
+                    <field name="x_type_warehouse"/>
+                    <field name="x_location_old_id"/>
+	            </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

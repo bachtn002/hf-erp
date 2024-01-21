@@ -1,0 +1,48 @@
+<templates id="template" xml:space="preserve">
+	<t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='receipt.note_sale_online != &quot;&quot;']" position="before">
+                 <div style="padding: 5px 0px 5px 0px;text-align: center;">THÔNG TIN HÓA ĐƠN ĐIỆN TỬ</div>
+                 <div style="width: 100%;font-size:13px;font-family: Arial, Helvetica, sans-serif;"
+                   class="table table-bordered">
+<!--                <div style="float:left; width:100%">-->
+<!--                    <div style="font-weight: bold;float:left;margin-right: 5px;">Tên người mua hàng:</div>-->
+<!--                    <div style="float:left"><t t-esc="env.pos.get_order().x_sinvoice_company_name"/></div>-->
+<!--                </div>-->
+                <div style="float:left; width:100%">
+                    <div style="font-weight: bold;float:left;margin-right: 5px;">Tên đơn vị:</div>
+                    <div style="float:left">
+                        <t t-if="receipt.is_get_invoice">
+                            <t t-esc="env.pos.get_order().x_sinvoice_company_name"/>
+                        </t>
+                        <t t-else="">
+                            Khách lẻ không lấy hóa đơn
+                        </t>
+                    </div>
+                </div>
+                <div style="float:left; width:100%">
+                    <div style="font-weight: bold;float:left;margin-right: 5px;">Mã số thuế:</div>
+                    <div style="float:left"><t t-esc="env.pos.get_order().x_sinvoice_vat"/></div>
+                </div>
+                <div style="float:left; width:100%">
+                    <div style="font-weight: bold;float:left;margin-right: 5px;">Email:</div>
+                    <div style="float:left"><t t-esc="env.pos.get_order().x_sinvoice_email"/></div>
+                </div>
+                <div style="float:left; width:100%">
+                    <div style="font-weight: bold;float:left;margin-right: 5px;">Địa chỉ:</div>
+                    <div style="float:left"><t t-esc="env.pos.get_order().x_sinvoice_address"/></div>
+                </div>
+                <div style="float:left; width:100%">
+                    <div style="font-weight: bold;float:left;margin-right: 5px;">Tra cứu tại:</div>
+                    <div style="float:left"><t t-esc='receipt.company.sinvoice_search_url'/></div>
+                </div>
+                <div style="float:left; width:100%">
+                    <div style="font-weight: bold;float:left;margin-right: 5px;">Mã tra cứu:</div>
+                    <div style="float:left"><t t-esc='env.pos.get_order().name'/></div>
+                </div>
+            </div>
+             <div style="float:left; text-align: center; font-size: 13px; margin: 10px 0px 5px 0px; ">
+                 Hóa đơn điện tử sẽ được xuất tự động trong ngày, Quý khách có thể tra cứu thông tin hóa đơn điện tử sau 24H từ thời điểm mua hàng
+             </div>
+		</xpath>
+    </t>
+</templates>

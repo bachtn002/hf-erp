@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="promotion_voucher_form" model="ir.ui.view">
+            <field name="name">promotion.voucher.form.view.inherit.ev_promotion_phone_release</field>
+            <field name="model">promotion.voucher</field>
+            <field name="inherit_id" ref="ev_promotion_voucher.promotion_voucher_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="x_release_phone_types" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                </xpath>
+                <xpath expr="//button[@name='%(ev_promotion_voucher.update_promotion_code_act)d']" position="replace">
+                    <button name="update_promotion_code_info" string="Update" type="object"
+                                class="oe_highlight" attributes="{'invisible': [('state', '=', 'cancel')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_active']" position="replace">
+                    <button name="action_active_confirm" string="Activate" type="object" states="created" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//field[@name='quantity']" position="after">
+                    <field name="x_condition_apply" style="word-break: break-word"  attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                </xpath>
+                <xpath expr="//button[@name='action_generate_serial']" position="after">
+                    <button name="action_match_phone_with_code" type="object" class="oe_highlight"
+                            string="Match Phone number with Code"
+                            attrs="{'invisible': ['|','|',('state', '!=', 'created'),'&amp;',('state', '=', 'created'),('x_phone_promotion_list_ids', '=', []), '&amp;',('state', '=', 'created'),('x_is_phone_release', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='promotion_voucher_count']/tree/field[@name='promotion_code']" position="after">
+                    <field name="phone_number_applied" attrs="{'column_invisible': [('parent.x_release_phone_types', '!=', 'phone')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='promotion_voucher_count']//form//field[@name='promotion_code']" position="after">
+                    <field name="phone_number_applied" attrs="{'invisible': [('parent.x_release_phone_types', '!=', 'phone')]}"/>
+                </xpath>
+                <xpath expr="//page[last()]" position="after">
+                    <page name='phone_release' string="Phone Release" attrs="{'invisible': [('x_release_phone_types', '!=', 'phone')]}">
+                        <button name="print_promotion_code_phone" type="object" class="oe_highlight" string="Print Promotion Phone Code" attrs="{'invisible': [('x_phone_promotion_list_ids', '=', [])]}"/>
+                        <button name="import_phone_apply" type="object" class="oe_highlight" string="Import Phone numbers apply" attrs="{'invisible': ['|',('state', '!=', 'created'), ('x_phone_promotion_list_ids', '!=', [])]}"/>
+                        <button name="import_phone_code_apply" type="object" class="oe_highlight" string="Import Phone Code apply" attrs="{'invisible': ['|', ('state', '!=', 'active'), ('x_is_phone_release', '=', True)]}"/>
+                        <field name="x_is_phone_release" invisible="1"/>
+                        <field name="x_phone_promotion_list_ids" context="{'default_state': 'new'}" readonly="1" force_save="1">
+                            <tree editable="bottom">
+                                <field name="promotion_code"/>
+                                <field name="phone"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

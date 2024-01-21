@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_print_stamp,ev_print_stamp_name,model_print_stamp,,1,1,1,1
+access_print_stamp_line,ev_print_stamp_line_name,model_print_stamp_line,,1,1,1,1
+access_product_promotion_config,ev_product_promotion_config_name,model_product_promotion_config,,1,1,1,1
+access_product_other_config,ev_product_other_config_name,model_product_other_config,,1,1,1,1
+access_product_other_config_line,ev_product_other_config_line_name,model_product_other_config_line,,1,1,1,1
+access_import_xls_other_conf,import_xls_other_config_name,model_import_xls_other_config,,1,1,1,1

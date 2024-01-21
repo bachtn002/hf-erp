@@ -1,0 +1,659 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_print_stamp_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-18 10:25+0000\n"
+"PO-Revision-Date: 2022-03-18 10:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/wizard/import_xls_other_config.py:0
+#, python-format
+msgid ""
+"\n"
+"Date cannot be empty, line (%s)"
+msgstr "Ngày không được bỏ trống, kiểm tra dòng "
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/wizard/import_xls_other_config.py:0
+#, python-format
+msgid ""
+"\n"
+"Price must be greater than 0, line (%s)"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.report,print_report_name:ev_print_stamp_product.report_print_stamp_product
+msgid "'Print Stamp Product'"
+msgstr "In tem sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.report,print_report_name:ev_print_stamp_product.report_print_stamp_promotion
+msgid "'Print Stamp Promotion'"
+msgstr "In tem khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.report,print_report_name:ev_print_stamp_product.report_print_stamp_shelf
+msgid "'Print Stamp Shelf'"
+msgstr "In tem giá kệ"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "(giờ HC).Facebook &amp; Website:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_product_view_form
+msgid "<b>Print Stamp Product</b>"
+msgstr "<b>In tem sản phẩm</b>"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+msgid "<b>Print Stamp Promotion</b>"
+msgstr "<b>In tem khuyến mãi</b>"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_shelf_view_form
+msgid "<b>Print Stamp Shelf</b>"
+msgstr "<b>In tem giá kệ</b>"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "<span style=\"font-weight: bold;\">HDSD:</span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "<span style=\"font-weight: bold;\">Thành phần:</span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "<span style=\"font-weight: bold;\">Xuất xứ:</span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "<span style=\"font-weight: bold;\">Đóng gói và phân phối:</span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "<span style=\"font-weight: bold;\">Địa chỉ:</span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "<span style=\"font-weight: bold;text-align:center\">Bảo quản:</span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_promotion_view
+msgid ""
+"<span>\n"
+"                                                Thời Gian Áp Dụng:\n"
+"                                            </span>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid ""
+"<span>HOTLINE ĐẶT HÀNG</span>\n"
+"                                                <br/>"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__allow_printing
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__allow_printing
+msgid "Allow Printing"
+msgstr "Cho phép in"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "Barcode"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.import_xls_other_config_wizard_form
+msgid "Cancel"
+msgstr "Thoát"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_shelf_view_form
+msgid "Choose All"
+msgstr "Chọn tất cả"
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_res_company__x_complaint_hotline
+msgid "Complaint Hotline"
+msgstr "Hotline khiếu nại"
+
+#. module: ev_print_stamp_product
+#: model:res.groups,name:ev_print_stamp_product.group_config_print_stamp
+msgid "Config Print Stamp"
+msgstr "Cấu hình in tem"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__create_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__create_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__create_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__create_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__create_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__create_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__create_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__create_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__create_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__create_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__create_date
+msgid "Created on"
+msgstr "Tạo vào lúc"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_product_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_shelf_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.product_other_config_view_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_pos_promotion_qty_price__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.product_other_config_view_form
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__expire_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__expire_date
+msgid "Expire Date"
+msgstr "Ngày hết hạn"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_expiry
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_expiry
+msgid "Expiry"
+msgstr "Hạn sử dụng"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__file_name
+msgid "File Name"
+msgstr "Tên file"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_promotion_view
+msgid "Giá Cũ:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "HSD:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_pos_promotion_qty_price__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.import_xls_other_config_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.product_other_config_view_form
+msgid "Import"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.act_window,name:ev_print_stamp_product.import_xls_other_config_wizard_action
+msgid "Import Other Config"
+msgstr "Import cấu hình in tem tự do"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.import_xls_other_config_wizard_form
+msgid "Import a excel file"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/wizard/import_xls_other_config.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_ingredient
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_ingredient
+msgid "Ingredient"
+msgstr "Thành phần"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "Khối lượng tịnh:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_pos_promotion_qty_price____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__write_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__write_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__write_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__write_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__write_uid
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhập lần cuối bởi"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__write_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__write_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__write_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__write_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__write_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__write_date
+msgid "Last Updated on"
+msgstr "Cập nhập lần cuối vào"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__name_above
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__name_above
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__name_above
+msgid "Name above"
+msgstr "Tên in trên"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__name_below
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__name_below
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__name_below
+msgid "Name below"
+msgstr "Tên in dưới"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_pos_promotion_qty_price__note
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__note
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "NĐG:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__origin
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_origin
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_origin
+msgid "Origin"
+msgstr "Xuất xứ"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields.selection,name:ev_print_stamp_product.selection__print_stamp__stamp_type__other
+msgid "Other"
+msgstr "Tự do"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__other_config_id
+msgid "Other Config ID"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__packed_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__packed_date
+msgid "Packed Date"
+msgstr "Ngày đóng gói"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_packers
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_packers
+msgid "Packers"
+msgstr "Nhà đóng gói và phân phối"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "Phản ánh khiếu nại:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__promotion_id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__promotion_id
+msgid "Pos Promotion"
+msgstr "Chương trình khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_preserve
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_preserve
+msgid "Preserve"
+msgstr "Bảo quản"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__price_unit_before
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__price_unit_before
+msgid "Price Before"
+msgstr "Giá cũ"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__pricelist_id
+msgid "Price List"
+msgstr "Bảng giá"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__price_unit
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_product_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_shelf_view_form
+msgid "Print"
+msgstr "In"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__qty_printing
+msgid "Print Quantity"
+msgstr "Số lượng in"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_print_stamp
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_print_stamp
+msgid "Print Stamp"
+msgstr "Được phép in tem sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__print_stamp_id
+msgid "Print Stamp ID"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_print_stamp_line
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__print_stamp_line_ids
+msgid "Print Stamp Line"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config__other_line_ids
+msgid "Print Stamp Other Line"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.report,name:ev_print_stamp_product.report_print_stamp_product
+#: model:ir.ui.menu,name:ev_print_stamp_product.menu_print_stamp_product
+#: model:ir.ui.menu,name:ev_print_stamp_product.menu_print_stamp_product_2
+msgid "Print Stamp Product"
+msgstr "In tem sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.act_window,name:ev_print_stamp_product.print_stamp_product_action
+msgid "Print Stamp Product Action"
+msgstr "In tem sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.report,name:ev_print_stamp_product.report_print_stamp_promotion
+#: model:ir.ui.menu,name:ev_print_stamp_product.menu_print_stamp_promotion
+#: model:ir.ui.menu,name:ev_print_stamp_product.menu_print_stamp_promotion_2
+msgid "Print Stamp Promotion"
+msgstr "In tem khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.act_window,name:ev_print_stamp_product.print_stamp_promotion_action
+msgid "Print Stamp Promotion Action"
+msgstr "In tem khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.report,name:ev_print_stamp_product.report_print_stamp_shelf
+#: model:ir.ui.menu,name:ev_print_stamp_product.menu_print_stamp_shelf
+#: model:ir.ui.menu,name:ev_print_stamp_product.menu_print_stamp_shelf_2
+msgid "Print Stamp Shelf"
+msgstr "In tem giá kệ"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.act_window,name:ev_print_stamp_product.print_stamp_shelf_action
+msgid "Print Stamp Shelf Action"
+msgstr "In tem giá kệ"
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/models/print_stamp_line.py:0
+#, python-format
+msgid "Print quantity must be greater than or equal to 0"
+msgstr "Số lượng in phải lớn hơn hoặc bằng 0"
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_print_stamp
+msgid "Print stamp"
+msgstr "In tem"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields.selection,name:ev_print_stamp_product.selection__print_stamp__stamp_type__product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__product_id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_promotion_config__product_id
+msgid "Product ID"
+msgstr "Sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.ui.menu,name:ev_print_stamp_product.product_other_config_menu
+msgid "Product Other Config"
+msgstr "Cấu hình in tem tự do"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.act_window,name:ev_print_stamp_product.product_other_config_action
+msgid "Product Other Config Action"
+msgstr "Cấu hình in tem tự do"
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_product_other_config_line
+msgid "Product Other Config Line"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.ui.menu,name:ev_print_stamp_product.product_promotion_config_menu
+msgid "Product Promotion Config"
+msgstr "Cấu hình khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.actions.act_window,name:ev_print_stamp_product.product_promotion_config_action
+msgid "Product Promotion Config Action"
+msgstr "Cấu hình khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.constraint,message:ev_print_stamp_product.constraint_product_promotion_config_product_id_uniq
+msgid "Product id must be unique !"
+msgstr "Sản phẩm đã được cấu hình!"
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/models/print_stamp.py:0
+#, python-format
+msgid "Product not print stamp: (%s)"
+msgstr "Sản phẩm không được cho phép in tem: "
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__promotion_ids
+#: model:ir.model.fields.selection,name:ev_print_stamp_product.selection__print_stamp__stamp_type__promotion
+msgid "Promotion"
+msgstr "Khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/models/product_other_config.py:0
+#, python-format
+msgid "Promotion id must be unique !"
+msgstr "CTKM đã được cấu hình trong in tem tự do"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields.selection,name:ev_print_stamp_product.selection__print_stamp__stamp_type__shelf
+msgid "Shelf"
+msgstr "Giá kệ"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__shop_id
+msgid "Shop ID"
+msgstr "Cửa hàng"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.product_template_print_stamp_form_view
+msgid "Stamp Product"
+msgstr "Tem sản phẩm"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__stamp_type
+msgid "Stamp Type"
+msgstr "Loại tem"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.product_other_config_view_form
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_supplier_address
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_supplier_address
+msgid "Supplier Address"
+msgstr "Địa chỉ nhà cung cấp"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.product_other_config_view_form
+msgid "Tải file mẫu"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_shelf_view_form
+msgid "Un Choose All"
+msgstr "Bỏ chọn tất cả"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__uom_id
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_other_config_line__uom_id
+msgid "Uom ID"
+msgstr "Đơn vị"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_import_xls_other_config__upload_file
+msgid "Upload File"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_use_manual
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_use_manual
+msgid "Use Manual"
+msgstr "Hướng dẫn sử dụng"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_shelf_view
+msgid "Xuất Xứ:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: code:addons/ev_print_stamp_product/models/print_stamp_line.py:0
+#, python-format
+msgid "You have not selected shop! Please choose shop."
+msgstr "Cửa hàng chưa được chọn! Hãy chọn cửa hàng"
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp__button_choose
+msgid "check choose click"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_import_xls_other_config
+msgid "import.xls.other.config"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_pos_promotion_qty_price
+msgid "pos.promotion.qty.price"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_promotion_view_form
+msgid "price_unit_promotion"
+msgstr "Giá sau khuyến mãi"
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_product_other_config
+msgid "product.other.config"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model,name:ev_print_stamp_product.model_product_promotion_config
+msgid "product.promotion.config"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.report_print_stamp_product_view
+msgid "Đơn giá:"
+msgstr ""
+
+#. module: ev_print_stamp_product
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_print_stamp_line__empty_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_product__x_empty_date
+#: model:ir.model.fields,field_description:ev_print_stamp_product.field_product_template__x_empty_date
+msgid "Empty date"
+msgstr "Để trống NĐG"
+
+#. module: ev_print_stamp_product
+#: model_terms:ir.ui.view,arch_db:ev_print_stamp_product.print_stamp_shelf_view_form
+msgid "Print 2"
+msgstr "In trên tem sản phẩm"

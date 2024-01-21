@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--        In từng tem 1 lẻ bên Lô/sê-ri-->
+        <template id="stock_production_lot_temp_printing" name="Print Stamp">
+            <t t-call="web.basic_layout">
+                <html>
+                    <head>
+                        <title>
+                            <t t-esc="report_title"/>
+                        </title>
+                        <style type="text/css">
+                            .print-tem{
+                            width: 100mm;
+                            height: 148mm;
+                            border: 1px solid #ccc;
+                            font-family: arial;
+                            }
+                            .barcode-product{
+                            float:left;
+                            width: 95mm;
+                            height: auto;
+                            border-bottom: 1px solid #000000;
+                            margin-top: 10mm;
+                            margin-bottom: 10mm;
+                            position: relative;
+                            }
+                            .barcode{
+                            max-width: 100%;
+                            margin: 15px auto;
+                            }
+                            .barcode img {
+                            max-width: 100%;
+                            }
+                            .infor{
+                            float:left;
+                            margin-top: 10mm;
+                            margin-left: 7mm;
+                            transform: rotate(90deg);
+                            }
+                            .infor h3{
+                            text-align:center;
+                            margin-bottom: 4mm;
+                            font-size: 52px;
+                            font-weight: 100;
+                            }
+                            .desc p{
+                            text-align:center;
+                            margin: 0;
+                            margin-top: 20px;
+                            font-size: 22px;
+                            }
+                            .barcode_p{
+                            position: relative;
+                            height: 93px;
+                            width: 360px;
+                            overflow-y: hidden;
+                            }
+                            .barcode_p img{
+                            position: absolute;
+                            top: -66px;
+                            }
+                            .barcode p{
+                            margin: 10px 0px;
+                            text-align: center;
+                            font-size: 20px;
+                            }
+                            .barcode{
+                            float: left;
+                            width: 320px;
+                            }
+                            .qrcode{
+                            position:absolute;
+                            left: 284px;
+                            top: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="print-tem">
+                            <div class="barcode-product">
+                                <div class="barcode">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', lot_id.name, 2000, 300)"/>
+                                    <p>
+                                        <t t-esc="lot_id.name"/>
+                                    </p>
+                                </div>
+                                <div class="qrcode">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=1' % ('QR',lot_id.name, 75, 75)"/>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="infor">
+                                <t t-if="lot_id.product_id.barcode">
+                                    <h3>
+                                        <t t-esc="lot_id.product_id.barcode"/>
+                                    </h3>
+                                    <div class="barcode_p">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', lot_id.product_id.barcode, 360, 160)"/>
+                                    </div>
+                                </t>
+                                <t t-elif="lot_id.product_id.default_code">
+                                    <h3>
+                                        <t t-esc="lot_id.product_id.default_code"/>
+                                    </h3>
+                                    <div class="barcode_p">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', lot_id.product_id.default_code, 360, 160)"/>
+                                    </div>
+                                </t>
+                                <div class="desc">
+                                    <p>
+                                        [<t t-esc="lot_id.product_id.default_code"/>]
+                                        <t t-esc="lot_id.product_id.name"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            window.addEventListener('load', function(){
+                            window.print();
+                            })
+                        </script>
+                        <p style="page-break-before:always;"></p>
+                    </body>
+                </html>
+            </t>
+        </template>
+        <!--        In nhiều tem cùng 1 lúc bên Lô/sê-ri-->
+        <template id="stock_production_lots_temps_printing" name="Print Stamp">
+            <t t-call="web.basic_layout">
+                <t t-foreach="lot_ids" t-as="o">
+                    <t t-foreach="range(o.number_of_codes)" t-as="l">
+                        <html>
+                            <head>
+                                <title>
+                                    <t t-esc="report_title"/>
+                                </title>
+                                <style type="text/css">
+                                    .print-tem{
+                                    width: 100mm;
+                                    height: 148mm;
+                                    border: 1px solid #ccc;
+                                    font-family: arial;
+                                    }
+                                    .barcode-product{
+                                    float:left;
+                                    width: 95mm;
+                                    height: auto;
+                                    border-bottom: 1px solid #000000;
+                                    margin-top: 10mm;
+                                    margin-bottom: 10mm;
+                                    position: relative;
+                                    }
+                                    .barcode{
+                                    max-width: 100%;
+                                    margin: 15px auto;
+                                    }
+                                    .barcode img {
+                                    max-width: 100%;
+                                    }
+                                    .infor{
+                                    float:left;
+                                    margin-top: 10mm;
+                                    margin-left: 7mm;
+                                    transform: rotate(90deg);
+                                    }
+                                    .infor h3{
+                                    text-align:center;
+                                    margin-bottom: 4mm;
+                                    font-size: 52px;
+                                    font-weight: 100;
+                                    }
+                                    .desc p{
+                                    text-align:center;
+                                    margin: 0;
+                                    margin-top: 20px;
+                                    font-size: 22px;
+                                    }
+                                    .barcode_p{
+                                    position: relative;
+                                    height: 93px;
+                                    width: 360px;
+                                    overflow-y: hidden;
+                                    }
+                                    .barcode_p img{
+                                    position: absolute;
+                                    top: -66px;
+                                    }
+                                    .barcode p{
+                                    margin: 10px 0px;
+                                    text-align: center;
+                                    font-size: 20px;
+                                    }
+                                    .barcode{
+                                    float: left;
+                                    width: 320px;
+                                    }
+                                    .qrcode{
+                                    position:absolute;
+                                    left: 284px;
+                                    top: 10px;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <div class="print-tem">
+                                    <div class="barcode-product">
+                                        <div class="barcode">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', o.name, 2000, 300)"/>
+                                            <p>
+                                                <t t-esc="o.name"/>
+                                            </p>
+                                        </div>
+                                        <div class="qrcode">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=1' % ('QR',o.name, 75, 75)"/>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                    <div class="infor">
+                                        <t t-if="o.product_id.barcode">
+                                            <h3>
+                                                <t t-esc="o.product_id.barcode"/>
+                                            </h3>
+                                            <div class="barcode_p">
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', o.product_id.barcode, 360, 160)"/>
+                                            </div>
+                                        </t>
+                                        <t t-elif="o.product_id.default_code">
+                                            <h3>
+                                                <t t-esc="o.product_id.default_code"/>
+                                            </h3>
+                                            <div class="barcode_p">
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', o.product_id.default_code, 360, 160)"/>
+                                            </div>
+                                        </t>
+                                        <div class="desc">
+                                            <p>
+                                                [<t t-esc="o.product_id.default_code"/>]
+                                                <t t-esc="o.product_id.name"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    window.addEventListener('load', function(){
+                                    window.print();
+                                    })
+                                </script>
+                                <p style="page-break-before:always;"></p>
+                            </body>
+                        </html>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <!--        In từng tem lẻ bên sản phẩm-->
+        <template id="stamp_printing_product_product_lot" name="Print Stamp">
+            <t t-call="web.basic_layout">
+                <html>
+                    <head>
+                        <title>
+                            <t t-esc="report_title"/>
+                        </title>
+                        <style type="text/css">
+                            .print-temp{
+                            width: 100mm;
+                            height: 148mm;
+                            border: 1px solid #ccc;
+                            font-family: arial;
+                            }
+                            .barcodep{
+                            max-width: 100%;
+                            margin: 15px auto;
+                            }
+                            .barcodep img {
+                            max-width: 100%;
+                            }
+                            .inforp{
+                            margin-top: 45mm;
+                            transform: rotate(90deg);
+                            }
+                            .inforp h3{
+                            text-align:center;
+                            margin-bottom: 4mm;
+                            font-size: 52px;
+                            font-weight: 100;
+                            }
+                            .desc p{
+                            text-align:center;
+                            margin: 0;
+                            margin-top: 20px;
+                            font-size: 22px;
+                            }
+                            .barcodep_p{
+                            position: relative;
+                            height: 93px;
+                            width: 360px;
+                            overflow-y: hidden;
+                            }
+                            .barcodep_p img{
+                            position: absolute;
+                            top: -66px;
+                            }
+                            .barcodep p{
+                            margin: 6px 0px;
+                            text-align: center;
+                            }
+                            .barcodep{
+                            float: left;
+                            width: 305px;
+                            }
+                            .qrcode{
+                            position:absolute;
+                            left: 284px;
+                            top: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="print-temp">
+                            <div class="inforp">
+                                <t t-if="product_id.barcode">
+                                    <h3>
+                                        <t t-esc="product_id.barcode"/>
+                                    </h3>
+                                    <div class="barcodep_p">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', product_id.barcode, 360, 160)"/>
+                                    </div>
+                                </t>
+                                <t t-elif="product_id.default_code">
+                                    <h3>
+                                        <t t-esc="product_id.default_code"/>
+                                    </h3>
+                                    <div class="barcodep_p">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', product_id.default_code, 360, 160)"/>
+                                    </div>
+                                </t>
+                                <div class="desc">
+                                    <p>
+                                        [<t t-esc="product_id.default_code"/>]
+                                        <t t-esc="product_id.name"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            window.addEventListener('load', function(){
+                            window.print();
+                            })
+                        </script>
+                        <p style="page-break-before:always;"></p>
+                    </body>
+                </html>
+            </t>
+        </template>
+        <!--        In nhiều tem cùng 1 lúc bên sản phẩm-->
+        <template id="stamp_printing_product_product_lots" name="Print Stamp">
+            <t t-call="web.basic_layout">
+                <t t-foreach="lot_ids" t-as="o">
+                    <t t-foreach="range(o.number_of_codes)" t-as="l">
+                        <html>
+                            <head>
+                                <title>
+                                    <t t-esc="report_title"/>
+                                </title>
+                                <style type="text/css">
+                                    .print-temp{
+                                    width: 100mm;
+                                    height: 148mm;
+                                    border: 1px solid #ccc;
+                                    font-family: arial;
+                                    }
+                                    .barcodep{
+                                    max-width: 100%;
+                                    margin: 15px auto;
+                                    }
+                                    .barcodep img {
+                                    max-width: 100%;
+                                    }
+                                    .inforp{
+                                    margin-top: 45mm;
+                                    transform: rotate(90deg);
+                                    }
+                                    .inforp h3{
+                                    text-align:center;
+                                    margin-bottom: 4mm;
+                                    font-size: 52px;
+                                    font-weight: 100;
+                                    }
+                                    .desc p{
+                                    text-align:center;
+                                    margin: 0;
+                                    margin-top: 20px;
+                                    font-size: 22px;
+                                    }
+                                    .barcodep_p{
+                                    position: relative;
+                                    height: 93px;
+                                    width: 360px;
+                                    overflow-y: hidden;
+                                    }
+                                    .barcodep_p img{
+                                    position: absolute;
+                                    top: -66px;
+                                    }
+                                    .barcodep p{
+                                    margin: 6px 0px;
+                                    text-align: center;
+                                    }
+                                    .barcodep{
+                                    float: left;
+                                    width: 305px;
+                                    }
+                                    .qrcode{
+                                    position:absolute;
+                                    left: 284px;
+                                    top: 10px;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <div class="print-temp">
+                                    <div class="inforp">
+                                        <t t-if="o.barcode">
+                                            <h3>
+                                                <t t-esc="o.barcode"/>
+                                            </h3>
+                                            <div class="barcodep_p">
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', o.barcode, 360, 160)"/>
+                                            </div>
+                                        </t>
+                                        <t t-elif="o.default_code">
+                                            <h3>
+                                                <t t-esc="o.default_code"/>
+                                            </h3>
+                                            <div class="barcodep_p">
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('Code128', o.default_code, 360, 160)"/>
+                                            </div>
+                                        </t>
+                                        <div class="desc">
+                                            <p>
+                                                [<t t-esc="o.default_code"/>]
+                                                <t t-esc="o.name"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    window.addEventListener('load', function(){
+                                    window.print();
+                                    })
+                                </script>
+                                <p style="page-break-before:always;"></p>
+                            </body>
+                        </html>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="warehouse_supply_form_view" model="ir.ui.view">
+            <field name="name">ProjectName.warehouse_supply.form</field>
+            <field name="model">warehouse.supply</field>
+            <field name="arch" type="xml">
+                <form string='Warehouse supply category'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="warehoue_source_id" options="{'no_create':1, 'no_create_edit':1}"
+                                 />
+                            </group>
+                            <group>
+                                <field name="warehoue_des_id" options="{'no_create':1, 'no_create_edit':1}"
+                                />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="warehouse_supply_tree_view" model="ir.ui.view">
+            <field name="name">ProjectName.warehouse_supply.tree</field>
+            <field name="model">warehouse.supply</field>
+            <field name="arch" type="xml">
+                <tree string="Warehouse supply category information">
+                    <field name="warehoue_source_id"/>
+                    <field name="warehoue_des_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="warehouse_supply_tree_search" model="ir.ui.view">
+            <field name="name">sale_request_view_search</field>
+            <field name="model">warehouse.supply</field>
+            <field name="arch" type="xml">
+                <search string="Sale Request Search">
+                    <field name="warehoue_source_id" filter_domain="[('warehoue_source_id.name','ilike',self)]"/>
+                    <field name="warehoue_des_id" filter_domain="[('warehoue_des_id.name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+        <record id="warehouse_supply_act_window" model="ir.actions.act_window">
+            <field name="name">Warehouse supply category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">warehouse.supply</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="warehouse_supply_tree_search"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new warehouse supply.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Warehouse supply category" id="warehouse_supply_menu" parent="stock.menu_warehouse_config"
+                  action="warehouse_supply_act_window" sequence="1"/>
+    </data>
+</odoo>

@@ -1,0 +1,56 @@
+/* This styling is for making the listview header sticky */
+
+ .o_content .table-responsive{
+    overflow-y:auto;height:100%;
+}
+
+.o_content .table-responsive > table.o_list_table.table th{
+    top:0;
+    position: sticky !important;
+    z-index:5;
+    background-color:#dddddd
+}
+
+
+/* This styling is for making the form status-bar sticky */
+div.o_form_view > div.o_form_sheet_bg > div.o_form_statusbar {
+    position: sticky !important;
+    top: 0px;
+    z-index: 9;
+    }
+
+
+
+/* This styling is for making the notebook pages relational field( like one2many) table header sticky */
+ div.o_notebook > div.tab-content div.table-responsive {
+     height: auto !important;
+     max-height: 550px;
+     }
+
+div.o_notebook > div.tab-content div.table-responsive > table.o_list_table.table th{
+     top:0;
+     position:sticky !important;
+     z-index:5;
+     background-color:#dddddd;
+     }
+
+.o_list_view .o_optional_columns_dropdown_toggle.fa-ellipsis-v {
+    z-index:6;
+    }
+
+
+/* This styling is for making the listview footer sticky*/
+.o_content .table-responsive > table > tfoot td {
+    position: sticky !important;
+    bottom: 0;
+    background-color: #eee;
+    }
+
+
+/* Chatter Header sticky*/
+div.o_Chatter > div.o_Chatter_fixedPanel{
+    position: sticky !important;
+    top: 0px;
+    background-color: #ffffff;
+    z-index:9;
+    }

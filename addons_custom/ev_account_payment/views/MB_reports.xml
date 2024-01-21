@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="ev_account_payment_layout">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+        <template t-name="ev_account_payment.report_mb_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_account_payment.ev_account_payment_layout">
+                        <style>
+                            *{
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            font-family: "Time New Roman";
+                            }
+
+                            p{
+                            margin:0px !important;
+                            }
+
+                            .clf{
+                            clear:both;
+                            }
+
+                            img{
+                            width:50%;
+                            height:100%;
+                            }
+                        </style>
+                        <header style="height:80px">
+                            <div style="float:left; width:25%; height:100%">
+                                <img src="/ev_account_payment/static/src/img/Logo-MB.png"/>
+                            </div>
+                            <div style="float:left; width:25%; height:100%;padding-top:20px; text-align:center">
+                                <h3 style="margin:0px; text-transform: uppercase; font-size:20px;font-weight:bold;line-height:60px">
+                                    Ủy nhiệm chi
+                                </h3>
+                            </div>
+                            <div style="float:left; width:25%; height:100%;padding-top:20px; text-align:center">
+                                <p style="margin:0px; font-size:14px;font-weight:bold;line-height:60px">Số
+                                    <span style="padding-left: 20%;">.....................</span>
+                                </p>
+                            </div>
+                            <div class="clf"></div>
+                        </header>
+
+                        <section class="wrapper-content" style="margin-bottom: 20px;">
+                            <div class="content1" style="border-bottom: 1px solid; border-right:1px solid">
+                                <div style="float:left; width:80%;padding-bottom:15px; border-right:1px solid">
+                                    <div style="width:100%">
+                                        <div style="float:left; width:67%">
+                                            <h3 style="margin:0px; font-size: 16px; text-transform:uppercase; text-align:center">
+                                                CHUYỂN KHOẢN,CHUYỂN TIỀN THƯ,ĐIỆN
+                                            </h3>
+                                        </div>
+                                        <div style="float:left; width:33%; text-align:center">
+                                            <p style="font-size: 14px;margin:0px;">Lập ngày:
+                                                <span style="padding-left: 10%" t-field="o.x_date"/>
+                                            </p>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Tên đơn vị trả tiền:
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:75%; text-align:left">
+                                            <t t-set="appliation" t-value="o.get_applicant()"/>
+                                            <t t-if="appliation.name">
+                                                <span style="text-transform:uppercase; font-size:14px"
+                                                      t-esc="appliation.name"/>
+                                            </t>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Số tài khoản
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:75%; text-align:left">
+                                            <t t-set="acc_number" t-value="o.get_acc_number_company()"/>
+                                            <span style="margin:0px; font-size: 14px;" t-esc="acc_number"/>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Tại Ngân hàng
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:50%; text-align:left">
+                                            <t t-if="o.x_partner_bank_id">
+                                                <span t-field="o.x_partner_bank_id.bank_id.name"/>,
+                                                <span t-field="o.x_partner_bank_id.bank_id.street2"/>
+                                            </t>
+                                            <t t-else="">
+                                                .........................................................
+                                            </t>
+                                        </div>
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                <i>Tỉnh, TP</i>
+                                                <span t-field="o.x_partner_bank_id.bank_id.city"/>
+                                            </p>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                </div>
+
+                                <div style="float:left; width:20%;border-top: 1px solid;">
+                                    <p style="font-size: 14px;margin:0px;text-transform:uppercase;text-align:center; text-transform:uppercase">
+                                        <b>Phần do NH ghi</b>
+                                    </p>
+                                    <p style="font-size: 14px;margin:0px;text-transform:uppercase;text-align:center; text-transform:uppercase">
+                                        Tài khoản nợ
+                                    </p>
+                                </div>
+
+                                <div class="clf"></div>
+                            </div>
+                            <div class="content2" style="border-bottom: 1px solid; border-right:1px solid">
+                                <div style="float:left; width:80%;padding-bottom:15px;border-right:1px solid">
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Tên đơn vị nhận tiền:
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:75%; text-align:left">
+                                            <t t-if="o.x_partner_bank_id">
+                                                <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                    <span t-field="partner_bank.partner_id.name"/>
+                                                </t>
+                                            </t>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Số tài khoản
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:75%; text-align:left">
+                                            <t t-if="o.x_partner_bank_id">
+                                                <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                    <span t-field="partner_bank.acc_number"/>
+                                                </t>
+                                            </t>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Tại Ngân hàng
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:50%; text-align:left">
+                                            <t t-if="o.x_partner_bank_id">
+                                                <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                    <span t-field="partner_bank.bank_id.name"/>
+                                                </t>
+                                            </t>
+                                        </div>
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                <i>Tỉnh, TP</i>
+                                                <span t-field="o.x_partner_bank_id.bank_id.city"/>
+                                            </p>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                </div>
+
+                                <div style="float:left; width:20%;">
+                                    <p style="font-size: 14px;margin:0px;text-transform:uppercase;text-align:center; text-transform:uppercase">
+                                        Tài khoản có
+                                    </p>
+                                </div>
+
+                                <div class="clf"></div>
+                            </div>
+
+
+                            <div class="content3" style="border-right:1px solid">
+                                <div style="float:left; width:80%;padding-bottom:15px;border-right:1px solid">
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Số tiền bằng chữ:
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:75%; text-align:left">
+                                            <span style="margin:0px; font-size: 14px;"
+                                                  t-esc="o.get_amount_to_word(o.x_amount_before_tax)"/>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                    <div style="width:100%">
+                                        <div style="float:left; width:25%">
+                                            <p style="margin:0px; font-size: 14px;">
+                                                Nội dung thanh toán:
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:75%; text-align:left">
+                                            <t t-if="o.x_description">
+                                                <span style="margin:0px; font-size: 14px;" t-esc="o.x_description"/>
+                                            </t>
+                                        </div>
+                                        <div class="clf"></div>
+                                    </div>
+
+                                </div>
+                                <div style="float:left; width:20%; border-bottom: 1px solid">
+                                    <p style="font-size: 14px;margin:0px;text-transform:uppercase;text-align:center; text-transform:uppercase; border-bottom:1px solid">
+                                        Số tiền bằng số
+                                    </p>
+                                    <p style="font-size: 14px;margin:0px;text-transform:uppercase;text-align:center; text-transform:uppercase;">
+                                        <span t-esc="o.currency_id.name"/>
+                                    </p>
+                                    <p style="font-size: 14px;margin:0px;text-transform:uppercase;text-align:right; text-transform:uppercase;">
+                                        <b>
+                                            <span t-esc="'{0:,.0f}'.format(o.x_amount_before_tax)"
+                                                  style="padding-right:10px"/>
+                                        </b>
+                                    </p>
+                                </div>
+                                <div class="clf"></div>
+                            </div>
+                        </section>
+
+
+                        <footer style="border: 1px solid;">
+                            <div style="float:left; width: 33.33%;">
+                                <p style="text-align:center; font-size:14px; font-weight:bold;">Đơn vị trả tiền</p>
+                                <div style="width:100%">
+                                    <div style="float:left; width: 50%;text-align:center; font-size:14px;">
+                                        <b>Kế toán</b>
+                                    </div>
+                                    <div style="float:left; width: 50%;text-align:center; font-size:14px;">
+                                        <b>Chủ tài khoản</b>
+                                    </div>
+                                    <div class="clf"></div>
+                                </div>
+                            </div>
+                            <div style="float:left; width: 33.33%;border-right:1px solid; border-left:1px solid; padding-bottom: 100px">
+                                <p style="text-align:center; font-size:14px; font-weight:bold;">Ngân hàng A</p>
+                                <p style="text-align:center; font-size:14px;">Ghi sổ ngày: .......................</p>
+                                <div style="width:100%">
+                                    <div style="float:left; width: 50%;text-align:center; font-size:14px;">
+                                        <b>Kế toán</b>
+                                    </div>
+                                    <div style="float:left; width: 50%;text-align:center; font-size:14px;">
+                                        <b>TP.Kế toán</b>
+                                    </div>
+                                    <div class="clf"></div>
+                                </div>
+                            </div>
+                            <div style="float:left; width: 33.33%">
+                                <p style="text-align:center; font-size:14px; font-weight:bold;">Ngân hàng B</p>
+                                <p style="text-align:center; font-size:14px;">Ghi sổ ngày: .......................</p>
+                                <div style="width:100%">
+                                    <div style="float:left; width: 50%;text-align:center; font-size:14px;">
+                                        <b>Kế toán</b>
+                                    </div>
+                                    <div style="float:left; width: 50%;text-align:center; font-size:14px;">
+                                        <b>TP.Kế toán</b>
+                                    </div>
+                                    <div class="clf"></div>
+                                </div>
+                            </div>
+                            <div class="clf"></div>
+                        </footer>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="paperformat_account_payment_mb_report" model="report.paperformat">
+            <field name="name">BIDV_report</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">210</field>
+            <field name="page_width">148</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report
+                id="report_bank_mb"
+                model="account.payment"
+                string="VIB_Report"
+                report_type="qweb-pdf"
+                name="ev_account_payment.report_mb_template"
+                file="ev_account_payment.report_mb_template"
+                paperformat="paperformat_account_payment_mb_report"
+        />
+    </data>
+</odoo>
+

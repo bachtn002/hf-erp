@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id="stock_package_transfer_line_product_selector" model="ir.ui.view">
+    <field name="name">stock.package.transfer.line.product.selector</field>
+    <field name="model">stock.package.transfer.line</field>
+    <field name="priority">1000</field>
+    <field name="arch" type="xml">
+        <form string="Select a Product" class="o_barcode_line_form">
+            <div class="row mt-5 mb-4">
+                <div class="col-12 d-flex align-items-baseline">
+                    <i class="fa fa-fw fa-lg fa-tags mr-3" title="Product"/>
+                    <field name="product_id" placeholder="Product" readonly="1"
+                        domain="[('type', 'in', ['product', 'consu']), '|', ('company_id', '=', False), ('company_id', '=', 'company_id')]"
+                        required="1" nolabel="1"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 my-2 d-flex align-items-baseline">
+                    <i class="fa fa-fw fa-lg fa-cube mr-3" title="Quantity"/>
+                    <field name="qty_done" placeholder="Quantity"/>
+                </div>
+                <div class="col-6 my-2 d-flex align-items-baseline">
+                    <field name="uom_id" placeholder="Unit of Measure" readonly="1"/>
+                </div>
+            </div>
+        </form>
+    </field>
+</record>
+
+</odoo>

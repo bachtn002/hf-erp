@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-16 10:46+0000\n"
+"PO-Revision-Date: 2021-10-16 10:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_account_purchase
+#: model:ir.model.fields,field_description:ev_account_purchase.field_product_category__x_account_difference_purchase_id
+msgid "Account Differrence Purchase"
+msgstr "Tài khoản chênh lệch nhập hàng"
+
+#. module: ev_account_purchase
+#: model:ir.model.fields,field_description:ev_account_purchase.field_account_bank_statement_line__x_account_move_id
+#: model:ir.model.fields,field_description:ev_account_purchase.field_account_move__x_account_move_id
+#: model:ir.model.fields,field_description:ev_account_purchase.field_account_payment__x_account_move_id
+msgid "Account Move Differrence Purchase"
+msgstr "Bút toán chênh lệch nhập hàng"
+
+#. module: ev_account_purchase
+#: model:ir.model.fields,field_description:ev_account_purchase.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_account_purchase.field_product_category__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_purchase
+#: model:ir.model.fields,field_description:ev_account_purchase.field_account_move__id
+#: model:ir.model.fields,field_description:ev_account_purchase.field_product_category__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_purchase
+#: model:ir.model,name:ev_account_purchase.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: ev_account_purchase
+#: model:ir.model.fields,field_description:ev_account_purchase.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_account_purchase.field_product_category____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_account_purchase
+#: model:ir.model,name:ev_account_purchase.model_product_category
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_account_purchase
+#: code:addons/ev_account_purchase/models/account_move.py:0
+#, python-format
+msgid "You have not configured the account for the difference in goods import"
+msgstr "Bạn chưa cấu hình tài khoản chênh lệch nhập hàng"

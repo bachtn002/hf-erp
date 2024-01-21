@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="max_time_between_keys_in_ms" model="ir.config_parameter">
+            <field name="key">barcode.max_time_between_keys_in_ms</field>
+            <field name="value">100</field>
+        </record>
+
+        <record id="time_out_print_popup_showed" model="ir.config_parameter">
+            <field name="key">ev_stock_package.time_out_print_popup_showed</field>
+            <field name="value">2000</field>
+        </record>
+
+        <record id="print_times" model="ir.config_parameter">
+            <field name="key">ev_stock_package.print_times</field>
+            <field name="value">2</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+
+     <record id="group_pos_session_closing_control" model="res.groups">
+        <field name="name">POS Session Closing Control</field>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+     </record>
+     <record model="ir.ui.view" id="view_queue_pos_session_form_inherit">
+        <field name="name">view_pos_order_inherit</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <button id="validate_opened" position="replace">
+                <button id="validate_opened" invisible="1" name="action_pos_session_closing_control" type="object" string="Close Session &amp; Post Entries"
+                        attrs="{'invisible' : ['|', ('cash_control', '=', True),('state', '!=', 'queued')]}"
+                        class="oe_highlight" groups="ev_pos_session_queue.group_pos_session_closing_control"/>
+                <button id="validate_opened_queue" name="action_pos_session_closing_control_queue" type="object" string="Close Session &amp; Post Entries"
+                        attrs="{'invisible' : ['|', ('cash_control', '=', True),('state', '!=', 'opened')]}"
+                        class="oe_highlight"/>
+            </button>
+        </field>
+     </record>
+
+
+  </data>
+</odoo>

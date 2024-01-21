@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_currency_payment_form_inherit" model="ir.ui.view">
+            <field name="name">res.currency.form</field>
+            <field name="model">res.currency</field>
+            <field name="inherit_id" ref="base.view_currency_form"/>
+            <field name="arch" type="xml">
+                <field name="rate" position="before">
+                    <field name="x_base_currency_id" options='{"no_create": 1, "no_create_edit": 1}'/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

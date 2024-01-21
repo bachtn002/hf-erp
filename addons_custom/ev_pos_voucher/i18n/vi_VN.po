@@ -1,0 +1,413 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_voucher
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-08 04:32+0000\n"
+"PO-Revision-Date: 2021-11-08 04:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_voucher
+#: model:ir.actions.report,print_report_name:ev_pos_voucher.print_move_voucher_xlsx
+msgid "'Move Voucher Detail'"
+msgstr "Chi tiết bút toán voucher"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__account_expense_item_id
+msgid "Account Expense Item"
+msgstr "Khoản mục phí"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__account_move_id
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "Account Move"
+msgstr "Bút toán"
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_tree
+msgid "Account Statement"
+msgstr "Đối soát voucher"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__account_id
+msgid "Accounting Account"
+msgstr "Tài khoản chi phí"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__amount
+msgid "Amount"
+msgstr "Giá trị"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "Bộ phận chịu phí"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields.selection,name:ev_pos_voucher.selection__voucher_cost_control__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__move_count
+msgid "Count Move"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__create_uid
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__create_date
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__date
+msgid "Date"
+msgstr "Ngày hạch toán"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_report_ev_pos_voucher_move_voucher_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_report_ev_pos_voucher_voucher_cost_control_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_stock_production_lot__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields.selection,name:ev_pos_voucher.selection__voucher_cost_control__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment__id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment_method__id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_report_ev_pos_voucher_move_voucher_xlsx__id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_report_ev_pos_voucher_voucher_cost_control_xlsx__id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_stock_production_lot__id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_needaction
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_has_error
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment_method__x_is_voucher
+msgid "Is Voucher"
+msgstr "Phiếu mua hàng"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_report_ev_pos_voucher_move_voucher_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_report_ev_pos_voucher_voucher_cost_control_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_stock_production_lot____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__write_uid
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__write_date
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lô/Số serial"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Phương thức thanh toán Điểm bán hàng"
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Thanh toán Điểm bán hàng"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__pos_order_id
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__pos_payment_id
+msgid "Pos Payment"
+msgstr "Thanh toán"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields.selection,name:ev_pos_voucher.selection__voucher_cost_control__state__posted
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "Print Move Voucher"
+msgstr "In chi tiết bút toán phát sinh"
+
+#. module: ev_pos_voucher
+#: model:ir.actions.report,name:ev_pos_voucher.print_move_voucher_xlsx
+msgid "Print Move Voucher XLSX"
+msgstr "In chi tiết bút toán voucher XLSX"
+
+#. module: ev_pos_voucher
+#: model:ir.actions.report,name:ev_pos_voucher.print_voucher_cost_control_xlsx
+msgid "Print Voucher Cost Control Xlsx"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__product_id
+msgid "Product"
+msgstr "Tên voucher"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "Set to draft"
+msgstr "Chuyển về nháp"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields.selection,name:ev_pos_voucher.selection__voucher_cost_control__state__synthesized
+msgid "Synthesized"
+msgstr "Đã tổng hợp"
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "Synthetic"
+msgstr "Tổng hợp"
+
+#. module: ev_pos_voucher
+#: code:addons/ev_pos_voucher/models/voucher_cost_control.py:0
+#, python-format
+msgid "Thông báo! Bạn chỉ có thể xóa khi ở trạng thái Nháp"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__to_date
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__used_date
+msgid "Used Date"
+msgstr "Ngày sử dụng"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment__x_lot_id
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__lot_id
+msgid "Voucher"
+msgstr "Phiếu mua hàng"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_pos_payment__x_is_voucher_checked
+msgid "Voucher Checked"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.actions.act_window,name:ev_pos_voucher.voucher_cost_control_act
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control_line__voucher_cost_control_id
+#: model:ir.ui.menu,name:ev_pos_voucher.menu_voucher_cost_control
+msgid "Voucher Cost Control"
+msgstr "Đối soát chi phí Voucher"
+
+#. module: ev_pos_voucher
+#: model:ir.actions.report,print_report_name:ev_pos_voucher.print_voucher_cost_control_xlsx
+msgid "Voucher Cost Control Detail"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__line_ids
+msgid "Voucher Cost Control Line"
+msgstr "Chi tiết đối soát chi phí voucher"
+
+#. module: ev_pos_voucher
+#: code:addons/ev_pos_voucher/models/voucher_cost_control.py:0
+#, python-format
+msgid "Voucher cost control from "
+msgstr "Đối soát chi phí Voucher từ ngày"
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,help:ev_pos_voucher.field_voucher_cost_control__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "confirm"
+msgstr "Xác nhận"
+
+#. module: ev_pos_voucher
+#: model_terms:ir.ui.view,arch_db:ev_pos_voucher.voucher_cost_control_form
+msgid "detail"
+msgstr "Chi tiết"
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_report_ev_pos_voucher_move_voucher_xlsx
+msgid "report.ev_pos_voucher.move_voucher_xlsx"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_report_ev_pos_voucher_voucher_cost_control_xlsx
+msgid "report.ev_pos_voucher.voucher_cost_control_xlsx"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model.fields,field_description:ev_pos_voucher.field_voucher_cost_control__state
+msgid "state"
+msgstr "Trạng thái"
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_voucher_cost_control
+msgid "voucher.cost.control"
+msgstr ""
+
+#. module: ev_pos_voucher
+#: model:ir.model,name:ev_pos_voucher.model_voucher_cost_control_line
+msgid "voucher.cost.control.line"
+msgstr ""

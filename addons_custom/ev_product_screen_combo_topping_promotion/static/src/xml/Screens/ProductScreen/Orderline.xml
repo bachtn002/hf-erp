@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<!--    Combo-->
+    <t t-name="OrderlineCombo" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//table" position="inside">
+            <t t-if="props.line.has_combo_prod_info()">
+<!--                <tr>-->
+<!--                    <li><b>-&#45;&#45;Combo</b></li>-->
+<!--                    <li class="info">-->
+<!--                        <t t-foreach="props.line.get_combo_prod_info()" t-as="prod_info">-->
+<!--                            <div style="margin-left: 15px;">-->
+<!--                                &#8594;<t t-esc="prod_info.product.display_name"/>-->
+<!--                                :-->
+<!--                                <t t-esc="props.line.get_quantity_str()"/>-->
+<!--                                x-->
+<!--                                <t t-esc="prod_info.qty"/>-->
+<!--                                <t t-if="env.pos.config.hide_uom">-->
+<!--                                    <span>Quantity</span>-->
+<!--                                </t>-->
+<!--                                <t t-if="!env.pos.config.hide_uom">-->
+<!--                                    <t t-if="prod_info.product and prod_info.product.uom_id and prod_info.product.uom_id[0]">-->
+<!--                                         <t t-esc="prod_info.product.uom_id[1]"/>-->
+<!--                                    </t>-->
+<!--                                </t>-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </li>-->
+<!--                </tr>-->
+                <tr>
+                    <td><b>---Combo</b></td>
+                </tr>
+                <t t-foreach="props.line.get_combo_prod_info()" t-as="prod_info">
+                    <tr>
+<!--                        &#8594;-->
+                        <td colspan="2">- <t t-esc="prod_info.product.display_name"/></td>
+<!--                        <td colspan="1" style="text-align:center"><t t-esc="props.line.get_quantity_str()"/>x<t t-esc="prod_info.qty"/></td>-->
+<!--                        <td colspan="1" style="text-align:center"><t t-esc="props.line.quantity"/>x<t t-esc="prod_info.qty"/></td>-->
+                        <td colspan="1" style="text-align:center">
+                            <t t-esc="Math.round(props.line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])*Math.round(prod_info.qty * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+<!--                            <t t-esc="Math.round((prod_info.qty)*(props.line.quantity))"/>-->
+                        </td>
+                        <td colspan="1">
+                            <t t-if="env.pos.config.hide_uom">
+                                <span>Quantity</span>
+                            </t>
+                            <t t-if="!env.pos.config.hide_uom">
+                                <t t-if="prod_info.product and prod_info.product.uom_id and prod_info.product.uom_id[0]">
+                                     <t t-esc="prod_info.product.uom_id[1]"/>
+                                </t>
+                            </t>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+        </xpath>
+        
+        <xpath expr="//t[@t-esc='props.line.get_full_product_name()']" position="after">
+            <ComboButton line="props.line"/>
+        </xpath>
+    </t>
+<!--    Promotions-->
+    <t t-name="OrderLinePromotion" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//table" position="after">
+            <t t-if="props.line.getPromotionId()"   >
+                <tr>
+                    <t t-set="promotion" t-value="env.pos.getPromotionById(props.line.getPromotionId())"/>
+                    <t t-if="promotion">
+                        <t t-set="promotion_code" t-value="props.line.getPromotionCode()"/>
+<!--                        <t t-if="promotion_code">-->
+<!--                            <li style="font-size: 13px; color: #6EC89B;">-->
+<!--                                <b>-&#45;&#45;Promotion Code</b>-->
+<!--                            </li>-->
+<!--                        </t>-->
+                        <li style="font-size: 13px; color: #6EC89B;">
+                            <t t-if="promotion_code">
+                                <b>---Promotion Code:</b>
+                                <i style="margin-left: 5px;"><t t-esc="promotion.name"/></i>
+                            </t>
+                            <t t-else="">
+                                <b>---Promotion:</b>
+                                <i style="margin-left: 5px;"><t t-esc="promotion.name"/></i>
+                            </t>
+<!--                            <b>-&#45;&#45;Promotion:</b>-->
+<!--                            <i style="margin-left: 5px;"><t t-esc="promotion.name"/></i>-->
+                        </li>
+                    </t>
+                </tr>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

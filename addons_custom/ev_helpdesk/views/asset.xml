@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="web_editor.assets_frontend" name="Ev_helpdesk portal assest">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" href="/ev_helpdesk/static/src/css/portal_style.css"/>
+            <link rel="stylesheet" href="/ev_helpdesk/static/src/css/home_style.css"/>
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/ev_helpdesk/static/src/js/portal.js"/>
+            <script type="text/javascript" src="/ev_helpdesk/static/src/js/question_portal.js"/>
+            <script type="text/javascript" src="/ev_helpdesk/static/src/js/portal_chatter.js"/>
+        </xpath>
+    </template>
+</odoo>

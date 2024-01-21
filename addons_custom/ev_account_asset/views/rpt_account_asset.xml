@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- form view -->
+    <record id="rpt_account_asset_form" model="ir.ui.view">
+        <field name="name">Account Asset</field>
+        <field name="model">rpt.account.asset</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <div>
+                        <h1 style="text-align: center;">BẢNG TÍNH PHÂN BỔ TÀI SẢN, CCDC, CHI PHÍ TRẢ TRƯỚC</h1>
+                    </div>
+                </group>
+                <group>
+                    <group>
+                        <field name="date_to" required="1" string="To date"/>
+                    </group>
+                    <group>
+                        <field name="asset_type" required="1"/>
+                        <field name="company_id" invisible="1"/>
+                        <field name="branch_ids" widget="many2many_tags"
+                               options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                    </group>
+                </group>
+                <button name="action_generate" type="object" string="Generate" class="oe_highlight"/>
+                -
+                <button name="action_report_excel" type="object" class="oe_highlight" string="Export Report"/>
+                <notebook>
+                    <page string="Data">
+                        <field name="account_asset_line" readonly="1" force_save="1">
+                            <tree limit="1000">
+                                <field name="account_asset_id" widget="many2one"/>
+                                <field name="num_posted"/>
+                                <field name="num_un_post"/>
+                                <field name="original_value" sum="Total Original value"/>
+                                <field name="account_depreciation"/>
+                                <field name="account_depreciation_expense"/>
+                                <field name="value_depreciated" sum="Total Depreciated value"/>
+                                <field name="value_residual" sum="Total Residual value"/>
+                                <field name="company_id" invisible="1" force_save="1"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="account_asset_id"/>
+                                        <field name="num_posted"/>
+                                        <field name="num_un_post"/>
+                                        <field name="company_id" invisible="1" force_save="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="original_value"/>
+                                        <field name="account_depreciation"/>
+                                        <field name="account_depreciation_expense"/>
+                                        <field name="value_depreciated"/>
+                                        <field name="value_residual"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <!-- action -->
+    <record id="action_rpt_account_asset" model="ir.actions.act_window">
+        <field name="name">Account Asset</field>
+        <field name="res_model">rpt.account.asset</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="rpt_account_asset_form"/>
+        <field name="target">current</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- menu -->
+    <menuitem id="menu_rpt_account_asset" name="Account Asset" parent="account_reports.account_reports_audit_reports_menu" sequence="75"
+              action="action_rpt_account_asset"/>
+</odoo>

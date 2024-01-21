@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_allocate_deposit_supplier" model="ir.ui.view">
+            <field name="name">Allocate Deposit Supplier</field>
+            <field name="model">allocate.deposit.supplier</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Date">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="view_type" invisible="1"/>
+                                <field name="partner_id" invisible="1"/>
+                                <field name="purchase_order_id" options='{"no_create": 1, "no_create_edit": 1}'
+                                       domain="[('partner_id', '=', partner_id),('x_status_deposit','in',('deposit','allocating'))]"
+                                attrs="{'readonly': [('view_type', '!=', 'partner')], 'required': [('view_type','=','partner')]}"/>
+                                <field name="account_move_id" required="1" options='{"no_create": 1, "no_create_edit": 1}'
+                                domain="[('partner_id', '=', partner_id)]"/>
+                            </group>
+                            <group>
+                                <field name="value" required="1"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="action_allocate" type="object" string="Confirm" class="btn-primary"/>
+                            <button string="Cancel" class="btn-default" special="cancel" />
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_allocate_deposit_supplier" model="ir.actions.act_window">
+            <field name="name">Allocate Deposit Supplier</field>
+            <field name="res_model">allocate.deposit.supplier</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <record id="action_allocate_deposit_supplier_view" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_allocate_deposit_supplier"/>
+            <field name="act_window_id" ref="action_allocate_deposit_supplier"/>
+        </record>
+
+
+    </data>
+</odoo>

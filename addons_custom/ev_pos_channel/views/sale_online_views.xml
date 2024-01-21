@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="sale_online_form_inherit" model="ir.ui.view">
+            <field name="name">sale_online_form_inherit</field>
+            <field name="model">sale.online</field>
+            <field name="inherit_id" ref="ev_sale_online.sale_online_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='pos_order_id']" position="after">
+                    <field name="pos_channel_id" required="1"
+                           options="{'no_create': True, 'no_create_edit':True}"
+                           domain="[('is_online_channel', '=', True)]"
+                           attrs="{'readonly': [('state', '=', 'finish')]}"
+                    />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

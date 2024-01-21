@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="view_sale_online_map_form_inherit">
+            <field name="name">view_sale_online_map_form_inherit</field>
+            <field name="model">sale.online</field>
+            <field name="inherit_id" ref="ev_sale_online.sale_online_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='address']" position="after">
+                <span type="hidden" style="display: none">
+                    <field name="is_pos_config_changed" readonly="1" force_save="1"/>
+                    <field name="x_pos_lat" readonly="1" force_save="1"/>
+                    <field name="x_pos_long" readonly="1" force_save="1"/>
+                </span>
+                </xpath>
+                <xpath expr="//field[@name='home_delivery']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'draft')], 'invisible': [('is_pos_config_changed', '=', False)]}
+                    </attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='receiver_phone']" position="after">
+                    <field name="x_distance" readonly="1" force_save="1"/>
+
+                </xpath>
+
+                <xpath expr="//page[2]" position="inside">
+                        <widget name="ev_gmap_marker" lat="lat" lng="long" description="name"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

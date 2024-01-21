@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <menuitem id="stock_general_data_menu"-->
+<!--                  name="Stock General Data Menu"-->
+<!--                  parent="stock.menu_stock_root"-->
+<!--                  groups="ev_stock_general_data.group_stock_sync"-->
+<!--                  sequence="97"/>-->
+        <menuitem id="stock_sync_monthly_menu"
+                  name="Stock Synthesis Data Monthly  Menu"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  action="ev_stock_general_data.stock_sync_monthly_action"
+                  groups="ev_stock_general_data.group_stock_sync"
+                  sequence="30"/>
+        <menuitem id="stock_general_monthly_menu"
+                  name="Stock General Data Monthly Menu"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  action="ev_stock_general_data.stock_general_monthly_action"
+                  groups="ev_stock_general_data.group_stock_sync"
+                  sequence="31"/>
+
+         <menuitem id="stock_inventory_report_menu"
+                  name="Inventory Report"
+                  parent="stock.menu_warehouse_report"
+                  action="ev_stock_general_data.stock_inventory_report_action"
+                  sequence="12"/>
+    </data>
+</odoo>

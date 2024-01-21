@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="mbpay_access_code" model="ir.config_parameter">
+            <field name="key">mbpay_access_code</field>
+            <field name="value">mbpay_access_code</field>
+        </record>
+
+        <record id="mbpay_api_create_order" model="ir.config_parameter">
+            <field name="key">mbpay_api_create_order</field>
+            <field name="value">mbpay_api_create_order</field>
+        </record>
+
+        <record id="mbpay_api_paygate_detail" model="ir.config_parameter">
+            <field name="key">mbpay_api_paygate_detail</field>
+            <field name="value">mbpay_api_paygate_detail</field>
+        </record>
+
+        <record id="mbpay_api_paygate_refund" model="ir.config_parameter">
+            <field name="key">mbpay_api_paygate_refund</field>
+            <field name="value">mbpay_api_paygate_refund</field>
+        </record>
+
+        <record id="mbpay_hash_secret_key" model="ir.config_parameter">
+            <field name="key">mbpay_hash_secret_key</field>
+            <field name="value">mbpay_hash_secret_key</field>
+        </record>
+
+        <record id="mbpay_ipn_url" model="ir.config_parameter">
+            <field name="key">mbpay_ipn_url</field>
+            <field name="value">mbpay_ipn_url</field>
+        </record>
+    </data>
+</odoo>

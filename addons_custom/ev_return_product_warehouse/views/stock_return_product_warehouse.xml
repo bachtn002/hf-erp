@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="stock_return_product_warehouse_view_tree" model="ir.ui.view">
+            <field name="name">Request Return Tree</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'"
+                      decoration-muted="state in ('cancel')" decoration-success="state == 'approve'"
+                      decoration-danger="state not in ('cancel','done','draft')">
+                    <field name="name"/>
+                    <field name="warehouse_id" string="Source warehouse"/>
+                    <field name="warehouse_dest_id" string="Destination warehouse"/>
+                    <field name="date_request"/>
+                    <field name="state"/>
+                    <field name="type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="stock_return_product_warehouse_view_form" model="ir.ui.view">
+            <field name="name">Request Return Form</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <form duplicate="0">
+                    <header>
+                        <button name="action_transfer_return" states="draft" string="Confirm" type="object"
+                                class="oe_highlight"/>
+                        <button name="action_cancel" states="done" string="Cancel" type="object"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <div class="oe_button_box" name="button_box"
+                                 attrs="{'invisible': [('type', '!=', 'transfer')]}">
+                                <button name="action_view_transfer"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-truck"
+                                        attrs="{'invisible': [('transfer_count', '=', 0)]}">
+                                    <field name="transfer_count" widget="statinfo" string="Transfer Out"/>
+                                </button>
+                            </div>
+                            <div>
+                                <h3 class="text-center">Request Return Product Warehouse</h3>
+                                <h3 class="text-center">
+                                    <field name="name" readonly="1" required="1"
+                                           style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                           placeholder="Number"/>
+                                </h3>
+                            </div>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" required="1" string="Source warehouse"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1,'no_open': 1}"/>
+                                <field name="warehouse_dest_id" required="1" string="Destination warehouse"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+
+                                <field name="is_return_product" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="date_request" readonly="1"/>
+                                <field name="company_id" readonly="1" force_save="1"/>
+                                <field name="type" invisible="1"/>
+                                <field name="note" placeholder="Note" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="The import form is in xls or xlsx format"/>
+                                <button name="action_import_return" type="object" class="oe_highlight" string="Import"
+                                        attrs="{'invisible': [('field_binary_import', '=', False)]}"/>
+                                <field name="line_ids" model="tree" attrs="{'readonly':[('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="uom_id" readonly="1" force_save="1"
+                                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="qty_apply" string="Quantity Return"
+                                               attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <!--yêu cầu chuyển hàng về kho tổng-->
+        <record id="stock_return_product_warehouse_action" model="ir.actions.act_window">
+            <field name="name">Request Return Product Warehouse</field>
+            <field name="res_model">stock.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="stock_return_product_warehouse_view_tree"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('stock_return_product_warehouse_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('stock_return_product_warehouse_view_form')})]"/>
+            <field name="domain">[('is_return_product', '=', True)]</field>
+            <field name="context">{'default_is_return_product': True, 'default_type': 'transfer','receive': False}
+            </field>
+
+        </record>
+
+        <menuitem id="menu_stock_return_product_warehouse"
+                  parent="ev_stock_request.menu_stock_request_goods"
+                  sequence="10"
+                  groups="stock.group_stock_user"
+                  action="stock_return_product_warehouse_action"/>
+
+        <record id="ev_stock_request.stock_request_go_action" model="ir.actions.act_window">
+            <field name="context">{'receive': False, 'is_return_product': False}</field>
+            <field name="domain">[('is_return_product', '=', False)]</field>
+        </record>
+        <record id="ev_stock_request.stock_request_coordinator_action" model="ir.actions.act_window">
+            <field name="domain">[('is_return_product', '=', False)]</field>
+        </record>
+        <record id="ev_stock_request.stock_request_come_action" model="ir.actions.act_window">
+            <field name="domain">[('is_return_product', '=', False)]</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,342 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_check_voucher_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-19 09:39+0000\n"
+"PO-Revision-Date: 2022-01-19 09:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__activated
+msgid "Activated"
+msgstr "Đã kích hoạt"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_after__active
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_before__active
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state__active
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state_before__active
+msgid "Active"
+msgstr "Đã kích hoạt"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_after__available
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_before__available
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state__available
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state_before__available
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__available
+msgid "Available"
+msgstr "Có thể sử dụng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model,name:ev_check_voucher_code.model_change_promotion_code
+#: model:ir.model,name:ev_check_voucher_code.model_change_voucher_code
+msgid "Change voucher code"
+msgstr "Chi tiết thay đổi trạng thái voucher"
+
+#. module: ev_check_voucher_code
+#: model_terms:ir.ui.view,arch_db:ev_check_voucher_code.check_promotion_code_form_view
+#: model_terms:ir.ui.view,arch_db:ev_check_voucher_code.check_voucher_code_transient_form_view
+msgid "Check"
+msgstr "Kiểm tra"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__check
+msgid "Check Invisible Update Promotion Code"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__check
+msgid "Check Invisible Update voucher"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__check_promotion_code_id
+#: model:ir.ui.menu,name:ev_check_voucher_code.check_promotion_code_menu
+msgid "Check Promotion Code"
+msgstr "Kiểm tra Promotion code"
+
+#. module: ev_check_voucher_code
+#: model:ir.actions.act_window,name:ev_check_voucher_code.check_promotion_code_action
+#: model_terms:ir.ui.view,arch_db:ev_check_voucher_code.check_promotion_code_form_view
+msgid "Check Promotion code"
+msgstr "Kiểm tra Promotion code"
+
+#. module: ev_check_voucher_code
+#: model_terms:ir.ui.view,arch_db:ev_check_voucher_code.check_voucher_code_transient_form_view
+msgid "Check voucher code"
+msgstr "Kiểm tra trạng thái mã voucher"
+
+#. module: ev_check_voucher_code
+#: model:ir.actions.act_window,name:ev_check_voucher_code.check_voucher_code_transient_action
+#: model:ir.ui.menu,name:ev_check_voucher_code.menu_check_voucher_code_transient
+#: model_terms:ir.ui.view,arch_db:ev_check_voucher_code.check_voucher_code_transient_form_view
+msgid "Check voucher code transient"
+msgstr "Kiểm tra trạng thái mã voucher"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__create_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__create_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__create_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__create_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__create_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__create_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__create_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__create_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__user_id
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__current_user
+msgid "Current User"
+msgstr "Nhân viên"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_customer_id
+msgid "Customer"
+msgstr "Khách hàng sử dụng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__datetime
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__datetime
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_after__destroy
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_before__destroy
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state__destroy
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state_before__destroy
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__destroy
+msgid "Destroy"
+msgstr "Hủy bỏ"
+
+#. module: ev_check_voucher_code
+#: model_terms:ir.ui.view,arch_db:ev_check_voucher_code.check_promotion_code_form_view
+msgid "Details"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__display_name
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__display_name
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__display_name
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__display_name
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__user_change
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__user_change
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__expired
+msgid "Expired"
+msgstr "Hết hạn"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__id
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__id
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__id
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__id
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code____last_update
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code____last_update
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code____last_update
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line____last_update
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__write_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__write_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__write_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__write_uid
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__write_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__write_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__write_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__write_date
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__line_ids
+msgid "List Order"
+msgstr "Danh sách đơn hàng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__lock
+msgid "Lock"
+msgstr "Đã khóa"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_after__new
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_before__new
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state__new
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state_before__new
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__new
+msgid "New"
+msgstr "Mới"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__order_id
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_order_id
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_order_use_id
+msgid "Order use"
+msgstr "Đơn sử dụng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__name
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__name
+msgid "Promotion Code"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: code:addons/ev_check_voucher_code/models/check_promotion_code.py:0
+#, python-format
+msgid "Promotion Code do not exit"
+msgstr "Promotion Code không tồn tại"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__promotion_use_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__promotion_use_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__promotion_use_code_old
+msgid "Promotion Use Code"
+msgstr "Số lần sử dụng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__promotion_use_code_old
+msgid "Promotion Use Code Old"
+msgstr "Số lần sử dụng cũ"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__promotion_id
+msgid "Promotion Vourcher"
+msgstr "Chương trình khuyến mại"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__promotion_line_id
+msgid "Promotion Vourcher Line"
+msgstr "Chi tiết"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__state
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__state_before
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__state_after
+msgid "State Promotion After"
+msgstr "Trạng thái mới"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_promotion_code__state_before
+msgid "State Promotion Before"
+msgstr "Trạng thái cũ"
+
+#. module: ev_check_voucher_code
+#: code:addons/ev_check_voucher_code/models/models.py:0
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__state_after
+#, python-format
+msgid "State voucher after"
+msgstr "Trạng thái mã voucher sau"
+
+#. module: ev_check_voucher_code
+#: code:addons/ev_check_voucher_code/models/models.py:0
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__state_before
+#, python-format
+msgid "State voucher before"
+msgstr "Trạng thái voucher trước"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_total_count
+msgid "Total count"
+msgstr "Số lần đã sử dụng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code__total_count
+msgid "Total count user"
+msgstr "Số lần đã sử dụng"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_use_count
+msgid "Use count"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__x_use_customer_id
+msgid "Use customer"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_after__used
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__change_promotion_code__state_before__used
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state__used
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_promotion_code__state_before__used
+#: model:ir.model.fields.selection,name:ev_check_voucher_code.selection__check_voucher_code_transient__x_state__used
+msgid "Used"
+msgstr "Đã sử dụng"
+
+#. module: ev_check_voucher_code
+#: code:addons/ev_check_voucher_code/models/check_voucher_code_transient.py:0
+#: code:addons/ev_check_voucher_code/models/models.py:0
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_change_voucher_code__name
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_voucher_code_transient__name
+#, python-format
+msgid "Voucher Code"
+msgstr "Mã voucher"
+
+#. module: ev_check_voucher_code
+#: model:ir.model,name:ev_check_voucher_code.model_check_promotion_code
+msgid "check.promotion.code"
+msgstr "Kiểm tra Prpmotion Code"
+
+#. module: ev_check_voucher_code
+#: model:ir.model,name:ev_check_voucher_code.model_check_promotion_code_line
+msgid "check.promotion.code.line"
+msgstr ""
+
+#. module: ev_check_voucher_code
+#: model:ir.model,name:ev_check_voucher_code.model_check_voucher_code_transient
+msgid "check.voucher.code.transient"
+msgstr "Thay đổi trạng thái voucher"
+
+#. module: ev_check_voucher_code
+#: model:ir.model.fields,field_description:ev_check_voucher_code.field_check_promotion_code_line__phone
+msgid "Phone number"
+msgstr "Số điện thoại"

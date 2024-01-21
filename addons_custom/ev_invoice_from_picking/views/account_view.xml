@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherit_view_account_customer_invoice_form" model="ir.ui.view">
+            <field name="name">account.move.customer.invoice.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@id='header_left_group']" position="inside">
+                    <field name="partner_id" invisible="1"/>
+                    <field name="move_type" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="invoice_picking_type_code" invisible="1"/>
+                    <field name="stock_picking_ids" widget="many2many_tags" attrs="{'readonly':[('state','=','posted')]}"
+                           domain="[('picking_type_code','=', invoice_picking_type_code),('partner_id','=',partner_id),('company_id','=',company_id),('state','=','done')]"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_payment_term_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_date_due']" position="replace">
+                    <field name="invoice_date_due" force_save="1" placeholder="Date"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

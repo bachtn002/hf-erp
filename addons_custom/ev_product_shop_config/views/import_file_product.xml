@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="import_xls_wizard_product" model="ir.ui.view">
+            <field name="name">import.xls.wizard.product.form</field>
+            <field name="model">import.xls.wizard.product</field>
+            <field name="arch" type="xml">
+                <form string="Import a excel file">
+                    <group name="main">
+                        <field name="upload_file"/>
+                        <field name="file_name" invisible="1"/>
+                    </group>
+
+                    <footer>
+                        <button name="import_xls_product" type="object"
+                                string="Import" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="import_xls_wizard_product_action" model="ir.actions.act_window">
+            <field name="name">Import Product</field>
+            <field name="res_model">import.xls.wizard.product</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="ev_internal_bill">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+        <template id="report_template_stock_picking_bill_transfer_in_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_stock_transfer.ev_internal_bill" t-lang="en_US">
+                        <div class="page" style="font-size:14px; font-family: Times New Roman">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                                .pos-receipt-print {
+                                width: 512px;
+                                height: 0;
+                                overflow: hidden;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                text-align: left;
+                                direction: ltr;
+                                font-size: 28px;
+                                color: #000000;
+                                }
+                            </style>
+                            <div class="pos-receipt-print"></div>
+                            <table style="width: 100%; font-family: Arial">
+                                <tbody>
+                                    <tr style="border-bottom: solid">
+                                        <!--                                        <td width="20%"></td>-->
+                                        <td width="60%">
+                                            <div style="align: center; padding: 20px 0px 20px 15px">
+                                                <img t-if="o.company_id.logo" width="240px" height="53.6px" style="position: relative; margin:auto" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style="width:100%;font-size:16px;word-break: break-word; font-family: Arial">
+                                <tr>
+                                    <td style="width: 100%">
+                                        <div style="padding-right:20px;font-size:16px;text-align:center">
+                                            <span t-esc="o.company_id.name" style="text-transform: uppercase;text-align: center"/>
+                                        </div>
+                                    </td>
+                                    <td style="width: 100%"></td>
+
+                                </tr>
+                                <tr style=" border-bottom: solid">
+                                    <td style="width: 100%">
+                                        <div style="padding-right:20px;font-size:16px">
+                                            <span t-esc="o.company_id.street"/>
+                                        </div>
+                                    </td>
+                                    <td style="width: 100%"></td>
+
+                                </tr>
+                            </table>
+                            <div style="text-align: center;margin: 0px;padding:0px;display: flex;justify-content: space-between;  font-family: Arial">
+                                <t>
+                                    <span style="text-align: center; font-weight: bold;font-size:20px;">
+                                        Phiếu nhập điều chuyển
+                                    </span>
+                                </t>
+                            </div>
+                            <div style="width: 100%; float: right; margin: 0px;">
+                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 150)" style="width:100%;height:3rem" alt="Barcode"/>
+                            </div>
+                            <div style="text-align: left;margin: 0px;padding:0px;display: flex;justify-content: space-between;  font-family: Arial">
+                                <br/>
+                                <span style="font-weight: bold;">Kho xuất:
+                                    <span style="font-weight: normal;">
+                                        <span t-field="o.warehouse_id.name"/>
+                                    </span>
+                                </span>
+                                <br/>
+                                <span style="font-weight: bold;">Địa chỉ:
+                                    <span style="font-weight: normal;">
+                                        <span style="font-weight: normal;" t-field="o.warehouse_id.x_address_warehouse"/>
+                                    </span>
+                                </span>
+
+                                <span class="warehouse_dest" style="font-weight: bold;">Kho nhận:
+                                    <span style="font-weight: normal;">
+                                        <span t-field="o.warehouse_dest_id.name"/>
+                                    </span>
+                                </span>
+                                <br/>
+                                <span class="warehouse_dest_address" style="font-weight: bold;">Địa chỉ:
+                                    <span style="font-weight: normal;">
+                                        <span style="font-weight: normal;" t-field="o.warehouse_dest_id.x_address_warehouse"/>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <!--                                </tbody>-->
+                            <!--                            </table>-->
+                            <br clear="both"/>
+                            <div style="width: 100%;float: left;font-size:14px;margin: 0px;padding:0px;display: flex;justify-content: space-between;font-size:16px;  font-family: Arial">
+                                <table style="width:100%;  padding:0px">
+                                    <tr width="100%" style="text-align: left; margin-top: 5px; border-bottom: solid thin">
+                                        <th>
+                                            <t>
+                                                Số phiếu nhập
+                                            </t>
+                                        </th>
+                                        <th>
+                                            <t>
+                                                Ngày nhập
+                                            </t>
+                                        </th>
+                                    </tr>
+                                    <tr width="100%" style="text-align: left; margin-top: 5px; word-break: break-word;">
+                                        <td>
+                                            <span t-field="o.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="o.in_date"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <table style="width:100%;  padding:0px;font-size:16px; word-break: break-word; font-family: Arial">
+                                <tr width="100%" style="text-align: left; margin-top: 5px; border-bottom: solid thin">
+                                    <th style="width:80%">
+                                        <p style="padding:1px; margin: 1px;">Sản phẩm</p>
+                                    </th>
+                                    <th style="width:20%; text-align:center">
+                                        <p style="padding:2px; margin: 2px;">Số lượng</p>
+                                    </th>
+
+                                </tr>
+                                <tr t-foreach="o.transfer_line_ids" t-as="l" style="padding:1px; margin: 1px; border-top: thin">
+                                    <td style="text-align: left">
+                                        <span>[
+                                            <span t-esc="l.product_id.default_code"/>
+]
+                                            <span t-esc="l.product_id.product_tmpl_id.name"/>
+                                        </span>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <span t-if="int(l.in_quantity)==l.in_quantity">
+                                            <span t-esc="'{0:,.0f}'.format(l.in_quantity)"/>
+                                        </span>
+                                        <span t-if="int(l.in_quantity)!=l.in_quantity">
+                                            <span t-esc="'{0:,.3f}'.format(l.in_quantity)"/>
+                                        </span>
+                                        <br/>
+                                        <span t-esc="l.product_uom.name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <br/>
+                            <table style="width:100%;  padding:0px; margin: 0px;font-size:18px;">
+                                <tr width="100%" style="text-align: center">
+                                    <td width="50%">
+                                        <b>Người giao</b>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <b>...............</b>
+                                    </td>
+                                    <td width="50%">
+                                        <b>Người nhận</b>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <b>...............</b>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_qweb_stock_bill_transfer_in" model="report.paperformat">
+            <field name="name">80mm Stock Picking Transfer In</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">70</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="qweb_stock_bill_transfer_in" model="ir.actions.report">
+            <field name="name">Stock Bill Transfer In</field>
+            <field name="model">stock.transfer</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ev_stock_transfer.report_template_stock_picking_bill_transfer_in_view</field>
+            <field name="report_file">ev_stock_transfer.report_template_stock_picking_bill_transfer_in_view</field>
+            <field name="paperformat_id" ref="ev_stock_transfer.paperformat_qweb_stock_bill_transfer_in"/>
+            <field name="print_report_name">'Picking Bill Transfer- %s' % (object.name)</field>
+        </record>
+
+    </data>
+</odoo>

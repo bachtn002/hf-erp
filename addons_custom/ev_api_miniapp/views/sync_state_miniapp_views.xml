@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="sync_state_miniapp_view_tree" model="ir.ui.view">
+            <field name="name">sync_state_miniapp_view_tree</field>
+            <field name="model">sync.state.miniapp</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="params"/>
+                    <field name="message"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sync_state_miniapp_view_form" model="ir.ui.view">
+            <field name="name">sync_state_miniapp_view_form</field>
+            <field name="model">sync.state.miniapp</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="params"/>
+                                <field name="message"/>
+                                <field name="response"/>
+                                <field name="state"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sync_state_miniapp" model="ir.actions.act_window">
+            <field name="name">Sync State Miniapp</field>
+            <field name="res_model">sync.state.miniapp</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="sync_state_miniapp_menu"
+                  name="Log Sync State Miniapp"
+                  parent="point_of_sale.menu_point_config_product"
+                  action="action_sync_state_miniapp"
+                  sequence="8"
+        />
+    </data>
+</odoo>

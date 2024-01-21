@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_partner_property_inherit_form_pos" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.ev_pos_promotion_gift_code</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="point_of_sale.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <page name="sales_purchases" position="after">
+                    <page name="customer_gift_code" string="Customer gift code">
+                        <field name="x_pos_promotion_gift_code_history_ids" readonly="1">
+                            <tree>
+                                <field name="promotion_id" options="{'no_open': True}"/>
+                                <field name="pos_promotion_id" options="{'no_open': True}"/>
+                                <field name="pos_order_id"/>
+                                <field name="gift_code"/>
+                                <field name="phone"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </data>
+        </field>
+    </record>
+</odoo>

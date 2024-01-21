@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_payment_method_view_qrcode_inherit" model="ir.ui.view">
+            <field name="name">pos_payment_method_view_qrcode_inherit</field>
+            <field name="model">pos.payment.method</field>
+            <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='use_payment_terminal']" position="after">
+                    <field name="is_qrcode_payment"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

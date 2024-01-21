@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <record id="phone_promotion_list_view" model="ir.ui.view">
+           <field name="name">phone.promotion.list.view</field>
+           <field name="model">phone.promotion.list</field>
+           <field name="arch" type="xml">
+               <form string="">
+                   <sheet>
+                       <group>
+                           <field name="promotion_code"/>
+                           <field name="phone"/>
+                       </group>
+                       <group>
+                           <field name="promotion_voucher_id"/>
+                           <field name="state"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+<!--        <record id="phone_promotion_list_view" model="ir.ui.view">-->
+<!--            <field name="name">phone.promotion.list.view</field>-->
+<!--            <field name="model">phone.promotion.list</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="">-->
+<!--                    <field name="promotion_code"/>-->
+<!--                    <field name="phone"/>-->
+<!--                    <field name="state"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

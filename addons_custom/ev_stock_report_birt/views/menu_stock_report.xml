@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="stock.menu_forecast_inventory" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+        <record id="stock.stock_move_line_menu" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+        <record id="stock_enterprise.stock_dashboard_menuitem" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+        <record id="stock.menu_valuation" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+        <record id="stock_account.menu_valuation" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+        <record id="stock.stock_move_menu" model="ir.ui.menu">
+            <field name="active" eval="False"/>
+        </record>
+
+        <menuitem id="menu_report_stock" name="Stock Reports" parent="account.menu_finance_reports" sequence="14"/>
+    </data>
+</odoo>

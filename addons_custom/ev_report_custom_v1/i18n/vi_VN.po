@@ -1,0 +1,1900 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_report_custom_v1
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-01 03:26+0000\n"
+"PO-Revision-Date: 2022-12-01 03:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid ".No"
+msgstr "STT"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__x_all_internal
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__x_all_internal
+msgid "All Location Internal"
+msgstr "Tất cả địa điểm nội bộ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Allocation Date"
+msgstr "Ngày phân bổ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Allocation Value"
+msgstr "Giá trị đã phân bổ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Allocation Value in Period"
+msgstr "Giá trị phân bổ trong kỳ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Allociation Account"
+msgstr "TK phân bổ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Apartment Code"
+msgstr "Mã bộ phận"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Apartment Name"
+msgstr "Tên bộ phận"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "Asset Account"
+msgstr "Tk tài sản"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#, python-format
+msgid "Asset Code"
+msgstr "Số thẻ tài sản"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#, python-format
+msgid "Asset Name"
+msgstr "Tên tài sản"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "Asset code"
+msgstr "Số thẻ ts"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Asset name"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Average Allocation"
+msgstr "Giá trị phân bổ trung bình"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "Average Depreciation"
+msgstr "TB Kh trong kỳ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Average value for the period"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_bang_ke_chi_tiet_ban_hang_report
+msgid "Bang Ke Chi Tiet Ban Hang"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.bang_ke_chi_tiet_ban_hang_report_action
+msgid "Bang Ke Chi Tiet Ban Hang Report "
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_bang_ke_mua_hang_report
+msgid "Bang Ke Mua Hang"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.bang_ke_mua_hang_report_action
+msgid "Bang Ke Mua Hang Report "
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.ui.menu,name:ev_report_custom_v1.bang_ke_mua_hang_report_menu
+msgid "Bang ke mua hang"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_pre_tax_revenue_report
+msgid "Báo Cáo Doanh Thu Trước Thuế"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_cash_statement_report_action
+msgid "Báo Cáo Kiểm Quỹ Cuối Ngày"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_rpt_cash_statement_store
+msgid "Báo Cáo Kiểm Quỹ cuối ngày"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_rpt_cash_statement_report
+msgid "Báo Cáo kiểm Quỹ Cuối Ngày"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_revenue_pos_payment_method_report
+msgid "Báo cáo doanh thu theo hình thức thanh toán"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.ui.menu,name:ev_report_custom_v1.rpt_cash_statement_report_menu
+msgid "Báo cáo kiểm quỹ cuối ngày"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.ui.menu,name:ev_report_custom_v1.bang_ke_chi_tiet_ban_hang_report_menu
+msgid "Bảng Kê Chi Tiết Bán Hàng"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_bang_ke_mua_hang_store
+msgid "Bảng Kê mua hàng"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_bang_ke_chi_tiet_ban_hang_store
+msgid "Bảng kê chi tiết bán hàng"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_stock_document_report
+#: model:ir.model,name:ev_report_custom_v1.model_stock_document_store
+msgid "Bảng kê chi tiết nhập xuất"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_spreadsheet_tools
+msgid "Bảng tính chi phí công cụ dụng cụ"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_spreadsheet_depreciation
+msgid "Bảng tính khấu hao TSCĐ"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__categ_ids
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+msgid "Category"
+msgstr "Nhóm SP"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Category name"
+msgstr "Tên danh mục"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#, python-format
+msgid "Code Shop"
+msgstr "Mã cửa hàng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Code name"
+msgstr "Tên mã"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Code partner"
+msgstr "Mã nhà cung cấp"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Code shop"
+msgstr "Mã cửa hàng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Commodity group"
+msgstr "Nhóm hàng hóa"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__company_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#, python-format
+msgid "Cost"
+msgstr "Giá vốn"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__create_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__create_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__current_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__current_page
+msgid "Current Page"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Customer"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Customer ref"
+msgstr "Mã khách hàng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Date Arising"
+msgstr "Ngày tăng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#, python-format
+msgid "Date Group"
+msgstr "Ngày"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "Date buy"
+msgstr "Ngày mua"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Date order"
+msgstr "Ngày đặt hàng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Day vouchers"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Default code"
+msgstr "Mã mặc định"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#, python-format
+msgid "Depreciated Value"
+msgstr "Giá trị đã khấu hao"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Depreciated value"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "Depreciation Account"
+msgstr "Tk khấu hao"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#, python-format
+msgid "Depreciation Date"
+msgstr "Ngày tính khấu hao"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Depreciation account"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Depreciation date"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Depreciation starting value"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Depreciation value for the period"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Deviant"
+msgstr "Số chênh lệch"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Discount"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Discount 1"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_all_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_value_all_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_value_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report_store__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__display_name
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_store__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Document Date"
+msgstr "Ngày ct"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Document Number"
+msgstr "Số ct"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_document_report__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "End time"
+msgstr "Ngày đóng phiên"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Expense account"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.bang_ke_chi_tiet_ban_hang_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.bang_ke_mua_hang_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_month_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.pre_tax_revenue_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.revenue_pos_payment_method_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.rpt_cash_statement_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_depreciation_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_tools_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_document_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_month_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_transfer_report_form
+msgid "Export Excel"
+msgstr "Xuất Excel"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Fee Account"
+msgstr "Tk chi phí"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Fee Code"
+msgstr "Mã phí"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Fee Name"
+msgstr "Tên phí"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Fee code"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Fee name"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "First Quantity"
+msgstr "Đầu kỳ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.fixed_asset_tracking_month_report_menu
+#, python-format
+msgid "Fixed Asset Tracking Month Report"
+msgstr "Theo dõi tài sản cố định theo tháng"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.fixed_asset_tracking_month_report_action
+msgid "Fixed Asset Tracking Month Report Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_month_report_form
+msgid "Fixed Asset Tracking Month Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_fixed_asset_tracking_month_report_store
+msgid "Fixed Asset Tracking Month Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.fixed_asset_tracking_report_menu
+#, python-format
+msgid "Fixed Asset Tracking Report"
+msgstr "Theo dõi tài sản cố định"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.fixed_asset_tracking_report_action
+msgid "Fixed Asset Tracking Report Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_report_form
+msgid "Fixed Asset Tracking Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_fixed_asset_tracking_report_store
+msgid "Fixed Asset Tracking Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__from_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__from_date
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Full product name"
+msgstr "Tên đầy đủ sản phẩm"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_move_report__type__general
+msgid "General account of input – output – inventory"
+msgstr "Nhập xuất tồn"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_move_report__type__general_value
+msgid "General account of input – output – inventory value"
+msgstr "Nhập xuất tồn có giá trị"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__to_lot
+msgid "Get Lot"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__has_data
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__has_data
+msgid "Has Data"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__hide_paging
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__hide_paging
+msgid "Hide Paging"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__html
+msgid "Html"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_all_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_value_all_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_value_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report_store__id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__html
+msgid "ID"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "In Quantity"
+msgstr "Nhập kho"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.action_rpt_stock_move
+#: model:ir.ui.menu,name:ev_report_custom_v1.menu_stock_move_report
+#: model:ir.ui.menu,name:ev_report_custom_v1.menu_stock_move_report_account
+msgid "Inventory Report"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_move_report__type__inventory
+msgid "Inventory report"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Invoice date"
+msgstr "Ngày xuất hóa đơn"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__item_per_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__item_per_page
+msgid "Item Per Page"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_all_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_value_all_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_in_out_value_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report_store____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report____last_update
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_store____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Last Quantity"
+msgstr "Cuối kỳ"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__write_uid
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_store__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_store__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_store__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__write_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Last quarter of the day"
+msgstr "Quý cuối cùng của ngày"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_move_report__type_view__table
+msgid "List"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Location not in region! Please choose location"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__location_ids
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__location_ids
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_document_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#, python-format
+msgid "Method Number"
+msgstr "Số tháng khấu hao"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#, python-format
+msgid "Name Shop"
+msgstr "Tên cửa hàng"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_document_report__state__no_done
+msgid "No Done"
+msgstr "Chưa hoàn thành"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Number of depreciation periods"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Order name"
+msgstr "Tên đơn hàng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Original"
+msgstr "Nguyên giá"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Original price"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Out Quantity"
+msgstr "Xuất kho"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Part code"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Part name"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Period Number"
+msgstr "Số kỳ phân bổ"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_move_report__type_view__pivot
+msgid "Pivot"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_pre_tax_revenue_action
+msgid "Pre Tax Revenue"
+msgstr "Báo cáo doanh thu trước thuế"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.rpt_pre_tax_revenue_menu
+#, python-format
+msgid "Pre Tax Revenue Report"
+msgstr "Báo Cáo Doanh Thu Trước Thuế"
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.pre_tax_revenue_report_form
+msgid "Pre Tax Revenue Report Form"
+msgstr "Báo Cáo Doanh Thu Trước Thuế"
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_pre_tax_revenue_report_store
+msgid "Pre Tax Revenue Report Store"
+msgstr "Báo Cáo Doanh Thu Trước Thuế"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__preview_html
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__preview_html
+msgid "Preview"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Price"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Price unit"
+msgstr "Đơn giá"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Product Code"
+msgstr "Mã SP"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Product Name"
+msgstr "Tên SP"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Product code"
+msgstr "Mã sản phẩm"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Product name"
+msgstr "Tên sản phảm"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__product_ids
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__product_ids
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_document_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#, python-format
+msgid "Profit"
+msgstr "Lợi nhuận"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Promotion"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Promotion name"
+msgstr "Tên khuyến mãi"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Property account"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Property card number"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Property code"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Purchase date"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Qty"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Qty buy"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Quantity"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Reason"
+msgstr "Giải trình chênh lệch"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "Reduction Date"
+msgstr "Ngày giảm"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Reduction day"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__region_ids
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+msgid "Region"
+msgstr "Vùng miền"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Region name"
+msgstr "Tên vùng"
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.bang_ke_chi_tiet_ban_hang_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.bang_ke_mua_hang_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_month_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.pre_tax_revenue_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.revenue_pos_payment_method_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.rpt_cash_statement_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_depreciation_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_tools_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_month_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_report_form
+msgid "Renew"
+msgstr "Thay mới"
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.bang_ke_chi_tiet_ban_hang_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.bang_ke_mua_hang_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_month_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.fixed_asset_tracking_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.pre_tax_revenue_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.revenue_pos_payment_method_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.rpt_cash_statement_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_depreciation_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_tools_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_document_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_month_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_report_form
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_transfer_report_form
+msgid "Report"
+msgstr "Xem báo cáo"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__report_type
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__report_type
+msgid "Report Type"
+msgstr "Kiểu báo cáo"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__type_view
+msgid "Report view"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Residual Value"
+msgstr "Giá trị còn lại"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Residual value"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#, python-format
+msgid "Revenue"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_revenue_pos_payment_method_action
+#: model:ir.ui.menu,name:ev_report_custom_v1.menu_rpt_revenue_pos_payment_method
+#, python-format
+msgid "Revenue Pos Payment Method Report"
+msgstr "Báo cáo doanh thu theo hình thức thanh toán"
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.revenue_pos_payment_method_report_form
+msgid "Revenue Pos Payment Method Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_revenue_pos_payment_method_report_store
+msgid "Revenue Pos Payment Method Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#, python-format
+msgid "Revenue Refund"
+msgstr "Doanh thu hàng trả lại trước thuế"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__rpt_name
+msgid "Rpt Name"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "STT"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "SUM"
+msgstr "Tổng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#, python-format
+msgid "Shop Name"
+msgstr "Tên cửa hàng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.spreadsheet_depreciation_menu
+#, python-format
+msgid "Spreadsheet Depreciation"
+msgstr "Bảng tính khấu hao TSCĐ"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.spreadsheet_depreciation_action
+msgid "Spreadsheet Depreciation Action"
+msgstr "Bảng tính khấu hao TSCĐ"
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_depreciation_form
+msgid "Spreadsheet Depreciation Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_spreadsheet_depreciation_store
+msgid "Spreadsheet Depreciation Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.rpt_spreadsheet_tools
+#, python-format
+msgid "Spreadsheet Tools"
+msgstr "Bảng tính chi phí công cụ dụng cụ"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_spreadsheet_tools_atc
+msgid "Spreadsheet Tools Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.spreadsheet_tools_form
+msgid "Spreadsheet Tools Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_spreadsheet_tools_store
+msgid "Spreadsheet Tools Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Start Allocation Value"
+msgstr "Gt bắt đầu phân bổ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#, python-format
+msgid "Start Value"
+msgstr "Gt bắt đầu khấu hao"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Start time"
+msgstr "Ngày mở phiên"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__state
+#, python-format
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Status"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_document_report.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.menu_stock_document_report
+#, python-format
+msgid "Stock Document Report"
+msgstr "Bảng kê chi tiết nhập xuất"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_stock_document_atc
+msgid "Stock Document Report Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_document_report_form
+msgid "Stock Document Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_stock_move_all_report_store
+msgid "Stock Move All Report Store"
+msgstr "Báo cáo tồn"
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_stock_move_in_out_report_store
+msgid "Stock Move In Out Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_stock_move_in_out_value_all_report_store
+msgid "Stock Move In Out Value All Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_stock_move_in_out_value_report_store
+msgid "Stock Move In Out Value Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: model:ir.model,name:ev_report_custom_v1.model_stock_move_report
+#, python-format
+msgid "Stock Move Report"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+msgid "Stock Move Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_stock_move_report_store
+msgid "Stock Move Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.ui.menu,name:ev_report_custom_v1.menu_report_stock
+msgid "Stock Reports"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__store
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__store
+msgid "Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#, python-format
+msgid "TOTAL"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__template_id
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__template_id
+msgid "Template"
+msgstr "Mẫu báo cáo"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_fixed_asset_tracking_month_report_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_revenue_pos_payment_method_report_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_spreadsheet_tools_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_stock_document_report_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_stock_move_report_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_tools_tracking_month_report_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_tools_tracking_report_date_check
+#: model:ir.model.constraint,message:ev_report_custom_v1.constraint_stock_transfer_report_date_check
+#, python-format
+msgid "The start date must be earlier than the end date!"
+msgstr "Ngày bắt đầu phải nhỏ hơn ngày kết thúc!"
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_tools_tracking_month_report
+msgid "Theo dõi công cụ dụng cụ theo tháng"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_fixed_asset_tracking_report
+msgid "Theo dõi tài sản cố định"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_fixed_asset_tracking_month_report
+msgid "Theo dõi tài sản cố định theo tháng"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__to_date
+msgid "To Date"
+msgstr "Tới ngày"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__to_date
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__to_date
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_move_report_form
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__to_date
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Tools Account"
+msgstr "Tk công cụ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Tools Name"
+msgstr "Tên công cụ"
+
+#. module: ev_report_custom_v1
+#: model:ir.ui.menu,name:ev_report_custom_v1.rpt_tools_tracking
+msgid "Tools Tracking"
+msgstr "Theo dõi công cụ dụng cụ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#: model:ir.ui.menu,name:ev_report_custom_v1.tools_tracking_month_report_menu
+#, python-format
+msgid "Tools Tracking Month Report"
+msgstr "Theo dõi công cụ dụng cụ theo tháng"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.tools_tracking_month_report_action
+msgid "Tools Tracking Month Report Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_month_report_form
+msgid "Tools Tracking Month Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_tools_tracking_month_report_store
+msgid "Tools Tracking Month Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#: model:ir.model,name:ev_report_custom_v1.model_tools_tracking_report
+#, python-format
+msgid "Tools Tracking Report"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_tools_tracking_atc
+msgid "Tools Tracking Report Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.tools_tracking_report_form
+msgid "Tools Tracking Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model,name:ev_report_custom_v1.model_tools_tracking_report_store
+msgid "Tools Tracking Report Store"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "Tools code"
+msgstr "Mã công cụ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#, python-format
+msgid "Total"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_average_depreciation
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_average_depreciation
+msgid "Total Average Depreciation"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__total_cost
+msgid "Total Cost"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_depreciated_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__total_depreciated_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__total_depreciated_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_depreciated_value
+msgid "Total Depreciated Value"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#, python-format
+msgid "Total Depreciation"
+msgstr "Tổng tiền khấu hao"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_original
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__total_original
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__total_original
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_original
+msgid "Total Original"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_chi_tiet_ban_hang_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_month_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_revenue_pos_payment_method_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_move_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_month_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_page
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__total_page
+msgid "Total Page"
+msgstr "Tổng số trang"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__total_profit
+msgid "Total Profit"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_document_report__total_quantity
+msgid "Total Quantity"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_residual_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__total_residual_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__total_residual_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_residual_value
+msgid "Total Residual Value"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__total_revenue
+msgid "Total Revenue"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_pre_tax_revenue_report__total_revenue_refund
+msgid "Total Revenue Refund"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_start_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__total_start_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__total_start_value
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_start_value
+msgid "Total Start Value"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_fixed_asset_tracking_report__total_value_in_period
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_depreciation__total_value_in_period
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_spreadsheet_tools__total_value_in_period
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_tools_tracking_report__total_value_in_period
+msgid "Total Value In Period"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_bang_ke_mua_hang_report__amount
+#, python-format
+msgid "Total amount"
+msgstr "Tổng số lượng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#, python-format
+msgid "Total money"
+msgstr "Tổng tiền"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/rpt_cash_statement_report.py:0
+#, python-format
+msgid "Turnover"
+msgstr "Doanh số"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "Unit"
+msgstr "Đơn vị"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "User name"
+msgstr "Tên người dùng"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#, python-format
+msgid "User not posh shop"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#, python-format
+msgid "Value in Period"
+msgstr "Giá trị khấu hao trong kỳ"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "Vat"
+msgstr "VAT"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/theo_doi_cong_cu_dung_cu_report.py:0
+#, python-format
+msgid "Voucher number"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_mua_hang_report.py:0
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_stock_transfer_report__warehouse_ids
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_transfer_report_form
+#, python-format
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "You can not view report!"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_month_report.py:0
+#, python-format
+msgid "fixed_asset_tracking_month_report.xlsx"
+msgstr "bao_cao_theo_doi_tai_san_co_dinh_theo_thang.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/fixed_asset_tracking_report.py:0
+#, python-format
+msgid "fixed_asset_tracking_report.xlsx"
+msgstr "bao_cao_theo_doi_tai_san_co_dinh.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/pre_tax_revenue_report.py:0
+#, python-format
+msgid "pre_tax_revenue_report.xlsx"
+msgstr "bao_cao_doanh_thu_truoc_thue.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#, python-format
+msgid "revenue_pos_payment_method_report.xlsx"
+msgstr "bao_cao_doanh_thu_theo_hinh_thuc_thanh_toan.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_depreciation.py:0
+#, python-format
+msgid "spreadsheet_depreciation.xlsx"
+msgstr "bang_tinh_khau_hao_tscd.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/spreadsheet_tools.py:0
+#, python-format
+msgid "spreadsheet_tools.xlsx"
+msgstr "bang_tinh_chi_phi_cong_cu_dung_cu.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_document_report.py:0
+#, python-format
+msgid "stock_document_report.xlsx"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_move_report.py:0
+#, python-format
+msgid "stock_move_report.xlsx"
+msgstr "bao_cao_ton_kho.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_month_report.py:0
+#, python-format
+msgid "tools_tracking_month_report.xlsx"
+msgstr "theo_doi_cong_cu_dung_cu_theo_thang.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/tools_tracking_report.py:0
+#, python-format
+msgid "tools_tracking_report.xlsx"
+msgstr "theo_doi_cong_cu_dung_cu.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/bang_ke_chi_tiet_ban_hang_report.py:0
+#, python-format
+msgid "unit"
+msgstr "Đơn vị"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_transfer_report.py:0
+#: model:ir.model,name:ev_report_custom_v1.model_stock_transfer_report
+#: model:ir.model,name:ev_report_custom_v1.model_stock_transfer_store
+#: model:ir.ui.menu,name:ev_report_custom_v1.menu_stock_transfer_report
+#, python-format
+msgid "Stock Transfer Report"
+msgstr "Báo cáo tồn kho trung chuyển"
+
+#. module: ev_report_custom_v1
+#: model:ir.actions.act_window,name:ev_report_custom_v1.rpt_stock_transfer_atc
+msgid "Stock Transfer Report Action"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_transfer_report_form
+msgid "Stock Transfer Report Form"
+msgstr ""
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_transfer_report.py:0
+#, python-format
+msgid "stock_transfer_report.xlsx"
+msgstr "bao_cao_ton_kho_trung_chuyen.xlsx"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/revenue_pos_payment_method_report.py:0
+#: model:ir.model.fields,field_description:ev_report_custom_v1.field_rpt_cash_statement_report__to_date
+#, python-format
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_report_custom_v1
+#: model:ir.model.fields.selection,name:ev_report_custom_v1.selection__stock_document_report__state__all
+msgid "All"
+msgstr "Tất cả"
+
+#. module: ev_report_custom_v1
+#: model_terms:ir.ui.view,arch_db:ev_report_custom_v1.stock_document_report_form
+msgid "Report Accountant"
+msgstr "Kế toán xem báo cáo"
+
+#. module: ev_report_custom_v1
+#: code:addons/ev_report_custom_v1/wizard/stock_document_report.py:0
+#, python-format
+msgid "stock_document_report.xlsx"
+msgstr "bang_ke_chi_tiet_nhap_xuat.xlsx"

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="report_template_form" model="ir.ui.view">
+            <field name="name">Report Template Form</field>
+            <field name="model">report.template</field>
+            <field name="arch" type="xml">
+                <form string="Report Template Form">
+                    <sheet>
+                        <group col="4">
+                            <field name="name" />
+                            <field name="code" />
+                            <field name="style_id" />
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                            <field name="active" />
+                        </group>
+                        <group col="1">
+                            <field name="description" />
+                        </group>
+                        <field name="header_html" />
+                        <field name="footer_html" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="report_template_tree" model="ir.ui.view">
+            <field name="name">Report Template Tree</field>
+            <field name="model">report.template</field>
+            <field name="arch" type="xml">
+                <tree string="Report Template Tree">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="style_id" />
+                    <field name="description" />
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                    <field name="active" widget="boolean_toggle" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="report_template_action" model="ir.actions.act_window">
+            <field name="name">Report Template Action</field>
+            <field name="res_model">report.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="report_template_menu" name="Report Template" action="report_template_action" parent="ev_report.ev_report_menu_categ" sequence="15" />
+
+    </data>
+</odoo>

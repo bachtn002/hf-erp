@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="payment_create_order_qrcode_res_form_view" model="ir.ui.view">
+            <field name="name">payment_create_order_qrcode_res_form_view</field>
+            <field name="model">payment.create.order.qrcode.res</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="response" />
+                                <field name="session_id" />
+                                <field name="pg_order_reference" />
+                            </group>
+                            <group>
+                                <field name="time_sent_request_create_order"/>
+                                <field name="time_received_response_create_order"/>
+                                <field name="create_date"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="payment_create_order_qrcode_res_tree_view" model="ir.ui.view">
+            <field name="name">payment_create_order_qrcode_res_tree_view</field>
+            <field name="model">payment.create.order.qrcode.res</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pg_order_reference" />
+                    <field name="session_id" />
+                    <field name="response" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_create_order_qrcode_res_action" model="ir.actions.act_window">
+            <field name="name">payment_create_order_qrcode_res_action</field>
+            <field name="res_model">payment.create.order.qrcode.res</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="payment_create_order_qrcode_res_menu"
+            name="Create QRCode Response"
+            action="payment_create_order_qrcode_res_action"
+            parent="point_of_sale.menu_point_config_product"
+            sequence="7" />
+    </data>
+</odoo>

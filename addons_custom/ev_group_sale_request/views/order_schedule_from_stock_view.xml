@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="order_schedule_from_stock_view_tree" model="ir.ui.view">
+            <field name="name">order_schedule_from_stock_view_tree</field>
+            <field name="model">order.schedule.from.stock</field>
+            <field name="arch" type="xml">
+                <tree string="Order Schedule From Stock" default_order='name desc'>
+                    <field name="name"/>
+                    <field name="general_warehouse_group_id"/>
+                    <field name="general_product_group_id"/>
+                    <field name="order_schedule_ids"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="order_schedule_from_stock_view_form" model="ir.ui.view">
+            <field name="name">order_schedule_from_stock_view_form</field>
+            <field name="model">order.schedule.from.stock</field>
+            <field name="arch" type="xml">
+                <form string="Order Schedule From Stock">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="order_schedule_ids" widget="many2many_tags" required="1"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                            </group>
+                            <group>
+                                <field name="general_warehouse_group_id" required="1"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                                <field name="general_product_group_id" required="1"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="order_schedule_from_stock_action" model="ir.actions.act_window">
+            <field name="name">order_schedule_from_stock_view_tree</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">order.schedule.from.stock</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="order_schedule_from_stock_menu"
+                  name="Order Schedule From Stock"
+                  action="order_schedule_from_stock_action"
+                  parent="stock.menu_warehouse_config"
+                  sequence="4"/>
+    </data>
+</odoo>

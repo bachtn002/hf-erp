@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <template id="ev_account_payment_layout">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+        <template t-name="ev_account_payment.template_bidv_unc_vendor">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_account_payment.ev_account_payment_layout">
+
+                        <style>
+                            *{
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            }
+                            p{
+                            margin: 0px !important;
+                            }
+
+                            i{
+                            font-size:10px;
+                            }
+
+
+                            .container{
+                            font-family: "Time New Roman";
+                            }
+
+                            /* HEADER */
+                            header{
+                            font-family: "Time New Roman";
+                            }
+
+                            .header-left{
+                            float:left;
+                            width:30%;
+                            }
+
+                            .header-center{
+                            float:left;
+                            width:30%;
+                            }
+
+                            .header-right{
+                            float:left;
+                            width:40%;
+                            height: 100%;
+                            }
+
+                            .title-unc{
+                            font-size: 20px;
+                            text-transform: uppercase;
+                            text-align:center;
+                            font-weight:400;
+                            line-height: 60px;
+                            }
+
+                            .payment-order{
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            text-align:center;
+                            font-weight:bold;
+                            }
+
+                            .clf{
+                            clear:both;
+                            }
+
+                            .container{
+                            border:1px solid;
+                            border-right: none;
+                            border-left: none;
+                            border-bottom: none;
+                            border-top:none;
+                            }
+
+                            .image-logo{
+                            line-height: 60px;
+                            padding-left: 10px;
+                            }
+
+                            .image-logo &gt; img{
+                            height: auto;
+                            vertical-align: middle;
+                            width: 150px;
+                            }
+
+                            p{
+                            font-size:12px;
+                            }
+
+                            .header-right-content{
+                            padding-left: 25%;
+                            padding-top: 10px;
+                            }
+
+                            .wrapper-content{
+                            border:1px solid;
+                            border-left: none;
+                            border-right: none;
+                            border-bottom: none;
+                            }
+
+                            .wrapper-content-left{
+                            float:left;
+                            width:49%;
+                            border-right:1px solid;
+                            padding-left:5px;
+                            }
+
+                            .wrapper-content-right{
+                            float:left;
+                            width:49%;
+                            padding-left:5px;
+                            }
+
+                            .wrapper-content-bottom-top{
+                            padding-left:5px;
+                            }
+
+                            .wrapper-content-bottom-center{
+                            border-top:1px solid black;
+                            }
+                            .wrapper-content-bottom-bottom{
+                            border-top:1px solid black;
+                            border-bottom:1px solid black;
+                            }
+
+                            .col-9-cbc{
+                            float:left;
+                            width: 74%;
+                            padding-left:5px;
+                            }
+
+                            .col-3-cbc{
+                            float:left;
+                            width: 24%;
+                            padding-left:5px;
+                            border-left:1px solid black;
+                            }
+
+
+                            .wrapper-content-bottom-bottom {
+                            width: 100%;
+                            height: 100px;
+                            position: relative;
+                            display: inline-block;
+                            }
+
+                            .inner {
+                            font-size: 11px;
+                            position: absolute;
+                            top: 50%;
+                            left: 5px;
+                            }
+
+                            .rotate {
+                            -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+                            -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+                            transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+
+
+                            .footer-left{
+                            float:left;
+                            width:50%;
+                            }
+
+                            .footer-right{
+                            float:left;
+                            width:50%;
+                            }
+
+                        </style>
+
+                        <div class="container">
+                            <header style="width:100%!important; height:60px; border-top: 1px solid;">
+                                <div class="header-left">
+                                    <div class="image-logo">
+                                        <img src="/ev_account_payment/static/src/img/BIDV_Logo.png"/>
+                                    </div>
+                                </div>
+                                <div class="header-center">
+                                    <h3 class="title-unc" style="margin:0px">Ủy nhiệm chi</h3>
+                                </div>
+                                <div class="header-right">
+                                    <div class="header-right-content">
+                                        <p>
+                                            Số /
+                                            <i>Seq No</i>
+                                            :.........................................
+                                        </p>
+                                        <p>
+                                            Ngày / <i>Date</i> :.........................................
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="clf"/>
+                            </header>
+
+                            <section class="wrapper-content">
+                                <div style="width:100%">
+                                    <table style="border:1px solid black; width:100%; border-collapse: collapse; border-right: none; border-left: none;border-top:none">
+                                        <tr>
+                                            <td style="width:50%; border-right:1px solid black;padding-left:5px;">
+                                                <p style="padding-top:5px;">
+                                                    Tên tài khoản trích Nợ:
+                                                    <t t-set="appliation" t-value="o.payment_id.get_applicant()"/>
+                                                    <t t-if="appliation.name">
+                                                        <b>
+                                                            <span t-esc="appliation.name"/>
+                                                        </b>
+                                                    </t>
+                                                    <t t-else="">...............................................
+                                                    </t>
+                                                </p>
+                                            </td>
+                                            <td style="padding-left:5px;width:50%">
+                                                <p style="padding-top:5px">
+                                                    Người hưởng:
+                                                    <t t-if="o.payment_id.x_partner_id">
+                                                        <b>
+                                                            <span t-field="o.payment_id.x_partner_id.name"/>
+                                                        </b>
+                                                    </t>
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width:50%;padding-left:5px; border-right:1px solid black">
+                                                <p style="padding-top:5px;">
+                                                    Số TK trích Nợ:
+                                                    <span t-esc="o.x_account_number"/>
+                                                </p>
+                                            </td>
+                                            <td style="padding-left:5px; width:50%">
+                                                <p style="padding-top:5px">
+                                                    Số CMND/ HC:................ Ngày cấp:................ Nơi
+                                                    cấp:................
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width:50%;padding-left:5px; border-right:1px solid black">
+                                                <p style="padding-top:5px;">
+                                                    Tại NH:
+                                                    <t t-set="x_bank_id" t-value="o.x_bank_id"/>
+                                                    <t t-if="x_bank_id">
+                                                        <span t-field="x_bank_id.name"/>
+                                                    </t>
+                                                </p>
+                                            </td>
+                                            <td style="padding-left:5px;width:50%">
+                                                <p style="padding-top:5px">
+                                                    Số TK:
+                                                    <t t-if="o.payment_id.x_partner_bank_id">
+                                                        <span t-field="o.payment_id.x_partner_bank_id.acc_number"/>
+                                                    </t>
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width:50%;padding-left:5px; border-right:1px solid black">
+                                                <p style="padding-top:5px;">
+                                                    Chi nhánh:
+                                                </p>
+                                            </td>
+                                            <td style="padding-left:5px;width:50%">
+                                                <p style="padding-top:5px">
+                                                    Tại NH:
+                                                    <t t-set="name_bank" t-value="o._get_name_bank()"/>
+                                                    <t t-if="name_bank">
+                                                        <span t-esc="name_bank"/>
+                                                    </t>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="wrapper-content-bottom-top">
+                                    <!-- Số tiền bằng số -->
+                                    <div>
+                                        <div style="float:left; width:45%">
+                                            <p style="padding-top:5px;">
+                                                Số tiền bằng số :
+                                            </p>
+                                        </div>
+                                        <div style="float:left; width:55%">
+                                            <p style="padding-top:5px;">
+                                                <t t-if="o.payment_id.x_amount_before_tax">
+                                                    <b>
+                                                        <span t-esc="'{0:,.0f}'.format(o.payment_id.x_amount_before_tax)"/>
+                                                        <span t-esc="o.payment_id.currency_id.name"/>
+                                                    </b>
+                                                </t>
+                                            </p>
+                                        </div>
+                                        <div class="clf"/>
+                                    </div>
+
+
+                                    <div>
+                                        <div>
+                                            <p style="">
+                                                Số tiền bằng chữ :
+                                                <span style="font-weight:bold"
+                                                      t-esc="o.payment_id.get_amount_to_word(o.payment_id.x_amount_before_tax)"/>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="wrapper-content-bottom-center">
+                                    <div class="col-9-cbc">
+                                        <p style="padding-top:5px;">
+                                            Đề nghị NH quy đổi ra loại
+                                            tiền:.........................................................................
+                                            Tỷ
+                                            giá:...................
+                                        </p>
+
+                                        <p style="padding-top:5px;">
+                                            Nội dung:
+                                            <t t-if="o.payment_id.x_description">
+                                                <span style="padding-left: 100px;" t-esc="o.payment_id.x_description"/>
+                                            </t>
+                                        </p>
+                                    </div>
+                                    <div class="col-3-cbc">
+                                        <p style="padding-top:5px;padding-left:10px">
+                                            <b>Phí NH</b>:
+                                        </p>
+                                        <p style="padding-top:5px;padding-left: 10px;">
+                                            <input type="checkbox" id="vehicle1" style="margin-right: 10px;"
+                                                   name="vehicle1"/>
+                                            <b>Phí trong</b>
+                                        </p>
+                                        <p style="padding-top:5px;padding-left: 10px;padding-bottom: 5px;">
+                                            <input type="checkbox" id="vehicle1" style="margin-right: 10px;"
+                                                   name="vehicle1"/>
+                                            <b>Phí ngoài</b>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <div class="wrapper-content-bottom-bottom">
+                                    <!-- Số tiền bằng số -->
+                                    <div class="inner rotate">Phần dành cho NH</div>
+                                </div>
+                            </section>
+
+                            <footer>
+                                <div class="footer-left" style="width:49%;float:left; padding-left:5px">
+                                    <p style="padding-top:5px; text-align:center">
+                                        Khách hàng
+                                    </p>
+
+                                    <div style="width:50%;float:left;text-align:center">
+                                        <p>
+                                            Kế toán trưởng
+                                        </p>
+                                    </div>
+
+                                    <div style="width:50%;float:left;text-align:center">
+                                        <p>
+                                            Chủ tài khoản
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+                                <div class="footer-right" style="width:49%;float:left">
+                                    <p style="padding-top:5px; text-align:center">
+                                        Ngân hàng
+                                    </p>
+
+                                    <div style="width:50%;float:left">
+                                        <p style="padding-left:45px">
+                                            Giao dịch viên
+                                        </p>
+                                    </div>
+
+                                    <div style="width:50%;float:left">
+                                        <p style="text-align:right;padding-right: 45px;">
+                                            Kiểm soát
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+                                <div class="clf"/>
+                            </footer>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_account_payment_bidv_report_vendor" model="report.paperformat">
+            <field name="name">BIDV report vendor</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">210</field>
+            <field name="page_width">148</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report
+                id="report_bank_bidv_vendor"
+                model='account.payment.unc.wizard'
+                string="BIDV Report Vendor"
+                report_type="qweb-pdf"
+                name="ev_account_payment.template_bidv_unc_vendor"
+                file="ev_account_payment.template_bidv_unc_vendor"
+                paperformat="paperformat_account_payment_bidv_report_vendor"
+        />
+    </data>
+</odoo>
+

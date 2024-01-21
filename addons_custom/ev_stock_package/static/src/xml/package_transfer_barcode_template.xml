@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="stock_package_transfer_barcode_template" xml:space="preserve">
+
+    <!-- Widget Header -->
+    <t t-name="stock_package_transfer_barcode_header_widget">
+        <div class="o_barcode_header navbar navbar-expand navbar-dark">
+            <nav class="navbar-nav mr-auto">
+                <button class="nav-link btn o_exit mr-4"><i class="fa fa-chevron-left"/></button>
+                <!-- keep same look and feel when in settings mode so users are less likely to get confused -->
+                <!--                <button class="nav-link btn o_close o_hidden mr-4"><i class="fa fa-chevron-left"/></button>-->
+                <span class="o_title navbar-text text-white" t-esc="widget.title"/>
+            </nav>
+        </div>
+    </t>
+    <!-- Widget Lines -->
+    <t t-name="stock_package_transfer_summary_template">
+        <div class="o_barcode_page_summary" t-if="mode !== 'no_multi_locations'">
+            <div class="o_barcode_product_line d-flex justify-content-between align-items-center">
+                <span t-if="isPickingRelated" class="o_barcode_locations">
+                    <div class="d-inline-block">
+                        <span t-if="mode !== 'receipt'" class="o_barcode_location_label">From warehouse</span>
+                        <span t-if="mode !== 'receipt'" class="o_barcode_summary_location_src o_clickable">
+                            <span t-esc="locationName" class="o_current_location"/>
+                            <ul t-if="sourceLocations" class="o_barcode_list_locations o_source_locations d-none">
+                                <li t-foreach="sourceLocations" t-as="location"
+                                    class="o_list_location_lines" t-esc="location.display_name"
+                                    t-att-data-location-id="location.id"/>
+                            </ul>
+                        </span>
+                        <span t-if="mode !== 'delivery'" class="o_barcode_location_label">To warehouse</span>
+                        <span t-if="mode !== 'delivery'" class="o_barcode_summary_location_dest o_clickable">
+                            <span t-esc="locationDestName" class="o_current_dest_location"/>
+                            <ul t-if="destinationLocations"
+                                class="o_barcode_list_locations o_destination_locations d-none">
+                                <li t-foreach="destinationLocations" t-as="location"
+                                    class="o_list_location_lines" t-esc="location.display_name"
+                                    t-att-data-location-id="location.id"/>
+                            </ul>
+                        </span>
+                    </div>
+                </span>
+                <span t-if="model == 'stock.inventory'" class="o_barcode_locations">
+                    <span class="o_barcode_summary_location_src" t-esc="locationName"/>
+                </span>
+                <!-- Add package weight text box -->
+                <span t-if="model == 'stock.package.transfer'" style=" margin-left: 50%; ">Khối lượng: </span>
+                <input t-if="model == 'stock.package.transfer'" style="width: 10%;" step="any" min="0" id="package_weight" type="number"/>
+               <button t-if="model == 'stock.package.transfer'" class="o_line_button o_get_data_weight btn btn-primary ml-2 ml-sm-4">
+                    Get data
+                </button>
+            </div>
+<!--            FIXME add condition -->
+<!--            <hr style="border-top: 1px solid black;"/>-->
+<!--            <div class="o_barcode_line list-group-item d-flex flex-row flex-nowrap"-->
+<!--                 style="background-color: #875a7b; border: hidden;">-->
+<!--                <div class="flex-grow-1 flex-column flex-nowrap" style="width: 59%;vertical-align: middle;">-->
+<!--                    <span>Sản Phẩm</span>-->
+<!--                </div>-->
+<!--                <div class="flex-grow-1 flex-column flex-nowrap" style="width: 30%;vertical-align: middle;">-->
+<!--                     <span>Số lượng</span>-->
+<!--                </div>-->
+<!--                <div class="flex-grow-1 flex-column flex-nowrap"-->
+<!--                     style="width: 11%;vertical-align: middle;float: right;">-->
+<!--                     <span>Số lượng hoàn thành</span>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </t>
+
+    <!-- Widget Lines -->
+    <t t-name="stock_package_transfer_barcode_lines_widget">
+        <div class="o_barcode_message d-flex flex-column justify-content-center align-items-center bg-800">
+            <div class="o_barcode_pic position-relative text-center mt-2 mb-1">
+                <i class="fa fa-5x mx-auto fa-exclamation-triangle text-white d-none"/>
+                <img class="o_barcode_icon" src="/stock_barcode/static/img/barcode.svg" alt="Barcode" height="40px"/>
+            </div>
+            <div class="mb-3">
+                <span class="o_hidden o_scan_message o_scan_message_scan_src">Scan products</span>
+            </div>
+        </div>
+        <div class="o_barcode_lines_header alert mb-0"></div>
+        <div class="o_barcode_lines list-group flex-grow-1 d-block position-relative"></div>
+
+        <div t-if="widget.displayControlButtons" class="o_barcode_control d-flex">
+            <button class="btn btn-secondary text-uppercase o_exit"><i class="fa fa-angle-left mr-3"/>Back</button>
+            <button class="btn btn-primary text-uppercase o_validate_page"><i class="fa fa-check mr-1"/> Validate</button>
+        </div>
+    </t>
+
+    <t t-name="stock_package_transfer_barcode_lines_template">
+        <t t-if="lines">
+            <t t-foreach="lines" t-as="line">
+                <div class="o_barcode_line list-group-item d-flex flex-row flex-nowrap"
+                     t-att-data-id="line.virtual_id || line.id"
+                     t-att-data-barcode="line.product_barcode">
+                    <div class="o_barcode_line_details flex-grow-1 flex-column flex-nowrap">
+                        <div class="o_barcode_line_title pb-1">
+                            <i class="fa fa-fw fa-tags"/>
+                            <span class="product-label"
+                                  t-esc="line.display_name"/>
+                        </div>
+                        <div name="quantity"> <!-- Name used for inheritance -->
+                            <i class="fa fa-fw fa-cube"/>
+                            <span t-attf-class="o_barcode_scanner_qty text-monospace badge #{' '}"> <!-- @SLE: Eventually add contextual classes: "badge-warning", "badge-danger", "badge-success"  -->
+                                <span class="qty-done d-inline-block text-left" t-esc="line.qty_done"/>
+                                <span t-esc="'/ ' + line.qty"/>
+                            </span>
+                            <span t-esc="line.uom_id[1]"/>
+                        </div>
+                    </div>
+                    <div t-if="state != 'processing' and state != 'cancel'"
+                         class="o_barcode_line_actions d-flex align-items-center pl-4">
+                        <a t-if="line.product_id.is_package_cover" class="o_remove_line text-muted" href="#" title="Xóa">
+                            <i style="color: red; padding-right: 25px;" class="fa fa-2x fa-trash-o"/></a>
+                        <a class="o_edit text-muted" href="#" title="Edit"><i class="fa fa-2x fa-pencil"/></a>
+                    </div>
+<!--                    <t t-if="!istouchSupported">-->
+                    <button class="o_line_button o_add_unit btn btn-primary ml-2 ml-sm-4"
+                            t-att-data-reserved="(line.qty - line.qty_done)">
+                        + 1
+                    </button>
+                    <button class="o_line_button o_remove_unit btn btn-primary ml-2 ml-sm-4">
+                        - 1
+                    </button>
+<!--                    </t>-->
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <!-- Form Widget templates -->
+
+        <t t-name="stock_package_transfer_barcode_views_widget">
+            <div class="o_barcode_generic_view"></div>
+            <div t-if="widget.mode == 'edit' &amp;&amp; widget.view_type === 'form'" class="o_barcode_control d-flex">
+                <button class="btn btn-secondary o_discard">Discard</button>
+                <button class="btn btn-primary o_save">Confirm</button>
+            </div>
+        </t>
+
+</templates>

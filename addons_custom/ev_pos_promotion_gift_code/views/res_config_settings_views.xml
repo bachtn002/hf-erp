@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="pos_config_inherit_form_inherit" model="ir.ui.view">
+            <field name="name">pos_config_inherit_form_inherit.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <div name="taxes_setting_container" position="after">
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="is_display_code"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="is_display_code"/>
+                                <div class="text-muted">
+                                    Set up the display of the gift code on the invoice
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

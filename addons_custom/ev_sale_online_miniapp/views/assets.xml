@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="ev_sale_online_miniapp_assets" inherit_id="point_of_sale.assets" name="ev_sale_online_miniapp.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/models.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/ticket_screen.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_loyalty_custom.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/list_promotion_button.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_voucher.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_promotion_voucher.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_clear_promotion.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_customer.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/product_screen_customer.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/product_screen.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/numpad_click_input.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/click_product.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/numpad_click_payment_screen.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_delete_payment_line.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/button_validate_order.js"/>
+            <script type="text/javascript" src="/ev_sale_online_miniapp/static/src/js/pos_models.js"/>
+        </xpath>
+    </template>
+</odoo>

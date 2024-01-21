@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <t t-name="ev_report.EVReportTopBar">
+        <div class="ev_preview_top_bar">
+            <div class="ev_report_paging" t-if="widget.hidePaging == false">
+                <span>Item Per Page</span>
+                <input type="text" t-att-value="widget.itemPerPage" class="js_item_per_page ev_report_paging_input"/>
+                <span class="ev_report_paging_sep"> - </span>
+                <span>Page</span>
+                <input type="text" t-att-value="widget.currentPage" class="js_current_page ev_report_paging_input"/>
+                <span class="ev_report_total_record">/ <t t-esc="widget.totalPage"/></span>
+            </div>
+            <div class="ev_btn ev_btn_zoom ev_btn_zoom_in" t-if="widget.isPreviewZoom">
+                <img src="/ev_report/static/src/img/icon/zoom_in.png" class="ev_preview_icon"/>
+            </div>
+            <div class="ev_btn ev_btn_zoom ev_btn_zoom_out" t-if="!widget.isPreviewZoom">
+                <img src="/ev_report/static/src/img/icon/zoom_out.png" class="ev_preview_icon"/>
+            </div>
+        </div>
+    </t>
+</templates>

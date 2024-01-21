@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_online_tree" model="ir.ui.view">
+            <field name="name">sale.online.tree</field>
+            <field name="model">sale.online</field>
+            <field name="arch" type="xml">
+                <tree string="Sale online" default_order="date desc" import="0">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="pos_config_id"/>
+                    <field name="create_date"/>
+                    <field name="note"/>
+                    <field name="create_uid"/>
+                    <field name="customer"/>
+                    <field name="phone"/>
+                    <field name="address"/>
+                    <field name="amount_total"/>
+                    <field name="state" widget="badge" decoration-info="state == 'draft'"
+                           decoration-success="state not in ('draft','cancel')"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sale_online_search" model="ir.ui.view">
+           <field name="name">sale_online_search</field>
+           <field name="model">sale.online</field>
+                <field name="arch" type="xml">
+                    <search string="">
+                        <field name="name" string="Name"/>
+                        <field name="pos_config_id" filter_domain="[('pos_config_id.name', 'ilike', self)]"/>
+                        <field name="customer" operator="ilike"/>
+                        <field name="phone" string="Phone"/>
+                        <field name="create_uid" filter_domain="[('create_uid.partner_id.name', 'ilike', self)]"/>
+                    </search>
+                </field>
+        </record>
+
+
+        <record id="sale_online_form" model="ir.ui.view">
+            <field name="name">sale.online.form</field>
+            <field name="model">sale.online</field>
+            <field name="arch" type="xml">
+                <form string="Sale Online">
+                    <header>
+                        <button name="send_sale_request" type="object"
+                                string="Send request" class="oe_highlight"
+                                attrs="{'invisible': [('state','!=', 'draft')]}"
+                        />
+<!--                        <button name="push_pos_order" type="object"-->
+<!--                                string="Push Order" class="oe_highlight" groups="point_of_sale.group_pos_user"-->
+<!--                                attrs="{'invisible': [('state','!=', 'sent')]}"-->
+<!--                        />-->
+                        <button name="cancel_sale_online" type="object"
+                                string="Cancel"
+                                attrs="{'invisible': [('state','!=', 'draft'),('state','!=', 'sent')]}"
+                        />
+                        <button name="set_to_draft" type="object" string="Set to Draft"
+                                states="sent"/>
+                        <button name="create_customer" type="object" class="oe_highlight" string="Create Customer"
+                                attrs="{'invisible': [('state','!=', 'draft')]}"/>
+
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,sent,finish,cancel"
+                               clickable="True"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="date" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="pos_config_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="price_list_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="note" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="phone" required="1" placeholder="0838183838" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="customer" required="1" placeholder="Nguyễn Văn A" attrs="{'readonly': [('state','!=','draft')]}" force_save="1"/>
+                                <field name="address" required="1" placeholder="Số 83, Duy Tân, Cầu Giấy, Hà Nội" attrs="{'readonly': [('state','!=','draft')]}" force_save="1"/>
+                                <field name="partner_id" readonly="1" force_save="1"/>
+                                <field name="pos_order_id" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description" readonly="1" force_save="1" nolabel="1" />
+                        </group>
+                        <notebook>
+                            <page string="detail">
+                                <field name="order_line_ids" attrs="{'readonly': [('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" required="1" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="quantity" required="1"/>
+                                        <field name="price" required="1"/>
+                                        <field name="uom" required="1" attrs="{'readonly': [(1,'=',1)]}" force_save="1"/>
+                                        <field name="product_uom_category_id" invisible="1"/>
+                                        <field name="amount"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="qty_total" widget="monetary"/>
+                                    <field name="amount_total"
+                                           class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                </group>
+                            </page>
+
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="sale_online_act" model="ir.actions.act_window">
+            <field name="name">Sale online</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.online</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="sale_online_point_of_sale_user_act" model="ir.actions.act_window">
+            <field name="name">Sale online</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.online</field>
+            <field name="context">{'create':False,'delete':False}</field>
+            <field name="domain">[('state','!=','draft')]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_sale_online" name="Sale Online"
+                  action="sale_online_act"
+                  parent="crm.crm_menu_sales" groups="group_sale_online"
+                  sequence="30"/>
+
+        <menuitem id="menu_sale_online_point_of_sale" name="Sale Online"
+                  action="sale_online_point_of_sale_user_act"
+                  parent="point_of_sale.menu_point_of_sale"
+                  sequence="30" groups="point_of_sale.group_pos_user"/>
+
+        <record id="view_pos_order_sale_online" model="ir.ui.view">
+            <field name="name">pos.order.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="sale_online" readonly="1"/>
+                </field>
+                <page name="notes" position="after">
+                    <page string="Notes Sale Online" name="notes_sale_online">
+                        <field name="note_sale_online"/>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+
+</odoo>

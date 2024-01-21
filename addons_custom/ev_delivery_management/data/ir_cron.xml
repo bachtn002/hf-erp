@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.cron" id="webhook_app_internal_daily_cron">
+            <field name="name">Webhook App Internal Update Status</field>
+            <field name="state">code</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">24</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall"
+                   eval="(DateTime.now().replace(hour=6, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_delivery_management"/>
+            <field name="code">model.get_delivery_internal_status()</field>
+        </record>
+        <record model="ir.cron" id="delete_webhook_grab_cron">
+            <field name="name">Delete Data Webhook Grab</field>
+             <field name="state">code</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">weeks</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall"
+                   eval="(DateTime.now().replace(hour=4, minute=00) + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_webhook_grab"/>
+            <field name="code">model.delete_webhook_grab()</field>
+        </record>
+        <record model="ir.cron" id="delete_webhook_aha_cron">
+            <field name="name">Delete Data Webhook Aha</field>
+             <field name="state">code</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">weeks</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall"
+                   eval="(DateTime.now().replace(hour=4, minute=00) + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_webhook_aha"/>
+            <field name="code">model.delete_webhook_aha()</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="import_asset_view_tree" model="ir.ui.view">
+            <field name="name">import_asset_view_tree</field>
+            <field name="model">import.asset</field>
+            <field name="arch" type="xml">
+                <tree string="Import Asset">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="import_asset_view_form" model="ir.ui.view">
+            <field name="name">import_asset_view_form</field>
+            <field name="model">import.asset</field>
+            <field name="arch" type="xml">
+                <form string="Import Asset">
+                    <sheet>
+                        <header>
+                            <button name='action_create_asset' type='object' string="Create Assets" class="oe_highlight" states="draft"/>
+                            <button name='action_confirm' type='object' string="Confirm" class="oe_highlight" states="create_asset"/>
+                            <button name='%(import_asset_line_import_action)d' type='action' states="draft"
+                                    string="Update file product" class="oe_highlight" icon="fa-download"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,create_asset,done"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="date_import" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail">
+                                <field name="line_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="code"/>
+                                        <field name="asset_product_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="asset_model_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                        <field name="date_buy"/>
+                                        <field name="date_depreciation_old"/>
+                                        <field name="money_depreciation"/>
+                                        <field name="value"/>
+                                        <field name="method_depreciation"/>
+                                        <field name="method_number"/>
+                                        <field name="depreciation_number_import"/>
+                                        <field name="date_depreciation_new"/>
+                                        <field name="account_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="account_expense_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="journal_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="account_analytic_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="account_expense_item_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="account_asset_id"
+                                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="inventory_loss_account_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="asset_type"/>
+                                        <field name="asset_id" readonly="1" force_save="1"/>
+                                        <field name="account_intital_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"/>
+                                        <field name="account_move_id" readonly="1" force_save="1"/>
+                                        <field name="import_asset_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="import_asset_view_search" model="ir.ui.view">
+            <field name="name">import_asset_view_search</field>
+            <field name="model">import.asset</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="import_asset_action" model="ir.actions.act_window">
+            <field name="name">import_asset_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">import.asset</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="import_asset_view_search"/>
+        </record>
+
+
+        <menuitem id="import_asset_menu"
+                  name="Import Asset"
+                  action="import_asset_action"
+                  parent="account.account_management_menu"
+                  sequence="1"/>
+    </data>
+</odoo>

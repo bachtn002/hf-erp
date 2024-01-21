@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="loan_refund_payment_form_view"
+			model="ir.ui.view">
+			<field name="name">loan.refund.payment.form</field>
+			<field name="model">loan.refund.payment</field>
+			<field name="inherit_id" ref="abstract_loan_payment_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount']" position="after">
+					<field name="matched_amount" />
+				</xpath>
+				<xpath expr="//notebook" position="inside">
+					<page string="Matching" groups="base.group_no_one">
+						<field name="loan_lend_refund_payment_match_ids"
+							attrs="{'invisible':[('partner_type','=','lender')]}">
+							<tree>
+								<field name="matched_amount" />
+								<field name="refund_id" />
+								<field name="order_id" />
+								<field name="currency_id" invisible="1" />
+							</tree>
+						</field>
+						<field name="loan_borrow_refund_payment_match_ids"
+							attrs="{'invisible':[('partner_type','=','borrower')]}">
+							<tree>
+								<field name="matched_amount" />
+								<field name="refund_id" />
+								<field name="order_id" />
+								<field name="currency_id" invisible="1" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

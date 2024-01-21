@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_export" model="res.groups">
+            <field name="name">Export data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_import" model="res.groups">
+            <field name="name">Import data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_import_res_partner" model="res.groups">
+            <field name="name">Import res partner data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_import_res_partner_ncc" model="res.groups">
+            <field name="name">Import res partner ncc data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_import_product" model="res.groups">
+            <field name="name">Import Product data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_export_res_partner" model="res.groups">
+            <field name="name">Export res partner data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_export_res_partner_ncc" model="res.groups">
+            <field name="name">Export res partner ncc data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_export_product" model="res.groups">
+            <field name="name">Export Product data</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>

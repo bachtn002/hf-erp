@@ -1,0 +1,1374 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_package
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-03 01:34+0000\n"
+"PO-Revision-Date: 2022-03-03 01:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_package
+#: model:ir.actions.report,print_report_name:ev_stock_package.qweb_stamp_package
+msgid "'Stamp Package- %s' % (object.name)"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_report_view_form
+msgid "<b>Stock Package Report</b>"
+msgstr "<b>Kiểm tra thông tin thùng hàng</b>"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_line_product_selector
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_selector_in
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_selector_out
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_transfer_line_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-cube mr-3\" title=\"Quantity\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-cube mr-3\" title=\"Số lượng\"/>"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_line_product_selector
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_selector_in
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_selector_out
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_transfer_line_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-tags mr-3\" title=\"Product\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-tags mr-3\" title=\"Sản phẩm\"/>"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.report_template_stamp_package_view
+msgid "<span style=\"padding-left: 3px;\">kg</span>"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "A Package can not have more than one Cover"
+msgstr "Đã tồn tại một vỏ thùng trong chi tiết!"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__product_barcode
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.report_template_stamp_package_view
+#, python-format
+msgid "Barcode"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.actions.client,name:ev_stock_package.stock_barcode_package_client_action
+msgid "Barcode Package Client Action"
+msgstr "Xuất/nhập kho nội bộ"
+
+#. module: ev_stock_package
+#: model:ir.actions.client,name:ev_stock_package.stock_barcode_package_delivery_client_action
+msgid "Barcode Package Delivery Client Action"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__button_clicked
+msgid "Button clicked"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/stock_transfer_barcode.js:0
+#, python-format
+msgid "Can not find stock transfer with barcode:  %(barcode)s"
+msgstr "Không tìm thấy phiếu điều chuyển với mã barcode %(barcode)s"
+
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_report__state__cancel
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_transfer__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_transfer_wizard_view_form
+#, python-format
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_form
+msgid "Cancel"
+msgstr "Hủy bỏ thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_report_view_form
+msgid "Check"
+msgstr "Kiểm tra"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_package_template.xml:0
+#, python-format
+msgid "Chiếc"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_transfer_wizard_view_form
+msgid "Create package"
+msgstr "Tạo thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__create_uid
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__create_uid
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__create_uid
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__create_date
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__create_date
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__create_date
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__create_date
+msgid "Created on"
+msgstr "Tạo vào lúc"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__date_packaged
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__date_packaged
+msgid "Date Packaged"
+msgstr "Ngày đóng thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__date_unpack
+msgid "Date Unpack"
+msgstr "Ngày mở thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_report_view_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_product__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer__display_name
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/stock_transfer_barcode.js:0
+#, python-format
+msgid ""
+"Do you want to permanently remove this message ?\r\n"
+"                It won't appear anymore, so make sure you don't need the barcodes sheet or you have a copy."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/stock_transfer_barcode.js:0
+#, python-format
+msgid "Don't show this message again"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_report__state__draft
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_transfer__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_package_template.xml:0
+#, python-format
+msgid "Edit"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "From"
+msgstr "Đến"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "Groupby state"
+msgstr "Trạng thái"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "Groupby transfer"
+msgstr "Phiếu điều chuyển"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_product__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_template__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer__id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_needaction
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_has_error
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer_line__product_barcode
+msgid "International Article Number used for product identification."
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_product__is_package_cover
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_template__is_package_cover
+msgid "Is package cover"
+msgstr "Là vỏ thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__is_using_package_cover
+msgid "Is using package cover"
+msgstr "Sử dụng vỏ thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.report_template_stamp_package_view
+msgid "Kho nhận:"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.report_template_stamp_package_view
+#, python-format
+msgid "Khối lượng:"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_product____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer____last_update
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__write_uid
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__write_uid
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__write_uid
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__write_date
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__write_date
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__write_date
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/stock_transfer_barcode.js:0
+#, python-format
+msgid "Leave it"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__line_ids
+msgid "Line Ids"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__name
+msgid "Name package"
+msgstr "Tên thùng"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_report.py:0
+#, python-format
+msgid "Name package does not exits"
+msgstr "Tên thùng không tồn tại"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.report_template_stamp_package_view
+msgid "Ngày đóng gói:"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/controllers/stock_package.py:0
+#, python-format
+msgid "Open Transfer form"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_int_inherit
+msgid "Package IN"
+msgstr "Danh sách thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+msgid "Package Out"
+msgstr "Danh sách thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer__package_lines
+msgid "Package Out Line"
+msgstr "Chi tiết thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer__is_confirm_in_from_scan
+msgid "Is confirm IN from scan?"
+msgstr "Nhập hàng bằng scan"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer__is_confirm_out_from_scan
+msgid "Is confirm OUT from scan?"
+msgstr "Xuất hàng bằng scan"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__package_report_id
+msgid "Package Report ID"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "Package Scanning"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__package_transfer_id
+msgid "Package Transfer ID"
+msgstr ""
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "Package can be delivery or receipt when package's state in processing!"
+msgstr "Vui lòng xác nhận đóng thùng trước khi xuất/nhận thùng!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "Package can not be cancel when Transfer already transferred or done!"
+msgstr "Thùng hàng không thể Hủy khi phiếu điều chuyển ở trạng thái hoàn thành hoặc đã điều chuyển"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "Package already packaged!"
+msgstr "Thùng hàng đã được đóng trước đó. VUi lòng kiểm tra lại"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "Can not create Package when transfer's state is not in draft, confirm or ready "
+msgstr "Không thể tạo thùng hàng với điều chuyển ở trạng thái khác mới, xác nhận hoặc sẵn sàng!"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__name
+msgid "Package name"
+msgstr "Tên thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_report__state__packaged
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_transfer__state__packaged
+msgid "Packaged"
+msgstr "Đã đóng thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+msgid "Packed Quantity"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_form
+msgid "Print Stamp Package"
+msgstr "In tem thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_form
+msgid "Process"
+msgstr "Tiếp tục đóng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_report__state__processing
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_transfer__state__processing
+msgid "Processing"
+msgstr "Đang đóng thùng"
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_product_product
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_line_product_selector
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__product_id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__product_id
+msgid "Product ID"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__qty
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__qty
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_line_product_selector
+msgid "Quantity"
+msgstr "Số lượng yêu cầu"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__qty_done
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__qty_done
+msgid "Quantity Done"
+msgstr "SL đã đóng thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__qty
+msgid "Quantity Package"
+msgstr "Số lượng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__qty_in
+msgid "Quantity Package In"
+msgstr "Số lượng nhập"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__qty_out
+msgid "Quantity Package Out"
+msgstr "Số lượng xuất"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer_line__qty_packed
+msgid "Quantity Packed"
+msgstr "SL đã đóng thùng"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "Quantity in must be equal to quantity package"
+msgstr "Vui lòng nhập đủ số lượng thùng đã xuất!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "Quantity out must be equal to quantity package"
+msgstr "Vui lòng xuất đủ số lượng thùng đã đóng!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/stock_transfer_barcode.js:0
+#, python-format
+msgid "Remove it"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__report_line_ids
+msgid "Report Line ids"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.ui.menu,name:ev_stock_package.scan_package_menu
+msgid "Scan Package"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.ui.menu,name:ev_stock_package.scan_package_in_menu
+msgid "Scan Package In"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.ui.menu,name:ev_stock_package.scan_package_out_menu
+msgid "Scan Package Out"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.ui.menu,name:ev_stock_package.scan_stock_transfer_menu
+msgid "Scan Stock Transfer Package"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "Scan an"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+msgid "Scan package"
+msgstr "Scan xuất kho"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_int_inherit
+msgid "Scan package"
+msgstr "Scan nhập kho"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "Scan products"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Scanning is disabled in this state"
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_line_product_selector
+msgid "Select a Product"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.actions.report,name:ev_stock_package.qweb_stamp_package
+msgid "Stamp Package"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__state
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "State cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "State draft"
+msgstr "Nháp"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "State package must be packaged"
+msgstr "Trạng thái thùng phải là đã đóng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "State packaged"
+msgstr "Đã đóng thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "State processing"
+msgstr "Đang đóng thùng"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_search
+msgid "State unpackaged"
+msgstr "Đã mở thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.ui.menu,name:ev_stock_package.stock_package_report_menu
+msgid "Stock Package Report"
+msgstr "Kiểm tra thông tin thùng hàng"
+
+#. module: ev_stock_package
+#: model:ir.actions.act_window,name:ev_stock_package.stock_package_report_action
+msgid "Stock Package Report Action"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.ui.menu,name:ev_stock_package.stock_package_transfer_menu
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_view_tree
+msgid "Stock Package Transfer"
+msgstr "Quản lý thùng hàng"
+
+#. module: ev_stock_package
+#: model:ir.actions.act_window,name:ev_stock_package.stock_package_transfer_action
+msgid "Stock Package Transfer Action"
+msgstr "Quản lý thùng hàng"
+
+#. module: ev_stock_package
+#: model:ir.actions.client,name:ev_stock_package.stock_transfer_barcode_action
+msgid "Stock Transfer Barcode"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__stock_transfer_id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__stock_transfer_id
+msgid "Stock Transfer ID"
+msgstr "Phiếu chuyển kho"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.report_template_stamp_package_view
+msgid "Số phiếu ĐC:"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "The scanned lot does not match an existing one."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#: code:addons/ev_stock_package/static/src/js/transfer_client_action/package_delivery_client_action.js:0
+#, python-format
+msgid ""
+"The scanned package must not be assigned to a location or must be assigned "
+"to the current dest location."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "The scanned serial number is already used."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#: code:addons/ev_stock_package/static/src/js/transfer_client_action/package_delivery_client_action.js:0
+#, python-format
+msgid "The transfer has been cancelled"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/transfer_client_action/stock_transfer_client_action.js:0
+#, python-format
+msgid "The transfer has been validated"
+msgstr "Giao dịch thành công"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#, python-format
+msgid "The package has been validated"
+msgstr "Đóng gói thành công"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "There is no Package to scan!"
+msgstr "Không có thùng hàng nào đã đóng để điều chuyển!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "There is no line to create new Pack!"
+msgstr "Sản phẩm điều chuyển đã được đóng đủ vào thùng hàng!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "This location is not a child of the main location."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid ""
+"This location is not a child of the selected locations on the inventory "
+"adjustment."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "This package is already scanned."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "To"
+msgstr "Từ"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#: code:addons/ev_stock_package/static/src/js/transfer_client_action/package_delivery_client_action.js:0
+#, python-format
+msgid "To use packages, enable 'Delivery Packages'from the settings"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "Trang Chủ"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_line_product_selector
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_transfer_line_selector
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_transfer__total_package_number
+msgid "Total Package"
+msgstr "Số kiện hàng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_report__state__unpackaged
+#: model:ir.model.fields.selection,name:ev_stock_package.selection__stock_package_transfer__state__unpackaged
+msgid "Unpackaged"
+msgstr "Đã mở thùng"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report_line__uom_id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer_line__uom_id
+msgid "Uom ID"
+msgstr "Đơn vị"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "Validate"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__warehouse_id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__warehouse_id
+msgid "Warehouse"
+msgstr "Kho xuất"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__warehouse_dest_id
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__warehouse_dest_id
+msgid "Warehouse Dest"
+msgstr "Kho nhận"
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,help:ev_stock_package.field_stock_package_transfer__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_report__weight
+#: model:ir.model.fields,field_description:ev_stock_package.field_stock_package_transfer__weight
+msgid "Weight"
+msgstr "Khối lượng thùng"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/lines_widget.js:0
+#, python-format
+msgid "Weight must be than 0"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "Xóa"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "You are expected to scan a source location."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "You are expected to scan more products or a destination location."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid ""
+"You are expected to scan one or more products or a package available at the "
+"picking's location"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "You are expected to scan one or more products."
+msgstr ""
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "You can not delete package with state not in draft or cancel"
+msgstr "Bạn không thể xóa thùng ở trạng thái khác nháp hoặc hủy"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "_createLineCommand is an abstract method. You need to implement it."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "_getLinesField is an abstract method. You need to implement it."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "_getQuantityField is an abstract method. You need to implement it."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid ""
+"_instantiateViewsWidget is an abstract method. You need to implement it."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "_updateLineCommand is an abstract method. You need to implement it."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "stock transfer"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_stock_package_report
+msgid "stock.package.report"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_stock_package_report_line
+msgid "stock.package.report.line"
+msgstr ""
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_stock_package_transfer
+msgid "stock.package.transfer"
+msgstr "Thùng điều chuyển"
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_stock_package_transfer_line
+msgid "stock.package.transfer.line"
+msgstr "Chi tiết thùng điều chuyển"
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_stock_transfer
+msgid "stock.transfer"
+msgstr "Điều chuyển nội bộ"
+
+#. module: ev_stock_package
+#: model:ir.model,name:ev_stock_package.model_stock_transfer_line
+msgid "stock.transfer.line"
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "to create a new package."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "to scan package in."
+msgstr ""
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/scan_stock_transfer.xml:0
+#, python-format
+msgid "to scan package out."
+msgstr ""
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "Package quantity delivery or receive can not be greater 1"
+msgstr "Số lượng thùng điều chuyển hoặc nhận không thể lớn hơn 1"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer_line.py:0
+#, python-format
+msgid "Quantity in can not be difference with quantity out!"
+msgstr "Số lượng nhập phải bằng số lượng đã xuất!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "Quantity receive can not be difference quantity delivery!"
+msgstr "Số lượng nhập phải bằng số lượng đã xuất!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer_line.py:0
+#: code:addons/ev_stock_package/models/stock_transfer_line.py:0
+#: code:addons/ev_stock_package/models/stock_transfer_line.py:0
+#, python-format
+msgid ""
+"The quantity for the product %s doesn't respect the rounding precision "
+"defined on the unit of measure %s. Please change the quantity done or the "
+"rounding precision of your unit of measure."
+msgstr "Số lượng của sản phẩm %s không phù hợp với đơn vị tính %s!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/lines_widget.js:0
+#, python-format
+msgid "Weight must be than 0"
+msgstr "Khối lượng phải lớn hơn 0!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "From warehouse"
+msgstr "Từ kho"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "To warehouse"
+msgstr "Đến kho"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/stock_barcode.xml:0
+#, python-format
+msgid "Stock Transfers"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/stock_barcode.xml:0
+#, python-format
+msgid "Scan a"
+msgstr "Quét một phiếu "
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/stock_barcode.xml:0
+#, python-format
+msgid "Stock transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/stock_barcode.xml:0
+#, python-format
+msgid "to open it."
+msgstr "để mở nó"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/popup_templates.xml:0
+#, python-format
+msgid "Code"
+msgstr "Mã"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/popup_templates.xml:0
+#, python-format
+msgid "Can not be scan more"
+msgstr "Scan quá số lượng cho phép!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/popup_templates.xml:0
+#, python-format
+msgid "Unknown Barcode"
+msgstr "Mã không xác định!"
+
+#. module: ev_stock_package
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_transfer_wizard_view_form
+msgid "Existing Packages are processing! Are you sure still want to proceed?"
+msgstr "Tồn tại thùng đang đóng! Bạn có chắc chắn muốn tạo thùng mới?"
+
+#. module: ev_stock_package
+#: model:ir.actions.act_window,name:ev_stock_package.stock_transfer_wizard_action
+#: model:ir.model,name:ev_stock_package.model_stock_transfer_wizard
+msgid "Stock transfer Wizard"
+msgstr "Cảnh báo"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Package cover has not been scanned. Do you still want to proceed?"
+msgstr "Bạn chưa scan vỏ thùng đóng gói, Bạn có chắc chắn không dùng vỏ thùng?"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Chose next action to continue!"
+msgstr "Vui lòng chọn hành động mong muốn!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Back to transfers"
+msgstr "Quay lại Scan điều chuyển mới"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Create new package"
+msgstr "Tạo mới thùng hàng"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Chose Navigate form"
+msgstr "Điều hướng trang"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Package Transfer "
+msgstr "Thùng hàng "
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#, python-format
+msgid "Transfer  "
+msgstr "Điều chuyển"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/controllers/stock_package.py:0
+#, python-format
+msgid "No transfer corresponding to barcode %(barcode)s"
+msgstr "Không tồn tại phiếu điều chuyển có mã %(barcode)s"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "You are not allow to proceed this action"
+msgstr "Bạn không được phép thực hiện hành động này!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_transfer.py:0
+#, python-format
+msgid "There is no line to scan!"
+msgstr "Không có sản phẩm nào để scan!"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+#, python-format
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_package
+#. openerp-web
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_int_inherit
+#, python-format
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_stock_package
+#. openerp-web
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+#, python-format
+msgid "Check Available"
+msgstr "Kiểm tra khả dụng"
+
+#. module: ev_stock_package
+#. openerp-web
+#: model_terms:ir.ui.view,arch_db:ev_stock_package.stock_package_transfer_out_inherit
+#, python-format
+msgid "Fill Out Quantity"
+msgstr "Đặt số lượng xuất"
+
+#. module: ev_stock_package
+#: model:res.groups,name:ev_stock_package.group_user_package_activity
+msgid "User: Scan In/Out package"
+msgstr "Người dùng Đóng Pack & Scan xuất kho"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#: code:addons/ev_stock_package/static/src/js/client_action/abstract_client_action.js:0
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#, python-format
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#, python-format
+msgid "Go Back"
+msgstr "Quay lại"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/xml/package_transfer_barcode_template.xml:0
+#, python-format
+msgid "Get data"
+msgstr "Lấy dữ liệu"
+
+#. module: ev_stock_package
+#. openerp-web
+#: code:addons/ev_stock_package/static/src/js/packed_client_action/stock_package_client_action.js:0
+#, python-format
+msgid "The package have confirm before, Please check again!"
+msgstr "Thùng hàng đã được đóng trước đó, Vui lòng kiểm tra lại!"
+
+#. module: ev_stock_package
+#: code:addons/ev_stock_package/models/stock_package_transfer.py:0
+#, python-format
+msgid "You not allow to confirm this transfer!"
+msgstr "Bạn không được phép xác nhận xuất/nhập! Vui lòng kiểm tra lại!"

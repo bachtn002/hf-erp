@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="report_print_stamp_promotion_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_print_stamp_product.print_stamp_template" t-lang="en_US">
+                        <div class="page" style="margin-top: 10px">
+                            <t t-foreach="o.print_stamp_line_ids" t-as="line">
+                                <t t-if="line.allow_printing">
+                                    <div class="stamp" style="float:left; text-align:right; -webkit-transform:rotate(90deg);                                                             
+                                     font-family: Calibri; padding: 1px 1px 1px 1px;                                                                          
+                                     margin-bottom: 120px; margin-top:120px ;padding-left:  ; height:750px; width: 800px ">
+                                        <div class="promotion_white_space" style="text-align: center; height:400px ;font-size: 63px;padding-top:">
+                                            <span style=""/>
+                                        </div>
+
+                                        <div class="name_product" style="line-height:75px; height:150px; width:100%; font-size: 69px;">
+                                            <t t-if="line.name_above and line.name_below">
+                                                <t t-if="len(line.name_above) &gt; 23 or len(line.name_below) &gt; 23">
+                                                    <div style="font-size:46px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900; ">
+                                                        <span t-esc="line.name_above"/>
+                                                    </div>
+                                                    <div style="font-size: 46px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900; ">
+                                                        <span t-esc="line.name_below"/>
+                                                    </div>
+                                                </t>
+
+                                                <t t-else="">
+                                                    <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900; ">
+                                                        <span t-esc="line.name_above"/>
+                                                    </div>
+                                                    <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900; ">
+                                                        <span t-esc="line.name_below"/>
+                                                    </div>
+                                                </t>
+                                            </t>
+
+                                            <t t-elif="line.name_above and not line.name_below">
+                                                <t t-if="len(line.name_above) &gt; 23">
+                                                    <div style="font-size: 46px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900; ">
+                                                        <span t-esc="line.name_above"/>
+                                                    </div>
+                                                    <div style="height: 75px; width: 100%">
+                                                    </div>
+                                                </t>
+                                                <t t-else="">
+                                                    <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900;">
+                                                        <span t-esc="line.name_above"/>
+                                                    </div>
+                                                    <div style="height: 75px; width: 100%">
+                                                    </div>
+                                                </t>
+                                            </t>
+
+                                            <t t-elif="not line.name_above and line.name_below">
+                                                <t t-if="len(line.name_below) &gt; 23">
+                                                    <div style="height: 75px; width: 100%">
+                                                    </div>
+                                                    <div style="font-size: 46px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900; ">
+                                                        <span t-esc="line.name_below"/>
+                                                    </div>
+                                                </t>
+                                                <t t-else="">
+                                                    <div style="height: 75px; width: 100%">
+                                                    </div>
+                                                    <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height:; text-align: center;font-weight: 900;">
+                                                        <span t-esc="line.name_below"/>
+                                                    </div>
+                                                </t>
+                                            </t>
+
+                                            <t t-else="">
+                                                <div style="height: 75px; width: 100%">
+                                                </div>
+                                                <div style="height: 75px; width: 100%">
+                                                </div>
+                                            </t>
+                                        </div>
+
+                                        <div class="price" style="width:100%">
+                                            <t t-if="line.price_unit &gt; 0">
+                                                <div style="height:90px; text-align: center;">
+                                                    <span style="font-size: 73px;font-weight: 900;">
+                                                        <t t-esc="'{:,.0f}'.format(line.price_unit).replace(',', '.')"/>
+đ/
+                                                    </span>
+                                                    <t t-if="line.uom_id.name">
+                                                        <span style="font-size: 48px;">
+                                                            <t t-esc="line.uom_id.name.capitalize()"/>
+                                                        </span>
+                                                    </t>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <div style="height:90px;">
+                                                </div>
+                                            </t>
+                                        </div>
+
+                                        <div class="note_price_old" style="width: 100%">
+                                            <t t-if="line.note">
+                                                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; height:47px; font-size: 34px;">
+                                                    <span>
+                                                        <t t-esc="line.note"/>
+                                                    </span>
+                                                </div>
+                                            </t>
+                                            <t t-elif="line.price_unit_before &gt; 0">
+                                                <div style="text-align: center; height:47px; font-size: 34px; padding-left: 80px">
+                                                Giá Cũ:
+                                                    <span style="text-decoration: line-through;">
+                                                        <t t-esc="'{:,.0f}'.format(line.price_unit_before).replace(',', ' ')"/>
+đ
+                                                    </span>
+                                                </div>
+                                            </t>
+                                            <t t-else="">
+                                                <div style="height: 47px">
+                                                </div>
+                                            </t>
+                                        </div>
+                                        <div class="time" style="text-align: center; font-size: 38px; width:100%">
+                                            <span>
+                                                Thời Gian Áp Dụng:
+                                            </span>
+                                            <span style="font-weight: bold">
+                                                <t t-esc="datetime.datetime.strftime(line.packed_date, '%d/%m/%Y')"/>
+                                            </span>
+                                            -
+                                            <span style="font-weight: bold">
+                                                <t t-esc="datetime.datetime.strftime(line.expire_date, '%d/%m/%Y')"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_qweb_print_stamp_promotion" model="report.paperformat">
+            <field name="name">Print Stamp Promotion</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">140</field>
+            <field name="page_width">75</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="report_print_stamp_promotion" model="ir.actions.report">
+            <field name="name">Print Stamp Promotion</field>
+            <field name="model">print.stamp</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ev_print_stamp_product.report_print_stamp_promotion_view</field>
+            <field name="report_file">ev_print_stamp_product.report_print_stamp_promotion_view</field>
+            <field name="paperformat_id" ref="ev_print_stamp_product.paperformat_qweb_print_stamp_promotion"/>
+            <field name="print_report_name">'Print Stamp Promotion'</field>
+        </record>
+
+    </data>
+</odoo>

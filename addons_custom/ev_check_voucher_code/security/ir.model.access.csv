@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_change_voucher_code,change_voucher_code_name,model_change_voucher_code,base.group_user,1,1,1,1
+access_check_voucher_code_transient,check_voucher_code_transient_name,model_check_voucher_code_transient,base.group_user,1,1,1,1
+access_check_promotion_code,access_check_promotion_code_name,model_check_promotion_code,base.group_user,1,1,1,1
+access_change_promotion_code,access_change_promotion_code_name,model_change_promotion_code,base.group_user,1,1,1,1
+access_change_promotion_code_line,access_change_promotion_code_line_name,model_check_promotion_code_line,base.group_user,1,1,1,1

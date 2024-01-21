@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inventory_check_sequence" model="ir.sequence">
+            <field name="name">Inventory Check Sequence</field>
+            <field name="code">inventory.check.seq</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+</odoo>

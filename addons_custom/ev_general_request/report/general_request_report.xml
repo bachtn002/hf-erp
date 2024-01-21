@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+                id="general_request_report_xlsx"
+                model="general.request"
+                string="General Request Report"
+                report_type="xlsx"
+                name="general.request.report"
+                file="general.request.report"
+                print_report_name="General Request Excel Report"
+        />
+    </data>
+</odoo>

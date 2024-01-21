@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_api_users_sync
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-06 07:15+0000\n"
+"PO-Revision-Date: 2022-10-06 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_api_users_sync
+#: model:ir.actions.server,name:ev_api_users_sync.api_users_job_ir_actions_server
+#: model:ir.cron,cron_name:ev_api_users_sync.api_users_job
+#: model:ir.cron,name:ev_api_users_sync.api_users_job
+msgid "Base: Api users data"
+msgstr "API: Đồng bộ user"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__call_date
+msgid "Call Api Date"
+msgstr "Ngày gọi"
+
+#. module: ev_api_users_sync
+#: model:ir.model,name:ev_api_users_sync.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__x_start_working_date_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__x_start_working_date_sync
+msgid "Date start work"
+msgstr "Ngày bắt đầu làm"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__x_department_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__x_department_sync
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__display_name
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__display_name
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__x_employee_code
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__x_employee_code
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__x_employee_code_sync
+msgid "Employee Code"
+msgstr "Mã nhân viên"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__x_end_working_date_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__x_end_working_date_sync
+msgid "End date of work"
+msgstr "Ngày nghỉ việc"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__id
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__id
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model_terms:ir.ui.view,arch_db:ev_api_users_sync.view_partner_form_sync_inherit
+#: model_terms:ir.ui.view,arch_db:ev_api_users_sync.view_users_form_sync_inherit
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api____last_update
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner____last_update
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.actions.act_window,name:ev_api_users_sync.log_user_api_action
+#: model:ir.model,name:ev_api_users_sync.model_log_user_api
+#: model:ir.ui.menu,name:ev_api_users_sync.log_user_api_menu
+msgid "Log User Api"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__message
+msgid "Message"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__params
+msgid "Params"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_partner__x_position_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_res_users__x_position_sync
+msgid "Position"
+msgstr "Chức vụ"
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__status
+msgid "Status"
+msgstr ""
+
+#. module: ev_api_users_sync
+#: model:ir.model.fields,field_description:ev_api_users_sync.field_log_user_api__user_not_create
+msgid "User data is not newly created"
+msgstr "Dữ liệu user không được tạo mới"
+
+#. module: ev_api_users_sync
+#: model:ir.model,name:ev_api_users_sync.model_res_users
+msgid "Users"
+msgstr "Người dùng"

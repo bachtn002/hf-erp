@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="callback_payment_log_view_form" model="ir.ui.view">
+            <field name="name">callback_payment_log_view_form</field>
+            <field name="model">callback.payment.log</field>
+            <field name="arch" type="xml">
+                <form readonly="1">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="ip_request"/>
+                            <field name="response"
+                                   style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+                            <field name="type"/>
+                            <field name="create_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="callback_payment_log_view_tree" model="ir.ui.view">
+            <field name="name">callback_payment_log_view_tree</field>
+            <field name="model">callback.payment.log</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="response"/>
+                    <field name="type"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="callback_payment_log_action" model="ir.actions.act_window">
+            <field name="name">Callback Payment Log</field>
+            <field name="res_model">callback.payment.log</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="callback_payment_log_menu"
+                  action="callback_payment_log_action"
+                  name="Callback Payment Log"
+                  parent="point_of_sale.menu_point_config_product"
+                  sequence="6"
+        />
+    </data>
+</odoo>

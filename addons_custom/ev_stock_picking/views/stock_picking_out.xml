@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_picking_tree_out" model="ir.actions.act_window">
+        <field name="name">Picking Out</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,kanban,form,calendar</field>
+        <field name="domain">[('picking_type_id.code','=','outgoing')]</field>
+        <field name="context">{'create': False,'contact_display': 'partner_address', 'default_company_id':
+            allowed_company_ids[0]}
+        </field>
+        <field name="search_view_id" ref="stock.view_picking_internal_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Picking Out found. Let's create one!
+            </p>
+            <p>
+                Transfers allow you to move products from one location to another.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_stock_picking_out" sequence="8" parent="stock.menu_stock_warehouse_mgmt"
+              name="Stock Picking Out" groups="stock.group_stock_user" action="action_picking_tree_out"/>
+
+    <record id="view_picking_account_journal_general_form_inherit" model="ir.ui.view">
+        <field name="name">view.picking.account.journal.general.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='operations']" position="after">
+                <page string="Journal general" name="journal_general" groups="account.group_account_manager" invisible="1">
+                    <field name="journal_general_ids" readonly="1">
+                        <tree editable="bottom" string="Journal general">
+                            <field name="date" invisible="1"/>
+                            <field name="name" required="1"/>
+                            <field name="debit_partner_id"
+                                   domain="['|', ('parent_id', '=', False), ('is_company', '=', True)]"/>
+                            <field name="credit_partner_id"
+                                   domain="['|', ('parent_id', '=', False), ('is_company', '=', True)]"/>
+                            <field name="debit_acc_id"
+                                   domain="[('company_id', '=', parent.company_id), ('deprecated', '=', False)]"
+                                   required="1" options="{'no_create': True}"/>
+                            <field name="credit_acc_id"
+                                   domain="[('company_id', '=', parent.company_id), ('deprecated', '=', False)]"
+                                   required="1" options="{'no_create': True}"/>
+                            <field name="debit_analytic_account_id" groups="analytic.group_analytic_accounting"/>
+                            <field name="credit_analytic_account_id" groups="analytic.group_analytic_accounting"/>
+                            <field name="debit_object_cost_id" groups="analytic.group_analytic_accounting"/>
+                            <field name="credit_object_cost_id" groups="analytic.group_analytic_accounting"/>
+                            <field name="analytic_tag_ids" groups="analytic.group_analytic_tags"
+                                   widget="many2many_tags"/>
+                            <field name="product_id"/>
+                            <field name="value"/>
+                            <field name="amount_currency" groups="base.group_multi_currency"/>
+                            <field name="company_currency_id" invisible="1"/>
+                            <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                            <field name="company_id" groups="base.group_multi_company" invisible="1"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

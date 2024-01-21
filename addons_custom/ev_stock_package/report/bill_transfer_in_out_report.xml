@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- In template-->
+        <template id="report_template_stock_picking_bill_transfer_out_view" inherit_id="ev_stock_transfer.report_template_stock_picking_bill_transfer_out_view">
+            <xpath expr="//span[@class='warehouse_dest_address']" position="after">
+            <!-- <xpath expr="//span[@class='warehouse_dest']" position="after"> -->
+                <br/>
+                <span style="font-weight: bold;">Số kiện hàng:
+                    <span style="font-weight: normal;">
+                        <span t-field="o.total_package_number"/>
+                    </span>
+                </span>
+            </xpath>
+        </template>
+
+        <!-- Out template-->
+        <template id="report_template_stock_picking_bill_transfer_in_view" inherit_id="ev_stock_transfer.report_template_stock_picking_bill_transfer_in_view">
+            <xpath expr="//span[@class='warehouse_dest_address']" position="after">
+            <!-- <xpath expr="//span[@class='warehouse_dest']" position="after"> -->
+                <br/>
+                <span style="font-weight: bold;">Số kiện hàng:
+                    <span style="font-weight: normal;">
+                        <span t-field="o.total_package_number"/>
+                    </span>
+                </span>
+            </xpath>
+        </template>
+
+        <!-- Out template-->
+        <template id="report_template_stock_picking_bill_transfer_view" inherit_id="ev_stock_picking.report_template_stock_picking_bill_transfer_view">
+            <xpath expr="//span[@class='warehouse_dest_address']" position="after">
+            <!-- <xpath expr="//span[@class='warehouse_dest']" position="after"> -->
+                <br/>
+                <span style="font-weight: bold;">Số kiện hàng:
+                    <span style="font-weight: normal;">
+                        <span t-field="o.total_package_number"/>
+                    </span>
+                </span>
+            </xpath>
+        </template>
+    </data>
+</odoo>

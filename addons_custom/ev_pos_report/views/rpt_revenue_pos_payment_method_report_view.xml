@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_revenue_pos_payment_method_form" model="ir.ui.view">
+            <field name="name">Revenue Pos Payment Method Report</field>
+            <field name="model">rpt.pos.report</field>
+            <field name="arch" type="xml">
+                <form string="Revenue Pos Payment Method Report">
+                    <group>
+                        <group>
+                            <field name="from_date" required="1" string="From date"/>
+                            <field name="to_date" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report_revenue_pos_payment_method" type="object" class="oe_highlight" string="View Report"/>
+                        <button name="action_report_excel_revenue_pos_payment_method" type="object" class="oe_highlight" string="Export Excel"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_revenue_pos_payment_method" model="ir.actions.act_window">
+            <field name="name">Revenue Pos Payment Method Report</field>
+            <field name="res_model">rpt.pos.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_revenue_pos_payment_method_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+        <!-- menu -->
+        <menuitem id="menu_rpt_revenue_pos_payment_method"
+                  name="Revenue Pos Payment Method Report" action="action_rpt_revenue_pos_payment_method"
+                  parent="menu_point_report" groups="point_of_sale.group_pos_user"
+                  sequence="3"/>
+
+    </data>
+</odoo>

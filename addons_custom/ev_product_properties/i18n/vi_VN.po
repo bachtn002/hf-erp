@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_properties
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 04:57+0000\n"
+"PO-Revision-Date: 2021-10-28 04:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_properties
+#: code:addons/ev_product_properties/models/product_template.py:0
+#, python-format
+msgid "Cannot archive product if quantity available > 0. Product:\n %s"
+msgstr "Không được lưu trữ sản phẩm có tồn kho > 0. Sản phẩm:\n %s"
+
+#. module: ev_product_properties
+#: model:ir.model.fields,field_description:ev_product_properties.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_properties
+#: model:ir.model.fields,field_description:ev_product_properties.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_properties
+#: model:ir.model.fields,field_description:ev_product_properties.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_properties
+#: model:ir.model,name:ev_product_properties.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_product_properties
+#: code:addons/ev_product_properties/models/product_template.py:0
+#: code:addons/ev_product_properties/models/product_template.py:0
+#, python-format
+msgid "Taxes cannot have more 1 values"
+msgstr "Không thể áp dụng nhiều hơn 1 loại thuế bán hàng"
+
+#. module: ev_product_properties
+#: code:addons/ev_product_properties/models/product_template.py:0
+#: code:addons/ev_product_properties/models/product_template.py:0
+#: model:ir.model.constraint,message:ev_product_properties.constraint_product_template_default_code_uniq
+#, python-format
+msgid "The default code must be unique!"
+msgstr "Mã nội bộ phải là duy nhất"

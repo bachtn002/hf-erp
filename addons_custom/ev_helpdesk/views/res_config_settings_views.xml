@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ev_helpdesk</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <!-- data-key is module name, data-string is Model name -->
+                <div class="app_settings_block" data-string="Helpdesk" string="Ev Helpdesk" data-key="helpdesk" groups="helpdesk.group_helpdesk_manager">
+                    <h2>HELPDESK</h2>
+                    <div class="row mt16 o_settings_container" name="helpdesk_general_setting">
+                        <div class="col-12 col-lg-6 o_setting_box" id="days_allow_user_back_stage_ticket"
+                            title="The number days you allow user can set ticket back to new stage!">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Days</span>
+                                <br/>
+                                <span class="text-muted">The number days you allow user can set ticket back to new stage!</span>
+                                <div class="text-muted">
+                                    <field name="days_allow_back_to_new_ticket"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="stage_allow_user_back_ticket"
+                            title="The Stage of ticket user can set from current stage to">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Stage</span>
+                                <br/>
+                                <span class="text-muted">The Stage of ticket user can set from current stage to</span>
+                                <div class="text-muted">
+                                    <field name="stage_allow_user_back_ticket" options="{'no_create': true}"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="stage_allow_user_back_ticket">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Link Drive</span>
+                                <br/>
+                                <span class="text-muted">Link document guide user using system!</span>
+                                <div class="text-muted">
+                                    <field name="link_drive"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ev_helpdesk_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'helpdesk', 'bin_size': False}</field>
+    </record>
+
+    <menuitem
+        id="ev_helpdesk_config_settings_menu"
+        name="Settings"
+        parent="helpdesk.helpdesk_menu_config"
+        groups="base.group_system"
+        action="ev_helpdesk_config_settings_action"
+        sequence="0"/>
+
+    <record id="helpdesk.helpdesk_team_menu" model="ir.ui.menu">
+        <field name="sequence">1</field>
+    </record>
+
+</odoo>

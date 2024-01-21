@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="report_template_pos_order_view">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout" t-lang="en_US">
+                    <t t-foreach="docs" t-as="o">
+                        <table style="font-size:18px; font-family: Arial;text-align: left;border: hidden;">
+                            <tr style="border-bottom: 1px solid black">
+                                <td style="vertical-align: middle;border: hidden;" width="30%" height="auto">
+                                    <img t-if="o.company_id.logo" width="100%" height="auto"
+                                         style="position: relative;"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"
+                                         class="pull-left"/>
+                                </td>
+                                <td style="text-align: left;border: hidden;"></td>
+                            </tr>
+                            <tr style="text-align: left;border-top: 1px solid black">
+                                <td colspan="2" style="text-align: left;border: hidden;">
+                                    <span t-esc="o.company_id.name"></span>
+                                </td>
+                            </tr>
+                            <tr style="text-align: left;border: hidden;">
+                                <td colspan="2" style="text-align: left;border: hidden;">
+                                    <span t-esc="o.company_id.street"></span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="page">
+                            <h3 style="padding-top: 8%;">
+                                <span t-esc="o.x_pos_shop_id.name"/>
+                                -
+                                <span>
+                                    <t t-if="o.state == 'paid'">
+                                        <span>Đã thanh toán</span>
+                                    </t>
+                                    <t t-elif="o.state == 'done'">
+                                        <span>Đã vào sổ</span>
+                                    </t>
+                                    <t t-elif="o.state == 'draft'">
+                                        <span>Mới</span>
+                                    </t>
+                                    <t t-elif="o.state == 'invoiced'">
+                                        <span>Đã xuất hóa đơn</span>
+                                    </t>
+                                    <t t-elif="o.state == 'cancel'">
+                                        <span>Đã hủy</span>
+                                    </t>
+                                </span>
+                            </h3>
+                            <div style="padding-top: 2%;">
+                                <table style="width: 100%; float: left;margin: 0px; padding:0px;font-size:13px;font-family: Arial, Helvetica, sans-serif;"
+                                       class="table table-bordered">
+                                    <tr>
+                                        <td style="border-right: none">Phiên</td>
+                                        <td style="border-left: none; border-right: none;">
+                                            <span t-esc="o.session_id.name"/>
+                                        </td>
+                                        <td style="border-left: none; border-right: none;">Ngày đặt hàng:</td>
+                                        <td style="border-left: none;">
+                                            <span t-esc="datetime.datetime.strftime(o.date_order  + datetime.timedelta(hours=7), '%d-%m-%Y %H:%M:%S')"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: none">Khách hàng:</td>
+                                        <td style="border-left: none; border-right: none;">
+                                            <t t-if="o.partner_id">
+                                                <span t-esc="o.partner_id.name"/>
+                                            </t>
+                                            <t t-else="">
+                                            </t>
+                                        </td>
+                                        <td style="border-left: none; border-right: none;"></td>
+                                        <td style="border-left: none"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <h4 style="padding-top: 3%; text-decoration: underline black solid;">
+                                <span>Sản phẩm</span>
+                            </h4>
+                            <div>
+                                <table style="width: 100%; float: left;margin: 0px; padding:0px;font-size:13px;font-family: Arial, Helvetica, sans-serif;"
+                                       class="table table-bordered">
+                                    <tr>
+                                        <th style="width: 20%">Sản phẩm</th>
+                                        <th style="width: 8%">Số lượng</th>
+                                        <th style="width: 15%">Đơn giá</th>
+                                        <th style="width: 8%">Giảm giá(%)</th>
+                                        <th style="width: 15%">Các loại thuế</th>
+                                        <th style="width: 15%">Tổng số không có thuế</th>
+                                        <th style="width: 15%">Tổng cộng</th>
+                                    </tr>
+
+                                    <t t-foreach="o.lines" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="line.full_product_name"/>
+                                            </td>
+                                            <td>
+                                                <t t-if="int('{:,.2f}'.format(line.qty).replace('.',',').split(',')[1]) > 0">
+                                                    <span t-esc="'{:,.3f}'.format(line.qty).replace('.',',')"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <span t-esc="'{:,.0f}'.format(line.qty).replace('.',',')"/>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                <span t-esc="'{:,.0f}'.format(line.price_unit).replace('.',',')"/>
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <t t-if="int('{:,.2f}'.format(line.qty).replace('.',',').split(',')[1]) > 0">
+                                                    <span t-esc="'{:,.3f}'.format(line.discount).replace('.',',')"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <span t-esc="'{:,.0f}'.format(line.discount).replace('.',',')"/>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                <span t-esc="line.tax_ids_after_fiscal_position.name"/>
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <span t-esc="'{:,.0f}'.format(line.price_subtotal).replace('.',',')"/>
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <span t-esc="'{:,.0f}'.format(line.price_subtotal_incl).replace('.',',')"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <h4 style="padding-top: 3%; text-decoration: underline black solid;">
+                                <span>Phương thức thanh toán</span>
+                            </h4>
+                            <div>
+                                <table style="width: 100%; float: left;margin: 0px; padding:0px;font-size:13px;font-family: Arial, Helvetica, sans-serif;"
+                                       class="table table-bordered">
+                                    <tr>
+                                        <th>Sổ nhật ký</th>
+                                        <th>Tham chiếu đơn hàng</th>
+                                        <th>Số tiền</th>
+                                    </tr>
+
+                                    <t t-foreach="o.payment_ids" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="line.payment_method_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.name"/>
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <span t-esc="'{:,.0f}'.format(line.amount).replace('.',',')"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <h4 style="padding-top: 5%; text-decoration: underline black solid;">
+                                <span>Thông tin thêm</span>
+                            </h4>
+                            <div>
+                                <table style="width: 100%; float: left;margin: 0px; padding:0px;font-size:13px;font-family: Arial, Helvetica, sans-serif;"
+                                       class="table table-bordered">
+                                    <tr>
+                                        <td>Vị trí</td>
+                                        <td>
+                                            <span t-esc="o.x_pos_shop_id.warehouse_id.lot_stock_id.name"/>
+                                        </td>
+                                        <td>Người bán hàng</td>
+                                        <td>
+                                            <span t-esc="o.session_id.user_id.name"/>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Công ty</td>
+                                        <td>
+                                            <span t-esc="o.company_id.name"/>
+                                        </td>
+                                        <td>Tham chiếu biên lai</td>
+                                        <td>
+                                            <span t-esc="o.pos_reference"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="padding-right: 1%; margin: 5%; float:right;padding-top: 3%;">
+                                <span>Chữ ký:______________
+                                </span>
+                            </div>
+                        </div>
+
+                    </t>
+                </t>
+            </t>
+
+        </template>
+
+        <record id="paperformat_pos_order_rpt" model="report.paperformat">
+            <field name="name">Incoming A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">28</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+        <report
+                id="qweb_pos_order_rpt"
+                model="pos.order"
+                string="Pos Order PDF"
+                report_type="qweb-pdf"
+                name="ev_pos_refund.report_template_pos_order_view"
+                file="ev_pos_refund.report_template_pos_order_view"
+                paperformat="paperformat_pos_order_rpt"
+                menu="False"
+        />
+
+    </data>
+</odoo>

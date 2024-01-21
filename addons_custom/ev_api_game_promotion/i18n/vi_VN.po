@@ -1,0 +1,242 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_api_game_promotion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-24 10:37+0000\n"
+"PO-Revision-Date: 2022-06-24 10:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/helpers/Response.py:0
+#, python-format
+msgid "An error occurred, please try again later."
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__create_date
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_update_phone_code__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__phone
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_update_phone_code__phone
+msgid "Customer phone number"
+msgstr "Số điện thoại"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Data invalid!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_game_turn__state__done
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_update_phone_code__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_game_turn__state__draft
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_update_phone_code__state__draft
+msgid "Draft"
+msgstr "Mới"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_game_turn__state__error
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_update_phone_code__state__error
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__campaign_code
+msgid "Game code"
+msgstr "Mã game"
+
+#. module: ev_api_game_promotion
+#: model:ir.actions.act_window,name:ev_api_game_promotion.sync_game_turn_action
+#: model:ir.ui.menu,name:ev_api_game_promotion.sync_game_turn_menu
+msgid "Game turn Sync"
+msgstr "Lịch sử đồng bộ lượt chơi"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__turn
+msgid "Game turn reward"
+msgstr "Lượt chơi"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__hash_value
+msgid "Hash value"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__message_response
+msgid "Message external response"
+msgstr "Thông báo"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Missing apply condition!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Missing phone number!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Missing promotion code!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Missing token connection code!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__partner_id
+msgid "Partner id ref"
+msgstr "Tham chiếu KH"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Phone number code invalid"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model,name:ev_api_game_promotion.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Pos data successfully!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__pos_order_ref
+msgid "Post order ref"
+msgstr "Đơn bán hàng"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields.selection,name:ev_api_game_promotion.selection__sync_game_turn__state__queue
+msgid "Queue"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_game_turn__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_api_game_promotion
+#: model:ir.model,name:ev_api_game_promotion.model_sync_game_turn
+msgid "Sync Game Turn"
+msgstr "Đồng bộ lượt chơi"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid "Token connection invalid!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/controllers/update_phone_code.py:0
+#, python-format
+msgid ""
+"Your ip address is not allowed to access this API. Contact to your Admin!"
+msgstr ""
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_update_phone_code__apply_condition
+msgid "Apply condition"
+msgstr "Điều kiện áp dụng"
+
+#. module: ev_api_game_promotion
+#: model:ir.model.fields,field_description:ev_api_game_promotion.field_sync_update_phone_code__message_response
+msgid "Message"
+msgstr "Thông báo"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/models/sync_update_phone_code.py:0
+#, python-format
+msgid ""
+"Promotion code already maps with other phone number or time use is invalid"
+msgstr "Promotion code đã gắn với số điện thoại hoặc hết số lần sử dụng!"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/models/sync_update_phone_code.py:0
+#, python-format
+msgid "Promotion code is not exist"
+msgstr "Promotion code không tồn tại"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/models/sync_update_phone_code.py:0
+#, python-format
+msgid "Promotion code is unavailable"
+msgstr "Promotion code đã sử dụng hoặc chưa kích hoạt"
+
+#. module: ev_api_game_promotion
+#: model:ir.model,name:ev_api_game_promotion.model_sync_update_phone_code
+msgid "Sync Update Phone Code"
+msgstr "Update promotion code với sdt"
+
+#. module: ev_api_game_promotion
+#: model:ir.actions.act_window,name:ev_api_game_promotion.sync_update_phone_code_action
+#: model:ir.ui.menu,name:ev_api_game_promotion.sync_update_phone_code_menu
+msgid "sync update phone code"
+msgstr "Update promotion code với sdt"
+
+#. module: ev_api_game_promotion
+#: code:addons/ev_api_game_promotion/models/sync_update_phone_code.py:0
+#, python-format
+msgid "You got a promotion code %s. %s"
+msgstr "Chúc mừng bạn nhận được mã ưu đãi: %s. %s"

@@ -1,0 +1,22 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_product_process,product_process_name,model_product_process,stock.group_stock_user,1,1,1,1
+access_product_process_line,product_process_line_name,model_product_process_line,stock.group_stock_user,1,1,1,1
+access_product_process_detail,product_process_detail_name,model_product_process_detail,stock.group_stock_user,1,1,1,1
+
+access_product_process_rule,product_process_rule_name,model_product_process_rule,stock.group_stock_user,1,0,0,0
+access_product_process_rule_manager,product_process_rule_name_manager,model_product_process_rule,stock.group_stock_manager,1,1,1,1
+
+access_product_process_rule_line,product_process_rule_line_name,model_product_process_rule_line,stock.group_stock_user,1,0,0,0
+access_product_process_rule_line_manager,product_process_rule_line_name_manager,model_product_process_rule_line,stock.group_stock_manager,1,1,1,1
+
+access_product_process_account_move_user,product_process_account_move_name_user,account.model_account_move,stock.group_stock_user,1,1,1,0
+
+point_of_sale.access_product_template_pos_manager,product.template pos manager,product.model_product_template,point_of_sale.group_pos_manager,1,0,0,0
+point_of_sale.access_product_product_pos_manager,product.product.pos manager,product.model_product_product,point_of_sale.group_pos_manager,1,0,0,0
+point_of_sale.access_product_pricelist_manager,product.pricelist manager,product.model_product_pricelist,point_of_sale.group_pos_manager,1,0,0,0
+stock.access_product_template_stock_manager,product.template stock_manager,product.model_product_template,stock.group_stock_manager,1,0,0,0
+stock.access_product_product_stock_manager,product.product stock_manager,product.model_product_product,stock.group_stock_manager,1,0,0,0
+stock.access_product_pricelist_stock_manager,product.pricelist stock_manager,product.model_product_pricelist,stock.group_stock_manager,1,0,0,0
+purchase.access_product_pricelist_purchase_user,product.pricelist.purchase.manager,product.model_product_pricelist,purchase.group_purchase_manager,1,1,1,1
+

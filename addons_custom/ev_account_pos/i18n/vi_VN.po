@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-22 09:16+0000\n"
+"PO-Revision-Date: 2021-09-22 16:16+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ev_account_pos
+#: model_terms:ir.ui.view,arch_db:ev_account_pos.pos_payment_method_view_inherit_account_pos_form
+msgid "Account Journal"
+msgstr "Sổ nhật ký"
+
+#. module: ev_account_pos
+#: model_terms:ir.ui.view,arch_db:ev_account_pos.pos_payment_method_view_inherit_account_pos_form
+#: model_terms:ir.ui.view,arch_db:ev_account_pos.pos_payment_method_view_inherit_account_pos_tree
+msgid "Accounting with Account Journal"
+msgstr "Hạch toán với sổ nhật ký"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập cấu hình"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order_line__x_cost_price
+msgid "Cost Price"
+msgstr "Giá vốn"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_category__property_customer_return_account_id
+msgid "Customer Return Account"
+msgstr "Tài khoản hạch toán khi khách hàng trả hàng"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_session__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_category__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order_line__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_payment_method__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_session__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_category__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_template__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_company__id
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_payment_method__x_is_cash_method
+msgid "Is Cash Method"
+msgstr "Phương thức tiền mặt"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_session____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_category____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_pos_order_line__x_margin
+msgid "Margin"
+msgstr "Lợi nhuận"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Chi tiết đơn hàng bán lẻ"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Phương thức thanh toán Điểm bán hàng"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Ca bán hàng"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_product_category
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_account_pos
+#: model:ir.model,name:ev_account_pos.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_account_pos
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_company__x_revenue_accounting_by_product
+#: model:ir.model.fields,field_description:ev_account_pos.field_res_config_settings__x_revenue_accounting_by_product
+msgid "Revenue accounting by product"
+msgstr ""
+
+#. module: ev_account_pos
+#: code:addons/ev_account_pos/models/pos_session.py:0
+#, python-format
+msgid ""
+"Unable to close and validate the session.\n"
+"Please set corresponding tax account in each repartition line of the following taxes: \n"
+"%s"
+msgstr ""

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_update_invoice_no" model="ir.cron">
+        <field name="name">SInvoice: Update Invoice No</field>
+        <field name="model_id" ref="model_pos_order"/>
+        <field name="state">code</field>
+        <field name="code">model.action_update_invoice_no()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall"
+               eval="(DateTime.now().replace(hour=21, minute=0, second=00)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+</odoo>

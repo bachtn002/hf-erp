@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+sync_game_turn_access,sync_game_turn_access,model_sync_game_turn,base.group_user,1,1,1,1
+sync_update_phone_code_access,sync_update_phone_code_access,model_sync_update_phone_code,base.group_user,1,1,1,1

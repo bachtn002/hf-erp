@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_package_transfer_out_inherit">
+            <field name="name">stock_package_transfer_out_inherit</field>
+            <field name="model">stock.transfer</field>
+            <field name="inherit_id" ref="ev_stock_transfer.stock_transfer_from_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='in_picking_id']" position="after">
+                    <field name="is_confirm_out_from_scan" readonly="1" force_save="1"/>
+                    <field name="total_package_number" readonly="1" force_save="1"/>
+                </xpath>
+                <!-- Xác nhận -->
+                <xpath expr="//button[@name='action_confirm']" position="replace">
+                    <button name="action_confirm" states="draft" string="Confirm" type="object" class="oe_highlight" groups="stock.group_stock_user"/>
+                </xpath>
+                <!-- Kiem tra kha dung -->
+                <xpath expr="//button[@name='action_check_available']" position="replace">
+                    <button name="action_check_available" states="confirmed" string="Check Available" type="object" class="oe_highlight" groups="stock.group_stock_user"/>
+                </xpath>
+                <!-- Đặt số lượng xuất -->
+                <xpath expr="//button[@name='auto_fill_out_quantity']" position="replace">
+                    <button name="auto_fill_out_quantity" type="object" class="oe_highlight" string="Fill Out Quantity"
+                            attrs="{'invisible': [('state', '!=', 'ready')]}" groups="stock.group_stock_user"/>
+                </xpath>
+                <!-- Điều chuyển -->
+                <xpath expr="//button[@name='action_choose_out_date']" position="replace">
+                    <button name="action_choose_out_date" states="ready" string="Transfer"
+                            groups="stock.group_stock_user" type="object"
+                            class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//notebook//page//field[@name='field_binary_import']" position="before">
+                    <button name="action_create_package" type="object" states="draft,confirmed,ready" string="Create package"
+                            groups="ev_stock_package.group_user_package_activity" class="oe_highlight" style="margin: 0px 0px 5px 10px;"/>
+                    <button name="open_scan_package" type="object" states="draft,confirmed,ready" string="Scan package"
+                            groups="stock.group_stock_user,ev_stock_package.group_user_package_activity" class="oe_highlight" style="float:right; margin: 0px 0px 5px 10px;"/>
+                </xpath>
+                <xpath expr="//tree//field[@name='quantity']" position="after">
+                    <field name="qty_packed" sum="Packed Quantity" widget="float_factor" force_save="1"/>
+                    <field name="product_qty_scanned" invisible="1" force_save="1"/>
+                </xpath>
+                <xpath expr="//notebook//form//field[@name='quantity']" position="after">
+                    <field name="qty_packed"/>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Package Out">
+                        <!--Fixme: domain packages have state is not cancle, p/s domain below is not effected-->
+                        <field name="package_lines" domain="[('state', '!=', 'cancel')]">
+                            <tree editable="bottom" create="0" delete="0">
+                                <field name="name"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       readonly="1"/>
+                                <field name="weight" readonly="1"/>
+                                <field name="qty" readonly="1"/>
+                                <field name="qty_out"
+                                       attrs="{'readonly': [('parent.state', '!=', 'transfer')]}"/>
+                                <field name="state" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="stock_package_transfer_int_inherit">
+            <field name="name">stock_package_transfer_int_inherit</field>
+            <field name="model">stock.transfer</field>
+            <field name="inherit_id" ref="ev_stock_transfer.stock_transfer_to_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='in_picking_id']" position="after">
+                    <field name="is_confirm_in_from_scan" readonly="1" force_save="1"/>
+                    <field name="total_package_number" readonly="1" force_save="1"/>
+                </xpath>
+                 <xpath expr="//notebook//page//field[@name='transfer_line_ids']" position="before">
+                    <button name="open_scan_package" type="object" states="transfer" string="Scan package" style="float:right; margin: 0px 0px 5px 10px;"
+                             groups="stock.group_stock_user,ev_stock_package.group_user_package_activity" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//button[@name='action_choose_in_date']" position="replace">
+                    <button name="action_choose_in_date" states="transfer" string="Confirm" type="object" class="oe_highlight" groups="stock.group_stock_user"/>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Package IN">
+                        <!--Fixme: domain packages have state is not cancle, p/s domain below is not effected-->
+                        <field name="package_lines" domain="[('state', '!=', 'cancel')]">
+                            <tree editable="bottom" create="0" delete="0">
+                                <field name="name"
+                                       options="{'no_create':1, 'no_create_edit':1}"
+                                       readonly="1"/>
+                                <field name="weight" readonly="1"/>
+                                <field name="qty" readonly="1"/>
+                                <field name="qty_in"
+                                       attrs="{'readonly': [('parent.state', 'not in', ('draft','confirmed','ready'))]}"/>
+                                <field name="state" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <!-- scan line edit-->
+        <record id="stock_transfer_line_selector" model="ir.ui.view">
+            <field name="name">stock.transfer.line.selector</field>
+            <field name="model">stock.transfer.line</field>
+            <field name="priority">1000</field>
+            <field name="arch" type="xml">
+                <form string="Select a Product" class="o_barcode_line_form">
+                    <div class="row mt-5 mb-4">
+                        <div class="col-12 d-flex align-items-baseline">
+                            <i class="fa fa-fw fa-lg fa-tags mr-3" title="Product"/>
+                            <field name="product_id" placeholder="Product" readonly="1" force_save="1" required="1" nolabel="1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 my-2 d-flex align-items-baseline">
+                            <i class="fa fa-fw fa-lg fa-cube mr-3" title="Quantity"/>
+                            <field name="product_qty_scanned" placeholder="Quantity In/Out"/>
+                        </div>
+                        <div class="col-6 my-2 d-flex align-items-baseline">
+                            <field name="product_uom" placeholder="Unit of Measure" readonly="1"/>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

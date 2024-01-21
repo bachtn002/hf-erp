@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="request_forecast_view_tree" model="ir.ui.view">
+            <field name="name">request_forecast.view.tree</field>
+            <field name="model">request.forecast</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="shop_id" />
+                    <field name="date" />
+                    <field name="product_id" />
+                    <field name="predicted_qty" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="request_forecast_view_form" model="ir.ui.view">
+            <field name="name">request_forecast.view.form</field>
+            <field name="model">request.forecast</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div>
+                            <h1 style="text-align: center;">
+                                <b>Request Forecast</b>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="shop_id" />
+                                <field name="date" />
+                            </group>
+                            <group>
+                                <field name="product_id" />
+                                <field name="predicted_qty" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="request_forecast_action" model="ir.actions.act_window">
+            <field name="name">Request Forecast Action</field>
+            <field name="res_model">request.forecast</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="request_forecast_menu" name="Request Forecast Menu" action="request_forecast_action" parent="stock.menu_product_in_config_stock" sequence="60"/>
+    </data>
+
+
+</odoo>

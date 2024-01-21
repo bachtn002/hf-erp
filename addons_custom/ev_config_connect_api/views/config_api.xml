@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="config_api_view_tree" model="ir.ui.view">
+            <field name="name">config_api_view_tree</field>
+            <field name="model">config.api</field>
+            <field name="arch" type="xml">
+                <tree string="Config API" default_order='create_date desc'>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="token"/>
+                    <field name="connection_id"/>
+                    <field name="connection_preventive"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="config_api_view_form" model="ir.ui.view">
+            <field name="name">config_api_view_form</field>
+            <field name="model">config.api</field>
+            <field name="arch" type="xml">
+                <form string="Config API">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" string="active" type="object" name="toggle_active"
+                                    icon="fa-archive">
+                                <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="token"/>
+                            </group>
+                            <group>
+                                <field name="connection_id"/>
+                                <field name="preventive"/>
+                                <field name="connection_preventive"
+                                       attrs="{'required': [('preventive', '=', True)],'invisible': [('preventive', '=', False)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="config_api_view_search" model="ir.ui.view">
+            <field name="name">config_api_view_search</field>
+            <field name="model">config.api</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="token"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="config_api_action" model="ir.actions.act_window">
+            <field name="name">config_api_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.api</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="config_api_view_search"/>
+        </record>
+
+        <menuitem id="config_api_menu"
+                  name="Config API"
+                  action="config_api_action"
+                  parent="ev_config_connect_api.connection_api_menu"
+                  sequence="5"/>
+    </data>
+</odoo>

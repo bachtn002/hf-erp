@@ -1,0 +1,30 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_manager_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-10 04:06+0000\n"
+"PO-Revision-Date: 2021-07-10 04:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_manager_order
+#. openerp-web
+#: code:addons/ev_pos_manager_order/static/src/js/ManagerOrderLine.js:0
+#, python-format
+msgid "Order %s"
+msgstr "Đơn hàng %s"
+
+#. module: ev_pos_manager_order
+#. openerp-web
+#: code:addons/ev_pos_manager_order/static/src/js/ManagerOrder.js:0
+#, python-format
+msgid "at"
+msgstr "với"

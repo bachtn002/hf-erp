@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="im assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel='stylesheet' href='/ev_google_maps_widget/static/src/css/widget_google_maps.css'/>
+                <script type="text/javascript" src="/ev_google_maps_widget/static/src/js/widget_google_maps.js" />
+            </xpath>
+        </template>
+    </data>
+</odoo>

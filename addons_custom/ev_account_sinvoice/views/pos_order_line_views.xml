@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_pos_form_inherit">
+			<field name="name">view_pos_pos_form_inherit</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='tax_ids_after_fiscal_position']"
+				       position="after">
+                    <field name="sinvoice_tax_amount"/>
+				</xpath>
+			</field>
+		</record>
+    </data>
+</odoo>

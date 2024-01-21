@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_promotion_form_view_channel_inherit" model="ir.ui.view">
+            <field name="name">pos_promotion_form_view_channel_inherit</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='import_file']" position="after">
+                    <field name="pos_channel_ids" widget="many2many_tags" required="1"
+                           options="{'no_create': True, 'no_create_edit':True}"
+                           attrs="{'readonly': [('state', '!=', 'draft')]}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

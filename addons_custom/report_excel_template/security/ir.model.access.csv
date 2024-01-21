@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_report_excel_template,report_excel_template.report_excel_template,model_report_excel_template,,1,1,1,1
+access_report_excel_template_input,report_excel_template.web_report_input,model_report_input,,1,1,1,1
+access_report_excel_template_label,report_excel_template.web_report_label,model_report_label,,1,1,1,1
+access_report_excel_template_parameter,report_excel_template.web_report_parameter,model_report_parameter,,1,1,1,1
+access_report_excel_template_group,report_excel_template.web_report_group,model_report_group,,1,1,1,1
+access_report_excel_template_field,report_excel_template.web_report_field,model_report_field,,1,1,1,1
+access_report_excel_template_wizard,report_excel_template.report_excel_template_wizard,model_report_excel_template_wizard,,1,1,1,1
+access_xlsx_report_export_user,xlsx_report_export_user,model_xlsx_report_export,,1,1,1,1

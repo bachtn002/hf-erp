@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="app_support_view_tree" model="ir.ui.view">
+            <field name="name">App Support</field>
+            <field name="model">app.support</field>
+            <field name="arch" type="xml">
+                <tree string="App Support">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="app_support_view_form" model="ir.ui.view">
+            <field name="name">App Support</field>
+            <field name="model">app.support</field>
+            <field name="arch" type="xml">
+                <form string="App Support">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="app_support_view_search" model="ir.ui.view">
+            <field name="name">App Support</field>
+            <field name="model">app.support</field>
+            <field name="arch" type="xml">
+                <search string="App Support">
+                    <field name="name" string="App Support"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="app_support_act" model="ir.actions.act_window">
+            <field name="name">App Support</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">app.support</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="app_support_view_search"/>
+        </record>
+
+
+        <menuitem id="app_support_menu" name="App Support"
+                  action="app_support_act"
+                  parent="helpdesk.helpdesk_menu_config"
+                  sequence="5"/>
+    </data>
+</odoo>

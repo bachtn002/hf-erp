@@ -1,0 +1,31 @@
+#input_navigate {
+    z-index: 1000;
+    position: absolute;
+    left: 0px !important;
+    top: 0px;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    /*margin-left: 12px;*/
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 95%;
+    height: 22px;
+}
+
+#pac-input {
+    z-index: 1;
+    position: absolute;
+    left: 0px !important;
+    top: 0px;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    /*margin-left: 12px;*/
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 95%;
+    height: 22px;
+}

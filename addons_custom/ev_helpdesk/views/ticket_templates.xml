@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="portal_request_helpdesk" name="Portal layout : helpdesk tickets menu entries"
+                  inherit_id="portal.portal_breadcrumbs" priority="50">
+            <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+                <a id="create-helpdesk-request" t-attf-href="#">
+                    <button t-attf-class="btn btn-primary ml-sm-4" style="margin-left: 100px; margin-top: -7px;">
+                        Create helpdesk request
+                    </button>
+                </a>
+            </xpath>
+            <!-- Change route of home icon -->
+            <xpath expr="//ol[hasclass('o_portal_submenu')]/li[1]" position="replace">
+                <li class="breadcrumb-item ml-1">
+                    <a href="/helpdesk/home" aria-label="Home" title="Home">
+                        <i class="fa fa-home"/>
+                    </a>
+                </li>
+                <li t-if="page_name == 'my_details'" class="breadcrumb-item">Details</li>
+            </xpath>
+        </template>
+
+        <template id="portal_record_custom_layout" name="Portal single record layout">
+            <div t-attf-class="card mt-0 border-top-0 rounded-0 rounded-bottom #{classes if classes else ''} ev_helpdesk_custom_card_header">
+                <div t-if="card_header" t-attf-class="card-header #{header_classes if header_classes else ''}">
+                    <t t-raw="card_header"/>
+                </div>
+                <div t-if="card_body" t-attf-class="card-body #{body_classes if body_classes else ''}">
+                    <t t-raw="card_body"/>
+                </div>
+            </div>
+        </template>
+
+
+        <template id="questions_followup" name="Question Layout">
+            <t t-call="ev_helpdesk.portal_record_custom_layout">
+                        <t t-set="card_header">
+                            <div class="row no-gutters question-center">
+                                <div class="question-name">
+                                    <h3 t-esc="name"/>
+                                </div>
+                                <div class="question-detail">
+                                    <span t-esc="answer_detail"/>
+                                </div>
+                            </div>
+                        </t>
+                        <t t-set="card_body">
+                            <t t-foreach="answers" t-as="answer">
+                                 <div class="row no-gutters answer-center">
+                                    <div class="answer-name" style="width=100%">
+                                        <t t-set="next_question" t-value="answer.next_question_id.id if answer.next_question_id.id else answer.main_question_id.id"/>
+                                        <t t-set="last_question_redirect" t-value="'create_ticket/' + str(answer.id) if answer.page_end_redirect == 'create_ticket' else 'rating_page/' + str(id)"/>
+                                        <t t-set="next_url" t-value="answer.next_question_id.id if answer.next_question_id else last_question_redirect"/>
+                                        <div style="width=80%; float:left">
+                                            <span class="save_question_id_clicked" t-att-data-next_url="next_url" t-att-data-period_question="id"
+                                               style="color: black;float: left;">
+                                            <h4 t-field="answer.name"/>
+                                            </span>
+                                        </div>
+                                        <div style="width=20%; float:left">
+                                            <div style="margin-left: 10px; float: left;">
+                                                <p t-if="answer.error_image" t-att-id="answer.id" class="image-hover badge badge-pill badge-info"
+                                                      style="background-color: red; font-size: 15px; float: left;">Show image
+                                                </p>
+                                            </div>
+                                            <div t-if="answer.error_image" t-att-id="'damn-box-' + str(answer.id)"
+                                                 class="damn-box"
+                                                 style="position: fixed; right: 10px; margin-left: 10px; float: left;">
+                                                <img t-att-id="'damn-preview-' + str(answer.id)"
+                                                     style="display: none; width:100px; height:auto"
+                                                     t-attf-src="data:image/png;base64,{{answer.error_image}}"/>
+                                            </div>
+                                            <!-- The Modal -->
+                                            <div  t-att-id="'myModal' + str(answer.id)" class="modal" style="margin-top: 40px;">
+                                                <img class="modal-content" t-att-id="'myImage' + str(answer.id)" style="max-width:32%; height:auto"
+                                                     t-attf-src="data:image/png;base64,{{answer.error_image}}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="answer-detail">
+                                        <span t-field="answer.answer_detail" style="color: black;"/>
+                                        <t t-if="answer.name_url">
+                                            <br/>
+                                            <a target="_blank" t-attf-href="#{answer.name_url}">
+                                                <span>Tutorial link</span>
+                                            </a>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+                            <div style="margin-top: 70px;">
+                                <div style="width: 20p;float: right;margin-right: 106px;">
+                                    <button class="btn btn-primary ml-sm-4 button_question_back" t-att-data-id="id">
+                                        Back
+                                    </button>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+        </template>
+
+        <!-- Question portal template -->
+        <template id="questions_main_page" name="Main Question Layout">
+        <t t-call="portal.frontend_layout">
+            <t t-set="is_portal" t-value="True"/>
+            <div id="wrap" class='o_portal_wrap' style="margin-top: 50px !important;">
+                <div class="container mb64">
+                    <t t-call="ev_helpdesk.questions_followup"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Ticket Inherit portal template -->
+    <template id="portal_helpdesk_ticket" name="Helpdesk tickets list"
+              inherit_id="helpdesk.portal_helpdesk_ticket" priority="50">
+        <xpath expr="//t[@t-call='portal.portal_table']" position="replace">
+            <t t-call="portal.portal_table">
+            <t t-foreach="grouped_tickets" t-as="tickets">
+                <thead>
+                    <tr t-attf-class="{{'thead-light' if not groupby == 'none' else ''}}">
+                        <th class="text-left">Ref</th>
+                        <th t-if="groupby == 'none'">Description</th>
+                        <th t-else="">
+                            <em class="font-weight-normal text-muted">Tickets in stage:</em>
+                            <span t-field="tickets[0].stage_id.name"/>
+                        </th>
+                        <th/>
+                        <th>Assigned to</th>
+                        <th>Helpdesk Department</th>
+                        <th>Create date</th>
+                        <th>Close date</th>
+                        <th></th>
+                        <th t-if="groupby != 'stage'" class="text-center">Stage</th>
+                    </tr>
+                </thead>
+                <t t-foreach="tickets" t-as="ticket">
+                    <tr>
+                        <td class="text-left">
+                            <a t-attf-href="/helpdesk/ticket/#{ticket.id}">
+                                <small>#</small>
+                                <t t-esc="ticket.id"/>
+                            </a>
+                        </td>
+                        <td>
+                            <a t-attf-href="/helpdesk/ticket/#{ticket.id}">
+                                <span t-field="ticket.name"/>
+                            </a>
+                        </td>
+                        <td/>
+                        <td>
+                            <span t-field="ticket.user_id.name"/>
+                        </td>
+                        <td>
+                            <span t-field="ticket.helpdesk_department_id.name"/>
+                        </td>
+                        <td>
+                            <span t-field="ticket.create_date"/>
+                        </td>
+                        <td>
+                            <span t-field="ticket.close_date"/>
+                        </td>
+                        <td/>
+                        <td t-if="groupby != 'stage'" class="text-center">
+                            <span t-att-id="ticket.stage_id.id" class="badge badge-pill badge-info stage-color" t-field="ticket.stage_id.name"/>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+            </t>
+        </xpath>
+    </template>
+
+
+    <!-- Ticket Inherit portal template -->
+    <template id="tickets_followup_ev_helpdesk_custom" name="Helpdesk tickets custom"
+              inherit_id="helpdesk.tickets_followup" priority="50">
+        <xpath expr="//t[@t-set='card_body']" position="replace">
+            <t t-set="card_body">
+                <div class="row" t-if="ticket.x_allow_set_back_draft and ticket.stage_id.is_close">
+                    <button t-att-data-id="ticket.id" class="btn btn-primary set-back-to-draft" style="margin-left: 85%;float: right;">Set back to draft</button>
+                </div>
+                <div class="row" t-if="ticket.stage_id.is_start">
+                    <button t-att-data-id="ticket.id" class="btn btn-primary set-to-cancel" style="margin-left: 85%;float: right;background-color: red">Set to Cancel</button>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Reported on</p>
+                        <p t-field="ticket.create_date"/>
+<!--                        <p t-field="ticket.create_date" t-options='{"widget": "date"}'/>-->
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Helpdesk department</p>
+                        <p t-field="ticket.helpdesk_department_id.name"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Reported by</p>
+                        <p t-field="ticket.partner_id.name"/>
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Assigned to</p>
+                        <p t-field="ticket.user_id"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Phone</p>
+                        <p t-field="ticket.x_phone"/>
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">App Support</p>
+                        <p t-field="ticket.x_app_sp_id.name"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Email</p>
+                        <p t-field="ticket.partner_email"/>
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Pass Support</p>
+                        <p t-field="ticket.x_pass_sp"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Ticket type</p>
+                        <p t-field="ticket.ticket_type_id.name"/>
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Id Support</p>
+                        <p t-field="ticket.x_id_sp"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Close date</p>
+                        <p t-field="ticket.close_date"/>
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Pos shop code</p>
+                        <p t-field="ticket.x_pos_shop_code"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Description</p>
+                        <textarea style="width: 68%;border: none;min-height: 150px;" t-field="ticket.description" readonly="1"/>
+                    </div>
+                    <div class="col-6">
+                        <p style="width: 32%;float: left; font-weight: bold;">Problem Solution</p>
+                        <textarea style="width: 68%;border: none;min-height: 150px;" t-field="ticket.x_problem_solution" readonly="1"/>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row justify-content-center">
+                    <div class="ticket-rating" t-if="not ticket.x_is_rating and ticket.stage_id.is_close">
+                        <span style="margin-right: 29px;">We would love to hear your feedback
+                        </span>
+                        <div class="group-rating-icon col-auto example-block text-center">
+                            <label class="radio-inline">
+                                <img class="create-rating" src="/ev_helpdesk/static/img/not_satisfied.png" width="30"
+                                     t-att-data-id="ticket.id"
+                                     height="30" id="1"/>
+                            </label>
+                            <p class="text-center">
+                                <small>
+                                    <strong>Not satisfied</strong>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="group-rating-icon col-auto example-block text-center">
+                            <label class="radio-inline">
+                                <img class="create-rating" src="/ev_helpdesk/static/img/okay.png" width="30"
+                                     t-att-data-id="ticket.id"
+                                     height="30" id="3"/>
+                            </label>
+                            <p class="text-center">
+                                <small>
+                                    <strong>It's Okay</strong>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="group-rating-icon col-auto example-block text-center">
+                            <label class="radio-inline">
+                                <img class="create-rating" src="/ev_helpdesk/static/img/satisfy.png " width="30"
+                                     t-att-data-id="ticket.id"
+                                     height="30" id="5"/>
+                            </label>
+                            <p class="text-center">
+                                <small>
+                                    <strong>Satisfied</strong>
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ticket-message-feedback" style="display: none;">
+                        <span class="how-improve">Let us know How we can improve our service?</span>
+                        <textarea name="ticket-feedback-comment" id="ticket-feedback-comment" required="1"/>
+                        <button class="btn btn-primary ml-sm-4 submit-ticket-rating-button" type="button">Send feedback</button>
+                    </div>
+                    <h5 id="notify_messages" style="display: none;"></h5>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    </data>
+</odoo>

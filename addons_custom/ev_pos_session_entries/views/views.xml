@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+     <record id="group_pos_session_update_entries" model="res.groups">
+        <field name="name">POS Session Update Entries </field>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+     </record>
+     <record model="ir.ui.view" id="view_pos_session_update_entries">
+        <field name="name">Pos Session Update Entries</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <button id="validate_opened" position="after">
+                <button id="action_pos_session_update_entries" name="action_pos_session_update_entries" type="object" string="Update Entries"
+                        attrs="{'invisible' : ['|',('x_update_entries','!=',True),('state', '!=', 'closed')]}" groups="ev_pos_session_entries.group_pos_session_update_entries"
+                        class="oe_highlight"/>
+            </button>
+            <field name="stop_at" position="after">
+                <field name="x_update_entries" invisible="1"/>
+            </field>
+        </field>
+     </record>
+  </data>
+</odoo>

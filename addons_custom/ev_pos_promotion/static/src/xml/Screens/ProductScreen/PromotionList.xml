@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preverse">
+
+    <t t-name="PromotionList" owl="1">
+        <ul class="o_ev_pos_promotion__promotion-list">
+            <t t-foreach="props.promotions" t-as="item" t-key="item.cid">
+                <PromotionItem onClickPromotionItem="handleOnClickPromotionItem"
+                               promotion="item"/>
+            </t>
+        </ul>
+    </t>
+
+</templates>

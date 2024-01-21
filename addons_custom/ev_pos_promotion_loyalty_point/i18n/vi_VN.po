@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_promotion_loyalty_point
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-13 08:46+0000\n"
+"PO-Revision-Date: 2023-07-13 08:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_promotion_loyalty_point__loyalty_point
+msgid "Loyalty Point"
+msgstr "Điểm tặng"
+
+#. module: ev_pos_promotion_loyalty_point
+#: code:addons/ev_pos_promotion_loyalty_point/models/pos_promotion.py:0
+#: model:ir.model.fields.selection,name:ev_pos_promotion_loyalty_point.selection__pos_promotion__type__loyalty_point
+#, python-format
+msgid "Loyalty point"
+msgstr "CTKM tặng điểm tích lũy thành viên"
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model,name:ev_pos_promotion_loyalty_point.model_pos_promotion
+msgid "Pos promotion"
+msgstr "Chường trình khuyến mại"
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_promotion__pos_promotion_loyalty_point_ids
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_promotion_loyalty_point__promotion_id
+msgid "Promotion"
+msgstr ""
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_promotion_loyalty_point__total_amount
+msgid "Total Amount"
+msgstr "Tổng số tiền"
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_promotion__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: ev_pos_promotion_loyalty_point
+#: code:addons/ev_pos_promotion_loyalty_point/models/pos_promotion_loyalty_point.py:0
+#, python-format
+msgid "You can only create loyalty point > 0"
+msgstr "Bạn phải cấu hình điểm tặng > 0"
+
+#. module: ev_pos_promotion_loyalty_point
+#: code:addons/ev_pos_promotion_loyalty_point/models/pos_promotion_loyalty_point.py:0
+#, python-format
+msgid "You can only create total amount > 0"
+msgstr "Bạn phải cấu hình tổng số tiền > 0"
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_promotion__is_miniapp_member
+msgid "Is miniapp member"
+msgstr "Là thành viên MiniApp"
+
+#. module: ev_pos_promotion_loyalty_point
+#: model:ir.model.fields,field_description:ev_pos_promotion_loyalty_point.field_pos_order__x_note_member_app
+msgid "Note member app"
+msgstr "Mã thành viên"

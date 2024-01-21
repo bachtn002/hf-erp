@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="report_print_stamp_product_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_print_stamp_product.print_stamp_template" t-lang="en_US">
+                        <t t-foreach="o.print_stamp_line_ids" t-as="line">
+                            <t t-if="line.qty_printing > 0">
+                                <t t-foreach="line.qty_printing" t-as="times">
+                                    <div style="width:100%; height:9px"/>
+                                    <div class="stamp" style="font-family: Arial; padding-bottom: 1px;                                     
+                                    height:474px; width:510x; border:solid 1px black; border-radius:10px 10px 10px 10px;                                     
+                                    margin-right:0px; margin-bottom:70px; margin-left: 25px">
+                                        <div style="float:left; width:100%; margin:0px 2px">
+                                            <div style="float: left; font-size:18px; padding:3px 0px 0px 2px">
+                                                <span>HOTLINE ĐẶT HÀNG</span>
+                                                <br/>
+                                                <span style="font-weight: bold; font-size: 22px">
+                                                    <t t-esc="o.company_id.phone"/>
+                                                </span>
+                                            </div>
+                                            <div style="float:right; margin-right: ; padding-right:12px; padding-top: 2px; text-align: right; align:right">
+                                                <img width="200px" height="auto" style="object-fit: cover; position: relative;margin-top:7px; margin-right: 4px" t-att-src="'/ev_print_stamp_product/static/src/img/Logo-Homefarm-chuan-R-den.png'" class="pull-right"/>
+                                            </div>
+                                        </div>
+
+
+                                        <div style="height: 72px; width:100%; line-height:36px; float:left; text-align:center; font-size: 30px; font-weight: bold;  ">
+                                            <t t-esc="line.product_id.product_tmpl_id.name"/>
+                                        </div>
+
+                                        <div style="overflow: hidden; line-height:; word-spacing:-0.9px; float:left; width: 99%;  height: 190px; font-size:18px; border:1px solid; margin: 3px 2px 0px 3.5px">
+                                            <div style="height:23px ; ; width:100%; float: left; overflow: hidden">
+                                                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; float:left;                                                  width:50%; padding:0px 0px 0px 2px">
+                                                    <span style="font-weight: bold;">Xuất xứ:</span>
+                                                    <span style="font-weight: normal;">
+                                                        <t t-esc="line.origin"/>
+                                                    </span>
+                                                </div>
+
+                                                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; float:left;                                                  width:50%; text-align:left; padding-left: 2px">
+                                                    <span style="font-weight: bold;text-align:center">Bảo quản:</span>
+                                                    <span style="font-weight: normal; ">
+                                                        <t t-esc="line.product_id.product_tmpl_id.x_preserve"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div style="height:23px ;display: -webkit-box; -webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;                                              float:left; width:100%; padding-left: 2px">
+                                                <span style="font-weight: bold;">Thành phần:</span>
+                                                <span style="font-weight: normal;">
+                                                    <t t-esc="line.product_id.product_tmpl_id.x_ingredient"/>
+                                                </span>
+                                            </div>
+                                            <div style="height:23px ; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; float:left;                                              width:100%; padding-left: 2px">
+                                                <span style="font-weight: bold;">Đóng gói và phân phối:</span>
+                                                <span style="font-weight: normal;">
+                                                    <t t-esc="line.product_id.product_tmpl_id.x_packers"/>
+                                                </span>
+                                            </div>
+                                            <div style="height:23px ; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; float:left;                                             width:100%; padding-left: 2px">
+                                                <span style="font-weight: bold;">Địa chỉ:</span>
+                                                <span style="font-weight: normal;">
+                                                    <t t-esc="line.product_id.product_tmpl_id.x_supplier_address"/>
+                                                </span>
+                                            </div>
+                                            <div style="line-height:23px; max-height:90px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;                                               float:left; width:100%; padding-left: 2px">
+                                                <span style="font-weight: bold;">HDSD:</span>
+                                                <span style="font-weight: normal">
+                                                    <t t-esc="line.product_id.product_tmpl_id.x_use_manual"/>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div style="font-size:; float:left; width:100%; height:; border-bottom: 1px solid; ">
+                                            <div style="width:35%; float: left; font-size:25px; padding-top:3px">
+                                                <div style="padding-top:4px; padding-left:6px">
+                                            NĐG:
+                                                    <span style="font-weight: bold;">
+                                                        <t t-if="line.packed_date">
+                                                            <t t-esc="line.packed_date.strftime('%d/%m/%Y')"/>
+                                                        </t>
+                                                    </span>
+                                                </div>
+
+                                                <div style="padding-left:6px">
+                                            HSD:
+                                                    <span style="font-weight: bold;">
+                                                        <t t-if="line.expire_date">
+                                                            <t t-esc="line.expire_date.strftime('%d/%m/%Y')"/>
+                                                        </t>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                            <div style="height: 80px; width: 65%; font-size:18px;float: left; text-align: center; border-left: 1px solid;
+                                            padding-right:15px; padding-top:2px; padding-left:16px; padding-bottom:3px">
+                                                <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.barcode, 390, 55)" style="padding-right:25px"/>
+
+
+                                                <span style="letter-spacing: 2.5px ;font-size:15px">
+                                                    <t t-esc="line.product_id.barcode"/>
+                                                </span>
+
+                                            </div>
+                                        </div>
+
+                                        <div style="height:32px; width:100%; float:left; width:100%; padding-top: 1.5px; padding-left:5px; border-bottom: 1px solid;">
+                                            <div style="font-size: 22px; float:left">
+                                                <div style="width:250px; float:left">
+                                            Khối lượng tịnh:
+                                            
+                                                </div>
+                                                <div style="width:350px; text-align:center; margin-left:5px; float:left; padding-right: 15px">
+                                            Đơn giá:
+                                                    <t t-esc="'{:,.0f}đ'.format(line.price_unit).replace(',', '.')"/>/
+                                                    <t t-esc="line.uom_id.name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="word-spacing: -1.5px; float:left; width:100%; height:32px; padding-left:5px; padding-top: 4px">
+                                            <div style="font-size:17px;float: left;">
+                                        Phản ánh khiếu nại:
+                                                <t t-esc="o.company_id.x_complaint_hotline"/>
+                                        (giờ HC).Facebook &amp; Website:
+                                                <t t-esc="o.company_id.website[7:]"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_qweb_print_stamp_product" model="report.paperformat">
+            <field name="name">Print Stamp Product</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">55</field>
+            <field name="page_width">75</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">180</field>
+        </record>
+
+        <record id="report_print_stamp_product" model="ir.actions.report">
+            <field name="name">Print Stamp Product</field>
+            <field name="model">print.stamp</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ev_print_stamp_product.report_print_stamp_product_view</field>
+            <field name="report_file">ev_print_stamp_product.report_print_stamp_product_view</field>
+            <field name="paperformat_id" ref="ev_print_stamp_product.paperformat_qweb_print_stamp_product"/>
+            <field name="print_report_name">'Print Stamp Product'</field>
+        </record>
+
+    </data>
+</odoo>

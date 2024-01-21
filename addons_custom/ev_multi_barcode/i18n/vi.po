@@ -1,0 +1,142 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_multi_barcode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-14 09:41+0000\n"
+"PO-Revision-Date: 2022-01-14 09:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__active
+msgid "Active"
+msgstr ""
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__name
+msgid "Barcode"
+msgstr "Mã"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__display_name
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__id
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode____last_update
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__write_uid
+msgid "Last Updated by"
+msgstr "Chỉnh sửa bởi"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__write_date
+msgid "Last Updated on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_product__x_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_template__x_multi_barcode
+msgid "Multi Barcode"
+msgstr ""
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_product__x_barcode_ids
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_template__x_barcode_ids
+msgid "Multi Barcodes"
+msgstr ""
+
+#. module: ev_multi_barcode
+#: model:ir.model.constraint,message:ev_multi_barcode.constraint_product_barcode__unique_name
+msgid "Name barcode must be unique"
+msgstr "Mã Barcode phải là duy nhất!"
+
+#. module: ev_multi_barcode
+#: model:ir.model.constraint,message:ev_multi_barcode.constraint_product_barcode__positive_qty
+msgid "The quantity must be positive!"
+msgstr "Số lượng phải lớn hơn 0!"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__notes
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: ev_multi_barcode
+#: model:ir.actions.act_window,name:ev_multi_barcode.product_barcode_action
+#: model:ir.model,name:ev_multi_barcode.model_product_barcode
+#: model:ir.ui.menu,name:ev_multi_barcode.product_barcode_menu
+msgid "Product Barcode"
+msgstr "Multi Barcode"
+
+#. module: ev_multi_barcode
+#: model:ir.model,name:ev_multi_barcode.model_product_template
+#: model:ir.model.fields,field_description:ev_multi_barcode.field_product_barcode__product_id
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_multi_barcode
+#: model:ir.model.fields,help:ev_multi_barcode.field_product_product__x_multi_barcode
+#: model:ir.model.fields,help:ev_multi_barcode.field_product_template__x_multi_barcode
+msgid ""
+"Technical field used to search product in POS, parse barcode field object "
+"into text value, separate by '|' symbol"
+msgstr "Trường dữ liệu sử dụng để xử lý định dạng các mã barcode của sản phẩm, hỗ trợ tìm kiếm khi sản phẩm chứa nhiều barcode"
+
+#. module: ev_multi_barcode
+#: code:addons/ev_multi_barcode/models/product_barcode.py:0
+#: code:addons/ev_multi_barcode/models/product_template.py:0
+#, python-format
+msgid "Barcode should be unique in system!"
+msgstr "Mã Barcode phải là duy nhất!"
+
+#. module: ev_multi_barcode
+#: code:addons/ev_multi_barcode/models/product_barcode.py:0
+#, python-format
+msgid "Barcode have to assign a product"
+msgstr "Mã Barcode phải được gắn với một sản phẩm!"
+
+#. module: ev_multi_barcode
+#: code:addons/ev_multi_barcode/models/product_barcode.py:0
+#: code:addons/ev_multi_barcode/models/product_barcode.py:0
+#: code:addons/ev_multi_barcode/models/product_template.py:0
+#: code:addons/ev_multi_barcode/models/product_template.py:0
+#, python-format
+msgid ""
+"The quantity for the product %s doesn't respect the rounding precision "
+"defined on the unit of measure %s. Please change the quantity done or the "
+"rounding precision of your unit of measure."
+msgstr "Số lượng của sản phẩm %s không phù hợp với đơn vị tính %s!"

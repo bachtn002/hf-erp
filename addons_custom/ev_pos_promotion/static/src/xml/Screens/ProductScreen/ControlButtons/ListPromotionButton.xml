@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:splace="preserve">
+
+    <t t-name="ListPromotionButton" owl="1">
+        <div class="control-button" t-on-click="onClickListPromotionButton">
+            <i class="control-button-number" style="font-size: 150%;color:#FFFFFF;font-weight:bold">
+                <t t-esc="props.promotions.length"/>
+            </i>
+            <span style="font-size: 150%;color:#875A7B;font-weight:bold">List Promotions</span>
+        </div>
+    </t>
+</templates>

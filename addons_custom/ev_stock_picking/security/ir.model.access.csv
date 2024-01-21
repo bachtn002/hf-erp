@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_production_lot_print_stamp,production_lot_print_stamp,model_production_lot_print_stamp,,1,1,1,1
+access_production_lot_line,production_lot_line,model_production_lot_line,,1,1,1,1
+access_product_product_print_stamp,product_product_print_stamp,model_product_product_print_stamp,,1,1,1,1
+access_product_line,product_line,model_product_line,,1,1,1,1
+access_account_erpviet,ev_account_erpviet_01,model_account_journal_general,stock.group_stock_user,1,0,0,0
+access_account_erpviet_purchase,ev_account_erpviet_purchase,model_account_journal_general,purchase.group_purchase_user,1,0,0,0
+purchase_stock.access_stock_picking_purchase_user,purchase_stock.stock.picking,stock.model_stock_picking,purchase.group_purchase_user,1,1,1,0
+purchase_stock.access_stock_picking_purchase_user_manager,purchase_stock.stock.picking,stock.model_stock_picking,purchase.group_purchase_manager,1,1,1,0
+access_stock_scrap_purchase,stock_scrap_purchase_name,stock.model_stock_scrap,purchase.group_purchase_user,1,0,0,0
+access_stock_return_picking_purchase,stock_return_picking_purchase_name,stock.model_stock_return_picking,purchase.group_purchase_user,1,1,1,0
+access_stock_return_picking_line_purchase,stock_return_picking_line_purchase_name,stock.model_stock_return_picking_line,purchase.group_purchase_user,1,1,1,0
+

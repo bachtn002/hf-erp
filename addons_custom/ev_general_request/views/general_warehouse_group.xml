@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="general_warehouse_group_view_tree" model="ir.ui.view">
+            <field name="name">general_warehouse_group_view_tree</field>
+            <field name="model">general.warehouse.group</field>
+            <field name="arch" type="xml">
+                <tree string="General Warehouse Group" default_order='name desc'>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="general_warehouse_group_view_form" model="ir.ui.view">
+            <field name="name">general_warehouse_group_view_form</field>
+            <field name="model">general.warehouse.group</field>
+            <field name="arch" type="xml">
+                <form string="General Warehouse Group">
+                    <sheet>
+                        <header>
+                            <button name='%(general_warehouse_group_import_action)d' type='action'
+                                    string="Update file warehouse" class="oe_highlight" icon="fa-download"/>
+                            <button name='dowload_template' type="object" string="Dowload file"
+                                    icon="fa-download" class="oe-highlight"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="warehouse_id" required="1"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                            </group>
+                            <group>
+                                <field name="warehouse_ids" widget="many2many_tags"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="general_warehouse_group_view_search" model="ir.ui.view">
+            <field name="name">general_warehouse_group_view_search</field>
+            <field name="model">general.warehouse.group</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="warehouse_id" filter_domain="[('warehouse_id.name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="general_warehouse_group_action" model="ir.actions.act_window">
+            <field name="name">general_warehouse_group_view_tree</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">general.warehouse.group</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="general_warehouse_group_view_search"/>
+        </record>
+
+
+        <menuitem id="general_warehouse_group_menu"
+                  name="General Warehouse Group"
+                  action="general_warehouse_group_action"
+                  parent="stock.menu_warehouse_config"
+                  sequence="4"/>
+    </data>
+</odoo>

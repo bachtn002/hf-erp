@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.rule" id="sale_request_user_rule">
+            <field name="name">Sale request: see only own request</field>
+            <field name="model_id" ref="model_sale_request"/>
+            <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+            <field name="domain_force">
+                [('create_uid', '=', user.id)]
+            </field>
+        </record>
+        <record model="ir.rule" id="sale_request_manager_rule">
+            <field name="name">Purchase request: see all request</field>
+            <field name="model_id" ref="model_sale_request"/>
+            <field name="groups"
+                   eval="[(4, ref('stock.group_stock_manager'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+        <record model="ir.rule" id="sale_request_coordinator_rule">
+            <field name="name">Purchase request: see all request</field>
+            <field name="model_id" ref="model_sale_request"/>
+            <field name="groups" eval="[(4, ref('ev_stock_request.group_stock_coordinator'))]"/>
+            <field name="domain_force">[('warehouse_id', 'in', user.warehouse_ids.ids)]</field>
+        </record>
+        <record model="ir.rule" id="sale_request_user_rule">
+            <field name="name">Sale request: see only warehouse request</field>
+            <field name="model_id" ref="model_sale_request"/>
+            <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+            <field name="domain_force">[('warehouse_id', 'in', user.warehouse_ids.ids)]</field>
+        </record>
+    </data>
+</odoo>

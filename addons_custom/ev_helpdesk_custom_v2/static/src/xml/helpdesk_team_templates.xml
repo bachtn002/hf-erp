@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="HelpdeskDashboardCustom" t-inherit="helpdesk.HelpdeskDashboard" t-inherit-mode="extension" owl="1">
+        <xpath expr="//table[@class='table table-sm']" position="replace">
+            <table class="table table-sm">
+                <tr>
+                    <td class="o_text">
+                        <div class="o_highlight">My Tickets</div>
+                    </td>
+                    <td t-att-class="demo_class + ' o_main'" title="My Open Tickets"
+                        name="helpdesk.helpdesk_my_ticket_action_no_create" t-attr-show_demo="{{show_demo}}">
+                        <a>
+                            <span class="o_highlight">
+                                <t t-esc="values['my_all']['count']"/>
+                            </span>
+                            <br/>
+                            Tickets
+                        </a>
+                    </td>
+                    <td t-att-class="demo_class + ' o_main'" title="My High Priority Tickets"
+                        name="helpdesk.helpdesk_my_ticket_action_no_create" context="{'search_default_priority': '2'}"
+                        t-attr-show_demo="{{show_demo}}">
+                        <a>
+                            <span class="o_highlight">
+                                <t t-esc="values['my_high']['count']"/>
+                            </span>
+                            <br/>
+                            High Priority (
+                            <span title="Two stars, with a maximum of three" role="img"
+                                  aria-label="Two stars, with a maximum of three">
+                                <span class="fa fa-star" style="color: gold"/>
+                                <span class="fa fa-star" style="color: gold"/>
+                            </span>
+                            )
+                        </a>
+                    </td>
+                    <td t-att-class="demo_class + ' o_main'" title="My Urgent Tickets"
+                        name="helpdesk.helpdesk_my_ticket_action_no_create" context="{'search_default_priority': '3'}"
+                        t-attr-show_demo="{{show_demo}}">
+                        <a>
+                            <span class="o_highlight">
+                                <t t-esc="values['my_urgent']['count']"/>
+                            </span>
+                            <br/>
+                            Urgent (
+                            <span title="Three stars, maximum score" role="img" aria-label="Three stars, maximum score">
+                                <span class="fa fa-star" style="color: gold"/>
+                                <span class="fa fa-star" style="color: gold"/>
+                                <span class="fa fa-star" style="color: gold"/>
+                            </span>
+                            )
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="o_text">Avg Open Hours</td>
+                    <td title="My Open Tickets Analysis" t-att-class="demo_class + ' o_main'"
+                        name="helpdesk.helpdesk_ticket_action_dashboard" t-attr-show_demo="{{show_demo}}">
+                        <a>
+                            <t t-esc="values['my_all']['hours']"/>
+                        </a>
+                    </td>
+                    <td title="My High Priority Tickets Analysis"
+                        t-att-class="demo_class + ' o_main'"
+                        name="helpdesk.helpdesk_ticket_action_dashboard" context="{'search_default_priority': '2'}"
+                        t-attr-show_demo="{{show_demo}}">
+                        <a>
+                            <t t-esc="values['my_high']['hours']"/>
+                        </a>
+                    </td>
+                    <td title="My Urgent Tickets Analysis" t-att-class="demo_class + ' o_main'"
+                        name="helpdesk.helpdesk_ticket_action_dashboard" context="{'search_default_priority': '3'}"
+                        t-attr-show_demo="{{show_demo}}">
+                        <a>
+                            <t t-esc="values['my_urgent']['hours']"/>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="o_text" t-if="success_rate_enable">SLA Failed</td>
+                    <td t-if="success_rate_enable"
+                        t-att-class="demo_class + (values['my_all']['failed'] ? 'o_warning' : 'o_main')"
+                        name="helpdesk.helpdesk_ticket_action_sla" title="My Failed Tickets"
+                        t-attr-show_demo="{{show_demo}}">
+                        <a name="helpdesk.helpdesk_ticket_action_sla"
+                           data-extra="overdue" t-attr-show_demo="{{show_demo}}">
+                            <t t-esc="values['my_all']['failed']"/>
+                        </a>
+                    </td>
+                    <td t-if="success_rate_enable"
+                        t-att-class="demo_class + (values['my_all']['failed'] ? 'o_warning' : 'o_main')"
+                        name="helpdesk.helpdesk_ticket_action_sla" title="My High Priority Failed Tickets"
+                        context="{'search_default_priority': '2'}" t-attr-show_demo="{{show_demo}}">
+                        <a data-extra="overdue">
+                            <t t-esc="values['my_high']['failed']"/>
+                        </a>
+                    </td>
+                    <td t-if="success_rate_enable"
+                        t-att-class="demo_class + (values['my_all']['failed'] ? 'o_warning' : 'o_main')"
+                        name="helpdesk.helpdesk_ticket_action_sla" title="My Urgent Failed Tickets"
+                        context="{'search_default_priority': '3'}" t-attr-show_demo="{{show_demo}}">
+                        <a data-extra="overdue">
+                            <t t-esc="values['my_urgent']['failed']"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </xpath>
+    </t>
+</templates>

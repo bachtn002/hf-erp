@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="source_order_view_tree" model="ir.ui.view">
+            <field name="name">Source Order Tree</field>
+            <field name="model">source.order</field>
+            <field name="arch" type="xml">
+                <tree string="Source Order">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="source_order_view_form" model="ir.ui.view">
+            <field name="name">Source Order Form</field>
+            <field name="model">source.order</field>
+            <field name="arch" type="xml">
+                <form string="Source Order">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+         <record id="source_order_view_search" model="ir.ui.view">
+           <field name="name">Source Order</field>
+           <field name="model">source.order</field>
+                <field name="arch" type="xml">
+                    <search string="Source Order">
+                        <field name="code" string="Source Order Code"/>
+                        <field name="name" string="Source Order"/>
+                    </search>
+                </field>
+        </record>
+
+        <record id="source_order_act" model="ir.actions.act_window">
+            <field name="name">Source Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">source.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="source_order_view_search"/>
+        </record>
+
+        <menuitem id="source_order_menu" name="Source Order"
+                  action="source_order_act"
+                  parent="crm.crm_menu_config"
+                  sequence="30"/>
+
+<!--        <menuitem id="source_order_menu" name="Source Order"-->
+<!--                  action="source_order_act"-->
+<!--                  parent="ev_pos_erpviet.menu_pos_config_custom"-->
+<!--                  sequence="55"/>-->
+
+    </data>
+
+</odoo>

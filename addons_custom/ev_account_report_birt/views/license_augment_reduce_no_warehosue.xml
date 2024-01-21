@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_license_augment_reduce_no_warehouse_view_form" model="ir.ui.view">
+            <field name="name">License Augment Reduce No Warehouse</field>
+            <field name="model">license.augment.reduce.no.warehouse</field>
+            <field name="arch" type="xml">
+                <form string="License In Out No Move">
+                    <group>
+                        <group>
+                            <field name="date_from" required="1" string="From date"/>
+                            <field name="date_to" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="type" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="aciton_license_augment_reduce_no_warehouse" model="ir.actions.act_window">
+            <field name="name">License Augment Reduce No Warehouse</field>
+            <field name="res_model">license.augment.reduce.no.warehouse</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_license_augment_reduce_no_warehouse_view_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_license_augment_reduce_no_warehouse" groups="account.group_account_user"
+                  name="License Augment Reduce No Warehouse" action="aciton_license_augment_reduce_no_warehouse"
+                  parent="account.account_reports_legal_statements_menu"
+                  sequence="100"/>
+
+    </data>
+</odoo>

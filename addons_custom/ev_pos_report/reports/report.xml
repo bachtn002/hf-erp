@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="print_pos_order_xlsx"
+            model="pos.order.report"
+            string="Print Pos Order XLSX"
+            report_type="xlsx"
+            name="ev_pos_report.pos_order_xlsx"
+            file="ev_pos_report.pos_order_xlsx"
+            print_report_name="'Report Pos Order'"
+    />
+    <report
+            id="print_pos_order_line_xlsx"
+            model="pos.order.report"
+            string="Print Pos Order Line XLSX"
+            report_type="xlsx"
+            name="ev_pos_report.pos_order_line_xlsx"
+            file="ev_pos_report.pos_order_line_xlsx"
+            print_report_name="'Report Pos Order Line'"
+    />
+    <report
+            id="print_pos_order_payment_method_xlsx"
+            model="pos.order.report"
+            string="Print Pos Order For Payment Method XLSX"
+            report_type="xlsx"
+            name="ev_pos_report.pos_order_payment_method_xlsx"
+            file="ev_pos_report.pos_order_payment_method_xlsx"
+            print_report_name="'Report Pos Order For Payment Method'"
+    />
+</odoo>

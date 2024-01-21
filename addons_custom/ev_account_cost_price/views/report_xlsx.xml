@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+                id="action_export_cost_price_period"
+                string="In Excel"
+                model="cost.price.period"
+                report_type="xlsx"
+                file="ev_cost_price_period.export_cost_price_period"
+                name="ev_cost_price_period.export_cost_price_period"
+                print_report_name="'%s' %(object.name)"/>
+    </data>
+</odoo>

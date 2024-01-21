@@ -1,0 +1,307 @@
+<templates id="template" xml:space="preserve">
+	<t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+		<xpath expr="//img[@class='pos-receipt-logo']" position="replace">
+			<t t-if="receipt.company.logo">
+                <img style="width:120px" class="pos-receipt-logo"
+                     t-att-src="receipt.company.logo" alt="Logo"/>
+                <div
+                style="font-size:13px; text-align: center; font-family: Arial, Helvetica, sans-serif; vertical-align: top;">
+                    <t t-esc="receipt.addressShop_search"/>
+                </div>
+            </t>
+		</xpath>
+        <xpath expr="//div[@class='pos-receipt-contact']" position="replace">
+			<div style="text-align: center;font-weight: bold;font-family: Arial, Helvetica, sans-serif; font-size:15px;">
+                    HÓA ĐƠN BÁN HÀNG
+            </div>
+            <br clear="both"/>
+            <table style="width: 100%;font-size:13px;font-family: Arial, Helvetica, sans-serif;"
+                   class="table table-bordered">
+                <tr>
+                    <td style="width:30%">Ngày bán: </td>
+                    <td>
+                        <t t-esc="receipt.date.localestring"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:30%">Điểm bán: </td>
+                    <td>
+                        <t t-esc="receipt.code_shop"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:30%">HĐ: </td>
+                    <td>
+                        <t t-esc="receipt.name"/>
+                    </td>
+                    </tr>
+                <tr>
+                    <td style="width:30%">NVBH: </td>
+                    <td>
+                        <t t-esc='receipt.cashier'/>
+                    </td>
+                </tr>
+            </table>
+		</xpath>
+        <xpath expr="//div[@class='orderlines']" position="replace">
+			<br clear="both"/>
+            <table class="table table-bordered"
+                   style="table-layout: fixed; width:100%; padding:0px; margin: 0px; border:0; font-size:12px; font-family: Arial, Helvetica, sans-serif;"
+                   id="hash_config_table">
+                <thead style="display: table-row-group; border-top: 1.5px dotted;">
+                    <tr style="padding-top: 5px">
+                        <th class="text-center" style="width: 40%" scope="col">Mặt hàng</th>
+                        <th class="text-center" style="width: 30%; text-align:right;" scope="col">Đơn giá</th>
+                        <th class="text-center" style="width: 20%;text-align:center;" scope="col">SL</th>
+                        <th class="text-center" style="width: 20%;text-align:right;" scope="col">T.Tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-set="promotion_total" t-value="0"/>
+                    <t t-foreach="receipt.orderlines" t-as="line" t-key="line.id">
+                        <tr>
+                            <td colspan="3" style="text-align : left;font-size:12px;">
+                                <t t-esc="line.product_name"/>
+                            </td>
+                        </tr>
+                        <t t-if="line.price_display >= 0">
+                            <tr>
+                                <td style="text-align : center"/>
+                                <!--                            <td style="text-align : right"><t t-esc="env.pos.format_currency_no_symbol(line.price_display_one)"/></td>-->
+                                <td style="text-align : right"><t t-esc="env.pos.format_currency_no_symbol(line.price)"/></td>
+                                <td style="text-align : center"><t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/></td>
+                                <td style="text-align : right"><t t-esc="env.pos.format_currency_no_symbol(line.price_display)"/></td>
+                            </tr>
+                        </t>
+                        <t t-else="">
+                            <td colspan="3"></td>
+                            <td style="text-align : right"><t t-esc="env.pos.format_currency_no_symbol(line.price_display)"/></td>
+                        </t>
+                        <t t-if="line.product_type == 'service' and !line.combo_prod_info and line.combo_prod_info.length == 0">
+                            <t t-set="promotion_total"
+                               t-value="promotion_total + line.price_display"/>
+                        </t>
+                        <t t-elif="line.product_type == 'service' and line.price_display  &lt; 0">
+                            <t t-set="promotion_total"
+                               t-value="promotion_total + line.price_display"/>
+                        </t>
+                        <t t-elif="line.product_type == 'service' and line.promotion_id">
+                            <t t-set="promotion_total"
+                               t-value="promotion_total + (line.price_display_one)* line.quantity"/>
+                        </t>
+                        <t t-elif="line.product_type != 'service' and line.promotion_id">
+                            <t t-set="promotion_total"
+                               t-value="promotion_total + (line.price_display_one - line.price_lst)* line.quantity"/>
+                        </t>
+                        <t t-if="line.promotion_id and line.product_type != 'service' and (line.price_display_one - line.price_lst)* line.quantity != 0 and line.price_display != 0">
+                            <tr>
+                                <td colspan="3" style="text-align: left;font-size:12px;">
+				                    KM
+			                    </td>
+                                <td colspan="1"
+                                    style="text-align : right;font-size:12px;"><t t-esc="env.pos.format_currency_no_symbol((line.price_display_one - line.price_lst)* line.quantity)"/></td>
+                            </tr>
+	                    </t>
+                    </t>
+                </tbody>
+            </table>
+		</xpath>
+        <xpath expr="//t[@t-foreach='receipt.paymentlines']" position="replace">
+
+		</xpath>
+        <xpath expr="//div[@class='pos-receipt-amount']" position="replace">
+			<br clear="both"/>
+            <table style="width:100%; padding:0px; margin: 0px; border:0; table-layout: fixed; font-family: Arial, Helvetica, sans-serif; font-size:13px;"
+                   class="table table-bordered">
+                <colgroup>
+                    <col width='25%'/>
+                    <col width='25%'/>
+                    <col width='25%'/>
+                    <col width='25%'/>
+                </colgroup>
+                <thead class="pos-center-align" style="border-top: 1.5px dotted; border-bottom: 0px;">
+                    <tr>
+                        <td colspan="3"
+                            style="text-align:left;font-weight: bold;padding-top: 5px;">TỔNG TIỀN T.TOÁN</td>
+                        <td style="text-align:right;  font-weight: bold; padding-top: 5px;"><t t-esc="env.pos.format_currency_no_symbol(receipt.total_with_tax)"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"
+                            style="text-align:left;font-weight: bold;padding-top: 5px;">TỔNG TIỀN ĐÃ GIẢM</td>
+                        <td style="text-align:right;  font-weight: bold; padding-top: 5px;"><t t-esc="env.pos.format_currency_no_symbol(promotion_total)"/></td>
+                    </tr>
+                    <br clear="both"/>
+                    <tr>
+                        <td colspan="3" style="text-align:left;font-weight: bold;">TIỀN KHÁCH TRẢ</td>
+                        <t t-set="amount" t-value="0"/>
+                        <t t-foreach="receipt.paymentlines" t-as="line" t-key="line.cid">
+							<t t-set="amount" t-value="amount+line.amount"/>
+                        </t>
+                        <td style="text-align:right; font-weight: bold;"><t t-esc="env.pos.format_currency_no_symbol(amount)"/></td>
+                    </tr>
+
+                    <t t-foreach="receipt.paymentlines" t-as="line" t-key="line.cid">
+						<tr>
+	                        <td colspan="3" style="text-align:left; padding-top: 5px;"><t t-esc="line.name"/></td>
+                            <td style="text-align:right; padding-top: 5px;"><t t-esc="env.pos.format_currency_no_symbol(line.amount)"/></td>
+                            <br clear="both"/>
+                        </tr>
+					</t>
+                    <br clear="both"/>
+                    <tr>
+		                <t t-if="receipt.total_rounded != receipt.total_with_tax">
+                            <td colspan="3" style="text-align:left">Làm tròn</td>
+                            <td style="text-align:right;"><t t-esc="env.pos.format_currency(receipt.total_rounded)"/></td>
+                        </t>
+	                </tr>
+                </thead>
+            </table>
+		</xpath>
+        <xpath expr="//t[@t-if='!isTaxIncluded']" position="replace">
+
+		</xpath>
+        <xpath expr="//t[@t-if='isTaxIncluded']" position="replace">
+
+		</xpath>
+        <xpath expr="//div[@class='pos-receipt-amount receipt-change']" position="replace">
+			<table style="width:100%; padding:0px; margin: 0px; border:0; table-layout: fixed; font-family: Arial, Helvetica, sans-serif;font-size:13px;"
+                   class="table table-bordered">
+				<colgroup>
+                    <col width='25%'/>
+                    <col width='25%'/>
+                    <col width='25%'/>
+                    <col width='25%'/>
+                </colgroup>
+                <thead class="pos-center-align" style="border-top: 0px ; border-bottom: 0px;">
+					<tr>
+                        <td colspan="3" style="text-align:left;font-weight: bold;">TIỀN TRẢ LẠI</td>
+                        <td style="text-align:right; font-weight: bold;"><t t-esc="env.pos.format_currency_no_symbol(receipt.change)"/></td>
+                    </tr>
+                    <br clear="both"/>
+				</thead>
+			</table>
+            <div style='text-align:center;font-size:13px; font-family: Arial, Helvetica, sans-serif; padding-bottom: 5px;'>(Giá đã bao gồm thuế GTGT)</div>
+            <t t-if='receipt.loyalty'>
+                <table style="width:100%; margin: 0px; border:0; table-layout: fixed; font-family: Arial, Helvetica, sans-serif;"
+                       class="table table-bordered">
+
+		                <colgroup>
+		                    <col width='25%'/>
+                            <col width='25%'/>
+                            <col width='25%'/>
+                            <col width='25%'/>
+		                </colgroup>
+                    <thead class="pos-center-align"
+                           style="border-top: 1.5px dotted; border-bottom: 0px;font-size:13px;">
+			                <tr style="">
+                                <td colspan="2" style="text-align:left;padding-top: 5px;">Khách hàng</td>
+                                <td colspan="2" style="text-align:right;"><t t-esc="receipt.loyalty.client.name"/></td>
+                            </tr>
+                        <tr style="">
+                                <td colspan="2" style="text-align:left;padding-top: 5px;">Số điện thoại</td>
+                            <td colspan="2" style="text-align:right;"><t t-esc="receipt.loyalty.client.phone"/></td>
+                            </tr>
+                        <tr style="padding-top: 5px">
+                                <td colspan="3" style="text-align:left;padding-top: 5px;">Điểm tích lũy</td>
+                            <td style="text-align:right;padding-top: 5px;"><t t-esc="env.pos.format_currency_no_symbol(receipt.loyalty.points_won)"/></td>
+                            </tr>
+                        <t t-if='receipt.loyalty.points_spent'>
+				                <tr style="padding-top: 5px">
+                                <td colspan="3" style="text-align:left;padding-top: 5px;">Điểm sử dụng</td>
+                                    <td style="text-align:right;padding-top: 5px;"><t t-esc="env.pos.format_currency_no_symbol(receipt.loyalty.points_spent)"/></td>
+                                </tr>
+			                </t>
+                        <tr style="padding-top: 5px">
+                                <td colspan="3" style="text-align:left;padding-bottom: 5px;">Tổng điểm</td>
+                            <td style="text-align:right;;padding-top: 5px;padding-bottom: 5px;"><t t-esc="env.pos.format_currency_no_symbol(receipt.loyalty.points_total)"/></td>
+                        </tr>
+		                </thead>
+                </table>
+            </t>
+            <t t-if="!receipt.loyalty">
+                <t t-if="receipt.customer_name">
+                    <table style="width:100%; margin: 0px; border:0; table-layout: fixed; font-family: Arial, Helvetica, sans-serif;"
+                           class="table table-bordered">
+		                <colgroup>
+		                    <col width='25%'/>
+                            <col width='25%'/>
+                            <col width='25%'/>
+                            <col width='25%'/>
+		                </colgroup>
+                        <thead class="pos-center-align"
+                               style="border-top: 1.5px dotted; border-bottom: 0px;font-size:13px;">
+			                <tr style="">
+                                <td colspan="2" style="text-align:left;padding-top: 5px;">Khách hàng</td>
+                                <td colspan="2" style="text-align:right;"><t t-esc="receipt.customer_name"/></td>
+                            </tr>
+                            <tr style="">
+                                <td colspan="2" style="text-align:left;padding-top: 5px;">Số điện thoại</td>
+                                <td colspan="2" style="text-align:right;"><t t-esc="receipt.customer_phone"/></td>
+                            </tr>
+		                </thead>
+                    </table>
+                </t>
+            </t>
+<!--            <table style='width:100%; padding:0px; margin: 0px;font-size:13px;font-family: Arial, Helvetica, sans-serif; border-top: 1.5px dotted;border-bottom: 1.5px dotted;'-->
+<!--                   class="table table-bordered ">-->
+<!--                <tbody style="text-align: center;">-->
+<!--                    <tr>-->
+<!--                        <div style="padding-top: 5px;">Chỉ xuất hóa đơn trong ngày</div>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <div style="padding-bottom: 7px;">Tax Invoice will be issued within same day</div>-->
+<!--                    </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+            <t t-if='receipt.note != ""'>
+                <table style='width:100%; padding:0px; margin: 0px;font-size:13px;font-family: Arial, Helvetica, sans-serif; border-top: 1.5px dotted;border-bottom: 1.5px dotted;'
+                       class="table table-bordered">
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <div style="padding-top: 5px;">
+                                <t t-esc='receipt.note'/>
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </t>
+            <t t-if='receipt.note_sale_online != ""'>
+                <table style='width:100%; padding:0px; margin: 0px;font-size:13px;font-family: Arial, Helvetica, sans-serif; border-top: 1.5px dotted;border-bottom: 1.5px dotted;'
+                       class="table table-bordered">
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <div style="padding-top: 5px;">
+                                <t t-esc='receipt.note_sale_online'/>
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </t>
+		</xpath>
+        <xpath expr="//div[@class='pos-receipt-center-align']//br[2]" position="after">
+            <t t-if='receipt.name'>
+                <div class="ticket-barcode-image">
+                    <barcode encoding="CODE39"><t t-esc='receipt.name' /></barcode>
+                </div>
+                <script>
+                    var code = $('barcode').text();
+                    $('barcode').barcode(code, 'code128');
+                </script>
+            </t>
+		</xpath>
+        <xpath expr="//t[@t-if='receipt.total_discount']" position="replace">
+
+		</xpath>
+        <xpath expr="//div[@class='pos-receipt-order-data']" position="replace">
+            <div class="pos-receipt-order-data">
+
+            </div>
+		</xpath>
+        <xpath expr="//div[hasclass('pos-receipt')]/br[7]" position="replace">
+		</xpath>
+        <!--        <xpath expr="//div[hasclass('pos-receipt')]/br[8]" position="replace">-->
+        <!--        </xpath>-->
+	</t>
+</templates>

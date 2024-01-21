@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* total_pricelist_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-29 08:11+0000\n"
+"PO-Revision-Date: 2019-10-29 08:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Download Import Template"
+msgstr "Tải mẫu"
+
+#. module: total_pricelist_custom
+#: model:ir.model.fields,field_description:total_pricelist_custom.field_product_pricelist__field_binary_import
+msgid "Field Binary Import"
+msgstr "File"
+
+#. module: total_pricelist_custom
+#: model:ir.model.fields,field_description:total_pricelist_custom.field_product_pricelist__field_binary_name
+msgid "Field Binary Name"
+msgstr "Tên File"
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.pricelist_item_form_custom
+msgid "Giá chưa có VAT"
+msgstr ""
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Giá có VAT"
+msgstr ""
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Import"
+msgstr "Nhập"
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Mẫu import có định dạng là xls hoặc xlsx"
+msgstr ""
+
+#. module: total_pricelist_custom
+#: model:ir.model.fields,field_description:total_pricelist_custom.field_product_pricelist__users_ids
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Nhân viên"
+msgstr ""
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Price"
+msgstr "Giá"
+
+#. module: total_pricelist_custom
+#: model:ir.model.fields,field_description:total_pricelist_custom.field_product_pricelist_item__price_VAT
+msgid "Price VAT"
+msgstr "Giá có VAT"
+
+#. module: total_pricelist_custom
+#: model:ir.model,name:total_pricelist_custom.model_product_pricelist
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: total_pricelist_custom
+#: model:ir.model,name:total_pricelist_custom.model_product_pricelist_item
+msgid "Pricelist Item"
+msgstr "Mục báo giá"
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Pricelist Items"
+msgstr "Chi tiết bảng giá"
+
+#. module: total_pricelist_custom
+#: model_terms:ir.ui.view,arch_db:total_pricelist_custom.total_product_pricelist_form_custom
+msgid "Sản phẩm"
+msgstr ""
+
+#. module: total_pricelist_custom
+#: model:ir.model.fields,field_description:total_pricelist_custom.field_product_pricelist_item__x_uom_id
+msgid "Đơn vị theo quy cách"
+msgstr ""
+

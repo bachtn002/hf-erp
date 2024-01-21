@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="TicketScreen" t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('orders')]//div[hasclass('header-row')]//div[hasclass('col')]" position="after">
+            <div class="col start wide">Sale Online ID</div>
+        </xpath>
+        <xpath expr="//div[hasclass('orders')]//div[hasclass('order-row')]//div[1]" position="after">
+            <div class="col start wide">
+                <t t-esc="order.sale_online"></t>
+            </div>
+        </xpath>
+
+        <xpath expr="//button[hasclass('discard')]" position="after">
+            <button class="highlight" t-on-click="syncOrderOnline">Sync Order Online</button>
+        </xpath>
+    </t>
+
+    <t t-name="OrderWidgetOnline" t-inherit="point_of_sale.OrderWidget" t-inherit-mode="extension" owl="1">
+        <xpath expr="//OrderSummary" position="after">
+            <t t-if="order.sale_online != ''">
+                <div class="summary clearfix">
+                    <div class="line">
+                        <div class="entry total">
+                            <span class="badge" style="font-size:15px; color:red">Order Online: </span>
+                            <span class="value" style="font-size:15px; color:red">
+                                <t t-esc="order.sale_online"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summary clearfix">
+                    <div class="line">
+                        <div class="entry total">
+                            <span class="badge" style="font-size:15px; color:red">Note: </span>
+                            <span class="value" style="font-size:15px; color:red">
+                                <t t-esc="order.note_sale_online"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-name="PaymentScreen" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('payment-buttons')]" position="before">
+            <div class="note" style="margin-top: 16px;">
+                <textarea class="note" id="note" placeholder="Ghi chú" rows="5" style="width:100%;">
+                    <!-- <t t-esc="env.pos.get_order().note_sale_online"/> -->
+                </textarea>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

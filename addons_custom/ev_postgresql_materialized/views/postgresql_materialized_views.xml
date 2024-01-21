@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="postgresql_materialized_search" model="ir.ui.view">
+            <field name="name">PostgreSQL Materialized Search</field>
+            <field name="model">postgresql.materialized</field>
+            <field name="arch" type="xml">
+                <search string="PostgreSQL Materialized Search">
+                    <group expand="0" string="Group By">
+                        <filter name="group_view_type" string="View Type" domain="[]" context="{'group_by':'view_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+        <record id="postgresql_materialized_tree" model="ir.ui.view">
+            <field name="name">PostgreSQL Materialized Tree</field>
+            <field name="model">postgresql.materialized</field>
+            <field name="arch" type="xml">
+                <tree string="PostgreSQL Materialized Tree" editable="bottom" delete="0">
+                    <field name="view_type"/>
+                    <field name="name"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="is_created"/>
+                    <button name="action_refresh" type="object" string="Refresh" class="btn-sm btn-success"/>
+                    <button name="action_recreate" type="object" string="Recreate" class="btn-sm btn-danger"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="postgresql_materialized_action" model="ir.actions.act_window">
+            <field name="name">Action Name</field>
+            <field name="res_model">postgresql.materialized</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{'search_default_group_view_type': 1}</field>
+        </record>
+
+        <menuitem
+            id="postgresql_materialized_menu_item"
+            name="PostgreSQL Materialized"
+            action="postgresql_materialized_action"
+            parent="base.menu_custom"
+            sequence="60"/>
+
+    </data>
+</odoo>

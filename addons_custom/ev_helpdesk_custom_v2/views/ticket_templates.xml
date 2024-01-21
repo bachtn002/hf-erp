@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="tickets_followup_ev_helpdesk_custom_v2" name="Helpdesk tickets custom"
+              inherit_id="ev_helpdesk.tickets_followup_ev_helpdesk_custom" priority="50">
+            <xpath expr="//t[@t-set='card_body']/div[9]" position="after">
+                    <div class="row">
+                        <div class="col-6">
+                            <p style="width: 32%;float: left; font-weight: bold;">Pos shop</p>
+                            <p t-field="ticket.x_shop_id.name"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p style="width: 32%;float: left; font-weight: bold;">Solution Detail</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p style="font-family:serif;">
+                                <span t-raw="ticket.x_solution_detail"/>
+                            </p>
+                        </div>
+                    </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

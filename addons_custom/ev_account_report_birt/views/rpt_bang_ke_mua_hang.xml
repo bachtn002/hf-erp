@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--        <menuitem id="account_reports_purchase_reports_menu" name="Purchase Reports"-->
+<!--                  parent="account.menu_finance_reports" sequence="5" groups="account.group_account_user"/>-->
+        <!-- form view -->
+        <record id="rpt_bang_ke_mua_hang_form" model="ir.ui.view">
+            <field name="name">Báo cáo bảng kê mua hàng</field>
+            <field name="model">report.bang.ke.mua.hang</field>
+            <field name="arch" type="xml">
+                <form string="Báo cáo tổng hợp phát sinh công nợ NCC">
+                    <group>
+                        <group>
+                            <field name="date" required="1" string="Date"/>
+                        </group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button name="action_report_excel" type="object" class="oe_highlight" string="Export Excel"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_bang_ke_mua_hang" model="ir.actions.act_window">
+            <field name="name">Báo cáo bảng kê mua hàng</field>
+            <field name="res_model">report.bang.ke.mua.hang</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_bang_ke_mua_hang_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_rpt_bang_ke_mua_hang_action" groups="account.group_account_user"
+                  name="List purchases" action="action_rpt_bang_ke_mua_hang"
+                  parent="account_reports_purchase_reports_menu"
+                  sequence="46"/>
+
+    </data>
+</odoo>

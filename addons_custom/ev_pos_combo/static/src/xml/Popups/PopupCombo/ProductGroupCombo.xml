@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductGroupCombo" owl="1">
+        <section class="combo-product-section">
+            <div class="combo-product-section-header">
+                <h3><t t-esc="state.name"/></h3>
+                <div class="collapse" t-on-click="collapseBody">
+                    <i class="fa fa-angle-up"></i>
+                </div>
+            </div>
+            <div class="combo-product-section-body">
+                <t t-if="props.type == 'required'">
+                    <div class="products-list">
+                        <t t-if="state.products">
+                            <t t-foreach="state.products" t-as="record">
+                                <t t-if="record.require">
+                                    <t t-foreach="record.product_details" t-as="product_detail">
+                                        <ProductCombo record="record" type="props.type" product_detail="product_detail"/>
+                                    </t>
+                                </t>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+                <t t-if="props.type == 'optional'">
+                    <t t-if="state.products">
+                        <t t-foreach="state.products" t-as="record">
+                            <t t-if="!record.require">
+                                <div class="category-data" t-att-categ-id="record.pos_category_id[0]">
+                                    <div class="category-item">
+                                        <div class="category-name">
+                                            <h4>
+                                                <i class="fa fa-exclamation" t-if="record.require_one"></i>
+                                                <t t-esc="record.pos_category_id[1]"/>
+                                            </h4>
+                                            <div class="blinking">
+                                                <span>
+                                                    Select up to <t t-esc="record.no_of_items"/>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="products-list" t-att-id="record.pos_category_id[0]">
+                                            <t t-foreach="record.product_details" t-as="product_detail">
+                                                <ProductCombo record="record" type="props.type" product_detail="product_detail"/>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </div>
+        </section>
+    </t>
+
+</templates>

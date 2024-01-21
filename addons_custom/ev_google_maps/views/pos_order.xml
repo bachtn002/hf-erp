@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_pos_order_map" model="ir.ui.view">
+            <field name="name">pos.order.map</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <page name="notes_sale_online" position="after">
+                    <page string="Delivery" name="pos_order_map"
+                          attrs="{'invisible': [('x_home_delivery', '!=', True)]}">
+                        <group name="infor_delivery">
+                            <field name="x_home_delivery" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_ship_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_address_delivery" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                   style="word-wrap: break-word"/>
+                            <field name="x_lat" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_long" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+
+</odoo>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_order_refund_inherit_manu">
+            <field name="name">view_pos_order_refund_inherit_manu</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='fiscal_position_id']" position="after">
+                    <field name="x_pos_order_refund_id"
+                           attrs="{'invisible': [('x_pos_order_refund_id', '=', False)]}"/>
+                    <field name="x_allow_return" string="Accountant Confirm" readonly="True"
+                           attrs="{'invisible': [('x_allow_return', '=', False)]}"/>
+                    <field name="x_note_return" attrs="{'readonly': [('x_allow_return', '=', True)]}"/>
+                    <field name="x_pos_send_return" attrs="{'invisible':[('x_pos_send_return', '=', False)]}"
+                           readonly="True"/>
+                    <field name="x_reason_refuse" attrs="{'invisible':[('x_reason_refuse', '=', False)]}"
+                           readonly="True"/>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="after">
+                    <button name="allow_return" string="Confirm" type="object" class="oe_highlight"
+                            attrs="{'invisible':['|', ('x_allow_return', '=', True), ('x_pos_send_return', '=', False)]}"
+                            groups="ev_pos_refund.group_pos_confirm_order_refund"/>
+                    <button name="%(ev_pos_refund.write_reason_refuse_act)d" string="Refuse" type="action"
+                            class="oe_highlight"
+                            attrs="{'invisible':['|', ('x_allow_return', '=', True), ('x_pos_send_return', '=', False)]}"
+                            groups="ev_pos_refund.group_pos_confirm_order_refund"/>
+                    <button name="action_print_order" string="Print Order" type="object" class="oe_highlight"
+                            groups="point_of_sale.group_pos_user"/>
+                </xpath>
+                <xpath expr="//button[@name='action_stock_picking']" position="replace">
+                    <button name="action_stock_picking"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-truck"
+                            attrs="{'invisible':['|',('picking_count', '=', 0), ('x_allow_return', '=', True)]}">
+                        <field name="picking_count" widget="statinfo" string="Pickings Out"
+                               attrs="{'invisible': [('failed_pickings', '!=', False)]}"/>
+                        <field name="picking_count" widget="statinfo" string="Pickings Out" class="text-danger"
+                               attrs="{'invisible': [('failed_pickings', '=', False)]}"/>
+                    </button>
+                </xpath>
+                <xpath expr="//button[@name='action_view_invoice']" position="before">
+                    <button name="action_stock_picking"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-truck"
+                            attrs="{'invisible':['|',('picking_count', '=', 0), ('x_allow_return', '=', False)]}">
+                        <field name="x_picking_count_refund" widget="statinfo" string="Pickings Refund"
+                               attrs="{'invisible': [('failed_pickings', '!=', False)]}"/>
+                        <field name="x_picking_count_refund" widget="statinfo" string="Pickings Refund"
+                               class="text-danger" attrs="{'invisible': [('failed_pickings', '=', False)]}"/>
+                    </button>
+                </xpath>
+                <xpath expr="//button[@name='allow_return']" position="after">
+                    <button name="action_send_return" string="Send return" type="object"
+                            attrs="{'invisible':[('x_pos_send_return', '=', True)]}"
+                            groups="point_of_sale.group_pos_user,point_of_sale.group_pos_manager"
+                            class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//field[@name='lines']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_allow_return', '=', True), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='session_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_pos_order_refund_id', '!=', False), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_pos_order_refund_id', '!=', False), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_pos_order_refund_id', '!=', False), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='fiscal_position_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_pos_order_refund_id', '!=', False), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='note']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_pos_order_refund_id', '!=', False), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('x_pos_order_refund_id', '!=', False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='pricelist_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly': ['|', ('x_pos_order_refund_id', '!=', False), ('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='payment_ids']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='payment_ids']//tree" position="attributes">
+                    <attribute name="create">0</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_pos_order_refund_search_inherit_manu">
+            <field name="name">view_pos_order_refund_search_inherit_manu</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+                    <separator/>
+                    <filter string="Return Order" name="return_order" domain="[('x_pos_send_return','=',True)]"/>
+                    <filter string="Wait Account Confirm" name="wait_account_confirm"
+                            domain="[('x_pos_send_return','=',True),('x_allow_return','=',False)]"/>
+                    <filter string="Account Confirm" name="account_confirm"
+                            domain="[('x_pos_send_return','=',True),('x_allow_return','=',True)]"/>
+                </xpath>
+            </field>
+        </record>
+<!--        <record model="ir.ui.view" id="view_pos_order_refund_tree_inherit_menu">-->
+<!--            <field name="name">view_pos_order_refund_tree_inherit_manu</field>-->
+<!--            <field name="model">pos.order</field>-->
+<!--            <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='user_id']" position="after">-->
+<!--                    <field name="x_pos_send_return"/>-->
+<!--                    <field name="x_allow_return"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

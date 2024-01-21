@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="delivery_management_sequence" model="ir.sequence">
+            <field name="name">Delivery Management Sequence</field>
+            <field name="code">delivery.management</field>
+            <field name="padding">7</field>
+        </record>
+    </data>
+</odoo>

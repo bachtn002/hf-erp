@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="stock_quant_current_form_view" model="ir.ui.view">
+            <field name="name">Stock Quant Current</field>
+            <field name="model">stock.quant.current</field>
+            <field name="arch" type="xml">
+                <form string="Stock Quant Current">
+                    <sheet>
+                        <group>
+                            <div>
+                                <h1 style="text-align: center;">Stock Quant Current</h1>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" required="1"
+                                       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="product_ids" widget="many2many_tags"
+                                       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                            </group>
+                        </group>
+                        <button name="action_generate" type="object" string="Generate" class="oe_highlight"/>
+                        -
+                        <!--                        <button name="action_print" type="object" string="Print PDF" class="oe_highlight"/> - -->
+                        <button name="action_print_excel" type="object" string="Print Excel" class="oe_highlight"/>
+                        <field name="line_ids" readonly="1">
+                            <tree>
+                                <field name="product_id"/>
+                                <field name="uom_id"/>
+                                <field name="quantity"/>
+                                <field name="stock_quant_current_id" invisible="1"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="uom_id"/>
+                                        <field name="quantity"/>
+                                        <field name="stock_quant_current_id" invisible="1"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="stock_quant_current_action" model="ir.actions.act_window">
+            <field name="name">Stock Quant Curent</field>
+            <field name="res_model">stock.quant.current</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock_quant_current_form_view"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="stock_quant_current_menu" name="Stock Quant Current" groups="stock.group_stock_user"
+                  parent="stock.menu_warehouse_report" sequence="15"
+                  action="stock_quant_current_action"/>
+    </data>
+</odoo>

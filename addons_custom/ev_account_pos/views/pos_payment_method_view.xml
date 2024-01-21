@@ -1,0 +1,32 @@
+<odoo>
+   <data>
+       <record id="pos_payment_method_view_inherit_account_pos_form" model="ir.ui.view">
+           <field name="name">pos.payment.method.form</field>
+           <field name="model">pos.payment.method</field>
+           <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+           <field name="arch" type="xml">
+               <field name="is_cash_count" position="replace">
+                   <field name="is_cash_count" string="Accounting with Account Journal"/>
+                   <field name="x_is_cash_method"/>
+               </field>
+               <field name="cash_journal_id" position="replace">
+                   <field name="cash_journal_id" string="Account Journal"/>
+               </field>
+           </field>
+       </record>
+
+        <record id="pos_payment_method_view_inherit_account_pos_tree" model="ir.ui.view">
+           <field name="name">pos.payment.method.tree</field>
+           <field name="model">pos.payment.method</field>
+           <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_tree"/>
+           <field name="arch" type="xml">
+               <field name="is_cash_count" position="replace">
+                   <field name="is_cash_count" string="Accounting with Account Journal"/>
+                   <field name="x_is_cash_method" invisible="1"/>
+               </field>
+           </field>
+       </record>
+
+
+  </data>
+</odoo>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_template_consumption_forecast_purchase_form_view">
+            <field name="name">product_template_consumption_forecast_purchase_form_view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="purchase.view_product_supplier_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='purchase']//group[@name='bill']" position="after">
+                    <group>
+                        <field name="x_lead_time"/>
+                        <field name="x_order_multiples"/>
+                        <field name="x_return_conditions"/>
+                        <field name="x_user_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_product_template_shop_form_inherit">
+            <field name="name">view_product_template_shop_form_inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="point_of_sale.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='pos']//group[1]" position="after">
+                    <group>
+                        <field name="x_min_stock"/>
+                        <field name="x_moq_warehouse"/>
+                        <field name="x_moq_purchase"/>
+                        <field name="x_order_schedule_ids" options="{'no_create':1, 'no_create_edit':1, 'no_open': 1}"
+                               widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="x_min_stock_shop_ids">
+                            <tree editable="bottom">
+                                <field name="pos_shop_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="product_tmpl_id" invisible="1"/>
+                                <field name="min_stock"/>
+                            </tree>
+                            <form>
+                                <field name="pos_shop_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="product_tmpl_id" invisible="1"/>
+                                <field name="min_stock"/>
+                            </form>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

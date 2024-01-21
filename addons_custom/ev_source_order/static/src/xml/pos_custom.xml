@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PaymentScreen" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('payment-buttons-container')]" position="after">
+            <div class="source" style="width: 175px;height: 35px;margin-left: 25px;display: none;">
+                <span class="label">
+                    <h2>Nguồn Đơn Hàng</h2>
+                </span>
+                <select class="detail client-address-source needsclick" name="x_source_order_id" id="x_source_order_id" style="width: 300px;height: 35px;margin-top: 5px;">
+                    <option value=''></option>
+                    <t t-foreach="env.pos.sources" t-as="source" t-key="source.id">
+                        <option t-att-value="source.id">
+                            <t t-esc="source.name" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

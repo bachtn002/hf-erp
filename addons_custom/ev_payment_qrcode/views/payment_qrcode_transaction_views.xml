@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="payment_qrcode_transaction_view_form" model="ir.ui.view">
+            <field name="name">payment_qrcode_transaction_view_form</field>
+            <field name="model">payment.qrcode.transaction</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="session_id"/>
+                                <field name="order_id"/>
+                                <field name="pos_session_id"/>
+                                <field name="pos_shop_id"/>
+                                <field name="pg_amount"/>
+                                <field name="pg_currency"/>
+                                <field name="pg_merchant_id"/>
+                                <field name="pg_order_info"/>
+                                <field name="mac"/>
+                                <field name="mac_type" invisible="1"/>
+                                <field name="error_code"/>
+                            </group>
+                            <group>
+                                <field name="pg_order_reference"/>
+                                <field name="pg_payment_method"/>
+                                <field name="pg_card_number"/>
+                                <field name="pg_card_holder_name"/>
+                                <field name="pg_payment_channel"/>
+                                <field name="pg_transaction_number"/>
+                                <field name="pg_issuer_txn_reference"/>
+                                <field name="pg_issuer_code"/>
+                                <field name="pg_issuer_response_code"/>
+                                <field name="pg_paytime"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="payment_qrcode_transaction_view_tree" model="ir.ui.view">
+            <field name="name">payment_qrcode_transaction_view_tree</field>
+            <field name="model">payment.qrcode.transaction</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pg_order_reference"/>
+                    <field name="pg_amount"/>
+                    <field name="order_id"/>
+                    <field name="pos_session_id"/>
+                    <field name="pos_shop_id"/>
+                    <field name="pg_paytime"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_qrcode_transaction_action" model="ir.actions.act_window">
+            <field name="name">Payment QRCode Transaction</field>
+            <field name="res_model">payment.qrcode.transaction</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="payment_qrcode_transaction_menu"
+                  action="payment_qrcode_transaction_action"
+                  name="Payment QRCode Transaction"
+                  parent="point_of_sale.menu_point_config_product"
+                  sequence="7"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <template id="google_map_assets" inherit_id="web.assets_backend" name="ev_google_maps.assets">-->
+<!--            <xpath expr="script[last()]" position="after">-->
+<!--                <script type="text/javascript" src="/ev_google_maps/static/src/js/LoadMap.js"/>-->
+<!--            </xpath>-->
+<!--        </template>-->
+         <template id="google_map_pos_assets" inherit_id="ev_payment_qrcode.ev_payment_qrcode_assets" name="google_map_pos_assets.assets">
+            <xpath expr="script[last()]" position="after">
+                <link rel="stylesheet" href="/ev_google_maps/static/src/css/pos_maps.css"/>
+                <script type="text/javascript" src="/ev_google_maps/static/src/js/LoadMapPos.js"/>
+                <script type="text/javascript" src="/ev_google_maps/static/src/js/LoadOrder.js"/>
+                <script type="text/javascript" src="/ev_google_maps/static/src/js/PaymentScreens.js"/>
+                <script type="text/javascript" src="/ev_google_maps/static/src/js/pos_sale_online.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

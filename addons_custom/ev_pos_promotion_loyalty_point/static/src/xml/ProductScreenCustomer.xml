@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="VerifyBarcode" t-inherit="ev_pos_search_customer.ProductScreenCustomer" t-inherit-mode="extension"  owl="1">
+        <xpath expr="//td[hasclass('searchbox-client-search')]" position="after">
+            <td class="action-verify-barcode">
+                <div role="img" aria-label="Verify barcode" title="Verify barcode" class="button verify-barcode"
+                    t-on-click="_onClickVerifyBarcode">
+                    <img src="/ev_pos_promotion_loyalty_point/static/src/img/verify_barcode.png"/>
+                </div>
+            </td>
+        </xpath>
+    </t>
+
+</templates>

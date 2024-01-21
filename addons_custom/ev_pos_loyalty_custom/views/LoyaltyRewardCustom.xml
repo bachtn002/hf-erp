@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="ev_pos_loyalty_custom_tree_inherit" model="ir.ui.view">
+		    <field name="name">ev_pos_loyalty_custom.ev_pos_loyalty_custom.tree</field>
+		    <field name="model">loyalty.program</field>
+		    <field name="inherit_id" ref="pos_loyalty.view_loyalty_program_tree"/>
+		    <field name="arch" type="xml">
+
+		        <xpath expr="//tree" position="attributes">
+					<attribute name="default_order">create_date desc</attribute>
+		        </xpath>
+
+		    </field>
+		</record>
+
+
+		<record id="ev_pos_loyalty_custom_form_inherit" model="ir.ui.view">
+			<field name="name">ev_pos_loyalty_custom.ev_pos_loyalty_custom.form</field>
+			<field name="model">loyalty.program</field>
+			<field name="inherit_id" ref="pos_loyalty.view_loyalty_program_form"/>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<xpath expr="/form/sheet/notebook/page[1]" position="replace">
+					<page string="Point exchange rule">
+						<form>
+							<group>
+								<field name="points" invisible="1" force_save="1"/>
+								<field name="x_money_per_point" force_save="1" required="1"/>
+								<field name="product_id" required="0"/>
+							</group>
+						</form>
+					</page>
+					<page string="Point Using Rule">
+						<form>
+							<group>
+								<group>
+									<field name="x_point_cost" required="1"/>
+									<field name="x_discount_amount" required="1"/>
+								</group>
+							</group>
+						</form>
+					</page>
+					<page string="Tích điểm theo sản phẩm">
+						<field name="rule_ids" colspan="4" nolabel="1">
+							<tree>
+								<field name="product_cate_rule_rule"
+								       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+								<field name="product_rule_rule" domain="[('available_in_pos','=',True)]"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+				<xpath expr="/form/sheet/notebook/page[4]" position="replace">
+					<page string="Customer not Apply" name="rule_ids">
+						<form>
+							<group>
+								<field name="res_partner_id_not_apply" required="0"/>
+							</group>
+						</form>
+					</page>
+					<page string="Customer not Apply Group" name="rule_ids">
+						<form>
+							<group>
+								<field name="res_partner_id_not_apply_group" required="0"/>
+							</group>
+						</form>
+					</page>
+					<page string="Pos Apply" name="rule_ids">
+						<form>
+							<group>
+								<field name="pos_config_apply" required="0" force_save="1" domain="[('loyalty_id', '=', False)]"/>
+							</group>
+						</form>
+					</page>
+					<!--					<field name="rule_ids">-->
+					<!--						<tree>-->
+					<!--							<field name="name"/>-->
+					<!--							<field name="point_per_product"/>-->
+					<!--						</tree>-->
+					<!--					</field>-->
+				</xpath>
+			</field>
+		</record>
+		<!-- Inherit Form View to Modify it -->
+		<record id="loyalty_rule_custom" model="ir.ui.view">
+			<field name="name">Loyalty Rule Custom</field>
+			<field name="model">loyalty.rule</field>
+			<field name="inherit_id" ref="pos_loyalty.view_loyalty_rule_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='rule_domain']" position="replace">
+					<!-- Add your fields or attributes here -->
+				</xpath>
+				<xpath expr="//field[@name='points_quantity']" position="replace">
+					<!-- Add your fields or attributes here -->
+				</xpath>
+				<xpath expr="//field[@name='points_currency']" position="replace">
+					<field name="condition_or"/>
+					<field name="product_rule_rule" widget="many2many_tags"
+					       attrs="{'invisible': [('condition_or','not in',('product'))]}"/>
+					<!--					<field name="category_id" widget="many2many_tags"/>-->
+					<field name="product_cate_rule_rule" widget="many2many_tags"
+					       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+					       attrs="{'invisible': [('condition_or','not in',('product_category'))]}"/>
+					<field name="point_per_product"/>
+					<!--					<field name="res_partner_id_not_apply" required="0"/>-->
+					<!-- Add your fields or attributes here -->
+				</xpath>
+			
+			</field>
+		</record>
+	</data>
+</odoo>

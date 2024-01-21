@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ev_promotion_voucher_custom_assets" inherit_id="point_of_sale.assets" name="ev_promotion_voucher_custom.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/ev_promotion_voucher_custom/static/src/js/model.js"/>
+            <!--Mỗi loại promotion code chỉ được áp dụng một code trên POS-->
+            <script type="text/javascript"
+                    src="/ev_promotion_voucher_custom/static/src/js/ButtonPromotionVoucher.js"/>
+            <!--Cho phép CTKM được áp dụng cùng các CTKM khác-->
+            <script type="text/javascript"
+                    src="/ev_promotion_voucher_custom/static/src/js/hide_confirm_payment_popup.js"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_order_view_sinvoice_inherit" model="ir.ui.view">
+            <field name="name">pos_order_view_sinvoice_inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <page name="notes" position="after">
+                        <page name="sinvoice_info" string="SInvoice Info">
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="sinvoice_id" readonly="1"/>
+                                        <field name="sinvoice_no" readonly="1"/>
+                                        <field name="sinvoice_series" readonly="1"/>
+                                        <field name="sinvoice_issued_date" readonly="1"/>
+                                        <field name="sinvoice_state" readonly="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="sinvoice_lot_id" readonly="1"/>
+                                        <field name="sinvoice_vat" readonly="1"/>
+                                        <field name="sinvoice_company_name" readonly="1"/>
+                                        <field name="sinvoice_address" readonly="1"/>
+                                        <field name="sinvoice_email" readonly="1"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </page>
+                    </page>
+                </data>
+
+                <xpath expr="//button[@name='action_print_order']" position="after">
+                    <button name="action_api_destroy_sinvoice"
+                            string="Action Destroy SInvoice"
+                            type="object"
+                            class="btn"
+                            attrs="{'invisible': [('x_pos_order_refund_id', '=', False)]}"
+                            groups="ev_account_cash_bank.group_account_chief"
+                    />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

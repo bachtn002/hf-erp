@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit_no_create" model="ir.ui.view">
+            <field name="name">stock.picking.form.no.create</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(stock.act_stock_return_picking)d']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_dest_id']" position="after">
+                    <field name="pos_session_id" readonly="1"/>
+                    <field name="pos_order_id" readonly="1"/>
+                    <field name="x_is_return" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity_done']"
+                       position="after">
+                    <field name="purchase_line_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity_done']"
+                       position="after">
+                    <field name="purchase_line_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']//tree" position="attributes">
+                    <attribute name="create">0</attribute>
+                    <attribute name="delete">0</attribute>
+                    <attribute name="attrs">{'readonly': ['|',('parent.x_is_return', '=', True),'&amp;', ('state', '=',
+                        'done'), ('is_locked', '=', True)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//page[@name='detailed_operations_shown']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='product_id']"
+                       position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='product_uom_qty']"
+                       position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']//tree//button[@name='action_show_details']"
+                       position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='scheduled_date']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='extra']//field[@name='move_type']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='extra']//field[@name='user_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity_done']"
+                       position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('purchase_line_id', '=', False),('parent.x_is_return',
+                        '=', True)]}
+                    </attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_picking_form_inherit_move_line_no_create" model="ir.ui.view">
+            <field name="name">stock.move.line.no.create</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">0</attribute>
+                    <attribute name="delete">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_dest_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='qty_done']" position="after">
+                    <field name="x_purchase_line_id" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='qty_done']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|',('x_purchase_line_id', '=', False),('parent.x_is_return',
+                        '=', True)]}
+                    </attribute>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="view_picking_form_no_create" model="ir.ui.view">
+            <field name="name">stock.picking.tree.no.create</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">0</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_picking_tree_no_create" model="ir.ui.view">
+            <field name="name">stock.picking.tree.no.create</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">0</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

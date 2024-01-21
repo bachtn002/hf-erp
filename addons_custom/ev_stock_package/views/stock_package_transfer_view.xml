@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="stock_package_transfer_selector_out" model="ir.ui.view">
+            <field name="name">stock.package.transfer.selector.out</field>
+            <field name="model">stock.package.transfer</field>
+            <field name="priority">1000</field>
+            <field name="arch" type="xml">
+                <form string="Select a Product" class="o_barcode_line_form">
+                    <div class="row mt-5 mb-4">
+                        <div class="col-12 d-flex align-items-baseline">
+                            <i class="fa fa-fw fa-lg fa-tags mr-3" title="Product"/>
+                            <field name="name" placeholder="Package" readonly="1" force_save="1" required="1" nolabel="1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 my-2 d-flex align-items-baseline">
+                            <i class="fa fa-fw fa-lg fa-cube mr-3" title="Quantity"/>
+                            <field name="qty_out" options="{'type': 'number'}" placeholder="Quantity Out"/>
+                        </div>
+                        <div class="col-6 my-2 d-flex align-items-baseline">
+                            <span>Chiếc</span>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_package_transfer_selector_in" model="ir.ui.view">
+            <field name="name">stock.package.transfer.selector.in</field>
+            <field name="model">stock.package.transfer</field>
+            <field name="priority">1000</field>
+            <field name="arch" type="xml">
+                <form string="Select a Product" class="o_barcode_line_form">
+                    <div class="row mt-5 mb-4">
+                        <div class="col-12 d-flex align-items-baseline">
+                            <i class="fa fa-fw fa-lg fa-tags mr-3" title="Product"/>
+                            <field name="name" placeholder="Package" readonly="1" force_save="1" required="1" nolabel="1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 my-2 d-flex align-items-baseline">
+                            <i class="fa fa-fw fa-lg fa-cube mr-3" title="Quantity"/>
+                            <field name="qty_in" options="{'type': 'number'}" placeholder="Quantity In"/>
+                        </div>
+                        <div class="col-6 my-2 d-flex align-items-baseline">
+                            <span>Chiếc</span>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_package_transfer_view_search" model="ir.ui.view">
+            <field name="name">stock_package_transfer.view.search</field>
+            <field name="model">stock.package.transfer</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name"/>
+                    <field name="stock_transfer_id"/>
+                    <separator/>
+					<filter name="state_draft" string="State draft" domain="[('state', '=', 'draft')]"/>
+					<filter name="state_processing" string="State processing" domain="[('state', '=', 'processing')]"/>
+					<filter name="state_packaged" string="State packaged" domain="[('state', '=', 'packaged')]"/>
+					<filter name="state_unpackaged" string="State unpackaged" domain="[('state', '=', 'unpackaged')]"/>
+					<filter name="state_cancel" string="State cancel" domain="[('state', '=', 'cancel')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Groupby state" name="groupby_state" context="{'group_by':'state'}"/>
+                        <filter string="Groupby transfer" name="groupby_transfer" context="{'group_by':'stock_transfer_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="stock_package_transfer_view_tree" model="ir.ui.view">
+            <field name="name">stock_package_transfer.view.tree</field>
+            <field name="model">stock.package.transfer</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Package Transfer" default_order="date_packaged desc">
+                    <field name="name"/>
+                    <field name="stock_transfer_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="warehouse_dest_id"/>
+                    <field name="date_packaged"/>
+                    <field name="date_unpack"/>
+                    <field name="weight"/>
+                    <field name="is_using_package_cover"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_package_transfer_view_form" model="ir.ui.view">
+            <field name="name">stock_package_transfer.view.form</field>
+            <field name="model">stock.package.transfer</field>
+            <field name="arch" type="xml">
+                <form string="Stock Package Transfer">
+                    <header>
+                        <!-- button render scan package barcode template-->
+                        <button name="action_process" type="object" string="Process" states="draft,processing"
+                                groups="ev_stock_package.group_user_package_activity"
+                                class="oe_highlight"/>
+                        <button name="action_print_stamp_package"
+                                states="packaged" type="object" string="Print Stamp Package"/>
+                        <button name="action_cancel" type="object" string="Cancel" states="processing,packaged"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,processing,packaged,unpackaged,cancel"
+                               clickable="0"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1" force_save="1"/>
+                                <field name="stock_transfer_id" force_save="1"
+                                       attrs="{'readonly': [('state','!=','draft')]}"
+                                       options='{"no_open": True, "no_create": True}'/>
+                                <field name="warehouse_id" options='{"no_open": True, "no_create": True}'
+                                       readonly="True" force_save="1"/>
+                                <field name="warehouse_dest_id" options='{"no_open": True, "no_create": True}'
+                                       readonly="True" force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="date_packaged" force_save="1" readonly="1"/>
+                                <field name="date_unpack" force_save="1" readonly="1"/>
+                                <field name="weight" force_save="1" readonly="1"/>
+                                <field name="is_using_package_cover" force_save="1" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="line_ids">
+                                    <tree editable="bottom" create="0" delete="0">
+                                        <field name="product_id" readonly="True" force_save="1"/>
+                                        <field name="qty" readonly="True" force_save="1"/>
+                                        <field name="qty_done"
+                                               attrs="{'readonly': [('parent.state','not in', ('draft','processing'))]}"/>
+                                        <field name="uom_id" readonly="True" force_save="1"/>
+                                        <field name="package_transfer_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_package_transfer_action" model="ir.actions.act_window">
+            <field name="name">Stock Package Transfer Action</field>
+            <field name="res_model">stock.package.transfer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5,0,0),
+                          (0,0,{'view_mode':'tree'}),
+                          (0,0,{'view_mode':'form', 'view_id': ref('stock_package_transfer_view_form')})]"/>
+        </record>
+
+        <menuitem
+                id="stock_package_transfer_menu"
+                name="Stock Package Transfer"
+                action="stock_package_transfer_action"
+                parent="ev_stock_transfer.menu_stock_warehouse_internal"
+                sequence="10"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="product_release_form_view_custom" model="ir.ui.view">
+			<field name="name">product.release.form.view.custom</field>
+			<field name="model">product.release</field>
+			<field name="inherit_id" ref="ev_product_release.product_release_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_active']" position="after">
+					<button name="action_export_excel" string="Export excel" type="object"
+					        attrs="{'invisible': [('state','in',('draft','cancel'))]}"
+					        class="oe_highlight"/>
+				</xpath>
+				<xpath expr="//page[@name='stock_production_lot_ids']" position="after">
+					<page string="Voucher usage policy" name="voucher_usage_policy">
+						<group>
+							<group>
+								<field name="apply_promotion"/>
+							</group>
+							<group>
+								<field name="limit_voucher"/>
+								<field name="limit_qty"
+								       attrs="{'invisible': [('limit_voucher', '=', False)], 'required': [('limit_voucher', '=', True)]}"/>
+							</group>
+						</group>
+						<group>
+							<field name="limit_config"/>
+							<field name="config_ids"
+							       attrs="{'invisible': [('limit_config', '=', False)]}">
+								<tree string="POS Apply">
+									<field name="name"/>
+									<field name="company_id"/>
+								</tree>
+							</field>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

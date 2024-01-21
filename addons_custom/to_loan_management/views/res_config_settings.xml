@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="res_config_settings_view_form" model="ir.ui.view">
+			<field name="name">res.config.settings.view.form.inherit.loan</field>
+			<field name="model">res.config.settings</field>
+			<field name="priority" eval="40" />
+			<field name="inherit_id"
+				ref="base.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[hasclass('settings')]" position="inside">
+
+					<div class="app_settings_block" data-string="Loan Management"
+						string="Loan Management" data-key="to_loan_management"
+						groups="to_loan_management.group_loan_management_manager"
+						id="loan_settings">
+						
+						<div class="o_setting_left_pane">
+							<field name="module_to_loan_management" invisible="1" />
+						</div>
+						
+						<h2>Default Loan Borrowing Account</h2>
+						<div class="row mt16 o_settings_container">
+							<div class="col-12 col-lg-6 o_setting_box">
+								<group>
+									<field name="loan_borrowing_journal_id" />
+									<field name="loan_borrowing_account_id" />
+								</group>
+							</div>
+						</div>
+						
+<!--						<h2>Default Loan Lending Account</h2>-->
+<!--						<div class="row mt16 o_settings_container">-->
+<!--							<div class="col-12 col-lg-6 o_setting_box">-->
+<!--								<group>-->
+<!--									<field name="loan_lending_journal_id" />-->
+<!--									<field name="loan_lending_account_id" />-->
+<!--								</group>-->
+<!--							</div>-->
+<!--						</div>-->
+					</div>
+
+				</xpath>
+			</field>
+		</record>
+
+
+		<record id="action_loan_config_settings"
+			model="ir.actions.act_window">
+			<field name="name">Settings</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.config.settings</field>
+			<field name="view_id" ref="res_config_settings_view_form" />
+			<field name="view_mode">form</field>
+			<field name="target">inline</field>
+			<field name="context">{'module' : 'to_loan_management'}</field>
+		</record>
+
+		<menuitem id="menu_loan_general_settings" name="Settings"
+			parent="loan_configuration_main_menu" sequence="0"
+			action="action_loan_config_settings"
+			groups="to_loan_management.group_loan_management_manager" />
+
+	</data>
+</odoo>

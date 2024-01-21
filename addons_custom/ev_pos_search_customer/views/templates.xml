@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="pos_search_customer_assets" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ev_pos_search_customer/static/src/js/CustomerSearch/pos_DB.js"/>
+                <script type="text/javascript" src="/ev_pos_search_customer/static/src/js/CustomerSearch/ProductScreenCustomer.js"/>
+                <script type="text/javascript" src="/ev_pos_search_customer/static/src/js/CustomerSearch/product_screen.js"/>
+                <script type="text/javascript" src="/ev_pos_search_customer/static/src/js/CustomerSearch/client_screen_custom.js"/>
+                <script type="text/javascript" src="/ev_pos_search_customer/static/src/js/ActionpadWidget.js"/>
+                <link rel="stylesheet" href="/ev_pos_search_customer/static/src/css/css_custom.css"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

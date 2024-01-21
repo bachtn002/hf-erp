@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="pos_promotion_loyalty_point_form_view" model="ir.ui.view">
+			<field name="name">pos_promotion_loyalty_point_form_view</field>
+			<field name="model">pos.promotion</field>
+			<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='promotion_detail']" position="inside">
+					<field name="pos_promotion_loyalty_point_ids"
+					       attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'loyalty_point')]}">
+						<tree editable="bottom">
+							<field name="total_amount" required="1"/>
+							<field name="loyalty_point" required="1"/>
+						</tree>
+					</field>
+				</xpath>
+				<xpath expr="//page[@name='promotion_partners']//field[@name='apply_manual_res_partner_apply']" position="after">
+					<field name="is_miniapp_member"
+					       attrs="{'readonly': [('state', '!=', 'draft')]}">
+					</field>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="pos_promtion_form_inherit" model="ir.ui.view">
+            <field name="name">pos.promotion.view.form.inherit.ev_promotion_voucher_custom</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_promotion_voucher.pos_promtion_form_inherit"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='check_promotion']" position="after">
+                    <field name="x_promotion_code_type"
+                           attrs="{'required': [('check_promotion', '=', True)],'invisible': [('check_promotion', '=', False)],'readonly':[('state', '!=', 'draft')]}"/>
+                    <field name="x_allow_apply_with_other"
+                           attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

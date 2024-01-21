@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="view_account_asset_add_line_form" model="ir.ui.view">
+            <field name="model">account.asset.inventory</field>
+            <field name="inherit_id" ref="ev_account_asset.account_asset_inventory_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_confirm']" position="after">
+                    <button name="action_print_excel" string="Print Excel" type="object"
+                                class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Assets additional">
+                        <field name="additional_lines">
+                            <tree editable="bottom" create="1" delete="1">
+                                <field name="code" />
+                                <field name="name" />
+                                <field name="unit" />
+                                <field name="quantity" />
+                                <field name="note" />
+                                <field name="inventory_add_line_id" invisible="1" />
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="name" />
+                                        <field name="code" />
+                                        <field name="unit" />
+                                        <field name="quantity" />
+                                        <field name="note" />
+                                    </group>
+                                    <group>
+                                        <field name="inventory_add_line_id" invisible="1" />
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+                <!-- <xpath expr="//field[@name='account_analytic_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state','!=', 'draft')]}</attribute>
+                </xpath> -->
+            </field>
+        </record>
+    </data>
+
+</odoo>

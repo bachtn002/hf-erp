@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_template_button_smart_form_view">
+            <field name="name">product.template.button.smart</field>
+            <field name="model">product.template</field>
+            <field name="groups_id" eval="[(4, ref('stock.group_stock_user'))]"/>
+            <field name="inherit_id" ref="stock.product_template_form_view_procurement_button"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_open_quants']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_product_tmpl_forecast_report']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_stock_move_lines']" position="attributes">
+                    <attribute name="groups">
+                        account.group_account_invoice,account.group_account_user,account.group_account_manager
+                    </attribute>
+                </xpath>
+                <xpath expr="//button[6]" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[7]" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_related_putaway_rules']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[3]" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_orderpoints']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_update_quantity_on_hand']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_product_button_smart_form_view">
+            <field name="name">product.product.button.smart</field>
+            <field name="model">product.product</field>
+            <field name="groups_id" eval="[(4, ref('stock.group_stock_user'))]"/>
+            <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_update_quantity_on_hand']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//header" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_open_quants']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_product_forecast_report']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_stock_move_lines']" position="attributes">
+                    <attribute name="groups">
+                        stock.group_stock_manager,point_of_sale.group_pos_manager,account.group_account_user
+                    </attribute>
+                </xpath>
+                <xpath expr="//button[6]" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[7]" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_related_putaway_rules']" position="attributes">
+                    <attribute name="groups">stock.group_stock_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_open_quants']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_product_forecast_report']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                <xpath expr="//button[6]" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[7]" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_related_putaway_rules']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="product_template_only_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.only.form.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_code']" position="replace">
+                    <field name="default_code" attrs="{'invisible': [('product_variant_count', '>', 1)]}" required="1"/>
+                </xpath>
+                <field name="standard_price" position="attributes">
+                    <attribute name="groups">purchase.group_purchase_user</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="product_template_tree_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.tree.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='standard_price']" position="attributes">
+                    <attribute name="groups">purchase.group_purchase_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='qty_available']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                 <xpath expr="//field[@name='virtual_available']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_template_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.tree.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='standard_price']" position="replace">
+                    <label for="standard_price" groups="purchase.group_purchase_user"
+                           attrs="{'invisible': [('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//div[@name='standard_price_uom']" position="replace">
+                    <div name="standard_price_uom" groups="purchase.group_purchase_user"
+                         attrs="{'invisible': [('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"
+                         class="o_row">
+                        <field name="standard_price" widget='monetary'
+                               options="{'currency_field': 'cost_currency_id', 'field_digits': True}"/>
+                        <span groups="uom.group_uom" class="oe_read_only">per
+                            <field name="uom_name"/>
+                        </span>
+                    </div>
+                </xpath>
+                <xpath expr="//page[@name='sales']" position="attributes">
+                    <attribute name="groups">purchase.group_purchase_user</attribute>
+                </xpath>
+                <xpath expr="//page[@name='purchase']" position="attributes">
+                    <attribute name="groups">purchase.group_purchase_user</attribute>
+                </xpath>
+                <xpath expr="//page[@name='inventory']" position="attributes">
+                    <attribute name="groups">purchase.group_purchase_user</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_template_pos_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.form.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="point_of_sale.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='pos']" position="attributes">
+                    <attribute name="groups">purchase.group_purchase_user</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_template_view_stock_product_tree" model="ir.ui.view">
+            <field name="name">product.template.stock.tree.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.view_stock_product_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='qty_available']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+                 <xpath expr="//field[@name='virtual_available']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_standard_price_view_stock_product_tree" model="ir.ui.view">
+            <field name="name">product.product.tree.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='standard_price']" position="attributes">
+                    <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

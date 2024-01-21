@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <record id="map_zns_config_view_tree" model="ir.ui.view">
+            <field name="name">Map ZNS ConfigTree</field>
+            <field name="model">map.zns.config</field>
+            <field name="arch" type="xml">
+                <tree string="Map ZNS ConfigTree">
+                    <field name="template_id"/>
+                    <field name="model"/>
+                    <field name="param_erp"/>
+                    <field name="param_zns"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="map_zns_config_view_from" model="ir.ui.view">
+            <field name="name">Map ZNS ConfigForm</field>
+            <field name="model">map.zns.config</field>
+            <field name="arch" type="xml">
+                <form string="Map ZNS ConfigForm">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="model"/>
+                                <field name="template_id"/>
+                            </group>
+                            <group>
+                                <field name="param_erp"/>
+                                <field name="param_zns"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="map_zns_config_view_search" model="ir.ui.view">
+            <field name="name">Map ZNS Config</field>
+            <field name="model">map.zns.config</field>
+            <field name="arch" type="xml">
+                <search string="Map ZNS Config Search">
+                    <field name="model" filter_domain="[('model','ilike',self)]"/>
+                    <field name="template_id" filter_domain="[('template_id','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="map_zns_config_action" model="ir.actions.act_window">
+            <field name="name">Map ZNS Config</field>
+            <field name="res_model">map.zns.config</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="map_zns_config_view_search"/>
+        </record>
+        <menuitem id="map_zns_config_menu"
+                  name="Map ZNS Config"
+                  action="ev_zalo_template_zns.map_zns_config_action"
+                  parent="ev_zalo_notification_service.zalo_notification_service_config"
+                  sequence="6"/>
+    </data>
+</odoo>

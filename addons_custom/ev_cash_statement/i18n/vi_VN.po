@@ -1,0 +1,387 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_cash_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-02 10:28+0000\n"
+"PO-Revision-Date: 2021-10-02 17:29+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ev_cash_statement
+#: model:ir.actions.report,print_report_name:ev_cash_statement.print_cash_statement_pdf
+msgid "'report cash statement pdf'"
+msgstr "In báo cáo quỹ tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_1000
+msgid "1.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_10000
+msgid "10.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_100000
+msgid "100.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_2000
+msgid "2.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_20000
+msgid "20.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_200000
+msgid "200.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_5000
+msgid "5.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_50000
+msgid "50.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_500
+msgid "500"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__denominations_500000
+msgid "500.000"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid ""
+"<strong style=\"text-align: right;\">\n"
+"                                            ,ngày......tháng......năm......</strong>\n"
+"                                        <br clear=\"both\"/>\n"
+"                                        <strong style=\"text-align: right; padding-right: 80px; padding-top:3px\">Lập biểu\n"
+"                                        </strong>"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid ""
+"<strong>\n"
+"                                    Tổng cộng: </strong>"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "<strong>Chênh lệch: </strong>"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "<strong>Số dư trên sổ quỹ theo phần mềm: </strong>"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid ""
+"<strong>Tổng số tiền thực tế kiểm\n"
+"                                    đếm: </strong>"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_money_total_cash_app
+msgid "Amount Money App"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_amount_total_cash
+msgid "Amount Total"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_difference_amount
+msgid "Amount difference"
+msgstr "Tiền chênh lệch"
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "BIÊN BẢN KIỂM KÊ QUỸ TIỀN MẶT"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_shop__cash_fund_balance
+msgid "Cash Fund Balance"
+msgstr "Số dư quỹ tiền lẻ"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_cash_statement_ids
+msgid "Cash Statement"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_cash_fund_balance
+msgid "Cash fund balance"
+msgstr "Số dư quỹ tiền lẻ"
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.cash_statement_form
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.view_cash_pos_session_form_inherit
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.view_cash_statement_input_form
+msgid "Cash statement"
+msgstr "Bảng kê quỹ tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__create_uid
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__create_date
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__display_name
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__display_name
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__display_name
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_shop__display_name
+#: model:ir.model.fields,field_description:ev_cash_statement.field_report_ev_cash_statement_cash_statement_xlsx__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Ghi chú"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__id
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__id
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__id
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_shop__id
+#: model:ir.model.fields,field_description:ev_cash_statement.field_report_ev_cash_statement_cash_statement_xlsx__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.view_cash_pos_session_form_inherit
+msgid "Input Cash Statement"
+msgstr "Nộp tiền bán hàng"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement____last_update
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input____last_update
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session____last_update
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_shop____last_update
+#: model:ir.model.fields,field_description:ev_cash_statement.field_report_ev_cash_statement_cash_statement_xlsx____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__write_uid
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__write_date
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement_input__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Lý do chênh lệch:"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid ""
+"Mã\n"
+"                                    hiệu:"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Mệnh giá(VNĐ)"
+msgstr ""
+
+#. module: ev_cash_statement
+#: code:addons/ev_cash_statement/models/pos_session.py:0
+#, python-format
+msgid "Please enter the cash statement before closing the session!"
+msgstr "Vui lòng nhập bảng kê tiền trước khi đóng phiên"
+
+#. module: ev_cash_statement
+#: code:addons/ev_cash_statement/models/pos_session.py:0
+#, python-format
+msgid "Please enter the reason before closing the session!"
+msgstr "Vui lòng nhập lý do chênh lệch tiền trước khi đóng phiên"
+
+#. module: ev_cash_statement
+#: model:ir.model,name:ev_cash_statement.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Ca bán hàng"
+
+#. module: ev_cash_statement
+#: model:ir.model,name:ev_cash_statement.model_pos_shop
+msgid "Pos Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.view_cash_pos_session_form_inherit
+msgid "Print cash statement"
+msgstr "In bảng kê quỹ tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.actions.report,name:ev_cash_statement.print_cash_statement_pdf
+msgid "Print cash statement pdf"
+msgstr "In bảng kê quỹ tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_reason_money_difference
+msgid "Reason"
+msgstr "Lý do chêch lệch tiền"
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "STT"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Số lượng(tờ)"
+msgstr ""
+
+#. module: ev_cash_statement
+#: code:addons/ev_cash_statement/models/pos_session.py:0
+#, python-format
+msgid "This session is already closed."
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Thành Tiền(VNĐ)"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Thời điểm kiểm kê:"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "Tên cửa hàng:"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.report_template_cash_statement_internal_view
+msgid "VNĐ"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_address_company
+msgid "X Address Company"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_amount_total_cash_app
+msgid "X Amount Total Cash App"
+msgstr "Tổng tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_amount_total_cash_iput
+msgid "X Amount Total Cash Iput"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_check_cash_statement
+msgid "X Check Cash Statement"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_pos_session__x_time_print
+msgid "X Time Print"
+msgstr ""
+
+#. module: ev_cash_statement
+#: code:addons/ev_cash_statement/models/pos_session.py:0
+#, python-format
+msgid "You have not entered the reason for the money difference"
+msgstr "Bạn chưa nhập lý do chênh lệch tiền"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__amount
+msgid "amount"
+msgstr "Thành tiền"
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.view_cash_statement_input_form
+msgid "cancel"
+msgstr "Hủy"
+
+#. module: ev_cash_statement
+#: model:ir.actions.act_window,name:ev_cash_statement.cash_statement_act
+#: model:ir.actions.act_window,name:ev_cash_statement.cash_statement_input_act
+msgid "cash statement"
+msgstr "Bảng kê quỹ tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model,name:ev_cash_statement.model_cash_statement
+msgid "cash.statement"
+msgstr "Sao kê tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model,name:ev_cash_statement.model_cash_statement_input
+msgid "cash.statement.input"
+msgstr "Nhập sao kê tiền mặt"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__date
+msgid "date"
+msgstr "Ngày kê"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__denominations
+msgid "denominations"
+msgstr "Mệnh giá(VNĐ)"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__pos_session_id
+msgid "pos session"
+msgstr "Phiên"
+
+#. module: ev_cash_statement
+#: model:ir.model.fields,field_description:ev_cash_statement.field_cash_statement__quantity
+msgid "quantity"
+msgstr "Số lượng(tờ)"
+
+#. module: ev_cash_statement
+#: model:ir.model,name:ev_cash_statement.model_report_ev_cash_statement_cash_statement_xlsx
+msgid "report.ev_cash_statement.cash_statement_xlsx"
+msgstr ""
+
+#. module: ev_cash_statement
+#: model_terms:ir.ui.view,arch_db:ev_cash_statement.view_cash_statement_input_form
+msgid "submit"
+msgstr "Tạo"

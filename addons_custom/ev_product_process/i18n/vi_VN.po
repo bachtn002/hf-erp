@@ -1,0 +1,666 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_process
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-15 07:55+0000\n"
+"PO-Revision-Date: 2022-03-15 14:58+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_ir_actions_act_window
+msgid "Action Window"
+msgstr "Giao diện thao tác cửa sổ"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__active
+msgid "Active"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Back to Draft"
+msgstr "Quay về Nháp"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__error_percent
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__error_percent
+msgid "Balance Percent"
+msgstr "Chênh lệch cho phép"
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid ""
+"Bạn chưa cấu hình kiểu giao nhân (IN_OTHER - OUT_OTHER) cho công ty \"%s\" "
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid "Bạn chưa nhập mã lô cho sản phẩm \"%s\" "
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields.selection,name:ev_product_process.selection__product_process__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__uom_category_id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__uom_category_id
+msgid "Category"
+msgstr "Nhóm đơn vị"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__company_id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process_detail__uom_category_id
+#: model:ir.model.fields,help:ev_product_process.field_product_process_rule_line__uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__create_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__create_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__create_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__create_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__create_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__create_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__create_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__create_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid "Có vấn đề khi tạo đơn dịch chuyển kho: %s"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__date
+msgid "Date"
+msgstr "Ngày thực hiện"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__date_done
+msgid "Date Done"
+msgstr "Ngày thực hiện"
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Date done"
+msgstr "Ngày thực hiện"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__delivery_count
+msgid "Delivery Orders"
+msgstr "Điều chuyển kho"
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_ir_actions_act_window__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_product_process.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_process
+#: model:ir.model.fields.selection,name:ev_product_process.selection__product_process__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_product_process
+#: model:ir.model.fields.selection,name:ev_product_process.selection__product_process__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__from_detail_ids
+msgid "From Products"
+msgstr "Các sản phẩm thao tác"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__from_rule_id
+msgid "From Rule"
+msgstr "Các sản phẩm thao tác"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__from_rule_ids
+msgid "From Rule line"
+msgstr "Các sản phẩm thao tác"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_ir_actions_act_window__id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_template__id
+#: model:ir.model.fields,field_description:ev_product_process.field_stock_warehouse__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_needaction
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_has_error
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_product__x_property_stock_manufactory_id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_template__x_property_stock_manufactory_id
+msgid "Inventory Process Location"
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid "Inventory has been stocked you cannot cancel"
+msgstr "Kho đã kiểm kê bạn không thể hủy"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid "Không đủ hàng! Sản phẩm \"%s\" không đủ hàng trong kho \"%s-%s\": %s"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_ir_actions_act_window____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_product_process.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__write_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__write_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__write_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__write_uid
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__write_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__write_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__write_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__write_date
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__lot_id
+msgid "Lot/Serial Number"
+msgstr "Mã lô"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_rule_form_view
+msgid "Material"
+msgstr "Nguyên vật liệu"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__name
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__name
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_search
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__note
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__note
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__note
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Number"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__origin_qty
+msgid "Origin Quantity"
+msgstr ""
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "PRODUCT PROCESS"
+msgstr "CHẾ BIẾN"
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_rule_form_view
+msgid "PRODUCT PROCESS RULE"
+msgstr "QUY TẮC CHẾ BIẾN"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__picking_ids
+msgid "Picking"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__picking_in_id
+msgid "Picking In"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__picking_out_id
+msgid "Picking Out"
+msgstr ""
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Process"
+msgstr "Thực hiện"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_stock_warehouse__x_process_warehouse
+msgid "Process Warehouse"
+msgstr "Điểm chế biến"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__location_id
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_search
+msgid "Process at location"
+msgstr "Thực hiện tại kho"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__process_line_ids
+msgid "Process lines"
+msgstr "Chi tiết"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__dest_location_id
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_search
+msgid "Process to location"
+msgstr "Nhận vào kho"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__product_id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__product_id
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_rule_form_view
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_product_process
+#: model:ir.actions.act_window,name:ev_product_process.action_product_process
+msgid "Product Process"
+msgstr "Chế biến bán thành phẩm"
+
+#. module: ev_product_process
+#: model:ir.actions.act_window,name:ev_product_process.action_product_process_rule
+#: model:ir.ui.menu,name:ev_product_process.menu_product_process_rule
+#: model:ir.ui.menu,name:ev_product_process.menu_product_process_rule_account
+msgid "Product Process rule"
+msgstr "Quy tắc chế biến"
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_product_process
+#: model:ir.ui.menu,name:ev_product_process.menu_product_process_action
+msgid "Product process"
+msgstr "Chế biến bán thành phẩm"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__qty
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__qty_change
+msgid "Quantity Change"
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid "Quantity than max quantity process"
+msgstr "Số lượng tháo dỡ vượt quá số lượng cho phép."
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__rule_id
+msgid "Rule"
+msgstr "Quy tắc"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_search
+msgid "Search"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__percent
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__percent
+msgid "Standard Price Percent"
+msgstr "Phần trăm giá vốn"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_product_process
+#: model:res.groups,name:ev_product_process.group_stock_cancel
+msgid "Stock Cancel"
+msgstr "Người hủy phiếu chế biến"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__warehouse_id
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_search
+msgid "Stock Warehouse"
+msgstr "Kho chế biến"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__process_id
+msgid "The Process"
+msgstr "Đơn chế biến"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__from_process_id
+msgid "The from Process"
+msgstr "Đơn chế biến"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__to_process_id
+msgid "The to Process"
+msgstr "Đơn chế biến"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_line__to_detail_ids
+msgid "To Products"
+msgstr "Các sản phẩm tạo thành"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__to_rule_id
+msgid "To Rule"
+msgstr "Các sản phẩm tạo thành"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__to_rule_ids
+msgid "To Rule line"
+msgstr "Các sản phẩm tạo thành"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule__total_percent
+msgid "Total percent"
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process_rule.py:0
+#, python-format
+msgid "Total percent must be equal to 100!"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__tracking
+msgid "Tracking"
+msgstr "Truy vết"
+
+#. module: ev_product_process
+#: model_terms:ir.ui.view,arch_db:ev_product_process.product_process_form_view
+msgid "Transfer"
+msgstr "Điều chuyển kho"
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_detail__uom_id
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process_rule_line__uom_id
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_stock_warehouse__x_address_warehouse
+msgid "Warehouse Address"
+msgstr "Địa chỉ kho"
+
+#. module: ev_product_process
+#: model:ir.model.fields,field_description:ev_product_process.field_product_process__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model.fields,help:ev_product_process.field_product_process__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_product_process
+#: code:addons/ev_product_process/models/product_process.py:0
+#, python-format
+msgid "You are not allowed to process more than 1 part of the same rule!"
+msgstr ""
+"Bạn không thể thực hiện lệnh chế biến có nhiều hơn một dòng chi tiết có "
+"cùng một quy tắc!"
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_product_process
+msgid "product.process"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_product_process_detail
+msgid "product.process.detail"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_product_process_line
+msgid "product.process.line"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_product_process_rule
+msgid "product.process.rule"
+msgstr ""
+
+#. module: ev_product_process
+#: model:ir.model,name:ev_product_process.model_product_process_rule_line
+msgid "product.process.rule.line"
+msgstr ""

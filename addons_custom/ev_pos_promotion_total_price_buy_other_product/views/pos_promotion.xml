@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="pos_promotion_form_view_total_price_buy_other_product" model="ir.ui.view">
+		<field name="name">pos_promotion_form_view_total_price_buy_other_product</field>
+		<field name="model">pos.promotion</field>
+		<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='promotion_detail']" position="inside">
+				<field name="field_binary_import_promotion_total" filename="field_binary_name"
+				       attrs="{'invisible': ['|','|',('import_file', '=', False),('state','!=','draft'),('type','!=','total_price_buy_other_product')]}"/>
+				<field name="field_binary__promotion_total_name" invisible="1"/>
+				<button name="download_template_promotion_total_buy" type="object"
+				        string="Download Import Template"
+				        attrs="{'invisible': ['|','|',('import_file', '=', False),('type','!=','total_price_buy_other_product'),('state','!=','draft')]}"
+				        class="btn btn-link" style="text-decoration: underline;"
+				        help="File must in the format of xls or xlsx"/>
+				<button name="action_import_line_promotion_total_buy" type="object" class="oe_highlight"
+				        string="Import"
+				        attrs="{'invisible': ['|','|',('import_file', '=', False),('type','!=','total_price_buy_other_product'),('state','!=','draft')]}"/>
+				<group name="buy_other_product" string="Condition"
+				       attrs="{'invisible': [('type', '!=', 'total_price_buy_other_product')]}">
+					<field name="pos_promotion_total_price_buy_other_product_ids" style="max-width:920px">
+						<tree editable="bottom" class="fix_width" >
+							<field name="product_id"/>
+							<field name="qty"/>
+							<field name="check_discount_price"/>
+							<field name="price_unit"
+							       attrs="{'invisible': [('check_discount_price','not in',('price'))]}"/>
+							<field name="promotion_id" invisible="1"/>
+							<field name="discount"
+							       attrs="{'invisible': [('check_discount_price','not in',('discount'))]}"/>
+							<field name="total_price"/>
+						</tree>
+					</field>
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

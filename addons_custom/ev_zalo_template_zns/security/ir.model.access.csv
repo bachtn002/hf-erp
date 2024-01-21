@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_map_zns_config,map_zns_config_name,model_map_zns_config,,1,1,1,1

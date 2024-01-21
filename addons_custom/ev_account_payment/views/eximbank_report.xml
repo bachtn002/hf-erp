@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template t-name="ev_account_payment.report_EximBank_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <style>
+                            *{
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            }
+                            div.container{
+                            width: 100%;
+                            font-size: 10px;
+                            font-family: arial;
+                            font-weight: bold;
+                            }
+                            div.container .header_a{
+                            width: 100%;
+                            height: 60px;
+                            margin: auto;
+
+                            }
+                            div.container .header_a .left{
+                            color: #003366;
+                            width: 38%;
+                            float: left;
+                            }
+                            div.container .header_a .left img{
+                            width: 100%;
+                            height: 70px;
+                            }
+                            div.container .header_a .center{
+                            color: #003366;
+                            width: 32%;
+                            float: left;
+                            text-align: center;
+                            }
+                            div.container .header_a .center h3{
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            font-size: 18px;
+                            }
+                            div.container .header_a .center h5{
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            }
+
+                            .ori-small{
+                            font-size: 7px;
+                            margin-top: -18px;
+                            font-style: italic;
+                            font-weight: normal;
+                            }
+                            div.container .main_a{
+                            width: 100%;
+                            margin: 0px 0px 0px 0px;
+                            position:relative;
+                            height: auto;
+                            float: left;
+                            }
+                            div.container .main_b{
+                            width: 100%;
+                            margin: -5px 0px 0px 0px;
+                            position:relative;
+                            height: auto;
+                            }
+                            .shadow {
+                            width: 10px;
+                            height: 10px;
+                            margin: 0px;
+                            border: 1px solid black;
+                            -moz-box-shadow: 3px 3px black;
+                            -webkit-box-shadow: 3px 3px black;
+                            box-shadow: 25px 25px black;
+                            }
+
+                            div.container .main_b_left{
+                            float:left;
+                            width: 55%;
+                            height:80px;
+                            border-right: 1.5px solid black;
+                            }
+                            div.container .main_b_right{
+                            float: right;
+                            width: 44%;
+                            }
+
+                            .dot{
+                            float: right;
+                            border: none;
+                            border-bottom: 1.5px dotted #000;
+                            margin-top: 5px;
+                            }
+                            hr{
+                            align: top
+                            }
+                        </style>
+                        <div class="container">
+                            <div class="header_a">
+                                <div class="left">
+                                    <img src="/ev_account_payment/static/src/img/Eximbank.png" height="70%"
+                                         width="90%"/>
+                                    <p>CHUYỂN KHOẢN/
+                                        <span style="font-style: italic; font-size: 12">Transfer</span>
+                                    </p>
+                                </div>
+                                <div class="center">
+                                    <h3>Ủy nhiệm chi</h3>
+                                    <h5>Payment Order</h5>
+                                </div>
+                                <div class="right" style="width: 25%; float: right;">
+                                    <br/>
+                                    <br/>
+                                    <!--                                    <hr class="dot" style="width: 80%;"></hr>-->
+                                    <p>Số/<span style="font-size: 10px; font-style:italic">No</span>:
+                                        <span t-field="o.x_name"/>
+                                    </p>
+
+                                    <!--                                    <hr class="dot" style="width: 75%;"></hr>-->
+                                    <p>Ngày/<span style="font-size: 10px; font-style:italic">Date</span>:
+                                        <span t-field="o.x_date"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main_a">
+                                <!--                                <hr class="dot" style="width: 82%;"></hr>-->
+                                <p style="margin:auto">Đơn vị trả tiền:
+                                    <t t-set="appliation" t-value="o.get_applicant()"/>
+                                    <span t-esc="appliation.name"/>
+                                </p>
+                                <div style="font-size: 7px;margin-top: 0px;                                             font-style: italic;font-weight: normal;">
+                                    Order's Name
+                                </div>
+                                <p>Số tài khoản:
+                                    <t t-set="appliation" t-value="o.get_acc_number()"/>
+                                    <span t-field="appliation.bank_acc_number"/>
+                                </p>
+                                <div class="ori-small">Account Number</div>
+                                <!--<hr class="dot" style="width: 55%; margin-top:10px"/>-->
+                                <p>Tại Ngân Hàng Xuất Nhập Khẩu Việt Nam - SGD/Chi nhánh/PGD:
+                                    <span t-field="o.x_bank_id.name"/>
+                                    -
+                                    <span t-field="o.x_bank_id.bic"/>
+                                </p>
+                                <div class="ori-small">With VIETNAME EXPORT IMPORT BANK M.T.O/Branch/T.O</div>
+                            </div>
+                            <hr style="border: 1.5px solid #000;margin-left: 0px;width: 100%;"/>
+                            <div class="main_b">
+                                <p>Đơn vị nhận tiền:
+                                    <t t-foreach="o.x_partner_id" t-as="partner">
+                                        <span t-field="partner.name"/>
+                                    </t>
+                                </p>
+                                <div class="ori-small">Beneficiary's Name</div>
+                                <div class="main_b_left">
+                                    <div style="float:left;  width:5%">
+                                        <div class="shadow"/>
+                                    </div>
+                                    <div style="float:left; width:94%">
+                                        <p>Số tài khoản:
+                                            <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                <span t-field="partner_bank.acc_number"/>
+                                            </t>
+                                            <!--                                            <hr class="dot" style="width: 85%"></hr>-->
+                                        </p>
+                                        <div class="ori-small">Account No</div>
+                                        <p>Tại Ngân hàng:
+                                            <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                <span t-field="partner_bank.bank_id.name"/>
+                                            </t>
+                                        </p>
+                                        <!--                                        <hr class="dot" style="width: 82%;"></hr>-->
+                                        <div class="ori-small">With Bank</div>
+                                        <p>Tỉnh/TP:
+                                            <t t-foreach="o.x_partner_id" t-as="partner">
+                                                <span t-field="partner.street"/>
+                                            </t>
+                                        </p>
+                                        <!--                                        <hr class="dot" style="width: 88%;"></hr>-->
+                                        <div class="ori-small">Province City</div>
+                                    </div>
+                                </div>
+                                <div class="main_b_right">
+                                    <div style="float:left;  width:5%">
+                                        <div class="shadow"/>
+                                    </div>
+                                    <div style="float:right; width:93%">
+                                        <hr class="dot" style="width: 70%;margin-top: 10px"/>
+                                        <p>CMND/Hộ chiếu:</p>
+                                        <hr class="dot" style="width: 80%;"/>
+                                        <div class="ori-small">I.D No./PP No.</div>
+                                        <p>Ngày cấp:</p>
+                                        <hr class="dot" style="width: 78%;"/>
+                                        <div class="ori-small">Issued date</div>
+                                        <p>Nơi cấp:</p>
+                                        <div class="ori-small">Issued place</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="border: 1.5px solid #000;margin-left: 0px; width: 100%;"/>
+                            <div class="main_b" style="height: 65px">
+                                <div class="main_b_left" style="width:75%; height: 65px">
+                                    <!--                                    <hr class="dot" style="width: 60%"></hr>-->
+                                    <p>Số tiền bằng chữ:
+                                        <span t-esc="o.get_amount_to_word(o.x_amount_before_tax)"/>
+                                    </p>
+                                    <!--<hr class="dot" style="width: 100%"/>-->
+                                    <div class="ori-small">Amount in words</div>
+                                    <!--<hr class="dot" style="width: 100%"/>-->
+                                </div>
+                                <div class="main_b_right" style="width:24%;text-align: center">
+                                    <div>
+                                        <p>Số tiền bằng số:</p>
+                                        <div class="ori-small">Amount in figures</div>
+                                    </div>
+                                    <div style="width: 65%; border: solid black 1.5px; height:20px; margin: auto;">
+                                        <span t-field="o.x_amount_before_tax"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_b" style="float: left; margin-top: -15px;">
+                                <br/>
+                                <!--                                <hr class="dot" style="width: 90%"></hr>-->
+                                <p>Nội dung:
+                                    <span t-field="o.x_description"/>
+                                </p>
+                                <div class="ori-small">Details</div>
+
+                            </div>
+                            <hr style="border: 1.5px solid #000;margin-left: 0px; width: 100%;"/>
+                            <div class="main_b">
+                                <div style="float: left;width: 33%; height:120px;                                             margin-right: 10px;border-right: solid black 1.5px;">
+
+                                    <p>ĐV trả tiền ngày:............................</p>
+
+                                    <div class="ori-small">Ordered on</div>
+                                    <div style="float: left; width:50%; margin-top: 5px">
+                                        <p>Kế toán trưởng</p>
+                                        <div class="ori-small">Chief Accountant</div>
+                                    </div>
+                                    <div style="float: left">
+                                        <p>Chủ tài khoản</p>
+                                        <div class="ori-small">Account holder</div>
+                                    </div>
+                                </div>
+                                <div style="float: left;width: 32%; height:120px; border-right: solid black 1.5px; margin-right: 10px;">
+                                    <!--<hr class="dot" style="width: 35%"/>-->
+                                    <p>NH A <span style="font-size: 11px;font-style: italic">(Eximbank)</span> ghi sổ
+                                        ngày ............................
+                                    </p>
+
+                                    <div class="ori-small">Registered by Bank A (Eximbank) on</div>
+                                    <div style="float: left; width:50%; margin-top: 5px">
+                                        <p>Giao dịch viên</p>
+                                        <div class="ori-small">Teller</div>
+                                    </div>
+                                    <div style="float: left">
+                                        <p>Kiểm soát</p>
+                                        <div class="ori-small">Verifier</div>
+                                    </div>
+                                </div>
+                                <div style="float: left;width: 32%; height:120px">
+                                    <!--<hr class="dot" style="width: 25%"/>-->
+                                    <p>NH B <span style="font-size: 11px; font-style: italic;">(Beneficiary's Bank)
+                                    </span> ghi sổ ngày ............
+                                    </p>
+                                    <div class="ori-small">Registered by Bank B on</div>
+                                    <div style="float: left; width:50%; margin-top: 5px">
+                                        <p>Giao dịch viên</p>
+                                        <div class="ori-small">Teller</div>
+                                    </div>
+                                    <div style="float: left">
+                                        <p>Kiểm soát</p>
+                                        <div class="ori-small">Verifier</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="paperformat_account_payment_Eximbank_report" model="report.paperformat">
+            <field name="name">Eximbank_report</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">210</field>
+            <field name="page_width">148</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report id="report_eximbank_order"
+                string="Report EximBank"
+                model="account.payment"
+                report_type="qweb-pdf"
+                name="ev_account_payment.report_EximBank_template"
+                file="ev_account_payment.report_EximBank_template"
+                paperformat="paperformat_account_payment_Eximbank_report"
+        />
+    </data>
+</odoo>

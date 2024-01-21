@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template id="template" xml:space="preserve">
+    <t t-name="OrderWidgetGiftCode" owl="1">
+        <t t-if="get_gift_length_name_promotion() == '0'">
+            <div></div>
+        </t>
+        <t t-else="">
+            <div class="summary clearfix">
+                <div class="line">
+                    <div class="entry total">
+                        <span class="badge"
+                              style="font-size:15px; color:red">Give away promo code: </span>
+                        <span class="value" style="font-size:15px; color:red">
+                            <t t-esc="get_gift_name_promotion()"/>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+</template>

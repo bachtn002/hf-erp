@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<odoo>
+    <!--Menu Tất cả ticket: lọc danh sách ticket thuộc bộ phận được phép theo thông tin user đăng nhập-->
+    <record id="action_server_ticket_department_filter" model="ir.actions.server">
+        <field name="name">Ticket Department Filter</field>
+        <field name="model_id" ref="model_helpdesk_ticket"/>
+        <field name="state">code</field>
+        <field name="code">action = env.get('helpdesk.ticket').ticket_department_all_filter_act()</field>
+    </record>
+
+    <menuitem id="helpdesk.helpdesk_ticket_menu_all" name="All Tickets" action="action_server_ticket_department_filter"
+        sequence="20" parent="helpdesk.helpdesk_ticket_menu_main" groups="helpdesk.group_helpdesk_manager,helpdesk.group_helpdesk_user"/>
+
+    <record model="ir.ui.view" id="helpdesk_ticket_partner_view_form_inherit">
+            <field name="name">helpdesk.ticket.form.inherit.partner</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="ev_helpdesk.helpdesk_ticket_partner_view_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_problem_solution']" position="after">
+                    <field name="x_note" placeholder="Note..."/>
+                    <field name="x_solution_detail" widget="html"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="helpdesk_ticket_view_form">
+            <field name="name">helpdesk.ticket.form</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_email']" position="after">
+                    <field name="x_shop_id" options="{'no_create':1, 'no_open':1}"/>
+                    <field name="x_ref"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="helpdesk_team_view_kanban_inherit">
+        <field name="name">helpdesk.team.dashboard.inherit</field>
+        <field name="model">helpdesk.team</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_team_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='col-6 o_kanban_primary_right']" position="replace">
+                <div class="col-6 o_kanban_primary_right">
+                    <div class="mb4" groups="helpdesk.group_use_sla" attrs="{'invisible': [('use_sla', '=', False)]}">
+                        <a name="%(helpdesk.action_upcoming_sla_fail_all_tickets)d"
+                           context="{'search_default_team_id': active_id, 'default_team_id': active_id}">
+                            <t t-esc="record.upcoming_sla_fail_tickets.raw_value"/>
+                            SLA Issues
+                        </a>
+                    </div>
+                    <div class="mb4">
+                        <a name="%(helpdesk.helpdesk_ticket_action_unassigned)d"
+                           context="{'search_default_team_id': active_id, 'default_team_id': active_id}">
+                            <t t-esc="record.unassigned_tickets.raw_value"/>
+                            Unassigned Tickets
+                        </a>
+                    </div>
+                    <div class="mb4" t-if="record.use_rating.raw_value">
+                        <a name="action_view_all_rating" type="object">See Customer Satisfaction</a>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

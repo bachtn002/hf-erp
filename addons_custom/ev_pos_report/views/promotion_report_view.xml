@@ -1,0 +1,83 @@
+<odoo>
+    <data>
+        <record id="view_report_promotion_form" model="ir.ui.view">
+            <field name="name">Promotion report</field>
+            <field name="model">promotion.report</field>
+            <field name="arch" type="xml">
+                <form string="Promotion report">
+                    <header>
+                        <button name="action_print" string="In Excel" type="object"/>
+                    </header>
+                    <sheet>
+                        <h2 class="text-center">PROMOTION REPORT</h2>
+                        <group>
+                            <group>
+                                <field name="from_date" required="1"/>
+                                <field name="pos_config_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                            </group>
+                            <group>
+                                <field name="to_date" required="1"/>
+                                <field name="promotion_config_id" options="{'no_create':1, 'no_create_edit':1}"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="action_filter_all" string="Report" type="object" class="btn-primary"/>
+                        </footer>
+                        <notebook>
+                            <page string="Promotion">
+                                <field name="promotion_lines" readonly="1">
+                                    <tree>
+                                        <field name="order_id"/>
+                                        <field name="customer_id"/>
+                                        <field name="product_id"/>
+                                        <field name="price_unit"/>
+                                        <field name="quantity"/>
+                                        <field name="amount_discount"/>
+                                        <field name="amount_total"/>
+                                        <field name="name_discount"/>
+                                    </tree>
+                                    <form colspan="4">
+                                        <field name="order_id"/>
+                                        <field name="customer_id"/>
+                                        <field name="product_id"/>
+                                        <field name="price_unit"/>
+                                        <field name="quantity"/>
+                                        <field name="amount_discount"/>
+                                        <field name="amount_total"/>
+                                        <field name="name_discount"/>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_quantity"/>
+                                    </div>
+                                    <field name="total_quantity" nolabel="1" class="oe_subtotal_footer_separator"
+                                           readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_discount"/>
+                                    </div>
+                                    <field name="total_discount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_report_promotion" model="ir.actions.act_window">
+            <field name="name">Promotion Report</field>
+            <field name="res_model">promotion.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_report_promotion_form"/>
+        </record>
+        <menuitem id="menu_report_promotion" name="Promotion report" action="action_report_promotion"
+                  parent="point_of_sale.menu_point_rep" sequence="4" groups="point_of_sale.group_pos_manager"/>
+    </data>
+</odoo>

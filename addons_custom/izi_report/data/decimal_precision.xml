@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record model="decimal.precision" id="decimal_precision_price_other">
+            <field name="name">Price Other</field>
+            <field name="digits">0</field>
+        </record>
+        <record model="decimal.precision" id="decimal_precision_discount_other">
+            <field name="name">Discount Other</field>
+            <field name="digits">0</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="promotion_price_import_form" model="ir.ui.view">
+            <field name="name">promotion_price_import_form</field>
+            <field name="model">promotion.qty.price.import</field>
+            <field name="arch" type="xml">
+                <form string="Upload" editable="True">
+                    <group>
+                        <field name="promotion_price_file"/>
+                    </group>
+                    <footer>
+                        <button name="import_promotion_price" string="Submit" type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="promotion_price_import_act" model="ir.actions.act_window">
+            <field name="name">Upload File</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">promotion.qty.price.import</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="promotion_price_import_form"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

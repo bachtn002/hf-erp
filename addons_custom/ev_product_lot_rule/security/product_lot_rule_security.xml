@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_config_product_lot_rule" model="res.groups">
+            <field name="name">Config Product Lot Rule</field>
+            <field name="category_id" ref="base.module_category_inventory_inventory"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <record id="group_edit_defaut_code" model="res.groups">
+            <field name="name">Edit default code</field>
+            <field name="category_id" ref="base.module_category_inventory_inventory"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>

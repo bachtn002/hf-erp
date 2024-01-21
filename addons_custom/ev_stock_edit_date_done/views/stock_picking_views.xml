@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record id="view_change_date_done" model="ir.ui.view">
+            <field name="name">Change Date Done</field>
+            <field name="model">stock.change.date.done</field>
+            <field name="arch" type="xml">
+                <form string="Change Date Done">
+                    <separator string="Change Date"/>
+                    <group>
+                        <group>
+                            <field name="new_date" string="Date"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="change_date_done" string="_Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_view_change_date_done" model="ir.actions.act_window">
+            <field name="name">Change date done</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.change.date.done</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_change_date_done"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_picking_form_inherit_edit_date" model="ir.ui.view">
+            <field name="name">stock.picking.form.edit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <field name="date_done" position="after">
+                    <div name="update_date_done" class="col-lg-2">
+                        <button string="Update date" type="action"
+                                name="%(action_view_change_date_done)d"
+                                class="oe_link oe_read_only"
+                                attrs="{'invisible':[('state','!=', 'done')]}"
+                                groups="stock.group_stock_manager"
+                        />
+                    </div>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

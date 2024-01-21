@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_shop_map_form_inherit">
+            <field name="name">view_pos_shop_map_form_inherit</field>
+            <field name="model">pos.shop</field>
+            <field name="inherit_id" ref="ev_pos_shop.pos_shop_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='address']" position="after">
+                    <field name="country_state_id" options="{'no_create':1, 'no_open':1}"
+                           domain="[('country_id.code', '=', 'VN')]"/>
+                    <span type="hidden" style="display: none">
+                        <field name="x_pos_lat" readonly="1" force_save="1"/>
+                        <field name="x_pos_long" readonly="1" force_save="1"/>
+                    </span>
+                    <field name="lat" force_save="1"/>
+                    <field name="long" force_save="1"/>
+                </xpath>
+                <xpath expr="//page[3]" position="after">
+                    <page string="Google maps">
+                        <widget name="ev_gmap_marker" lat="lat" lng="long" description="name"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

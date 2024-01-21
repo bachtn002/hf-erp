@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="questions_rating_custom_inherit" name="Question Rating Custom"
+                  inherit_id="ev_helpdesk.questions_rating">
+            <xpath expr="//div[hasclass('group-rating')]" position="replace">
+
+                <div class="row group-rating">
+                    <div class="col-1"></div>
+
+                    <div class="col-2 scale-rating">
+                        <div class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/1.png"
+                                 width="65"
+                                 height="60" t-att-data-question_related="question_related_id"
+                                 id="1"/>
+                        </div>
+                        <span class="rating-text">Highly Dissatisfied</span>
+                    </div>
+                    <div class="col-2 scale-rating">
+                        <div class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/2.png"
+                                 width="65"
+                                 height="60" t-att-data-question_related="question_related_id"
+                                 id="2"/>
+                        </div>
+                        <span class="rating-text">Dissatisfied</span>
+                    </div>
+                    <div class="col-2 scale-rating">
+                        <div class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/3.png"
+                                 width="65"
+                                 height="60" t-att-data-question_related="question_related_id"
+                                 id="3"/>
+                        </div>
+                        <span class="rating-text">Not Satisfied</span>
+                    </div>
+                    <div class="col-2 scale-rating">
+                        <div class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/4.png"
+                                 width="65"
+                                 height="60" t-att-data-question_related="question_related_id"
+                                 id="4"/>
+                        </div>
+                        <span class="rating-text">Satisfied</span>
+                    </div>
+                    <div class="col-2 scale-rating">
+                        <div class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/5.png"
+                                 width="65"
+                                 height="60" t-att-data-question_related="question_related_id"
+                                 id="5"/>
+                        </div>
+                        <span class="rating-text">Highly Satisfied</span>
+                    </div>
+
+                    <div class="col-1"></div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ev_pos_next_screen_after_print_asset" inherit_id="point_of_sale.assets"
+              name="ev_pos_next_screen_after_print_asset.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/ev_pos_next_screen_after_print/static/src/js/next_screen.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_next_screen_after_print/static/src/js/model_pos_payment_method.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_next_screen_after_print/static/src/js/ClientLineInherit.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_next_screen_after_print/static/src/js/model_pos_inherit_get_due.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_next_screen_after_print/static/src/js/load_model_res.js"/>
+        </xpath>
+
+    </template>
+</odoo>

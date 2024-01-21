@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="NoBarcodeFound">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-barcode">
+                <header class="title" style="font-weight: bold; font-size: 24px; color: red;">Unknown Barcode
+                </header>
+                <main class="body" style=" font-weight: bold; font-size: 24px; text-align: center; padding-top: 10px; ">
+                    <t t-esc="barcode"/>
+                </main>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="OverScanQuantity">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-barcode">
+                <header class="title" style="font-weight: bold; font-size: 24px; color: red;">
+                    Code <b><span t-esc="barcode"/></b> Can not be scan more
+                </header>
+            </div>
+        </div>
+    </t>
+</templates>

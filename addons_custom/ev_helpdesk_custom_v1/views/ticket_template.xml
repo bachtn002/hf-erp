@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="tickets_followup_ev_helpdesk_custom_v1_inherit" name="Helpdesk tickets custom"
+                  inherit_id="ev_helpdesk.tickets_followup_ev_helpdesk_custom" priority="50">
+            <xpath expr="//div[hasclass('ticket-rating')]" position="replace">
+                <div class="ticket-rating" t-if="ticket.stage_id.is_close">
+                    <span style="margin-right: 29px;">We would love to hear your feedback
+                    </span>
+                    <div class="group-rating-icon col-auto example-block text-center">
+                        <label class="radio-inline">
+                            <img class="create-rating" src="/ev_helpdesk_custom_v1/static/img/1.png"
+                                 width="30"
+                                 t-att-data-id="ticket.id"
+                                 height="30" id="1"/>
+                        </label>
+                    </div>
+                    <div class="group-rating-icon col-auto example-block text-center">
+                        <label class="radio-inline">
+                            <img class="create-rating" src="/ev_helpdesk_custom_v1/static/img/2.png"
+                                 width="30"
+                                 t-att-data-id="ticket.id"
+                                 height="30" id="2"/>
+                        </label>
+                    </div>
+                    <div class="group-rating-icon col-auto example-block text-center">
+                        <label class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/3.png "
+                                 width="30"
+                                 t-att-data-id="ticket.id"
+                                 height="30" id="3"/>
+                        </label>
+                    </div>
+                    <div class="group-rating-icon col-auto example-block text-center">
+                        <label class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/4.png "
+                                 width="30"
+                                 t-att-data-id="ticket.id"
+                                 height="30" id="4"/>
+                        </label>
+                    </div>
+                    <div class="group-rating-icon col-auto example-block text-center">
+                        <label class="radio-inline">
+                            <img class="create-rating"
+                                 src="/ev_helpdesk_custom_v1/static/img/5.png "
+                                 width="30"
+                                 t-att-data-id="ticket.id"
+                                 height="30" id="5"/>
+                        </label>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

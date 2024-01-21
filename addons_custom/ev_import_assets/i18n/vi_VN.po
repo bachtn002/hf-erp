@@ -1,0 +1,421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_import_assets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-21 23:25+0000\n"
+"PO-Revision-Date: 2021-10-21 23:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Account analytic not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Bộ phận chịu phí không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Account asset not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Tài khoản tài sản không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Account expense item not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Khoản mục chi phí không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Account expense not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Tài khoản chi phí không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Account not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Tài khoản khấu hao không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Asset product not exist in the system or not active, line (%s)"
+msgstr ""
+"\n"
+"Mã sản phẩm hình thành tài sản không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Asset product qty not exist in the system or not active, line (%s)"
+msgstr ""
+"\n"
+"Mã sản phẩm quản lý số lượng tài sản không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Date buy not is date, line (%s)"
+msgstr ""
+"\n"
+"Ngày mua không đúng định dạng ngày, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Date depreciton new not is date, line (%s)"
+msgstr ""
+"\n"
+"Ngày bắ đầu khấu hao trên hệ thống mới không đúng định dạng ngày, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Datereciation old not is date, line (%s)"
+msgstr ""
+"\n"
+"Ngày khấu hao đầu trên hệ thống cũ không đúng định dạng ngày, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Journal not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Sổ nhật kí không tồn tại trong hệ thống, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Method not exist in asset, line (%s)"
+msgstr ""
+"\n"
+"Phương thức khấu hao không đúng, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Method number not is number, line (%s)"
+msgstr ""
+"\n"
+"Thời lượng khấu hao phải là số, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Money depreciation not is number, line (%s)"
+msgstr ""
+"\n"
+"Số tiền khấu hao trên hệ thống cũ phải là số, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Price unit not is number, line (%s)"
+msgstr ""
+"\n"
+"Nguyên giá ban đầu phải là số, dòng (%s)"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Value not is number, line (%s)"
+msgstr ""
+"\n"
+"Giá trị còn lại phải là số, dòng (%s)"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__account_analytic_id
+msgid "Account Analytic"
+msgstr "Bộ phận chịu phí"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__account_asset_id
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__account_id
+msgid "Account Depreciation"
+msgstr "Tài khoản khấu hao"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__account_expense_id
+msgid "Account Expense"
+msgstr "Tài khoản chi phí"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__account_expense_item_id
+msgid "Account Expense Item"
+msgstr "Bộ phận chịu phí"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__code
+msgid "Asset Code"
+msgstr "Mã tài sản"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__asset_product_qty_id
+msgid "Asset Code Product Quantity"
+msgstr "Sản phẩm quản lý số lượng tài sản"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__line_ids
+msgid "Asset Line"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__name
+msgid "Asset Name"
+msgstr "Tên tài sản"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__asset_group
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__asset_product_id
+msgid "Asset Product"
+msgstr "Sản phẩm hình thành tài sản"
+
+#. module: ev_import_assets
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_line_import_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__create_uid
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__create_uid
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__create_date
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__create_date
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__date_buy
+msgid "Date Buy"
+msgstr "Ngày mua"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__date_depreciation_new
+msgid "Date Depreciation New"
+msgstr "Ngày khấu hao mới"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__date_depreciation_old
+msgid "Date Depreciation Old"
+msgstr "Ngày khấu hao cũ"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__date_import
+msgid "Date import"
+msgstr "Ngày"
+
+#. module: ev_import_assets
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_view_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__display_name
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__display_name
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields.selection,name:ev_import_assets.selection__import_asset__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_import_assets
+#: model:ir.model.fields.selection,name:ev_import_assets.selection__import_asset__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/wizard/import_asset_line_imp.py:0
+#, python-format
+msgid ""
+"File not found or in incorrect format. Please check the .xls or .xlsx file "
+"format"
+msgstr ""
+"File nhập chưa đúng định dạng .xls hoặc .xlsx file "
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__id
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__id
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.actions.act_window,name:ev_import_assets.import_asset_line_import_action
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__import_asset_id
+#: model:ir.ui.menu,name:ev_import_assets.import_asset_menu
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_view_form
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_view_tree
+msgid "Import Asset"
+msgstr "Nhập tài sản"
+
+#. module: ev_import_assets
+#: code:addons/ev_import_assets/models/import_asset.py:0
+#, python-format
+msgid "Import Asset "
+msgstr "Nhập tài sản: "
+
+#. module: ev_import_assets
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_line_import_wizard_form
+msgid "Import a excel file"
+msgstr "Nhập file excel"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset____last_update
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line____last_update
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__write_uid
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__write_uid
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__write_date
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__write_date
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__method_number
+msgid "Method Number"
+msgstr "Thời lượng khấu hao"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__method_depreciation
+msgid "Method depreciation"
+msgstr "Phương thức khấu hao"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__money_depreciation
+msgid "Money Depreciation"
+msgstr "Số tiền khấu hao "
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__price_unit
+msgid "Price"
+msgstr "Nguyên giá ban đầu"
+
+#. module: ev_import_assets
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_view_search
+msgid "Search"
+msgstr "Tìn kiếm"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_import_assets
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_view_form
+msgid "Update file product"
+msgstr "Nhập file"
+
+#. module: ev_import_assets
+#: model_terms:ir.ui.view,arch_db:ev_import_assets.import_asset_line_import_wizard_form
+msgid "Upload"
+msgstr "Tải file"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line_import__upload_file
+msgid "Upload File"
+msgstr "Tải file"
+
+#. module: ev_import_assets
+#: model:ir.model.fields,field_description:ev_import_assets.field_import_asset_line__value
+msgid "Value Rest"
+msgstr "Giá trị còn lại"
+
+#. module: ev_import_assets
+#: model:ir.model,name:ev_import_assets.model_import_asset
+msgid "import.asset"
+msgstr "Nhập tài sản"
+
+#. module: ev_import_assets
+#: model:ir.model,name:ev_import_assets.model_import_asset_line
+msgid "import.asset.line"
+msgstr ""
+
+#. module: ev_import_assets
+#: model:ir.model,name:ev_import_assets.model_import_asset_line_import
+msgid "import.asset.line.import"
+msgstr "Nhập tài sản"
+
+#. module: ev_import_assets
+#: model:ir.actions.act_window,name:ev_import_assets.import_asset_action
+msgid "import_asset_action"
+msgstr "Nhập tài sản"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_detail_debit_by_account_form" model="ir.ui.view">
+            <field name="name">RPT Detail Debit By Account</field>
+            <field name="model">rpt.detail.debit.by.account</field>
+            <field name="arch" type="xml">
+                <form string="RPT Detail Debit By Account">
+                    <group>
+                        <group>
+                            <field name="date_from" required="1" string="From date"/>
+                            <field name="date_to" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="account_id" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                   domain="[('company_id','=', company_id)]" required="1"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_detail_debit_by_account" model="ir.actions.act_window">
+            <field name="name">RPT Detail Debit By Account</field>
+            <field name="res_model">rpt.detail.debit.by.account</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_detail_debit_by_account_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_rpt_detail_debit_by_account" groups="account.group_account_user"
+                  name="RPT Detail Debit By Account" action="action_rpt_detail_debit_by_account"
+                  parent="account.account_reports_legal_statements_menu"
+                  sequence="101"/>
+
+    </data>
+</odoo>

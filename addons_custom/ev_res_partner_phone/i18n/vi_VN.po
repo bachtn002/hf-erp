@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_res_partner_phone
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 07:24+0000\n"
+"PO-Revision-Date: 2023-11-03 07:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_res_partner_phone
+#: model:ir.model,name:ev_res_partner_phone.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_res_partner_phone
+#: model:ir.model.fields,field_description:ev_res_partner_phone.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_res_partner_phone
+#: model:ir.model.fields,field_description:ev_res_partner_phone.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_res_partner_phone
+#: model:ir.model.fields,field_description:ev_res_partner_phone.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_res_partner_phone
+#: code:addons/ev_res_partner_phone/models/res_partner.py:0
+#, python-format
+msgid "Phone number already exists."
+msgstr "Số điện thoại đã tồn tại."

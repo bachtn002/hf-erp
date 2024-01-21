@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+                id="allotment_request_report_xlsx"
+                model="allotment.request"
+                string="Allotment Request Report"
+                report_type="xlsx"
+                name="ev_general_request.allotment_request_report"
+                file="ev_general_request.allotment_request_report"
+                print_report_name="Allotment Request Excel Report"
+        />
+    </data>
+</odoo>

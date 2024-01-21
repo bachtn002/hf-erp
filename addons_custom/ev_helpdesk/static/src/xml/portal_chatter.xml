@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!--
+        Inherited templates from portal to custom chatter with image thumnail
+    -->
+    <t t-extend="portal.Chatter.Attachments">
+        <t t-jquery=".o_portal_chatter_attachment" t-operation="replace">
+
+            <div class="o_portal_chatter_attachment mb-2 position-relative text-center" t-att-data-id="attachment.id">
+                    <button t-if="showDelete and attachment.state == 'pending'"
+                            class="o_portal_chatter_attachment_delete btn btn-sm btn-outline-danger" title="Delete">
+                        <i class="fa fa-times"/>
+                    </button>
+                <t t-if="attachment.mimetype.split('/')[0] == 'image'">
+                    <img class="show_image" t-att-id="attachment.id" t-attf-src="/web/content/#{attachment.id}?download=true&amp;access_token=#{attachment.access_token}"
+                         target="_blank" style="width: 100px; height: auto;">
+                        <div class='oe_attachment_embedded o_image_custom' t-att-title="attachment.name"
+                             t-att-data-mimetype="attachment.mimetype"/>
+                        <div class='o_portal_chatter_attachment_name'><t t-esc='attachment.name'/></div>
+                    </img>
+                    <!-- The Modal -->
+                    <div t-att-id="'myModal' + (attachment.id)" class="modal" style="margin-top: 40px;">
+                        <img class="modal-content" t-att-id="'myImage' + (attachment.id)" style="max-width:50%; height:auto"
+                             t-attf-src="/web/content/#{attachment.id}?download=true&amp;access_token=#{attachment.access_token}"/>
+                    </div>
+                </t>
+                <t t-else="">
+                    <a t-attf-href="/web/content/#{attachment.id}?download=true&amp;access_token=#{attachment.access_token}"
+                       target="_blank">
+                        <div class='oe_attachment_embedded o_image' t-att-title="attachment.name"
+                             t-att-data-mimetype="attachment.mimetype"/>
+                        <div class='o_portal_chatter_attachment_name'><t t-esc='attachment.name'/></div>
+                    </a>
+                </t>
+            </div>
+        </t>
+    </t>
+
+</templates>

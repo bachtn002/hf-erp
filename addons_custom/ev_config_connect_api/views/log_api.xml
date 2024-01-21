@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="log_api_view_tree" model="ir.ui.view">
+            <field name="name">log_api_view_tree</field>
+            <field name="model">log.api</field>
+            <field name="arch" type="xml">
+                <tree string="log" default_order='create_date desc' create="0" edit="0" delete="0">
+                    <field name="remote_ip"/>
+                    <field name="code_api"/>
+                    <field name="name_api"/>
+                    <field name="code_response"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="log_api_view_form" model="ir.ui.view">
+            <field name="name">log_api_view_form</field>
+            <field name="model">log.api</field>
+            <field name="arch" type="xml">
+                <form string="Log API" create="0" edit="0" delete="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code_api"/>
+                                <field name="name_api"/>
+                                <field name="remote_ip"/>
+                            </group>
+                            <group>
+                                <field name="code_response"/>
+                                <field name="mess_response"/>
+                                <field name="create_date"/>
+                            </group>
+                            <notebook>
+                                <page string="Details">
+                                    <field name="params"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="log_api_view_search" model="ir.ui.view">
+            <field name="name">log_api_view_search</field>
+            <field name="model">log.api</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="code_api"/>
+                    <field name="name_api"/>
+                    <field name="code_response"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="log_api_action" model="ir.actions.act_window">
+            <field name="name">log_api_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">log.api</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="log_api_view_search"/>
+        </record>
+
+        <menuitem id="log_api_menu"
+                  name="Log API"
+                  action="log_api_action"
+                  parent="ev_config_connect_api.connection_api_menu"
+                  sequence="6"/>
+    </data>
+</odoo>

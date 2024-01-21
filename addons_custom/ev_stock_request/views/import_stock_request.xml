@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="stock_request_import_tree" model="ir.ui.view">
+            <field name="name">stock.request.import.tree</field>
+            <field name="model">stock.request.import</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Request Import">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="type"/>
+                    <field name="company_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="stock_request_import_form" model="ir.ui.view">
+            <field name="name">stock.request.import.form</field>
+            <field name="model">stock.request.import</field>
+            <field name="arch" type="xml">
+                <form string="Stock Request Import">
+                    <header>
+                        <button name="action_confirm" type="object" string="confirm"
+                                class="oe_highlight" states="draft"/>
+                        <button name="action_send" type="object" string="Send" class="oe_highlight" states="confirmed"/>
+                        <button name="action_set_draft" type="object" string="Set Draft" class="oe_highlight" states="confirmed"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"
+                               clickable="False"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_stock_picking" type="object" icon="fa-truck"
+                                    attrs="{'invisible':[('picking_count', '=', 0)]}"
+                                    groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"
+                            >
+                                <field name="picking_count" widget="statinfo" string="Request"
+                                       attrs="{'invisible': [('picking_count', '=', 0)]}"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" force_save="1" attrs="{'readonly' : [('state', '!=', 'draft')]}"
+                                       required="1"/>
+                                <field name="type" attrs="{'readonly' : [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="note" attrs="{'readonly' : [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="date" attrs="{'readonly' : [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="company_id" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="detail">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="The import form is in xls or xlsx format"/>
+                                <button name="action_import_line" type="object" class="oe_highlight" string="Import"
+                                        attrs="{'invisible': [('field_binary_import', '=', False)]}"/>
+                                <field name="line_ids" attrs="{'readonly': [('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="stock_request_import_id" invisible="1"/>
+                                        <field name="warehouse_dest_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               required="1"/>
+                                        <field name="location_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               domain="[('x_is_reason', '=', True),('usage', '=', 'inventory'),]"
+                                               required="1"/>
+                                        <field name="valuation_in_account_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               attrs="{'invisible':[('parent.type','!=','other_output')],'required':[('parent.type','=','other_output')]}"
+                                               force_save="1"/>
+                                        <field name="valuation_out_account_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               attrs="{'invisible':[('parent.type','!=','other_input')],'required':[('parent.type','=','other_input')]}"
+                                               force_save="1"/>
+                                        <field name="account_expense_item" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               required="1" force_save="1"/>
+                                        <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               required="1"/>
+                                        <field name="analytic_account_id" options="{'no_create': 1, 'no_create_edit': 1, 'no_open': 1}"
+                                               required="1" force_save="1"/>
+                                        <field name="quantity" required="1"/>
+                                        <field name="price_unit"
+                                               attrs="{'readonly' : [('parent.state','!=','draft')], 'invisible':[('parent.type','!=','other_input')],'required':[('parent.type','=','other_input')]}"/>
+                                        <field name="uom_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                               required="1" readonly="1" force_save="1"/>
+                                        <field name="note"/>
+                                        <field name="quantity_done"/>
+                                        <field name="state" attrs="{'invisible': [('parent.type','=','other_output')]}"/>
+                                        <field name="status" attrs="{'invisible': [('parent.type','=','other_input')]}"/>
+                                        <field name="stock_request_id" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="stock_request_import_act" model="ir.actions.act_window">
+            <field name="name">Stock Request Import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.request.import</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_stock_request_import" name="Stock Request Import"
+                  action="stock_request_import_act" groups="account.group_account_user"
+                  parent="menu_stock_request_goods"
+                  sequence="30"/>
+
+
+    </data>
+</odoo>

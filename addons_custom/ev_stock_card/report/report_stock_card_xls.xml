@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="stock_card_report_xlsx"
+            model="stock.card"
+            string="In excel"
+            report_type="xlsx"
+            name="ev_stock_card.stock_card_xlsx"
+            file="ev_stock_card.stock_card_xlsx"
+            print_report_name="'Báo cáo test'"
+    />
+</odoo>

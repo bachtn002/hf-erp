@@ -1,0 +1,685 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_sale_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-18 03:53+0000\n"
+"PO-Revision-Date: 2022-03-18 03:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/ImportFileStock.py:0
+#, python-format
+msgid ""
+"\n"
+"Not service type, line (%s)"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/ImportFileStock.py:0
+#, python-format
+msgid ""
+"\n"
+"Product does not exist in the system, line (%s)"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/ImportFileStock.py:0
+#, python-format
+msgid ""
+"\n"
+"Quantity must be greater than 0, line (%s)"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_needaction
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__qty_apply
+msgid "Apply quantity"
+msgstr "Số lượng đáp ứng"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_attachment_count
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "Can not choose product with service type"
+msgstr "Không được chọn sản phẩm là dịch vụ"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.your_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__check_general
+msgid "Check General"
+msgstr "Trạng thái tổng hợp"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__count_general
+msgid "Check general line to transfer status"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__create_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__create_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__create_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__create_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__create_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__create_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__create_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__create_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__product_uom
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__warehoue_des_id
+msgid "Destination Warehouse"
+msgstr "Kho đích"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_report_sale_request_report__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_region__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_warehouse__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__display_name
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_sale_request
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request__state__draft
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_view_search
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__file_name
+msgid "File Name"
+msgstr "File import"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_follower_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_channel_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_partner_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_template__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_report_sale_request_report__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_company__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_region__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_warehouse__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__id
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_needaction
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_unread
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_needaction
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_has_error
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_has_sms_error
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_has_error
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.your_wizard_form
+msgid "Import"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.actions.act_window,name:ev_sale_request.your_wizard_action
+msgid "Import Sale Request"
+msgstr "Import yêu cầu hàng"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.your_wizard_form
+msgid "Import a excel file"
+msgstr "Import file excel"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+msgid "Import file"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/ImportFileStock.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_is_follower
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_report_sale_request_report____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_region____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_warehouse____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment____last_update
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__write_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__write_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__write_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__write_uid
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__write_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__write_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__write_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__write_date
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_has_error
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_ids
+msgid "Messages"
+msgstr "Thông báo"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__name
+msgid "Name"
+msgstr "Mã phiếu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__name
+msgid "Name Adjustment"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "No fill request accept time"
+msgstr "Chưa nhập thời gian yêu cầu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_needaction_counter
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_has_error_counter
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__message_unread_counter
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.actions.report,name:ev_sale_request.report_sale_request_report_xlsx
+msgid "Phiếu yêu cầu cung ứng hàng hóa"
+msgstr ""
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_sale_request
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request__state__processed
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_view_search
+msgid "Processed"
+msgstr "Được xử lý"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__product_id
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__product_ids
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "Product is not active"
+msgstr "Sản phẩm không sẵn sàng"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "Product quantity must greater than 0!"
+msgstr "Số lượng yêu cầu phải lớn hơn 0"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_product__x_supply_type
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_template__x_supply_type
+msgid "Product supply category"
+msgstr "Danh mục cung ứng sản phẩm"
+
+#. module: ev_sale_request
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__product_template__x_supply_type__purchase
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request_line__state_general__done
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request_line__supply_type__purchase
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__supply_adjustment__supply_type__purchase
+msgid "Purchase"
+msgstr "Thu mua"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__purchase_process
+msgid "Purchase Processed"
+msgstr "Trạng thái xử lý thu mua"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__region_ids
+msgid "Region"
+msgstr "Vùng/Miền"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__date_request
+msgid "Request Date"
+msgstr "Ngày yêu cầu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__request_id
+msgid "Request Name"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_config_settings__x_time_request
+msgid "Request Time "
+msgstr "Thời gian yêu cầu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_config_settings__x_time_request_weekend
+msgid "Request Time Weekend "
+msgstr "Thời gian yêu cầu cuối tuần"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "Request accept time out"
+msgstr "Quá thời gian chấp nhận yêu cầu"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid ""
+"Request have product stop supply: \n"
+"- %s"
+msgstr "Có sản phẩm ngừng cung ứng, vui lòng kiểm tra lại: \n"
+"- %s"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "Requests have been aggregated! You can not go back"
+msgstr "Yêu cầu đã dược tổng hợp! Bạn không thể quay lại"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+msgid "Return"
+msgstr "Quay lại"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.actions.report,print_report_name:ev_sale_request.report_sale_request_report_xlsx
+msgid "Sale Request Excel Report"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__sale_request_line
+msgid "Sale Request Lines"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__sale_request_id
+msgid "Sale Request Reference"
+msgstr ""
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_view_search
+msgid "Sale Request Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_sale_request
+#: model:ir.actions.act_window,name:ev_sale_request.sale_request_act
+#: model:ir.ui.menu,name:ev_sale_request.sale_request_menu
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_tree
+msgid "Sale request"
+msgstr "Yêu cầu hàng bán"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+msgid "Sample file"
+msgstr "File mẫu"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_form
+msgid "Send"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request__state__sent
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.sale_request_view_search
+msgid "Sent"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_warehouse_supply__warehoue_source_id
+msgid "Source Warehouse"
+msgstr "Kho nguồn"
+
+#. module: ev_sale_request
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__product_template__x_supply_type__stop_supply
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request_line__supply_type__stop_supply
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__supply_adjustment__supply_type__stop_supply
+msgid "Stop Supply"
+msgstr "Ngừng cung ứng"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_product__x_supply_adjustment_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_product_template__x_supply_adjustment_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_region__x_supply_adjustment_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_stock_warehouse__x_supply_adjustment_ids
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.supply_adjustment_view_form
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.supply_adjustment_view_tree
+msgid "Supply Adjustment"
+msgstr "Điều chỉnh cung ứng"
+
+#. module: ev_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_sale_request.supply_adjustment_view_search
+msgid "Supply Adjustment Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__supply_type
+msgid "Supply Product"
+msgstr "Danh mục cung ứng"
+
+#. module: ev_sale_request
+#: model:ir.actions.act_window,name:ev_sale_request.supply_adjustment_act
+#: model:ir.ui.menu,name:ev_sale_request.supply_adjustment_menu
+msgid "Supply Route Adjustment"
+msgstr "Danh mục điều chỉnh cung ứng"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__state_general
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__supply_type
+msgid "Supply Warehouse"
+msgstr "Kho"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_company__x_time_request
+msgid "Time Request"
+msgstr "Thời gian yêu cầu"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_res_company__x_time_request_weekend
+msgid "Time Request Weekend"
+msgstr "Thời gian yêu cầu cuối tuần"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_unread
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__message_unread_counter
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__product_uom
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_import_xls_wizard_stock__upload_file
+msgid "Upload File"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__state
+msgid "Use status"
+msgstr "Trạng thái"
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_stock_warehouse
+#: model:ir.model.fields,field_description:ev_sale_request.field_supply_adjustment__warehouse_ids
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__product_template__x_supply_type__warehouse
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request_line__state_general__draft
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__sale_request_line__supply_type__warehouse
+#: model:ir.model.fields.selection,name:ev_sale_request.selection__supply_adjustment__supply_type__warehouse
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__warehouse_process
+msgid "Warehouse Processed"
+msgstr "Trạng thái xử lý kho"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__warehouse_id
+msgid "Warehouse/Store"
+msgstr "Kho/Cửa hàng"
+
+#. module: ev_sale_request
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request__website_message_ids
+#: model:ir.model.fields,field_description:ev_sale_request.field_sale_request_line__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request__website_message_ids
+#: model:ir.model.fields,help:ev_sale_request.field_sale_request_line__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid ""
+"You can not duplicate product: \n"
+"- %s"
+msgstr ""
+"Có sản phẩm trùng trên phiếu, vui lòng kiểm tra lại: \n"
+"- %s"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "You can only create sale request one time by a day"
+msgstr "Chỉ có thể tạo 1 yêu cầu hàng mỗi ngày"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "You can only delete when state is draft"
+msgstr "Bạn chỉ có thể xóa khi ở trạng thái nháp"
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "You cannot choose a date in the future"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_import_xls_wizard_stock
+msgid "import.xls.wizard.stock"
+msgstr "Import chi tiết yêu cầu hàng"
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_report_sale_request_report
+msgid "report.sale.request.report"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_sale_request
+msgid "sale.request"
+msgstr "Yêu cầu hàng bán"
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_sale_request_line
+msgid "sale.request.line"
+msgstr "Chi tiết yêu cầu hàng"
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_stock_region
+msgid "stock.region"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_supply_adjustment
+msgid "supply.adjustment"
+msgstr ""
+
+#. module: ev_sale_request
+#: model:ir.model,name:ev_sale_request.model_warehouse_supply
+msgid "warehouse.supply"
+msgstr ""
+
+#. module: ev_sale_request
+#: code:addons/ev_sale_request/models/sale_request.py:0
+#, python-format
+msgid "Supply type must not be empty!"
+msgstr "Tuyến cung ứng không được bỏ trống!"

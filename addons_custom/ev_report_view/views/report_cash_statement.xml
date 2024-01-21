@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+<!--        View list bao cao-->
+        <record id="cash_statement_report_tree" model="ir.ui.view">
+            <field name="name">Cash Statement Report Tree</field>
+            <field name="model">cash.statement.report</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0" edit="0">
+                    <field name="pos_shop_code"/>
+                    <field name="pos_name"/>
+                    <field name="address"/>
+                    <field name="region_name"/>
+                    <field name="start_at"/>
+                    <field name="stop_at"/>
+                    <field name="total_cash_app"/>
+                    <field name="total_cash_end_day"/>
+                    <field name="total_cash_deviant"/>
+                    <field name="reason_money_difference"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cash_statement_form_list" model="ir.ui.view">
+            <field name="name">Cash Statement Form</field>
+            <field name="model">cash.statement.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Report Cash Statement">
+                    <group>
+                        <field name="date" string="Date" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="open_table_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!--        action-->
+        <record id="action_cash_statement_report_list" model="ir.actions.act_window">
+            <field name="name">Report Cash Statement</field>
+            <field name="res_model">cash.statement.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="cash_statement_form_list"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="cash_statement_report_action" model="ir.actions.act_window">
+            <field name="name">Cash Statement Report Action</field>
+            <field name="res_model">cash.statement.report</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ev_report_view.cash_statement_report_tree"/>
+            <field name="target">main</field>
+        </record>
+
+        <menuitem id="menu_cash_statement_report_list"
+                  name="Report Cash Statement" action="action_cash_statement_report_list"
+                  parent="ev_pos_report.menu_point_report"
+                  groups="account.group_account_user,account.group_account_invoice,account.group_account_manager,account.group_account_readonly"
+                  sequence="5"/>
+    </data>
+</odoo>

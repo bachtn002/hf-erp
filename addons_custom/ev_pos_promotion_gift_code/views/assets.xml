@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="pos_promotion_gift_code_total_amount_assets"
+              inherit_id="point_of_sale.assets"
+              name="pos_promotion_gift_code_total_amount.assets">
+        <xpath expr="script[last()]" position="after">
+<!--            <script type="text/javascript"-->
+<!--                    src="/ev_pos_promotion_gift_code/static/src/js/confirm_error_promotion_gift_code.js"/>-->
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code/static/src/js/models.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code/static/src/js/GiftCode.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code/static/src/js/db.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code/static/src/js/Promotion.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code/static/src/js/PaymentScreen.js"/>
+        </xpath>
+    </template>
+</odoo>

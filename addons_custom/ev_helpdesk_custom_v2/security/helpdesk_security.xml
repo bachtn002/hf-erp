@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="helpdesk_ticket_assigner" model="res.groups">
+        <field name="name">Helpdesk Ticket Assigner</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="base.module_category_services_helpdesk"/>
+    </record>
+</odoo>

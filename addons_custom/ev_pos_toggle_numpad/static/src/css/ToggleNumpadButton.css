@@ -1,0 +1,12 @@
+.o_ev_toggle_numpad_button__toggle_btn{
+		min-height: 32px;
+		display: flex;
+		justify-content: center;
+    border-bottom: solid 1px #bfbfbf;
+}
+
+.o_ev_toggle_numpad_button__toggle_btn i{
+   font-size: 32px;
+	 color: #6EC89B;
+}
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_product_price_history_rule_company" model="ir.rule">
+            <field name="name">Multicompany Product Price History</field>
+            <field name="model_id" ref="model_product_price_history"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="account_product_price_rule_company" model="ir.rule">
+            <field name="name">Multicompany Product Price</field>
+            <field name="model_id" ref="model_product_price"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="account_cost_price_period_rule_company" model="ir.rule">
+            <field name="name">Multicompany Cost Price Period</field>
+            <field name="model_id" ref="model_cost_price_period"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>

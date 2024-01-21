@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stock_transfer_form_warning" model="ir.ui.view">
+        <field name="name">stock.transfer.form.warning</field>
+        <field name="model">stock.transfer</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <form string="Warning">
+                <group>
+                    <p>There is product that manage by lot/serial. Please continue executing outgoing picking in Picking screen
+                    </p>
+                </group>
+                <footer>
+                    <button string="OK" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="stock_transfer_view_kanban" model="ir.ui.view">
+            <field name="name">stock.transfer.view.kanban</field>
+            <field name="model">stock.transfer</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="warehouse_id"/>
+                    <field name="warehouse_dest_id"/>
+                    <field name="branch_id"/>
+                    <field name="dest_branch_id"/>
+                    <field name="state"/>
+                    <field name="exported_date"/>
+                    <field name="imported_date"/>
+                    <field name="transfer_line_ids"/>
+                    <field name="note"/>
+                    <field name="incoming_picking_id"/>
+                    <field name="outgoing_picking_id"/>
+                    <field name="origin"/>
+                    <progressbar field="state"
+                                 colors="{&quot;draft&quot;: &quot;success&quot;, &quot;wait_confirm&quot;: &quot;warning&quot;, &quot;checked_inventory&quot;: &quot;danger&quot;, &quot;ready&quot;: &quot;danger&quot;}"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_record_top mb16">
+                                    <div class="o_kanban_record_headings mt4">
+                                        <strong class="o_kanban_record_title">
+                                            <span>
+                                                <t t-esc="record.name.value"/>
+                                            </span>
+                                        </strong>
+                                    </div>
+                                    <strong>
+                                        <field name="create_date"/>
+                                    </strong>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left text-muted">
+                                        <span>
+                                            <t t-esc="record.note.value"/>
+                                        </span>
+                                        <field name="activity_ids" widget="kanban_activity"/>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <field name="state" widget="label_selection"
+                                               options="{'classes': {'draft': 'info', 'waiting_goods': 'danger', 'ready': 'success'}}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+</odoo>

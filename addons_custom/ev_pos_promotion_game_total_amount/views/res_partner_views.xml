@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_property_inherit_form" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.ev_pos_promotion_game_total_amount</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="point_of_sale.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <page name="sales_purchases" position="after">
+                    <page name="customer_game_turn_reward" string="Customer game turn reward">
+                        <field name="x_game_turn_reward_history_ids" readonly="1">
+                            <tree>
+                                <field name="pos_promotion_id" options="{'no_open': True}"/>
+                                <field name="game_code"/>
+                                <field name="phone"/>
+                                <field name="game_turn_reward"/>
+                                <field name="pos_order_id"/>
+                                <field name="create_date"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </data>
+        </field>
+    </record>
+
+</odoo>

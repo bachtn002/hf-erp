@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_ConfirmPaymentPopup
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-06 02:13+0000\n"
+"PO-Revision-Date: 2021-09-06 02:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_ConfirmPaymentPopup
+#. openerp-web
+#: code:addons/ev_pos_ConfirmPaymentPopup/static/src/js/hide_confirm_payment_popup.js:0
+#, python-format
+msgid "Apply all"
+msgstr ""
+
+#. module: ev_pos_ConfirmPaymentPopup
+#. openerp-web
+#: code:addons/ev_pos_ConfirmPaymentPopup/static/src/js/hide_confirm_payment_popup.js:0
+#, python-format
+msgid "Apply all promotions or selected promotion"
+msgstr ""
+
+#. module: ev_pos_ConfirmPaymentPopup
+#. openerp-web
+#: code:addons/ev_pos_ConfirmPaymentPopup/static/src/js/hide_confirm_payment_popup.js:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: ev_pos_ConfirmPaymentPopup
+#. openerp-web
+#: code:addons/ev_pos_ConfirmPaymentPopup/static/src/js/hide_confirm_payment_popup.js:0
+#, python-format
+msgid "Confirm payment"
+msgstr ""
+
+#. module: ev_pos_ConfirmPaymentPopup
+#: model:ir.model.fields,field_description:ev_pos_ConfirmPaymentPopup.field_pos_config__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_ConfirmPaymentPopup
+#: model:ir.model.fields,field_description:ev_pos_ConfirmPaymentPopup.field_pos_config__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_ConfirmPaymentPopup
+#: model:ir.model.fields,field_description:ev_pos_ConfirmPaymentPopup.field_pos_config____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_ConfirmPaymentPopup
+#: model:ir.model,name:ev_pos_ConfirmPaymentPopup.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_pos_ConfirmPaymentPopup
+#: code:addons/ev_pos_ConfirmPaymentPopup/models/pos_config.py:0
+#: model:ir.model.fields,field_description:ev_pos_ConfirmPaymentPopup.field_pos_config__x_show_popup_payment_confirm
+#: model_terms:ir.ui.view,arch_db:ev_pos_ConfirmPaymentPopup.pos_config_view_form_popup_payment_inherit
+#, python-format
+msgid "Show Confirm Payment Popup"
+msgstr "Hiên thị Popup chọn CTKM"

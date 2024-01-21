@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="report_print_stamp_other_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_print_stamp_product.print_stamp_template" t-lang="en_US">
+                        <div class="page" style="margin-top: 10px">
+                            <t t-foreach="o.print_stamp_line_ids" t-as="line">
+                                    <div class="stamp"
+                                         style="font-family: Calibri; border:solid 1px black; padding: 1px 1px 1px 1px; margin-bottom: 100px;  margin-top: 100px"
+                                         height="100%" width="100%">
+                                        <div style="text-align: center; font-size: 23px;font-weight: bold;background-color: red; ">
+                                            <span style="color: white;">KHUYẾN MÃI</span>
+                                        </div>
+                                        <t t-if="line.name_above">
+                                            <div style="text-align: center;font-weight: bold; font-size: 20px;background-color: #FAC736;">
+                                                <span t-esc="line.name_above"/>
+                                            </div>
+                                            <div style="text-align: center;font-weight: bold; font-size: 20px;background-color: #FAC736;">
+                                                <span t-esc="line.name_below"/>
+                                            </div>
+                                        </t>
+                                        <t t-else="">
+                                            <div style="text-align: center;font-weight: bold;font-size: 20px;background-color: #FAC736;">
+                                                <span t-esc="line.product_id.product_tmpl_id.name"/>
+                                            </div>
+                                        </t>
+                                        
+                                        <div style="text-align: center;background-color: #FAC736">
+                                            <span style="font-size: 26px;font-weight: bold;">
+                                                <t t-esc="'{:,.0f}'.format(line.price_unit).replace(',', '.')"/>đ/
+                                            </span>
+                                            <span style="font-size: 14px;">
+                                                <t t-esc="line.uom_id.name"/>
+                                            </span>
+                                        </div>
+                                        <div style="text-align: center; font-size: 14px;background-color: #FAC736">
+                                            <span>
+                                                <t t-esc="line.note"/>
+                                            </span>
+                                        </div>
+                                        <div style="text-align: center; font-size: 12px;background-color: #FAC736">
+                                            <span>
+                                                Thời gian áp dụng:
+                                            </span>
+                                            <span>
+                                                <t t-esc="datetime.datetime.strftime(line.packed_date, '%d/%m/%Y')"/>
+                                            </span>
+                                            -
+                                            <span>
+                                                <t t-esc="datetime.datetime.strftime(line.expire_date, '%d/%m/%Y')"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                            </t>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="report_print_stamp_other" model="ir.actions.report">
+            <field name="name">Print Stamp Other</field>
+            <field name="model">print.stamp</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ev_print_stamp_product.report_print_stamp_other_view</field>
+            <field name="report_file">ev_print_stamp_product.report_print_stamp_other_view</field>
+            <field name="paperformat_id" ref="ev_print_stamp_product.paperformat_qweb_print_stamp_shelf"/>
+            <field name="print_report_name">'Print Stamp Promotion'</field>
+        </record>
+
+    </data>
+</odoo>

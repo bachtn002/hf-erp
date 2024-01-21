@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="zalo_notification_service_menu_root"
+                  name="ZNS"
+                  web_icon="ev_zalo_notification_service,static/description/icon.png"
+                  groups="base.group_system"
+                  sequence="200"/>
+        <menuitem id="zalo_notification_service_config"
+                  name="ZNS Config"
+                  groups="base.group_system"
+                  parent="zalo_notification_service_menu_root"
+                  sequence="200"/>
+        <menuitem id="zalo_official_account_menu"
+                  name="Zalo Official Account"
+                  action="ev_zalo_notification_service.zalo_official_account_action"
+                  parent="zalo_notification_service_config"
+                  sequence="1"/>
+        <menuitem id="zalo_token_menu"
+                  name="Zalo Token"
+                  action="ev_zalo_notification_service.zalo_token_action"
+                  parent="zalo_notification_service_config"
+                  sequence="2"/>
+        <menuitem id="zns_template_menu"
+                  name="ZNS Template"
+                  action="ev_zalo_notification_service.zns_template_action"
+                  parent="zalo_notification_service_config"
+                  sequence="3"/>
+        <!--        <menuitem id="zns_template_line_menu"-->
+        <!--                  name="ZNS Template Line"-->
+        <!--                  action="ev_zalo_notification_service.zns_template_line_action"-->
+        <!--                  parent="zalo_notification_service_menu_root"-->
+        <!--                  sequence="4"/>-->
+        <menuitem id="zns_information_menu"
+                  name="ZNS Information"
+                  action="ev_zalo_notification_service.zns_information_action"
+                  parent="zalo_notification_service_menu_root"
+                  sequence="2"/>
+
+        <menuitem id="type_send_zns_menu"
+                  name="Type Send ZNS"
+                  action="ev_zalo_notification_service.type_send_zns_action"
+                  parent="zalo_notification_service_config"
+                  sequence="5"/>
+        <menuitem id="ip_send_zns_menu"
+                  name="IP Send ZNS"
+                  action="ev_zalo_notification_service.ip_send_zns_action"
+                  parent="zalo_notification_service_config"
+                  sequence="6"/>
+        <menuitem id="type_send_zns_kanban_menu"
+                  name="Type Send ZNS Kanban"
+                  action="ev_zalo_notification_service.type_send_zns_kanban_action"
+                  parent="zalo_notification_service_menu_root"
+                  sequence="1"/>
+        <menuitem id="data_webhook_zns_menu"
+                  name="Data Webhook ZNS"
+                  action="ev_zalo_notification_service.data_webhook_zns_action"
+                  parent="zalo_notification_service_menu_root"
+                  sequence="5"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+.fix_width table thead > tr > th:nth-child(2)
+{
+    width: 100px;
+    text-align: center;
+}

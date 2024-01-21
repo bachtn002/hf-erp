@@ -1,0 +1,25 @@
+# IDE config
+.idea/
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+
+# Odoo config
+*.conf
+
+# Distribution / package
+.Python
+venv/
+
+# Nodejs
+node_modules/
+package-lock.json
+dist/
+
+# Sqltite database store
+*.db
+
+# mac cache
+.DS_Store

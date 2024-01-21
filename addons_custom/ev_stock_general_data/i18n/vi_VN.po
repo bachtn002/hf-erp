@@ -1,0 +1,746 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_general_data
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 03:44+0000\n"
+"PO-Revision-Date: 2022-06-29 03:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_general_data
+#: model:ir.actions.report,print_report_name:ev_stock_general_data.print_stock_general_monthly_xlsx
+msgid "'%s' %(object.name)"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Back To Draft"
+msgstr "Trở về nháp"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields.selection,name:ev_stock_general_data.selection__stock_sync_monthly__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_report_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__categ_ids
+msgid "Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__create_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__create_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__create_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__create_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__create_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bở"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__create_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__create_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__create_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__create_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__create_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__date_sync
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__date_sync
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__date_sync
+msgid "Date"
+msgstr "Ngày check dữ liệu"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__date
+msgid "Date Sync"
+msgstr "Ngày tổng hợp"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__default_code
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__default_code
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__default_code
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__default_code
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_general_monthly_view_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_search
+msgid "Default Code"
+msgstr "Mã sản phẩm"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_report_ev_stock_general_data_stock_sync_monthly_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__display_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields.selection,name:ev_stock_general_data.selection__stock_sync_monthly__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields.selection,name:ev_stock_general_data.selection__stock_sync_monthly__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_report_ev_stock_general_data_stock_sync_monthly_xlsx__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_picking__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_needaction
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_has_error
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields.selection,name:ev_stock_general_data.selection__stock_inventory_report__type__in_out
+msgid "In Out"
+msgstr "Nhập xuất tồn"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "Invalid month please re-enter"
+msgstr "Số tháng không đúng vui lòng nhập lại"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "Invalid year please re-enter"
+msgstr "Số năm không đúng vui lòng nhập lại"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields.selection,name:ev_stock_general_data.selection__stock_inventory_report__type__inventory
+msgid "Inventory"
+msgstr "Tồn kho"
+
+#. module: ev_stock_general_data
+#: model:ir.actions.act_window,name:ev_stock_general_data.stock_inventory_report_action
+#: model:ir.ui.menu,name:ev_stock_general_data.stock_inventory_report_menu
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_report_form
+msgid "Inventory Report"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_report_ev_stock_general_data_stock_sync_monthly_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly____last_update
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__write_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__write_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__write_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__write_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__write_uid
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__write_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__write_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__write_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__write_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__write_date
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__line_ids
+msgid "Line ids"
+msgstr "Chi tiết"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__location_id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__location
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__location
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_search
+msgid "Location Warehouse"
+msgstr "Kho"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/wizard/stock_inventory_report.py:0
+#, python-format
+msgid "Location not in region! Please choose location"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__location_ids
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__month
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__month
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__month
+msgid "Month"
+msgstr "Tháng"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "Month %s year %s have synthesized. You cannot continue synthesizing"
+msgstr "Tháng %s năm %s đã tổng hợp. Bạn không thể tổng hợp lại"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__name
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Name"
+msgstr "Tên phiếu"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_stock_general_data
+#: model:ir.actions.report,name:ev_stock_general_data.print_stock_general_monthly_xlsx
+msgid "Print Stock General Monthly XLSX"
+msgstr "In Excel"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__product_id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__product_name
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__product
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__product
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__product_id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__product_name
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_search
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__product_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_tree
+msgid "Qty Begin Total"
+msgstr "Tổng đầu kỳ"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_tree
+msgid "Qty End Total"
+msgstr "Tổng cuối kỳ"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_tree
+msgid "Qty In Total"
+msgstr "Tổng nhập"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_tree
+msgid "Qty Out Total"
+msgstr "Tổng suất"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_tree
+msgid "Qty Total"
+msgstr "Tổng"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__qty_begin
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__qty_begin
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__qty_begin
+msgid "Quantity Begin"
+msgstr "Tồn đầu kỳ"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__qty_end
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__qty_end
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__qty
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__qty_end
+msgid "Quantity End"
+msgstr "Tồn cuối kỳ"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__qty_in
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__qty_in
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__qty_in
+msgid "Quantity In"
+msgstr "SL nhập"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__qty_out
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__qty_out
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__qty_out
+msgid "Quantity Out"
+msgstr "SL xuất"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__region_ids
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_report_form
+msgid "Region"
+msgstr "Vùng/miền"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__report_id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__report_id
+msgid "Report ID"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.ui.menu,name:ev_stock_general_data.stock_general_monthly_menu
+msgid "Stock General Data Monthly Menu"
+msgstr "Dữ liệu kho tổng hợp hàng tháng"
+
+#. module: ev_stock_general_data
+#: model:ir.actions.act_window,name:ev_stock_general_data.stock_general_monthly_action
+msgid "Stock General Monthly Action"
+msgstr "Dữ liệu kho tổng hợp hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_general_monthly_view_form
+msgid "Stock General Monthly View Form"
+msgstr "Dữ liệu kho tổng hợp hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_general_monthly_view_search
+msgid "Stock General Monthly View Search"
+msgstr "Dữ liệu kho tổng hợp hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_general_monthly_view_tree
+msgid "Stock General Monthly View Tree"
+msgstr "Dữ liệu kho tổng hợp hàng tháng"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_in_out_report
+msgid "Stock In Out Report"
+msgstr "Báo cáo nhập xuất tồn"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/wizard/stock_inventory_report.py:0
+#: model:ir.actions.act_window,name:ev_stock_general_data.stock_in_out_report_action
+#, python-format
+msgid "Stock In Out Report Action"
+msgstr "Báo cáo nhập xuất tồn"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_form
+msgid "Stock In Out Report View Form"
+msgstr "Báo cáo nhập xuất tồn"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_in_out_report_view_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_tree
+msgid "Stock In Out Report View Tree"
+msgstr "Báo cáo nhập xuất tồn"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_inventory_detail_report
+msgid "Stock Inventory Detail Report"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/wizard/stock_inventory_report.py:0
+#: model:ir.actions.act_window,name:ev_stock_general_data.stock_inventory_detail_report_action
+#, python-format
+msgid "Stock Inventory Details Report Action"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_detail_report_view_form
+msgid "Stock Inventory Details Report View Form"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_inventory_report
+msgid "Stock Inventory Report Wizard"
+msgstr "Báo cáo tồn kho"
+
+#. module: ev_stock_general_data
+#: model:res.groups,name:ev_stock_general_data.group_stock_sync
+msgid "Stock Sync Data Monthly"
+msgstr "Tổng hợp dữ liệu kho"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_sync_monthly
+msgid "Stock Synthesis Data Monthly"
+msgstr "Tổng hợp dữ liệu kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: model:ir.ui.menu,name:ev_stock_general_data.stock_sync_monthly_menu
+msgid "Stock Synthesis Data Monthly  Menu"
+msgstr "Tổng hợp dữ liệu kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: model:ir.actions.act_window,name:ev_stock_general_data.stock_sync_monthly_action
+msgid "Stock Synthesis Data Monthly Action"
+msgstr "Tổng hợp dữ liệu kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Stock Synthesis Data Monthly View Form"
+msgstr "Tổng hợp dữ liệu kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_search
+msgid "Stock Synthesis Data Monthly View Search"
+msgstr "Tổng hợp dữ liệu kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_tree
+msgid "Stock Synthesis Data Monthly View Tree"
+msgstr "Tổng hợp dữ liệu kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_general_monthly
+msgid "Stock general data monthly"
+msgstr "Dữ liệu kho tổng hợp hàng tháng"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_sync_monthly_line
+msgid "Stock synthesis data monthly line"
+msgstr "Chi tiết tổng hợp dữ liệu kho  hàng tháng"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_sync_monthly_view_form
+msgid "Sync"
+msgstr "Tổng hợp"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields.selection,name:ev_stock_general_data.selection__stock_sync_monthly__state__sync
+msgid "Synthesis"
+msgstr "Đã tổng hợp"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__synthesis_id
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__synthesis_id
+msgid "Synthesis Data Monthly"
+msgstr "Phiếu tổng hợp"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__to_date
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_report__type
+msgid "Type Report"
+msgstr "Loại báo cáo"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_in_out_report__uom
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_inventory_detail_report__uom
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__uom_id
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_stock_general_data
+#: model_terms:ir.ui.view,arch_db:ev_stock_general_data.stock_inventory_report_form
+msgid "View Report"
+msgstr "Xem báo cáo"
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,help:ev_stock_general_data.field_stock_sync_monthly__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_general_monthly__year
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly__year
+#: model:ir.model.fields,field_description:ev_stock_general_data.field_stock_sync_monthly_line__year
+msgid "Year"
+msgstr "Năm"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "You can only delete record in draft or cancel status"
+msgstr "Bạn chỉ có thể xóa phiếu ở trạng thái nháp hoặc hủy"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "You can only synthesis the current month"
+msgstr "Bạn chỉ có thể tổng hợp tháng hiện tại"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "You have not selected the month"
+msgstr "Bạn chưa chọn tháng"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "You have not selected the year"
+msgstr "Bạn chưa chọn năm"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_sync_monthly.py:0
+#, python-format
+msgid "You must cancel the sync: %s to cancel this sync"
+msgstr "Bạn phải hủy phiếu tổng hợp: %s trước khi hủy phiếu này"
+
+#. module: ev_stock_general_data
+#: model:ir.model,name:ev_stock_general_data.model_report_ev_stock_general_data_stock_sync_monthly_xlsx
+msgid "report.ev_stock_general_data.stock_sync_monthly_xlsx"
+msgstr ""
+
+#. module: ev_stock_general_data
+#: model:res.groups,comment:ev_stock_general_data.group_stock_sync
+msgid "the user will have access to stock sync data monthly"
+msgstr ""
+"Người dùng sẽ có quyền truy cập vào dữ liệu đồng bộ hóa kho hàng tháng"
+
+#. module: ev_stock_general_data
+#: code:addons/ev_stock_general_data/models/stock_picking.py:0
+#: code:addons/ev_stock_general_data/models/stock_picking.py:0
+#, python-format
+msgid "you cannot take any action once aggregated data is available"
+msgstr "Bạn không thể thực hiện bất kỳ hành động nào khi dữ liệu đã được tổng hợp"

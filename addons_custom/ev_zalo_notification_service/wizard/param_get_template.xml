@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="param_get_template_view_from" model="ir.ui.view">
+            <field name="name">Param Get Template View</field>
+            <field name="model">param.get.template</field>
+            <field name="arch" type="xml">
+                <form string="Param Get Template">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="offset"/>
+                                <field name="limit"/>
+                                <field name="status"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="get_template" string="Get Template" type="object" class="btn-primary"/>
+                            <button special="cancel" string="Cancel" class="btn-secondary"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="param_get_template_action" model="ir.actions.act_window">
+            <field name="name">Param Get Template Action</field>
+            <field name="res_model">param.get.template</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

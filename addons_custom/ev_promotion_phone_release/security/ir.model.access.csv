@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_phone_promotion_list,access_phone_promotion_list,model_phone_promotion_list,base.group_user,1,1,1,1
+access_import_phone_promotion_release,access_import_phone_promotion_release,model_import_phone_promotion_release,base.group_user,1,1,1,1
+access_promotion_voucher_confirm,access_promotion_voucher_confirm,model_promotion_voucher_confirm,base.group_user,1,1,1,1
+

@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <record id="import_phone_promotion_release_form_view" model="ir.ui.view">
+            <field name="name">import.phone.promotion.release.form.view</field>
+            <field name="model">import.phone.promotion.release</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div class="text-center"
+                             style="margin-left:300px;margin-right:300px;margin-top:10px;margin-bottom:10px;">
+                            <h2>
+                                <field name="file_import" filename="file_name"/>
+                                <field name="file_name" invisible="1"/>
+                                <field name="promotion_voucher_id" invisible="1"/>
+                            </h2>
+                            <div class="text-center" invisible="1">
+                                <label for="file_import_type"/>:
+                                <field name="file_import_type" widget="radio" options="{'horizontal': true}"
+                                       required="1"/>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button name="download_template_phone" type="object"
+                                    string="Download Template Phone"
+                                    class="btn btn-link" style="text-decoration: underline;"
+                                    help="Import template file allow extension with format xls or xlsx"/>
+
+                            <button name="download_template_phone_code" type="object"
+                                    string="Download Template Phone Code"
+                                    class="btn btn-link" style="text-decoration: underline;"
+                                    help="Import template file allow extension with format xls or xlsx"/>
+                        </div>
+                        <footer>
+                            <button name="action_import" type="object" class="oe_highlight"
+                                    string="Import"/>
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

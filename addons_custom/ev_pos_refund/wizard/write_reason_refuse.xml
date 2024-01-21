@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="write_reason_refuse_view_form" model="ir.ui.view">
+            <field name="name">write_reason_refuse_view_form</field>
+            <field name="model">write.reason.refuse</field>
+            <field name="arch" type="xml">
+                <form string="Write Reason Refuse">
+                    <group>
+                        <field name="reason"/>
+                    </group>
+                    <footer>
+                        <button name="write_reason" string="Submit" type="object" class="btn-primary"/>
+                        <button string="cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="write_reason_refuse_act" model="ir.actions.act_window">
+            <field name="name">Write Reason Refuse</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">write.reason.refuse</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="write_reason_refuse_view_form"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

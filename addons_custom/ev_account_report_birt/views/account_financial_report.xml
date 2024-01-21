@@ -1,0 +1,92 @@
+<odoo>
+    <data>
+        <!--<record id="view_move_form_journal_general" model="ir.ui.view">
+            <field name="name">account.move.form.journal.general</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="before">
+                    <page string="Journal general">
+                        <field name="journal_general_ids" attrs="{'readonly': [('state', '=', 'posted')]}">
+                            <tree editable="bottom" string="Journal general">
+                                <field name="date" invisible="1"/>
+                                <field name="name" required="1"/>
+                                <field name="partner_id"
+                                    domain="['|', ('parent_id', '=', False), ('is_company', '=', True)]"/>
+                                <field name="debit_acc_id" domain="[('company_id', '=', parent.company_id), ('deprecated', '=', False)]" required="1" options="{'no_create': True}"/>
+                                <field name="credit_acc_id" domain="[('company_id', '=', parent.company_id), ('deprecated', '=', False)]" required="1" options="{'no_create': True}"/>
+                                <field name="analytic_account_id" groups="analytic.group_analytic_accounting"/>
+                                <field name="analytic_tag_ids" groups="analytic.group_analytic_tags" widget="many2many_tags"/>
+                                <field name="product_id"/>
+                                <field name="value"/>
+                                <field name="amount_currency" groups="base.group_multi_currency"/>
+                                <field name="company_currency_id" invisible="1"/>
+                                <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                                <field name="company_id" groups="base.group_multi_company" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>-->
+
+<!--        <template id="search_template_branch_button" inherit_id="account_reports.filter_info_template">-->
+<!--            <xpath expr="//div[@class='row print_only']/div[2]/div" position="after">-->
+<!--                <div class="col-12">-->
+<!--                <t t-if="options.get('branch')">-->
+<!--                    Branch:-->
+<!--                    <t t-set="journal_value">All</t>-->
+<!--                    <t t-foreach="options['branch']" t-as="b">-->
+<!--                        <t t-if="b.get('selected') == True">-->
+<!--                            <t t-set="branch_value" t-value="''"/>-->
+<!--                            <t t-esc="j.get('code')"/>-->
+<!--                        </t>-->
+<!--                    </t>-->
+<!--                    <t t-esc="branch_value"/>-->
+<!--                </t>-->
+<!--            </div>-->
+<!--            </xpath>-->
+<!--        </template>-->
+
+        <!-- Account Reports Configuration -->
+        <record id="inherit_view_account_financial_report_form" model="ir.ui.view">
+            <field name="name">account.financial.html.report.form</field>
+            <field name="model">account.financial.html.report</field>
+            <field name="inherit_id" ref="account_reports.view_account_financial_report_form"/>
+            <field name="arch" type="xml">
+                <field name="date_range" position="after">
+                    <field name="display_code"/>
+                    <field name="display_present"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="inherit_view_account_financial_report_line_form" model="ir.ui.view">
+            <field name="name">account.financial.html.report.line.form</field>
+            <field name="model">account.financial.html.report.line</field>
+            <field name="inherit_id" ref="account_reports.view_account_financial_report_line_form"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="display_code"/>
+                    <field name="display_present"/>
+                </field>
+                <field name="groupby" position="after">
+                    <field name="groups_by"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="inherit_view_account_financial_report_line_tree" model="ir.ui.view">
+            <field name="name">account.financial.html.report.line.tree</field>
+            <field name="model">account.financial.html.report.line</field>
+            <field name="inherit_id" ref="account_reports.view_account_financial_report_line_tree"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="display_code"/>
+                    <field name="display_present"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

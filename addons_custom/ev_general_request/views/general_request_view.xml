@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="general_request_tree" model="ir.ui.view">
+            <field name="name">general.request.tree</field>
+            <field name="model">general.request</field>
+            <field name="arch" type="xml">
+                <tree string="Request General " default_order='name desc'>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="general_request_form" model="ir.ui.view">
+            <field name="name">general.request.form</field>
+            <field name="model">general.request</field>
+            <field name="arch" type="xml">
+                <form string="Request General">
+                    <header>
+                        <button name='general_request_function' type='object' states="draft"
+                                string="General Request" class="oe_highlight"/>
+                        <button name='import_general_request_function' type='object' states="received"
+                                string="Update file" class="oe_highlight" icon="fa-download"
+                        />
+                        <button name='confirm_import_general_request_function' type='object' states="received"
+                                string="Confirm" class="oe_highlight" confirm="Are you sure to confirm?"/>
+                        <button name='cancel_import_general_request_function' type='object' states="received"
+                                string="Cancel" class="oe_highlight"/>
+                        <button name="action_print_excel" type="object" string="Print Excel" class="oe_highlight"/>
+                        <!--print all-->
+                        <button name="print_pick_products_templates" type='object' states="done" string="Print pick products templates"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,received,done,cancel"
+                               readonly="1" clickable="0"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="name" class="oe_inline">
+                                </field>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                                <field name="general_warehouse_group_ids" widget="many2many_tags" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                                <field name="general_product_group_ids" widget="many2many_tags" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}}"/>
+                            </group>
+                            <group>
+                                <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="company_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail">
+                                <field name="general_request_line" widget="section_and_note_one2many"
+                                       mode="tree" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <!--                                        <field name="request_line_id"/>-->
+                                        <field name="product_id" options="{'no_create': True,'no_create_edit': True}"/>
+                                        <field name="qty"/>
+                                        <field name="qty_apply" style="text-align:center;"/>
+                                        <field name="product_uom"/>
+                                        <field name="warehoue_des_id"/>
+                                        <field name="stock_transfer_id"/>
+                                        <field name="note" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="general_request_act" model="ir.actions.act_window">
+            <field name="name">General Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">general.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="general_request_search" model="ir.ui.view">
+            <field name="name">general.request.search</field>
+            <field name="model">general.request</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="name"/>
+                    <field name="warehouse_id" filter_domain="[('warehouse_id.name', 'ilike', self)]"/>
+                    <separator/>
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Received" name="received" domain="[('state', '=', 'received')]"/>
+                    <filter string="Done" name="done" domain="[('state', '=', 'done')]"/>
+                    <filter string="Cancel" name="cancel" domain="[('state', '=', 'cancel')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!--        <menuitem id="stock_custom_menu" name="Chức năng kho"-->
+        <!--                   parent="stock.menu_stock_root"/>-->
+        <!--        <menuitem id="sale_request_menu1" name="Tổng hợp yêu cầu"-->
+        <!--                  parent="stock.menu_stock_root"-->
+        <!--                  action="general_request_act" sequence="2"/>-->
+    </data>
+</odoo>

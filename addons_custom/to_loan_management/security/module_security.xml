@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category"
+			id="module_category_to_loan_management">
+			<field name="name">Loan Management</field>
+			<field name="description">Helps you manage your loan</field>
+			<field name="sequence">102</field>
+		</record>
+
+		<record id="group_loan_management_user" model="res.groups">
+			<field name="name">User</field>
+			<field name="category_id"
+				ref="module_category_to_loan_management" />
+			<field name="implied_ids"
+				eval="[(4,ref('account.group_account_user'))]" />
+			<field name="comment">The user will have access to all loan management
+				operations.
+			</field>
+		</record>
+
+		<record id="group_loan_management_manager" model="res.groups">
+			<field name="name">Manager</field>
+			<field name="category_id"
+				ref="module_category_to_loan_management" />
+			<field name="implied_ids"
+				eval="[(4,ref('group_loan_management_user'))]" />
+			<field name="users"
+				eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+			<field name="comment">The user will have full access to Loan Management
+				Application (including access to Loan Configurations).
+			</field>
+		</record>
+	</data>
+
+	<data>
+		<record id="rule_loan_report_multi_comp" model="ir.rule">
+			<field name="name">Loan Report multi-company</field>
+			<field name="model_id" ref="model_loan_report" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+	<!-- For Borrowing -->
+		<record id="rule_loan_borrowing_order_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Borrowing Order multi-company</field>
+			<field name="model_id" ref="model_loan_borrowing_order" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+		<record id="rule_loan_borrow_disbursement_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Borrow Disbursement multi-company</field>
+			<field name="model_id" ref="model_loan_borrow_disbursement" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+		<record id="rule_loan_borrow_refund_line_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Borrow Refund Line multi-company</field>
+			<field name="model_id" ref="model_loan_borrow_refund_line" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+		<record id="rule_loan_borrow_interest_line_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Borrow Interest Line multi-company</field>
+			<field name="model_id" ref="model_loan_borrow_interest_line" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+	<!-- For Lending -->
+		<record id="rule_loan_lending_order_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Lending Order multi-company</field>
+			<field name="model_id" ref="model_loan_lending_order" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+		<record id="rule_loan_lend_disbursement_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Lend Disbursement multi-company</field>
+			<field name="model_id" ref="model_loan_lend_disbursement" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+		<record id="rule_loan_lend_refund_line_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Lend Refund Line multi-company</field>
+			<field name="model_id" ref="model_loan_lend_refund_line" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+		
+		<record id="rule_loan_lend_interest_line_multi_comp"
+			model="ir.rule">
+			<field name="name">Loan Lend interest Line multi-company</field>
+			<field name="model_id" ref="model_loan_lend_interest_line" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]
+			</field>
+		</record>
+	</data>
+</odoo>

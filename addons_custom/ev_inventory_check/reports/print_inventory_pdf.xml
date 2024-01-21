@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="report_template_stock_inventory_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout" t-lang="en_US">
+                        <div class="page" style="font-family: Times New Roman">
+                            <link rel="stylesheet" href="/ev_inventory_check/static/src/style.css"/>
+                            <table>
+                                <tr>
+
+                                    <td colspan="3" style="vertical-align: middle;" width="30%" height="auto">
+                                        <img t-if="o.company_id.logo" width="100%" height="auto"
+                                             style="position: relative;"
+                                             t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"
+                                             class="pull-left"/>
+                                    </td>
+                                    <td colspan="5">
+                                        <table style="border: hidden;">
+                                            <tr>
+                                                <td colspan="5"
+                                                    style="text-align: center; font-size: 18px; font-weight: bold; border-right: none;">
+                                                    <span t-esc="o.company_id.name"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"
+                                                    style="text-align: center; font-size: 18px; font-weight: bold; border-right: none;">
+                                                    <span t-esc="o.x_address_company"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"
+                                                    style="text-align: center; font-size: 18px; font-weight: bold; border-right: none;">
+                                                    BIÊN BẢN KIỂM KÊ HÀNG HÓA
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"
+                                                    style="text-align: center;  font-size: 18px; font-weight: bold; border-right: none;">
+                                                    Phiếu kiểm kê: <span t-field="o.name"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p style="text-align: left">Mã hiệu:</p></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="9" style="text-align: left;  font-size: 14px; font-weight: bold;">
+                                        Cửa hàng/kho tổng: <span t-field="o.location_ids.name"/>
+                                    </td>
+                                </tr>
+                                <tr><td colspan="9"
+                                        style="text-align: left;  font-size: 14px; font-weight: bold;">
+                                    Thời điểm bắt đầu: <span t-field="o.create_date"
+                                                             t-field-options='{"format": "dd/MM/yyyy HH:mm"}'/>
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="9"
+                                        style="text-align: left;  font-size: 14px; font-weight: bold;">
+                                        Thời điểm kết thúc: <span t-field="o.write_date"
+                                                                  t-field-options='{"format": "dd/MM/yyyy HH:mm"}'/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã hàng</th>
+                                    <th>Tên hàng</th>
+                                    <th>Nhóm hàng</th>
+                                    <th>Đơn vị tính</th>
+                                    <th>Kho </th>
+                                    <th>Số lượng lý thuyết</th>
+                                    <th>Số lượng thực tế</th>
+                                    <th>Chênh lệch</th>
+                                </tr>
+                                <t t-set="stt" t-value="1"/>
+                                <t t-foreach="o.line_ids" t-as="l">
+                                    <tr>
+                                        <td><span t-esc="stt"/></td>
+                                        <td style="text-align: center"><span t-field="l.product_id.default_code"/></td>
+                                        <td style="text-align: center"><span
+                                                t-field="l.product_id.product_tmpl_id.name"/></td>
+                                        <td style="text-align: center"><span
+                                                t-field="l.product_id.product_tmpl_id.categ_id.name"/></td>
+                                        <td style="text-align: center"><span t-field="l.product_uom_id.name"/></td>
+                                        <td style="text-align: center"><span t-field="l.location_id.name"/></td>
+                                        <td style="text-align: right"><span t-esc="'{0:,.2f}'.format(l.theoretical_qty).replace('.', ',')"/></td>
+                                        <td style="text-align: right"><span t-esc="'{0:,.2f}'.format(l.product_qty).replace('.', ',')"/></td>
+                                        <td style="text-align: right"><span t-esc="'{0:,.2f}'.format(l.difference_qty).replace('.', ',')"/></td>
+                                        <t t-set="stt" t-value="stt + 1"/>
+                                    </tr>
+                                </t>
+                                <td colspan="5" style="border-bottom: none; border-right: none; border-left: none">
+
+                                </td>
+                            </table>
+
+                            <table style="width:100%;  padding:0px; margin: 0px, border: none;">
+                                <tr>
+                                    <p style="text-align: right; padding-right: 100px; padding-top: 10px;">
+                                        <strong style="text-align: right;">
+                                            ,ngày......tháng......năm......</strong>
+                                        <br clear="both"/>
+                                    </p>
+                                </tr>
+                                <tr width="100%" style="text-align: center; border: none;">
+                                    <td width="33%" style="border: none;">
+                                        <b>Nhân viên cửa hàng</b>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                    </td>
+                                    <td width="34%" style="border: none;">
+                                        <b>Cửa hàng trưởng</b>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên, đóng dấu)</p>
+                                    </td>
+                                    <td width="33%" style="border: none;">
+                                        <b>Quản lý vùng</b>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên, đóng dấu)</p>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record id="qweb_stock_inventory_internal_rpt" model="report.paperformat">
+            <field name="name">Incoming A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">28</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+                id="qweb_stock_inventory_pdf"
+                model="stock.inventory"
+                string="Stock inventory"
+                report_type="qweb-pdf"
+                name="ev_inventory_check.report_template_stock_inventory_view"
+                file="ev_inventory_check.report_template_stock_inventory_view"
+                menu="False"
+        />
+    </data>
+</odoo>

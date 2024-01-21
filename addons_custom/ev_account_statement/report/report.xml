@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="print_account_statement_xlsx"
+            model="account.statement"
+            string="Print account statement XLSX"
+            report_type="xlsx"
+            name="ev_account_statement.account_statement_xlsx"
+            file="ev_account_statement.account_statement_xlsx"
+            print_report_name="'report account statement'"
+    />
+</odoo>

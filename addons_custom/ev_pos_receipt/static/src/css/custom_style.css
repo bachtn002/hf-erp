@@ -1,0 +1,33 @@
+.screen .top-content .button.viewReceipt {
+    right: 15%;
+}
+
+#receipt-custom {
+    font-size: 12px;
+    text-align: center;
+}
+
+.pos .pos-sale-ticket {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.pos .br {
+    display: none;
+}
+
+.pos-receipt-right-align {
+    display: none;
+}
+
+.ticket-barcode-image {
+    text-align: center;
+    margin-bottom: 6px;
+    padding-left: 20px;
+}
+
+
+/*.pos .pos-receipt > div{*/
+/*    padding-left: 5px;*/
+/*    padding-right: 15px;*/
+/*}*/

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template name="ev_pos_loyalty_ui_hf.assets" id="ev_pos_loyalty_ui_hf.assets" inherit_id="point_of_sale.assets">
+		<xpath expr="script[last()]" position="after">
+	   
+			<style type="text/scss" href="/ev_pos_loyalty_ui_hf/static/src/css/style.scss"/>
+
+			<script text="text/javascript" src="/ev_pos_loyalty_ui_hf/static/src/js/PointsCounter.js"></script>
+
+      		<script text="text/javascript" src="/ev_pos_loyalty_ui_hf/static/src/js/Order.js"></script>
+
+      		<script text="text/javascript" src="/ev_pos_loyalty_ui_hf/static/src/js/ProductScreen.js"></script>
+		</xpath>
+	</template>
+
+</odoo>

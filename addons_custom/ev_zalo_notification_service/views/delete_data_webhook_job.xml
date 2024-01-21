@@ -1,0 +1,17 @@
+<odoo>
+    <data noupdate="1">
+        <record model="ir.cron" id="data_webhook_zns_cron">
+            <field name="name">Delete Data Webhook Zalo</field>
+            <field name="state">code</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">weeks</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall"
+                   eval="(DateTime.now().replace(hour=4, minute=00) + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_data_webhook_zns"/>
+            <field name="code">model.action_delete_data()</field>
+        </record>
+    </data>
+</odoo>

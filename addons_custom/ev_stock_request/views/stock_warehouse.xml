@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="stock_warehouse_total_warehouse_boolean" model="ir.ui.view">
+            <field name="name">stock.total.warehouse.inherit</field>
+            <field name="model">stock.warehouse</field>
+            <field name="inherit_id" ref="stock.view_warehouse"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="x_is_supply_warehouse"/>
+                </xpath>
+
+            </field>
+        </record>
+        <record model="ir.ui.menu" id="stock.menu_stock_inventory_control">
+            <field name="groups_id"
+                   eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record model="ir.ui.menu" id="point_of_sale.pos_config_menu_catalog">
+            <field name="groups_id"
+                   eval="[(4, ref('base.group_user'))]"/>
+        </record>
+    </data>
+</odoo>

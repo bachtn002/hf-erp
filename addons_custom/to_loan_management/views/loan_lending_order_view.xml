@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_loan_lending_order_form" model="ir.ui.view">
+			<field name="name">loan.lending.order.form</field>
+			<field name="model">loan.lending.order</field>
+			<field name="inherit_id" ref="abstract_loan_order_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_invoice']"
+					position="attributes">
+					<attribute name="string">Create Invoice</attribute>
+					<attribute name="help">This will open invoicing wizard for your
+						to create invoice for your loan interests
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='partner_id']"
+					position="attributes">
+					<attribute name="domain">[]</attribute>
+					<attribute name="context">{'show_address': 1}</attribute>
+					<attribute name="options">{'always_reload': True}</attribute>
+				</xpath>
+				<xpath expr="//button[@name='action_view_interest_lines']"
+					position="inside">
+					<field name="interest_lines_count" widget="statinfo"
+						string="Loan Interests" />
+				</xpath>
+				<xpath expr="//button[@name='action_view_interest_lines']"
+					position="attributes">
+					<attribute name="attrs">{'invisible': [('interest_lines_count', '=', 0)]}</attribute>
+				</xpath>
+				<xpath expr="//page[@name='terms_conditions']"
+					position="before">
+					<page string="Disbursements">
+						<field name="disbursement_line_ids"
+							attrs="{'readonly': [('state', 'in', ('done', 'cancelled'))]}"
+							context="{'default_order_id': active_id}">
+							<tree string="Disbursements">
+								<field name="name" />
+								<field name="amount" />
+								<field name="paid_amount" string="Received" />
+								<field name="to_receive_amount" string="To Receive" />
+								<field name="date" />
+								<field name="date_maturity" />
+								<field name="currency_id" invisible="1" />
+								<field name="state" />
+							</tree>
+						</field>
+					</page>
+					<page string="Payments">
+						<separator string="Disbursement Payments" />
+						<field name="disbursement_payment_match_ids" nolabel="1"
+							readonly="1">
+							<tree>
+								<field name="payment_id" />
+								<field name="matched_amount" />
+								<field name="payment_date" />
+								<field name="disbursement_id" />
+								<field name="currency_id" invisible="1" />
+							</tree>
+						</field>
+						<separator string="Refund Payments" />
+						<field name="refund_payment_match_ids" nolabel="1"
+							readonly="1">
+							<tree>
+								<field name="payment_id" />
+								<field name="matched_amount" />
+								<field name="payment_date" />
+								<field name="refund_id" />
+								<field name="disbursement_id" />
+								<field name="currency_id" invisible="1" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- tree (list) view -->
+		<record id="view_loan_lending_order_tree" model="ir.ui.view">
+			<field name="name">loan.lending.order.tree</field>
+			<field name="model">loan.lending.order</field>
+			<field name="inherit_id" ref="abstract_loan_order_tree_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="invoice_state" string="Invoicing Status" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_loan_lending_order_search">
+			<field name="name">loan.lending.order.search</field>
+			<field name="model">loan.lending.order</field>
+			<field name="inherit_id" ref="abstract_loan_order_search_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date_confirmed']" position="after">
+					<field name="disbursement_line_ids" />
+				</xpath>
+				<xpath expr="//filter[@name='ftr_floating_rate']"
+					position="after">
+					<separator />
+					<filter name="ftr_to_invoice" string="To Invoice"
+						domain="[('invoice_state','=','to_invoice')]" />
+					<filter name="ftr_fully_invoiced" string="Fully Invoiced"
+						domain="[('invoice_state','=','fully_invoiced')]" />
+					<filter name="ftr_nothing_to_invoice"
+						string="Nothing to Invoice"
+						domain="[('invoice_state','=','nothing_to_invoice')]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="loan_lending_order_action">
+			<field name="name">Contract of Loan Lending</field>
+			<field name="res_model">loan.lending.order</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first Loan Lending Contract</p>
+			</field>
+		</record>
+
+
+<!--		<menuitem id="loan_lending_order" name="Contracts"-->
+<!--			parent="loan_lending_order_main_menu" sequence="10"-->
+<!--			action="loan_lending_order_action" />-->
+	</data>
+</odoo>

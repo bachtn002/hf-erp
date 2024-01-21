@@ -1,0 +1,401 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_refund
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-27 10:16+0000\n"
+"PO-Revision-Date: 2021-10-27 10:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid " (Refuse)"
+msgstr " (Từ chối)"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid " REFUND"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid ""
+"<span>Chữ ký:______________\n"
+"                                </span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Mới</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Phương thức thanh toán</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Sản phẩm</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Thông tin thêm</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Đã hủy</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Đã thanh toán</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Đã vào sổ</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "<span>Đã xuất hóa đơn</span>"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_search_inherit_manu
+msgid "Account Confirm"
+msgstr "Kế toán đã duyệt"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_allow_return
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Accountant Confirm"
+msgstr "Kế toán đã duyệt"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Báo cáo"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Chọn"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Confirm"
+msgstr "Duyệt"
+
+#. module: ev_pos_refund
+#: model:res.groups,name:ev_pos_refund.group_pos_confirm_order_refund
+msgid "Confirm Order Refund"
+msgstr "Người duyệt trả hàng"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Các loại thuế"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Công ty"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_make_payment__display_name
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Giảm giá(%)"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Hóa đơn khách hàng"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_make_payment__id
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Khách hàng:"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_make_payment____last_update
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Ngày đặt hàng:"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Người bán hàng"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Nhận giới thiệu"
+msgstr ""
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "No reason entered"
+msgstr "Chưa nhập lý do trả hàng"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_note_return
+msgid "Note Return"
+msgstr "Lý do trả hàng"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/wizard/write_reason_refuse.py:0
+#, python-format
+msgid "Order not send return"
+msgstr "Đơn hàng không trả lại"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_make_payment__payment_method_id
+msgid "Payment Method"
+msgstr "Phương thức thanh toán"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Phiên"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Pickings Out"
+msgstr "Phiếu xuất hàng"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Pickings Refund"
+msgstr "Phiếu nhập hàng"
+
+#. module: ev_pos_refund
+#: model:ir.model,name:ev_pos_refund.model_pos_make_payment
+msgid "Point of Sale Make Payment Wizard"
+msgstr "Trình tạo thanh toán Điểm bán hàng"
+
+#. module: ev_pos_refund
+#: model:ir.model,name:ev_pos_refund.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_pos_refund
+#: model:ir.actions.report,name:ev_pos_refund.qweb_pos_order_rpt
+msgid "Pos Order PDF"
+msgstr "Đơn hàng PDF"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_pos_order_refund_id
+msgid "Pos Order Refund"
+msgstr "Tham chiếu đơn trả"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_pos_send_return
+msgid "Pos return"
+msgstr "Cửa hàng đã gửi duyệt"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Print Order"
+msgstr "In đơn hàng"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_write_reason_refuse__reason
+msgid "Reason"
+msgstr "Lý do từ chối"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_reason_refuse
+msgid "Reason Refuse"
+msgstr "Lý do từ chối"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "Refund order has passed, please contact your accountant"
+msgstr "Kế toán chưa xác nhận, vui lòng liên hệ kế toán"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_search_inherit_manu
+msgid "Return Order"
+msgstr "Đơn trả"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "Return Products"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_inherit_manu
+msgid "Send return"
+msgstr "Gửi duyệt"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.write_reason_refuse_view_form
+msgid "Submit"
+msgstr "Xác nhận"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Sản phẩm"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Số lượng"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Số tiền"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Sổ nhật ký"
+msgstr ""
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "The order cannot continue to be return"
+msgstr "Đơn hàng không thể tiếp tục trả"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "To return product(s), you need to open a session in the POS %s"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Tạp chí bán hàng"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Tổng cộng"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Tổng số không có thuế"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Vị trí"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.view_pos_order_refund_search_inherit_manu
+msgid "Wait Account Confirm"
+msgstr "Chờ kế toán duyệt"
+
+#. module: ev_pos_refund
+#: model:ir.actions.act_window,name:ev_pos_refund.write_reason_refuse_act
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.write_reason_refuse_view_form
+msgid "Write Reason Refuse"
+msgstr "Lý do từ chối"
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_picking_count_refund
+msgid "X Picking Count Refund"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.write_reason_refuse_view_form
+msgid "cancel"
+msgstr "Hủy"
+
+#. module: ev_pos_refund
+#: model:ir.model,name:ev_pos_refund.model_write_reason_refuse
+msgid "write.reason.refuse"
+msgstr "Lý do từ chối"
+
+#. module: ev_pos_refund
+#: model_terms:ir.ui.view,arch_db:ev_pos_refund.report_template_pos_order_view
+msgid "Đơn giá"
+msgstr ""
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_pos_order__x_is_auto_approve
+msgid "Is Auto Approve"
+msgstr "Là duyệt tự động"
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "You are only allowed to submit your order for approval after a maximum of %s days"
+msgstr "Đơn hàng không được phép trả sau %s ngày."
+
+#. module: ev_pos_refund
+#: code:addons/ev_pos_refund/models/pos_order_refund.py:0
+#, python-format
+msgid "You are only allowed to approve your order for approval after a maximum of %s days"
+msgstr "Đơn hàng không được phép trả sau %s ngày."
+
+#. module: ev_pos_refund
+#: model:ir.model.fields,field_description:ev_pos_refund.field_res_company__x_allow_return_before_day
+msgid "Allow return before day"
+msgstr "Số ngày cho phép trả hàng"

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_campaign_promotion,campaign_promotion,model_campaign_promotion,base.group_user,1,1,1,1
+access_campaign_promotion_line,campaign_promotion_line,model_campaign_promotion_line,base.group_user,1,1,1,1

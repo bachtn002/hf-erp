@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_shop_config
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-04 02:18+0000\n"
+"PO-Revision-Date: 2022-03-04 02:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_shop_config
+#: code:addons/ev_product_shop_config/wizard/import_file_product.py:0
+#, python-format
+msgid ""
+"\n"
+"Product does not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Sản phẩm không có trong hệ thống, dòng (%s)"
+
+#. module: ev_product_shop_config
+#: model_terms:ir.ui.view,arch_db:ev_product_shop_config.import_xls_wizard_product
+msgid "Cancel"
+msgstr "Thoát"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__display_name
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_pos_shop__display_name
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__file_name
+msgid "File Name"
+msgstr "Tên file"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__id
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_pos_shop__id
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_shop_config
+#: model_terms:ir.ui.view,arch_db:ev_product_shop_config.import_xls_wizard_product
+#: model_terms:ir.ui.view,arch_db:ev_product_shop_config.view_product_shop_form_inherit
+msgid "Import"
+msgstr ""
+
+#. module: ev_product_shop_config
+#: model:ir.actions.act_window,name:ev_product_shop_config.import_xls_wizard_product_action
+msgid "Import Product"
+msgstr "Import sản phẩm"
+
+#. module: ev_product_shop_config
+#: model_terms:ir.ui.view,arch_db:ev_product_shop_config.import_xls_wizard_product
+msgid "Import a excel file"
+msgstr "Import file excel"
+
+#. module: ev_product_shop_config
+#: code:addons/ev_product_shop_config/wizard/import_file_product.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr "File import phải là file excel"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_product__x_is_tools
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_template__x_is_tools
+msgid "Is Tools"
+msgstr "Là Vật tư, CCDC"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product____last_update
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_pos_shop____last_update
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_product_shop_config
+#: model_terms:ir.ui.view,arch_db:ev_product_shop_config.view_product_shop_form_inherit
+msgid "List Product"
+msgstr "Danh sách sản phẩm"
+
+#. module: ev_product_shop_config
+#: model:ir.model,name:ev_product_shop_config.model_pos_shop
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_product__x_pos_shop_ids
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_product_template__x_pos_shop_ids
+msgid "Pos Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_product_shop_config
+#: model:ir.model,name:ev_product_shop_config.model_product_template
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_pos_shop__product_ids
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_product_shop_config
+#: model_terms:ir.ui.view,arch_db:ev_product_shop_config.view_product_shop_form_inherit
+msgid "Tải file mẫu"
+msgstr ""
+
+#. module: ev_product_shop_config
+#: model:ir.model.fields,field_description:ev_product_shop_config.field_import_xls_wizard_product__upload_file
+msgid "Upload File"
+msgstr "Tải lên file"
+
+#. module: ev_product_shop_config
+#: code:addons/ev_product_shop_config/models/product_template.py:0
+#: code:addons/ev_product_shop_config/models/product_template.py:0
+#, python-format
+msgid "You can choose Shop"
+msgstr "Sản phẩm bắt buộc chọn cửa hàng"
+
+#. module: ev_product_shop_config
+#: model:ir.model,name:ev_product_shop_config.model_import_xls_wizard_product
+msgid "import.xls.wizard.product"
+msgstr ""

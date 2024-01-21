@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_product_view_form_inherit_price_history" model="ir.ui.view">
+            <field name="name">product.product.view.form.inherit.price.history</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" attrs="{'invisible': [('type','!=','product')]}" position="after">
+                    <page string="Product Price" groups="account.group_account_user">
+                        <field name="product_price_ids">
+                            <tree string="Product Price" editable="bottom">
+                                <field name="product_id" invisible="1"/>
+                                <field name="product_tmpl_id" invisible="1"/>
+                                <field name="inventory_valuation_group_id" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                                <field name="cost" required="1"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Price History" groups="account.group_account_user">
+                        <field name="price_history_ids">
+                            <tree string="Price History" editable="bottom">
+                                <field name="product_id" invisible="1"/>
+                                <field name="product_tmpl_id" invisible="1"/>
+                                <field name="datetime" required="1"/>
+                                <field name="inventory_valuation_group_id" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                                <field name="cost"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_template_price_history_form_view">
+            <field name="name">product.template.price.history.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" position="after">
+                    <page string="Price History" attrs="{'invisible': [('type','!=','product')]}" groups="account.group_account_user">
+                        <field name="price_history_ids">
+                            <tree string="Price History" editable="bottom">
+                                <field name="product_id" invisible="1"/>
+                                <field name="product_tmpl_id" invisible="1"/>
+                                <field name="datetime" required="1"/>
+                                <field name="inventory_valuation_group_id" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                                <field name="cost" required="1"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <field name="default_code" position="after">
+                    <field name="x_sequence_calculate"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <template t-name="ev_account_payment.template_vtb_unc_vendor">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <style>
+                            *{
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            font-family: "Time New Roman";
+                            }
+
+                            .wrapper{
+                            font-family: "Time New Roman";
+                            }
+
+                            i{
+                            font-size:10px;
+                            }
+
+                            /* HEADER */
+                            header{
+                            font-size: 14px;
+                            font-family: "Time New Roman";
+                            }
+
+                            .clf{
+                            clear:both;
+                            }
+
+                            .title{
+                            float:left;
+                            width: 57%
+                            }
+                            .img-logo{
+                            float:left;
+                            width:43%;
+                            }
+
+                            .title-unc{
+                            float:left;
+                            width:55%;
+                            }
+
+                            .payment-order{
+                            float:left;
+                            width:45%;
+                            }
+
+                            .Seq-no{
+                            float:left;
+                            width:80%;
+                            }
+                            .Date{
+                            float:left;
+                            width:20%;
+                            }
+
+                            /* CONTENT */
+
+                            p{
+                            font-size:12px;
+                            font-weight: 400;
+                            margin: 0px!important;
+                            }
+
+                            .content-line1{
+                            padding:3px;
+                            background-color:#C0C0C0;
+                            }
+
+                            .content-line-left{
+                            float:left;
+                            width: 30%
+                            }
+                            .content-line-right{
+                            float:left;
+                            width: 70%
+                            }
+
+                            /* FOOTER */
+                            .footer-col-3{
+                            float:left;
+                            width: 25%;
+                            }
+                        </style>
+                        <div class="wrapper">
+                            <header>
+                                <div style="height:60px">
+                                    <div class="title">
+                                        <p style="font-size: 14px; padding-top: 4px;">
+                                            <b>Ngân Hàng TMCP Công Thương Việt Nam</b>
+                                        </p>
+                                        <p style="padding-left: 75px;font-size: 14px; padding-top: 4px; text-align:center">
+                                            Chứng từ giao dịch
+                                        </p>
+                                    </div>
+                                    <div class="img-logo" style="height:100%; text-align:right">
+                                        <img style="width:60%; height:100%"
+                                             src="/ev_account_payment/static/src/img/lg_viettin.png"/>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <div>
+                                    <div class="title-unc" style="text-align:right">
+                                        <h3 style="font-size: 20px;font-weight: bold;margin: 0px;">
+                                            Ủy Nhiệm Chi
+                                        </h3>
+                                    </div>
+                                    <div class="payment-order" style="position: relative; height: 28px;">
+                                        <p style="position: absolute; bottom:0; font-size: 12px; padding-left: 50px">
+                                            Payment
+                                            Order
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <div>
+                                    <div class="Seq-no">
+                                        <p style="text-align: right; font-size: 12px;padding-right: 70px;">Số:</p>
+                                    </div>
+                                    <div class="Date">
+                                        <p style="font-size: 12px;">Ngày:
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+                            </header>
+
+                            <section class="wrapper-content" style="margin-top:5px">
+
+                                <!-- Nội dung dòng 1 -->
+                                <div class="content-line1">
+                                    <p style="font-size: 12px">Ký hiệu
+                                        <span style="padding-left:5px;padding-right:5px;">Invoice sign
+                                        </span>
+                                        <span style="padding-left: 6%;">Số HĐ
+                                            <span style="padding-left:5px;padding-right:5px;">Invoice No
+                                            </span>
+                                        </span>
+                                        <span style="padding-left: 15%;">Mẫu số
+                                            <span style="padding-left:5px;padding-right:5px;">01HTKT2/003
+                                            </span>
+                                        </span>
+                                        <span style="padding-left: 4%;">Liên 1. Lưu.
+                                            <span style="padding-left:5px;padding-right:5px;">Copy 1, Bank's Copy
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <!-- Nội dung dòng 2 -->
+                                <div class="content-line2" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p style="font-size: 12px">
+                                            <span style="font-weight:bold">Tên người trả tiền</span>
+                                            <span style="font-size:11px; padding-left: 7px;">Applicant Name</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:13px">
+                                            <t t-set="appliation" t-value="o.payment_id.get_applicant()"/>
+                                            <t t-if="appliation.name">
+                                                <b>
+                                                    <span t-esc="appliation.name"/>
+                                                </b>
+                                            </t>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 3 -->
+                                <div class="content-line3" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">Số tài khoản</span>
+                                            <span style="font-size: 10px; padding-left: 7px;">Debit account No</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <b>
+                                                <span t-esc="o.x_account_number"/>
+                                            </b>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 4 -->
+                                <div class="content-line4" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">Tại ngân hàng</span>
+                                            <span style="font-size: 10px; padding-left: 7px;">With Bank</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <b>
+                                                <span t-field="o.x_bank_id.name"/>
+                                            </b>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 5 -->
+                                <div class="content-line5" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">
+                                                <b>Tên người hưởng</b>
+                                            </span>
+                                            <span style="font-size: 10px; padding-left: 7px;">Beneficiary Name</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <t t-if="o.payment_id.x_partner_id">
+                                                <b>
+                                                    <span t-field="o.payment_id.x_partner_id.name"/>
+                                                </b>
+                                            </t>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 5.5 -->
+                                <div class="content-line55" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">Tài khoản có</span>
+                                            <span style="font-size: 10px; padding-left: 7px;">Credit account No</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <t t-if="o.payment_id.x_partner_bank_id">
+                                                <b>
+                                                    <span t-field="o.payment_id.x_partner_bank_id.acc_number"/>
+                                                </b>
+                                            </t>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 6 -->
+                                <div class="content-line6" style="padding-top: 4px;">
+                                    <p style="font-size: 12px">Số CMT/HC
+                                        <span style="padding-left:5px;padding-right:5px; font-size:10px">ID/PP No
+                                        </span>
+                                        <span style="padding-left: 20%;">Ngày cấp
+                                            <span style="padding-left:5px;padding-right:5px;font-size:10px">Date of
+                                                Issue
+                                            </span>
+                                        </span>
+                                        <span style="padding-left: 15%;">Nơi cấp
+                                            <span style="padding-left:5px;padding-right:5px;font-size:10px">Place of
+                                                Issue
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <!-- Nội dung dòng 7 -->
+                                <div class="content-line7" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">
+                                                Tại ngân hàng
+                                            </span>
+                                            <span style="font-size: 10px; padding-left: 7px;">With Bank</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <t t-if="o.payment_id.x_partner_bank_id">
+                                                <b>
+                                                    <t t-set="name_bank" t-value="o._get_name_bank()"/>
+                                                    <t t-if="name_bank">
+                                                        <span t-esc="name_bank"/>
+                                                    </t>
+                                                </b>
+                                            </t>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 8 -->
+                                <div class="content-line8" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">
+                                                Số tiền bằng số
+                                            </span>
+                                            <span style="font-size: 10px; padding-left: 7px;">Amount in figures</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <b>
+                                                <span style="background-color: #C0C0C0;padding: 1px 5px 1px 40px;margin-left: 50px;"
+                                                      t-esc="'{0:,.0f}'.format(o.payment_id.x_amount_before_tax)"/>
+                                                <span t-esc="o.payment_id.currency_id.name"/>
+                                            </b>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 9 -->
+                                <div class="content-line9" style="padding-top: 4px;">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">Số tiền bằng chữ</span>
+                                            <span style="font-size: 10px; padding-left: 7px;">Amount in word</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:13px">
+                                            <span t-esc="o.payment_id.get_amount_to_word(o.payment_id.x_amount_before_tax)"/>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                                <!-- Nội dung dòng 10 -->
+                                <div class="content-line10" style="padding-top: 4px;">
+                                    <p style="font-size: 12px">Phí ngân hàng
+                                        <span style="padding-left:5px;padding-right:5px;font-size:10px">Fee
+                                        </span>
+
+                                        <span style="padding-left: 15%;">
+                                            <span style="padding: 0px 8px;border: 1px solid;margin-right: 10px;"/>
+                                            Phí trong
+                                            <span style="padding-left:5px;padding-right:5px;font-size:11px">Including
+                                            </span>
+                                        </span>
+                                        <span style="padding-left: 15%;">
+                                            <span style="padding: 0px 8px;border: 1px solid;margin-right: 10px;"/>
+                                            Phí ngoài
+                                            <span style="padding-left:5px;padding-right:5px;font-size:11px">Excluding
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <!-- Nội dung dòng 11 -->
+                                <div class="content-line11"
+                                     style="padding-top: 4px; padding-bottom: 3px; border-bottom: 1px solid">
+                                    <div class="content-line-left">
+                                        <p>
+                                            <span style="font-size: 12px">Nội dung</span>
+                                            <span style="font-size: 10px; padding-left: 7px;">Remarks</span>
+                                        </p>
+                                    </div>
+                                    <div class="content-line-right">
+                                        <p style="font-size:14px">
+                                            <span t-field="o.payment_id.x_description"/>
+                                        </p>
+                                    </div>
+                                    <div class="clf"/>
+                                </div>
+
+                            </section>
+
+                            <footer style="margin-top: 5px;">
+                                <div class="footer-col-3">
+                                    <p style="font-size:13px">
+                                        <b>Kế toán</b>
+                                        <span style="padding-left: 7px;font-size:11px">Accountant</span>
+                                    </p>
+                                </div>
+                                <div class="footer-col-3">
+                                    <p style="font-size:12px; text-align:center">
+                                        <b>Chủ tài khoản</b>
+                                        <span style="padding-left: 7px;font-size:11px">A/C holder</span>
+                                    </p>
+                                </div>
+                                <div class="footer-col-3">
+                                    <p style="font-size:12px;text-align:center">
+                                        <b>Giao dịch viên</b>
+                                        <span style="padding-left: 7px;font-size:11px">Teller</span>
+                                    </p>
+                                </div>
+                                <div class="footer-col-3">
+                                    <p style="font-size:12px;text-align:right">
+                                        <b>Kiểm soát viên</b>
+                                        <span style="padding-left: 7px;font-size:11px">Supervisor</span>
+                                    </p>
+                                </div>
+                                <div class="clf"/>
+                            </footer>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_account_payment_Vietinbank_report_vendor" model="report.paperformat">
+            <field name="name">Vietcombank_report_vendor</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">210</field>
+            <field name="page_width">148</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report id="report_order_vietinbank"
+                string="Report VietinBank Vendor"
+                model="account.payment.unc.wizard"
+                report_type="qweb-pdf"
+                name="ev_account_payment.template_vtb_unc_vendor"
+                file="ev_account_payment.template_vtb_unc_vendor"
+                paperformat="paperformat_account_payment_Vietinbank_report_vendor"
+        />
+
+    </data>
+</odoo>

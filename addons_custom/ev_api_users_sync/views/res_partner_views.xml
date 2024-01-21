@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_partner_form_sync_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Information">
+                        <group>
+                            <group>
+                                <field name="x_position_sync"/>
+                                <field name="x_department_sync"/>
+                                <field name="x_employee_code"/>
+                            </group>
+                            <group>
+                                <field name="x_start_working_date_sync"/>
+                                <field name="x_end_working_date_sync"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

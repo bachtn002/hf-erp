@@ -1,0 +1,28 @@
+.o_ev_pos_promotion__promotion-item {
+    font-size: 14px;
+    text-align: left;
+    padding: 8px !important;
+    border-radius: 4px;
+    cursor: pointer;
+    text-indent: 0 !important;
+}
+
+.o_ev_pos_promotion__promotion-item::before {
+    display: none;
+    content: '';
+}
+
+.o_ev_pos_promotion__promotion-item:hover,
+.o_ev_pos_promotion__promotion-item.checked {
+    background-color: #fafafa;
+    box-shadow: 1px 1px 1px 1px #eeeeee;
+}
+
+.o_ev_pos_promotion__promotion-item__check i {
+    margin-right: 6px;
+    color: #888888;
+}
+
+.o_ev_pos_promotion__promotion-item__check.checked i {
+    color: #6EC89B;
+}

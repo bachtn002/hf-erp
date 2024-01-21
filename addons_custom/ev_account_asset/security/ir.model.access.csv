@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_asset_inventory,access_account_asset_inventory,model_account_asset_inventory,,1,1,1,1
+access_account_asset_inventory_line,access_account_asset_inventory_line,model_account_asset_inventory_line,,1,1,1,1
+
+access_account_asset_report,accessaccount_asset_report,model_account_asset_report,,1,1,1,1
+access_account_asset_report_line,access_account_asset_report_line,model_account_asset_report_line,,1,1,1,1
+access_account_asset_warehouse,access_account_asset_warehouse_name,model_account_asset,,1,0,0,0

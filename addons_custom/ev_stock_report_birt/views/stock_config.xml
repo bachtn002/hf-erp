@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="stock_config_report_tree_view" model="ir.ui.view">
+            <field name="name">Stock Config Report</field>
+            <field name="model">stock.config.report</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <button name="refresh_materialized" type="object" string="Refresh"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_config_report_action_view" model="ir.actions.act_window">
+            <field name="name">Stock Config Report</field>
+            <field name="res_model">stock.config.report</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_stock_config_report" action="stock_config_report_action_view"
+                  parent="base.reporting_menuitem" sequence="12" name="Stock Config Report"/>
+    </data>
+</odoo>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="delivery_partner_view_tree" model="ir.ui.view">
+            <field name="name">delivery_partner_view_tree</field>
+            <field name="model">delivery.partner</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="internal"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="delivery_partner_view_form" model="ir.ui.view">
+            <field name="name">delivery_partner_view_form</field>
+            <field name="model">delivery.partner</field>
+            <field name="arch" type="xml">
+                <form delete="0" duplicate="0">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="url"/>
+                                <field name="client_id"/>
+                                <field name="secret_key"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="internal"/>
+                                <field name="token_type"/>
+                                <field name="expires_in"/>
+                            </group>
+                            <group>
+                                <field name="access_token"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="delivery_partner_view_search" model="ir.ui.view">
+            <field name="name">Delivery partner Search</field>
+            <field name="model">delivery.partner</field>
+            <field name="arch" type="xml">
+                <search string="Parameters">
+                    <field name="code" string="Code" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="Name" filter_domain="[('name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="ev_delivery_partner_action" model="ir.actions.act_window">
+            <field name="name">Delivery partner Action</field>
+            <field name="res_model">delivery.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="delivery_partner_view_search"/>
+        </record>
+
+
+        <menuitem id="delivery_partner_menu" name="Delivery Partner" action="ev_delivery_partner_action"
+                  parent="ev_delivery_management.delivery_menu_root"
+                  groups="base.group_system"
+                  sequence="2"/>
+    </data>
+</odoo>

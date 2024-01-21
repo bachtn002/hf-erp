@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_account_move_inherit_voucher_form" model="ir.ui.view">
+            <field name="name">view_account_move_inherit_voucher_form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='id']" position="after">
+                    <field name="x_is_move_voucher" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='256']" position="after">
+                    <button name="print_move_voucher" string="Print Move Voucher"
+                            type="object" class="oe_highlight"
+                            attrs="{'invisible': [('x_is_move_voucher', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

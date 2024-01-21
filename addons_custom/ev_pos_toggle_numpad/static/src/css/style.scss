@@ -1,0 +1,43 @@
+.control-buttons{
+	.control-button{
+		width: 100px;
+		font-weight: bold;
+		transition: all 0.3s ease-in-out;
+		span{
+			transition: all 0.3s ease-in-out;
+		}
+		&.hide-text{
+			width: 30px;
+			span{
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+}
+
+.pos{
+	.product-list-container{
+		border-right: none !important;
+	}
+}
+
+.products-widget-control{
+	border-left: 1px solid silver;
+	.rightpane-header{
+		width: 110px;
+		transition: all 0.3s ease-in-out;
+	}
+	&.hide-content{
+		border-left: none;
+    .rightpane-header{
+      width: 50px;
+			opacity: 0;
+			visibility: hidden;
+		}
+		.o_ev_toggle_category_button__toggle_btn{
+      border-left: 1px solid silver;
+		}
+	}
+}

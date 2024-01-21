@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="config_zalo_oa_view_tree_inherit">
+            <field name="name">config_zalo_oa_view_tree_inherit</field>
+            <field name="model">zalo.official.account</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.zalo_official_account_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="oa_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_zalo_oa_view_from_inherit">
+            <field name="name">config_zalo_oa_view_from_inherit</field>
+            <field name="model">zalo.official.account</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.zalo_official_account__view_from"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="oa_id"/>
+                    <field name="template_otp"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

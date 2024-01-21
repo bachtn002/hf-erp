@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="ev_internal_stock_request">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+    </data>
+</odoo>

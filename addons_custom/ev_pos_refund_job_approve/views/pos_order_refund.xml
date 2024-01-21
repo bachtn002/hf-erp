@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_order_refund_inherit_manu">
+            <field name="name">view_pos_order_refund_inherit_manu</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_reason_refuse']" position="after">
+                    <field name="x_is_auto_approve" attrs="{'invisible':[('x_allow_return', '=', False)]}"
+                           readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_pos_order_refund_tree_inherit_manu">
+            <field name="name">view_pos_order_refund_tree_inherit_manu</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_allow_return']" position="after">
+                    <field name="x_is_auto_approve"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="x_pos_send_return"/>
+                    <field name="x_allow_return"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

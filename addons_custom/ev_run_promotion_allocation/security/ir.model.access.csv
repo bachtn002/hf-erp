@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_run_promotion_allocation,ev_run_promotion_allocation.run_promotion_allocation,model_run_promotion_allocation,,1,1,1,1
+access_run_promotion_allocation_line,ev_run_promotion_allocation.run_promotion_allocation_line,model_run_promotion_allocation_line,,1,1,1,1

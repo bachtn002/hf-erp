@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="baocao_list_action">
+            <field name="name">Word Template</field>
+            <field name="res_model">word.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="word_template_form_view">
+            <field name="name">word.template.form</field>
+            <field name="model">word.template</field>
+            <field name="arch" type="xml">
+                <form string="Chi tiết">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name_display"/>
+                        </group>
+                        <group>
+                            <field name="file_data" filename="file_name"/>
+                            <field name="file_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="word_template_tree_view">
+            <field name="name">word.template.tree</field>
+            <field name="model">word.template</field>
+            <field name="arch" type="xml">
+                <tree string="baocao Tree">
+                    <field name="name_display"/>
+                </tree>
+            </field>
+        </record>
+
+<!--        <menuitem id="baocao_menu" name="Word Template"-->
+<!--                  parent="loan_configuration_main_menu"-->
+<!--                  action="baocao_list_action" sequence="50"/>-->
+    </data>
+</odoo>

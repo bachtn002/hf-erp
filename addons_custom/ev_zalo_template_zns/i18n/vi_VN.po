@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_zalo_template_zns
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-09 04:37+0000\n"
+"PO-Revision-Date: 2022-06-09 04:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__active
+msgid "Active"
+msgstr "Sử dụng"
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__display_name
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_zns_information__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__id
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_zns_information__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config____last_update
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_zns_information____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.actions.act_window,name:ev_zalo_template_zns.map_zns_config_action
+#: model:ir.ui.menu,name:ev_zalo_template_zns.map_zns_config_menu
+msgid "Map ZNS Config"
+msgstr "Cấu hình param zns"
+
+#. module: ev_zalo_template_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_template_zns.map_zns_config_view_search
+msgid "Map ZNS Config Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_zalo_template_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_template_zns.map_zns_config_view_from
+msgid "Map ZNS ConfigForm"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model_terms:ir.ui.view,arch_db:ev_zalo_template_zns.map_zns_config_view_tree
+msgid "Map ZNS ConfigTree"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model,name:ev_zalo_template_zns.model_map_zns_config
+msgid "Map ZNS config"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__model
+msgid "Model"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__param_erp
+msgid "Param ERP"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__param_zns
+msgid "Param ZNS"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: model:ir.model.fields,field_description:ev_zalo_template_zns.field_map_zns_config__template_id
+msgid "Template ID"
+msgstr ""
+
+#. module: ev_zalo_template_zns
+#: code:addons/ev_zalo_template_zns/models/map_zns_config.py:0
+#, python-format
+msgid "This information already exists, please edit"
+msgstr "Thông tin này đã tồn tại trên hệ thống, vui lòng chỉnh sửa!"
+
+#. module: ev_zalo_template_zns
+#: model:ir.model,name:ev_zalo_template_zns.model_zns_information
+msgid "Zalo Notification Service Information"
+msgstr "Thông tin Zalo Notification Service"

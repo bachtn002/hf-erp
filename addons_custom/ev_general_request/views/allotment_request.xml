@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="allotment_request_view_tree" model="ir.ui.view">
+            <field name="name">allotment_request_view_tree</field>
+            <field name="model">allotment.request</field>
+            <field name="arch" type="xml">
+                <tree string="Allotment Request">
+                    <field name="name"/>
+                    <field name="general_request_id"/>
+                    <field name="date"/>
+                    <field name="state" widget="badge" decoration-info="state == 'draft'"
+                           decoration-success="state not in ('draft', 'cancel')"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="allotment_request_view_from" model="ir.ui.view">
+            <field name="name">allotment_request_view_tree</field>
+            <field name="model">allotment.request</field>
+            <field name="arch" type="xml">
+                <form string="Allotment Request">
+                    <header>
+                        <button name='%(allotment_request_import_action)d' type='action' states="draft"
+                                string="Update file" class="oe_highlight" icon="fa-download"/>
+                        <button name='confirm_import_allotment_request' type='object' states="draft"
+                                string="Confirm" class="oe_highlight" confirm="Are you sure to confirm?"/>
+                        <button name="action_print_excel" states="draft,done" type="object" string="Print Excel"
+                                class="oe_highlight"/>
+                        <button name="action_cancel" type="object" states="draft" string="Cancel" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"
+                               readonly="1" clickable="0"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="name" class="oe_inline">
+                                </field>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="general_request_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create': True,'no_create_edit': True}"/>
+                                <field name="company_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail">
+                                <button name='get_general_request' type='object' states="draft"
+                                        string="Get Data" class="oe_highlight"
+                                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                                <field name="allotment_request_lines" widget="section_and_note_one2many"
+                                       mode="tree" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="product_id" options="{'no_create': True,'no_create_edit': True}"
+                                               readonly="1"/>
+                                        <field name="qty" style="text-align:center;" readonly="1"/>
+                                        <field name="qty_apply" style="text-align:center;"/>
+                                        <field name="product_uom" style="text-align:center;"
+                                               options="{'no_create': True,'no_create_edit': True}"/>
+                                        <field name="warehoue_des_id" readonly="1"/>
+                                        <field name="stock_transfer_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="allotment_request_view_search" model="ir.ui.view">
+            <field name="name">allotment_request_view_search</field>
+            <field name="model">allotment.request</field>
+            <field name="arch" type="xml">
+                <search string="Allotment Request Search">
+                    <field name="name" filter_domain="[('name','ilike',self)]"/>
+                    <field name="general_request_id" filter_domain="[('general_request_id.name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="allotment_request_action" model="ir.actions.act_window">
+            <field name="name">Allotment Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">allotment.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="allotment_request_view_search"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_session_queue
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-06 08:06+0000\n"
+"PO-Revision-Date: 2022-04-06 15:08+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: ev_pos_session_queue
+#: code:addons/ev_pos_session_queue/models/models.py:0
+#, python-format
+msgid "Another session is already opened for this point of sale."
+msgstr ""
+
+#. module: ev_pos_session_queue
+#: model_terms:ir.ui.view,arch_db:ev_pos_session_queue.view_pos_config_kanban
+msgid "New Session"
+msgstr "Phiên mới"
+
+#. module: ev_pos_session_queue
+#: model_terms:ir.ui.view,arch_db:ev_pos_session_queue.view_queue_pos_session_form_inherit
+msgid "Close Session & Post Entries"
+msgstr ""
+
+#. module: ev_pos_session_queue
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_pos_session__display_name
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_stock_quant__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_session_queue
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_pos_session__id
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_stock_quant__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_session_queue
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_pos_session____last_update
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_stock_quant____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_session_queue
+#: model:res.groups,name:ev_pos_session_queue.group_pos_session_closing_control
+msgid "POS Session Closing Control"
+msgstr ""
+
+#. module: ev_pos_session_queue
+#: code:addons/ev_pos_session_queue/models/models.py:0
+#, python-format
+msgid "Please enter the cash statement before closing the session!"
+msgstr "Bạn phải nhập bảng kê quỹ tiền mặt trước khi đóng phiên!"
+
+#. module: ev_pos_session_queue
+#: code:addons/ev_pos_session_queue/models/models.py:0
+#, python-format
+msgid "Please enter the reason before closing the session!"
+msgstr "Bạn phải nhập lý do chênh lệch tiền mặt trước khi đóng phiên!"
+
+#. module: ev_pos_session_queue
+#: model:ir.model,name:ev_pos_session_queue.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Ca bán hàng"
+
+#. module: ev_pos_session_queue
+#: model:ir.model,name:ev_pos_session_queue.model_stock_quant
+msgid "Quants"
+msgstr "Số lượng"
+
+#. module: ev_pos_session_queue
+#: model:ir.model.fields.selection,name:ev_pos_session_queue.selection__pos_session__state__queued
+msgid "Queued"
+msgstr ""
+
+#. module: ev_pos_session_queue
+#: code:addons/ev_pos_session_queue/models/models.py:0
+#, python-format
+msgid "Session have an order in draft!"
+msgstr "Phiên có đơn hàng ở trạng thái nháp"
+
+#. module: ev_pos_session_queue
+#: model:ir.model.fields,field_description:ev_pos_session_queue.field_pos_session__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: ev_pos_session_queue
+#: code:addons/ev_pos_session_queue/models/models.py:0
+#, python-format
+msgid "This session is already closed."
+msgstr "Phiên bán hàng đã được đóng"
+
+#. module: ev_pos_session_queue
+#: code:addons/ev_pos_session_queue/models/models.py:0
+#, python-format
+msgid "You cannot continue to sell the previous day."
+msgstr "Bạn không thể tiếp tục bán hàng bằng phiên ngày hôm trước."

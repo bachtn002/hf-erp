@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_legal_representation_view">
+            <field name="name">res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <group>
+                        <h2>
+                            <label for="x_legal_representation"/>
+                            <field name="x_legal_representation"/>
+                        </h2>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

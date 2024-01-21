@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ev_permission_edit_partner.list">
+      <field name="name">ev_permission_edit_partner list</field>
+      <field name="model">ev_permission_edit_partner.ev_permission_edit_partner</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ev_permission_edit_partner.action_window">
+      <field name="name">ev_permission_edit_partner window</field>
+      <field name="res_model">ev_permission_edit_partner.ev_permission_edit_partner</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ev_permission_edit_partner.action_server">
+      <field name="name">ev_permission_edit_partner server</field>
+      <field name="model_id" ref="model_ev_permission_edit_partner_ev_permission_edit_partner"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ev_permission_edit_partner" id="ev_permission_edit_partner.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ev_permission_edit_partner.menu_1" parent="ev_permission_edit_partner.menu_root"/>
+    <menuitem name="Menu 2" id="ev_permission_edit_partner.menu_2" parent="ev_permission_edit_partner.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ev_permission_edit_partner.menu_1_list" parent="ev_permission_edit_partner.menu_1"
+              action="ev_permission_edit_partner.action_window"/>
+    <menuitem name="Server to list" id="ev_permission_edit_partner" parent="ev_permission_edit_partner.menu_2"
+              action="ev_permission_edit_partner.action_server"/>
+-->
+  </data>
+</odoo>

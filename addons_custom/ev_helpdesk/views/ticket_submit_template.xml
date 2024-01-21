@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="ticket_submit_form" name="Helpdesk: Submit a Ticket Form">
+            <t t-call="ev_helpdesk.portal_record_custom_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters question-center">
+                        <div class="question-name">
+                            <h3>Submit a Ticket</h3>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <div style="width:80%;margin-left:13%;margin-right:13%;margin-top:50px;">
+                        <form action="/help/tickets/send_ticket" method="post" enctype="multipart/form-data" id="ticket_form">
+                            <div class="row mb-4">
+                                <strong class="col-lg-3 required_field">Ticket name</strong>
+                                <input style="width: 400px;" type="text" name="name" class="form-control"
+                                       required="1"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3">Helpdesk department</strong>
+                                <input style="width: 400px;" class="form-control"
+                                       t-att-value="helpdesk_department.name" name="helpdesk_department"
+                                       readonly="1"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3">Ticket type</strong>
+                                <select name="ticket_type"
+                                        style="height: 39px;width: 400px;border: solid 1px lightgrey;">
+                                    <t t-foreach="ticket_type" t-as="tt">
+                                        <option>
+                                            <t t-esc="tt.name"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3">Pos shop code</strong>
+                                <input style="width: 400px;" type="text" t-att-value="pos_shop_code" name="pos_shop_code"
+                                       class="form-control" readonly="1"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3">User phone number</strong>
+                                <input style="width: 400px;" type="text" t-att-value="phone" name="phone"
+                                       class="form-control"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3 required_field">Email</strong>
+                                <input style="width: 400px;" type="text" t-att-value="email" name="email"
+                                       class="form-control" required="1"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3 required_field">App support</strong>
+                                <select name="app" required="1"
+                                        style="height: 39px;width: 400px;border: solid 1px lightgrey;">
+                                    <option value=""/>
+                                    <t t-foreach="app_support" t-as="app">
+                                        <option>
+                                            <t t-esc="app.name"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3 required_field">Id app</strong>
+                                <input style="width: 400px;" type="text" name="id_app" required="1"
+                                       class="form-control"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3">Password app</strong>
+                                <input style="width: 400px;" type="text" name="pass_app"
+                                       class="form-control"/>
+                            </div>
+                            <div class="row mb-4">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <strong class="col-lg-3">Error image</strong>
+                                <input type="file" name="attachment" class="file" multiple="true" accept="image/*"
+                                       data-show-upload="true" data-show-caption="true" lass="file"
+                                       data-show-preview="true"/>
+                            </div>
+                            <div class="row mb-4">
+                                <strong class="col-lg-3">Problem</strong>
+                                <textarea style="width: 400px;min-height:100px;" type="text"
+                                          name="description" class="form-control"/>
+                            </div>
+                            <div class="footer_ticket">
+                                <a t-attf-href="/my/tickets" class="btn ml-sm-4" style="background: lightgray;">
+                                    Back to my tickets
+                                </a>
+                                <button type="submit" class="btn btn-primary ml-sm-4 button_submit_ticket">
+                                    Submit Ticket
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

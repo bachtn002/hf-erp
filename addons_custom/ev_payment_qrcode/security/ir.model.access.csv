@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_callback_payment_log,access_callback_payment_log,model_callback_payment_log,,1,0,0,0
+access_payment_qrcode_transaction,access_payment_qrcode_transaction,model_payment_qrcode_transaction,,1,0,0,0
+access_payment_create_order_qrcode_res,access_payment_create_order_qrcode_res,model_payment_create_order_qrcode_res,,1,0,0,0

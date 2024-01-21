@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="abstract_loan_disbursement_form_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.disbursement.form</field>
+			<field name="model">abstract.loan.disbursement</field>
+			<field name="arch" type="xml">
+				<form string="Loan Disbursements">
+					<header>
+						<button name="action_confirm" states="draft"
+							string="Confirm" type="object" />
+						<button name="action_draft" states="cancelled"
+							string="Set to Draft" type="object" />
+						<button name="action_disbursement_register_wizard"
+							states="confirmed" class="oe_highlight" type="object"
+							help="Register a disbursement payment" />
+						<button name="action_generate_refund_lines"
+							context="{'regenerate':1}" states="draft,confirmed,paid,refunded"
+							class="oe_highlight" string="Compute Refunds &amp; Interests"
+							type="object" />
+						<button name="action_cancel" states="confirmed,paid"
+							string="Cancel" type="object" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,confirmed,paid,refunded,cancelled" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_moves" type="object"
+								class="oe_stat_button" icon="fa-bars"
+								attrs="{'invisible': [('moves_count', '=', 0)]}">
+								<field name="moves_count" widget="statinfo"
+									string="Journal Entries" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="name"
+									attrs="{'invisible':[('name','=','/')]}" />
+							</h1>
+						</div>
+						<group>
+							<group>
+
+								<field name="partner_id" />
+								<field name="amount" />
+								<field name="paid_amount" />
+								<field name="to_refund_amount" />
+								<field name="currency_id"
+									groups="base.group_multi_currency" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="journal_id" />
+								<field name="account_id" />
+							</group>
+							<group>
+								<field name="date" string="Accounting Date"/>
+								<field name="date_confirmed"
+									attrs="{'invisible':[('state','in',['draft','cancelled'])]}" />
+								<field name="date_maturity" />
+								<field name="expected_refund_date" />
+								<field name="full_payment_date" groups="base.group_no_one" />
+							</group>
+						</group>
+						<notebook>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+
+		<!-- tree (list) view -->
+		<record id="abstract_loan_disbursement_tree_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.disbursement.tree</field>
+			<field name="model">abstract.loan.disbursement</field>
+			<field name="arch" type="xml">
+				<tree string="Disbursements"
+					decoration-muted="state=='cancelled'">
+					<field name="name" />
+					<field name="partner_id" />
+					<field name="amount" />
+					<field name="paid_amount" />
+					<field name="to_receive_amount" />
+					<field name="to_refund_amount" />
+					<field name="date" />
+					<field name="date_maturity" />
+					<field name="account_id" />
+					<field name="currency_id" invisible="1" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="abstract_loan_disbursement_calendar_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.disbursement.calendar</field>
+			<field name="model">abstract.loan.disbursement</field>
+			<field name="arch" type="xml">
+				<calendar string="Disbursement Calendar" color="partner_id"
+					date_start="date" date_stop="date_maturity">
+					<field name="partner_id" />
+					<field name="name" />
+					<field name="amount" />
+				</calendar>
+			</field>
+		</record>
+
+		<record id="abstract_loan_disbursement_pivot_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.disbursement.pivot</field>
+			<field name="model">abstract.loan.disbursement</field>
+			<field name="arch" type="xml">
+				<pivot string="Loan Disbursements">
+					<field name="date" type="col" />
+					<field name="amount" type="measure" />
+					<field name="paid_amount" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="abstract_loan_disbursement_graph_view">
+			<field name="name">abstract.loan.disbursement.graph</field>
+			<field name="model">abstract.loan.disbursement</field>
+			<field name="arch" type="xml">
+				<graph string="Disbursements Graph" type="bar">
+					<field name="partner_id" type="row" />
+					<field name="amount" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="abstract_loan_disbursement_search_view">
+			<field name="name">abstract.loan.disbursement.search</field>
+			<field name="model">abstract.loan.disbursement</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="date" />
+					<field name="date_maturity" />
+					<field name="account_id" />
+					<separator />
+					<filter name="ftr_draft" string="Draft"
+						domain="[('state','=','draft')]" />
+					<filter name="ftr_confirmed" string="Confirmed"
+						domain="[('state','=','confirmed')]" />
+					<filter name="ftr_partially_paid" string="Partially Paid"
+						domain="[('state','=','confirmed'),('paid_amount','&gt;',0)]" />
+					<filter name="ftr_paid" string="Paid"
+						domain="[('state','=','paid')]" />
+					<filter name="ftr_partially_refunded"
+						string="Patially Refunded"
+						domain="[('to_refund_amount','&gt;',0),('state','=','paid')]" />
+					<filter name="ftr_refunded" string="Refunded"
+						domain="[('state','=','refunded')]" />
+					<filter name="ftr_cancelled" string="Cancelled"
+						domain="[('state','=','cancelled')]" />
+					<separator />
+					<group expand="1" string="Group By">
+						<filter string="Partner" name="grp_partner"
+							context="{'group_by':'partner_id'}" />
+						<filter string="Journal" name="grp_journal"
+							context="{'group_by':'journal_id'}" />
+						<filter string="Account" name="grp_account"
+							context="{'group_by':'account_id'}" />
+						<filter string="Currency" name="grp_currency"
+							context="{'group_by':'currency_id'}"
+							groups="base.group_multi_currency" />
+						<filter string="Company" name="grp_company"
+							context="{'group_by':'company_id'}"
+							groups="base.group_multi_company" />
+						<separator />
+						<filter string="Confirmation Date"
+							name="grp_date_confirmed"
+							context="{'group_by':'date_confirmed'}" help="Group Disbursements by Confirmation Date" />
+						<filter string="Due Date"
+							name="grp_date_maturity"
+							context="{'group_by':'date_maturity'}" help="Group Disbursements by Due Date" />
+					</group>
+				</search>
+			</field>
+		</record>
+	</data>
+</odoo>

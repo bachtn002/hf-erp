@@ -1,0 +1,697 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_general_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-20 07:40+0000\n"
+"PO-Revision-Date: 2021-10-20 07:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/wizard/genaral_product_group_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Product not exist in the system or not active, line (%s)"
+msgstr ""
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/wizard/general_warehouse_group_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Warehouse not exist in the system, line (%s)"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_needaction
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__date
+msgid "Allotment Date"
+msgstr "Ngày phân bổ"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_allotment_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__allotment_request_id
+msgid "Allotment Request"
+msgstr "Phân bổ yêu cầu hàng bán"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_allotment_request_line
+msgid "Allotment Request Line"
+msgstr "Chi tiết phân bổ"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__allotment_request_lines
+msgid "Allotment Request Lines"
+msgstr "Chi tiết phân bổ"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__qty_apply
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__qty_apply
+msgid "Apply quantity"
+msgstr "Số lượng đáp ứng"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+msgid "Are you sure to confirm?"
+msgstr "Bạn có chắc chắn xác nhận không?"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_attachment_count
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields.selection,name:ev_general_request.selection__allotment_request__state__cancel
+#: model:ir.model.fields.selection,name:ev_general_request.selection__general_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_search
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_import_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__code
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__code
+msgid "Code Group"
+msgstr "Mã nhóm"
+
+#. module: ev_general_request
+#: model:ir.model.constraint,message:ev_general_request.constraint_general_product_group_code_uniq
+#: model:ir.model.constraint,message:ev_general_request.constraint_general_warehouse_group_code_uniq
+msgid "Code already exists in the system!"
+msgstr "Mã đã tồn tại trong hệ thống"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__create_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__create_date
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__company_id
+msgid "Công ty"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request_line__product_uom
+#: model:ir.model.fields,help:ev_general_request.field_general_request_line__product_uom
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__warehoue_des_id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__warehoue_des_id
+msgid "Destination Stock"
+msgstr "Kho nhận hàng"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/models/allotment_request.py:0
+#, python-format
+msgid "Detail none not confirm"
+msgstr "Không có chi tiết để xác nhận"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_product_product__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_report_ev_general_request_allotment_request_report__display_name
+#: model:ir.model.fields,field_description:ev_general_request.field_report_general_request_report__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_general_request
+#: model:ir.model.fields.selection,name:ev_general_request.selection__allotment_request__state__done
+#: model:ir.model.fields.selection,name:ev_general_request.selection__general_request__state__done
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_search
+msgid "Done"
+msgstr "Đã hoàn thành"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_view_form
+msgid "Dowload file"
+msgstr "Tải file mẫu"
+
+#. module: ev_general_request
+#: model:ir.model.fields.selection,name:ev_general_request.selection__allotment_request__state__draft
+#: model:ir.model.fields.selection,name:ev_general_request.selection__general_request__state__draft
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_search
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__file_name
+msgid "File Name"
+msgstr "Tên file"
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/models/import_general_request.py:0
+#: code:addons/ev_general_request/wizard/allotment_request_imp.py:0
+#: code:addons/ev_general_request/wizard/genaral_product_group_imp.py:0
+#: code:addons/ev_general_request/wizard/general_warehouse_group_imp.py:0
+#, python-format
+msgid ""
+"File not found or in incorrect format. Please check the .xls or .xlsx file "
+"format"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_follower_ids
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_channel_ids
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_partner_ids
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_general_product_group
+msgid "General Group Product"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.ui.menu,name:ev_general_request.general_product_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_view_tree
+msgid "General Product Group"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.actions.act_window,name:ev_general_request.general_request_act
+#: model:ir.model,name:ev_general_request.model_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__general_ids
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__general_ids
+#: model:ir.ui.menu,name:ev_general_request.general_sale_menu
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+msgid "General Request"
+msgstr "Tổng hợp yêu cầu hàng bán"
+
+#. module: ev_general_request
+#: model:ir.actions.report,print_report_name:ev_general_request.general_request_report_xlsx
+msgid "General Request Excel Report"
+msgstr "Xuất tổng hợp yêu cầu hàng"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__general_request_line
+msgid "General Request Lines"
+msgstr "Chi tiết tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__general_request_id
+msgid "General Request Name"
+msgstr "Phiếu tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__general_request_id
+msgid "General Request Reference"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.actions.report,name:ev_general_request.general_request_report_xlsx
+msgid "General Request Report"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_general_warehouse_group
+#: model:ir.ui.menu,name:ev_general_request.general_warehouse_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_view_tree
+msgid "General Warehouse Group"
+msgstr "Nhóm kho tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_general_request_line
+msgid "General resquest line"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__id
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__id
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__id
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__id
+#: model:ir.model.fields,field_description:ev_general_request.field_product_product__id
+#: model:ir.model.fields,field_description:ev_general_request.field_report_ev_general_request_allotment_request_report__id
+#: model:ir.model.fields,field_description:ev_general_request.field_report_general_request_report__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_needaction
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_unread
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_needaction
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_has_error
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_has_sms_error
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_has_error
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.actions.act_window,name:ev_general_request.general_product_group_import_action
+msgid "Import General Product Group"
+msgstr "Nhập danh sách sản phẩm"
+
+#. module: ev_general_request
+#: model:ir.actions.act_window,name:ev_general_request.general_warehouse_group_import_action
+msgid "Import General Warehouse Group"
+msgstr "Nhập danh sách kho"
+
+#. module: ev_general_request
+#: model:ir.actions.act_window,name:ev_general_request.general_request_wizard_action
+msgid "Import Sale Request"
+msgstr "Nhập file tổng hợp"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_import_wizard_form
+msgid "Import a excel file"
+msgstr "Nhập file excel"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_is_follower
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__warehouse_id
+msgid "Kho"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_product_product____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_report_ev_general_request_allotment_request_report____last_update
+#: model:ir.model.fields,field_description:ev_general_request.field_report_general_request_report____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__write_uid
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__write_date
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_product_product__x_general_group_ids
+msgid "List Group General"
+msgstr "Nhóm tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__product_ids
+msgid "List Product"
+msgstr "Sản phẩm"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__warehouse_ids
+msgid "List Warehouse"
+msgstr "Kho"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_has_error
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_ids
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group__name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__name
+msgid "Name Group"
+msgstr "Tên nhóm"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__name
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__name
+msgid "Name request"
+msgstr "Mã"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_needaction_counter
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_has_error_counter
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__message_unread_counter
+#: model:ir.model.fields,help:ev_general_request.field_general_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_product_product
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__product_id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__general_product_group_ids
+msgid "Product Group"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__qty
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_general_request
+#: model:ir.model.fields.selection,name:ev_general_request.selection__general_request__state__received
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_search
+msgid "Received"
+msgstr "Đã nhận"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__date
+msgid "Request Date"
+msgstr "Ngày tổng hợp"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_tree
+msgid "Request General"
+msgstr "Yêu cầu hàng bán"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__request_line_id
+msgid "Request ID"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.ui.menu,name:ev_general_request.sale_general_request_id
+msgid "Sale Request Management"
+msgstr "Quản lý yêu cầu hàng bán"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_view_search
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_search
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_view_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__state
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__stock_transfer_id
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__stock_transfer_id
+msgid "Stock transfer name"
+msgstr "Phiếu chuyển kho nội bộ"
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/models/import_general_request.py:0
+#: code:addons/ev_general_request/wizard/allotment_request_imp.py:0
+#, python-format
+msgid "Sản phẩm không tồn tại trong hệ thống, dòng (%s)"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_unread
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__message_unread_counter
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_line__product_uom
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request_line__product_uom
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_request_wizard_form
+msgid "Update file"
+msgstr "Import file phân bổ"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_view_form
+msgid "Update file product"
+msgstr "Nhập file sản phẩm"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_view_form
+msgid "Update file warehouse"
+msgstr "Nhập file kho"
+
+#. module: ev_general_request
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_general_request.general_warehouse_group_import_wizard_form
+msgid "Upload"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request_import__upload_file
+#: model:ir.model.fields,field_description:ev_general_request.field_general_product_group_import__upload_file
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group_import__upload_file
+#: model:ir.model.fields,field_description:ev_general_request.field_import_xls_wizard_general_request__upload_file
+msgid "Upload File"
+msgstr "Nhập file"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__general_warehouse_group_ids
+msgid "Warehouse Group"
+msgstr "Nhóm kho"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_general_warehouse_group__warehouse_id
+msgid "Warehouse Supply"
+msgstr "Kho cung ứng"
+
+#. module: ev_general_request
+#: model:ir.model.fields,field_description:ev_general_request.field_allotment_request__website_message_ids
+#: model:ir.model.fields,field_description:ev_general_request.field_general_request__website_message_ids
+msgid "Website Messages"
+msgstr "Thông báo"
+
+#. module: ev_general_request
+#: model:ir.model.fields,help:ev_general_request.field_allotment_request__website_message_ids
+#: model:ir.model.fields,help:ev_general_request.field_general_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/models/general_request.py:0
+#, python-format
+msgid "You can only delete when state is draft "
+msgstr "Chỉ có thể xóa ở trạng thái nháp"
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/models/general_request.py:0
+#, python-format
+msgid "You cannot choose a date in the future"
+msgstr ""
+
+#. module: ev_general_request
+#: code:addons/ev_general_request/models/allotment_request.py:0
+#, python-format
+msgid "You have not allocated"
+msgstr "Bạn chưa phân bổ"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_allotment_request_import
+msgid "allotment.request.import"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_general_product_group_import
+msgid "general.product.group.import"
+msgstr "Nhập nhóm sản phẩm tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_general_warehouse_group_import
+msgid "general.warehouse.group.import"
+msgstr "Nhập nhóm kho tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.actions.act_window,name:ev_general_request.general_product_group_action
+msgid "general_product_group_view_tree"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.actions.act_window,name:ev_general_request.general_warehouse_group_action
+msgid "general_warehouse_group_view_tree"
+msgstr "Nhóm kho tổng hợp"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_import_xls_wizard_general_request
+msgid "import.xls.wizard.general.request"
+msgstr ""
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_report_ev_general_request_allotment_request_report
+msgid "report.ev_general_request.allotment_request_report"
+msgstr "Phân bổ yêu cầu hàng"
+
+#. module: ev_general_request
+#: model:ir.model,name:ev_general_request.model_report_general_request_report
+msgid "report.general.request.report"
+msgstr ""

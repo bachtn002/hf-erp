@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="api_logger_tree" model="ir.ui.view">
+            <field name="name">Api logger</field>
+            <field name="model">api.logger</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false" duplicate="false">
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                    <field name="user_id"/>
+                    <field name="name"/>
+                    <field name="params"/>
+                    <field name="exception"/>
+                    <field name="exception_message"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="api_logger_form" model="ir.ui.view">
+            <field name="name">Api logger</field>
+            <field name="model">api.logger</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false" duplicate="false">
+                    <sheet>
+                        <group col="4" string="Exception time">
+                            <field name="create_uid"/>
+                            <field name="create_date"/>
+                            <field name="user_id"/>
+                        </group>
+                        <group col="4" string="Exception api">
+                            <field name="name"/>
+                            <field name="params"/>
+                        </group>
+                        <group col="1" string="Exception log">
+                            <field name="exception"/>
+                            <field name="exception_message"/>
+                            <field name="exception_data"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="api_logger_action" model="ir.actions.act_window">
+            <field name="name">Api loger</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">api.logger</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="api_logger_menu_item"
+                  name="API logger"
+                  parent="base.menu_security"
+                  action="api_logger_action"
+                  sequence="40"/>
+
+    </data>
+</odoo>

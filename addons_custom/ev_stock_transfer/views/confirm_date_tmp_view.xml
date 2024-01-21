@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_confirm_date_tmp" model="ir.ui.view">
+            <field name="name">Confirm Date Temp</field>
+            <field name="model">confirm.date.tmp</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Date">
+                    <sheet>
+                        <group>
+                            <field name="stock_transfer_id" invisible="1"/>
+                            <field name="date" required="1"/>
+                        </group>
+                        <footer>
+                            <button name="action_done" type="object" string="Confirm" class="btn-primary"/>
+                            <button string="Cancel" class="btn-default" special="cancel" />
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_confirm_date_tmp" model="ir.actions.act_window">
+            <field name="name">Confirm Date Temp</field>
+            <field name="res_model">confirm.date.tmp</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <record id="act_window_confirm_date_tmp_form_view" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_confirm_date_tmp"/>
+            <field name="act_window_id" ref="action_confirm_date_tmp"/>
+        </record>
+
+
+    </data>
+</odoo>

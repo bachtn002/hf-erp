@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_promotion_gift_code_form_view_inherit" model="ir.ui.view">
+            <field name="name">pos_promotion_gift_code_form_view_inherit</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='promotion_detail']" position="inside">
+                    <xpath expr="//page[@name='promotion_detail']" position="inside">
+                        <field name="promotion_gift_code_total_amount_ids" nolabel="1"
+                               attrs="{'invisible': [('type', '!=', 'gift_code_total_amount')], 'readonly': [('state', '!=', 'draft')]}">
+                            <tree editable="bottom">
+                                <field name="total_amount" required="1"/>
+                                <field name="promotion_code_id" required="1"
+                                       domain="[('state','=', 'active'), ('check_promotion', '=', True)]"/>
+                            </tree>
+                        </field>
+                    </xpath>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="ev_pos_campaign_form_inherit" model="ir.ui.view">
+			<field name="name">ev_pos_campaign.form</field>
+			<field name="model">pos.promotion</field>
+			<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+			<field name="priority" eval="10"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='priority']" position="after">
+					<field name="campaign_promotion" attrs="{'readonly': [('state','!=','draft')]}"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="pos_promtion_tree_inherit" model="ir.ui.view">
+			<field name="name">promotion_voucher.pos_promtion.view</field>
+			<field name="model">pos.promotion</field>
+			<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_tree_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state']" position="after">
+					<!-- Add new fields here -->
+					<field name="campaign_promotion" attrs="{'readonly': True}"/>
+				</xpath>
+			
+			</field>
+		</record>
+		<record id="pos_promotion_search_view_campaign" model="ir.ui.view">
+            <field name="name">pos.promotion.search.view1</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_pos_promotion.pos_promotion_search_view"/>
+            <field name="arch" type="xml">
+                <filter name="filter_active_promotion" position="after">
+                    <filter name="campaign_promotion_id" string="Campaign Promotion" icon="terp-partner" context="{'group_by':'campaign_promotion'}"/>
+                </filter>
+            </field>
+        </record>
+	</data>
+</odoo>

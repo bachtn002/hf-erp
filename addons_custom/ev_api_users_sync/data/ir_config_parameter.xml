@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+    <data>
+        <record id='api_get_user' model='ir.config_parameter'>
+            <field name='key'>URL_GET_API_USERS</field>
+            <field name='value'>http://homefarm.hronline.com.vn/API/CustomAPI/GetCustomAPI</field>
+        </record>
+        <record id='token_api_get_user' model='ir.config_parameter'>
+            <field name='key'>TOKEN_GET_API_USERS</field>
+            <field name='value'>1bd2e9f1-8626-441f-bfc5-ea1d36dc8c0c</field>
+        </record>
+        <record id='api_get_user_password' model='ir.config_parameter'>
+            <field name='key'>PASSWORD_DEFAULT</field>
+            <field name='value'>123456</field>
+        </record>
+    </data>
+</odoo>

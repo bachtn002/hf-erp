@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_account_statement,access_statement_name,model_account_statement,,1,1,1,1
+access_account_statement_line,access_statement_line_name,model_account_statement_line,,1,1,1,1
+access_account_statement_imp,access_statement_imp_name,model_account_statement_import_line,,1,1,1,1

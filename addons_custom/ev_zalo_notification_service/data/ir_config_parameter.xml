@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+<!--        <record id="code_verifier" model="ir.config_parameter">-->
+<!--            <field name="key">code_verifier</field>-->
+<!--            <field name="value">uHWPNpw0V8m75JB1hrmMaZO3U8vncMlvWPdbKoFQuAG</field>-->
+<!--        </record>-->
+<!--        <record id="code_challenge" model="ir.config_parameter">-->
+<!--            <field name="key">code_challenge</field>-->
+<!--            <field name="value">-op5HiCxWi5nWVhxDi17NosMnFgam6MmW13P7YrVj3o</field>-->
+<!--        </record>-->
+        <record id="url_api_zalo" model="ir.config_parameter">
+            <field name="key">url_api_zalo</field>
+            <field name="value">http://localhost:8888</field>
+        </record>
+<!--         <record id="zns_template_order" model="ir.config_parameter">-->
+<!--            <field name="key">zns_template_order</field>-->
+<!--            <field name="value">219951</field>-->
+<!--        </record>-->
+<!--        <record id="zns_template_otp" model="ir.config_parameter">-->
+<!--            <field name="key">zns_template_otp</field>-->
+<!--            <field name="value">224591</field>-->
+<!--        </record>-->
+
+        <record id="syntax_map_partner" model="ir.config_parameter">
+            <field name="key">syntax_map_partner</field>
+            <field name="value">#dk</field>
+        </record>
+        <record id="syntax_search_point" model="ir.config_parameter">
+            <field name="key">syntax_search_point</field>
+            <field name="value">#diem_tich_luy</field>
+        </record>
+        <record id="syntax_otp_map" model="ir.config_parameter">
+            <field name="key">syntax_otp_map</field>
+            <field name="value">#otp</field>
+        </record>
+    </data>
+</odoo>

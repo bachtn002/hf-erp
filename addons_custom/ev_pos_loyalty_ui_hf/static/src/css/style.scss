@@ -1,0 +1,16 @@
+.ev-loyalty-points{
+	margin: 0;
+	padding: 8px 16px;
+	max-width: 100%;
+	background: #fff;
+	color: #333;
+	.loyalty-tbl{
+		width: 100%;
+		border-collapse: collapse;
+		th, td{
+			padding: 8px;
+			border: 1px solid #bfbfbf;
+			font-size: 14px;
+		}
+	}
+}

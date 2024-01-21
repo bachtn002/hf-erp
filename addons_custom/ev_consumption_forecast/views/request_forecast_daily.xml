@@ -1,0 +1,17 @@
+<odoo>
+    <data noupdate="1">
+        <record model="ir.cron" id="request_forecast_daily_cron">
+            <field name="name">Request Forecast Daily</field>
+            <field name="state">code</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">24</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall"
+                   eval="(DateTime.now().replace(hour=6, minute=30) + timedelta(hours=24)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_request_forecast"/>
+            <field name="code">model._get_predicted_qty()</field>
+        </record>
+    </data>
+</odoo>

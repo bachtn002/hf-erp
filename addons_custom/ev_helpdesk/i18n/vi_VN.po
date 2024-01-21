@@ -1,0 +1,1186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk
+# 	* rating
+# 	* ev_helpdesk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-21 09:49+0000\n"
+"PO-Revision-Date: 2022-04-21 09:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid " message! Request  "
+msgstr ""
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid ""
+"<small>\n"
+"                                    <strong>It's Okay</strong>\n"
+"                                </small>"
+msgstr ""
+"<small>\n"
+"                                <strong>Bình thường</strong>\n"
+"                            </small>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid ""
+"<small>\n"
+"                                    <strong>Not satisfied</strong>\n"
+"                                </small>"
+msgstr ""
+"<small>\n"
+"                                <strong>Không hài lòng</strong>\n"
+"                            </small>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid ""
+"<small>\n"
+"                                    <strong>Satisfied</strong>\n"
+"                                </small>"
+msgstr ""
+"<small>\n"
+"                                <strong>Hài lòng</strong>\n"
+"                            </small>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+msgid "<strong>It's Okay</strong>"
+msgstr "<strong>Bình thường</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+msgid "<strong>Not satisfied</strong>"
+msgstr "<strong>Không hài lòng</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+msgid "<strong>Satisfied</strong>"
+msgstr "<strong>Hài lòng</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid ""
+"<span style=\"margin-right: 29px;\">We would love to hear your feedback\n"
+"                        </span>"
+msgstr ""
+"<span style=\"margin-right: 29px;\">Vui lòng đánh giá yêu cầu hỗ trợ\n"
+"                        </span>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+msgid "<span style=\"text-color: #888888\">(click on one of these smileys)</span>"
+msgstr "<span style=\"text-color: #888888\">(Vui lòng nhấn một icon bên dưới)</span>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_followup
+msgid "<span>Tutorial link</span>"
+msgstr "<span>Link hướng dẫn</span>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Email</strong>"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Helpdesk department</strong>"
+msgstr "<strong class=\"col-lg-3\">Bộ phận hỗ trợ</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Id app</strong>"
+msgstr "<strong class=\"col-lg-3\">Id hỗ trợ</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Password app</strong>"
+msgstr "<strong class=\"col-lg-3\">Mật khẩu hỗ trợ</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Problem</strong>"
+msgstr "<strong class=\"col-lg-3\">Mô tả vấn đề</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">App support</strong>"
+msgstr "<strong class=\"col-lg-3\">Ứng dụng hỗ trợ</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Ticket name</strong>"
+msgstr "<strong class=\"col-lg-3\">Tên vấn đề</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Ticket type</strong>"
+msgstr "<strong class=\"col-lg-3\">Loại vấn đề</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">User phone number</strong>"
+msgstr "<strong class=\"col-lg-3\">Số điện thoại</strong>"
+
+#. module: ev_helpdesk
+#: model:mail.template,body_html:ev_helpdesk.mail_template_ticket_helpdesk_department
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                    <tbody>\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                            <div>\n"
+"                                                Dear ${object.helpdesk_department_id.name},\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                Your have new ticket ${object.name} please check and handle!\n"
+"                                                <br/>\n"
+"                                                Thanks,\n"
+"                                                <br/>\n"
+"                                                Admin HomeFarm.\n"
+"                                            </div>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td style=\"text-align:center;\">\n"
+"                                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <!-- FOOTER -->\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\">\n"
+"                                            ${object.company_id.name}\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                            ${object.company_id.phone}\n"
+"                                            % if object.company_id.email\n"
+"                                            |\n"
+"                                            <a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                ${object.company_id.email}\n"
+"                                            </a>\n"
+"                                            % endif\n"
+"                                            % if object.company_id.website\n"
+"                                            |\n"
+"                                            <a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                ${object.company_id.website}\n"
+"                                            </a>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            "
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:mail.template,body_html:ev_helpdesk.mail_template_ticket_processed
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                    <tbody>\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                            <div>\n"
+"                                                Dear ${object.partner_id.name},\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                Your request ${object.name} has been processed by\n"
+"                                                ${object.user_id.name}!\n"
+"                                                <br/>\n"
+"                                                Thanks,\n"
+"                                                <br/>\n"
+"                                                ${object.team_id.name} Team.\n"
+"                                            </div>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td style=\"text-align:center;\">\n"
+"                                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <!-- FOOTER -->\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\">\n"
+"                                            ${object.company_id.name}\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                            ${object.company_id.phone}\n"
+"                                            % if object.company_id.email\n"
+"                                            |\n"
+"                                            <a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                ${object.company_id.email}\n"
+"                                            </a>\n"
+"                                            % endif\n"
+"                                            % if object.company_id.website\n"
+"                                            |\n"
+"                                            <a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                ${object.company_id.website}\n"
+"                                            </a>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            "
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:mail.template,body_html:ev_helpdesk.mail_template_ticket_confirmed
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                    <tbody>\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                            <div>\n"
+"                                                Dear ${object.partner_id.name},\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                Your request ${object.name} has been received and is being\n"
+"                                                assigned to ${object.user_id.name}!\n"
+"                                                <br/>\n"
+"                                                Thanks,\n"
+"                                                <br/>\n"
+"                                                ${object.team_id.name} Team.\n"
+"                                            </div>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td style=\"text-align:center;\">\n"
+"                                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <!-- FOOTER -->\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\">\n"
+"                                            ${object.company_id.name}\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                            ${object.company_id.phone}\n"
+"                                            % if object.company_id.email\n"
+"                                            |\n"
+"                                            <a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                ${object.company_id.email}\n"
+"                                            </a>\n"
+"                                            % endif\n"
+"                                            % if object.company_id.website\n"
+"                                            |\n"
+"                                            <a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                ${object.company_id.website}\n"
+"                                            </a>\n"
+"                                            % endif\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            "
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,help:ev_helpdesk.field_answer_answer__error_image
+#: model:ir.model.fields,help:ev_helpdesk.field_question_question__error_image
+msgid "Allowed formats: jpg, pdf, png. Maximum allowed size: 2MB."
+msgstr "Cho phép các đuôi file: jpg, pdf, png. Tối đa dung lượng: 2MB."
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.answer_answer_action
+#: model:ir.model,name:ev_helpdesk.model_answer_answer
+#: model:ir.ui.menu,name:ev_helpdesk.answer_answer_menu
+msgid "Answer"
+msgstr "Câu trả lời"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__answer_code
+msgid "Answer code"
+msgstr "Mã"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__answer_detail
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__answer_detail
+msgid "Answer detail"
+msgstr "Diễn giải"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__name
+msgid "Answer name"
+msgstr "Câu trả lời"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.app_support_act
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_app_sp_id
+#: model:ir.ui.menu,name:ev_helpdesk.app_support_menu
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.app_support_view_form
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.app_support_view_search
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.app_support_view_tree
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "App Support"
+msgstr "App hỗ trợ"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Assigned to"
+msgstr "Phân công cho"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_followup
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "Back to my tickets"
+msgstr "Quay lại yêu cầu hỗ trợ"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.question_question_view_form
+msgid "Corresponding answer"
+msgstr "Câu trả lời"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_request_helpdesk
+msgid "Create helpdesk request"
+msgstr "Tạo yêu cầu hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields.selection,name:ev_helpdesk.selection__answer_answer__page_end_redirect__create_ticket
+msgid "Create ticket"
+msgstr "Tạo yêu cầu hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__create_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__create_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__create_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__create_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__create_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__create_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__create_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__create_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.rating_rating_action_ev_helpdesk_report
+#: model:ir.ui.menu,name:ev_helpdesk.ev_helpdesk_rating_report_menu
+msgid "Customer Ratings"
+msgstr "Đánh giá"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__helpdesk_department_id
+msgid "Department"
+msgstr "Bộ phận hỗ trợ/áp dụng"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_department_form_view
+msgid "Department members"
+msgstr "Nhân viên"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__name
+msgid "Department name"
+msgstr "Tên bộ phận"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__department_request_ids
+msgid "Department request"
+msgstr "Bộ phận áp dụng"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__user_ids
+msgid "Department users"
+msgstr "Nhân viên"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_ticket_partner_view_form_inherit
+msgid "Description of the ticket..."
+msgstr "Mô tả của ticket ..."
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__display_name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__display_name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__display_name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__display_name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__name
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_partner_email
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Email"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:ir.model,name:ev_helpdesk.model_helpdesk_email
+msgid "Email to receive notification ticket"
+msgstr "Email nhận thông báo khi có yêu cầu hỗ trợ được tạo"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__emails
+msgid "Emails Ticket manage"
+msgstr "Quản lý Email hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__error_image
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__error_image
+msgid "Error Image"
+msgstr "Hình ảnh mô tả"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__error_image_filename
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__error_image_filename
+msgid "Error Image Filename"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__helpdesk_department_id
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__helpdesk_department_id
+msgid "Helpdesk Department"
+msgstr "Bộ phận hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model,name:ev_helpdesk.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Quản lý công việc (Hỗ trợ)"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.helpdesk_department_action
+#: model:ir.model,name:ev_helpdesk.model_helpdesk_department
+#: model:ir.ui.menu,name:ev_helpdesk.helpdesk_department_menu
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Helpdesk department"
+msgstr "Bộ phận hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__id
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__id
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__id
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__id
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_id_sp
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Id Support"
+msgstr "Id hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_is_rating
+msgid "Is get ticket rating?"
+msgstr "Ticket đã đánh giá?"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__is_question_root
+msgid "Is question root"
+msgstr "Là câu hỏi gốc"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer____last_update
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support____last_update
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department____last_update
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email____last_update
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__write_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__write_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__write_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__write_uid
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__write_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_app_support__write_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_department__write_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_email__write_date
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model_terms:ir.actions.act_window,help:ev_helpdesk.rating_rating_action_ev_helpdesk_report
+msgid "Let's wait for your customers to manifest themselves."
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__main_question_id
+msgid "Main Question"
+msgstr "Câu hỏi chính"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__answer_ids
+msgid "Main question's Answer"
+msgstr "Câu trả lời của câu hỏi chính"
+
+#. module: ev_helpdesk
+#: model:ir.model,name:ev_helpdesk.model_app_support
+msgid "Means of Support"
+msgstr "Phương tiện hỗ trợ"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__name_url
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__name_url
+msgid "Name Url"
+msgstr "Link đường dẫn"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__next_question_id
+msgid "Next Question"
+msgstr "Câu hỏi tiếp theo"
+
+#. module: ev_helpdesk
+#: model_terms:ir.actions.act_window,help:ev_helpdesk.rating_rating_action_ev_helpdesk_report
+msgid "No customer ratings yet"
+msgstr "Chưa có đánh giá nào của người dùng!"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_answer_answer__page_end_redirect
+msgid "Page end redirect"
+msgstr "Điều hướng trang cuối"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_pass_sp
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Pass Support"
+msgstr "Mật khẩu"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_phone
+msgid "Phone Number"
+msgstr "Số điện thoại"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_problem_solution
+msgid "Problem Solution"
+msgstr "Phương hướng giải quyết"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_ticket_partner_view_form_inherit
+msgid "Problem solution of the ticket..."
+msgstr "Phương hướng giải quyết ticket"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.question_question_act
+#: model:ir.model,name:ev_helpdesk.model_question_question
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__name
+#: model:ir.ui.menu,name:ev_helpdesk.question_question_menu
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.question_question_view_form
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.question_question_view_search
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.question_question_view_tree
+msgid "Question"
+msgstr "Câu hỏi"
+
+#. module: ev_helpdesk
+#: model:ir.ui.menu,name:ev_helpdesk.question_answer_menu
+msgid "Question - Answer"
+msgstr "Câu hỏi - Trả lời"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__question_tags
+msgid "Question Tags"
+msgstr "Tags"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_question_question__question_code
+msgid "Question code"
+msgstr "Mã"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields.selection,name:ev_helpdesk.selection__answer_answer__page_end_redirect__rating_page
+msgid "Rating page"
+msgstr "Đánh giá"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Reported by"
+msgstr "Người yêu cầu"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Reported on"
+msgstr "Thời gian"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_followup
+msgid "Show image"
+msgstr "Xem ảnh"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "Submit Ticket"
+msgstr "Tạo yêu cầu"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "Submit a Ticket"
+msgstr "Tạo yêu cầu"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+msgid "Tell us how you feel about our service"
+msgstr "Vui lòng đánh giá chất lượng dịch vụ hỗ trợ!"
+
+#. module: ev_helpdesk
+#. openerp-web
+#: code:addons/ev_helpdesk/static/src/js/portal.js:0
+#: code:addons/ev_helpdesk/static/src/js/question_portal.js:0
+#, python-format
+msgid "Thank you! Have a nice day!"
+msgstr "Cảm ơn vì đánh giá của bạn!"
+
+#. module: ev_helpdesk
+#: model:ir.model.constraint,message:ev_helpdesk.constraint_app_support_name_uniq
+msgid "The app support already exists in the system!"
+msgstr "App hỗ trợ đã tồn tại trong hệ thống"
+
+#. module: ev_helpdesk
+#: model:ir.model.constraint,message:ev_helpdesk.constraint_question_question_name_uniq
+msgid "The question already exists in the system!"
+msgstr "Câu hỏi đã tồn tại trong hệ thống!"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/controllers/question_controller.py:0
+#, python-format
+msgid ""
+"There is no root question appropriate with you! Contact with your manager to"
+" support"
+msgstr ""
+"Không tìm thấy bộ câu hỏi phù hợp! Vui lòng liên hệ với quản lý của bạn để được"
+" hỗ trợ"
+
+#. module: ev_helpdesk
+#. openerp-web
+#: code:addons/ev_helpdesk/static/src/js/portal.js:0
+#, python-format
+msgid "There is no such rating value"
+msgstr "Giá trị đánh giá không phù hợp!"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Ticket type"
+msgstr "Loại hỗ trợ"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_ticket_partner_view_form_inherit
+msgid "User"
+msgstr "Người dùng"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_department_form_view
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: ev_helpdesk
+#. openerp-web
+#: code:addons/ev_helpdesk/static/src/js/question_portal.js:0
+#, python-format
+msgid "You already rating! Thank you"
+msgstr "Bạn đã đánh giá trước đó! Thank you!"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "message! Request  confirmed and assigned to "
+msgstr ""
+
+#. module: cccc
+#: model:mail.template,body_html:helpdesk.solved_ticket_request_email_template
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"    Dear ${object.sudo().partner_id.name or 'Madam/Sir'},<br/><br/>\n"
+"    This automatic message informs you that we have closed your ticket (reference ${object.id}).\n"
+"    We hope that the services provided have met your expectations.\n"
+"    If you have any more questions or comments, don't hesitate to reply to this e-mail to re-open your ticket.<br/><br/>\n"
+"    Thank you for your cooperation.<br/>\n"
+"    Kind regards,<br/><br/>\n"
+"    ${object.team_id.name or 'Helpdesk'} Team.\n"
+"</div>\n"
+"        "
+msgstr ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"Chào ${object.sudo().partner_id.name or 'Madam/Sir'},<br/><br/>\n"
+"Đây là tin nhắn tự động thông báo cho bạn biết rằng chúng tôi đã đóng ticket (reference ${object.id}).\n"
+"Hy vọng sự hỗ trợ của chúng tôi đã làm hài lòng bạn.\n"
+"Nếu bạn có bất kỳ ý kiến hoặc thắc mắc gì, Hãy liên hệ lại với chúng tôi.<br/><br/>\n"
+"Cảm ơn sự tin tưởng của bạn.<br/>\n"
+"Thân,<br/><br/>\n"
+"${object.team_id.name or 'Helpdesk'} Team.</div>"
+
+#. module: ev_helpdesk
+#: model:helpdesk.team,name:ev_helpdesk.helpdesk_team_internal_support
+msgid "Internal Support"
+msgstr "Hỗ trợ nội bộ"
+
+#. module: ev_helpdesk
+#: model:helpdesk.stage,legend_blocked:ev_helpdesk.stage_cancelled
+#: model:helpdesk.stage,legend_blocked:ev_helpdesk.stage_in_progress
+#: model:helpdesk.stage,legend_blocked:ev_helpdesk.stage_new
+#: model:helpdesk.stage,legend_blocked:ev_helpdesk.stage_solved
+msgid "Blocked"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:helpdesk.stage,legend_normal:ev_helpdesk.stage_cancelled
+#: model:helpdesk.stage,legend_normal:ev_helpdesk.stage_in_progress
+#: model:helpdesk.stage,legend_normal:ev_helpdesk.stage_new
+#: model:helpdesk.stage,legend_normal:ev_helpdesk.stage_solved
+#: model:helpdesk.stage,name:ev_helpdesk.stage_in_progress
+msgid "In Progress"
+msgstr "Tiếp nhận"
+
+#. module: ev_helpdesk
+#: model:helpdesk.stage,legend_done:ev_helpdesk.stage_cancelled
+#: model:helpdesk.stage,legend_done:ev_helpdesk.stage_in_progress
+#: model:helpdesk.stage,legend_done:ev_helpdesk.stage_new
+#: model:helpdesk.stage,legend_done:ev_helpdesk.stage_solved
+msgid "Ready"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model:helpdesk.stage,name:ev_helpdesk.stage_solved
+msgid "Solved"
+msgstr "Hoàn thành"
+
+#. module: ev_helpdesk
+#: model:helpdesk.stage,name:ev_helpdesk.stage_new
+msgid "New"
+msgstr "Mới"
+
+#. module: ev_helpdesk
+#: model:helpdesk.stage,name:ev_helpdesk.stage_cancelled
+msgid "Cancelled"
+msgstr "Từ chối"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Set back to draft"
+msgstr "Yêu cầu xử lý lại"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_ticket__x_allow_set_back_draft
+msgid "Is allow set back to draft?"
+msgstr "Cho phép quay lại về mới"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid ""
+"<span class=\"how-improve\">Let us know How we can improve our "
+"service?</span>"
+msgstr ""
+"<span class=\"how-improve\">Chúng tôi có thể cải thiện chất lượng "
+"dịch vụ hỗ trợ như thế nào?</span>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Send feedback"
+msgstr "Gửi phản hồi"
+
+#. module: rating
+#: model:ir.model.fields.selection,name:rating.selection__rating_rating__rating_text__highly_dissatisfied
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Highly dissatisfied"
+msgstr "Không hài lòng"
+
+#. module: rating
+#: code:addons/rating/controllers/main.py:0
+#, python-format
+msgid "highly dissatisfied"
+msgstr "Không hài lòng"
+
+#. module: rating
+#: code:addons/rating/controllers/main.py:0
+#, python-format
+msgid "not satisfied"
+msgstr "Bình thường"
+
+#. module: rating
+#: model:ir.model.fields.selection,name:rating.selection__rating_rating__rating_text__not_satisfied
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Not satisfied"
+msgstr "Bình thường"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.questions_rating
+msgid "Thank for your rating!"
+msgstr "Cảm ơn vì đánh giá của bạn!"
+
+#. module: helpdesk
+#. openerp-web
+#: code:addons/helpdesk/static/src/xml/helpdesk_team_templates.xml:0
+#: model:ir.ui.menu,name:helpdesk.helpdesk_ticket_menu_my
+#: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_ticket_view_search_analysis
+#: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_ticket_view_search_analysis_closed
+#: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_tickets_view_search
+#, python-format
+msgid "My Tickets"
+msgstr "Xử lý ticket"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.helpdesk_ticket_action_own_create
+#: model:ir.ui.menu,name:ev_helpdesk.helpdesk_ticket_menu_own_create
+msgid "Own Tickets created"
+msgstr "Ticket của tôi"
+
+#. module: ev_helpdesk
+#. openerp-web
+#: code:addons/ev_helpdesk/static/src/js/question_portal.js:0
+#, python-format
+msgid "Thank you for your feedback!"
+msgstr "Cảm ơn vì phản hồi của bạn!"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Ref"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Requested user"
+msgstr "Người yêu cầu"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_res_config_settings__stage_allow_user_back_ticket
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Stage"
+msgstr "Giai đoạn"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "<em class=\"font-weight-normal text-muted\">Tickets in stage:</em>"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Assigned to"
+msgstr "Người xử lý"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Helpdesk Department"
+msgstr "Bộ phận xử lý"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_res_config_settings__days_allow_back_to_new_ticket
+msgid "Days"
+msgstr "Số ngày"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Days</span>\n"
+"                                <br/>\n"
+"                                <span class=\"text-muted\">The number days you allow user can set ticket back to new stage!</span>"
+msgstr ""
+"<span class=\"o_form_label\">Days</span>\n"
+"                                <br/>\n"
+"                                <span class=\"text-muted\">Số ngày cho phép người dùng thiết lập ticket về trạng thái mới!</span>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.res_config_settings_view_form
+msgid "The Stage of ticket user can set from current stage to"
+msgstr "Trạng thái cho phép người dùng thiết lập ticket quay lại khi chưa quá x ngày"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.res_config_settings_view_form
+msgid "Ev Helpdesk"
+msgstr "Hỗ trợ"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.res_config_settings_view_form
+msgid "HELPDESK"
+msgstr "HỖ TRỢ"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.ev_helpdesk_config_settings_action
+#: model:ir.ui.menu,name:ev_helpdesk.ev_helpdesk_config_settings_menu
+msgid "Settings"
+msgstr "Thiết lập chung"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.home_ticket_portal
+msgid "HOMEFARM HELPDESK PORTAL"
+msgstr "HỆ THỐNG HỖ TRỢ HOMEFARM"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.home_ticket_portal
+msgid ""
+"HOMEFARM support teams will receive and handel all your requests as soon as "
+"possible."
+msgstr "HOMEFARM sẽ tiếp nhận ngay lập tức và nỗ lực xử lý tất cả các yêu cầu của bạn trong thời gian sớm nhất!"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.home_ticket_portal
+msgid "Create a request"
+msgstr "Yêu cầu hỗ trợ"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.home_ticket_portal
+msgid "Link Drive"
+msgstr "Thư viện tài liệu"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.wizard_download_import_template_view_form
+msgid "Download file template"
+msgstr "Tải file mẫu import"
+
+#. module: ev_helpdesk
+#: model:ir.actions.act_window,name:ev_helpdesk.download_template_import_action
+#: model:ir.ui.menu,name:ev_helpdesk.download_template_import_menu
+msgid "Download import template"
+msgstr "Tải file import"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,help:ev_helpdesk.field_helpdesk_department__emails
+msgid "Email list send when ticket created! Each email separate with comma!"
+msgstr "Danh sách email được gửi thông báo khi ticket được tạo, Các mail ngăn cách nhau bởi dấu phẩy ','."
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_stage_view_form
+msgid "Enter color code like #17a2b8"
+msgstr "Vui lòng nhập mã màu VD: #17a2b8"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_wizard_download_import_template__template_answer_file_url
+msgid "Template Answer URL"
+msgstr "Mẫu import câu trả lời"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_wizard_download_import_template__template_question_file_url
+msgid "Template Question URL"
+msgstr "Mẫu import câu hỏi"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/controllers/question_controller.py:0
+#, python-format
+msgid "There is no config days can reverse ticket stage!"
+msgstr "Chưa có cấu hình số ngày được phép yêu cầu lại ticket!"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Close date"
+msgstr "Ngày đóng"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/controllers/question_controller.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Tìm tất cả"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/controllers/question_controller.py:0
+#, python-format
+msgid "Search in Department"
+msgstr "Tìm theo bộ phận hỗ trợ"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/controllers/question_controller.py:0
+#, python-format
+msgid "Search in Reference"
+msgstr "Tìm theo tham chiếu"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/controllers/question_controller.py:0
+#, python-format
+msgid "Search in Stage"
+msgstr "Tìm theo trạng thái"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "My Department Tickets Members"
+msgstr "Ticket của tôi"
+
+#. module: ev_helpdesk
+#: code:addons/ev_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "My Department Tickets Assigned"
+msgstr "Xử lý ticket"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_tickets_view_search
+msgid "Assign for me"
+msgstr "Phân công cho tôi"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.helpdesk_tickets_view_search
+msgid "My Tickets Created"
+msgstr "Ticket của tôi"
+
+#. module: ev_helpdesk
+#: model:mail.template,subject:ev_helpdesk.mail_template_ticket_team
+msgid "${object.display_name}"
+msgstr ""
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.view_users_form
+msgid "Department Helpdesk"
+msgstr "Bộ phận"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_res_users__x_helpdesk_department_id
+msgid "Helpdesk Department"
+msgstr "Bộ phận hỗ trợ/áp dụng"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_stage__is_cancel
+msgid "Canceling Stage"
+msgstr "Là giai đoạn Hủy"
+
+#. module: ev_helpdesk
+#: model:ir.model.fields,field_description:ev_helpdesk.field_helpdesk_stage__is_start
+msgid "Starting Stage"
+msgstr "Là giai đoạn Mới"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Problem Solution"
+msgstr "Phương án xử lý"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Error image</strong>"
+msgstr "<strong class=\"col-lg-3\">Hình ảnh</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Create date"
+msgstr "Thời gian tạo"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.portal_helpdesk_ticket
+msgid "Close date"
+msgstr "Thời gian đóng"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Set to Cancel"
+msgstr "Hủy yêu cầu"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.ticket_submit_form
+msgid "<strong class=\"col-lg-3\">Pos shop code</strong>"
+msgstr "<strong class=\"col-lg-3\">Mã cửa hàng</strong>"
+
+#. module: ev_helpdesk
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk.tickets_followup_ev_helpdesk_custom
+msgid "Pos shop code"
+msgstr "Mã cửa hàng"
+
+#. module: ev_helpdesk
+#: model:mail.template,body_html:ev_helpdesk.mail_template_ticket_team
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    Dear ${object.sudo().helpdesk_department_id.name or 'Madam/Sir'},\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    This automatic message informs you that we have ticket created (reference ${object.id}).\n"
+"                    Please take a look.\n"
+"                    <br/>\n"
+"                    <a href=\"/web#view_type=form&amp;model=helpdesk.ticket&amp;id=${object.id}\" target=\"_blank\" style=\"color:#04AA6D; font-weight: bold;\">View the ticket</a>\n"
+"                    <br/><br/>\n"
+"                    Kind regards,\n"
+"                    <br/>\n"
+"                    Admin HomeFarm.\n"
+"                </div>\n"
+"            "
+
+msgstr ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    Dear ${object.sudo().helpdesk_department_id.name or 'Madam/Sir'},\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    Đây là mail tự động thông báo có một ticket mới được tạo (Tham chiếu ${object.id}).\n"
+"                    Hãy vui lòng kiểm tra.\n"
+"                    <a href=\"/web#view_type=form&amp;model=helpdesk.ticket&amp;id=${object.id}\" target=\"_blank\" style=\"color:#04AA6D; font-weight: bold;\">Xem yêu cầu hỗ trợ</a>\n"
+"                    <br/><br/>\n"
+"                    Thân,\n"
+"                    <br/>\n"
+"                    Admin HomeFarm.\n"
+"                </div>\n"
+"            "

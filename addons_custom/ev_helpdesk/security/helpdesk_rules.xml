@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Bộ phận áp dụng chỉ xem yêu cầu mình tạo -->
+        <record id="helpdesk_ticket_rule_request_service_see_own" model="ir.rule">
+            <field name="name">User request service see own ticket</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+            <field name="domain_force">['|', ('create_uid', '=', False), ('create_uid', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('ev_helpdesk_group_request_service'))]"/>
+        </record>
+
+        <!--Bộ phận hỗ trợ chỉ xem yêu cầu của team mình -->
+        <record id="helpdesk_ticket_rule_department_see_own" model="ir.rule">
+            <field name="name">User Helpdesk department see own team ticket</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+            <field name="domain_force">['|','|','|',('helpdesk_department_id.user_ids', 'in', [user.id]),
+                ('helpdesk_department_id', '=', False),('create_uid', '=', user.id), ('create_uid',
+                'in',user.x_helpdesk_department_id.user_ids.ids)]
+            </field>
+            <field name="groups" eval="[(4, ref('helpdesk.group_helpdesk_user'))]"/>
+        </record>
+
+        <!-- deactive rule helpdesk user core -->
+        <record id="helpdesk.helpdesk_ticket_user_rule" model="ir.rule">
+            <field name="name">Helpdesk Ticket User</field>
+            <field name="active">False</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductItemCombo" owl="1">
+        <div>
+            <t t-if="env.pos.config.x_enable_combo">
+                <t t-if="isCombo">
+                    <div class="product-pack">Combo</div>
+                </t>
+            </t>
+        </div>
+    </t>
+
+</templates>

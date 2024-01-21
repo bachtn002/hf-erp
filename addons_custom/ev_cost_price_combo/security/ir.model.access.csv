@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_cost_price_combo,access_cost_price_combo_name,model_cost_price_combo,point_of_sale.group_pos_manager,1,1,1,1
+access_cost_price_combo_line,access_cost_price_combo_line_name,model_cost_price_combo_line,point_of_sale.group_pos_manager,1,1,1,1
+access_cost_price_combo_detail,access_cost_price_combo_detail_name,model_cost_price_combo_detail,point_of_sale.group_pos_manager,1,1,1,1
+

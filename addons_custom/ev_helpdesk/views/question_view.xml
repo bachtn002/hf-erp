@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="question_question_view_tree" model="ir.ui.view">
+            <field name="name">Question</field>
+            <field name="model">question.question</field>
+            <field name="arch" type="xml">
+                <tree string="Question">
+                    <field name="question_code"/>
+                    <field name="name"/>
+                    <field name="is_question_root"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="question_question_view_form" model="ir.ui.view">
+            <field name="name">Question</field>
+            <field name="model">question.question</field>
+            <field name="arch" type="xml">
+                <form string="Question">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="question_code"/>
+                                <field name="name"/>
+                                <field name="department_request_ids" widget="many2many_tags"
+                                       attrs="{'required': [('is_question_root', '!=', False)]}"
+                                       options="{'no_create': True}"/>
+<!--                                <field name="error_image" widget="image" class="oe_avatar" style="float:left;"/>-->
+<!--                                <field name="error_image_filename" invisible="1"/>-->
+                            </group>
+                            <group>
+                                <field name="is_question_root"/>
+                                <field name="answer_detail"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Corresponding answer" autofocus="autofocus">
+                                <field name="answer_ids" context="{'default_main_question_id': active_id}">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="main_question_id" invisible="1"/>
+                                        <field name="next_question_id"/>
+                                        <field name="helpdesk_department_id"/>
+                                        <field name="page_end_redirect"/>
+                                    </tree>
+                                    <form string="">
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="answer_code"/>
+                                                    <field name="name"/>
+                                                    <field name="main_question_id" options="{'no_create': True}"
+                                                           invisible="1"/>
+                                                    <field name="helpdesk_department_id"
+                                                           attrs="{'required': [('next_question_id', '=', False)]}"
+                                                           options="{'no_create': True}"/>
+                                                    <field name="error_image" widget="image" class="oe_avatar"
+                                                           style="float:left;"/>
+                                                    <field name="error_image_filename" invisible="1"/>
+                                                </group>
+                                                <group>
+                                                    <field name="next_question_id" options="{'no_create': True}"/>
+                                                    <field name="page_end_redirect"/>
+                                                    <field name="name_url" options="{'no_create': True}"/>
+                                                    <field name="answer_detail" options="{'no_create': True}"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="question_question_view_search" model="ir.ui.view">
+            <field name="name">Question</field>
+            <field name="model">question.question</field>
+            <field name="arch" type="xml">
+                <search string="Question">
+                    <field name="name" string="Question" filter_domain="[('name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="question_question_act" model="ir.actions.act_window">
+            <field name="name">Question</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">question.question</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="question_question_view_search"/>
+        </record>
+
+        <menuitem id="question_answer_menu"
+                  name="Question - Answer"
+                  parent="helpdesk.menu_helpdesk_root"
+                  sequence="11"/>
+
+        <menuitem id="question_question_menu" name="Question"
+                  action="question_question_act"
+                  parent="question_answer_menu"
+                  sequence="2"/>
+
+
+        <!--rating menu action-->
+        <record id="rating_rating_action_ev_helpdesk_report" model="ir.actions.act_window">
+            <field name="name">Customer Ratings</field>
+            <field name="res_model">rating.rating</field>
+            <field name="view_mode">kanban,tree,pivot,graph,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    No customer ratings yet
+                </p>
+                <p>
+                    Let's wait for your customers to manifest themselves.
+                </p>
+            </field>
+            <field name="context">{}</field>
+        </record>
+
+
+        <menuitem
+                id="ev_helpdesk_rating_report_menu"
+                action="rating_rating_action_ev_helpdesk_report"
+                sequence="10"
+                parent="helpdesk.helpdesk_ticket_report_menu_main"/>
+    </data>
+</odoo>

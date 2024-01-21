@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!--        <menuitem id="promotion_voucher_menu" name="General Promotion Code"-->
+<!--                  action="promotion_voucher_act"-->
+<!--                  parent="ev_pos_erpviet.menu_pos_config_custom" sequence="101"/>-->
+        <menuitem id="menu_promotion_code"
+                  name="Promotion Code"
+                  parent="ev_pos_erpviet.menu_pos_config_custom"
+                  sequence="6"
+                  groups="point_of_sale.group_pos_manager"
+        />
+        <menuitem id="menu_item_promotion_code"
+              name="General Promotion Code"
+              parent="ev_promotion_voucher.menu_promotion_code"
+              sequence="12"
+              action="ev_promotion_voucher.promotion_voucher_act"/>
+    </data>
+</odoo>

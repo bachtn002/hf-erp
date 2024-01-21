@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_shop_cash_statement_form_inherit">
+            <field name="name">view_pos_shop_inherit</field>
+            <field name="model">pos.shop</field>
+            <field name="inherit_id" ref="ev_pos_shop.pos_shop_form_view"/>
+            <field name="arch" type="xml">
+                <field name="manage_shop_id" position="after">
+                    <field name="cash_fund_balance" required="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

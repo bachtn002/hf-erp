@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <report-->
+<!--            id="print_cash_statement_xlsx"-->
+<!--            model="pos.session"-->
+<!--            string="Print cash statement XLSX"-->
+<!--            report_type="xlsx"-->
+<!--            name="ev_cash_statement.cash_statement_xlsx"-->
+<!--            file="ev_cash_statement.cash_statement_xlsx"-->
+<!--            print_report_name="'report cash statement'"-->
+<!--    />-->
+    <report
+            id="print_cash_statement_pdf"
+            model="pos.session"
+            string="Print cash statement pdf"
+            report_type="qweb-pdf"
+            name="ev_cash_statement.report_template_cash_statement_internal_view"
+            file="ev_cash_statement.report_template_cash_statement_internal_view"
+            print_report_name="'report cash statement pdf'"
+    />
+
+</odoo>

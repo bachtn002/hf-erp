@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="create_sinvoice_lot_view_form" model="ir.ui.view">
+            <field name="name">create_sinvoice_lot_view_form</field>
+            <field name="model">create.sinvoice.lot</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="params" readonly="1"
+                                   style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+                            <field name="response" readonly="1"
+                                   style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+
+                            <field name="params_api_get_invoice" readonly="1"
+                                   style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+                            <field name="response_api_get_invoice" readonly="1"
+                                   style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+                            <field name="action_type" readonly="1"/>
+                            <field name="session_id" readonly="1"/>
+                        </group>
+                        <notebook>
+                            <page name="line_ids" string="Orders">
+                                <field name="line_ids" readonly="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="create_sinvoice_lot_tree_view" model="ir.ui.view">
+            <field name="name">create_sinvoice_lot_tree_view</field>
+            <field name="model">create.sinvoice.lot</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="action_type"/>
+                    <field name="session_id"/>
+                    <field name="start_at"/>
+                    <field name="config_id"/>
+                    <field name="state" widget="badge"
+                           decoration-info="state == 'draft'"
+                           decoration-success="state == 'done'"
+                           decoration-danger="state not in ('done', 'draft')"
+                    />
+                </tree>
+            </field>
+        </record>
+
+        <record id="create_sinvoice_lot_action" model="ir.actions.act_window">
+            <field name="name">SInvoice Lot</field>
+            <field name="res_model">create.sinvoice.lot</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="sinvoice_menu_root"
+                  name="SInvoice"
+                  parent="point_of_sale.menu_point_root"
+                  sequence="90"
+        />
+        <menuitem id="create_sinvoice_lot_menu"
+                  name="SInvoice Lot"
+                  parent="sinvoice_menu_root"
+                  action="create_sinvoice_lot_action"
+                  sequence="1"
+        />
+    </data>
+</odoo>

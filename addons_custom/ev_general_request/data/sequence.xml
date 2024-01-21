@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="purchase_request_sequence" model="ir.sequence">
+            <field name="name">General Sequence</field>
+            <field name="code">general.request.seq</field>
+            <field name="padding">5</field>
+        </record>
+        <record id="allotment_request_sequence" model="ir.sequence">
+            <field name="name">Allotment Sequence</field>
+            <field name="code">allotment.request</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+</odoo>

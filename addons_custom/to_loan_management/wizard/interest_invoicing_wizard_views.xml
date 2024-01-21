@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="abstract_interest_invoicing_wizard_form_view"
+			model="ir.ui.view">
+			<field name="name">Interest Invoicing Wizard</field>
+			<field name="model">abstract.interest.invoicing.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Interests Invoicing">
+					<footer>
+						<button name="create_invoices"
+							string="Create &amp; View Invoice" type="object"
+							context="{'view_invoices': True}" class="oe_highlight" />
+						<button name="create_invoices" string="Create Invoices"
+							type="object" class="oe_highlight" />
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="borrow_interest_invoicing_wizard_form_view"
+			model="ir.ui.view">
+			<field name="name">Borrowing Loan Interest Invoicing Wizard</field>
+			<field name="model">borrow.interest.invoicing.wizard</field>
+			<field name="inherit_id"
+				ref="abstract_interest_invoicing_wizard_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//footer" position="before">
+					<p class="oe_grey"
+						attrs="{'invisible':[('interest_line_ids','=',[])]}">
+						All the loan interests listed below will be invoiced
+					</p>
+					<p class="text-success"
+						attrs="{'invisible':[('interest_line_ids','!=',[])]}">
+						Good Job! There is no loan interest to invoice...
+					</p>
+					<field name="interest_line_ids"
+						attrs="{'invisible':[('interest_line_ids','=',[])]}"
+						context="{'tree_view_ref':'to_loan_management.loan_borrowing_interest_line_simple_tree_view'}" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="borrow_interest_invoicing_wizard_action"
+			model="ir.actions.act_window">
+			<field name="name">Create Invoice</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">borrow.interest.invoicing.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="view_id"
+				ref="borrow_interest_invoicing_wizard_form_view" />
+			<field name="target">new</field>
+			<field name="binding_model_id" ref="model_loan_borrow_interest_line" />
+            <field name="binding_type">action</field>
+		</record>
+
+		<record id="lend_interest_invoicing_wizard_form_view"
+			model="ir.ui.view">
+			<field name="name">Lending Loan Interest Invoicing Wizard</field>
+			<field name="model">lend.interest.invoicing.wizard</field>
+			<field name="inherit_id"
+				ref="abstract_interest_invoicing_wizard_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//footer" position="before">
+					<p class="oe_grey"
+						attrs="{'invisible':[('interest_line_ids','=',[])]}">
+						All the loan interests listed below will be invoiced
+					</p>
+					<p class="text-success"
+						attrs="{'invisible':[('interest_line_ids','!=',[])]}">
+						Good Job! There is no loan interest to invoice...
+					</p>
+					<field name="interest_line_ids"
+						attrs="{'invisible':[('interest_line_ids','=',[])]}"
+						context="{'tree_view_ref':'to_loan_management.loan_lending_interest_line_simple_tree_view'}" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="lend_interest_invoicing_wizard_action"
+			model="ir.actions.act_window">
+			<field name="name">Create Invoice</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">lend.interest.invoicing.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="view_id"
+				ref="lend_interest_invoicing_wizard_form_view" />
+			<field name="target">new</field>
+			<field name="binding_model_id" ref="model_loan_lend_interest_line" />
+            <field name="binding_type">action</field>
+		</record>
+
+	</data>
+</odoo>

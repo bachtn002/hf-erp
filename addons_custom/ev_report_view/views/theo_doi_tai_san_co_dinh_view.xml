@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--View list-->
+        <record id="theo_doi_tai_san_co_dinh_tree" model="ir.ui.view">
+            <field name="name">theo.doi.tai.san.co.dinh.tree</field>
+            <field name="model">theo.doi.tai.san.co.dinh</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0" edit="0">
+                    <field name="tracking_id" optional="show"/>
+                    <field name="tents" optional="show"/>
+                    <field name="mats" optional="show"/>
+                    <field name="nguyengia" optional="show"/>
+                    <field name="gtbatdaukh" optional="show"/>
+                    <field name="gtdakh" optional="show"/>
+                    <field name="gtkhtrongky" optional="show"/>
+                    <field name="gtconlai" optional="show"/>
+                    <field name="gttbtrongky" optional="show"/>
+                    <field name="ngaymua" optional="show"/>
+                    <field name="ngaytinhkh" optional="show"/>
+                    <field name="ngaygiam" optional="show"/>
+                    <field name="sokyhk" optional="show"/>
+                    <field name="ngayct" optional="show"/>
+                    <field name="soct" optional="show"/>
+                    <field name="tktaisan" optional="show"/>
+                    <field name="tkkhauhao" optional="show"/>
+                    <field name="tkchiphi" optional="show"/>
+                    <field name="mabp" optional="show"/>
+                    <field name="maphi" optional="show"/>
+                    <field name="tenphi" optional="show"/>
+                    <field name="tenbp" optional="show"/>
+                    <field name="trangthai" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="theo_doi_tai_san_co_dinh_search" model="ir.ui.view">
+            <field name="name">theo.doi.tai.san.co.dinh.search</field>
+            <field name="model">theo.doi.tai.san.co.dinh</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="tents"/>
+                    <field name="mats"/>
+                </search>
+            </field>
+        </record>
+        <!--Form input-->
+        <record id="theo_doi_tai_san_co_dinh_wizard_form" model="ir.ui.view">
+            <field name="name">theo.doi.tai.san.co.dinh.wizard.form</field>
+            <field name="model">theo.doi.tai.san.co.dinh.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Fixed Asset Tracking">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_date" required="1"/>
+                            </group>
+                            <group>
+                                <field name="to_date" required="1"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="create_report" type="object" class="oe_highlight" string="View Report"/>
+                            <button string="Cancel" class="btn-default" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="theo_doi_tai_san_co_dinh_action" model="ir.actions.act_window">
+            <field name="name">Fixed Asset Tracking</field>
+            <field name="res_model">theo.doi.tai.san.co.dinh</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ev_report_view.theo_doi_tai_san_co_dinh_tree"/>
+            <field name="target">main</field>
+        </record>
+
+        <record id="rpt_fixed_asset_tracking_atc" model="ir.actions.act_window">
+            <field name="name">Fixed Asset Tracking</field>
+            <field name="res_model">theo.doi.tai.san.co.dinh.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="theo_doi_tai_san_co_dinh_wizard_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="rpt_fixed_asset_tracking" name="Fixed Asset Tracking"
+                  parent="account.account_reports_legal_statements_menu"
+                  action="rpt_fixed_asset_tracking_atc"
+                  sequence="32"/>
+
+        <record model="ir.ui.menu" id="ev_account_report_birt.rpt_fixed_asset_tracking">
+            <field name="action" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="stock_inventory_by_product_form">
+            <field name="name">Inventory product Form</field>
+            <field name="model">stock.inventory.by.product</field>
+            <field name="arch" type="xml">
+                <form create="0">
+                    <sheet>
+                        <group>
+                            <field name="name" default_focus="1"/>
+                        </group>
+                        <footer>
+                            <button name="action_check" string="Check" type="object" class="btn-primary btn_action_check_inventory"/>
+                        </footer>
+                        <notebook>
+                            <page string="Lines">
+                                <field name="inventory_ids" readonly="1">
+                                    <tree editable="bottom" string="Line">
+                                        <field name="product_id"/>
+                                        <field name="warehouse_id"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_quantity" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_stock_inventory_by_product" model="ir.actions.act_window">
+            <field name="name">Stock Inventory By Product</field>
+            <field name="res_model">stock.inventory.by.product</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock_inventory_by_product_form"/>
+            <field name="target">current</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--        thêm groups="stock.group_stock_manager" update k thay đổi => đổi id menu-->
+        <menuitem id="menu_stock_inventory_by_product_2"
+                  name="Stock Inventory By Product" action="action_stock_inventory_by_product"
+                  parent="stock.menu_warehouse_report"
+                  groups="stock.group_stock_manager,ev_stock_request.group_stock_coordinator,purchase.group_purchase_user"
+                  sequence="2"/>
+
+    </data>
+</odoo>

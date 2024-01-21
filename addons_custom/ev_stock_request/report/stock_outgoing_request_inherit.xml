@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View Outgoing-->
+        <record id="stock_request_go_form_view_inherit" model="ir.ui.view">
+            <field name="name">Stock Outgoing Request</field>
+            <field name="model">stock.request</field>
+            <field name="inherit_id" ref="stock_request_go_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//button[@name='action_send']" position="after">
+                    <button name="action_print_export_request_report"
+                            type="object"
+                            class="oe_highlight"
+                            string="Print"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Inherit Form View Incoming -->
+        <record id="stock_request_come_form_view_inherit" model="ir.ui.view">
+            <field name="name">Stock Incoming Request</field>
+            <field name="model">stock.request</field>
+            <field name="inherit_id" ref="stock_request_come_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//button[@name='action_transfer']" position="after">
+                    <button name="action_print_export_request_report"
+                            type="object"
+                            class="oe_highlight"
+                            string="Print"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <record id="rate_zns_view_tree" model="ir.ui.view">
+            <field name="name">Rate ZNS Tree</field>
+            <field name="model">rate.zns</field>
+            <field name="arch" type="xml">
+                <tree string="Rate ZNS Tree" create="0" delete="0">
+                    <field name="oa_id"/>
+                    <field name="template_id"/>
+                    <field name="tracking_id"/>
+                    <field name="rate"/>
+                    <field name="submit_date"/>
+                    <field name="feed_back"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+        <record id="rate_zns_view_from" model="ir.ui.view">
+            <field name="name">Rate ZNS Form</field>
+            <field name="model">rate.zns</field>
+            <field name="arch" type="xml">
+                <form string="Rate ZNS Form" create="0" delete="0" duplicate="0" edit="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="oa_id"/>
+                                <field name="template_id"/>
+                                <field name="tracking_id"/>
+                                <field name="msg_id"/>
+                            </group>
+                            <group>
+                                <field name="rate"/>
+                                <field name="submit_date"/>
+                                <field name="note"/>
+                                <field name="feed_back"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="rate_zns_view_search" model="ir.ui.view">
+            <field name="name">Rate ZNS</field>
+            <field name="model">rate.zns</field>
+            <field name="arch" type="xml">
+                <search string="Rate ZNS Search">
+                    <field name="oa_id" filter_domain="[('oa_id','ilike',self)]"/>
+                    <field name="template_id" filter_domain="[('template_id','ilike',self)]"/>
+                    <field name="tracking_id" filter_domain="[('tracking_id','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="rate_zns_action" model="ir.actions.act_window">
+            <field name="name">Rate ZNS</field>
+            <field name="res_model">rate.zns</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="rate_zns_menu"
+                  name="Rate ZNS"
+                  action="rate_zns_action"
+                  parent="ev_zalo_notification_service.zalo_notification_service_menu_root"
+                  sequence="4"/>
+    </data>
+</odoo>

@@ -1,0 +1,143 @@
+<odoo>
+    <template id="report_template_cash_statement_internal_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.basic_layout" t-lang="en_US">
+                    <link rel="stylesheet" href="/ev_cash_statement/static/src/style.css"/>
+                    <div class="page" style="font-size:15px">
+                        <table>
+                            <tr>
+                                <td colspan="2" style="vertical-align: middle;" width="30%" height="auto">
+                                    <img t-if="o.company_id.logo" width="100%" height="auto"
+                                         style="position: relative;"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"
+                                         class="pull-left"/>
+                                </td>
+                                <td colspan="2" width="50%" style="padding-left: 0px; padding-right: 0px;">
+                                    <table style="border: hidden;">
+                                        <tr>
+                                            <td colspan="2"
+                                                style="text-align: center; font-size: 18px; font-weight: bold;">
+                                                <span t-esc="o.company_id.name"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"
+                                                style="text-align: center; font-size: 18px; font-weight: bold;">
+                                                <span t-esc="o.x_address_company"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"
+                                                style="text-align: center; font-size: 18px; font-weight: bold;">
+                                                BIÊN BẢN KIỂM KÊ QUỸ TIỀN MẶT
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"
+                                                style="text-align: center;  font-size: 18px; font-weight: bold;">
+                                                Tên cửa hàng: <span t-field="o.config_id.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"
+                                                style="text-align: center; font-size: 18px; font-weight: bold;">
+                                                Thời điểm kiểm kê: <span
+                                                    t-esc="o.x_time_print"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="vertical-align: top" width="50%"><p style="text-align: justify">Mã
+                                    hiệu:</p></td>
+                            </tr>
+                            <tr>
+                                <th width="10%">STT</th>
+                                <th width="20%">Mệnh giá(VNĐ)</th>
+                                <th width="20%">Số lượng(tờ)</th>
+                                <th width="30%">Thành Tiền(VNĐ)</th>
+                                <th width="20%">Ghi chú</th>
+                            </tr>
+                            <t t-set="stt" t-value="1"/>
+                            <t t-foreach="o.x_cash_statement_ids" t-as="cs">
+                                <tr>
+                                    <td><span t-esc="stt"/></td>
+                                    <td style="text-align: right"><span t-field="cs.denominations"/></td>
+                                    <td style="text-align: right"><span t-field="cs.quantity"/></td>
+                                    <td style="text-align: right"><span
+                                            t-esc="'{0:,.0f}'.format(cs.amount).replace(',','.')"/></td>
+                                    <td></td>
+                                    <t t-set="stt" t-value="stt + 1"/>
+                                </tr>
+                            </t>
+                            <tr>
+                                <td colspan="3" style="text-align: right; background-color: yellow;"><strong>
+                                    Tổng cộng: </strong></td>
+                                <td style="background-color: yellow; text-align: right;"><span
+                                        t-esc="'{0:,.0f}'.format(o.x_amount_total_cash).replace(',','.')"/></td>
+                                <td style=" background-color: yellow; "></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong>Số dư trên sổ quỹ theo phần mềm: </strong></td>
+                                <td style="text-align: right;"><span
+                                        t-esc="'{0:,.0f}'.format(o.x_amount_total_cash_app).replace(',','.')"/></td>
+                                <td>VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong>Tổng số tiền thực tế kiểm
+                                    đếm: </strong></td>
+                                <td style="text-align: right;"><span
+                                        t-esc="'{0:,.0f}'.format(o.x_amount_total_cash).replace(',','.')"/></td>
+                                <td>VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong>Chênh lệch: </strong></td>
+                                <td style="text-align: right;"><span
+                                        t-esc="'{0:,.0f}'.format(o.x_difference_amount).replace(',','.')"/></td>
+                                <td>VNĐ</td>
+                            </tr>
+                            <t t-if="o.x_reason_money_difference">
+                                <tr>
+                                    <td colspan="5" style="text-align: left;">
+                                        <strong>
+                                            Lý do chênh lệch: <span t-esc="o.x_reason_money_difference"/>
+                                        </strong>
+                                    </td>
+                                </tr>
+                            </t>
+                            <tr style="border: none;">
+                                <td colspan="5" style="border-bottom: none; border-right: none; border-left: none">
+                                    <p style="text-align: right; padding-right: 100px; padding-top: 10px;">
+                                        <strong style="text-align: right;">
+                                            ,ngày......tháng......năm......</strong>
+                                        <br clear="both"/>
+                                        <strong style="text-align: right; padding-right: 80px; padding-top:3px">Lập biểu
+                                        </strong>
+                                    </p>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="qweb_cash_statement_internal_rpt" model="report.paperformat">
+        <field name="name">Incoming A4</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">28</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">3</field>
+        <field name="dpi">90</field>
+    </record>
+</odoo>

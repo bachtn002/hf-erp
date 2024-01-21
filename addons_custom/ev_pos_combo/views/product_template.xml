@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="combo_product_template_form_inherit" model="ir.ui.view">
+			<field name="name">combo.product.template.form.inherit</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='options']" position="inside">
+					<div>
+						<field name="x_is_combo"/>
+						<label for="x_is_combo"/>
+					</div>
+				</xpath>
+				<xpath expr="//page[@name='general_information']//group[@name='group_general']//field[@name='type']"
+				       position="replace">
+					<field name="type" force_save="1"/>
+				</xpath>
+				<xpath expr="//page[@name='general_information']//group[@name='group_general']//field[@name='type']"
+				       position="attributes">
+					<attribute name="attrs">{'readonly': [('x_is_combo', '=', True)]}</attribute>
+				</xpath>
+				<xpath expr="//page[@name='sales']" position="after">
+					<page string="Combo" attrs="{'invisible': [('x_is_combo', '=', False)]}">
+						<field name="x_product_combo_ids">
+							<tree editable="bottom">
+								<field name="require" width="0.5" invisible="1"/>
+								<field name="require_one" width="0.5" invisible="1"/>
+								<field name="pos_category_id" invisible="1"
+								       options="{'no_create':True}"/>
+<!--								<field name="product_ids" widget="many2many_tags" options="{'no_create':True}"-->
+<!--								       required="1"-->
+<!--								       context="{'is_required': require, 'category_from_line': pos_category_id}"/>-->
+								<field name="product_ids" options="{'no_create':True}"
+								       required="1"
+								       context="{'is_required': require, 'category_from_line': pos_category_id}"/>
+								<field name="no_of_items"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+		<record id="pos_combo_hide_form_inherit" model="ir.ui.view">
+			<field name="name">pos_combo.stock_custom.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_only_form_view"/>
+			<field name="priority" eval="8"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='x_supply_type']" position="attributes">
+					<attribute name="attrs">{'invisible': [('x_is_combo', '=', True)]}</attribute>
+				</xpath>
+				<field name="categ_id" position="after">
+					<field name="x_product_old_id" invisible="1"/>
+				</field>
+			</field>
+		</record>
+		<record id="view_product_inventory_group_from_custom_inherit" model="ir.ui.view">
+            <field name="name">product.inventory.group.custom.from.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="ev_inventory_check.view_product_inventory_group_from_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_inventory_group_id']" position="attributes">
+					<attribute name="attrs">{'invisible': [('x_is_combo', '=', True)]}</attribute>
+				</xpath>
+            </field>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,418 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-05 09:36+0000\n"
+"PO-Revision-Date: 2021-10-05 09:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_account_statement
+#: code:addons/ev_account_statement/wizard/account_statement_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Account accounting was not found in the system, line (%s)"
+msgstr ""
+"\n"
+"Tài khoản kế toán không có trong hệ thống, dòng (%s)"
+
+#. module: ev_account_statement
+#: code:addons/ev_account_statement/wizard/account_statement_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Amount must be numeric and greater 0 , line (%s)"
+msgstr ""
+"\n"
+"Số tiền phải là số và lớn hơn 0 , line (%s)"
+
+#. module: ev_account_statement
+#: code:addons/ev_account_statement/wizard/account_statement_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Pos shop code does not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Cửa hàng không có trong hệ thống, dòng (%s)"
+
+#. module: ev_account_statement
+#: model:ir.actions.report,print_report_name:ev_account_statement.print_account_statement_xlsx
+msgid "'report account statement'"
+msgstr "Tải file mẫu"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__account_id
+msgid "Account Account"
+msgstr "Tài khoản kế toán"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__account_analytic_id
+msgid "Account Analytic Account ID"
+msgstr "Cửa hàng"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__account_move_id
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "Account Move"
+msgstr "Bút toán phát sinh"
+
+#. module: ev_account_statement
+#: model:ir.actions.act_window,name:ev_account_statement.account_statement_act
+#: model:ir.ui.menu,name:ev_account_statement.menu_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_tree
+msgid "Account Statement"
+msgstr "Sao kê"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__account_statement_id
+msgid "Account Statement ID"
+msgstr "Sao kê"
+
+#. module: ev_account_statement
+#: model:ir.actions.act_window,name:ev_account_statement.account_statement_line_act
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__account_statement_ids
+msgid "Account Statement Line"
+msgstr "Chi tiết nộp tiền"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__amount
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__amount_total
+msgid "Amount Total "
+msgstr "Tổng tiền"
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_tree
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_import_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__account_statement_file
+msgid "Choose File"
+msgstr "Chọn File"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__code
+msgid "Code Deal"
+msgstr "Mã giao dịch"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__count_move
+msgid "Count Move"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__create_uid
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__create_uid
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__create_date
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__create_date
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__date
+msgid "Date"
+msgstr "Ngày hạch toán"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__date
+msgid "Date Accounting"
+msgstr "Ngày tạo phiếu"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__description
+msgid "Description"
+msgstr "Nộp dung nộp tiền"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__display_name
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__display_name
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__display_name
+#: model:ir.model.fields,field_description:ev_account_statement.field_report_ev_account_statement_account_statement_xlsx__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields.selection,name:ev_account_statement.selection__account_statement__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "Download Import Template"
+msgstr "Tải mẫu nhập"
+
+#. module: ev_account_statement
+#: model:ir.model.fields.selection,name:ev_account_statement.selection__account_statement__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__id
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__id
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__id
+#: model:ir.model.fields,field_description:ev_account_statement.field_report_ev_account_statement_account_statement_xlsx__id
+msgid "ID"
+msgstr "Mã"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_needaction
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_has_error
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "Import Statement"
+msgstr "Nhập file sao kê"
+
+#. module: ev_account_statement
+#: code:addons/ev_account_statement/wizard/account_statement_imp.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr "File import phải là file excel"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__journal_id
+msgid "Journal"
+msgstr "Ngân hàng"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement____last_update
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line____last_update
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line____last_update
+#: model:ir.model.fields,field_description:ev_account_statement.field_report_ev_account_statement_account_statement_xlsx____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__write_uid
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__write_uid
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__write_date
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_import_line__write_date
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement_line__name
+msgid "License"
+msgstr "Số chứng từ"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__name
+msgid "Name"
+msgstr "Diễn giải"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_account_statement
+#: code:addons/ev_account_statement/models/account_statement.py:0
+#, python-format
+msgid "Payment of daily sales "
+msgstr "Nộp tiền bán hàng ngày "
+
+#. module: ev_account_statement
+#: model:ir.actions.report,name:ev_account_statement.print_account_statement_xlsx
+msgid "Print account statement XLSX"
+msgstr "Tải file sao kê mẫu"
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "Set to draft"
+msgstr "Chuyển về nháp"
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_import_form
+msgid "Submit"
+msgstr "Xác nhận"
+
+#. module: ev_account_statement
+#: model:ir.model.constraint,message:ev_account_statement.constraint_account_statement_name_uniq
+msgid "Tag name already exists!"
+msgstr "Tên đã tồn tại"
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "The import form is in xls or xlsx format"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_import_form
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_line_form
+msgid "Upload"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.actions.act_window,name:ev_account_statement.account_statement_import_act
+msgid "Upload File"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,help:ev_account_statement.field_account_statement__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model,name:ev_account_statement.model_account_statement
+msgid "account.statement"
+msgstr "Sao kê"
+
+#. module: ev_account_statement
+#: model:ir.model,name:ev_account_statement.model_account_statement_import_line
+msgid "account.statement.import.line"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model,name:ev_account_statement.model_account_statement_line
+msgid "account.statement.line"
+msgstr ""
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "confirm"
+msgstr "Xác nhận"
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_line_form
+msgid "description"
+msgstr "Nội dung nộp tiền"
+
+#. module: ev_account_statement
+#: model_terms:ir.ui.view,arch_db:ev_account_statement.account_statement_form
+msgid "detail"
+msgstr "Chi tiết"
+
+#. module: ev_account_statement
+#: model:ir.model,name:ev_account_statement.model_report_ev_account_statement_account_statement_xlsx
+msgid "report.ev_account_statement.account_statement_xlsx"
+msgstr ""
+
+#. module: ev_account_statement
+#: model:ir.model.fields,field_description:ev_account_statement.field_account_statement__state
+msgid "state"
+msgstr "Trạng thái"

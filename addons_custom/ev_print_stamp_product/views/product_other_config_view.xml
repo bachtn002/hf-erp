@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="product_other_config_view_tree" model="ir.ui.view">
+            <field name="name">product_other_config.view.tree</field>
+            <field name="model">product.other.config</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="promotion_id" required="1" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_other_config_view_form" model="ir.ui.view">
+            <field name="name">product_other_config.view.form</field>
+            <field name="model">product.other.config</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="promotion_id" required="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="other_config" string="Details">
+                                <div class="oe_edit_only">
+                                    <button name="open_import_other_config" type="object"
+                                            string="Import" class="oe_highlight"/>
+                                    <button name="get_import_other_config_template" type="object" string="Tải file mẫu"
+                                            icon="fa-download" class="oe-highlight"/>
+                                </div>
+                                <field name="other_line_ids">
+                                    <tree editable="bottom" create="1" delete="1" >
+                                        <field name="name_above" readonly="0" force_save="1" />
+                                        <field name="name_below" readonly="0" force_save="1"/>
+                                        <field name="uom_id" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}" readonly="0" force_save="1"/>
+                                        <field name="price_unit_before" readonly="0" force_save="1"/>
+                                        <field name="price_unit" readonly="0" force_save="1"/>
+                                        <field name="packed_date" string="Start Date" readonly="0" force_save="1"/>
+                                        <field name="expire_date" string="End Date" readonly="0" force_save="1"/>
+                                        <field name="note" readonly="0" force_save="1"/>
+                                        <field name="other_config_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_other_config_action" model="ir.actions.act_window">
+            <field name="name">Product Other Config Action</field>
+            <field name="res_model">product.other.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="product_other_config_menu" name="Product Other Config"
+                  action="product_other_config_action" 
+                  parent="stock.menu_stock_inventory_control" 
+                  groups="ev_print_stamp_product.group_config_print_stamp"
+                  sequence="2"/>
+
+    </data>
+
+
+</odoo>

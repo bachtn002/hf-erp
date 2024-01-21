@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="tools_tracking_report_form" model="ir.ui.view">
+            <field name="name">Tools Tracking Report Form</field>
+            <field name="model">tools.tracking.report</field>
+            <field name="arch" type="xml">
+                <form string="Tools Tracking Report Form" create='0' delete='0' copy='0'>
+                    <header>
+                        <field name="has_data" invisible="1" />
+                        <button name="action_report" type="object" string="Report" class="btn-primary" />
+                        <button name="action_renew" type="object" string="Renew" class="btn-primary" />
+                        <button name="action_export_excel" type="object" string="Export Excel" attrs="{'invisible': [('has_data', '=', False)]}" />
+                    </header>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <group col="3">
+                                <group col="2">
+                                    <label for="from_date" />
+                                    <field name="from_date" nolabel="1" />
+                                </group>
+                                <group col="2">
+                                    <label for="to_date" />
+                                    <field name="to_date" nolabel="1" />
+                                </group>
+                                <group col="2">
+                                    <label for="company_id" groups="base.group_multi_company" />
+                                    <field name="company_id" nolabel="1" groups="base.group_multi_company" 
+                                    options="{'no_create_edit': True, 'no_quick_create': True}" required="1"
+                                    />
+                                    <label for="template_id" groups="base.group_no_one"/>
+                                    <field name="template_id" nolabel="1" groups="base.group_no_one" />
+                                </group>
+                            </group>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <field name="preview_html" nolabel="1" readonly="1" widget="ev_report_preview"/>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_tools_tracking_atc" model="ir.actions.act_window">
+            <field name="name">Tools Tracking Report Action</field>
+            <field name="res_model">tools.tracking.report</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="rpt_tools_tracking" name="Tools Tracking"
+                  parent="account.account_reports_legal_statements_menu"
+                  action="rpt_tools_tracking_atc"
+                  sequence="35"/>
+
+        <record model="ir.ui.menu" id="ev_account_report_birt.rpt_tools_tracking">
+            <field name="action" eval="False"/>
+        </record>
+    </data>
+</odoo>

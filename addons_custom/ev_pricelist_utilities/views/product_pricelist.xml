@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="ev_product_pricelist_form_custom">
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet" position="before">
+                <header>
+                    <button name="action_import_line" string="Import" type="object"
+                            class="oe_highlight" attrs="{'invisible': [('field_binary_name', '=', False)]}"/>
+                </header>
+            </xpath>
+            <field name="item_ids" position="before">
+                <field name="field_binary_import" filename="field_binary_name"/>
+                <field name="field_binary_name" invisible="1"/>
+                <button name="download_template" type="object" string="Download Import Template"
+                        class="btn btn-link" style="text-decoration: underline;"
+                        help="Mẫu import có định dạng là xls hoặc xlsx"/>
+            </field>
+        </field>
+    </record>
+</odoo>

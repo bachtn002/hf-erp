@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record id="sync_game_turn_view_tree" model="ir.ui.view">
+            <field name="name">sync.game.turn.view.tree</field>
+            <field name="model">sync.game.turn</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="pos_order_ref"/>
+                    <field name="campaign_code"/>
+                    <field name="phone"/>
+                    <field name="turn"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sync_game_turn_view_form" model="ir.ui.view">
+            <field name="name">sync.game.turn.view.form</field>
+            <field name="model">sync.game.turn</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,queue,error,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="pos_order_ref"/>
+                                <field name="campaign_code"/>
+                                <field name="phone"/>
+                                <field name="turn"/>
+                            </group>
+                            <group>
+                                <field name="create_date"/>
+                                <field name="partner_id"/>
+                                <field name="hash_value" style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+<!--                                <field name="state"/>-->
+                                <field name="message_response"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sync_game_turn_action">
+            <field name="name">Game turn Sync</field>
+            <field name="res_model">sync.game.turn</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create':0, 'edit':0, 'delete':0}</field>
+        </record>
+
+
+        <menuitem id="sync_game_turn_menu" parent="ev_config_connect_api.connection_api_menu"
+                  action="sync_game_turn_action"/>
+    </data>
+</odoo>

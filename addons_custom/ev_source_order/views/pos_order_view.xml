@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="pos_order_delivery_inherit" model="ir.ui.view">
+            <field name="name">Pos Order Delivery Inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='extra']" position="inside">
+                    <group name="delivery" string="Delivery">
+                        <group>
+                            <field name="x_source_order_id"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                   options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="x_home_delivery" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_receiver" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_partner_phone" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_ship_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="x_address_delivery" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_lat" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="x_long" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

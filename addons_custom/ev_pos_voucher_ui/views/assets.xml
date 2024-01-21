@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ev_pos_voucher_ui" inherit_id="point_of_sale.assets"
+              name="ev_pos_voucher_ui.assets">
+
+        <xpath expr="script[last()]" position="after">
+            <style type="text/css"
+                   href="/ev_pos_voucher_ui/static/src/css/payment.css"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Sale/EditListInput.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Sale/ButtonVoucher.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Sale/VoucherPopup.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Sale/EditListPopup.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Sale/ProductScreen/ProductScreen.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Sale/ProductScreen/OrderWidget.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/models.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Payment/PaymentScreen.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_voucher_ui/static/src/js/Payment/PaymentVoucherPopup.js"/>
+
+        </xpath>
+
+    </template>
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record model="ir.ui.view" id="izi_button_purchase_order">-->
+<!--            <field name="model">purchase.order</field>-->
+<!--            <field name="inherit_id" ref="purchase.purchase_order_form"></field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <button name="button_confirm" position="before">-->
+<!--                    <button name="action_import_line" type="object" class="oe_highlight" string="Import"-->
+<!--                                attrs="{'invisible': [('field_binary_import', '=', False)]}"/>-->
+<!--                    <button name="action_clear_line" type="object" string="Clear line" states="draft"/>-->
+<!--                </button>-->
+<!--                <field name="order_line" position="before">-->
+<!--                    <field name="field_binary_import" filename="field_binary_name"/>-->
+<!--                    <field name="field_binary_name" invisible="1"/>-->
+<!--                    <button name="download_template" type="object" string="Download Import Template"-->
+<!--                            class="btn btn-link" style="text-decoration: underline;"-->
+<!--                            help="Mẫu import có định dạng là xls hoặc xlsx"/>-->
+<!--                </field>-->
+<!--                <field name="amount_total" position="after">-->
+<!--                    <div class="oe_subtotal_footer_separator oe_inline">-->
+<!--                          <label for="x_total_quantity" />-->
+<!--                    </div>-->
+<!--                    <field name="x_total_quantity" nolabel="1" class="oe_subtotal_footer_separator" readonly="1" force_save="1"/>-->
+<!--                </field>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record model="ir.ui.view" id="purchase_order_form_view_import_line">
+            <field name="name">purchase_order_form_view_import_line</field>
+            <field name="model">purchase.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="///form/header/button[@name='button_cancel']" position="after">
+                    <button name="button_open_wizard_import_po_line_by_excel" type="object" string="Import PO Line"
+                            class="oe_highlight" states="draft"/>
+                </xpath>
+                <xpath expr="///form/header/button[@name='action_create_invoice'][1]" position="replace">
+                    <button name="action_create_invoice" string="Create Bill" groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"
+                            type="object" class="oe_highlight" context="{'create_bill':True}" attrs="{'invisible': ['|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'in', ('no', 'invoiced'))]}"/>
+                </xpath>
+                <xpath expr="///form/header/button[@name='action_create_invoice'][2]" position="replace">
+                    <button name="action_create_invoice" string="Create Bill" groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"
+                            type="object" context="{'create_bill':True}" attrs="{'invisible': ['|', '|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'not in', ('no', 'invoiced')), ('order_line', '=', [])]}"/>
+                </xpath>
+                <xpath expr="///form/sheet/div/button[@name='action_view_invoice']" position="replace">
+                    <button type="object"  name="action_view_invoice"
+                        class="oe_stat_button" groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"
+                        icon="fa-pencil-square-o" attrs="{'invisible':['|', ('invoice_count', '=', 0), ('state', 'in', ('draft','sent','to approve'))]}">
+                        <field name="invoice_count" widget="statinfo" string="Vendor Bills"/>
+                        <field name='invoice_ids' invisible="1"/>
+                    </button>
+                </xpath>
+                <xpath expr="//page[@name='purchase_delivery_invoice']/group/group/field[@name='picking_type_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="picking_type_id"
+                           domain="[('code','=','incoming'), '|', ('warehouse_id', '=', False), ('warehouse_id.company_id', '=', company_id)]"
+                           options="{'no_create': True}"
+                           groups="stock.group_stock_multi_locations"
+                    />
+                </xpath>
+                <field name="amount_total" position="after">
+                    <div class="oe_subtotal_footer_separator oe_inline">
+                          <label for="x_total_quantity" />
+                    </div>
+                    <field name="x_total_quantity" nolabel="1" class="oe_subtotal_footer_separator" readonly="1" force_save="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="purchase_order_view_filter_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.select</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" operator="ilike" string="Order"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="purchase_order_view_search_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.select</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_view_search"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" operator="ilike" string="Order"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

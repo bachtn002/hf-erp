@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <record id="wizard_download_import_template_view_form" model="ir.ui.view">
+            <field name="name">wizard.download.import.template.view.form</field>
+            <field name="model">wizard.download.import.template</field>
+            <field name="priority">8</field>
+            <field name="arch" type="xml">
+                <form string="Download file template">
+                    <group>
+                        <field name="template_answer_file_url" widget="url" readonly="1"
+                               nolabel="True"/>
+                    </group>
+                    <group>
+                        <field name="template_question_file_url" widget="url" readonly="1"
+                               nolabel="True"/>
+                    </group>
+                    <footer>
+                        <button string="OK" class="oe_link btn-primary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+</odoo>

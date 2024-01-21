@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_notification_user,res.notification.user,model_res_notification,base.group_user,0,0,0,0
+access_res_notification_system,res.notification.system,model_res_notification,base.group_system,1,1,1,1

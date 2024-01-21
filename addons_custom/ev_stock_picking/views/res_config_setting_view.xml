@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="warning_info" position="after">
+                <div class="col-12 col-lg-6 o_setting_box" id="stock_request_config">
+                        <div class="o_setting_left_pane">
+                            <field name="x_allow_backorder"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="x_allow_backorder"/>
+                        </div>
+                    </div>
+
+            </div>
+        </field>
+    </record>
+    </data>
+</odoo>

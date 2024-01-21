@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="update_promotion_code_view_form" model="ir.ui.view">
+            <field name="name">update.promotion.code.form.inherit.ev_promotion_phone_release</field>
+            <field name="model">update.promotion.code</field>
+            <field name="inherit_id" ref="ev_promotion_voucher.update_promotion_code_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='promotion_use_code']" position="replace">
+                    <field name="promotion_use_code"
+                           attrs="{'invisible': [('promotion_voucher_types', '=', 'phone')]}"/>
+                    <field name="promotion_voucher_types" invisible="1"/>
+                    <field name="condition_apply"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

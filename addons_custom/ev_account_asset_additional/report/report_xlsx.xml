@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_asset_inventory"
+            model="account.asset.inventory"
+            string="Kiểm kê tài sản"
+            report_type="xlsx"
+            name="ev_account_asset_additional.report_asset_inventory"
+            file="ev_account_asset_additional.report_asset_inventory"
+            print_report_name="Account Assets Excel Report"
+        />
+    </data>
+</odoo>

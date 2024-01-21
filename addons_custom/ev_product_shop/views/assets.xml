@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="assets_frontend" name="ev_product_shop assets" inherit_id="point_of_sale.assets">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/ev_product_shop/static/src/js/models.js"/>
+                <script type="text/javascript" src="/ev_product_shop/static/src/js/pos_online.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

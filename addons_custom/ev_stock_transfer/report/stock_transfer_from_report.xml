@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="report_template_stock_transfer_from">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout" t-lang="en_US">
+                        <link rel="stylesheet" href="/ev_stock_transfer/static/src/style.css"/>
+                            <table style="font-size:16px; font-family: Arial;text-align: left;border: hidden;">
+                                <tr style="border-bottom: 1px solid black">
+                                    <td style="vertical-align: middle;border: hidden;" width="16%" height="auto">
+                                        <img t-if="o.company_id.logo" width="100%" height="auto"
+                                             style="position: relative;"
+                                             t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"
+                                             class="pull-left"/>
+                                    </td>
+                                    <td style="text-align: left;border: hidden;"></td>
+                                </tr>
+                                <tr style="text-align: left;border-top: 1px solid black">
+                                    <td colspan="2" style="font-weight: bold;text-align: left;border: hidden;border-top: 1px solid black">
+                                        <span t-esc="o.company_id.name"></span>
+                                    </td>
+                                </tr>
+                                <tr style="text-align: left;border: hidden;font-weight: bold">
+                                    <td colspan="2" style="text-align: left;border: hidden;">
+                                        <span t-esc="o.company_id.street"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="page" style="font-size:15px; padding-top: 30px; font-family: Arial">
+                                <div style="width: 110%;display: flex ;text-align: right; font-size: 26px; font-weight: bold;">
+                                    <div style="width:54%; float:left; padding-top: 0px">
+                                        <span>
+                                            PICKING LIST
+                                        </span>
+                                    </div>
+
+                                    <div style="padding-left:15px; width:220px; height:52px text-align: right; float: left">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 150)"
+                                             style="width:170%;height:3rem" alt="Barcode"/>
+                                    </div>
+                                </div>
+                                
+                                <div style="float: " >
+                                    <div style="padding-right:14px; width:58%; text-align: right; font-weight: bold; float: left" >
+                                        Ngày: <span t-esc="o.date.strftime('%d/%m/%Y')"/>
+                                    </div>
+
+                                    <div style="padding-right:45px ;width:40%; text-align: center; font-weight: bold; float: left" >
+                                        Số phiếu: <span t-field="o.name"/>
+                                    </div>
+                                </div>
+                                <br/><br/><br/>
+                                
+                                <br/><br/><br/>
+                                <div>
+                                   
+                                    <div style="font-weight: bold;width: 100%; float: left;font-size:16px; margin: 0px; padding:0px;">
+                                        Kho xuất:
+                                        <span style="font-weight: bold;" t-field="o.warehouse_id"/>
+                                    </div>
+                                    <div style="font-weight: bold;width: 100%; float: left;font-size:16px; margin: 0px; padding:0px;">
+                                        Kho nhận:
+                                        <span style="font-weight: bold;" t-field="o.warehouse_dest_id"/>
+                                    </div>
+                                    <div style="font-weight: bold; width: 100%; float: left;font-size:16px; margin: 0px; padding:0px; padding-bottom: 15px ">
+                                        Địa chỉ kho nhận:
+                                        <span style="font-weight: bold;" t-field="o.warehouse_dest_id.x_address_warehouse"/>
+                                    </div>
+
+                                </div>
+                               
+                                <br/><br/>
+                                <table style="width:100%;  padding:0px; margin: 0px; vertical-align: middle;word-break: break-word;">
+                                    <div style="font-size:16px; font-weight: bold;">
+                                        <th style="width: 80px;vertical-align: middle">STT</th>
+                                        <th style="width: 380px;vertical-align: middle">Sản phẩm</th>
+                                        <th style="width: 110px;vertical-align: middle">Đơn vị tính</th>
+                                        <th style="width: 110px;vertical-align: middle">Số lượng</th>
+                                        <th style="width: 200px;vertical-align: middle">Ghi chú</th>
+                                    </div>
+                                    <t t-set="stt" t-value="1"/>
+                                    <t t-foreach="o.transfer_line_ids" t-as="tl">
+                                        <tr>
+                                            <td style="vertical-align: middle">
+                                                <span t-esc="stt"/>
+                                            </td>
+                                            <td style="text-align: left;vertical-align: middle">
+                                                <span
+                                                        t-esc="'['+ str(tl.product_id.default_code)+'] ' + str(tl.product_id.name)"/>
+                                            </td>
+                                            <td style="vertical-align: middle">
+                                                <span t-esc="tl.product_uom.name"/>
+                                            </td>
+                                            <td style="vertical-align: middle">
+                                                <t t-if="int(tl.quantity) != tl.quantity">
+                                                    <span t-esc="'{:,.3f}'.format(tl.quantity)"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <span t-esc="'{:,.0f}'.format(tl.quantity)"/>
+                                                </t> 
+                                                <!-- <span t-esc="'{:,.0f}'.format(tl.quantity)"/> -->
+                                            </td>
+                                            <td style="vertical-align: middle">
+                                                <span t-esc="tl.note"/>
+                                            </td>
+                                            <t t-set="stt" t-value="stt + 1"/>
+                                        </tr>
+                                    </t>
+                                </table>
+                            <div style="font-weight: bold; text-align: right; padding-right: 160px; padding-top:15px">
+                                Người lập
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <template id="edit_external_layout_standard" inherit_id="web.external_layout_standard">
+            <xpath expr="//li[@t-if='company.phone']" position="replace">
+                <li t-if='company.phone'></li>
+            </xpath>
+            <xpath expr="//li[@t-if='company.email']" position="replace">
+                <li t-if='company.email'></li>
+            </xpath>
+            <xpath expr="//li[@t-if='company.website']" position="replace">
+                <li t-if='company.website'></li>
+            </xpath>
+            <xpath expr="//li[@t-if='company.vat']" position="replace">
+                <li t-if='company.vat'></li>
+            </xpath>
+        </template>
+
+        <record id="paperformat_stock_transfer_from_rpt" model="report.paperformat">
+            <field name="name">Incoming A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">28</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+        <report
+                id="qweb_stock_transfer_from_rpt"
+                model="stock.transfer"
+                string="In phiếu xuất kho"
+                report_type="qweb-pdf"
+                name="ev_stock_transfer.report_template_stock_transfer_from"
+                file="ev_stock_transfer.report_template_stock_transfer_from"
+                paperformat="paperformat_stock_transfer_from_rpt"
+                menu="False"
+        />
+    </data>
+
+</odoo>

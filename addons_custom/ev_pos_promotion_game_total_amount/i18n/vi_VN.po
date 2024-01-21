@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_promotion_game_total_amount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-13 02:48+0000\n"
+"PO-Revision-Date: 2022-06-13 02:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__create_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__create_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__create_date
+msgid "Created on"
+msgstr "Thời gian tạo"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__phone
+msgid "Customer phone number"
+msgstr "Số điện thoại"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model,name:ev_pos_promotion_game_total_amount.model_game_reward_history
+msgid "Game Reward History"
+msgstr "Lịch sử tích lũy lượt chơi"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion__game_code
+msgid "Game code"
+msgstr "Mã Game"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields.selection,name:ev_pos_promotion_game_total_amount.selection__pos_promotion__type__game_total_amount
+msgid "Game total amount"
+msgstr "Tặng lượt chơi theo giá trị đơn hàng"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__game_turn_reward
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__game_turn
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_order__x_game_turn_reward
+msgid "Game turn reward"
+msgstr "Lượt chơi tích lũy"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_order__x_game_turn_reward_history_ids
+msgid "Game reward history"
+msgstr "Lịch sử tích lũy"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_game_total_amount.view_pos_pos_form
+msgid "Game reward"
+msgstr "Tích lượt chơi"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__write_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__write_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__pos_order_id
+msgid "Pos Order"
+msgstr "Đơn hàng"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model,name:ev_pos_promotion_game_total_amount.model_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion__promotion_game_total_amount_ids
+msgid "Pos Promotion Game Total Amount"
+msgstr "Chi tiết điều kiện tích luỹ lượt chơi"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model,name:ev_pos_promotion_game_total_amount.model_pos_promotion
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_game_reward_history__pos_promotion_id
+msgid "Pos promotion"
+msgstr "Chương trình khuyến mại"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__promotion_id
+msgid "Promotion"
+msgstr "Chương trình khuyến mại"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.constraint,message:ev_pos_promotion_game_total_amount.constraint_pos_promotion_game_code_uniq
+msgid "The game code already exist!"
+msgstr "Mã game đã tồn tại trong hệ thống"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion_game_total_amount__total_amount
+msgid "Total Amount"
+msgstr "Tổng giá trị đơn hàng"
+
+#. module: ev_pos_promotion_game_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_game_total_amount.field_pos_promotion__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: pos_loyalty
+#: model:ir.model.fields,field_description:pos_loyalty.field_pos_order__loyalty_points
+#: model:ir.model.fields,field_description:pos_loyalty.field_res_partner__loyalty_points
+#: model:ir.model.fields,field_description:pos_loyalty.field_res_users__loyalty_points
+msgid "Loyalty Points"
+msgstr "Điểm CT KH thân thiết"
+
+#. module: ev_pos_promotion_game_total_amount
+#. openerp-web
+#: code:addons/ev_pos_promotion_game_total_amount/static/src/xml/pos_game_detail.xml:0
+#, python-format
+msgid "Game turn reward:"
+msgstr "Lượt chơi tích lũy: "
+
+#. module: ev_pos_promotion_game_total_amount
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_game_total_amount.view_partner_property_inherit_form
+msgid "Customer game turn reward"
+msgstr "Lượt chơi tích lũy"
+

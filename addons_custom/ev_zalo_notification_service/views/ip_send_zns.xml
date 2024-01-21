@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="ip_send_zns_view_tree" model="ir.ui.view">
+            <field name="name">IP Send ZNS Tree</field>
+            <field name="model">ip.send.zns</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="1" delete="1" multi_edit="1" string="IP Send ZNS Tree">
+                    <field name="name"/>
+                    <field name="active" widget="boolean_toggle"/>
+                    <button name="action_read_ip" type="object" string="Setup" class="float-right btn-secondary"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ip_send_zns__view_from" model="ir.ui.view">
+            <field name="name">IP Send ZNS Form</field>
+            <field name="model">ip.send.zns</field>
+            <field name="arch" type="xml">
+                <form string="IP Send ZNS Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="ip_send_zns_view_search" model="ir.ui.view">
+            <field name="name">IP Send ZNS</field>
+            <field name="model">ip.send.zns</field>
+            <field name="arch" type="xml">
+                <search string="IP Send ZNS Search">
+                    <field name="name" filter_domain="[('name','ilike',self)]"/>
+                    <!--                    <field name="secret_key" filter_domain="[('secret_key','ilike',self)]"/>-->
+                </search>
+            </field>
+        </record>
+
+        <record id="ip_send_zns_action" model="ir.actions.act_window">
+            <field name="name">IP Send ZNS</field>
+            <field name="res_model">ip.send.zns</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="ip_send_zns_view_search"/>
+        </record>
+    </data>
+</odoo>

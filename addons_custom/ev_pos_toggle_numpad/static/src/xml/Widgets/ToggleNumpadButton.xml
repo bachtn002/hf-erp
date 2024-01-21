@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ToggleNumpadButton" owl="1">
+			<div class="o_ev_toggle_numpad_button__toggle_btn" 
+				t-on-click="onClick">
+            <i t-if="state.isShow" class="fa fa-caret-down"></i>
+            <i t-if="!state.isShow" class="fa fa-caret-up"></i>
+				</div>
+		</t>
+
+</templates>

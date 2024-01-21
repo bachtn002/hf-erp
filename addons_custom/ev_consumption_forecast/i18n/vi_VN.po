@@ -1,0 +1,375 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_consumption_forecast
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-13 03:34+0000\n"
+"PO-Revision-Date: 2022-04-13 03:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.request_forecast_view_form
+msgid "<b>Request Forecast</b>"
+msgstr "<b>Dự báo tiêu thụ</b>"
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.sale_request_notification_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.sale_request_notification_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__create_uid
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__create_uid
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__create_uid
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__create_date
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__create_date
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__create_date
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__display_name
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__display_name
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__display_name
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request__display_name
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_line__display_name
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#, python-format
+msgid ""
+"Do you want to use order suggestions? \n"
+"If yes, please click order suggestion. \n"
+"If not, proceed as usual."
+msgstr ""
+"Bạn có muốn sử dụng gợi ý đặt hàng? \n"
+"Nếu có, vui lòng bấm 'GỢI Ý ĐẶT HÀNG'. \n"
+"Nếu không, thao tác nhưng bình thường."
+
+#. module: ev_consumption_forecast
+#: model:ir.ui.menu,name:ev_consumption_forecast.google_bigquery_config_menu
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.google_bigquery_config_view_form
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.google_bigquery_config_view_tree
+msgid "Google Bigquery Config"
+msgstr "Google Bigquery Key"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request__id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_line__id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__json_key
+msgid "Json Key"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config____last_update
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop____last_update
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast____last_update
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request____last_update
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_line____last_update
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__write_uid
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__write_uid
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__write_uid
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__write_date
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__write_date
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__write_date
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_notification__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_lead_time
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_lead_time
+msgid "Lead Time"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/product_template.py:0
+#, python-format
+msgid "Lead Time must be greater than 0"
+msgstr "Leadtime phải lớn hơn hoặc bằng 0"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_line__moq
+msgid "MOQ"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_moq_purchase
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_moq_purchase
+msgid "MOQ Purchase"
+msgstr "MOQ Mua"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/product_template.py:0
+#, python-format
+msgid "MOQ Purchase must be greater than 0"
+msgstr "MOQ mua phải lớn hơn hoặc bằng 0"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_moq_warehouse
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_moq_warehouse
+msgid "MOQ Warehouse"
+msgstr "MOQ Kho"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/product_template.py:0
+#, python-format
+msgid "MOQ Warehouse must be greater than 0"
+msgstr "MOQ kho phải lớn hơn hoặc bằng 0"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__min_stock
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_min_stock
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_min_stock
+msgid "Min Stock"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_min_stock_shop_ids
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_min_stock_shop_ids
+msgid "Min Stock Shop"
+msgstr "Min stock cửa hàng"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/min_stock_shop.py:0
+#: code:addons/ev_consumption_forecast/models/product_template.py:0
+#, python-format
+msgid "Min Stock must be greater than 0"
+msgstr "Min stock phải lớn hơn hoặc bằng 0"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_google_bigquery_config__name
+msgid "Name Connection"
+msgstr "Tên kết nối"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.constraint,message:ev_consumption_forecast.constraint_google_bigquery_config_name_uniq
+msgid "Name connection already exists on the system!"
+msgstr "Tên kết nối đã tồn tại trong hệ thống"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#, python-format
+msgid "Notification"
+msgstr "Thông báo!"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_order_multiples
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_order_multiples
+msgid "Order Multiples"
+msgstr "Bội số đặt hàng"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/product_template.py:0
+#, python-format
+msgid "Order Multiples must be greater than 0"
+msgstr "Bội số đặt hàng phải lớn hơn hoặc bằng 0"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_order_schedule_ids
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_order_schedule_ids
+msgid "Order Schedule"
+msgstr "Lịch đặt hàng"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__predicted_qty
+msgid "Predicted Quantity"
+msgstr "Số lượng dự đoán"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__product_tmpl_id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#, python-format
+msgid "Product not purchase ok: (%s)"
+msgstr "Sản phẩm không thể mua: (%s)"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_sale_request_line__qty_forecast
+msgid "Quantity Forecast"
+msgstr "Số lượng dự báo"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#, python-format
+msgid "Quantity request must be less than MOQ: (%s)"
+msgstr "Số lượng yêu cầu phải lớn hơn hoặc bằng MOQ: (%s)"
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.view_sale_request_line_moq_form_inherit
+msgid "Request Forecast"
+msgstr "Gợi ý đặt hàng"
+
+#. module: ev_consumption_forecast
+#: model:ir.actions.act_window,name:ev_consumption_forecast.request_forecast_action
+msgid "Request Forecast Action"
+msgstr "Dự báo tiêu thụ - Google Bigquery"
+
+#. module: ev_consumption_forecast
+#: model:ir.actions.server,name:ev_consumption_forecast.request_forecast_daily_cron_ir_actions_server
+#: model:ir.cron,cron_name:ev_consumption_forecast.request_forecast_daily_cron
+#: model:ir.cron,name:ev_consumption_forecast.request_forecast_daily_cron
+msgid "Request Forecast Daily"
+msgstr "Dự đoán số lượng yêu cầu hằng ngày"
+
+#. module: ev_consumption_forecast
+#: model:ir.ui.menu,name:ev_consumption_forecast.request_forecast_menu
+msgid "Request Forecast Menu"
+msgstr "Dự báo tiêu thụ - Google Bigquery"
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_request_forecast
+msgid "Request forecast API Google BigQuery"
+msgstr "Dự đoán số lượng yêu cầu từ Google BigQuery"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_return_conditions
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_return_conditions
+msgid "Return Conditions"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.actions.act_window,name:ev_consumption_forecast.sale_request_notification_action
+msgid "Sale Request Notification Action"
+msgstr "Thông báo yêu cầu hàng"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_min_stock_shop__pos_shop_id
+msgid "Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_request_forecast__shop_id
+msgid "Shop ID"
+msgstr "Cửa hàng"
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.view_sale_request_line_moq_form_inherit
+msgid "Supply Type"
+msgstr "Tuyến cung ứng"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_product__x_user_id
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_product_template__x_user_id
+msgid "Users"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.sale_request_notification_form
+msgid ""
+"You will get ordering hints. Old data will be deleted. Do you confirm the "
+"action?"
+msgstr ""
+"Hệ thống sẽ xóa dữ liệu và lấy lại toàn gợi ý đặt hàng. Bạn có muốn tiếp "
+"tục?"
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_google_bigquery_config
+msgid "google.bigquery.config"
+msgstr "Cấu hình kết nối google bigquery"
+
+#. module: ev_consumption_forecast
+#: model:ir.actions.act_window,name:ev_consumption_forecast.google_bigquery_config_action
+msgid "google_bigquery_config_action"
+msgstr "Cấu hình kết nối google bigquery"
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_min_stock_shop
+msgid "min.stock.shop"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_sale_request
+msgid "sale.request"
+msgstr "Yêu cầu hàng bán"
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_sale_request_line
+msgid "sale.request.line"
+msgstr "Chi tiết yêu cầu hàng"
+
+#. module: ev_consumption_forecast
+#: model:ir.model,name:ev_consumption_forecast.model_sale_request_notification
+msgid "sale.request.notification"
+msgstr ""
+
+#. module: ev_consumption_forecast
+#: model_terms:ir.ui.view,arch_db:ev_consumption_forecast.view_sale_request_line_moq_form_inherit
+msgid "You have not choose consumption forecast"
+msgstr "Bạn chưa chọn 'Gợi ý đặt hàng'"
+
+#. module: ev_consumption_forecast
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#: code:addons/ev_consumption_forecast/models/sale_request.py:0
+#, python-format
+msgid "You must have choose consumption_forecast before"
+msgstr "Bạn chưa chọn 'Gợi ý đặt hàng'"
+
+#. module: ev_consumption_forecast
+#: model:ir.model.fields,field_description:ev_consumption_forecast.field_stock_warehouse__consumption_forecast
+msgid "Consumption Forecast"
+msgstr "Dự báo tiêu thụ"

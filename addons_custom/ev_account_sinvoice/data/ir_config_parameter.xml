@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="url_check_vat" model="ir.config_parameter">
+            <field name="key">url_check_vat</field>
+            <field name="value">https://api.vietqr.io/v2/business/</field>
+        </record>
+    </data>
+</odoo>

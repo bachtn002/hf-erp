@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template t-name="ev_account_payment.report_agribank_view2">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+
+                        <style>
+                            *{
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            }
+
+                            i{
+                            font-size:11px;
+                            }
+
+                            /* HEADER */
+                            header{
+                            font-size: 14px;
+                            font-family: "Time New Roman";
+                            }
+                            .header-left{
+                            float:left;
+                            width:33%;
+                            }
+
+                            .header-center{
+                            float:left;
+                            width:33%;
+                            }
+
+                            .header-right{
+                            float:left;
+                            width:34%;
+                            }
+
+                            .image-logo &gt; img{
+                            width: 90%;
+                            height: 80px;
+                            }
+
+                            .chi-nhanh{
+                            font-size: 12px;
+                            font-weight: 400;
+                            padding-left:15px;
+                            }
+
+                            .title-unc{
+                            text-transform: uppercase;
+                            font-size: 20px;
+                            padding-top:10px;
+                            color: #990000;
+                            padding-bottom:5px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            text-align:center;
+                            }
+
+                            .payment-order{
+                            font-size: 13px;
+                            font-weight: 400;
+                            text-align:center;
+                            padding-bottom:5px;
+                            }
+
+                            .header-center &gt; h6{
+                            font-size: 13px;
+                            font-weight: 400;
+                            padding-top: 15px;
+                            padding-left: 50px;
+                            }
+
+
+                            .no{
+                            font-size: 14px;
+                            padding-top:28px;
+                            font-weight: 400;
+                            }
+
+                            .no-under{
+                            font-size: 14px;
+                            font-weight: 400;
+                            }
+
+                            .clf{
+                            clear:both;
+                            }
+
+                            .header-right-left{
+                            float:left;
+                            width:45%;
+                            }
+                            .header-right-right{
+                            float:left;
+                            width:55%;
+                            padding-top:5px
+                            }
+
+                            .header-right-right &gt; p{
+                            font-size:13px;
+                            font-weight: 400;
+                            }
+
+                            /* CONTENT */
+
+                            .container-content{
+                            border:1px solid black;
+                            padding-left:10px;
+                            }
+
+                            .top-content-left{
+                            float:left;
+                            width:70%;
+                            border-right:1px solid black;
+                            }
+                            .top-content{
+                            border-bottom:1px solid black;
+                            }
+
+                            .top-content-right{
+                            float:left;
+                            width:30%;
+                            }
+
+                            p{
+                            font-size:14px;
+                            font-weight: 400;
+                            }
+
+                            .top-tcr{
+                            padding: 10px;
+                            border-bottom:1px solid black;
+                            }
+
+
+                            /* FOOTER */
+                            footer{
+                            margin-top:5px;
+                            }
+
+                            .footer-left{
+                            float:left;
+                            width:32%;
+                            }
+
+                            .footer-center{
+                            float:left;
+                            width:34%;
+                            }
+
+                            .footer-right{
+                            float:left;
+                            width:34%;
+                            }
+
+                            .left-fl{
+                            float:left;
+                            width:50%;
+                            }
+
+                            .right-fl{
+                            float:left;
+                            width:50%;
+                            }
+
+                        </style>
+
+                        <!-- Đây là phần HEADER bao gồm: Logo, tiêu đề Ủy Nhiệm Chi, Số, Liên 1: Ngân hàng -->
+                        <header style="width:100%!important">
+                            <div class="header-left">
+                                <div class="image-logo">
+                                    <img src="/ev_account_payment/static/src/img/agribank.jpg"/>
+                                </div>
+                                <p class="chi-nhanh">CN
+                                    <span style="text-transform: uppercase;" t-field="o.x_bank_id.name"/>
+                                    -
+                                    <span style="text-transform: uppercase;" t-field="o.x_bank_id.bic"/>
+                                </p>
+                            </div>
+                            <div class="header-center">
+                                <h3 class="title-unc">Ủy nhiệm chi</h3>
+                                <h5 class="payment-order">Payment Order</h5>
+                                <h6 class="date-header">Ngày:
+                                    <span t-field="o.x_date"/>
+                                </h6>
+                                <p style="padding-left:50px">
+                                    <i>Date</i>
+                                </p>
+
+                            </div>
+                            <div class="header-right">
+                                <div class="header-right-left">
+                                    <p class="no">Số:
+                                        <span t-esc="o.x_name"/>
+                                    </p>
+                                    <div class="no-under">
+                                        <i>No</i>
+                                    </div>
+                                </div>
+                                <div class="header-right-right">
+                                    <p>Liên 1: Ngân hàng</p>
+                                    <p style="padding-bottom:5px">
+                                        <i>Original Bank</i>
+                                    </p>
+                                    <p>Số bút toán:........................
+                                    </p>
+                                    <p style="padding-bottom:5px">
+                                        <i>Seq No</i>
+                                    </p>
+                                    <p>Loại tiền tệ:
+                                        <span t-esc="o.currency_id.name"/>
+                                    </p>
+                                    <p>
+                                        <i>Curenty</i>
+                                    </p>
+                                </div>
+                                <div class="clf"/>
+                            </div>
+                            <div class="clf"/>
+                        </header>
+
+                        <!-- Đây là phần CONTENT bao gồm: Toàn bộ phần trong khung từ (Đơn vị trả tiền -> Nội dung) -->
+                        <section class="container-content">
+                            <div class="top-content">
+                                <div class="top-content-left">
+                                    <p style=";padding-top:5px">Đơn vị trả tiền:
+                                        <t t-set="appliation" t-value="o.get_applicant()"/>
+                                        <t t-if="appliation.name">
+                                            <span style="text-transform: uppercase;" t-esc="appliation.name"/>
+                                        </t>
+                                        <t t-else="">
+                                            ........................................................................................................................
+                                        </t>
+
+                                    </p>
+                                    <p style="padding-bottom:5px">
+                                        <i>Applicant</i>
+                                    </p>
+                                    <p style="">Số tài khoản:
+                                        <t t-set="appliation" t-value="o.get_acc_number2()"/>
+                                        <t t-if="appliation.bank_acc_number">
+                                            <span style="font-weight: bold" t-esc="appliation.bank_acc_number"/>
+                                        </t>
+                                        <t t-else="">
+                                            ........................................................................................................................................
+                                        </t>
+
+                                    </p>
+                                    <p style="padding-bottom:5px">
+                                        <i>Account No</i>
+                                    </p>
+
+                                    <p style="">Tại ngân hàng:
+                                        <t t-if="o.x_partner_bank_id">
+                                            <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                <span t-field="partner_bank.bank_id.name"/>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            .....................................................................................................................................
+                                        </t>
+
+                                    </p>
+                                    <p style="padding-bottom:5px">
+                                        <i>At bank</i>
+                                    </p>
+
+                                    <p style="">Đơn vị thụ hưởng:
+                                        <t t-if="o.x_partner_bank_id">
+                                            <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                <span t-field="partner_bank.partner_id.name"/>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            ...............................................................................................................................
+                                        </t>
+                                    </p>
+                                    <p style="padding-bottom:5px">
+                                        <i>Beneficiary</i>
+                                    </p>
+                                    <p style="">CMT/Hộ
+                                        chiếu:.................................................
+                                        <span>
+                                            Ngày cấp:..................................................................
+                                        </span>
+                                    </p>
+                                    <p style="padding-bottom:2px">
+                                        <i style="padding-right: 190px">ID/Passport No</i>
+                                        <i>Date of issue</i>
+                                    </p>
+                                    <p style="">Nơi
+                                        cấp:.............................................................
+                                        <span>
+                                            Điện
+                                            thoại:................................................................
+                                        </span>
+                                    </p>
+                                    <p style="padding-bottom:2px">
+                                        <i style="padding-right: 200px">Place of issue</i>
+                                        <i>Tel</i>
+                                    </p>
+
+                                    <p style="">Số tài khoản:
+                                        <t t-if="o.x_partner_bank_id">
+                                            <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                <span t-field="partner_bank.acc_number"/>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            ........................................................................................................................................
+                                        </t>
+
+                                    </p>
+                                    <p style="padding-bottom:5px">
+                                        <i>Account No</i>
+                                    </p>
+
+                                    <p style="">Tại ngân hàng:
+                                        <t t-if="o.x_partner_bank_id">
+                                            <t t-foreach="o.x_partner_bank_id" t-as="partner_bank">
+                                                <span t-field="partner_bank.bank_id.name"/>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            .....................................................................................................................................
+                                        </t>
+
+                                    </p>
+                                    <p>
+                                        <i>At bank</i>
+                                    </p>
+
+                                </div>
+                                <div class="top-content-right">
+                                    <div class="top-tcr">
+                                        <p style="background-color:#990000; color: #FFFFFF; padding:5px; margin-bottom:8px">
+                                            Dành cho ngân hàng(for use bank only)
+                                        </p>
+                                        <p style="padding-left:10px">Tài khoản ghi nợ:</p>
+                                        <p style="padding-left:10px; margin-bottom:5px">
+                                            <i>Debit account</i>
+                                        </p>
+                                        <p style="margin-bottom:5px">
+                                            <input type="text" style="width:95%; outline:solid 1px;height:23px"/>
+                                        </p>
+
+                                        <p style="padding-left:10px">Tài khoản ghi có:</p>
+                                        <p style="padding-left:10px; margin-bottom:5px">
+                                            <i>Credit account</i>
+                                        </p>
+                                        <p style="margin-bottom:4px">
+                                            <input type="text" style="width:95%; outline:solid 1px;height:23px"/>
+                                        </p>
+                                    </div>
+
+                                    <div class="bottom-tcr">
+                                        <p style="padding-left:10px; margin-top:5px">Số tiền bằng số:</p>
+                                        <p style="padding-left:10px; margin-bottom:5px">
+                                            <i>Amount in figures</i>
+                                        </p>
+                                        <p style="margin-top:15px; text-align:right; padding-right: 25px; font-weight: bold">
+                                            <span t-esc="'{0:,.0f}'.format(o.x_amount_before_tax)"/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="clf"/>
+                            </div>
+
+                            <div class="bottom-content">
+
+                                <p style="margin-top:5px">Số tiền bằng chữ:
+                                    <span style="font-weight:bold" t-esc="o.get_amount_to_word(o.x_amount_before_tax)"/>
+                                </p>
+                                <p>
+                                    <i>Amount in words</i>
+                                </p>
+                                <p>
+                                    .....................................................................................................................................................................................................................................
+                                </p>
+
+                                <p style="padding-bottom:5px">Nội dung:
+                                    <span t-esc="o.x_description"/>
+                                </p>
+                                <p>
+                                    <i>Details</i>
+                                </p>
+                                <p style="padding-bottom:3px">
+                                    .....................................................................................................................................................................................................................................
+                                </p>
+
+                            </div>
+
+                        </section>
+
+                        <!-- Đây là phần FOOTER bao gồm: Toàn bộ phần Chữ ký bên dưới cùng -->
+                        <footer>
+                            <div class="footer-left">
+                                <p style="text-align:center;margin-bottom:3px">Đơn vị trả tiền (<i>Applicant</i>)
+                                </p>
+                                <div class="left-fl">
+                                    <p style="padding-bottom:3px;text-align:center">Kế toán trưởng</p>
+                                    <p style="padding-bottom:3px;text-align:center;">
+                                        <i>Chief Accountant</i>
+                                    </p>
+                                </div>
+
+                                <div class="right-fl">
+                                    <p style="padding-bottom:3px;text-align:center">Chủ tài khoản</p>
+                                    <p style="padding-bottom:3px;text-align:center;">
+                                        <i>Account holder</i>
+                                    </p>
+                                </div>
+                                <div class="clf"/>
+                            </div>
+                            <div class="footer-center">
+                                <p style="text-align:center;margin-bottom:3px">Ngân hàng A (<i>Bank of Applicant</i>)
+                                </p>
+                                <p style="text-align:center;margin-bottom:3px">Ghi sổ ngày(<i>Settled date</i>).........../.........../.............
+                                </p>
+                                <div class="left-fl">
+                                    <p style="text-align:center">Giao dịch viên</p>
+                                    <p style="padding-bottom:3px;text-align:center;">
+                                        <i>Teller</i>
+                                    </p>
+                                </div>
+
+                                <div class="right-fl">
+                                    <p style="text-align:center">Kiểm soát</p>
+                                    <p style="padding-bottom:3px;text-align:center;">
+                                        <i>Supervisor</i>
+                                    </p>
+                                </div>
+                                <div class="clf"/>
+                            </div>
+                            <div class="footer-right">
+                                <p style="text-align:center;margin-bottom:3px">Ngân hàng B (<i>Bank of Beneficiary</i>)
+                                </p>
+                                <p style="text-align:center;margin-bottom:3px">Ghi sổ ngày(<i>Settled date</i>).........../.........../.............
+                                </p>
+                                <div class="left-fl">
+                                    <p style="text-align:center">Giao dịch viên</p>
+                                    <p style="text-align:center;">
+                                        <i>Teller</i>
+                                    </p>
+                                </div>
+
+                                <div class="right-fl">
+                                    <p style="text-align:center">Kiểm soát</p>
+                                    <p style="text-align:center;">
+                                        <i>Supervisor</i>
+                                    </p>
+                                </div>
+                                <div class="clf"/>
+                            </div>
+                            <div class="clf"/>
+                        </footer>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="paperformat_account_payment_Agribank_report" model="report.paperformat">
+            <field name="name">Agriank_report</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">210</field>
+            <field name="page_width">148</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report
+                id="report_bank_rpt"
+                model="account.payment"
+                string="Agribank_Report"
+                report_type="qweb-pdf"
+                name="ev_account_payment.report_agribank_view2"
+                file="ev_account_payment.report_agribank_view2"
+                paperformat="paperformat_account_payment_Agribank_report"
+        />
+    </data>
+</odoo>
+

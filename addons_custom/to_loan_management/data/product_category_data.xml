@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="product_category_loan_interest"
+			model="product.category">
+			<field name="name">Loan Interest</field>
+		</record>
+		<record id="service_loan" model="product.product">
+			<field name="name">Loan</field>
+			<field name="categ_id" ref="product_category_loan_interest" />
+			<field name="is_loan" eval="True" />
+			<field name="type">service</field>
+			<field name="description">Product to invoice loan interests.</field>
+			<field name="default_code">LOAN</field>
+			<field name="uom_id" ref="uom.product_uom_unit"/>
+			<field name="uom_po_id" ref="uom.product_uom_unit"/>
+			<field name="company_id" eval="False" />
+		</record>
+	</data>
+
+</odoo>

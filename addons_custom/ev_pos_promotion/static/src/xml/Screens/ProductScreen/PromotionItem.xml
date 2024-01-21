@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preverse">
+
+    <t t-name="PromotionItem" owl="1">
+        <li t-attf-class="o_ev_pos_promotion__promotion-item {{props.promotion.selected ? 'checked' : ''}}"
+            t-on-click="onClickPromotionItem">
+            <span t-attf-class="o_ev_pos_promotion__promotion-item__check {{props.promotion.selected ? 'checked' : ''}}">
+                <i t-att-class="props.promotion.icon"></i>
+            </span>
+            <t t-esc="props.promotion.name"/>
+        </li>
+    </t>
+
+</templates>

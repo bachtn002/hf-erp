@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <act_window-->
+<!--                name="Print stamps"-->
+<!--                res_model="product.product.print.stamp"-->
+<!--                binding_model="product.template"-->
+<!--                view_mode="form"-->
+<!--                target="new"-->
+<!--                id="action_stock_picking_print_stamp_product"/>-->
+
+
+<!--        <record model="ir.ui.view" id="stock_picking_product_template_lot_form_view">-->
+<!--            <field name="name">product.template.view</field>-->
+<!--            <field name="model">product.template</field>-->
+<!--            <field name="inherit_id" ref="product.product_template_only_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//button[@name='%(stock.action_product_replenish)d']" position="after">-->
+<!--                    <button name="print_stamp" type="object" string="Print Stamp" class="oe_highlight"-->
+<!--                            attrs="{'invisible': [('tracking', '!=', 'none')]}"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductScreenCustomer" owl="1">
+		<table style="height: 54px;border-bottom: solid 1px #bfbfbf;">
+			<tr>
+				<td class="add-new-customer">
+					<div role="img" aria-label="Add a customer" title="Create Customer" class="button new-customer"
+					     t-on-click="trigger('create_customer', { isNewClient: true })">
+						<i role="img" aria-label="Customer" title="Create Customer" class="fa fa-plus"></i>
+					</div>
+				</td>
+				<td class="searchbox-client-search">
+					<input placeholder="Search Customers" list="browsers" name="browser" class="input_customer"
+					       t-on-keyup="updateClientList" t-on-click="trigger('search_customer')">
+						<datalist id="browsers">
+							<t t-if="clients">
+								<t t-foreach="clients" t-as="client">
+<!--									<option>-->
+									<!--									  <t t-esc="client.phone"/>-<t t-esc="client.name"/>-->
+									<!--									</option>-->
+								  <option>
+									  <t t-esc="client.phone"/>-<t t-esc="client.name"/>
+								  </option>
+							    </t>
+							</t>
+						</datalist>
+					</input>
+				</td>
+			</tr>
+		</table>
+    </t>
+
+    <t t-name="ClientListScreen" t-inherit="point_of_sale.ClientListScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='client-details-contents subwindow-container-fix']" position="after">
+            <div t-if="!state.detailIsShown" class="client-details-contents subwindow-container-fix">
+<!--                <button class="edit-client-button" t-on-click.stop="trigger('click-edit')">EDIT</button>-->
+                <section class="client-details edit">
+                    <div class="client-picture">
+                        <i class="fa fa-camera" role="img" aria-label="Picture" title="Picture"></i>
+                    </div>
+                    <input class="detail client-name" t-att-value="state.selectedClient.name"
+                           placeholder="Name" disabled="1"/>
+                    <div class="client-details-box clearfix">
+                        <div class="client-details-left">
+                            <div class="client-detail">
+                                <span class="label">Street</span>
+                                <input class="detail client-address-street" name="street"
+                                       t-att-value="state.selectedClient.street || ''"
+                                       placeholder="Street" disabled="1"/>
+                            </div>
+                            <div class="client-detail">
+                                <span class="label">City</span>
+                                <input class="detail client-address-city"
+                                       t-att-value="state.selectedClient.city || ''"
+                                       placeholder="City" disabled="1" />
+                            </div>
+                        </div>
+                        <div class="client-details-right">
+                            <div class="client-detail">
+                                <span class="label">Email</span>
+                                <input class="detail client-email" name="email" type="email"
+                                       t-att-value="state.selectedClient.email || ''" disabled="1"/>
+                            </div>
+                            <div class="client-detail">
+                                <span class="label">Phone</span>
+                                <input class="detail client-phone" name="phone" type="tel"
+                                       t-att-value="state.selectedClient.phone || ''" disabled="1"/>
+                            </div>
+<!--                            thêm ngày sinh nhật khi tạo KH-->
+                            <div class="client-detail">
+                                <span class="label">Ngày sinh nhật</span>
+                                <input class="detail client-phone" name="date_of_birth" type="date"
+                                       t-att-value="state.selectedClient.date_of_birth || ''" disabled="1"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

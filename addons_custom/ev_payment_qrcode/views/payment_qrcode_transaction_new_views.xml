@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="payment_qrcode_transaction_new_tree_view" model="ir.ui.view">
+            <field name="name">payment_qrcode_transaction_new_tree_view</field>
+            <field name="model">payment.qrcode.transaction</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pg_order_reference"/>
+                    <field name="order_id"/>
+                    <field name="pos_session_id"/>
+                    <field name="pos_shop_id"/>
+                    <field name="pg_amount"/>
+                    <field name="pg_order_info"/>
+                    <field name="pg_paytime"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_qrcode_transaction_new_form_view" model="ir.ui.view">
+            <field name="name">payment_qrcode_transaction_new_form_view</field>
+            <field name="model">payment.qrcode.transaction</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="session_id"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+                                <field name="order_id"/>
+                                <field name="pos_session_id"/>
+                                <field name="pos_shop_id"/>
+                                <field name="pg_amount"/>
+                                <field name="pg_currency"/>
+                                <field name="pg_merchant_id"/>
+                                <field name="pg_order_info"/>
+                                <field name="mac"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all;"/>
+                                <field name="mac_type"/>
+                                <field name="error_code"/>
+                            </group>
+                            <group>
+                                <field name="pg_order_reference"/>
+                                <field name="pg_payment_method"/>
+                                <field name="pg_card_number"/>
+                                <field name="pg_card_holder_name"/>
+                                <field name="pg_payment_channel"/>
+                                <field name="pg_transaction_number"/>
+                                <field name="pg_issuer_txn_reference"/>
+                                <field name="pg_issuer_code"/>
+                                <field name="pg_issuer_response_code"/>
+                                <field name="pg_paytime"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="payment_qrcode_transaction_new_search" model="ir.ui.view">
+            <field name="name">payment_qrcode_transaction_new_search</field>
+            <field name="model">payment.qrcode.transaction</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="pg_order_reference"/>
+                    <field name="order_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="payment_qrcode_transaction_new_action" model="ir.actions.act_window">
+            <field name="name">Payment QR Trans New</field>
+            <field name="res_model">payment.qrcode.transaction</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="payment_qrcode_transaction_new_menu"
+                  action="payment_qrcode_transaction_new_action"
+                  name="Payment QR Trans New"
+                  parent="point_of_sale.menu_point_of_sale"
+                  sequence="10"
+        />
+    </data>
+</odoo>

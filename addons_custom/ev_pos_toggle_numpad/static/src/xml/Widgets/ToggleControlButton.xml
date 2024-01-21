@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ToggleControllButton" owl="1">
+			<div class="o_ev_toggle_controll_button__toggle_btn"
+				t-on-click="onClick">
+					<i t-if="state.isShow" class="fa fa-caret-left"></i>
+            		<i t-if="!state.isShow" class="fa fa-caret-right"></i>
+				</div>
+		</t>
+
+</templates>

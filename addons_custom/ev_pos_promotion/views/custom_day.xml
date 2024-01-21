@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="custom_day_tree_view" model="ir.ui.view">
+			<field name="name">custom_day_tree_view</field>
+			<field name="model">custom.weekdays</field>
+			<field name="arch" type="xml">
+				<tree string="custom_day_tree_view">
+					<field name="name"/>
+					<field name="code"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="custom_day_form_view" model="ir.ui.view">
+			<field name="name">custom_day_form_view</field>
+			<field name="model">custom.weekdays</field>
+			<field name="arch" type="xml">
+				<form string="custom_day_form_view">
+					<sheet>
+						<group name="general">
+							<field name="name"/>
+							<field name="code"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="custom_day_action">
+			<field name="name">Partner Group</field>
+			<field name="res_model">custom.weekdays</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="ev_pos_promotion.custom_day_tree_view"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Add a new record.
+				</p>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

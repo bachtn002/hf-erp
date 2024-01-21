@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Branches',
+    'version': '14',
+    'category': 'branch',
+    # TienNQ
+    'author': 'ERPViet',
+    'summary': 'Multiple Branch/Unit Operation on Sales,Purchases,Accounting/Invoicing,Voucher,Paymemt,POS, Accounting Reports for single company',
+    "description": """""",
+    'website': 'https://erpviet.vn/',
+    'depends': ['base', 'sale', 'purchase', 'stock', 'account', 'point_of_sale', 'purchase_stock','crm'],
+    'data': [
+        'security/branch_security.xml',
+        'security/ir.model.access.csv',
+        'security/purchase.xml',
+        'security/stock.xml',
+        'security/sale.xml',
+        'security/crm.xml',
+        'security/pos.xml',
+        'views/res_branch_view.xml',
+        'views/res_users_view.xml',
+        'views/res_company.xml',
+        'views/purchase/purchase_order.xml',
+        'views/stock/stock_warehouse.xml',
+        'views/stock/stock_location.xml',
+        'views/sale/sale_order.xml',
+        'views/crm/crm_team.xml',
+        'views/pos/pos.xml',
+        'security/account.xml',
+        'views/account/account_move.xml',
+        'views/account/account_payment.xml',
+    ],
+    # 'qweb': [
+    #     'static/src/xml/pos.xml',
+    # ],
+}

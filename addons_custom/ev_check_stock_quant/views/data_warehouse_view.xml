@@ -1,0 +1,255 @@
+<odoo>
+    <data>
+<!--        line-->
+        <record id="data_location_form_view" model="ir.ui.view">
+            <field name="name">data_location_form_view</field>
+            <field name="model">ev.data.location</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="location_id"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="company_id" required="1" readonly="1" force_save="1" groups="base.group_multi_company"
+                                       options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products" name="lines">
+                                <field name="lines" readonly="1">
+                                    <tree>
+                                        <field name="data_location_id" invisible="1"/>
+                                        <field name="location_id"/>
+                                        <field name="product_id"/>
+                                        <field name="uom_id"/>
+                                        <field name="date"/>
+                                        <field name="qty_move"/>
+                                        <field name="qty_quant"/>
+                                        <field name="qty_difference"/>
+                                        <field name="stock_move_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="data_location_list_view" model="ir.ui.view">
+            <field name="name">data_location_list_view</field>
+            <field name="model">ev.data.location</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="location_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_data_location" model="ir.actions.act_window">
+            <field name="name">Data Location</field>
+            <field name="res_model">ev.data.location</field>
+            <field name="type">ir.actions.act_window</field>
+
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--<menuitem id="menu_data_location" name="Data Location" action="action_data_location"
+              parent="stock.menu_stock_inventory_control" sequence="100"
+              groups="stock.group_stock_manager"/>
+-->
+        <!--        Date Warehouse-->
+        <record id="data_warehouse_form_view" model="ir.ui.view">
+            <field name="name">data_warehouse_form_view</field>
+            <field name="model">ev.data.warehouse</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_load_data" string="Load Data" type="object"
+                        states="draft"/>
+                        <button name="action_update" string="Confirm" type="object"
+                        states="get_data"/>
+<!--                        <button name="check_data_daily" string="Daily" type="object"-->
+<!--                        states="draft"/>-->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,get_data,done" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <div class="oe_title">
+                                    <label for="name" class="oe_edit_only"/>
+                                    <h5>
+                                        <field name="name" placeholder="Name" required="1" force_save="1"
+                                               attrs="{'readonly': [('state','!=','draft')]}"/>
+                                    </h5>
+                                </div>
+                            </group>
+                        </group>
+                        <group string="Condition">
+                            <group>
+                                <field name="date" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                                <field name="company_id" required="1" readonly="1" force_save="1" groups="base.group_multi_company"
+                                       options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="lines" string="Location">
+                                <field name="lines" readonly="1">
+                                    <tree>
+                                        <field name="data_warehouse_id" invisible="1"/>
+                                        <field name="location_id"/>
+                                        <field name="date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="data_warehouse_list_view" model="ir.ui.view">
+            <field name="name">data_warehouse_list_view</field>
+            <field name="model">ev.data.warehouse</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_data_warehouse" model="ir.actions.act_window">
+            <field name="name">Data Warehouse</field>
+            <field name="res_model">ev.data.warehouse</field>
+            <field name="type">ir.actions.act_window</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_type': 'start'}
+            </field>
+            <field name="domain">[('type','=','start')]
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_data_warehouse_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="data_warehouse_list_view"/>
+            <field name="act_window_id" ref="action_data_warehouse"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="action_data_warehouse_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="data_warehouse_form_view"/>
+            <field name="act_window_id" ref="action_data_warehouse"/>
+        </record>
+
+<!--        <menuitem id="menu_data_warehouse" name="Data Warehouse" action="action_data_warehouse"-->
+<!--              parent="stock.menu_stock_warehouse_mgmt" sequence="100"-->
+<!--              groups="stock.group_stock_manager"/>-->
+
+<!--        daily-->
+        <record id="action_data_warehouse_daily" model="ir.actions.act_window">
+            <field name="name">Data Warehouse Daily</field>
+            <field name="res_model">ev.data.warehouse</field>
+            <field name="type">ir.actions.act_window</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_type': 'daily'}
+            </field>
+            <field name="domain">[('type','=','daily')]
+            </field>
+        </record>
+
+        <record id="data_warehouse_daily_list_view" model="ir.ui.view">
+            <field name="name">data_warehouse_daily_list_view</field>
+            <field name="model">ev.data.warehouse</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="data_warehouse_daily_form_view" model="ir.ui.view">
+            <field name="name">data_warehouse_daily_form_view</field>
+            <field name="model">ev.data.warehouse</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false">
+                    <header>
+
+                        <button name="action_load_data" string="Load Data" type="object" states="draft"/>
+                        <button name="action_update_daily_manual" string="Confirm" type="object" states="get_data"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,get_data,done" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <div class="oe_title">
+                                    <label for="name" class="oe_edit_only"/>
+                                    <h5>
+                                        <field name="name" placeholder="Name" required="1" force_save="1"
+                                               attrs="{'readonly': [('state','!=','draft')]}"/>
+                                    </h5>
+                                </div>
+                            </group>
+                        </group>
+                        <group string="Condition">
+                            <group>
+                                <field name="date" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                                <field name="company_id" required="1" readonly="1" force_save="1" groups="base.group_multi_company"
+                                       options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="lines" string="Location">
+                                <field name="lines">
+                                    <tree>
+                                        <field name="data_warehouse_id" invisible="1"/>
+                                        <field name="location_id"/>
+                                        <field name="date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_data_warehouse_daily_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="data_warehouse_daily_list_view"/>
+            <field name="act_window_id" ref="action_data_warehouse_daily"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="action_data_warehouse_daily_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="data_warehouse_daily_form_view"/>
+            <field name="act_window_id" ref="action_data_warehouse_daily"/>
+        </record>
+
+        <menuitem id="menu_data_warehouse_daily" name="Data Warehouse Daily" action="action_data_warehouse_daily"
+              parent="stock.menu_stock_warehouse_mgmt" sequence="100"
+              groups="stock.group_stock_manager"/>
+
+    </data>
+</odoo>

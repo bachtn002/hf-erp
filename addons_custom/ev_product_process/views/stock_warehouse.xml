@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_warehouse_form_inherit" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.inherit</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="x_address_warehouse"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_stock_warehouse_process_form_inherit" model="ir.ui.view">
+        <field name="name">stock.warehouse.process.form.inherit</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="ev_stock_custom.view_stock_warehouse_location_transfer_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_config']//field[@name='x_location_transfer_id']" position="before">
+                 <field name="x_process_warehouse" domain="[('usage','=','production')]"
+                   options="{'no_create':1, 'no_create_edit':1}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

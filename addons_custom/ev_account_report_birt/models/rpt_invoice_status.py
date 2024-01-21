@@ -1,0 +1,60 @@
+import odoo.tools.config as config
+
+from odoo import api, models, fields
+from odoo.exceptions import ValidationError
+
+
+class RPTInvoiceStatus(models.TransientModel):
+    _name = 'rpt.invoice.status'
+
+    from_date = fields.Date('From date')
+    to_date = fields.Date('To date')
+    status = fields.Selection([
+        ('purchase', 'Invoice Purchase'),
+        ('return', 'Invoice return'), ]
+        , string='Status Invoice', default='purchase'
+    )
+
+    def _get_param(self):
+        birt_url = config['birt_url'] or '0'
+        if birt_url == '0':
+            raise exceptions.ValidationError("No config birt_url!")
+        date_from = self.from_date.strftime('%d/%m/%Y')
+        to_date = self.to_date.strftime('%d/%m/%Y')
+        param_str = {
+            '&from_date': date_from,
+            '&to_date': to_date,
+        }
+        report_name = ''
+        if self.status == 'purchase':
+            report_name = "rpt_invoice_status_purchase.rptdesign"
+        else:
+            report_name = "rpt_invoice_status_return.rptdesign"
+        birt_link = birt_url + report_name
+        return birt_link, param_str
+
+    def action_export_report(self):
+        birt_link, param_str = self._get_param()
+        return {
+            "type": "ir.actions.client",
+            'name': 'Diffrence In Out',
+            'tag': 'BirtViewerActionCurrent',
+            'target': 'self',
+            'context': {
+                'birt_link': birt_link,
+                'payload_data': param_str,
+            }
+        }
+
+    def action_report_excel(self):
+        birt_link, param_str = self._get_param()
+        return {
+            "type": "ir.actions.client",
+            'name': 'Diffrence In Out',
+            'tag': 'BirtViewerActionCurrent',
+            'target': 'self',
+            'context': {
+                'birt_link': birt_link + '&__format=xlsx',
+                'payload_data': param_str,
+            }
+        }

@@ -1,0 +1,182 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-17 10:27+0000\n"
+"PO-Revision-Date: 2021-09-17 10:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__code
+msgid "Code"
+msgstr "Mã vùng"
+
+#. module: ev_stock_custom
+#: model:ir.model,name:ev_stock_custom.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields.selection,name:ev_stock_custom.selection__stock_location__x_type_warehouse__consumable_supplies
+msgid "Consumable Supplies"
+msgstr "Kho vật tư tiêu hao"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_product_product__display_name
+#: model:ir.model.fields,field_description:ev_stock_custom.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location__display_name
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__display_name
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_product_product__id
+#: model:ir.model.fields,field_description:ev_stock_custom.field_res_company__id
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location__id
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_picking__id
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__id
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model,name:ev_stock_custom.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Kiểm kê"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_product_product____last_update
+#: model:ir.model.fields,field_description:ev_stock_custom.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location____last_update
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region____last_update
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse__x_location_transfer_id
+msgid "Location Transfer"
+msgstr "Địa điểm trung chuyển"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location__x_code
+msgid "Location's Code"
+msgstr "Mã Địa điểm"
+
+#. module: ev_stock_custom
+#: model:ir.model.constraint,message:ev_stock_custom.constraint_stock_location_code_location_company_uniq
+msgid "Mã Địa điểm phải là duy nhất với mỗi công ty"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_region__name
+msgid "Name"
+msgstr ""
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_res_company__x_not_export_negative
+msgid "Not export negative"
+msgstr "Không cho xuất âm"
+
+#. module: ev_stock_custom
+#: model:ir.model,name:ev_stock_custom.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse__code
+msgid "Short Name"
+msgstr "Tên viêt tắt"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,help:ev_stock_custom.field_stock_warehouse__code
+msgid "Short name used to identify your warehouse"
+msgstr "Tên viết tắt được sử dụng để xác định kho hàng"
+
+#. module: ev_stock_custom
+#: model:ir.actions.act_window,name:ev_stock_custom.action_stock_region
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location__x_region_id
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse__x_stock_region_id
+#: model:ir.ui.menu,name:ev_stock_custom.menu_stock_region
+msgid "Stock Region"
+msgstr "Vùng miền"
+
+#. module: ev_stock_custom
+#: code:addons/ev_stock_custom/models/stock_location.py:0
+#, python-format
+msgid "The code of the location must be unique per company!"
+msgstr "Mã Địa điểm phải là duy nhất với mỗi công ty"
+
+#. module: ev_stock_custom
+#: model:ir.model.constraint,message:ev_stock_custom.constraint_stock_region_code_uniq
+msgid "The code region already exists in the system."
+msgstr "Mã vùng đã tồn tại trong hệ thống"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields.selection,name:ev_stock_custom.selection__stock_location__x_type_warehouse__tool_warehouse
+msgid "Tool Warehouse"
+msgstr "Kho công cụ, dụng cụ"
+
+#. module: ev_stock_custom
+#: model:ir.model,name:ev_stock_custom.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location__x_type_warehouse
+msgid "Type warehouse"
+msgstr "Loại kho"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_warehouse__user_ids
+#: model_terms:ir.ui.view,arch_db:ev_stock_custom.stock_warehouse_users_form_inherit
+msgid "Users Access"
+msgstr "Nhân viên"
+
+#. module: ev_stock_custom
+#: model:ir.model,name:ev_stock_custom.model_stock_warehouse
+#: model:ir.model.fields,field_description:ev_stock_custom.field_stock_location__x_warehouse_id
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_stock_custom
+#: model:ir.model.fields.selection,name:ev_stock_custom.selection__stock_location__x_type_warehouse__warehouses
+msgid "Warehouses"
+msgstr "Kho hàng hóa"
+
+#. module: ev_stock_custom
+#: model:ir.model,name:ev_stock_custom.model_stock_region
+msgid "stock.region"
+msgstr ""

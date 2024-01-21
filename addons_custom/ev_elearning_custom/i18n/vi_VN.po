@@ -1,0 +1,781 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_elearning_custom
+#   * survey
+# 	* website_slides_survey
+# 	* website_slides
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-23 09:39+0000\n"
+"PO-Revision-Date: 2022-09-23 09:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_elearning_custom
+#: model:mail.template,body_html:ev_elearning_custom.email_notify_exp_certificated_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Hi ${object.partner_id.name or 'participant'},<br/><br/>\n"
+"\n"
+"                        Your ${object.survey_id.title} certificate was expired on ${object.x_date_expired}. <br/>\n"
+"                        According to HomeFarm's rule, you have to retake the exam to renew your certificate.<br/>\n"
+"                        <b>EXAM NOW </b>\n"
+"                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                            <a href=\"${(object.get_start_url()) | safe}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                            Start Certification\n"
+"                            </a>\n"
+"                        </div>\n"
+"\n"
+"                        If you have any questions, you can contact the training department for support.<br/><br/>\n"
+"\n"
+"                        Thanks,<br/>\n"
+"                        Admin.\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Hi ${object.partner_id.name or 'participant'},<br/><br/>\n"
+"\n"
+"                        Chứng chỉ ${object.survey_id.title} của bạn đã hết hạn vào ngày ${object.x_date_expired}. <br/>\n"
+"                        Theo quy định của Homefarm, bạn cần phải thi để gia hạn lại chứng chỉ.<br/>\n"
+"                        <b>THI NGAY</b>\n"
+"                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                            <a href=\"${(object.get_start_url()) | safe}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                            Bắt đầu thi\n"
+"                            </a>\n"
+"                        </div>\n"
+"\n"
+"                        Nếu bạn có bất kì câu hỏi, thắc mắc nào có thể liên hệ bộ phận đào tạo để được hỗ trợ.<br/><br/>\n"
+"\n"
+"                        Thanks,<br/>\n"
+"                        Admin.\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields.selection,name:ev_elearning_custom.selection__survey_user_input__x_certificate_state__available
+msgid "Available"
+msgstr "Có hiệu lực"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_survey__x_certificate_duration
+msgid "Certificate Duration"
+msgstr "Thời hạn chứng chỉ (tháng)"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_user_input__x_date_expired
+msgid "Date Expired"
+msgstr "Ngày hết hạn"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_survey__display_name
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_user_input__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields.selection,name:ev_elearning_custom.selection__survey_user_input__x_certificate_state__expired
+msgid "Expired"
+msgstr "Hết hạn"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_survey__id
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_user_input__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_survey____last_update
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_user_input____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_elearning_custom
+#: model:mail.template,subject:ev_elearning_custom.email_notify_exp_certi_template
+msgid "Notify Expired Certificated"
+msgstr "Thông báo Hết hạn Chứng chỉ"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_user_input__x_certificate_state
+msgid "State"
+msgstr "Trạng thái chứng chỉ"
+
+#. module: ev_elearning_custom
+#: model:ir.model,name:ev_elearning_custom.model_survey_survey
+msgid "Survey"
+msgstr "Khảo sát"
+
+#. module: ev_elearning_custom
+#: model:ir.model,name:ev_elearning_custom.model_survey_user_input
+msgid "Survey User Input"
+msgstr "Dữ liệu người dùng nhập vào khảo sát"
+
+#. module: ev_elearning_custom
+#: model:ir.actions.server,name:ev_elearning_custom.ir_cron_expired_certificated_ir_actions_server
+#: model:ir.cron,cron_name:ev_elearning_custom.ir_cron_expired_certificated
+#: model:ir.cron,name:ev_elearning_custom.ir_cron_expired_certificated
+msgid "Survey User Input: Job Check Expired Certificated"
+msgstr "Chứng chỉ: Job kiểm tra hết hạn chứng chỉ."
+
+#. module: ev_elearning_custom
+#: model_terms:ir.ui.view,arch_db:ev_elearning_custom.survey_form_inherit
+msgid "Import Questions and Answers"
+msgstr "Nhập Câu hỏi và Câu trả lời"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_question.py:0
+#, python-format
+msgid "Import Template for Survey Question"
+msgstr "Mẫu nhập Câu hỏi và Câu trả lời"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_start
+msgid "<span>Time limit for this survey: </span>"
+msgstr "<span>Thời gian thi: </span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_start
+msgid "Start Certification"
+msgstr "Bắt đầu thi"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_in_progress
+msgid ""
+"<span class=\"font-weight-bold text-muted ml-2 d-none d-md-inline\"> or "
+"press Enter</span>"
+msgstr ""
+"<span class=\"font-weight-bold text-muted ml-2 d-none d-md-inline\"> Hoặc "
+"ấn Enter</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_in_progress
+msgid ""
+"<span class=\"font-weight-bold text-muted ml-2 d-none d-md-inline\">or press"
+" Enter</span>"
+msgstr ""
+"<span class=\"font-weight-bold text-muted ml-2 d-none d-md-inline\">Hoặc ấn"
+" Enter</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_start
+msgid ""
+"<span class=\"o_survey_enter font-weight-bold text-muted ml-2\">or press "
+"Enter</span>"
+msgstr ""
+"<span class=\"o_survey_enter font-weight-bold text-muted ml-2\">Hoặc ấn "
+"Enter</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_progression
+msgid "% completed"
+msgstr "% hoàn thành"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (sao chép)"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_done
+msgid "Congratulations, you have passed the test!"
+msgstr "Chúc mừng, bạn đã vượt qua bài thi!"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_done
+msgid ""
+"<i class=\"fa fa-fw fa-trophy\" role=\"img\" aria-label=\"Download certification\" title=\"Download certification\"/>\n"
+"                                        Download certification"
+msgstr ""
+"<i class=\"fa fa-fw fa-trophy\" role=\"img\" aria-label=\"Download certification\" title=\"Download certification\"/>\n"
+"                                        Tải chứng chỉ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__datetime
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__datetime
+msgid "Datetime"
+msgstr "Ngày giờ"
+
+#. module: ev_elearning_custom
+#: model_terms:ir.ui.view,arch_db:ev_elearning_custom.survey_form_inherit
+msgid "Download Import Template"
+msgstr "Tải mẫu nhập câu hỏi"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_survey__x_field_binary_import_question_answer
+msgid "Field Binary Import"
+msgstr ""
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_survey_survey__x_field_binary_name_question_answer
+msgid "Field Binary Name"
+msgstr ""
+
+#. module: ev_elearning_custom
+#: model_terms:ir.ui.view,arch_db:ev_elearning_custom.survey_form_inherit
+msgid "File must in the format of xls or xlsx"
+msgstr "File phải có định dạnh .xls hoặc .xlsx"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid ""
+"File not found or not right format. Please check format file .xls or .xlsx"
+msgstr ""
+"File không tìm thấy hoặc không đúng định dạng. Vui lòng kiểm tra định dạng file .xls hoặc .xlsx"
+
+#. module: ev_elearning_custom
+#: model_terms:ir.ui.view,arch_db:ev_elearning_custom.survey_form_inherit
+msgid "Import"
+msgstr "Nhập"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value in row "
+msgstr "Dữ liệu không hợp lệ ở dòng "
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value question_type field"
+msgstr "Dữ liệu cho trường Loại câu hỏi không hợp lệ!"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "See results"
+msgstr "Xem kết quả"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Certified"
+msgstr "Chứng chỉ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__progression_mode
+msgid "Progression Mode"
+msgstr "Chế Độ Tiến Triển"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Survey Time Limit"
+msgstr "Thời Gian Thi"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Back Button"
+msgstr "Nút trở lại"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__one_page
+msgid "One page with all the questions"
+msgstr "Một trang với tất cả câu hỏi"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__page_per_section
+msgid "One page per section"
+msgstr "Mỗi trang một phần"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__page_per_question
+msgid "One page per question"
+msgstr "Mỗi trang một câu hỏi"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__scoring_success_min
+msgid "Success %"
+msgstr "% Thành công"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification
+msgid "Is a Certification"
+msgstr "Là chứng chỉ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Certification Template"
+msgstr "Mẫu chứng chỉ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification_give_badge
+msgid "Give Badge"
+msgstr "Trao huy hiệu"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification_badge_id
+msgid "Certification Badge"
+msgstr "Huy hiệu chứng chỉ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Candidates"
+msgstr "Ứng cử viên"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_access_mode
+#: model:ir.model.fields,field_description:survey.field_survey_survey__access_mode
+msgid "Access Mode"
+msgstr "Chế độ truy cập"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__access_mode__public
+msgid "Anyone with the link"
+msgstr "Bất cứ ai có liên kết"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_users_login_required
+#: model:ir.model.fields,field_description:survey.field_survey_survey__users_login_required
+msgid "Login Required"
+msgstr "Yêu cầu đăng nhập"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Attempts Limit"
+msgstr "Giới hạn lượt thi"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid ""
+"<span attrs=\"{'invisible': [('is_attempts_limited', '=', False)]}\"> "
+"attempts</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('is_attempts_limited', '=', False)]}\"> "
+"lượt</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid ""
+"<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> "
+"minutes</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> "
+"phút</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid ""
+"<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> "
+"seconds</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> "
+"giây</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Live Session"
+msgstr "Phiên trực tiếp"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__session_speed_rating
+msgid "Reward quick answers"
+msgstr "Phần thưởng cho câu hỏi nhanh"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__session_code
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Session Code"
+msgstr "Mã phiên"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_button_form_view
+msgid "This is a test survey."
+msgstr "Đây là cuộc khảo sát thử nghiệm"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_done
+msgid "Unfortunately, you have failed the test."
+msgstr "Thật không may, bạn đã thất bại trong bài thi."
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_button_retake
+msgid "<span>Number of attemps left</span>:"
+msgstr "<span>Số lần thử còn lại</span>:"
+
+#. module: survey
+#. openerp-web
+#: code:addons/survey/static/src/js/survey_result.js:0
+#, python-format
+msgid "Overall Performance %.2f%s"
+msgstr "Tổng hiệu suất %.2f%s"
+
+#. module: survey
+#: code:addons/survey/models/survey_user.py:0
+#, python-format
+msgid "Partially"
+msgstr "Một phần"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.action_survey_user_input
+#: model:ir.ui.menu,name:survey.menu_survey_type_form1
+#: model:ir.ui.menu,name:survey.survey_menu_user_inputs
+msgid "Participations"
+msgstr "Tham gia"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.survey_user_input_line_action
+#: model:ir.ui.menu,name:survey.menu_survey_response_line_form
+msgid "Detailed Answers"
+msgstr "Câu trả lời chi tiết"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.survey_question_answer_action
+#: model:ir.ui.menu,name:survey.menu_survey_label_form1
+msgid "Suggested Values"
+msgstr "Giá trị được đề xuất"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__attempts_number
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
+msgid "Attempt n°"
+msgstr "Số lượt"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__scoring_percentage
+msgid "Score (%)"
+msgstr "Điểm (%)"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__scoring_success
+msgid "Quizz Passed"
+msgstr "Vượt qua kiểm tra"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Quizz passed"
+msgstr "Vượt qua kiểm tra"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__no_scoring
+msgid "No scoring"
+msgstr "Không có điểm"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__scoring_with_answers
+msgid "Scoring with answers at the end"
+msgstr "Chấm điểm với câu trả lời ở cuối"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__scoring_without_answers
+msgid "Scoring without answers at the end"
+msgstr "Chấm điểm mà không có câu trả lời ở cuối"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_selection__all
+msgid "All questions"
+msgstr "Tất cả câu hỏi"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_selection__random
+msgid "Randomized per section"
+msgstr "Ngẫu nhiên cho mỗi phần"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value answer column in row %s"
+msgstr "Giá trị \"Đáp án đúng\" không hợp lệ ở dòng %s"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value answer_score row %s"
+msgstr "Giá trị \"Số điểm cho lựa chọn\" không hợp lệ ở dòng %s"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value in row %s"
+msgstr "Có giá trị không hợp lệ ở dòng %s"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value question_type field in row %s"
+msgstr "Giá trị \"Loại câu hỏi\" không hợp lệ ở dòng %s"
+
+#. module: survey
+#: model:mail.template,subject:survey.mail_template_user_input_invite
+msgid "Participate to ${object.survey_id.title} survey"
+msgstr "Tham gia khảo sát ${object.survey_id.title}"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid value selection answer in row %s"
+msgstr "Giá trị cho đáp án lựa chọn không hợp lệ ở dòng %s"
+
+#. module: survey
+#: model:mail.template,body_html:survey.mail_template_user_input_invite
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Dear ${object.partner_id.name or 'participant'}<br/><br/>\n"
+"        % if object.survey_id.certification:\n"
+"            You have been invited to take a new certification.\n"
+"        % else:\n"
+"            We are conducting a survey and your response would be appreciated.\n"
+"        % endif\n"
+"        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"            <a href=\"${(object.get_start_url()) | safe}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                % if object.survey_id.certification:\n"
+"                    Start Certification\n"
+"                % else:\n"
+"                    Start Survey\n"
+"                % endif\n"
+"            </a>\n"
+"        </div>\n"
+"        % if object.deadline:\n"
+"            Please answer the survey for ${format_date(object.deadline)}.<br/><br/>\n"
+"        % endif\n"
+"        Thank you for your participation.\n"
+"    </p>\n"
+"</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Dear ${object.partner_id.name or 'participant'}<br/><br/>\n"
+"        % if object.survey_id.certification:\n"
+"            Bạn đã được mời thực hiện một chứng chỉ mới.\n"
+"        % else:\n"
+"            Chúng tôi đang tiến hành một cuộc khảo sát và phản hồi của bạn sẽ được đánh giá cao.\n"
+"        % endif\n"
+"        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"            <a href=\"${(object.get_start_url()) | safe}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                % if object.survey_id.certification:\n"
+"                    Bắt đầu thi.\n"
+"                % else:\n"
+"                    Bắt đầu khảo sát.\n"
+"                % endif\n"
+"            </a>\n"
+"        </div>\n"
+"        % if object.deadline:\n"
+"            Vui lòng thi trước ${format_date(object.deadline)}.<br/><br/>\n"
+"        % endif\n"
+"        Cảm ơn bạn đã tham gia.\n"
+"    </p>\n"
+"</div>\n"
+"            "
+
+#. module: ev_elearning_custom
+#: model:mail.template,subject:ev_elearning_custom.email_notify_exp_certificated_template
+msgid "Notify Expired Certificated"
+msgstr "Thông báo hết hạn chứng chỉ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__existing_mode
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Handle existing"
+msgstr "Xử lý hiện có"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_invite__existing_mode__new
+msgid "New invite"
+msgstr "Lời mời mới"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_invite__existing_mode__resend
+msgid "Resend invite"
+msgstr "Gửi lại lời mời"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_start_url
+msgid "Survey URL"
+msgstr "URL khảo sát"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__deadline
+msgid "Answer deadline"
+msgstr "Thời hạn thi"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view_classic
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view_modern
+msgid "Certification Failed"
+msgstr "Chứng nhận thất bại"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Add a question"
+msgstr "Thêm một câu hỏi"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__question_and_page_ids
+msgid "Sections and Questions"
+msgstr "Nhóm và Câu hỏi"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "<span class=\"text-muted\">Success</span>"
+msgstr "<span class=\"text-muted\">Thành công</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "<span class=\"text-muted\">Answers</span>"
+msgstr "<span class=\"text-muted\">Câu trả lời</span>"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__session_link
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Session Link"
+msgstr "Liên kết phiên"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Create Live Session"
+msgstr "Tạo phiên trực tiếp"
+
+#. module: survey
+#. openerp-web
+#: code:addons/survey/models/survey_question.py:0
+#: code:addons/survey/static/src/js/survey_form.js:0
+#: code:addons/survey/tests/test_survey.py:0
+#, python-format
+msgid "This is not a date"
+msgstr "Đây không phải ngày đúng"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_done
+msgid "You received the badge"
+msgstr "Bạn đã nhận được huy hiệu"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Correct Answer"
+msgstr "Câu trả lời đúng"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__is_conditional
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Conditional Display"
+msgstr "Hiển thị có điều kiện"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__triggering_question_id
+msgid "Triggering Question"
+msgstr "Câu hỏi kích hoạt"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__triggering_answer_id
+msgid "Triggering Answer"
+msgstr "Câu trả lời kích hoạt"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__triggering_question_id
+msgid ""
+"Question containing the triggering answer to display the current question."
+msgstr ""
+"Câu hỏi chứa câu trả lời kích hoạt để hiển thị câu hỏi hiện tại."
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "'Title' field cannot be empty in row %s"
+msgstr "Cột 'Tên câu hỏi/ Nhóm câu hỏi' không được để trống ở dòng %s"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid 'choice answer' field in row %s"
+msgstr "Cột 'Đáp án lựa chọn' không hợp lệ ở dòng %s"
+
+#. module: ev_elearning_custom
+#: code:addons/ev_elearning_custom/models/survey_survey.py:0
+#, python-format
+msgid "Invalid 'is_correct' field in row %s"
+msgstr "Cột 'Là câu trả lời đúng' không hợp lệ ở dòng %s"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
+msgid "Resend Invitation"
+msgstr "Gửi lại lời mời"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__random_questions_count
+msgid "Random questions count"
+msgstr "Số lượng câu hỏi ngẫu nhiên"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_void_content
+msgid ""
+"Please make sure you have at least one question in your survey. You also "
+"need at least one section if you chose the \"Page per section\" layout.<br/>"
+msgstr ""
+"Hãy đảm bảo rằng bạn có ít nhất một câu hỏi trong cuộc khảo sát của mình. Bạn cũng "
+"cần ít nhất một phần nếu bạn chọn bố cục \"Trang trên mỗi phần\".<br/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_void_content
+msgid "survey is void"
+msgstr "khảo sát bị từ chối"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_void_content
+msgid "Edit in backend"
+msgstr "Kiểm tra lại"
+
+#. module: ev_elearning_custom
+#: model:ir.model.fields,field_description:ev_elearning_custom.field_slide_channel__x_day_to_complete
+msgid "Day to complete"
+msgstr "Số ngày cần hoàn thành"
+
+#. module: website_slides_survey
+#. openerp-web
+#: code:addons/website_slides_survey/static/src/xml/website_slides_fullscreen.xml:0
+#: model_terms:ir.ui.view,arch_db:website_slides_survey.slide_content_detailed
+#, python-format
+msgid "Test Certification"
+msgstr "Tham gia thi"
+
+#. module: website_slides_survey
+#: model_terms:ir.ui.view,arch_db:website_slides_survey.slide_content_detailed
+msgid "Begin Certification"
+msgstr "Tham gia thi"
+
+#. module: website_slides_survey
+#: model_terms:ir.ui.view,arch_db:website_slides_survey.survey_fill_form_done_inherit_website_slides
+msgid "Go back to course"
+msgstr "Quay lại khóa học"
+
+#. module: website_slides_survey
+#: model_terms:ir.ui.view,arch_db:website_slides_survey.courses_home_inherit_survey
+msgid "<span class=\"ml-1\">Certifications</span>"
+msgstr "<span class=\"ml-1\">Chứng chỉ</span>"
+
+#. module: website_slides_survey
+#: model_terms:ir.ui.view,arch_db:website_slides_survey.all_user_card
+msgid "<span class=\"text-muted small font-weight-bold\">Certifications</span>"
+msgstr "<span class=\"text-muted small font-weight-bold\">Chứng chỉ</span>"
+
+#. module: website_slides_survey
+#: model_terms:ir.ui.view,arch_db:website_slides_survey.top3_user_card
+msgid "<span class=\"text-muted\">Certifications</span>"
+msgstr "<span class=\"text-muted\">Chứng chỉ</span>"
+
+#. module: website_slides
+#: model_terms:ir.ui.view,arch_db:website_slides.course_nav
+msgid "Nav"
+msgstr "Menu"
+
+#. module: website_slides
+#: model:ir.model.fields,field_description:website_slides.field_res_config_settings__module_website_slides_survey
+#: model_terms:ir.ui.view,arch_db:website_slides.courses_all
+msgid "Certifications"
+msgstr "Chứng chỉ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_button_retake
+msgid "Retry"
+msgstr "Thi lại"

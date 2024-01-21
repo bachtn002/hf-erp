@@ -1,0 +1,349 @@
+<odoo>
+    <data>
+        <record id="view_report_pos_form" model="ir.ui.view">
+            <field name="name">Pos report</field>
+            <field name="model">pos.order.report</field>
+            <field name="arch" type="xml">
+                <form string="Pos report">
+                    <header>
+                        <!--                        <button name="action_print" string="Print Excel" type="object"-->
+                        <!--                        attrs="{'invisible': [('report_type', '!=', 'order_line')]}"/>-->
+                        <!--                        <button name="action_print_order" string="Print Excel" type="object"-->
+                        <!--                        attrs="{'invisible': [('report_type', '!=', 'order')]}"/>-->
+                        <!--                        <button name="action_print_product" string="Print Excel" type="object"-->
+                        <!--                        attrs="{'invisible': [('report_type', '!=', 'product')]}"/>-->
+                    </header>
+                    <sheet>
+                        <h2 class="text-center">SALE REPORT</h2>
+                        <group string="Report Condition">
+                            <group>
+                                <field name="from_date" required="1"/>
+                                <field name="pos_shop_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'invisible': [('x_full_pos', '=', True)], 'required': [('x_full_pos', '!=', True)]}"/>
+                                <field name="x_full_pos"
+                                       attrs="{'invisible': [('report_type', '!=', 'payment_method')]}"/>
+                            </group>
+                            <group>
+                                <field name="to_date" required="1"/>
+                                <!--                                <field name="source_id" options="{'no_create':1, 'no_create_edit':1}"/>-->
+                            </group>
+                        </group>
+                        <group string="Report Type">
+                            <group>
+                                <field name="report_type" required="1"/>
+                            </group>
+                            <group>
+                                <field name="payment_method_id"
+                                       attrs="{'invisible': ['|',('report_type', '!=', 'payment_method'), ('payment_method_cash', '=', True)]}"
+                                       options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="payment_method_cash"
+                                       attrs="{'invisible': [('report_type', '!=', 'payment_method')]}"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="action_filter_all" string="Report" type="object" class="btn-primary"/>
+                            -
+                            <button name="print_pos_order_xlsx" string="Report xlsx" type="object"
+                                    class="btn-primary"/>
+                        </footer>
+                        <notebook>
+                            <page string="Order" attrs="{'invisible': [('report_type', '!=', 'order')]}">
+                                <field name="order_lines" readonly="1">
+                                    <tree>
+                                        <field name="order_id"/>
+                                        <field name="date"/>
+                                        <field name="customer_id"/>
+                                        <field name="user_id"/>
+                                        <field name="quantity"/>
+                                        <field name="amount_total"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Order line" attrs="{'invisible': [('report_type', '!=', 'order_line')]}">
+                                <field name="order_line_lines" readonly="1">
+                                    <tree>
+                                        <field name="order_id"/>
+                                        <field name="customer_id"/>
+                                        <field name="phone"/>
+                                        <field name="product_id"/>
+                                        <field name="price_unit"/>
+                                        <field name="quantity"/>
+                                        <field name="amount_total"/>
+                                        <field name="discount"/>
+                                    </tree>
+
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+
+                            <page string="Product" attrs="{'invisible': [('report_type', '!=', 'product')]}">
+                                <field name="product_lines" readonly="1">
+                                    <tree>
+                                        <field name="category_id"/>
+                                        <field name="product_id"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                        <field name="discount"/>
+                                        <field name="amount_total"/>
+                                        <field name="sale_staff"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+
+                            <page string="Categories" attrs="{'invisible': [('report_type', '!=', 'categories')]}">
+                                <field name="product_categories_lines" readonly="1">
+                                    <tree>
+                                        <field name="category_id"/>
+                                        <field name="quantity"/>
+                                        <field name="amount_total"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+
+                            <page string="Saleman" attrs="{'invisible': [('report_type', '!=', 'user')]}">
+                                <field name="user_lines" readonly="1">
+                                    <tree>
+                                        <field name="user_id"/>
+                                        <field name="total_order"/>
+                                        <field name="total_quantity"/>
+                                        <field name="amount_total"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+                            <page string="Payment Method"
+                                  attrs="{'invisible': [('report_type', '!=', 'payment_method')]}">
+                                <field name="payment_method_lines" readonly="1">
+                                    <tree>
+                                        <field name="x_pos_shop_id"/>
+                                        <field name="pos_channel_id"/>
+                                        <field name="pos_report_id" invisible="1"/>
+                                        <field name="order_id"/>
+                                        <field name="date"/>
+                                        <field name="customer_id"/>
+                                        <field name="user_id"/>
+                                        <field name="payment_method_id"/>
+                                        <field name="amount_payment"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+                            <page string="Payments">
+                                <field name="payment_lines" readonly="1">
+                                    <tree>
+                                        <field name="pos_report_id" invisible="1"/>
+                                        <field name="payment_method_id"/>
+                                        <!--                                        <field name="currency_id"/>-->
+                                        <!--                                        <field name="rate"/>-->
+                                        <!--                                        <field name="pos_amount_currency"/>-->
+                                        <field name="amount" string=""/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="total_order" readonly="1"/>
+                                    <field name="total_order_sale" readonly="1"/>
+                                    <field name="total_order_refund" readonly="1"/>
+                                    <field name="total_quantity_sale" readonly="1"/>
+                                    <field name="total_quantity_refund" readonly="1"/>
+                                    <field name="total_quantity" widget="monetary" readonly="1"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_sale"/>
+                                    </div>
+                                    <field name="total_amount_sale" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount_refund"/>
+                                    </div>
+                                    <field name="total_amount_refund" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_amount"/>
+                                    </div>
+                                    <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_pos" model="ir.actions.act_window">
+            <field name="name">Pos Report</field>
+            <field name="res_model">pos.order.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_report_pos_form"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="menu_point_report"
+                  name="Report"
+                  parent="point_of_sale.menu_point_root"
+                  sequence="90"
+                  groups="point_of_sale.group_pos_user"/>
+
+        <menuitem id="menu_report_pos_order" name="Pos order report" action="action_report_pos"
+                  parent="menu_point_report" sequence="3" groups="point_of_sale.group_pos_user"/>
+        <menuitem id="point_of_sale.menu_report_pos_order_all" name="Orders"
+                  action="point_of_sale.action_report_pos_order_all"
+                  parent="menu_point_report" sequence="1"/>
+        <menuitem id="point_of_sale.menu_report_order_details"
+                  name="Sales Details"
+                  action="point_of_sale.action_report_pos_details"
+                  parent="menu_point_report"
+                  sequence="2"/>
+
+    </data>
+</odoo>

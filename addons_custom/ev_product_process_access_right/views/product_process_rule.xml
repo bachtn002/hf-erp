@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+
+        <record id="product_process_rule_form_view" model="ir.ui.view">
+            <field name="name">product_process_rule_form.inherit.ev_product_process_access_right</field>
+            <field name="model">product.process.rule</field>
+            <field name="inherit_id" ref="ev_product_process.product_process_rule_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//sheet/group[1]" position="inside">
+                    <group>
+                        <field name="apply_all_warehouse"/>
+                        <field name="apply_manual_warehouse"/>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Allow warehouses"
+                          attrs="{'invisible': ['|',('apply_all_warehouse', '=', True),('apply_manual_warehouse', '=', False)]}">
+                        <field name="allow_warehouse_ids">
+                            <tree editable="1">
+                                <field name="name" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

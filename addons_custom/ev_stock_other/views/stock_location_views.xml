@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_reason_other_form" model="ir.ui.view">
+		<field name="name">view_reason_other_form</field>
+		<field name="model">stock.location</field>
+		<field name="priority" eval="100"/>
+		<field name="arch" type="xml">
+			<form>
+				<h1>
+					<field name="name" string="Reason" placeholder="Reason for goods receipt or goods issues"/>
+				</h1>
+				<field name="location_id" invisible="1"/>
+				<field name="x_is_reason" invisible="1"/>
+				<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" invisible="1"/>
+				<group>
+					<group>
+						<field name="x_code" required="1" string="Reason Code"/>
+						<field name="x_type_other" required="1"/>
+						<field name="x_account_expense_item"/>
+					</group>
+				</group>
+				<group string="Accounting Information">
+					<group>
+						<field name="valuation_in_account_id" options='{"no_open": True, "no_create": True}' string="Reciprocal Account"
+						       attrs="{'invisible': [('x_type_other', '=', 'incoming')],'required': [('x_type_other', '=', 'outgoing')]}"/>
+					</group>
+					<group>
+						<field name="valuation_out_account_id" options='{"no_open": True, "no_create": True}' string="Reciprocal Account"
+						       attrs="{'invisible': [('x_type_other', '=', 'outgoing')],'required': [('x_type_other', '=', 'incoming')]}"/>
+					</group>
+				</group>
+				<field name="comment" placeholder="External note..."/>
+			</form>
+		</field>
+	</record>
+	
+	<record id="view_reason_other_tree" model="ir.ui.view">
+		<field name="name">view_reason_other_tree</field>
+		<field name="model">stock.location</field>
+		<field name="priority" eval="100"/>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="active" invisible="1"/>
+				<field name="name" string="Reason"/>
+				<field name="company_id" groups="base.group_multi_company"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_reason_other_search" model="ir.ui.view">
+	   <field name="name">view_reason_other_search</field>
+	   <field name="model">stock.location</field>
+	    <field name="arch" type="xml">
+			<search string="Reason goods receipt and goods issues">
+				<field name="name" string="Reason name"/>
+				<field name="x_code" string="Reason code"/>
+	    	</search>
+	   </field>
+	</record>
+	
+	<record id="action_reason_other" model="ir.actions.act_window">
+		<field name="name">Reason goods receipt and goods issues</field>
+		<field name="res_model">stock.location</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('view_reason_other_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_reason_other_form')})]"/>
+		<field name="domain">[('usage','=','inventory'),('x_is_reason','=',True)]</field>
+		<field name="search_view_id" ref="view_reason_other_search"/>
+		<field name="context">
+			{
+			'default_usage': 'inventory',
+			'default_x_is_reason': True
+			}
+		</field>
+	</record>
+	<menuitem action="action_reason_other" id="menu_reason_other"
+	          parent="account.menu_finance_entries_actions" sequence="120" groups="account.group_account_user,account.group_account_manager"/>
+</odoo>

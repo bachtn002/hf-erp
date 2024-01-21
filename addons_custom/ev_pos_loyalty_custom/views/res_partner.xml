@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="res_partner_loyalty_custom_form_inherit" model="ir.ui.view">
+            <field name="name">Res partner Loyalty Custom form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sale']" position="before">
+                    <group string="Sàn thương mại điện tử"
+                           name="x_ecommerce"
+                           priority="2">
+                        <field name="x_ecommerce"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

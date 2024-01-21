@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <template id="ev_payment_qrcode_assets" inherit_id="point_of_sale.assets" name="ev_payment_qrcode_assets.assets">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/ev_payment_qrcode/static/src/js/PaymentScreen.js"/>
+                <script type="text/javascript" src="/ev_payment_qrcode/static/src/js/QRCodePopup.js"/>
+                <script type="text/javascript" src="/ev_payment_qrcode/static/src/js/QRCodeModel.js"/>
+<!--                <script type="text/javascript" src="/ev_payment_qrcode/static/src/js/NumpadInputKeyboard.js"/>-->
+                <link rel="stylesheet" href="/ev_payment_qrcode/static/src/css/qrcode.css"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

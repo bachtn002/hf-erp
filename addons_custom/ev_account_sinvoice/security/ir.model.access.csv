@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_create_sinvoice_lot,access_create_sinvoice_lot,model_create_sinvoice_lot,,1,1,1,1
+access_account_sinvoice,access_account_sinvoice,model_account_sinvoice,,1,1,1,1

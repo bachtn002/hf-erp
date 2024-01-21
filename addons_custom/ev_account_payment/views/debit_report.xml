@@ -1,0 +1,372 @@
+<odoo>
+    <data>
+
+        <template t-name="ev_account_payment.debt_notices_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <div class="page">
+                            <style>
+                                *{
+                                font-family: "Times New Roman";
+                                font-size: 13px;
+                                margin: 0;
+                                padding: 0;
+                                border: 0;
+                                }
+                                div.container{
+                                width: 100%;
+
+                                font-family: arial;
+                                margin-left: 25px;
+
+                                }
+                                div.container .header_a{
+                                width: 65%;
+                                height: 50px;
+                                float: left;
+                                }
+                                div.container .header_b{
+                                float: left;
+                                width: 95%;
+                                height: 35px;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                font-size: 21px;
+                                margin-top: 10px;
+                                }
+                                div.container .main_a{
+                                margin-top: 30px;
+                                float: left;
+                                width: 95%;
+                                border : 1px solid black;
+                                border-bottom: 0px;
+                                }
+                                div.container .main_a .row_1{
+                                border-bottom: 1px solid black;
+                                width: 100%;
+                                height: 160px;
+                                }
+                                div.container .main_a .row_1 .left{
+                                margin-left: 5px;
+                                float: left;
+                                width: 69%;
+                                height: 100%;;
+                                border-right: 1px solid black;
+                                }
+                                div.container .main_a .row_1 .right{
+                                float: left;
+                                width: 29%;
+                                height: 100%;;
+                                margin-left: 5px;
+                                }
+
+                                div.container .main_a .row_2{
+                                margin-left: 5px;
+                                width: 100%;
+                                }
+                                div.container .main_a .row_2 span{
+                                font-weight: bold;
+                                }
+                                div.container .row_3{
+                                width: 95%;
+                                float: left;
+                                border : 1px solid black;
+                                }
+                                div.container .row_3 .a{
+                                height: 100%;
+                                float: left;
+                                text-align: center;
+                                font-weight: bold;
+                                border-right: 1px solid;
+                                }
+                                div.container .row_3 .a p{
+                                margin: 5px 0px 0px 0px;
+                                }
+                                div.container .row_3 .b{
+                                height: 100%;
+                                float: left;
+                                text-align: left;
+                                border-right: 1px solid;
+                                }
+                                div.container .row_3 .b p{
+                                margin: 3px 0px 0px 10px;
+                                }
+                                div.container .row_3 .c{
+                                height: 100%;
+                                float: left;
+                                text-align: right;
+                                border-right: 1px solid;
+                                }
+                                div.container .row_3 .c p{
+                                margin-right: 3px;
+                                }
+                                div.container .footer1{
+                                font-weight: bold;
+                                margin-top: 10px;
+                                float: left;
+                                width: 95%;
+                                height: 40px;
+                                }
+                                div.container .footer1 .a{
+                                font-size: 10px;
+                                font-style: italic;
+                                margin-top: 10px;
+                                font-weight: normal;
+                                }
+                                div.container .footer1 .b{
+                                text-align: center;
+                                float: left;
+                                }
+
+                                table {
+                                border-collapse: collapse;
+                                width: 100%;
+                                }
+
+                                td, th {
+                                border: 1px solid;
+                                }
+                                th{
+                                text-align:center;
+                                line-height: 35px;
+                                }
+                                td{
+                                text-align:right;
+                                padding:3px;
+                                }
+                            </style>
+                            <div class="container">
+                                <div class="header_a">
+                                    <t t-set="company" t-value="o.get_applicant()"/>
+                                    <div style="text-transform: uppercase;">
+                                        <span t-esc="company.name"/>
+                                    </div>
+                                    <div>
+                                        <span t-esc="company.street"/>
+                                    </div>
+                                </div>
+                                <div class="header_b">GIẤY BÁO NỢ</div>
+                                <div class="main_a">
+                                    <div class="row_1">
+                                        <div class="left">
+
+                                            <p style="margin-top: 5px; height: 50px;">Người nhận tiền:
+
+                                                <t t-if="o.x_partner_id">
+                                                    <span t-field="o.x_partner_id.name"/>
+                                                </t>
+                                                <span t-else="">
+                                                    ...........................................................................................
+                                                </span>
+                                            </p>
+                                            <p style="margin-top: -5px;height: 54px;">Địa chỉ:
+                                                <t t-if="o.x_partner_id">
+                                                    <span t-field="o.x_partner_id.street"/>
+                                                    <t t-if="o.x_partner_id.street2">,
+                                                        <span t-field="o.x_partner_id.street2"/>
+                                                    </t>
+                                                    <t t-if="o.x_partner_id.city">,
+                                                        <span t-field="o.x_partner_id.city"/>
+                                                    </t>
+                                                    <t t-if="o.x_partner_id.state_id">,
+                                                        <span t-field="o.x_partner_id.state_id.name"/>
+                                                    </t>
+                                                </t>
+                                                <span t-else="">
+                                                    ...........................................................................................
+                                                </span>
+                                            </p>
+                                            <p style="margin-top: 0px;">Lý do thanh toán:
+                                                <span t-field="o.x_description"/>
+                                            </p>
+                                        </div>
+                                        <div class="right">
+                                            <p style="margin-top: 5px; height: 50px;">Số:
+                                                <span t-field="o.x_name"/>
+                                            </p>
+                                            <p style="margin-top: -5px;height: 54px;">Ngày:
+                                                <span t-field="o.x_date"/>
+                                            </p>
+                                            <p>Tài khoản:
+                                                <span t-esc="o.get_account_credit()"/>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row_2">
+                                        <p style="margin-top: 5px;">Số tài khoản đơn vị trả tiền:
+                                            <t t-set="bank_acc_number" t-value="o.get_acc_number2()"/>
+                                            <span style="font-height: bold"
+                                                  t-esc="bank_acc_number.bank_account_id.acc_number"/>
+
+                                        </p>
+                                        <p style="margin-top: 5px; margin-top: -10px">Tại ngân hàng:
+                                            <t t-set="account_journal" t-value="o.x_journal_id"/>
+                                            <span style="font-height: bold" t-field="account_journal.name"/>
+                                            -
+                                            <span style="font-height: bold"
+                                                  t-field="account_journal.bank_account_id.bank_id.bic"/>
+                                        </p>
+                                        <div>
+                                            <t t-if="o.x_amount_cost > 0">
+                                                <p style="float: left; width:70%; height:17px;">Số tiền phí:
+                                                    <span style="font-height: bold" t-field="o.x_amount_cost"/>
+                                                </p>
+                                                <p style="float: left; width:29%; height:17px;">Loại tiền:
+                                                    <span t-field="o.currency_id.name"/>
+                                                </p>
+                                                <div style="clear:both"></div>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <p style="float: left; width:70%; height:17px;">Số tiền(thực thu):
+                                                <span style="font-height: bold" t-esc="'{0:,.0f}'.format(o.x_amount)"/>
+                                            </p>
+                                            <p style="float: left; width:29%; height:17px;">Loại tiền:
+                                                <span t-field="o.currency_id.name"/>
+                                            </p>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div>
+                                            <p style="margin:0px">Số tiền bằng chữ:
+                                                <span style="font-height: bold"
+                                                      t-esc="o.get_amount_to_word(o.x_amount+o.x_amount_cost)"/>
+                                            </p>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row_3" style="border:none">
+                                    <table style="width:100%">
+                                        <tr height="35px">
+                                            <th>Diễn giải
+                                            </th>
+                                            <th>Số tiền nguyên tệ (<span t-field="o.currency_id.name"/>)
+                                            </th>
+                                            <th>Số tiền (<span t-field="o.currency_id.name"/>)
+                                            </th>
+                                            <th>Ghi nợ</th>
+                                            <th>Ghi có</th>
+                                        </tr>
+                                        <tr t-foreach="o.payment_lines" t-as="l">
+                                            <td width="40%">
+                                                <p style="margin:0px; text-align: left" t-field="l.name"/>
+                                            </td>
+                                            <td width="25%">
+                                                <p style="margin:0px" t-esc="'{0:,.0f}'.format(l.value)"/>
+                                            </td>
+                                            <td width="15%">
+                                                <p style="margin:0px"
+                                                   t-esc="'{0:,.0f}'.format(l.value_natural_currency)"/>
+                                            </td>
+                                            <td width="9.5%">
+                                                <p style="margin:0px" t-field="l.destination_account_id.code"/>
+                                            </td>
+                                            <td>
+                                                <t t-set="debt" t-value="l.account_id.code"/>
+                                                <p style="margin:0px" t-esc="debt"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr t-foreach="o.tax_lines" t-as="l">
+                                            <td width="40%">
+                                                <p style="margin:0px; text-align: left" t-field="l.name"/>
+                                            </td>
+                                            <td width="25%">
+                                                <p style="margin:0px" t-esc="'{0:,.0f}'.format(l.amount_tax)"/>
+                                            </td>
+                                            <td width="15%">
+                                                <p style="margin:0px" t-esc="'{0:,.0f}'.format(l.amount_tax)"/>
+                                            </td>
+                                            <td width="9.5%">
+                                                <p style="margin:0px" t-field="l.account_tax_id.code"/>
+                                            </td>
+                                            <td>
+                                                <p style="margin:0px" t-esc="o.get_account_credit()"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr t-foreach="o.cost_lines" t-as="l">
+                                            <td width="40%">
+                                                <p style="margin:0px; text-align: left" t-field="l.name"/>
+                                            </td>
+                                            <td width="25%">
+                                                <p style="margin:0px" t-esc="'{0:,.0f}'.format(l.value)"/>
+                                            </td>
+                                            <td width="15%">
+                                                <p style="margin:0px" t-esc="'{0:,.0f}'.format(l.value)"/>
+                                            </td>
+                                            <td width="9.5%">
+                                                <p style="margin:0px" t-field="l.destination_account_id.code"/>
+                                            </td>
+                                            <td>
+                                                <p style="margin:0px" t-field="l.account_id.code"/>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                                <div class="footer1">
+                                    <div class="b" style=" width: 23%">
+                                        <p style="height: 5px;">Giám đốc</p>
+                                        <br/>
+                                        <p class="a">(Ký, họ tên, đóng dấu)</p>
+                                    </div>
+                                    <div class="b" style="width: 23%">
+                                        <p style="height: 5px;">Kế toán trưởng</p>
+                                        <br/>
+                                        <p class="a">(Ký, họ tên)</p>
+                                    </div>
+                                    <div class="b" style="width: 22%">
+                                        <p style="height: 5px;">Người lập phiếu</p>
+                                        <br/>
+                                        <p class="a">(Ký, họ tên)</p>
+                                    </div>
+                                    <div class="b" style="width: 13%">
+                                        <p style="height: 5px;">Thủ quỹ</p>
+                                        <br/>
+                                        <p class="a">(Ký, họ tên)</p>
+                                    </div>
+                                    <div class="b" style="width: 19%">
+                                        <p style="height: 5px;">Người nhận tiền</p>
+                                        <br/>
+                                        <p class="a">(Ký, họ tên)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_payment_debit_report" model="report.paperformat">
+            <field name="name">Custom A4 debit report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <report id="report_debt_notices"
+                string="Bao Cao No"
+                model="account.payment"
+                report_type="qweb-pdf"
+                name="ev_account_payment.debt_notices_view"
+                file="ev_account_payment.debt_notices_view"
+                paperformat="ev_account_payment.paperformat_payment_debit_report"
+        />
+
+    </data>
+</odoo>

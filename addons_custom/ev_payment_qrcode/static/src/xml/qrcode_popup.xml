@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="QRCodePopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-text">
+                <p class="body">
+                    <img class="img-qrcode" id="img-qrcode"/>
+                    <img class="img-danger-qrcode" id="img-danger-qrcode" src="/ev_payment_qrcode/static/src/icon/icons8-danger-100.png"/>
+                    <div class="qrcode-expired-time" id="qrcode-expired-time-main">Thời hạn thanh toán <span class="qrcode-expired-time" id="qrcode-expired-time">00:00</span></div>
+                    <div class="message-error-qrcode" id="message-error-qrcode"></div>
+                    <div class="url-mbpay-payment-gate" id="url-mbpay-payment-gate"></div>
+                </p>
+                <div class="footer">
+                    <div t-on-click="trigger('click-qrcode-button-cancel')" id="qrcode-button-cancel" class="button-qrcode button-danger">Huỷ</div>
+                    <div t-on-click="trigger('click-qrcode-button-open')" id="qrcode-button-open" class="button-qrcode">Mở</div>
+                    <div t-on-click="trigger('click-qrcode-button-confirm')" id="qrcode-button-confirm" class="button-qrcode">Xác nhận</div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

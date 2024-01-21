@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="inventory_check_form_inherit" model="ir.ui.view">
+            <field name="name">inventory_check.form</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="location_ids" position="replace">
+                    <field name="x_location_id" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                           domain="[('usage', '=', 'internal')]"
+                           options="{'no_create':1, 'no_create_edit':1}"
+                    />
+                    <field name="location_ids" options="{'no_create': True}"
+                           widget="many2many_tags"
+                           force_save="1" required="1" invisible="1"
+                           groups="stock.group_stock_multi_locations"/>
+                    <field name="x_category_ids" widget="many2many_tags" options="{'no_create':1, 'no_create_edit':1}"
+                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    <field name="x_inventory_group_ids" widget="many2many_tags"
+                           options="{'no_create':1, 'no_create_edit':1}"
+                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    <field name="x_products_invisible" invisible="1"/>
+                </field>
+                <field name="exhausted" position="after">
+                    <field name="x_analytic_account_id" readonly="1" force_save="1"/>
+                </field>
+                <xpath expr="//field[@name='product_ids']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('x_products_invisible', '=', True)]}</attribute>
+                    <attribute name="options">{'no_create_edit': True, 'no_create': True}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_validate'][1]" position="replace">
+                    <button name="action_validate" string="Validate Inventory" type="object" states="confirm"
+                            groups="stock.group_stock_user"/>
+                </xpath>
+                <xpath expr="//button[@name='action_validate'][2]" position="replace">
+                    <button name="action_validate_queue" string="Validate Inventory" type="object" states="confirm_warehouse"
+                            class="oe_highlight" groups="stock.group_stock_manager,account.group_account_user"/>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel_draft'][1]" position="replace">
+                    <button name="action_cancel_draft" states="cancel" string="Set to Draft" type="object"
+                            groups="stock.group_stock_manager,account.group_account_user"/>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel_draft'][2]" position="replace">
+                    <button name="action_cancel_draft" states="confirm" string="Cancel Inventory" type="object"
+                            groups="stock.group_stock_manager,account.group_account_user"
+                            confirm="If you cancel this inventory adjustment, all its inventory adjustment lines will be lost. Are you sure you want to discard it ?"/>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name="statusbar_visible">draft,confirm_warehouse,confirm,queued,done,cancel</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_start']" position="replace">
+                    <button name="action_start" states="draft" string="Start Inventory" type="object"
+                            class="oe_highlight" groups="stock.group_stock_user"/>
+                </xpath>
+
+                <xpath expr="//button[@name='action_validate']" position="after">
+                    <button name="action_open_inventory_lines" states="confirm_warehouse"
+                            string="Continue Inventory"
+                            type="object" class="oe_highlight"
+                            groups="stock.group_stock_manager,account.group_account_user"/>
+                    <button name="action_return_inventory" states="confirm_warehouse"
+                            string="Return"
+                            type="object" class="oe_highlight"
+                            groups="stock.group_stock_manager,account.group_account_user"/>
+                    <button name="action_cancel_inventory" states="confirm_warehouse"
+                            string="Cancel"
+                            type="object" class="oe_highlight"
+                            groups="stock.group_stock_manager,account.group_account_user"/>
+                </xpath>
+                <xpath expr="//button[@name='action_start']" position="before">
+                    <button name="action_print_stock_inventory" string="Print Stock Inventory" type="object"
+                            class="oe_highlight" groups="stock.group_stock_user"
+                            attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                    <button name="action_print_excel" type="object" string="Print Excel"
+                            class="oe_highlight" groups="stock.group_stock_manager,account.group_account_user"
+                            attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                    <button name="action_print_stock_inventory_draft" type="object" string="Print Stock Inventory Draft"
+                            class="oe_highlight" groups="stock.group_stock_user"
+                            attrs="{'invisible': [('state', '!=', 'confirm_warehouse')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_print']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_view_related_move_lines']" position="attributes">
+                    <attribute name="groups">
+                        account.group_account_user,account.group_account_invoice,account.group_account_manager
+                    </attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="inventory_stock_account_inherit" model="ir.ui.view">
+            <field name="name">inventory_check_stock_account.form</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock_account.view_inventory_form_inherit"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='accounting_date']" position="replace">
+                    <field name="accounting_date" attrs="{'readonly':[('state','=', 'done')]}"
+                           groups="account.group_account_user"/>
+                    <field name="date" readonly="1"/>
+                </xpath>
+                <xpath expr="//button[@name='action_get_account_moves']" position="attributes">
+                    <attribute name="groups">
+                        account.group_account_user,account.group_account_invoice,account.group_account_manager
+                    </attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="inventory_check_list_inherit" model="ir.ui.view">
+            <field name="name">inventory_check.form</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_tree"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="location_ids" position="replace">
+                    <field name="x_location_id"/>
+                    <field name="location_ids" invisible="1"
+                           groups="stock.group_stock_multi_locations"/>
+                    <field name="x_category_ids"/>
+                </field>
+            </field>
+        </record>
+        <record id="inventory_check_search_inherit" model="ir.ui.view">
+            <field name="name">inventory_check_search_inherit</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_filter"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='confirm']" position="after">
+                    <filter string="Confirm Warehouse" name="confirm_warehouse"
+                            domain="[('state', '=', 'confirm_warehouse')]"/>
+                </xpath>
+                <xpath expr="//field[@name='product_ids']" position="after">
+                    <field name="x_location_id" filter_domain="[('x_location_id.complete_name', 'ilike', self)]"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="inventory_check_tree_inherit" model="ir.ui.view">
+            <field name="name">inventory_check_tree_inherit</field>
+            <field name="model">stock.inventory.line</field>
+            <field name="inherit_id" ref="stock.stock_inventory_line_tree"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">0</attribute>
+                    <attribute name="decoration-muted">0</attribute>
+                </xpath>
+                <xpath expr="//tree//button[@name='action_refresh_quantity']" position="replace">
+                    <!--                    <button name="action_refresh_quantity" title="Refresh quantity"-->
+                    <!--                            icon="fa-refresh" type="object" invisible="1"/>-->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

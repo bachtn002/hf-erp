@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductsWidgetControlPanelDisplay" t-inherit="point_of_sale.ProductsWidgetControlPanel"
+       t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('categories')]" position="replace">
+            <div class="categories">
+                <div class="category-list-scroller">
+                    <div class="category-list">
+                        <t t-foreach="props.subcategories" t-as="category" t-key="category.id">
+                            <CategoryButton category="category"/>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-if='props.subcategories.length > 0 and !env.pos.config.iface_display_categ_images and !env.isMobile']"
+               position="replace">
+            <div class="categories">
+                <t t-if="props.subcategories.length > 0 and !env.pos.config.iface_display_categ_images and !env.isMobile">
+                    <t t-foreach="props.subcategories" t-as="category" t-key="category.id">
+                        <CategorySimpleButton category="category"/>
+                    </t>
+                </t>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

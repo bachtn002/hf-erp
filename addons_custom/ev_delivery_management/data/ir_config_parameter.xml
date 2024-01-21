@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="authorization_internal" model="ir.config_parameter">
+            <field name="key">authorization_internal</field>
+            <field name="value">3HQh0ySEwWFmYw2N2RjeJ5QdRapkjqnW1Z7tBcKs5rrdgy</field>
+        </record>
+    </data>
+</odoo>

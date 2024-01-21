@@ -1,0 +1,18 @@
+<odoo>
+    <!-- Khai bao client action scan dong thung -->
+    <record id="stock_barcode_package_client_action" model="ir.actions.client">
+        <field name="name">Barcode Package Client Action</field>
+        <field name="tag">stock_barcode_package_client_action</field>
+    </record>
+    <record id="stock_transfer_barcode_action" model="ir.actions.client">
+        <field name="name">Stock Transfer Barcode</field>
+        <field name="tag">stock_transfer_barcode_menu</field>
+        <field name="target">fullscreen</field>
+    </record>
+
+    <!-- Khai bao client action scan xuat thung -->
+    <record id="stock_barcode_transfer_client_action" model="ir.actions.client">
+        <field name="name">Barcode Transfer Client Action</field>
+        <field name="tag">stock_barcode_transfer_client_action</field>
+    </record>
+</odoo>

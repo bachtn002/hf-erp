@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_zalo_official_account,access_zalo_official_account_name,model_zalo_official_account,,1,1,1,1
+access_zalo_token,access_zalo_token_name,model_zalo_token,,1,1,1,1
+access_zns_template,access_zns_template_name,model_zns_template,,1,1,1,1
+access_zns_template_param,access_zns_template_param_name,model_zns_template_param,,1,1,1,1
+access_zns_information,access_zns_information_name,model_zns_information,,1,1,1,1
+access_param_get_template,access_param_get_template_name,model_param_get_template,,1,1,1,1
+
+access_type_send_zns,access_type_send_zns_name,model_type_send_zns,,1,1,1,1
+access_ip_send_zns,access_ip_send_zns_name,model_ip_send_zns,,1,1,1,1
+access_data_webhook_zns,access_data_webhook_zns_name,model_data_webhook_zns,,1,1,1,1
+access_otp_zalo,access_otp_zalo_name,model_otp_zalo,,1,1,1,1
+access_res_partner_zalo,access_res_partner_zalo_name,model_res_partner_zalo,,1,1,1,1
+

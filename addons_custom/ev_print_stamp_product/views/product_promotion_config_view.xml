@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="product_promotion_config_view_tree" model="ir.ui.view">
+            <field name="name">product_promotion_config.view.tree</field>
+            <field name="model">product.promotion.config</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_id" />
+                    <field name="name_above"/>
+                    <field name="name_below"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_promotion_config_view_form" model="ir.ui.view">
+            <field name="name">product_promotion_config.view.form</field>
+            <field name="model">product.promotion.config</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="product_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                            </group>
+                            <group>
+                                <field name="name_above" attrs="{'required': [('name_below', '=', False)]}" />
+                                <field name="name_below" attrs="{'required': [('name_above', '=', False)]}" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_promotion_config_action" model="ir.actions.act_window">
+            <field name="name">Product Promotion Config Action</field>
+            <field name="res_model">product.promotion.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="product_promotion_config_menu" name="Product Promotion Config"
+                  action="product_promotion_config_action" 
+                  parent="stock.menu_stock_inventory_control" 
+                  groups="ev_print_stamp_product.group_config_print_stamp"
+                  sequence="2"/>
+
+    </data>
+
+
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pos_shop_zalo_view_form_inherit">
+            <field name="name">pos_shop_zalo_view_form_inherit</field>
+            <field name="model">pos.shop</field>
+            <field name="inherit_id" ref="ev_pos_shop.pos_shop_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_pos_shop_region_id']" position="after">
+                    <field name="x_oa_id" groups="base.group_system"/>
+                    <field name="x_app_id" groups="base.group_system"/>
+                    <field name="x_template_id" groups="base.group_system"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

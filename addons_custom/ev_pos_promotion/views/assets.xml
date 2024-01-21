@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ev_pos_promotion_assets" inherit_id="point_of_sale.assets" name="ev_pos_promotion.assets">
+        <xpath expr="script[last()]" position="after">
+
+            <style type="text/css"
+                   href="/ev_pos_promotion/static/src/css/Popups/ConfirmPaymentPopup.css"/>
+            <style type="text/scss"
+                   href="/ev_pos_promotion/static/src/css/Screens/ProductScreen/promotion.scss"/>
+
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/db.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/models.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/PosModel.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Orderline.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Promotion.js"/>
+
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Popups/PromotionPopup.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Popups/ConfirmPaymentPopup.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Screens/ProductScreen/ProductScreen.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Screens/ProductScreen/PromotionContainer.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Screens/ProductScreen/PromotionList.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Screens/ProductScreen/PromotionItem.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Screens/ProductScreen/ControlButtons/ListPromotionButton.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion/static/src/js/Screens/ProductScreen/ControlButtons/ClearPromotionButton.js"/>
+        </xpath>
+    </template>
+
+    <template id="ev_pos_promotion_tests" name="ev_pos_promotion_tests" inherit_id="web.qunit_suite_tests">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/ev_pos_promotion/static/tests/unit/test_PromotionPopup.js"/>
+        </xpath>
+    </template>
+</odoo>

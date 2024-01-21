@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="ev_internal_layout_stock_card">
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+        </template>
+        <template id="report_template_stock_card_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_stock_card.ev_internal_layout_stock_card" t-lang="en_US">
+                        <div class="page" style="font-family: Times New Roman">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                            </style>
+                            <div style="width: 100%; height: 50px;">
+                                <div style="width: 50%; height: 50px;float: left;padding-right:20px;">
+                                    <b>Đơn vị: ...........................................................</b>
+                                    <br/>
+                                    <b>Bộ phận: ........................................................</b>
+                                </div>
+                                <div style="width: 50%; height: 50px;float: left;text-align: center;padding-left: 30px;">
+                                    <p style="font-size:15px; font-weight: bold; margin: 0px;">
+                                        <b>Mẫu Số S12-DN</b>
+                                    </p>
+                                    <p style="font-size:15px; margin: 0px;">
+                                        (Ban hành theo Thông tư số: 200/2014/TT-BTC
+                                    </p>
+                                    <p style="font-size:15px; margin: 0px;">
+                                        Ngày 22/12/2014 của BTC)
+                                    </p>
+                                </div>
+                                <br clear="both"/>
+                            </div>
+                            <br clear="both"/>
+                            <div style="width: 100%; height: 100px;">
+                                <div style="width: 100%; height: 60px; margin-top: 20px; padding: 5px; float: left;">
+                                    <h3 style="margin-top: 0px;text-align: center; font-weight: 500; margin: 0px;">
+                                        <b>THẺ KHO (SỔ KHO)</b>
+                                    </h3>
+                                    <div style="width: 100%; text-align: center; margin: 0px; padding: 0px;font-size:17px;">
+                                        Lập thẻ kho từ ngày
+                                        <span t-esc="o.from_date.strftime('%d/%m/%Y')"/>
+                                        đến ngày
+                                        <span t-esc="o.to_date.strftime('%d/%m/%Y')"/>
+                                    </div>
+                                    <div style="width: 100%; text-align: center; margin: 0px; padding: 0px;font-size:17px;">
+                                        Tờ số: ...........
+                                    </div>
+                                </div>
+                            </div>
+                            <br clear="both"/>
+                            <div>
+                                <div style="width: 100%; float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    <b>- Tên, nhãn hiệu, quy cách vật tư:
+                                        <span t-field="o.product_id"/>
+                                    </b>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="width: 100%;float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    <b>- Đơn vị tính:
+                                        <span t-field="o.product_uom"/>
+                                    </b>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="width: 100%;float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    <b>- Mã số:
+                                        <span t-field="o.product_id.default_code"/>
+                                    </b>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="width: 100%; float: left;font-size:15px; margin: 0px; padding:0px;">
+                                    <b>- Kho:
+                                        <span t-field="o.location_id"/>
+                                    </b>
+                                </div>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <div style="width: 100%;float: left; margin-top: 5px;">
+                                <table class="table" style="width: 100%;height: 30px; padding: 1px; margin: 1px">
+                                    <tbody>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="6%" rowspan="2"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="10%" rowspan="2"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Ngày, tháng</p>
+                                            </th>
+                                            <th class="text-center" width="24%" colspan="2"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Số hiệu chứng từ</p>
+                                            </th>
+                                            <th class="text-center" width="10%" rowspan="2"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Diễn giải</p>
+                                            </th>
+                                            <th class="text-center" width="10%" rowspan="2"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Ngày nhập, xuất</p>
+                                            </th>
+                                            <th class="text-center" width="30%" colspan="3"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Số lượng</p>
+                                            </th>
+                                            <th class="text-center" width="10%" rowspan="2"
+                                                style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Ký xác nhận của kế toán</p>
+                                            </th>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th class="text-center" width="12%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Nhập</p>
+                                            </th>
+                                            <th class="text-center" width="12%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Xuất</p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Nhập</p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Xuất</p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Tồn</p>
+                                            </th>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <th style="text-align: center;padding:1px; margin: 1px">A</th>
+                                            <th style="text-align: center;padding:1px; margin: 1px">B</th>
+                                            <th style="text-align: center;padding:1px; margin: 1px">C</th>
+                                            <th style="text-align: center;padding:1px; margin: 1px">D</th>
+                                            <th style="text-align: center;padding:1px; margin: 1px">E</th>
+                                            <th style="text-align: center;padding:1px; margin: 1px">F</th>
+                                            <th style="text-align: center; padding:1px; margin: 1px">1</th>
+                                            <th style="text-align: center; padding:1px; margin: 1px">2</th>
+                                            <th style="text-align: center; padding:1px; margin: 1px">3</th>
+                                            <th style="text-align: center; padding:1px; margin: 1px">G</th>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <td style="text-align: right;padding-right:20px; margin: 1px" colspan="5">
+                                                <b>Tồn đầu kỳ:</b>
+                                            </td>
+                                            <td style="text-align: center;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center ;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center; padding:1px; margin: 1px">
+                                                <b>
+                                                    <span t-field="o.opening_stock"
+                                                          t-options='{"widget": "float", "precision": 2}'/>
+                                                </b>
+                                            </td>
+                                            <td style="text-align: center; padding:1px; margin: 1px">
+                                            </td>
+                                        </tr>
+                                        <t t-set="total_in" t-value="0"/>
+                                        <t t-set="total_out" t-value="0"/>
+                                        <t t-set="number" t-value="1"/>
+                                        <tr t-foreach="o.move_lines" t-as="l"
+                                            style="padding:1px; margin: 1px">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <td id="td1" class="text-center"
+                                                style="padding:1px; margin: 1px">
+                                                <t t-esc="number -1"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px; padding:1px; margin: 1px">
+                                                <span t-esc="l.date.strftime('%d/%m/%Y')"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px; padding:1px; margin: 1px">
+                                                <t t-if="l.qty_in != 0">
+                                                    <t t-if="l.reference == '-'">
+                                                        <span style="padding:1px; margin: 1px;"
+                                                              t-field="l.picking_name"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span style="padding:1px; margin: 1px;" t-field="l.reference"/>
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <t t-if="l.qty_out != 0">
+                                                    <t t-if="l.reference == '-'">
+                                                        <span style="padding:1px; margin: 1px;"
+                                                              t-field="l.picking_name"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span style="padding:1px; margin: 1px;" t-field="l.reference"/>
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;" t-field="l.note"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span t-esc="l.date.strftime('%d/%m/%Y')"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{:,.2f}'.format(l.qty_in)"/>
+                                                <t t-set="total_in"
+                                                   t-value="total_in + l.qty_in"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{:,.2f}'.format(l.qty_out)"/>
+                                                <t t-set="total_out"
+                                                   t-value="total_out + l.qty_out"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                                <span style="padding:1px; margin: 1px;"
+                                                      t-esc="'{:,.2f}'.format(l.qty_inventory)"/>
+                                            </td>
+                                            <td class="text-center" style="font-size:15px;padding:1px; margin: 1px">
+                                            </td>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <td style="text-align: right;padding-right:20px; margin: 1px" colspan="5">
+                                                <b>Cộng:</b>
+                                            </td>
+                                            <td style="text-align: center;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center;padding:1px; margin: 1px">
+                                                <b>
+                                                    <span style="padding:1px; margin: 1px;"
+                                                          t-esc="'{:,.2f}'.format(total_in)"/>
+                                                </b>
+                                            </td>
+                                            <td style="text-align: center ;padding:1px; margin: 1px">
+                                                <b>
+                                                    <span style="padding:1px; margin: 1px;"
+                                                          t-esc="'{:,.2f}'.format(total_out)"/>
+                                                </b>
+                                            </td>
+                                            <td style="text-align: center; padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center; padding:1px; margin: 1px">
+                                            </td>
+                                        </tr>
+                                        <tr style="padding:1px; margin: 1px;">
+                                            <td style="text-align: right;padding-right:20px; margin: 1px" colspan="5">
+                                                <b>Tồn cuối kỳ:</b>
+                                            </td>
+                                            <td style="text-align: center;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center ;padding:1px; margin: 1px">
+                                            </td>
+                                            <td style="text-align: center; padding:1px; margin: 1px">
+                                                <b>
+                                                    <span t-esc="'{:,.2f}'.format(o.closing_stock)"/>
+                                                </b>
+                                            </td>
+                                            <td style="text-align: center; padding:1px; margin: 1px">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br clear="both"/>
+                            <br clear="both"/>
+                            <div style="width: 100%; height: 30px; padding:0px; margin: 0px">
+                                <div style="height: 30px; float: right; font-size:15px; font-style:italic;  padding:0px; margin: 0px">
+                                    Ngày
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/>
+                                    tháng
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m')"/>
+                                    năm
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
+                                </div>
+                            </div>
+                            <br clear="both"/>
+                            <table style="width:100%;  padding:0px; margin: 0px">
+                                <tr width="100%" style="text-align: center">
+                                    <td width="33%">
+                                        <b>Người ghi sổ</b>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                    </td>
+                                    <td width="33%">
+                                        <b>Người kế toán trưởng</b>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên)</p>
+                                    </td>
+                                    <td width="34%">
+                                        <b>Giám đốc</b>
+                                        <br/>
+                                        <br/>
+                                        <p style="font-style:italic">(Ký, họ tên, đóng dấu)</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="qweb_stock_card_rpt"
+                model="stock.card"
+                string="Stock Card"
+                report_type="qweb-pdf"
+                name="ev_stock_card.report_template_stock_card_view"
+                file="ev_stock_card.report_template_stock_card_view"
+                menu="False"
+        />
+    </data>
+</odoo>

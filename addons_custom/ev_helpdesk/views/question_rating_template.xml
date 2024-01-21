@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="questions_rating" name="Question Rating">
+            <t t-call="ev_helpdesk.portal_record_custom_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters question-center">
+                        <div class="question-name">
+                            <h3>Tell us how you feel about our service</h3>
+                            <span style="text-color: #888888">(click on one of these smileys)</span>
+                        </div>
+                        <div class="message-thanks" style="display: none;">
+                            <h3>Thank for your rating!</h3>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <div class="row justify-content-center">
+                        <div class="group-rating">
+                            <div class="group-rating-icon col-auto example-block text-center group-icon-margin">
+                                <label class="radio-inline">
+                                    <img class="create-rating" src="/ev_helpdesk/static/img/not_satisfied.png"
+                                         width="70"
+                                         height="70" t-att-data-question_related="question_related_id" id="1"/>
+                                </label>
+                                <p style="margin-top: 7px;" class="text-center">
+                                    <strong>Not satisfied</strong>
+                                </p>
+                            </div>
+                            <div class="group-rating-icon col-auto example-block text-center group-icon-margin">
+                                <label class="radio-inline">
+                                    <img class="create-rating" src="/ev_helpdesk/static/img/okay.png"
+                                         width="70"
+                                         height="70" t-att-data-question_related="question_related_id" id="3"/>
+                                </label>
+                                <p style="margin-top: 7px;" class="text-center">
+                                    <strong>It's Okay</strong>
+                                </p>
+                            </div>
+                            <div class="group-rating-icon col-auto example-block text-center group-icon-margin">
+                                <label class="radio-inline">
+                                    <img class="create-rating" src="/ev_helpdesk/static/img/satisfy.png "
+                                         width="70"
+                                         height="70" t-att-data-question_related="question_related_id" id="5"/>
+                                </label>
+                                <p style="margin-top: 7px;" class="text-center">
+                                    <strong>Satisfied</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="message-feedback" style="display: none;">
+                            <span class="how-improve">Let us know How we can improve our service?</span>
+                            <textarea name="feedback-comment" id="feedback-comment" required="1"/>
+                            <button class="btn btn-primary ml-sm-4 submit-question-rating-button"
+                                    t-att-data-question_related="question_related_id"
+                                    type="button">Send feedback
+                            </button>
+                        </div>
+                        <h5 id="notify_messages" style="display: none;"></h5>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

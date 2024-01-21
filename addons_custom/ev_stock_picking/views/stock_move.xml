@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_move_kanban_inherit">
+            <field name="name">stock.move.kanban.inherit</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_kandan"/>
+            <field name="arch" type="xml">
+	            <button name="action_show_details" position="replace">
+					<button name="action_show_details" string="Register lots, packs, location"
+                            class="o_icon_button fa fa-list fa-lg" type="object"
+                            invisible="1" options='{"warn": true}'/>
+	            </button>
+            </field>
+        </record>
+    </data>
+</odoo>

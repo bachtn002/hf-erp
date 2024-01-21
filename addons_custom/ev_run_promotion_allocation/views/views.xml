@@ -1,0 +1,113 @@
+<odoo>
+    <data>
+        <record id="run_promotion_allocation_tree" model="ir.ui.view">
+            <field name="name">run.promotion.allocation.tree</field>
+            <field name="model">run.promotion.allocation</field>
+            <field name="arch" type="xml">
+                <tree string="Promotion Allocation" default_order="to_date desc" import="0">
+                    <field name="name"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="state" widget="badge" decoration-info="state == 'draft'"
+                           decoration-success="state not in ('draft','cancel')"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="run_promotion_allocation_search" model="ir.ui.view">
+            <field name="name">run_promotion_allocation_search</field>
+            <field name="model">run.promotion.allocation</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name" string="Name"/>
+                    <field name="from_date" string="From Date"/>
+                    <field name="to_date" string="To Date"/>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="run_promotion_allocation_form" model="ir.ui.view">
+            <field name="name">run.promotion.allocation_form</field>
+            <field name="model">run.promotion.allocation</field>
+            <field name="arch" type="xml">
+                <form string="Run Promotion Allocation">
+                    <header>
+                        <button name="action_confirm" type="object"
+                                string="Take Orders" class="oe_highlight"
+                                attrs="{'invisible': [('state','!=', 'draft')]}"
+                        />
+                        <button name="action_confirm_0" type="object"
+                                string="Take Orders 0" class="oe_highlight"
+                                attrs="{'invisible': [('state','!=', 'draft')]}"
+                        />
+                        <button name="action_backup" type="object"
+                                string="Backup" class="oe_highlight"
+                                attrs="{'invisible': [('state','!=', 'wait_backup')]}"
+                        />
+                        <button name="action_back" type="object"
+                                string="Back" class="oe_highlight"
+                                attrs="{'invisible': [('state','!=', 'done')]}"
+                        />
+                        <button name="action_process" type="object"
+                                string="Process"
+                                attrs="{'invisible': [('state','!=', 'wait_process')]}"
+                        />
+                        <button name="action_process_0" type="object"
+                                string="Process 0"
+                                attrs="{'invisible': [('state','!=', 'wait_process')]}"
+                        />
+
+                        <button name="action_cancel" type="object" string="Back"
+                                attrs="{'invisible': [('state','!=', 'wait_process')]}"/>
+
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,wait_process,done"
+                               clickable="False"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="from_date" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="to_date" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Orders">
+                                <field name="lines" attrs="{'readonly': [('state','!=','draft')]}">
+                                    <tree editable="bottom" readonly="1">
+                                        <field name="pos_order_id"/>
+                                        <field name="total_km"/>
+                                        <field name="total_allocation"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="run_promotion_allocation_act" model="ir.actions.act_window">
+            <field name="name">Run Promotion Allocation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">run.promotion.allocation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="menu_run_promotion_allocation" name="Run Promotion Allocation"
+                  action="run_promotion_allocation_act"
+                  parent="account.menu_finance_entries_actions" groups="account.group_account_user"
+                  sequence="30"/>
+    </data>
+</odoo>

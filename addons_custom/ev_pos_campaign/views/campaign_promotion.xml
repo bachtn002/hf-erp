@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="campaign_promotion_tree" model="ir.ui.view">
+			<field name="name">campaign.promotion.tree</field>
+			<field name="model">campaign.promotion</field>
+			<field name="arch" type="xml">
+				<tree string="Campaign Promotion" default_order='name desc'>
+					<field name="name"/>
+					<field name="date"/>
+					<field name="company_id"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="campaign_promotion_form" model="ir.ui.view">
+			<field name="name">campaign.promotion.form</field>
+			<field name="model">campaign.promotion</field>
+			<field name="arch" type="xml">
+				<form string="Campaign Promotion">
+					<sheet>
+						<div>
+							<h1>
+								<field name="name">
+								</field>
+							</h1>
+						</div>
+						<!--						<field name="date"/>-->
+						<field name="promotion" readonly="1"/>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		
+		<record id="campaign_promotion_act" model="ir.actions.act_window">
+			<field name="name">Campaign Promotion</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">campaign.promotion</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	
+	</data>
+</odoo>

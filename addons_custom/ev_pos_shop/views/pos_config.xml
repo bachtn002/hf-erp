@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_config_form_inherit">
+            <field name="name">view_pos_config_form_inherit</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <label for="x_pos_shop_id" string="Pos shop" class="oe_edit_only"/>
+                    <h1><field name="x_pos_shop_id" required="1"/></h1>
+                </xpath>
+                <xpath expr="//div[8]//div[5]" position="inside">
+                    <div class="o_setting_left_pane">
+                        <field name="x_price_correction"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="x_price_correction"/>
+                        <div class="text-muted">
+                            Allow price correction
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//div[8]//div[5]" position="inside">
+                    <div class="o_setting_left_pane">
+                        <field name="x_enable_lunisolar"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="x_enable_lunisolar"/>
+                        <div class="text-muted">
+                            Disable +/-
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,649 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_other
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-02 10:18+0000\n"
+"PO-Revision-Date: 2021-12-02 10:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_other
+#: model:ir.actions.report,print_report_name:ev_stock_other.qweb_stock_picking_other_rpt
+msgid ""
+"'Stock picking - %s - %s' % (object.picking_type_id.code or '', object.name)"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "(Ban hành theo Thông tư số: 200/2014/TT-BTC"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "- Số chứng từ gốc kèm theo :"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "<b>Kế toán</b>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid ""
+"<em>\n"
+"                                                <span style=\"text-align: center;\">(Ký, họ tên)</span>\n"
+"                                            </em>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "<span class=\"o_stat_text\">Operations</span>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "<strong>Người giao hàng</strong>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "<strong>Người lập phiếu</strong>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "<strong>Thủ kho</strong>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "<strong>Tổng cộng</strong>"
+msgstr ""
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_location__x_account_expense_item
+msgid "Account Expense Item"
+msgstr "Khoản mục chi phí"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_form
+msgid "Accounting Information"
+msgstr "Thông tin kế toán"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid ""
+"Add an internal note that will be printed on the Picking Operations sheet"
+msgstr "Thêm một ghi chú nội bộ sẽ được in trên bảng Hoạt động lấy hàng"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Additional Info"
+msgstr "Thông tin Bổ sung"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__x_analytic_account_id
+msgid "Analytic Account"
+msgstr "Đối tượng cửa hàng"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Are you sure you want force cancel ?"
+msgstr "Bạn muốn hủy ép buộc?"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Are you sure you want to cancel ?"
+msgstr "Bạn muốn hủy?"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Assign Serial Numbers"
+msgstr "Nhập mã lô"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Check Availability"
+msgstr "Kiểm tra khả dụng"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Demand"
+msgstr "Số lượng"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_incoming_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_incoming_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Destination Location"
+msgstr "Địa điểm nhập"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Detailed Operations"
+msgstr "Hoạt động Chi tiết"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_location__display_name
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_move__display_name
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Diễn giải:"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Effective Date"
+msgstr "Ngày hiệu lực"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_form
+msgid "External note..."
+msgstr "Ghi chú ngoại..."
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__field_binary_import
+msgid "Field Binary Import"
+msgstr "Nhập tệp tin"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__field_binary_name
+msgid "Field Binary Name"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Force cancel"
+msgstr "Hủy ép buộc"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Ghi chú"
+msgstr ""
+
+#. module: ev_stock_other
+#: model:ir.actions.act_window,name:ev_stock_other.action_account_picking_outgoing_other
+#: model:ir.actions.act_window,name:ev_stock_other.action_stock_picking_outgoing_other
+#: model:ir.ui.menu,name:ev_stock_other.menu_account_picking_outgoing_other
+msgid "Goods Issues"
+msgstr "Xuất khác"
+
+#. module: ev_stock_other
+#: model:stock.picking.type,name:ev_stock_other.picking_type_goods_issues
+msgid "Goods Issues Other"
+msgstr "Xuất khác"
+
+#. module: ev_stock_other
+#: model:ir.actions.act_window,name:ev_stock_other.action_account_picking_incoming_other
+#: model:ir.actions.act_window,name:ev_stock_other.action_stock_picking_incoming_other
+#: model:ir.ui.menu,name:ev_stock_other.menu_account_picking_incoming_other
+msgid "Goods Receipt"
+msgstr "Nhập khác"
+
+#. module: ev_stock_other
+#: model:stock.picking.type,name:ev_stock_other.picking_type_goods_receipt
+msgid "Goods Receipt Other"
+msgstr "Nhập khác"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_location__id
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_move__id
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid ""
+"If the picking is unlocked you can edit initial demand (for a draft picking)"
+" or done quantities (for a done picking)."
+msgstr ""
+"Nếu việc lấy hàng được mở khóa, bạn có thể chỉnh sửa nhu cầu ban đầu (đối "
+"với việc chọn bản nháp) hoặc số lượng thực hiện (đối với việc chọn xong)."
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+msgid "Import"
+msgstr "Cập nhật"
+
+#. module: ev_stock_other
+#: model:ir.model.fields.selection,name:ev_stock_other.selection__stock_location__x_type_other__incoming
+#: model:ir.model.fields.selection,name:ev_stock_other.selection__stock_picking__x_type_other__incoming
+msgid "Incoming"
+msgstr "Nhập"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Initial Demand"
+msgstr "Số lượng"
+
+#. module: ev_stock_other
+#: model:ir.model,name:ev_stock_other.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Kiểm kê"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_location__x_is_reason
+msgid "Is Reason"
+msgstr "Là lí do"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Kho nhập:"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Kho xuất:"
+msgstr ""
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_location____last_update
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_move____last_update
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "List view of operations"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Lock"
+msgstr "Khoá"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Mark as Todo"
+msgstr "Đánh dấu Cần làm"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Mã hàng"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Mẫu Số 02-VT"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Ngày"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Ngày 22/12/2014 của BTC)"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Ngày nhập:"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Ngày xuất:"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Nhóm SP"
+msgstr ""
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_move__x_note_in_out_comming
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Operations"
+msgstr "Hoạt động"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Other Information"
+msgstr "Thông tin khác"
+
+#. module: ev_stock_other
+#: model:ir.model.fields.selection,name:ev_stock_other.selection__stock_location__x_type_other__outgoing
+#: model:ir.model.fields.selection,name:ev_stock_other.selection__stock_picking__x_type_other__outgoing
+msgid "Outgoing"
+msgstr "Xuất"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "PHIẾU NHẬP KHÁC"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "PHIẾU XUẤT KHÁC"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Packages"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_incoming_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_outgoing_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_incoming_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_outgoing_picking_other_tree
+msgid "Picking list"
+msgstr "Bảng kế hàng giao nhận"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Print"
+msgstr "In"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Print Picking In"
+msgstr "In Phiếu Nhập hàng"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Print Picking Out"
+msgstr "In Phiếu Giao hàng"
+
+#. module: ev_stock_other
+#: model:ir.actions.report,name:ev_stock_other.qweb_stock_picking_other_rpt
+msgid "Print stock"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_tree
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_form
+msgid "Reason Code"
+msgstr "Mã lý do"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_search
+msgid "Reason code"
+msgstr "Mã lý do"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_outgoing_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_outgoing_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Reason for goods issues"
+msgstr "Lí do cho xuất khác"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_incoming_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_incoming_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Reason for goods receipt"
+msgstr "Lí do cho nhập khác"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_form
+msgid "Reason for goods receipt or goods issues"
+msgstr "Lý do nhập khác hoặc xuất khác"
+
+#. module: ev_stock_other
+#: model:ir.actions.act_window,name:ev_stock_other.action_reason_other
+#: model:ir.ui.menu,name:ev_stock_other.menu_reason_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_search
+msgid "Reason goods receipt and goods issues"
+msgstr "Lý do nhập khác và xuất khác"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_search
+msgid "Reason name"
+msgstr "Tên lý do"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.view_reason_other_form
+msgid "Reciprocal Account"
+msgstr "Tài khoản đối ứng"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Register lots, packs, location"
+msgstr "Đăng ký lô hàng, gói hàng, địa điểm"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Reserved"
+msgstr "Xí trước"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "STT"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Scrap"
+msgstr "Phế liệu"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Scraps"
+msgstr "Phế liệu"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Set to draft"
+msgstr "Trở về Nháp"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_outgoing_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_outgoing_picking_other_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Source Location"
+msgstr "Địa điểm xuất"
+
+#. module: ev_stock_other
+#: model:ir.model,name:ev_stock_other.model_stock_move
+msgid "Stock Move"
+msgstr "Hoạt động kho"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Stock Moves"
+msgstr "Dịch chuyển kho"
+
+#. module: ev_stock_other
+#: model:ir.ui.menu,name:ev_stock_other.menu_ev_stock_other_account
+msgid "Stock Other"
+msgstr "Nhập khác, xuất khác"
+
+#. module: ev_stock_other
+#: model:ir.ui.menu,name:ev_stock_other.menu_stock_picking_incoming_other
+msgid "Stock other incoming"
+msgstr "Nhập khác"
+
+#. module: ev_stock_other
+#: model:ir.ui.menu,name:ev_stock_other.menu_stock_picking_outgoing_other
+msgid "Stock other outgoing"
+msgstr "Xuất khác"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "SỐ:"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Số lượng"
+msgstr ""
+
+#. module: ev_stock_other
+#: model:ir.model,name:ev_stock_other.model_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_incoming_picking_other_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_outgoing_picking_other_search
+msgid "Transfer code"
+msgstr "Mã phiếu"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_location__x_type_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__x_type_other
+msgid "Type Other"
+msgstr "Loại khác"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Tên hàng"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Unlock"
+msgstr "Thôi khoá"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Unreserve"
+msgstr "Thôi Xí"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Update date"
+msgstr "Cập nhật ngày"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Validate"
+msgstr "Xác nhận"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "Valuation"
+msgstr "Định giá"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__x_warehouse_location_dest_name
+msgid "Warehouse Location In"
+msgstr "Kho nhập"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__x_warehouse_location_name
+msgid "Warehouse Location Out"
+msgstr "Kho xuất"
+
+#. module: ev_stock_other
+#: model:ir.model.fields,field_description:ev_stock_other.field_stock_picking__x_check_other_input
+msgid "X Check Other Input"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.account_view_picking_other_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.stock_view_picking_other_form
+msgid "e.g. PO0032"
+msgstr "vd: PO0032"
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "năm"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "tháng"
+msgstr ""
+
+#. module: ev_stock_other
+#: model_terms:ir.ui.view,arch_db:ev_stock_other.report_template_stock_picking_other_view
+msgid "Đvt"
+msgstr ""

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <template id="assets_frontend" name="ev_pos_topping assets" inherit_id="point_of_sale.assets">
+
+            <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" href="/ev_pos_display/static/src/css/pos.css" id="pos-stylesheet"/>
+            </xpath>
+        </template>
+</odoo>

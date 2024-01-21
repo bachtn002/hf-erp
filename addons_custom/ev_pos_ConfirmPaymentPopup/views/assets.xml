@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ev_pos_ConfirmPaymentPopup_custom_assets" inherit_id="point_of_sale.assets"
+              name="ev_pos_ConfirmPaymentPopup_custom.assets">
+        <xpath expr="script[last()]" position="after">
+<!--            <style type="text/css" href="/ev_product_list_screen/static/src/scss/product_list.scss"/>-->
+            <script type="text/javascript" src="/ev_pos_ConfirmPaymentPopup/static/src/js/models.js"/>
+            <script type="text/javascript" src="/ev_pos_ConfirmPaymentPopup/static/src/js/hide_confirm_payment_popup.js"/>
+        </xpath>
+    </template>
+
+</odoo>

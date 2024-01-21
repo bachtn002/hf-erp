@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ev_loyalty_custom_asset" inherit_id="point_of_sale.assets"
+              name="ev_loyalty_custom_asset.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/button/popup_loyalty_custom.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/loyaty_custom.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/hide_button_reward.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/hide_button_ReprintReceiptButton.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/edit_list_input_cus.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/screen/product_screen.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/loyalty_product_custom.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_loyalty_custom/static/src/js/models.js"/>
+        </xpath>
+
+    </template>
+</odoo>

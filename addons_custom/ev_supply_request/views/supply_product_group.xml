@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="supply_product_group_view_tree" model="ir.ui.view">
+            <field name="name">supply_product_group_view_tree</field>
+            <field name="model">supply.product.group</field>
+            <field name="arch" type="xml">
+                <tree string="Supply Product Group" default_order='name desc'>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="gsupply_product_group_view_form" model="ir.ui.view">
+            <field name="name">supply_product_group_view_form</field>
+            <field name="model">supply.product.group</field>
+            <field name="arch" type="xml">
+                <form string="Supply Product Group">
+                    <sheet>
+                        <header>
+                            <button name='%(supply_product_group_import_action)d' type='action'
+                                    string="Update file product" class="oe_highlight" icon="fa-download"/>
+                            <button name='dowload_template' type="object" string="Dowload file"
+                                    icon="fa-download" class="oe-highlight"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="product_ids" widget="many2many_tags" domain="[('type', '=', 'product')]"
+                                       options="{'no_create': True,'no_create_edit': True, 'no_open': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="supply_product_group_view_search" model="ir.ui.view">
+            <field name="name">supply_product_group_view_search</field>
+            <field name="model">supply.product.group</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="code"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="supply_product_group_action" model="ir.actions.act_window">
+            <field name="name">general_product_group_view_tree</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">supply.product.group</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="supply_product_group_view_search"/>
+        </record>
+
+
+        <menuitem id="supply_product_group_menu"
+                  name="Supply Product Group"
+                  action="supply_product_group_action"
+                  parent="purchase.menu_product_in_config_purchase"
+                  sequence="4"/>
+    </data>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="print_move_voucher_xlsx"
+            model="voucher.cost.control"
+            string="Print Move Voucher XLSX"
+            report_type="xlsx"
+            name="ev_pos_voucher.move_voucher_xlsx"
+            file="ev_pos_voucher.move_voucher_xlsx"
+            print_report_name="'Move Voucher Detail'"
+            menu="False"
+    />
+
+    <report id="print_voucher_cost_control_xlsx"
+            model="voucher.cost.control"
+            string="Print Voucher Cost Control Xlsx"
+            report_type="xlsx"
+            name="ev_pos_voucher.voucher_cost_control_xlsx"
+            file="ev_pos_voucher.voucher_cost_control_xlsx"
+            print_report_name="Voucher Cost Control Detail"
+            />
+
+</odoo>

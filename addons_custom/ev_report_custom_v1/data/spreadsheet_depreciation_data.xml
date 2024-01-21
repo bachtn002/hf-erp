@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ev_report_custom_v1.spreadsheet_depreciation_template" model="report.template">
+            <field name="name">Spreadsheet Depreciation Template</field>
+            <field name="code">T-SD</field>
+            <field name="description">Spreadsheet Depreciation Template</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+            <field name="active" eval="True"/>
+            <field name="header_html" type="html">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td colspan="12" style="text-align: left;">
+                                <span style="font-size: 16px; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-weight: 700;">
+                                    ERPViet - {self.env.company.name}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: 21.33333396911621px; font-weight: 700; text-align: center;">
+                                    BẢNG TÍNH KHẤU HAO TSCĐ
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: 14.6667px; font-style: italic; text-align: center; text-size-adjust: auto;">
+                                    Từ ngày: {self.from_date} - Đến ngày: {self.to_date}
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

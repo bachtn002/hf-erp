@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+period_01,cost_price_period_01,model_cost_price_period,account.group_account_manager,1,1,1,1
+period_02,cost_price_period_02,model_cost_price_period,account.group_account_user,1,1,1,1
+period_03,cost_price_period_04,model_cost_price_period_line,account.group_account_manager,1,1,1,1
+period_04,cost_price_period_05,model_cost_price_period_line,account.group_account_user,1,1,1,1
+period_05,cost_price_period_06,model_cost_price_period_detail,account.group_account_manager,1,1,1,1
+period_06,cost_price_period_07,model_cost_price_period_detail,account.group_account_user,1,1,1,1
+period_07,cost_price_period_07,model_product_price_history,account.group_account_manager,1,1,1,1
+period_08,cost_price_period_08,model_product_price_history,account.group_account_user,1,1,1,1
+period_09,cost_price_period_09,model_product_price_history,stock.group_stock_user,1,1,1,0
+period_10,cost_price_period_10,model_product_price,stock.group_stock_user,1,1,1,0
+period_11,cost_price_period_11,model_product_price,account.group_account_user,1,1,1,1
+period_12,cost_price_period_12,model_product_price,purchase.group_purchase_user,1,0,0,0
+period_13,cost_price_period_13,model_product_price_history,purchase.group_purchase_user,1,0,0,0
+
+

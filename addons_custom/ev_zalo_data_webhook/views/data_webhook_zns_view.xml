@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="data_webhook_zns_view_tree_inherit">
+            <field name="name">data_webhook_zns_view_tree_inherit</field>
+            <field name="model">data.webhook.zns</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.data_webhook_zns_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='data']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='data']" position="before">
+                    <field name="app_id"/>
+                    <field name="oa_id"/>
+                    <field name="event_name"/>
+                    <field name="zalo_id"/>
+                    <field name="msg_text"/>
+                    <field name="date"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="data_webhook_zns_view_from_inherit">
+            <field name="name">data_webhook_zns_view_tree_inherit</field>
+            <field name="model">data.webhook.zns</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.data_webhook_zns__view_from"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[1]" position="before">
+                    <group>
+                        <group>
+                            <field name="app_id" readonly="1"/>
+                            <field name="oa_id" readonly="1"/>
+                            <field name="zalo_id" readonly="1"/>
+                            <field name="msg_id" readonly="1"/>
+                            <field name="tracking_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="event_name" readonly="1"/>
+                            <field name="date" readonly="1"/>
+                            <field name="msg_text" readonly="1"/>
+                            <field name="message" readonly="1"/>
+                        </group>
+                        <group colspan="2">
+                            <field name="data" style="word-break: break-word" readonly="1"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

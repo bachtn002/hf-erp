@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ButtonVoucher" owl="1">
+        <span class="control-button" t-on-click="onClickButtonVoucher">
+            <i class="fa fa-product-hunt"></i>
+            <span>Sale Voucher</span>
+        </span>
+    </t>
+
+    <t t-name="ProductScreen" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('control-buttons')]" position="inside">
+			<ButtonVoucher onClickButton="onClickButtonVoucher"/>
+		</xpath>
+	</t>
+
+
+</templates>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="update_product_release_view_form" model="ir.ui.view">
+            <field name="name">update_product_release_view_form</field>
+            <field name="model">update.product.release</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="card_id"
+                                       domain="[('x_is_voucher', '=', True)]"
+                                       options="{'no_create':1, 'no_edit':1}"
+                                />
+                                <field name="blank_card_id" options="{'no_create':1, 'no_edit':1}"
+                                       domain="[('x_is_blank_card', '=', True)]"
+                                       invisible="1"
+                                />
+                                <field name="account_expense_id"
+                                       options="{'no_create':1, 'no_edit':1}"/>
+                                <field name="analytic_account_id"
+                                       options="{'no_create':1, 'no_edit':1}"/>
+                                <field name="account_expense_item_id"
+                                       options="{'no_create':1, 'no_edit':1}"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="expired_type"/>  <!-- added by HoiHD: Chi bat buoc khi la CP va VC -->
+                                <field name="expired_date"
+                                       attrs="{'invisible': [('expired_type', '=', 'flexible')], 'required': [('expired_type', '=', 'fixed')]}"/> <!-- added by HOIHD: chi bat buoc khi la VC va CP-->
+                                <field name="validity"
+                                       attrs="{'invisible': [('expired_type', '=', 'fixed')], 'required': [('expired_type', '=', 'flexible')]}"/> <!-- added by HOIHD: chi bat buoc khi la VC va CP-->
+                                <field name="use_type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update" string="Update" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="update_product_release_act" model="ir.actions.act_window">
+            <field name="name">Update Product Release</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update.product.release</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="update_product_release_view_form"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

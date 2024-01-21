@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductItemInherit" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension" owl="1">
+        <xpath expr="//article[hasclass('product')]" position="replace">
+            <t t-if="props.show_list">
+                <tr tabindex="0" t-on-keypress="spaceClickProduct"
+                    t-on-click="trigger('click-product', props.product)"
+                    t-att-data-product-id="props.product.id"
+                    t-attf-aria-labelledby="article_product_{{props.product.id}}"
+                    t-attf-class="{{ background ? 'gray_background' : '' }}"
+                    style="font-size: 16px;line-height: 1.5em;">
+                    <td>
+                        <t t-esc="props.product.default_code"/>
+                    </td>
+                    <td>
+                        <t t-esc="props.product.display_name"/>
+                    </td>
+                    <td style="float: right">
+                        <t t-esc="price" />
+                    </td>
+                    <td>
+                        <t t-esc="props.product.uom_id[1]"/>
+                    </td>
+                </tr>
+            </t>
+            <t t-else="">
+                <article class="product" tabindex="0" t-on-keypress="spaceClickProduct"
+                         t-on-click="trigger('click-product', props.product)"
+                         t-att-data-product-id="props.product.id"
+                         t-attf-aria-labelledby="article_product_{{props.product.id}}">
+		            <div class="product-img">
+		                <img t-att-src="imageUrl" t-att-alt="props.product.display_name" />
+		                <span class="price-tag">
+		                    <t t-esc="price" />
+		                </span>
+		            </div>
+		            <div class="product-name" t-attf-id="article_product_{{props.product.id}}">
+		                <t t-esc="props.product.display_name" />
+		            </div>
+		        </article>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

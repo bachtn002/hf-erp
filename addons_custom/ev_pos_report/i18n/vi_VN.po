@@ -1,0 +1,716 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-12 04:11+0000\n"
+"PO-Revision-Date: 2021-10-12 04:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_report
+#: model:ir.actions.report,print_report_name:ev_pos_report.print_pos_order_payment_method_xlsx
+msgid "'Report Pos Order For Payment Method'"
+msgstr "Báo cáo theo phương thức thanh toán"
+
+#. module: ev_pos_report
+#: model:ir.actions.report,print_report_name:ev_pos_report.print_pos_order_line_xlsx
+msgid "'Report Pos Order Line'"
+msgstr "Báo cáo chi tiết đơn"
+
+#. module: ev_pos_report
+#: model:ir.actions.report,print_report_name:ev_pos_report.print_pos_order_xlsx
+msgid "'Report Pos Order'"
+msgstr "Báo cáo đơn hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__amount
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__pos_amount_currency
+msgid "Amount Currency"
+msgstr "Giá trị theo tiền tệ"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__amount_payment
+msgid "Amount Payment"
+msgstr "Tổng thanh toán"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_amount
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__amount_total
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__amount_total
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__amount_total
+msgid "Amount Total"
+msgstr "Tổng giá trị"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_amount_refund
+msgid "Amount Total Refund"
+msgstr "Tổng giá trị trả lại"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_amount_sale
+msgid "Amount Total Sale"
+msgstr "Tổng giá trị bán"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__amount_total
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__amount_total
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__amount_total
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_pos_order_line_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_revenue_pos_payment_method_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.top_selling_products_report_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_pos_report
+#: model:ir.model.fields.selection,name:ev_pos_report.selection__pos_order_report__report_type__categories
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Categories"
+msgstr "Nhóm SP"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__category_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__category_id
+msgid "Category"
+msgstr "Nhóm SP"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.top_selling_products_report_form
+msgid "Choose date"
+msgstr "Chọn ngày"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__create_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__create_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__customer_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__customer_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__customer_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__discount
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_product_category__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_line_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_payment_method_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__display_name
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_pos_order_line_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_revenue_pos_payment_method_form
+msgid "Export Excel"
+msgstr "Xuất Excel"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_product_category__filter_report
+msgid "Filter Report"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__from_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__from_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__from_date
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_pos_order_line_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_revenue_pos_payment_method_form
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_product_category__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_line_xlsx__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_payment_method_xlsx__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_xlsx__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__id
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_product_category____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_line_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_payment_method_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_ev_pos_report_pos_order_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line____last_update
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__write_uid
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__write_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__limited
+msgid "Limited"
+msgstr "Giới hạn"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__lot_name
+msgid "Lot Name"
+msgstr "Mã Lót"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_pos_order__x_margin
+msgid "Margin"
+msgstr "Lợi nhuận"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__name
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__name_discount
+msgid "Name Discount"
+msgstr "Tên KM"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__order_lines
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__order_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__order_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__order_refund_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__order_id
+#: model:ir.model.fields.selection,name:ev_pos_report.selection__pos_order_report__report_type__order
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__order_refund_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__order_refund_id
+msgid "Order Refund"
+msgstr "Đơn hàng trả lại"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__order_line_lines
+#: model:ir.model.fields.selection,name:ev_pos_report.selection__pos_order_report__report_type__order_line
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Order line"
+msgstr "Chi tiết đơn hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_bank
+msgid "Payment Card"
+msgstr "Thanh toán thẻ"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_cash
+msgid "Payment Cash"
+msgstr "Thanh toán tiền mặt"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_method_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_method_lines
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__payment_method_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__payment_method_id
+#: model:ir.model.fields.selection,name:ev_pos_report.selection__pos_order_report__report_type__payment_method
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Payment Method"
+msgstr "Hình thức thanh toán"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_other
+msgid "Payment Other"
+msgstr "Thanh toán khác"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_lines
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__phone
+msgid "Phone"
+msgstr "SDT"
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_pos_order
+msgid "Point of Sale Orders Report"
+msgstr "Báo cáo đơn hàng bán lẻ"
+
+#. module: ev_pos_report
+#: model:ir.actions.act_window,name:ev_pos_report.action_rpt_pos_order_line
+#: model:ir.ui.menu,name:ev_pos_report.menu_rpt_pos_order_line
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_pos_order_line_form
+msgid "Pos Order Line Report"
+msgstr "Bảng kê chi tiết bán hàng"
+
+#. module: ev_pos_report
+#: model:ir.actions.act_window,name:ev_pos_report.action_report_pos
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__pos_report_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__pos_report_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__name
+msgid "Pos Report"
+msgstr "Báo cáo bán lẻ"
+
+#. module: ev_pos_report
+#: model:ir.ui.menu,name:ev_pos_report.menu_report_pos_order
+msgid "Pos order report"
+msgstr "Báo cáo bán lẻ"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__pos_report_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__pos_report_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__pos_report_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__pos_report_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__pos_report_id
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Pos report"
+msgstr "Báo cáo bán lẻ"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__price_unit
+msgid "Price unit"
+msgstr "Đơn giá"
+
+#. module: ev_pos_report
+#: model:ir.actions.report,name:ev_pos_report.print_pos_order_payment_method_xlsx
+msgid "Print Pos Order For Payment Method XLSX"
+msgstr "In báo cáo đơn hàng theo phương thức thanh toán"
+
+#. module: ev_pos_report
+#: model:ir.actions.report,name:ev_pos_report.print_pos_order_line_xlsx
+msgid "Print Pos Order Line XLSX"
+msgstr "In báo cáo chi tiết đơn hàng"
+
+#. module: ev_pos_report
+#: model:ir.actions.report,name:ev_pos_report.print_pos_order_xlsx
+msgid "Print Pos Order XLSX"
+msgstr "In báo cáo đơn hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__product_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__product_id
+#: model:ir.model.fields.selection,name:ev_pos_report.selection__pos_order_report__report_type__product
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Product"
+msgstr "SP"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__product_categories_lines
+msgid "Product Categories"
+msgstr "Nhóm SP"
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_product_category
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__product_categ_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__product_category
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__product_lines
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__quantity
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_line__quantity
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__quantity
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__quantity
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product_categories__quantity
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__quantity
+msgid "Quantity"
+msgstr "SL"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment__rate
+msgid "Rate"
+msgstr "Tỉ giá"
+
+#. module: ev_pos_report
+#: model:ir.ui.menu,name:ev_pos_report.menu_point_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.top_selling_products_report_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Report Condition"
+msgstr "Điều kiện xem báo cáo"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__report_type
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Report Type"
+msgstr "Loại báo cáo"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Report xlsx"
+msgstr "In báo cáo excel"
+
+#. module: ev_pos_report
+#: model:ir.actions.act_window,name:ev_pos_report.action_rpt_revenue_pos_payment_method
+#: model:ir.ui.menu,name:ev_pos_report.menu_rpt_revenue_pos_payment_method
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_revenue_pos_payment_method_form
+msgid "Revenue Pos Payment Method Report"
+msgstr "Báo cáo doanh thu theo hình thức thanh toán"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "SALE REPORT"
+msgstr "Báo cáo bán lẻ"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_product__sale_staff
+msgid "Sale Staff"
+msgstr "NV bán hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__user_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__user_lines
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__user_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__user_id
+#: model:ir.model.fields.selection,name:ev_pos_report.selection__pos_order_report__report_type__user
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.view_report_pos_form
+msgid "Saleman"
+msgstr "NV bán hàng"
+
+#. module: ev_pos_report
+#: model:ir.actions.act_window,name:ev_pos_report.action_top_selling_products
+#: model:ir.ui.menu,name:ev_pos_report.menu_top_selling_products
+msgid "Sales Analysis"
+msgstr "Báo cáo SP bán chạy"
+
+#. module: ev_pos_report
+#: model:ir.actions.act_window,name:ev_pos_report.action_izi_top_selling_products_line
+msgid "Sales analysis line"
+msgstr "Chi tiết SP bán chạy"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__user_id
+msgid "Salexman"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_pos_order__x_security_user_no_shop
+msgid "Security User No Shop"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__payment_method_cash
+msgid "Select all cash"
+msgstr "Tất cả phương thức thanh toán tiền mặt"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__x_full_pos
+msgid "Select full pos"
+msgstr "Chọn tất cả cửa hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__pos_session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__pos_config_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__pos_shop_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__x_pos_shop_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_pos_order__x_pos_shop_id
+msgid "Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order__source_id
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__source_id
+msgid "Source"
+msgstr "Nguồn KH"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__to_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_rpt_pos_report__to_date
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__to_date
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_pos_order_line_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_revenue_pos_payment_method_form
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_pos_report
+#: code:addons/ev_pos_report/models/top_selling_products.py:0
+#, python-format
+msgid "Top Selling Product"
+msgstr "Top SP bán chạy"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_line__selling_product_id
+msgid "Top Selling Products"
+msgstr "Top SP bán chạy"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_top_selling_products_report__lines
+msgid "Top Selling Products Line"
+msgstr "Chi tiết Top SP bán chạy"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.top_selling_products_pivot
+msgid "Top selling products line"
+msgstr "Chi tiết Top SP bán chạy"
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.top_selling_products_line_graph
+msgid "Top selling products report"
+msgstr "Top SP bán chạy"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_order
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__total_order
+msgid "Total Order"
+msgstr "Tổng đơn hàng"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_order_refund
+msgid "Total Order Refund"
+msgstr "Tổng đơn trả lại"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_order_sale
+msgid "Total Order Sale"
+msgstr "Tổng đơn bán"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_quantity
+msgid "Total Qty"
+msgstr "Tổng SL"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_quantity_refund
+msgid "Total Qty Refund"
+msgstr "Tổng SL trả lại"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_pos_order_report__total_quantity_sale
+msgid "Total Qty Sale"
+msgstr "Tổng SL bán"
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_user__total_quantity
+msgid "Total Quantity"
+msgstr "Tổng SL"
+
+#. module: ev_pos_report
+#: code:addons/ev_pos_report/models/rpt_bang_ke_chi_tiet_ban_hang.py:0
+#: code:addons/ev_pos_report/models/rpt_bang_ke_chi_tiet_ban_hang.py:0
+#: code:addons/ev_pos_report/models/rpt_bang_ke_chi_tiet_ban_hang.py:0
+#: code:addons/ev_pos_report/models/rpt_bang_ke_chi_tiet_ban_hang.py:0
+#, python-format
+msgid "User not posh shop"
+msgstr ""
+
+#. module: ev_pos_report
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_pos_order_line_form
+#: model_terms:ir.ui.view,arch_db:ev_pos_report.rpt_revenue_pos_payment_method_form
+msgid "View Report"
+msgstr "Xem báo cáo"
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_pos_order_report
+msgid "pos.order.report"
+msgstr "Báo cáo bán lẻ"
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_ev_pos_report_pos_order_line_xlsx
+msgid "report.ev_pos_report.pos_order_line_xlsx"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_ev_pos_report_pos_order_payment_method_xlsx
+msgid "report.ev_pos_report.pos_order_payment_method_xlsx"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_ev_pos_report_pos_order_xlsx
+msgid "report.ev_pos_report.pos_order_xlsx"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order
+msgid "report.order"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order_line
+msgid "report.order.line"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order_payment
+msgid "report.order.payment"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order_payment_method
+msgid "report.order.payment.method"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order_product
+msgid "report.order.product"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order_product_categories
+msgid "report.order.product.categories"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_report_order_user
+msgid "report.order.user"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_rpt_pos_report
+msgid "rpt.pos.report"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_top_selling_products_line
+msgid "top.selling.products.line"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model,name:ev_pos_report.model_top_selling_products_report
+msgid "top.selling.products.report"
+msgstr ""
+
+#. module: ev_pos_report
+#: model:ir.model.fields,field_description:ev_pos_report.field_report_order_payment_method__pos_channel_id
+msgid "Pos Channel"
+msgstr "Kênh bán hàng"

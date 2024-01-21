@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="action_deactive_promotion" model="ir.cron">
+		<field name="name">Promotion: Auto deactivate</field>
+		<field name="model_id" ref="model_pos_promotion"/>
+		<field name="state">code</field>
+		<field name="code">model.action_auto_deactive()</field>
+		<field name='interval_number'>1</field>
+		<field name='interval_type'>days</field>
+		<field name="numbercall">-1</field>
+		<field name="nextcall"
+		       eval="(DateTime.now().replace(hour=1, minute=0, second=00)).strftime('%Y-%m-%d %H:%M:%S')"/>
+	</record>
+</odoo>

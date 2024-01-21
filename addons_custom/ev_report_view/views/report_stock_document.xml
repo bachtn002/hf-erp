@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--View list bao cao-->
+        <record id="report_stock_document_tree" model="ir.ui.view">
+            <field name="name">Stock Document Report Done</field>
+            <field name="model">stock.document.report.done</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="date_trading"/>
+                    <field name="origin"/>
+                    <field name="location"/>
+                    <field name="location_dest"/>
+                    <field name="x_description"/>
+                    <field name="ref"/>
+                    <field name="customer_code"/>
+                    <field name="customer_name"/>
+                    <field name="default_code"/>
+                    <field name="product_name"/>
+                    <field name="lot_name"/>
+                    <field name="uom"/>
+                    <field name="quantity"/>
+                    <field name="explain"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="report_stock_document_done_wizard" model="ir.ui.view">
+            <field name="name">Stock Document Report Done Wizard</field>
+            <field name="model">report.stock.document.done.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="from_date" required="1" string="From date"/>
+                            <field name="to_date" required="1" string="To date"/>
+                            <field name="x_all_internal"
+                                   groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"/>
+                        </group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                            <field name="location_ids" string="Locations" widget="many2many_tags" required="1"
+                                   domain="[('usage', '=', 'internal'), ('company_id','=', company_id)]"
+                                   options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                   attrs="{'invisible': [('x_all_internal','=', True)]}"/>
+                            <field name="product_ids" string="Products" widget="many2many_tags"
+                                   options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                            <field name="state" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="open_table_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button name="action_export_report_accountent" type="object" class="oe_highlight"
+                                string="View Report Account"
+                                groups="account.group_account_readonly,account.group_account_user,account.group_account_invoice,account.group_account_manager"
+                        />
+                        <button name="action_report_excel" type="object" class="oe_highlight" string="Export Excel"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!--Action Form Input-->
+        <record id="action_stock_document_report_done_wizard" model="ir.actions.act_window">
+            <field name="name">Action Stock Document Report Done Wizard</field>
+            <field name="res_model">report.stock.document.done.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_stock_document_done_wizard"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+        <!--Action View List-->
+        <record id="action_stock_document_done_report" model="ir.actions.act_window">
+            <field name="name">Action Stock Document Done Report</field>
+            <field name="res_model">stock.document.report.done</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ev_report_view.report_stock_document_tree"/>
+            <field name="target">main</field>
+        </record>
+        <menuitem
+                id="menu_stock_document_done_report_list"
+                name="Stock Document Report Done List"
+                action="action_stock_document_report_done_wizard"
+                parent="stock.menu_warehouse_report"
+                sequence="37"
+        />
+    </data>
+</odoo>

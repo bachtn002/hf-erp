@@ -1,0 +1,884 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_accountant_bill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 21:37+0000\n"
+"PO-Revision-Date: 2021-12-16 04:38+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ev_accountant_bill
+#: model:ir.actions.report,print_report_name:ev_accountant_bill.action_report_accountant_bill
+msgid "'Phiếu kế toán - %s' % (object.name)"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "<b>PHIẾU KẾ TOÁN TỔNG HỢP</b>"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "<b>TỔNG CỘNG</b>"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__access_token
+msgid "Access Token"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__account_expense_item_id
+msgid "Account Expense Item"
+msgstr "Khoản mục phí"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__move_ids
+msgid "Account Move"
+msgstr "Bút toán Kế toán"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Account analytic does not exists, line (%s)\n"
+msgstr "Tài khoản phân tích không tồn tại trong hệ thống, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid ""
+"Account expense item cannot empty because Debit Account or Credit Account "
+"is Required Expense Item, line (%s)\n"
+msgstr ""
+"Khoản mục phí không được bỏ trống vì Tài khoản nợ hoặc Tài khoản có là Hạch "
+"toán bắt buộc gắn khoản mục chi phí, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Account expense item does not exists, line (%s)\n"
+msgstr "Khoản mục chi phí không tồn tại trong hệ thống, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: model:ir.actions.act_window,name:ev_accountant_bill.action_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_account_bank_statement_line__x_accountant_bill_id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_account_move__x_accountant_bill_id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_account_payment__x_accountant_bill_id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__accountant_bill_id
+#: model:ir.ui.menu,name:ev_accountant_bill.menu_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Accountant Bill"
+msgstr "Phiếu kế toán"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Accountant Bill Line"
+msgstr "Hạch toán"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_tree
+msgid "Accounting date"
+msgstr "Ngày hạch toán"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_needaction
+msgid "Action Needed"
+msgstr "Hành động cần thiết"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hành động ngoại lệ"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__amount
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_tree
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__amount_natural_currency
+msgid "Amount Natural Currency"
+msgstr "Tổng tiền quy đổi"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_tree
+msgid "Amount_natural_currency"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản phân tích"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid ""
+"Analytic Account cannot empty because Debit Account or Credit Account is "
+"Required Analytic Account, line (%s)\n"
+msgstr ""
+"Tài khoản phân tích không được để trống vì Tài khoản nợ hoặc Tài khoản có "
+"là Hạch toán bắt buộc gắn bộ phận chịu phí, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng tập tin đính kèm"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__local_url
+msgid "Attachment URL"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__attachment_id
+msgid "Automatically created field to link to parent ir.attachment"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "Bằng chữ :"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields.selection,name:ev_accountant_bill.selection__accountant_bill__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.wizard_import_accountant_bill_line_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__checksum
+msgid "Checksum/SHA1"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__company_id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__create_uid
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__create_uid
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__create_date
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__create_date
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__credit_acc_id
+msgid "Credit Account"
+msgstr "Tài khoản Có"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Credit Account does not exists, line (%s)\n"
+msgstr "Tài khoản có không tồn tại trong hệ thống, dòng (%s) \n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Credit Account is empty, line (%s) \n"
+msgstr "Tài khoản có không được để trống dòng (%s) \n"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__credit_partner_id
+msgid "Credit Partner"
+msgstr "Đối tác bên có"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__currency_id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "DIỄN GIẢI"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__db_datas
+msgid "Database Data"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__date_accounting
+msgid "Date Accounting"
+msgstr "Ngày kế toán"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__date_document
+msgid "Date Document"
+msgstr "Ngày chứng từ"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__debit_acc_id
+msgid "Debit Account"
+msgstr "Tài khoản nợ"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Debit Account does not exists, line (%s)\n"
+msgstr "Tài khoản nợ không tồn tại trong hệ thống, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Debit Account is empty, line (%s) \n"
+msgstr "Tài khoản nợ không được để trống, dòng (%s) \n"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__debit_partner_id
+msgid "Debit Partner"
+msgstr "Đối tác bên nợ"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__description
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__name
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__display_name
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__display_name
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_tree
+msgid "Document date"
+msgstr "Ngày chứng từ"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields.selection,name:ev_accountant_bill.selection__accountant_bill__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__field_binary_import
+msgid "Field Binary Import"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__field_binary_name
+msgid "Field Binary Name"
+msgstr "Tên tệp tải lên"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.wizard_import_accountant_bill_line_form
+msgid "File"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__datas
+msgid "File Content (base64)"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__raw
+msgid "File Content (raw)"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__file_size
+msgid "File Size"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/wizard/wizard_import_accountant_bill_line.py:0
+#, python-format
+msgid "File excel phải có ít nhất 1 dòng sau tiêu đề!"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "File format must be .xls or .xlsx"
+msgstr "Định dạng file phải là .xls hoặc .xlsx"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Kênh)"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_account_move__id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__id
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "IN"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_needaction
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu chọn, các tin nhắn mới yêu cầu sự có mặt của bạn."
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_has_error
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu thì một số thông điệp có lỗi."
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__image_height
+msgid "Image Height"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__image_src
+msgid "Image Src"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__image_width
+msgid "Image Width"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Import"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.wizard_import_accountant_bill_line_form
+msgid "Import Accountant Bill"
+msgstr "Import"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__import_date
+msgid "Import Date"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__index_content
+msgid "Indexed Content"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_tree
+msgid "Interpretation"
+msgstr "Diễn giải"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Invalid value, line (%s)\n"
+msgstr "Giá trị không hợp lệ, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_is_follower
+msgid "Is Follower"
+msgstr "Trở thành người theo dõi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__public
+msgid "Is public document"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Journal Entries"
+msgstr "Bút toán phát sinh"
+
+#. module: ev_accountant_bill
+#: model:ir.model,name:ev_accountant_bill.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Keep Business Accounts"
+msgstr "Hạch toán"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "KẾ TOÁN TRƯỞNG"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill____last_update
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line____last_update
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__write_uid
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__write_uid
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__write_date
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__write_date
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__lines
+msgid "Lines"
+msgstr "Dòng"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Tệp đính kèm chính"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_ids
+msgid "Messages"
+msgstr "Thông báo"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__mimetype
+msgid "Mime Type"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "NGÀY"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "NGƯỜI LẬP BIỂU"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__name
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Name is empty, line (%s) \n"
+msgstr "Diễn giải không được để trống, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót cho hành động kế tiếp"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hoạt động kế tiếp"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "Ngày ....... tháng ....... năm ..........."
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng hành động"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông báo cần xử lý"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng tin gửi đi bị lỗi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số tin chưa đọc"
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "NĂM"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__order_id
+msgid "Order"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__original_id
+msgid "Original (unoptimized, unresized) attachment"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "PHÁT SINH CÓ"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "PHÁT SINH NỢ"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.actions.report,name:ev_accountant_bill.action_report_accountant_bill
+msgid "Phiếu kế toán"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields.selection,name:ev_accountant_bill.selection__accountant_bill__state__posted
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid ""
+"Product cannot empty because Debit Account or Credit Account is Required "
+"Product, line (%s)\n"
+msgstr ""
+"Trường Sản phẩm không được bỏ trống vì Tài khoản nợ hoặc tài khoản có là "
+"Hạch toán bắt buộc gắn sản phẩm, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Product does not exists, line (%s)\n"
+msgstr "Sản phẩm không tồn tại trong hệ thống, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__rate
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__rate
+msgid "Rate"
+msgstr "Tỷ giá"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__credit_acc_required_analytic
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__debit_acc_required_analytic
+msgid "Required Analytic Account"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__credit_acc_required_expense_item
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__debit_acc_required_expense_item
+msgid "Required Expense Item"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__credit_acc_required_product
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__debit_acc_required_product
+msgid "Required Product"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__res_field
+msgid "Resource Field"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__res_id
+msgid "Resource ID"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__res_model
+msgid "Resource Model"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__res_name
+msgid "Resource Name"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.view_accountant_bill_form
+msgid "Sample file"
+msgstr "Tải file import mẫu"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn phải được chuyển\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Kế hoạch: Các hoạt động trong tương lai."
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__store_fname
+msgid "Stored Filename"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "Số phiếu:"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "THÁNG"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "TK"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__template_file_url_default
+msgid "Template File URL"
+msgstr "File Mẫu"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_wizard_import_accountant_bill_line__res_model
+msgid "The database object this attachment will be attached to."
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__currency_id
+msgid "The optional other currency if it is a multi-currency entry."
+msgstr "Tùy chọn tiền tệ khác nếu sử dụng đa tiền tệ."
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_wizard_import_accountant_bill_line__res_id
+msgid "The record id this is attached to."
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__total_entries
+msgid "Total Entries"
+msgstr "Tổng bút toán"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__type
+msgid "Type"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên hồ sơ."
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.report_accountant_bill
+msgid "TÊN ĐỐI TƯỢNG"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_unread
+msgid "Unread Messages"
+msgstr "Tin chưa đọc"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm tin chưa đọc"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_wizard_import_accountant_bill_line__url
+msgid "Url"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Value is empty, line (%s) \n"
+msgstr "Gía trị không được để trống, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: code:addons/ev_accountant_bill/model/accountant_bill.py:0
+#, python-format
+msgid "Value must be greater than 0, line (%s)\n"
+msgstr "Giá trị phải lớn hơn 0, dòng (%s)\n"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill_line__value_natural_currency
+msgid "Value natural currency"
+msgstr "GT Quy đổi"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,field_description:ev_accountant_bill.field_accountant_bill__website_message_ids
+msgid "Website Messages"
+msgstr "Thông báo Website"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_accountant_bill__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: ev_accountant_bill
+#: model:ir.model.fields,help:ev_accountant_bill.field_wizard_import_accountant_bill_line__type
+msgid ""
+"You can either upload a file from your computer or copy/paste an internet "
+"link to your file."
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model,name:ev_accountant_bill.model_accountant_bill
+msgid "accountant.bill"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model,name:ev_accountant_bill.model_accountant_bill_line
+msgid "accountant.bill.line"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model_terms:ir.ui.view,arch_db:ev_accountant_bill.wizard_import_accountant_bill_line_form
+msgid "or"
+msgstr ""
+
+#. module: ev_accountant_bill
+#: model:ir.model,name:ev_accountant_bill.model_wizard_import_accountant_bill_line
+msgid "wizard.import.accountant.bill.line"
+msgstr ""

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_release_form_view" model="ir.ui.view">
+            <field name="name">product_release_form</field>
+            <field name="model">product.release</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_active" string="Activate" type="object" states="created"
+                                class="oe_highlight"
+                                confirm="Are you sure you want to enable all in-release Voucher?"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="created"/>
+                        <!--                        <button name="action_import_file" string="Nhập mã" states="draft"-->
+                        <!--                                type="object" class="oe_highlight"/>-->
+                        <button name="action_generate_serial" string="Generate Voucher"
+                                attrs="{'invisible': ['|',('import_file', '=', True),('state','!=','draft')]}"
+                                type="object" class="oe_highlight"/>
+                        <button name="%(ev_product_release.update_product_release_act)d" string="Update" type="action"
+                                class="oe_highlight" attributes="{'invisible': [('state', '=', 'cancel')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,created,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_view_picking"
+                                    attrs="{'invisible': [('count_picking', '=', 0)]}"
+                                    class="oe_stat_button" icon="fa-truck">
+                                <field name="count_picking" widget="statinfo" string="Transfers"/>
+                            </button>
+                        </div>
+                        <h2 style="text-align:center">
+                            <field name="name" readonly="1" forcesave="1"/>
+                        </h2>
+                        <group>
+                            <group>
+                                <field name="company_id" options="{'no_open':1, 'no_create':1}" invisible="1"/>
+                                <field name="card_id" required="1"
+                                       domain="[('x_is_voucher', '=', True)]"
+                                       options="{'no_create':1, 'no_edit':1}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                />
+                                <field name="blank_card_id" options="{'no_create':1, 'no_edit':1}"
+                                       domain="[('x_is_blank_card', '=', True)]"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                />
+                                <field name="picking_type_id"
+                                       domain="[('company_id', '=', company_id),('warehouse_voucher','=',True)]"
+                                       options="{'no_create':1, 'no_edit':1}"
+                                       attrs="{'required': [('blank_card_id', '!=', False)],
+                                       'invisible':[('blank_card_id','=',False)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="import_file" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="quantity"
+                                       attrs="{'required': [('import_file', '=', False)], 'readonly': [('state', '!=', 'draft')], 'invisible': [('import_file', '=', True)]}"/>
+                                <field name="production_lot_rule_id"
+                                       attrs="{'required': [('import_file', '=', False)], 'readonly': [('state', '!=', 'draft')], 'invisible': [('import_file', '=', True)]}"
+                                       domain="[('active', '=', True)]"/>
+                                <field name="account_expense_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create':1, 'no_edit':1}" required="1"/>
+                                <field name="analytic_account_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create':1, 'no_edit':1}" required="0"/>
+                                <field name="account_expense_item_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create':1, 'no_edit':1}" required="1"/>
+                            </group>
+                            <group>
+                                <field name="create_uid"/>
+                                <field name="date" readonly="1" force_save="1"/>
+                                <field name="expired_type"
+                                       attrs="{'required': 1, 'readonly': [('state', '!=', 'draft')]}"/>  <!-- added by HoiHD: Chi bat buoc khi la CP va VC -->
+                                <field name="expired_date"
+                                       attrs="{'invisible': [('expired_type', '=', 'flexible')], 'readonly': [('state', '!=', 'draft')],'required': [('expired_type', '=', 'fixed')]}"/> <!-- added by HOIHD: chi bat buoc khi la VC va CP-->
+                                <field name="validity"
+                                       attrs="{'invisible': [('expired_type', '=', 'fixed')], 'readonly': [('state', '!=', 'draft')],'required': [('expired_type', '=', 'flexible')]}"/> <!-- added by HOIHD: chi bat buoc khi la VC va CP-->
+                                <field name="use_type" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details" name="stock_production_lot_ids">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        attrs="{'invisible': [('import_file', '=', False)]}"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="File must in the format of xls or xlsx"/>
+                                <button name="action_import_line" type="object" class="oe_highlight" string="Import"
+                                        attrs="{'invisible': ['|',('field_binary_import', '=', False),('import_file', '=', False)]}"/>
+                                <field name="stock_production_lot_ids" nolabel="1"
+                                       readonly="1">
+                                    <tree string="Product Detail" delete="0" create="0">
+                                        <field name="product_id" invisible="1"/>
+                                        <field name="name" string="Lot/Serial"/>
+                                        <!--                                        <field name="expiration_date"/>-->
+                                        <field name="x_customer_id"/>
+                                        <field name="x_use_customer_id"/>
+                                        <field name="x_state" string="Status"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="product_id" options="{'no_open':1, 'no_create':1}"/>
+                                                <field name="name"/>
+                                                <field name="x_release_id"/>
+                                                <field name="x_order_id"/>
+                                                <field name="x_order_use_id"/>
+                                                <!--                                                <field name="expiration_date"/>-->
+                                            </group>
+                                            <group>
+                                                <field name="x_customer_id"/>
+                                                <field name="x_use_customer_id"/>
+                                                <field name="x_total_count"/>
+                                                <field name="x_use_count"/>
+                                                <field name="x_state"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="product_release_tree_view" model="ir.ui.view">
+            <field name="name">product_release_tree</field>
+            <field name="model">product.release</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state=='draft'" decoration-muted="state=='cancel'"
+                      decoration-success="state=='created'">
+                    <field name="name"/>
+                    <field name="card_id"/>
+                    <field name="blank_card_id"/>
+                    <field name="quantity"/>
+                    <field name="date"/>
+                    <field name="expired_date"/>
+                    <field name="state" widget="badge" decoration-info="state=='draft'"
+                           decoration-muted="state=='cancel'"
+                           decoration-success="state=='created'"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_product_release" model="ir.actions.act_window">
+            <field name="name">Product Release</field>
+            <field name="res_model">product.release</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        <menuitem id="menu_pos_voucher"
+                  name="Pos Voucher"
+                  parent="ev_pos_erpviet.menu_pos_config_custom"
+                  sequence="5"
+                  groups="point_of_sale.group_pos_manager"
+        />
+        <!--        <menuitem id="menu_product_release"-->
+        <!--                  action="action_product_release"-->
+        <!--                  name="Product Release"-->
+        <!--                  parent="ev_pos_erpviet.menu_pos_config_custom" sequence="100"/>-->
+        <menuitem id="menu_product_release"
+                  action="action_product_release"
+                  name="Product Release"
+                  parent="ev_product_release.menu_pos_voucher" sequence="100"/>
+    </data>
+</odoo>

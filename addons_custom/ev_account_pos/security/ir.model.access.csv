@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+03,03,model_inventory_valuation_group,account.group_account_user,1,1,1,1
+access_run_create_account_move,name_run_create_account_move,model_run_create_account_move,account.group_account_user,1,1,1,1

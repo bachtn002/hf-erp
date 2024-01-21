@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="print_stamp_other_view_tree" model="ir.ui.view">
+            <field name="name">Print Stamp Other Tree</field>
+            <field name="model">print.stamp</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="shop_id"/>
+                    <field name="promotion_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="print_stamp_other_view_form" model="ir.ui.view">
+            <field name="name">Print Stamp Other Form</field>
+            <field name="model">print.stamp</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="print_stamp_other" type="object" string="Print" class="oe_highlight" attrs="{'invisible': [('stamp_type', '!=', 'other')]}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="shop_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                            </group>
+
+                            <group>
+                                <field name="promotion_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                <field name="stamp_type" invisible="1"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Details">
+                                <field name="print_stamp_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="name_above" required="1"/>
+                                        <field name="name_below"/>
+                                        <field name="price_unit" required="1"/>
+                                        <field name="uom_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                        <field name="packed_date" required="1"/>
+                                        <field name="expire_date" required="1"/>
+                                        <field name="note"/>
+                                        <field name="print_stamp_id" invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="name_above" required="1"/>
+                                                <field name="name_below"/>
+                                                <field name="price_unit" required="1"/>
+                                                <field name="uom_id" required="1" options="{'no_create':1, 'no_create_edit':1}"/>
+                                            </group>
+                                            <group>
+                                                <field name="packed_date" required="1"/>
+                                                <field name="expire_date" required="1"/>
+                                                <field name="note"/>
+                                                <field name="print_stamp_id" invisible="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="print_stamp_other_action" model="ir.actions.act_window">
+            <field name="name">Print Stamp Other Action</field>
+            <field name="res_model">print.stamp</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('print_stamp_other_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('print_stamp_other_view_form')})]"/>
+            <field name="domain">[('stamp_type','=','other')]</field>
+            <field name="context">{'default_stamp_type': 'other'}</field>
+        </record>
+
+        <menuitem id="menu_print_stamp_other" name="Print Stamp Other" parent="stock.menu_stock_inventory_control" action="print_stamp_other_action" sequence="2"/>
+    </data>
+</odoo>

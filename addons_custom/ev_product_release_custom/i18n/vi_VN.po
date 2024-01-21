@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_release_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 08:53+0000\n"
+"PO-Revision-Date: 2021-08-24 08:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__apply_promotion
+msgid "Apply together with promotion"
+msgstr "Áp dụng cùng với các CTKM khác"
+
+#. module: ev_product_release_custom
+#: model:ir.actions.act_window,name:ev_product_release_custom.action_production_lot_vouchers_inherit
+#: model:ir.ui.menu,name:ev_product_release_custom.menu_action_production_lot_vouchers_inherit
+msgid "Code Vouchers"
+msgstr "Mã phiếu mua hàng"
+
+#. module: ev_product_release_custom
+#: model_terms:ir.ui.view,arch_db:ev_product_release_custom.production_lot_tree_view_custom
+msgid "Code voucher"
+msgstr "Mã phiếu mua hàng"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_release_custom
+#: model_terms:ir.ui.view,arch_db:ev_product_release_custom.product_release_form_view_custom
+msgid "Export excel"
+msgstr "Xuất Excel"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__limit_config
+msgid "Limit number of Pos apply voucher"
+msgstr "Giới hạn cửa hàng được áp dụng"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__limit_voucher
+msgid "Limit number of voucher apply in the order"
+msgstr "Giới hạn số lượng voucher được áp dụng trong đơn"
+
+#. module: ev_product_release_custom
+#: code:addons/ev_product_release_custom/models/product_release.py:0
+#, python-format
+msgid "Limited Quantity must be greater than 0!"
+msgstr "Số lượng giới hạn phải lớn hơn 0!"
+
+#. module: ev_product_release_custom
+#: model_terms:ir.ui.view,arch_db:ev_product_release_custom.production_lot_tree_view_custom
+msgid "Lots/Serial Numbers"
+msgstr "Lô/Số serial"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__config_ids
+#: model_terms:ir.ui.view,arch_db:ev_product_release_custom.product_release_form_view_custom
+msgid "POS Apply"
+msgstr "Điểm bán lẻ được áp dụng"
+
+#. module: ev_product_release_custom
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__limit_qty
+msgid "Quantity"
+msgstr "Số lượng tối đa"
+
+#. module: ev_product_release_custom
+#: code:addons/ev_product_release_custom/models/product_release.py:0
+#: model:ir.model.fields,field_description:ev_product_release_custom.field_product_release__rule_apply_promotion
+#, python-format
+msgid "Rule apply promotion"
+msgstr "Áp dụng chính sách"
+
+#. module: ev_product_release_custom
+#: model_terms:ir.ui.view,arch_db:ev_product_release_custom.product_release_form_view_custom
+msgid "Voucher usage policy"
+msgstr "Chính sách sử dụng phiếu mua hàng"
+
+#. module: ev_product_release_custom
+#: model:ir.model,name:ev_product_release_custom.model_product_release
+msgid "product.release"
+msgstr ""

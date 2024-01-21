@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_sale_request_line_moq_form_inherit">
+            <field name="name">view_sale_request_line_moq_form_inherit</field>
+            <field name="model">sale.request</field>
+            <field name="inherit_id" ref="ev_sale_request.sale_request_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sale_request_line']" position="replace">
+                    <field name="sale_request_line" widget="section_and_note_one2many"
+                           mode="tree" attrs="{'readonly':['|',('state','not in',('draft')), ('check_consumption_forecast','==', True)]}">
+                        <tree editable="bottom">
+                            <field name="request_id" invisible="1"
+                                   attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                            <field name="product_id" required="1"
+                                   attrs="{'readonly': [('parent.state', '!=', 'draft')]}"
+                                   options="{'no_create': True,'no_create_edit': True}"/>
+                            <field name="product_uom" style="text-align:center;"
+                                   readonly="1"/>
+                            <field name="supply_type" string="Supply Type"
+                                   readonly="1" force_save="1"/>
+                            <field name="moq" readonly="1" force_save="1"/>
+                            <field name="qty" style="text-align:center;" required="1"
+                                   attrs="{'readonly': [('parent.state', '!=', 'draft')]}"/>
+                            <field name="qty_apply" style="text-align:center;" readonly="1" invisible="1"/>
+                            <field name="qty_forecast" readonly="1" force_save="1"/>
+                            <field name="note"
+                                   attrs="{'readonly': [('parent.state', '!=', 'draft')]}" force_save="1"/>
+                            <field name="check_general" readonly="1"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//button[@name='action_print_excel']" position="after">
+                    <button name="action_request_forecast" type="object" string="Request Forecast"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='warehouse_id']" position="after">
+                    <field name="check_consumption_forecast" force_save="1" invisible="1" />
+                    <!-- <div style="color: red;" attrs="{'invisible': [('check_consumption_forecast','!=', True )]}">You have not choose consumption forecast</div> -->
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <div style="color: red; font-size: 20px" attrs="{'invisible': [('check_consumption_forecast','!=', True )]}">You have not choose consumption forecast</div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

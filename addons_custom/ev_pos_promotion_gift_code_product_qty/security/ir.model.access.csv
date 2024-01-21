@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gift_code_product_qty_conditions,access_gift_code_product_qty_conditions,model_gift_code_product_qty_conditions,base.group_user,1,1,1,1
+access_gift_code_product_qty_applies,access_gift_code_product_qty_applies,model_gift_code_product_qty_applies,base.group_user,1,1,1,1

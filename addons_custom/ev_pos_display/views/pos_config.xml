@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="pos_config_view_form_inherit" model="ir.ui.view">
+        <field name="name">pos.config.form.view.inherit</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='category_reference']" position="replace">
+            </xpath>
+            <xpath expr="//div[5]" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" id="x_pos_config_old_id">
+                    <div class="o_setting_left_pane">
+
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="x_pos_config_old_id" string="Pos Config Old ID"/>
+                        <div class="text-muted" id="x_pos_config_old_id">
+                            ID Pos Config in Odoo 11
+                        </div>
+                        <div class="content-group mt16">
+                            <div class="row mt16">
+                                <label string="Pos Config Old ID" for="x_pos_config_old_id"
+                                       class="col-md-3 o_light_label"/>
+                                <field name="x_pos_config_old_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

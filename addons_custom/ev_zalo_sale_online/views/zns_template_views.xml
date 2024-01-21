@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="zns_template_views_form_inherit" model="ir.ui.view">
+            <field name="name">ZNS Template Form</field>
+            <field name="model">zns.template</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.zns_template_view_from"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='template_tag']" position="after">
+                    <field name="template_type"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

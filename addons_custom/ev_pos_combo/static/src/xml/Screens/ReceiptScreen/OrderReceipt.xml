@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<!--    <t t-name="OrderReceiptInherit" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">-->
+    <t t-name="OrderReceiptInherit" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="inside">
+            <t t-if="line.combo_prod_info and line.combo_prod_info.length > 0">
+                <tr>
+                    <td>---Combo</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr t-foreach="line.combo_prod_info" t-as="prod_info">
+                        <td colspan="2" style="">
+                            <span class="pos-disc-font"
+                                  style="font-size:12px; font-family: Arial, Helvetica, sans-serif;">
+                                &#8594; <t t-esc="prod_info.product.display_name"/>
+                                <!--                                &#45;&#45;<t t-esc="prod_info.qty * line.quantity"/>-->
+                                <!--                                <t t-if="env.pos.config.pos-receipt">-->
+                                <!--                                    <span>Quantity</span>-->
+                                <!--                                </t>-->
+                                <!--                                <t t-if="prod_info.product and prod_info.product.uom_id and prod_info.product.uom_id[0]">-->
+                                <!--                                     <t t-esc="prod_info.product.uom_id[1]"/>-->
+                                <!--                                </t>-->
+                            </span>
+                        </td>
+                    <td style="text-align: center;">
+                        <t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])*Math.round(prod_info.qty * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+<!--                        <t t-esc="line.quantity"/>x<t t-esc="prod_info.qty"/>-->
+                    </td>
+                    <td></td>
+                    </tr>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

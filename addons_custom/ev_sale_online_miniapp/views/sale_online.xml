@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="sale_online_form_inherit_payment_info" model="ir.ui.view">
+            <field name="name">sale_online_form_inherit_payment_info</field>
+            <field name="model">sale.online</field>
+            <field name="inherit_id" ref="ev_sale_online.sale_online_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='set_to_draft']" position="replace">
+                    <button name="set_to_draft" type="object" string="Set to Draft" attrs="{'invisible': ['|',('is_created_by_api', '=', True),('state','not in', ('sent'))]}"/>
+<!--                    <button name="action_allocate_discount"-->
+<!--                            type="object"-->
+<!--                            string="Allocate Discount"-->
+<!--                            class="btn btn-primary"-->
+<!--                            attrs="{'invisible': ['|',('is_created_by_api', '=', True),('state','not in', ('draft'))]}"-->
+<!--                    />-->
+                </xpath>
+                <xpath expr="//button[@name='cancel_sale_online']" position="replace">
+                     <button name="cancel_sale_online" type="object" string="Cancel" attrs="{'invisible': ['|',('is_created_by_api', '=', True),('state','not in',('draft', 'sent'))]}"/>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Payment Info" name="payment_info">
+                        <field name="payment_method_ids" attrs="{'readonly': [('state','!=','draft')]}">
+                            <tree editable="bottom">
+                                <field name="payment_method_id" required="True"
+                                       options="{'no_create_edit': True, 'no_create': True, 'no_open': True}"
+                                       domain="['&amp;', ('id', 'in', domain_payment_method), ('id', 'in', domain_payment_method_channel)]"
+                                />
+                                <field name="amount" required="True"/>
+                                <field name="domain_payment_method" invisible="1"/>
+                                <field name="domain_payment_method_channel" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                    <page string="Account Sinvoice" name="account_sinvoice">
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="sinvoice_vat" attrs="{'readonly': ['|','|',('is_created_by_api', '=', True),('state','not in',('draft')),('buyer_not_get_invoice', '=', True)]}"/>
+                                    <field name="sinvoice_company_name" attrs="{'readonly': ['|','|',('is_created_by_api', '=', True),('state','not in',('draft')),('buyer_not_get_invoice', '=', True)]}"/>
+                                    <field name="sinvoice_address" attrs="{'readonly': ['|','|',('is_created_by_api', '=', True),('state','not in',('draft')),('buyer_not_get_invoice', '=', True)]}"/>
+                                    <field name="sinvoice_email" attrs="{'readonly': ['|','|',('is_created_by_api', '=', True),('state','not in',('draft')),('buyer_not_get_invoice', '=', True)]}"/>
+                                    <field name="buyer_not_get_invoice" attrs="{'readonly': ['|',('is_created_by_api', '=', True),('state','not in',('draft'))]}"/>
+                                </group>
+                            </group>
+                        </form>
+                    </page>
+
+                    <page string="Discount Info" name="discount_info">
+                        <field name="sale_online_discount_ids" readonly="1">
+                            <tree editable="bottom">
+                                <field name="product_code"/>
+                                <field name="promotion_code"/>
+                                <field name="promotion_id"/>
+                                <field name="discount_amount"/>
+                                <field name="discount_type"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name="is_not_allow_editing" invisible="1"/>
+                    <field name="amount_subtotal_incl" attrs="{'readonly': [('is_not_allow_editing','!=',True)]}" force_save="1"/>
+                    <field name="discount" readonly="1" force_save="1"/>
+                    <field name="promotion_code" readonly="1" invisible="1"/>
+                    <field name="x_is_price_promotion" readonly="1" force_save="1"/>
+                    <field name="amount_promotion_loyalty" readonly="1"/>
+                    <field name="amount_promotion_total" readonly="1"/>
+                </xpath>
+
+                <xpath expr="//group[@name='order_total']" position="before">
+                    <group class="oe_left" colspan="2" name="order_discount_total">
+                        <field name="total_discount_on_bill" widget="monetary" attrs="{'readonly': ['|', ('state','!=','draft'), ('is_not_allow_editing','!=',True)]}"/>
+                        <field name="promotion_code" readonly="1" invisible="1"/>
+                        <field name="loyalty_point_redeem" readonly="1" widget="monetary"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//field[@name='qty_total']" position="after">
+                    <field name="is_not_allow_editing" invisible="1" force_save="1"/>
+                    <field name="is_created_by_api" invisible="1"/>
+                    <field name="amount_total_before_discount"/>
+                    <field name="total_discount" readonly="True"/>
+                </xpath>
+
+                <xpath expr="//field[@name='pos_config_id']" position="replace">
+                    <field name="pos_config_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"
+                           options="{'no_create_edit': True, 'no_create': True}"
+                    />
+                </xpath>
+                <xpath expr="//field[@name='price_list_id']" position="replace">
+                    <field name="price_list_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"
+                           options="{'no_create_edit': True, 'no_create': True}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sale_online_form_inherit_order_reference" model="ir.ui.view">
+            <field name="name">sale_online_form_inherit_order_reference</field>
+            <field name="model">sale.online</field>
+            <field name="inherit_id" ref="ev_pos_channel.sale_online_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='pos_channel_id']" position="after">
+                    <field name="ref_order"
+                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    <field name="cancel_reason" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='pos_channel_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': ['|', ('state', '=', 'finish'), ('is_created_by_api', '=', True)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

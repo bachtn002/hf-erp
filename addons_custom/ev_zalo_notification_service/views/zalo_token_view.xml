@@ -1,0 +1,81 @@
+<odoo>
+    <data>
+        <record id="zalo_token_view_tree" model="ir.ui.view">
+            <field name="name">Zalo Token Tree</field>
+            <field name="model">zalo.token</field>
+            <field name="arch" type="xml">
+                <tree string="Zalo Token Tree">
+                    <field name="app_id"/>
+<!--                    <field name="oa_id"/>-->
+                    <field name="access_token"/>
+                    <field name="refresh_token"/>
+                    <field name="expires_access_token"/>
+                    <field name="expires_refresh_token"/>
+                    <field name="authorization_code"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="zalo_token_view_from" model="ir.ui.view">
+            <field name="name">Zalo Token Form</field>
+            <field name="model">zalo.token</field>
+            <field name="arch" type="xml">
+                <form string="Zalo Token Form">
+                    <header>
+                        <button name="get_access_token" type="object"
+                                string="Get Access Token" class="oe_highlight"
+                                attrs="{'invisible': [('active', '=',False)]}"/>
+                        <button name="%(param_get_template_action)d" type="action"
+                                string="Get Template" class="oe_highlight"
+                                attrs="{'invisible': [('active', '=',False)]}"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" options='{"terminology": "archive"}' widget='boolean_toggle'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="app_id"/>
+<!--                                <field name="oa_id"/>-->
+                                <field name="access_token"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+                                <field name="expires_access_token"/>
+                            </group>
+                            <group>
+                                <field name="authorization_code"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+                                <field name="refresh_token"
+                                       style="text-overflow: ellipsis; overflow: hidden; word-break: break-all; "/>
+                                <field name="expires_refresh_token"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="zalo_token_view_search" model="ir.ui.view">
+            <field name="name">Zalo Token</field>
+            <field name="model">zalo.token</field>
+            <field name="arch" type="xml">
+                <search string="Zalo Token Search">
+<!--                    <field name="oa_id" filter_domain="[('oa_id','ilike',self)]"/>-->
+                    <field name="app_id" filter_domain="[('app_id','ilike',self)]"/>
+                    <field name="access_token" filter_domain="[('access_token','ilike',self)]"/>
+                    <field name="refresh_token" filter_domain="[('refresh_token','ilike',self)]"/>
+                    <field name="authorization_code" filter_domain="[('authorization_code','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="zalo_token_action" model="ir.actions.act_window">
+            <field name="name">Zalo Token</field>
+            <field name="res_model">zalo.token</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="zalo_token_view_search"/>
+        </record>
+    </data>
+</odoo>

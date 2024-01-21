@@ -1,0 +1,19 @@
+.o_ev_toggle_category_button__toggle_btn{
+    min-height: 33px;
+    display: flex;
+    justify-content: center;
+    border-top: solid 3px #6ec89b;
+    width:100%;
+    margin: 0px 10px
+}
+
+.o_ev_toggle_category_button__toggle_btn i{
+    font-size: 32px;
+    color: #6EC89B;
+}
+.pos .products-widget-control{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+}

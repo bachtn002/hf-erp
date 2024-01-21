@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="rule_sale_online_user" model="ir.rule">
+            <field name="name">Sale Online User</field>
+            <field name="model_id" ref="model_sale_online"/>
+            <field name="domain_force">[('pos_config_id.x_pos_shop_id.id', 'in', user.x_pos_shop_ids.ids)]
+            </field>
+            <field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>
+        </record>
+        <record id="rule_sale_online_order_line_User" model="ir.rule">
+            <field name="name">Sale Online Order Line User</field>
+            <field name="model_id" ref="model_sale_online"/>
+            <field name="domain_force">[('pos_config_id.x_pos_shop_id.id', 'in', user.x_pos_shop_ids.ids)]
+            </field>
+            <field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>
+        </record>
+
+        <record id="rule_sale_online_manager" model="ir.rule">
+            <field name="name">Sale Online Manager</field>
+            <field name="model_id" ref="model_sale_online"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('point_of_sale.group_pos_manager'))]"/>
+        </record>
+        <record id="rule_sale_online_order_line_manager" model="ir.rule">
+            <field name="name">Sale Online Order Line Manager</field>
+            <field name="model_id" ref="model_sale_online_order_line"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('point_of_sale.group_pos_manager'))]"/>
+        </record>
+
+        <record id="group_sale_online" model="res.groups">
+            <field name="name">Sale Online User</field>
+            <field name="category_id" ref="base.module_category_sales_point_of_sale"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+    </data>
+</odoo>

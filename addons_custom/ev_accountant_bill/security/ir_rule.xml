@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_accountant_bill_rule_company" model="ir.rule">
+            <field name="name">Multicompany Accountant Bill</field>
+            <field name="model_id" ref="model_accountant_bill"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>

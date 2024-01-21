@@ -1,0 +1,1107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_zalo_notification_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-13 07:16+0000\n"
+"PO-Revision-Date: 2022-05-13 07:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "<span>View Details</span>"
+msgstr "Xem chi tiết"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "<span>View</span>"
+msgstr "Xem"
+
+#. module: ev_zalo_notification_service
+#: model:mail.template,body_html:ev_zalo_notification_service.mail_access_token_zalo
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                    <tbody>\n"
+"                        <tr>\n"
+"                            <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                            <div>\n"
+"                                                Dear ADMIN,\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                Trong quá trình lấy Access Token Zalo xảy ra sự cố không mong muốn.\n"
+"                                                Bạn vui lòng cập nhật Access Token Zalo mới.\n"
+"                                                <br/>\n"
+"                                                Xin ảm ơn!\n"
+"                                            </div>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td style=\"text-align:center;\">\n"
+"                                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            "
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_shop__x_app_id
+msgid "APP ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__accept_null
+msgid "Accept Null"
+msgstr "Cho phép null"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__access_token
+msgid "Access Token"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_tag__account_update
+msgid "Account Update"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__active
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__active
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__active
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__active
+msgid "Active"
+msgstr "Trạng thái"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__active
+msgid "Active Send"
+msgstr "Sử dụng"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "All"
+msgstr "Tất cả"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/helpers/Response.py:0
+#, python-format
+msgid "An error occurred, please try again later."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__app_id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__app_id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__app_id
+msgid "App ID"
+msgstr "Mã app"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__apply_template_quota
+msgid "Apply Template Quota"
+msgstr "Áp dụng hạn ngạch mẫu"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__authorization_code
+msgid "Authentication Code"
+msgstr "Mã xác thực"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_information_view_from
+msgid "Back to draft"
+msgstr "Trở về nháp"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid ""
+"Bạn cần đăng ký liên kết tài khoản để thực hiện chức năng này.\n"
+"Để đăng ký tài khoản, vui lòng soạn tin và gửi theo cú pháp: #dk + khoảng trắng + số điện thoại.\n"
+"Ví dụ: #dk 0900000001"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Bạn hãy quan tâm OA của Homefarm để thực hiện chức năng này."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.param_get_template_view_from
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Chúc mừng bạn đã đăng ký liên kết tài khoản thành công"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.constraint,message:ev_zalo_notification_service.constraint_type_send_zns_unique_code
+msgid "Code must be unique"
+msgstr "Mã phải là duy nhất"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.data_webhook_zns__view_from
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_param_get_template
+msgid "Create a Param get list template"
+msgstr "Tạo 1 lấy danh sách template"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__created_time
+msgid "Created Time"
+msgstr "Thời gian tạo"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__create_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__create_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__create_date
+msgid "Created on"
+msgstr "Được tạo ra"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__customer_name
+msgid "Customer Name"
+msgstr "Tên khách hàng"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__data
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__data
+msgid "Data"
+msgstr "Dữ liệu"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_data_webhook_zns
+#: model:ir.ui.menu,name:ev_zalo_notification_service.data_webhook_zns_menu
+msgid "Data Webhook ZNS"
+msgstr "Dữ liệu webhook"
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.data_webhook_zns_action
+msgid "Data Webhook Zns"
+msgstr "Dữ liệu webhook"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.data_webhook_zns__view_from
+msgid "Data Webhook Zns Form"
+msgstr "Dữ liệu webhook"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.data_webhook_zns_view_tree
+msgid "Data Webhook Zns Tree"
+msgstr "Dữ liệu webhook"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__quota_date
+msgid "Date Quota"
+msgstr "Ngày hạn ngạch"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__param_get_template__status__5
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.server,name:ev_zalo_notification_service.data_webhook_zns_cron_ir_actions_server
+#: model:ir.cron,cron_name:ev_zalo_notification_service.data_webhook_zns_cron
+#: model:ir.cron,name:ev_zalo_notification_service.data_webhook_zns_cron
+msgid "Delete Data Webhook Zalo"
+msgstr "Xóa dữ liệu webhook zalo"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__status__deleted
+msgid "Deleted"
+msgstr "Đã xóa"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__param_get_template__status__4
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__status__disable
+msgid "Disable"
+msgstr "Vô hiệu"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_shop__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_queue_job__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__display_name
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/helpers/APIZNS.py:0
+#: code:addons/ev_zalo_notification_service/helpers/APIZNS.py:0
+#: code:addons/ev_zalo_notification_service/helpers/APIZNS.py:0
+#: code:addons/ev_zalo_notification_service/helpers/APIZNS.py:0
+#, python-format
+msgid "Do not access token"
+msgstr "Không có access token"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__data_webhook_zns__state__done
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_information__state__done
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__data_webhook_zns__state__draft
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_information__state__draft
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__param_get_template__status__1
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__status__enable
+msgid "Enable"
+msgstr "Hiệu lực"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_information__state__error
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/controllers/oa_api.py:0
+#, python-format
+msgid "Error with token"
+msgstr "Lỗi với token"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__expires_access_token
+msgid "Expire Access Token"
+msgstr "Hạn sử dụng access token"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__expires_refresh_token
+msgid "Expire Refresh Token"
+msgstr "Hạn sử dụng refresh token"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__expired
+msgid "Expired OTP"
+msgstr "Hạn OTP"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_tag__general_update
+msgid "General Update"
+msgstr "Cập nhật chung"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_token_view_from
+msgid "Get Access Token"
+msgstr "Lấy access token"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.param_get_template_view_from
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_token_view_from
+msgid "Get Template"
+msgstr "Lấy template"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_quality__high
+msgid "High"
+msgstr "Cao"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid ""
+"Hệ thống hiện tại không gửi được OTP qua Zalo. Vui lòng thực hiện vào ngày "
+"sau."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid ""
+"Hệ thống không gửi được OTP qua Zalo theo số điện thoại của bạn. Vui lòng "
+"kiểm tra lại."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid ""
+"Hệ thống đã gửi cho bạn số OTP để xác thực số điện thoại.\n"
+"Hãy soạn tin và gửi lại theo cú pháp: #otp + khoảng trắng + số OTP."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_shop__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_queue_job__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__name
+msgid "IP"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.ip_send_zns_action
+#: model:ir.model,name:ev_zalo_notification_service.model_ip_send_zns
+#: model:ir.ui.menu,name:ev_zalo_notification_service.ip_send_zns_menu
+msgid "IP Send ZNS"
+msgstr "IP gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.ip_send_zns__view_from
+msgid "IP Send ZNS Form"
+msgstr "IP gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.ip_send_zns_view_search
+msgid "IP Send ZNS Search"
+msgstr "IP gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.ip_send_zns_view_tree
+msgid "IP Send ZNS Tree"
+msgstr "IP gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/ip_send_zns.py:0
+#, python-format
+msgid "IP address is invalid! Please check again!"
+msgstr "Địa chỉ IP không hợp lệ! Vui lòng kiểm tra lại!"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.constraint,message:ev_zalo_notification_service.constraint_ip_send_zns_unique_name
+msgid "IP must be unique"
+msgstr "IP phải là duy nhất"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_tag__in_transaction
+msgid "In Transaction"
+msgstr "Đang giao dịch"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/controllers/oa_api.py:0
+#, python-format
+msgid "Incorrect app id or oa_id"
+msgstr "Không tồn tại app id hoặc oa id"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/controllers/oa_api.py:0
+#, python-format
+msgid "Incorrect oa id or app_id"
+msgstr "Không tồn tại app id hoặc oa id"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_shop____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_queue_job____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template____last_update
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__write_uid
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__write_uid
+msgid "Last Updated by"
+msgstr "Sửa lần cuối bởi"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_ip_send_zns__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__write_date
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__limit
+msgid "Limit"
+msgstr "Số lượng template tối đa"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/wizard/param_get_template.py:0
+#, python-format
+msgid "Limit must be less than 100"
+msgstr "Số lượng template tối đa phải nhỏ hơn hoặc bằng 100"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__list_params
+msgid "List Params"
+msgstr "Danh sách Params"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_quality__low
+msgid "Low"
+msgstr "Thấp"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Lỗi cú pháp. Bạn vui lòng kiểm tra lại cú pháp!"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__msg_id
+msgid "MSG ID"
+msgstr "ID thông báo"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__max_length
+msgid "Max Length"
+msgstr "Số ký tự tối đa"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,help:ev_zalo_notification_service.field_param_get_template__limit
+msgid "Maximum 100"
+msgstr "Tối đa 100"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_quality__medium
+msgid "Medium"
+msgstr "Trung bình"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__message
+msgid "Message"
+msgstr "Thông báo"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__mess_error
+msgid "Message Error"
+msgstr "Thông báo lỗi"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/helpers/APIGetToken.py:0
+#, python-format
+msgid "Message: %s"
+msgstr "Thông báo: %s"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__min_length
+msgid "Min Length"
+msgstr "Số ký tự tối thiểu"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Mã OTP không đúng, vui lòng kiểm tra lại!"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Mã OTP đã hết hạn sử dụng. Bạn phải thực hiện lại."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__name
+msgid "Name OA"
+msgstr "Tên"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__name
+msgid "Name Param"
+msgstr "Tên"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/zns_information.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/helpers/APIGetToken.py:0
+#, python-format
+msgid "No usable refresh token! You can Callback URL"
+msgstr "Không có refresh token có thể sử dụng! Bạn có thể gọi lại URL"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_shop__x_oa_id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__oa_id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__oa_id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__oa_id
+msgid "OA ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__name
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_tag__otp
+msgid "OTP"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_otp_zalo
+msgid "OTP Zalo user send to confirm"
+msgstr "OTP Zalo để user xác thực"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__offset
+msgid "Offset"
+msgstr "Thứ tự của template đầu tiên"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__order_id
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_information__type__order
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__order_code
+msgid "Order Code"
+msgstr "Mã đơn hàng"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__order_date
+msgid "Order Date"
+msgstr "Ngày mua"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__order_value
+msgid "Order Value"
+msgstr "Giá trị đơn hàng"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.param_get_template_view_from
+msgid "Param Get Template"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.param_get_template_action
+msgid "Param Get Template Action"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_template_view_from
+msgid "Params"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_res_partner_zalo
+msgid "Partner Map Zalo"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__param_get_template__status__2
+msgid "Pending"
+msgstr "Chưa giải quyết"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__status__pending_review
+msgid "Pending Review"
+msgstr "Chờ xem xét"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__phone
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__phone
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__point_plus
+msgid "Point Plus"
+msgstr "Điểm tích lũy"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__point_value
+msgid "Point Value"
+msgstr "Số dư điểm"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_pos_shop
+msgid "Pos Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_tag__post_transaction
+msgid "Post Transaction"
+msgstr "Sau giao dịch"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__preview_url
+msgid "Preview URL"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__price
+msgid "Price"
+msgstr "Giá"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__data_webhook_zns__state__queue
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_information__state__queue
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "Queue"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_queue_job
+msgid "Queue Job"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_information__state__quota
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_kanban
+msgid "Quota"
+msgstr "Hết hạn mức zns"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_token__refresh_token
+msgid "Refresh Token"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__param_get_template__status__3
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__status__reject
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__remaining_quota
+msgid "Remaining Quota"
+msgstr "Số hạn mức còn lại"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__require
+msgid "Require"
+msgstr "Bắt buộc"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zalo_official_account__secret_key
+msgid "Secret Key"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_information_view_from
+msgid "Send ZNS"
+msgstr "Gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__sent_time
+msgid "Sent Time"
+msgstr "Thời gian gửi"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.ip_send_zns_view_tree
+msgid "Setup"
+msgstr "Cấu hình"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__shop_id
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__shop_name
+msgid "Shop Name"
+msgstr "Cửa hàng"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_data_webhook_zns__state
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__state
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__status
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_param_get_template__status
+msgid "Status"
+msgstr "Trạng thái template"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Số điện thoại đã được đăng ký trên hệ thống."
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__template_id
+msgid "Template"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__template_daily_quota
+msgid "Template Daily Quota"
+msgstr "Hạn mức hằng ngày"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__template_id
+msgid "Template ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__template_name
+msgid "Template Name"
+msgstr "Tên template"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__template_quality
+msgid "Template Quality"
+msgstr "Chất lượng template"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__template_remaining_quota
+msgid "Template Remaining Quota"
+msgstr "Hạn mức còn lại"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_pos_shop__x_template_id
+msgid "Template Send ZNS"
+msgstr "Template gửi zns đơn hàng"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__template_tag
+msgid "Template Tag"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,help:ev_zalo_notification_service.field_param_get_template__offset
+msgid ""
+"The order of the first template in the returned list.Note: The most recently"
+" created Template will have an order of 0."
+msgstr ""
+"Thứ tự của template đầu tiên trong danh sách trả về.Lưu ý: Template được tạo"
+" gần nhất sẽ có thứ tự là 0."
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.constraint,message:ev_zalo_notification_service.constraint_zns_template_template_id_uniq
+msgid "The template id  already exists in the system!"
+msgstr "Template id đã tồn tại tron hệ thống"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.constraint,message:ev_zalo_notification_service.constraint_res_partner_zalo_zalo_id_uniq
+msgid "The zalo id must be unique !"
+msgstr "Zalo id phải là duy nhất!"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template__timeout
+msgid "Time Out"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_type_send_zns__token
+msgid "Token"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__tracking_id
+msgid "Tracking ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__type
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__type
+msgid "Type"
+msgstr "Định dạng validate"
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.type_send_zns_action
+#: model:ir.ui.menu,name:ev_zalo_notification_service.type_send_zns_menu
+msgid "Type Send ZNS"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns__view_from
+msgid "Type Send ZNS Form"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.type_send_zns_kanban_action
+#: model:ir.ui.menu,name:ev_zalo_notification_service.type_send_zns_kanban_menu
+msgid "Type Send ZNS Kanban"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_search
+msgid "Type Send ZNS Search"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.type_send_zns_view_tree
+msgid "Type Send ZNS Tree"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_information__type_send_id
+msgid "Type Send Zns"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_type_send_zns
+msgid "Type send request zns"
+msgstr "Loại gửi ZNS"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_quality__undefined
+msgid "Undefined"
+msgstr "Chưa xác định"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_otp_zalo__user_id
+msgid "User Zalo ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/controllers/oa_api.py:0
+#, python-format
+msgid "You are not allowed to send messages zns!"
+msgstr "Bạn không được phép gửi tin nhắn zns!"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/controllers/oa_api.py:0
+#, python-format
+msgid ""
+"Your ip address is not allowed to access this API. Contact to your Admin!"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.ui.menu,name:ev_zalo_notification_service.zalo_notification_service_menu_root
+msgid "ZNS"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.ui.menu,name:ev_zalo_notification_service.zalo_notification_service_config
+msgid "ZNS Config"
+msgstr "Cấu hình"
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.zns_information_action
+#: model:ir.ui.menu,name:ev_zalo_notification_service.zns_information_menu
+msgid "ZNS Information"
+msgstr "Thông tin ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_information_view_from
+msgid "ZNS Information Form"
+msgstr "Thông tin ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_information_view_search
+msgid "ZNS Information Search"
+msgstr "Tìm kiếm thông tin ZNS"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_information_view_tree
+msgid "ZNS Information Tree"
+msgstr "Thông tin ZNS"
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.zns_template_action
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_zns_template_param__zns_template_id
+#: model:ir.ui.menu,name:ev_zalo_notification_service.zns_template_menu
+msgid "ZNS Template"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_template_view_from
+msgid "ZNS Template Form"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_template_view_search
+msgid "ZNS Template Search"
+msgstr "Tìm kiếm ZNS Template"
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zns_template_view_tree
+msgid "ZNS Template Tree"
+msgstr "Danh sách ZNS Template"
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/helpers/APIZNS.py:0
+#, python-format
+msgid "ZNS message limit expired"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields,field_description:ev_zalo_notification_service.field_res_partner_zalo__zalo_id
+msgid "Zalo ID"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_zns_information
+msgid "Zalo Notification Service Information"
+msgstr "Thông tin Zalo Notification Service"
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_zns_template
+msgid "Zalo Notification Service Template"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_zns_template_param
+msgid "Zalo Notification Service Template Detail Params"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.zalo_official_account_action
+#: model:ir.ui.menu,name:ev_zalo_notification_service.zalo_official_account_menu
+msgid "Zalo Official Account"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_official_account__view_from
+msgid "Zalo Official Account Form"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_zalo_official_account
+msgid "Zalo Official Account Management"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_official_account_view_search
+msgid "Zalo Official Account Search"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_official_account_view_tree
+msgid "Zalo Official Account Tree"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.actions.act_window,name:ev_zalo_notification_service.zalo_token_action
+#: model:ir.ui.menu,name:ev_zalo_notification_service.zalo_token_menu
+msgid "Zalo Token"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_token_view_from
+msgid "Zalo Token Form"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model,name:ev_zalo_notification_service.model_zalo_token
+msgid "Zalo Token Management"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_token_view_search
+msgid "Zalo Token Search"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model_terms:ir.ui.view,arch_db:ev_zalo_notification_service.zalo_token_view_tree
+msgid "Zalo Token Tree"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/zalo_token.py:0
+#, python-format
+msgid "resultmessage"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: code:addons/ev_zalo_notification_service/models/data_webhook_zns.py:0
+#, python-format
+msgid "Điểm tích lũy của bạn là %s điểm"
+msgstr ""
+
+#. module: ev_zalo_notification_service
+#: model:ir.model.fields.selection,name:ev_zalo_notification_service.selection__zns_template__template_tag__follow_up
+msgid "Follow up"
+msgstr "Thông báo đến khách hàng cũ"

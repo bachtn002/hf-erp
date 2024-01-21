@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem id="loan_management_root_menu"
+			name="Loan Management" sequence="41"
+			web_icon="to_loan_management,static/description/icon.png"
+			groups="group_loan_management_user" />
+
+		<menuitem id="loan_borrowing_order_main_menu" groups="group_loan_management_user"
+			name="Borrowing" parent="loan_management_root_menu" sequence="20" />
+
+<!--		<menuitem id="loan_lending_order_main_menu" name="Lending" groups="group_loan_management_user"-->
+<!--			parent="loan_management_root_menu" sequence="40" />-->
+
+		<menuitem id="loan_management_report" name="Reports"
+			parent="loan_management_root_menu" sequence="80"
+			groups="group_loan_management_manager" />
+
+		<menuitem id="loan_configuration_main_menu"
+			name="Configuration" parent="loan_management_root_menu" sequence="90"
+			groups="group_loan_management_manager" />
+
+	</data>
+</odoo>

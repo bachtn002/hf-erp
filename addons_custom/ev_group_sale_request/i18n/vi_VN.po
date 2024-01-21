@@ -1,0 +1,380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_group_sale_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-17 07:58+0000\n"
+"PO-Revision-Date: 2022-02-17 15:03+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ev_group_sale_request
+#: code:addons/ev_group_sale_request/wizard/genaral_product_group_imp.py:0
+#: code:addons/ev_group_sale_request/wizard/supply_product_group_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Product not exist in the system or not active, line (%s)"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: code:addons/ev_group_sale_request/wizard/general_warehouse_group_imp.py:0
+#: code:addons/ev_group_sale_request/wizard/supply_warehouse_group_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Warehouse not exist in the system, line (%s)"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warahouse_group_import_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__code
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__code
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__code
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__code
+msgid "Code Group"
+msgstr "Mã nhóm"
+
+#. module: ev_group_sale_request
+#: model:ir.model.constraint,message:ev_group_sale_request.constraint_general_product_group_code_uniq
+#: model:ir.model.constraint,message:ev_group_sale_request.constraint_general_warehouse_group_code_uniq
+#: model:ir.model.constraint,message:ev_group_sale_request.constraint_supply_product_group_code_uniq
+#: model:ir.model.constraint,message:ev_group_sale_request.constraint_supply_warehouse_group_code_uniq
+msgid "Code already exists in the system!"
+msgstr "Mã đã tồn tại trong hệ thống"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__create_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__create_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__display_name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.gsupply_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warehouse_group_view_form
+msgid "Dowload file"
+msgstr "Tải file"
+
+#. module: ev_group_sale_request
+#: code:addons/ev_group_sale_request/wizard/genaral_product_group_imp.py:0
+#: code:addons/ev_group_sale_request/wizard/general_warehouse_group_imp.py:0
+#: code:addons/ev_group_sale_request/wizard/supply_product_group_imp.py:0
+#: code:addons/ev_group_sale_request/wizard/supply_warehouse_group_imp.py:0
+#, python-format
+msgid ""
+"File not found or in incorrect format. Please check the .xls or .xlsx file "
+"format"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_general_product_group
+msgid "General Group Product"
+msgstr "Nhóm kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__general_product_group_id
+#: model:ir.ui.menu,name:ev_group_sale_request.general_product_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_view_tree
+msgid "General Product Group"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__general_ids
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__general_ids
+msgid "General Request"
+msgstr "Phiếu tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_general_warehouse_group
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__general_warehouse_group_id
+#: model:ir.ui.menu,name:ev_group_sale_request.general_warehouse_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_view_tree
+msgid "General Warehouse Group"
+msgstr "Nhóm kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__id
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.general_product_group_import_action
+msgid "Import General Product Group"
+msgstr "Nhập nhóm sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.general_warehouse_group_import_action
+msgid "Import General Warehouse Group"
+msgstr "Nhập nhóm kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.supply_product_group_import_action
+msgid "Import Supply Product Group"
+msgstr "Nhập nhóm sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.supply_warehouse_group_import_action
+msgid "Import Supply Warehouse Group"
+msgstr "Nhập nhóm kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warahouse_group_import_wizard_form
+msgid "Import a excel file"
+msgstr "Nhập 1 file excel"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group____last_update
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__write_uid
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__write_date
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__product_ids
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__product_ids
+msgid "List Product"
+msgstr "Sản phẩm"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__warehouse_ids
+msgid "List Supply Warehouse"
+msgstr "Kho"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__warehouse_ids
+msgid "List Warehouse"
+msgstr "Kho"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group__name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__name
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__name
+msgid "Name Group"
+msgstr "Tên nhóm"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_order_schedule_from_stock__order_schedule_ids
+msgid "Order Schedule"
+msgstr "Lịch đặt hàng"
+
+#. module: ev_group_sale_request
+#: model:ir.ui.menu,name:ev_group_sale_request.order_schedule_from_stock_menu
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.order_schedule_from_stock_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.order_schedule_from_stock_view_tree
+msgid "Order Schedule From Stock"
+msgstr "Lịch đặt hàng từ kho"
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_view_search
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_view_search
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_product_group_view_search
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warehouse_group_view_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_supply_product_group
+msgid "Supply Group Product"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.ui.menu,name:ev_group_sale_request.supply_product_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.gsupply_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_product_group_view_tree
+msgid "Supply Product Group"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group__supply_ids
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group__supply_ids
+msgid "Supply Request"
+msgstr "Nhóm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_supply_warehouse_group
+#: model:ir.ui.menu,name:ev_group_sale_request.supply_warehouse_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warehouse_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warehouse_group_view_tree
+msgid "Supply Warehouse Group"
+msgstr "Nhóm kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.gsupply_product_group_view_form
+msgid "Update file product"
+msgstr "Cập nhật file sản phẩm"
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_view_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warehouse_group_view_form
+msgid "Update file warehouse"
+msgstr "Cập nhật file kho"
+
+#. module: ev_group_sale_request
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.general_warehouse_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_product_group_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:ev_group_sale_request.supply_warahouse_group_import_wizard_form
+msgid "Upload"
+msgstr "Cập nhật"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_product_group_import__upload_file
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group_import__upload_file
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_product_group_import__upload_file
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_supply_warehouse_group_import__upload_file
+msgid "Upload File"
+msgstr "Cập nhật"
+
+#. module: ev_group_sale_request
+#: model:ir.model.fields,field_description:ev_group_sale_request.field_general_warehouse_group__warehouse_id
+msgid "Warehouse Supply"
+msgstr "Kho cung ứng"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_general_product_group_import
+msgid "general.product.group.import"
+msgstr "Nhập file sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_general_warehouse_group_import
+msgid "general.warehouse.group.import"
+msgstr "Nhập file kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.general_product_group_action
+#: model:ir.actions.act_window,name:ev_group_sale_request.supply_product_group_action
+msgid "general_product_group_view_tree"
+msgstr "Nhóm sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.general_warehouse_group_action
+msgid "general_warehouse_group_view_tree"
+msgstr "Nhóm kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_order_schedule_from_stock
+msgid "order.schedule.from.stock"
+msgstr ""
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.order_schedule_from_stock_action
+msgid "order_schedule_from_stock_view_tree"
+msgstr "Lịch đặt hàng từ kho"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_supply_product_group_import
+msgid "supply.product.group.import"
+msgstr "Nhập file sản phẩm tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.model,name:ev_group_sale_request.model_supply_warehouse_group_import
+msgid "supply.warehouse.group.import"
+msgstr "Nhập file kho tổng hợp"
+
+#. module: ev_group_sale_request
+#: model:ir.actions.act_window,name:ev_group_sale_request.supply_warehouse_group_action
+msgid "supply_warehouse_group_view_tree"
+msgstr "Nhóm kho tổng hợp"

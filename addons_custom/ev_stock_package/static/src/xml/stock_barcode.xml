@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- main_menu is a template in module stock_barcode -->
+    <t t-extend="main_menu">
+        <t t-jquery="div.row > div.col:last" t-operation="after">
+            <div class="col">
+                <button class="button_package_transfers btn btn-block btn-primary mb-4">Stock Transfers</button>
+            </div>
+        </t>
+        <t t-jquery="ul" t-operation="append">
+            <li>Scan a <b>Stock transfer</b> to open it.</li>
+        </t>
+    </t>
+</templates>

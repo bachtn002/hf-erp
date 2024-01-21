@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit_cancel" model="ir.ui.view">
+            <field name="name">stock.picking.form.cancel</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <button name="action_cancel" position="after">
+                    <button name="action_set_to_draft" attrs="{'invisible': ['|', ('state', 'not in', ('cancel')), ('is_locked', '=', False)]}" string="Set to draft" groups="ev_stock_picking_cancel.group_stock_picking_cancel" type="object"/>
+                    <button name="action_cancel_picking" confirm="Are you sure you want to cancel ?" string="Cancel" groups="ev_stock_picking_cancel.group_stock_picking_cancel" type="object" states="done"/>
+                    <button name="action_force_cancel_picking" invisible="1" confirm="Are you sure you want force cancel ?" states="done" string="Force cancel" groups="ev_stock_picking_cancel.group_stock_picking_cancel" type="object"/>
+                </button>
+            </field>
+        </record>
+
+        <record id="view_inventory_form_inherit_cancel" model="ir.ui.view">
+            <field name="name">stock.inventory.form.cancel</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+                <button name="action_validate" position="after">
+                    <button name="action_cancel_inventory" confirm="Are you sure you want to cancel ?" states="done" string="Cancel" groups="ev_stock_picking_cancel.group_stock_inventory_cancel" type="object"/>
+                </button>
+            </field>
+        </record>
+    </data>
+</odoo>

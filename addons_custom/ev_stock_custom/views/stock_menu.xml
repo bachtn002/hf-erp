@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--	invisible menu in stock-->
+	<record model ="ir.ui.menu" id="stock.menu_reordering_rules_replenish">
+		<field name="active" eval="False"/>
+	</record>
+
+	<record model ="ir.ui.menu" id="stock.menu_stock_scrap">
+		<field name="active" eval="False"/>
+	</record>
+
+	<record model ="ir.ui.menu" id="stock.menu_procurement_compute">
+		<field name="active" eval="False"/>
+	</record>
+
+</odoo>

@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+
+		<record id="pos_promotion_tree_view" model="ir.ui.view">
+			<field name="name">Promotion</field>
+			<field name="model">pos.promotion</field>
+			<field name="arch" type="xml">
+				<tree string="pos_promotion_tree_view" default_order="priority">
+					<field name="name"/>
+					<field name="type"/>
+					<field name="start_date" widget="date"/>
+					<field name="end_date" widget="date"/>
+					<field name="start_time" widget="float_time"/>
+					<field name="end_time" widget="float_time"/>
+					<!--					<field name="partner_groups" widget="many2many_tags"/>-->
+					<field name="priority"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="pos_promotion_form_view" model="ir.ui.view">
+			<field name="name">Promotion</field>
+			<field name="model">pos.promotion</field>
+			<field name="arch" type="xml">
+				<form string="Promotion">
+					<header>
+						<button string="Activate"
+						        name="action_active"
+						        type="object"
+						        class="btn btn-primary"
+						        states="draft,inactive"/>
+						<button string="Deactivate"
+						        name="action_deactive"
+						        type="object"
+						        class="btn btn-primary"
+						        states="draft,active"/>
+						<button string="Cancel"
+						        name="action_cancel"
+						        type="object"
+						        class="btn btn-danger"
+						        states="draft,active,inactive"/>
+						<button string="Back to Draft"
+						        name="action_draft"
+						        type="object"
+						        class="btn btn-secondary"
+						        states="active,inactive"/>
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<group name="general">
+							<group>
+								<field name="name" required="1"
+							       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+								<field name="type" required="1"
+							       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+
+							</group>
+							<group>
+								<field name="product_id" readonly="1"/>
+								<field name="priority"
+							       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+								<field name="import_file" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+							</group>
+						</group>
+						<group string="Apply Time">
+							<group>
+								<field name="start_date" widget="date"
+								       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+								<field name="end_date" widget="date"
+								       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+								<!--								<field name="rule_apply_promotion" widget="boolean_toggle"-->
+								<!--								       attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+							</group>
+							<group>
+								<field name="time_add"
+								       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+								<field name="weekday_add"
+								       attrs="{'readonly': [('state', '!=', ('draft'))]}"/>
+								<field name="start_time" widget="float_time" no_label="1"
+								       attrs="{'readonly': [('state', '!=', ('draft'))], 'invisible': [('time_add', '=', False)]}"/>
+								<field name="end_time" widget="float_time" no_label="1"
+								       attrs="{'readonly': [('state', '!=', ('draft'))], 'invisible': [('time_add', '=', False)]}"/>
+								<field name="vaction_ids" widget="many2many_tags"
+								       attrs="{'readonly': [('state', '!=', ('draft'))], 'invisible': [('weekday_add', '=', False)]}"/>
+							</group>
+						</group>
+						<notebook name="promotion_list">
+							<page name="promotion_detail" string="Promotion Detail">
+							</page>
+							<page name="pos_config" string="POS Apply">
+								<group>
+									<group>
+										<field name="apply_all_pos_config"
+										       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+									</group>
+									<group>
+										<field name="apply_manual_pos_config"
+										       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+									</group>
+								</group>
+
+								<field name="field_binary_import" filename="field_binary_name"
+								       attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"/>
+								<field name="field_binary_name" invisible="1"/>
+								<button name="download_template_pos_config" type="object"
+								        string="Download Import Template"
+								        attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"
+								        class="btn btn-link" style="text-decoration: underline;"
+								        help="File must in the format of xls or xlsx"/>
+								<button name="action_import_line_pos_config" type="object" class="oe_highlight"
+								        string="Import"
+								        attrs="{'invisible': ['|','|',('field_binary_import', '=', False),('import_file', '=', False),('state','!=','draft')]}"/>
+								<field name="pos_configs" attrs="{'readonly': [('state', '!=', 'draft')],
+																	'invisible': ['|',('apply_all_pos_config', '=', True),('apply_manual_pos_config', '=', False)]}"/>
+							</page>
+							<!--							<page name="promotion_partners" string="Nhóm KH thêm từ group"-->
+							<!--							      attrs="{'invisible': [('rule_apply_promotion', '=', False)]}">-->
+							<!--								<field name="field_binary_import_partner" filename="field_binary_name"-->
+							<!--								       attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"/>-->
+							<!--								<field name="field_binary_name" invisible="1"/>-->
+							<!--								<button name="download_template_res_partner" type="object"-->
+							<!--								        string="Download Import Template"-->
+							<!--								        attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"-->
+							<!--								        class="btn btn-link" style="text-decoration: underline;"-->
+							<!--								        help="File must in the format of xls or xlsx"/>-->
+							<!--								<button name="action_import_line_partner" type="object" class="oe_highlight"-->
+							<!--								        string="Import"-->
+							<!--								        attrs="{'invisible': ['|','|',('field_binary_import_partner', '=', False),('import_file', '=', False),('state','!=','draft')]}"/>-->
+							<!--								<field name="partner_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">-->
+							<!--									<tree>-->
+							<!--										<field name="name"/>-->
+							<!--										<field name="phone"/>-->
+							<!--										<field name="email"/>-->
+							<!--										<field name="city"/>-->
+							<!--										<field name="country_id"/>-->
+							<!--									</tree>-->
+							<!--								</field>-->
+							<!--							</page>-->
+							<page name="promotion_group_partners" string="Nhóm khách hàng áp dụng">
+								<field name="partner_groups" attrs="{'readonly': [('state', '!=', 'draft')]}">-->
+									<tree>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+							<page name="promotion_group_partners" string="Nhóm khách hàng không áp dụng">
+								<field name="partner_groups_not" attrs="{'readonly': [('state', '!=', 'draft')]}">-->
+									<tree>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+							<page name="promotion_partners" string="Partners">
+								<group>
+									<group>
+										<field name="apply_all_res_partner_apply"
+										       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+									</group>
+									<group>
+										<field name="apply_manual_res_partner_apply"
+										       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+									</group>
+								</group>
+								<field name="field_binary_import_partner" filename="field_binary_name"
+								       attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"/>
+								<field name="field_binary_name" invisible="1"/>
+								<button name="download_template_res_partner" type="object"
+								        string="Download Import Template"
+								        attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"
+								        class="btn btn-link" style="text-decoration: underline;"
+								        help="File must in the format of xls or xlsx"/>
+								<button name="action_import_line_partner" type="object" class="oe_highlight"
+								        string="Import"
+								        attrs="{'invisible': ['|','|',('field_binary_import_partner', '=', False),('import_file', '=', False),('state','!=','draft')]}"/>
+								<field name="partner_ids_without_group" attrs="{'readonly': [('state', '!=', 'draft')],
+																				'invisible': ['|',('apply_all_res_partner_apply', '=', True),('apply_manual_res_partner_apply', '=', False)]}">
+									<tree>
+										<field name="name"/>
+										<field name="phone"/>
+										<field name="email"/>
+										<field name="city"/>
+										<field name="country_id"/>
+									</tree>
+								</field>
+							</page>
+							<page name="promotion_partners_not" string="Not Partners">
+								<group>
+									<group>
+										<field name="apply_all_res_partner_not_apply"
+										       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+									</group>
+									<group>
+										<field name="apply_manual_res_partner_not_apply"
+										       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+									</group>
+								</group>
+								<field name="field_binary_import_not_partner" filename="field_binary_name"
+								       attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"/>
+								<field name="field_binary_name" invisible="1"/>
+								<button name="download_template_not_res_partner" type="object"
+								        string="Download Import Template"
+								        attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"
+								        class="btn btn-link" style="text-decoration: underline;"
+								        help="File must in the format of xls or xlsx"/>
+								<button name="action_import_line_not_partner" type="object" class="oe_highlight"
+								        string="Import"
+								        attrs="{'invisible': ['|','|',('field_binary_import_not_partner', '=', False),('import_file', '=', False),('state','!=','draft')]}"/>
+								<field name="x_partner_not_ids" attrs="{'readonly': [('state', '!=', 'draft')],
+																		'invisible': ['|',('apply_all_res_partner_not_apply', '=', True),('apply_manual_res_partner_not_apply', '=', False)]}">
+									<tree>
+										<field name="name"/>
+										<field name="phone"/>
+										<field name="email"/>
+										<field name="city"/>
+										<field name="country_id"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"
+						       widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="pos_promotion_search_view" model="ir.ui.view">
+			<field name="name">pos.promotion.search.view</field>
+			<field name="model">pos.promotion</field>
+			<field name="arch" type="xml">
+				<search string="Promotion">
+					<field name="name"/>
+					<filter name="filter_active_promotion" string="Active Promotion"
+					        domain="[('state', '=', 'active')]"/>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="pos_promotion_action">
+			<field name="name">Promotion</field>
+			<field name="res_model">pos.promotion</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context" eval="{'search_default_filter_active_promotion': 1}"/>
+			<field name="view_id" ref="ev_pos_promotion.pos_promotion_tree_view"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Add a new record.
+				</p>
+			</field>
+
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem
+                parent="ev_pos_erpviet.menu_pos_config_custom"
+                action="pos_loyalty.action_loyalty_program_form"
+                id="menu_loyalty_program_custom"
+                sequence="50"
+                groups="point_of_sale.group_pos_manager"/>
+        <menuitem id="pos_loyalty.menu_loyalty_program" active="False"/>
+
+    </data>
+</odoo>

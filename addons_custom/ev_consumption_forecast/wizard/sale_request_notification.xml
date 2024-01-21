@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_request_notification_form" model="ir.ui.view">
+            <field name="name">sale_request_notification_form</field>
+            <field name="model">sale.request.notification</field>
+            <field name="arch" type="xml">
+                <form string="Confirm">
+                    <group name="main">
+                        <div>
+                            <h3 class="text-center">
+                                You will get ordering hints. Old data will be deleted. Do you confirm the action?
+                            </h3>
+                        </div>
+                    </group>
+                    <footer>
+                        <button name="confirm_notification" type="object"
+                                string="Confirm" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sale_request_notification_action" model="ir.actions.act_window">
+            <field name="name">Sale Request Notification Action</field>
+            <field name="res_model">sale.request.notification</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

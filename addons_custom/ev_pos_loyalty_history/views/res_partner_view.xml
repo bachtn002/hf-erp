@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_property_inherit_form" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="point_of_sale.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <page name="sales_purchases" position="after">
+                    <page name="customer_point_history" string="Customer point history">
+                        <field name="x_customer_point_history_ids" readonly="1" force_save="1">
+                            <tree>
+                                <field name="partner_id" invisible="1"/>
+                                <field name="points"/>
+                                <field name="expire_date"/>
+                                <field name="type"/>
+                                <field name="order_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </data>
+        </field>
+    </record>
+
+</odoo>

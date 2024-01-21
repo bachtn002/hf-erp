@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="asset_inventory_add_line_view_form" model="ir.ui.view">
+            <field name="name">asset_inventory_add_line_view_form</field>
+            <field name="model">account.asset.inventory.add.line</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="unit" />
+                            <field name="quantity" />
+                            <field name="note" />
+                            <field name="inventory_id" invisible="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+    </data>
+    
+
+</odoo>

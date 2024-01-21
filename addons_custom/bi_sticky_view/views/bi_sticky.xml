@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="bi_sticky" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/bi_sticky_view/static/src/css/bi_sticky.css"/>
+        </xpath>
+    </template>
+</odoo>

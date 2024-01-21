@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductCombo" owl="1">
+        <t t-set="product"
+           t-value="env.pos.db.get_product_by_id(props.product_detail.product_id)"/>
+        <t t-if="props.type == 'required'">
+            <article class='product product_content fix_product selected'
+                     t-att-data-product-id="product.id">
+                <div class="product-img">
+                    <img t-att-src="get_product_url(product)"
+                         t-att-alt="product.display_name"/>
+                    <span class="product-qty">
+                        <t t-esc="props.product_detail.used_time"/>
+                    </span>
+                    <div class="selected_product">
+                        Selected
+                    </div>
+                </div>
+                <div class="product-name">
+                    <t t-esc="product.display_name"/>
+                </div>
+            </article>
+        </t>
+        <t t-if="props.type == 'optional'">
+            <article
+                    t-att-class="props.product_detail.used_time > 0 ? 'product product-content selective-product selected' : 'product product-content selective-product'"
+                    t-att-data-product-id="product.id"
+                    t-att-data-category-id="props.record.pos_category_id[0]"
+                    t-att-data-line-id="props.record.id"
+                    t-att-title="product.display_name"
+                    t-on-click="selectProduct">
+                <div class="product-img">
+                    <img t-att-src="get_product_url(product)"
+                         t-att-alt="product.display_name"/>
+                    <span class="product-qty">
+                        <t t-esc="props.product_detail.used_time"/>
+                    </span>
+                    <span class="product-remove">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </span>
+                    <div class="selected-product">
+                        Selected
+                    </div>
+                </div>
+                <div class="product-name">
+                    <t t-esc="product.display_name"/>
+                </div>
+            </article>
+        </t>
+    </t>
+
+</templates>

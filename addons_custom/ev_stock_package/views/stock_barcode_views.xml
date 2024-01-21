@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem
+        id="stock_barcode.stock_barcode_menu"
+        groups="stock.group_stock_user,ev_stock_package.group_user_package_activity"/>
+
+    </data>
+</odoo>

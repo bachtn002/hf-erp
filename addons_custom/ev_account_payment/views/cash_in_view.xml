@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_cash_in_tree" model="ir.ui.view">
+            <field name="name">cash.in.tree</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" decoration-muted="state in ['reconciled', 'cancelled']" edit="false">
+                    <field name="date" string="Accounting date"/>
+                    <field name="x_date" string="Document date"/>
+                    <field name="name"/>
+                    <field name="x_amount" sum="Amount"/>
+                    <field name="x_partner_id"/>
+                    <field name="product_id" string="Reason In" invisible="1"/>
+                    <field name="x_description" string="Interpretation"/>
+                    <field name="state"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_cash_in_form" model="ir.ui.view">
+            <field name="name">cash.in.form</field>
+            <field name="model">account.payment</field>
+            <field eval="1000" name="priority"/>
+            <field name="arch" type="xml">
+                <form string="Cash In">
+                    <header>
+    <!--                        <button name="post" class="oe_highlight" states="draft" string="Confirm" type="object"/>-->
+                        <button name="action_confirm" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                        <button name="action_print" class="oe_highlight" states="posted" string="Print" type="object"/>
+                        <button name="action_draft" class="oe_highlight" states="cancelled" string="Set To Draft"
+                                type="object"/>
+                        <button name="action_back" states="posted" string="Back" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,posted,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="button_open_invoices" type="object"
+                                    class="oe_stat_button" icon="fa-bars"
+                                    attrs="{'invisible': [('reconciled_invoices_count','=', 0)]}">
+                                <field name="reconciled_invoices_count"/>
+                                <span attrs="{'invisible': [('reconciled_invoices_count','&gt;', 1)]}">Invoice</span>
+                                <span attrs="{'invisible': [('reconciled_invoices_count','&lt;=', 1)]}">Invoices</span>
+                            </button>
+
+                            <!-- Bill stat button -->
+                            <button name="button_open_bills" type="object"
+                                    class="oe_stat_button" icon="fa-bars"
+                                    attrs="{'invisible': [('reconciled_bills_count','=', 0)]}">
+                                <field name="reconciled_bills_count"/>
+                                <span attrs="{'invisible': [('reconciled_bills_count','&gt;', 1)]}">Bill</span>
+                                <span attrs="{'invisible': [('reconciled_bills_count','&lt;=', 1)]}">Bills</span>
+                            </button>
+
+                            <!-- Statement stat button -->
+                            <button name="button_open_statements" type="object"
+                                    class="oe_stat_button" icon="fa-bars"
+                                    attrs="{'invisible': [('reconciled_statements_count','=', 0)]}">
+                                <field name="reconciled_statements_count"/>
+                                <span attrs="{'invisible': [('reconciled_statements_count','&gt;', 1)]}">Statement</span>
+                                <span attrs="{'invisible': [('reconciled_statements_count','&lt;=', 1)]}">Statements</span>
+                            </button>
+                            <button type="object" name="action_view_move"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible': [('x_total_entries', '=', 0)]}">
+                                <field name="x_total_entries" widget="statinfo" string="Journal Entries"/>
+                                <field name='x_move_ids' invisible="1"/>
+                            </button>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="x_name" readonly="1" force_save="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="payment_type" widget="radio" invisible="1" force_save="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_type" widget="selection" invisible="1" force_save="1"
+                                       attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="x_partner_id" options="{'no_create':1, 'no_create_edit':1}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="x_receiver" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1" string="Payer"/>
+                                <field name="x_address" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="product_id" options='{"no_create": 1, "no_create_edit": 1}' attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                invisible="1" string="Reason In" domain="[('is_reason_in','=',True)]"/>
+                                <field name="x_description" required="1" force_save="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}" string="Interpretation"/>
+                                <field name="analytic_account_id" colspan="4" groups="analytic.group_analytic_accounting"/>
+                            </group>
+                            <group>
+                                <field name="x_journal_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('state', '!=', 'draft')]}" domain="[('company_id', '=', company_id)]"
+                                required="1"/>
+                                <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                string="Accounting date"/>
+                                <field name="x_date" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1" string="Document date"/>
+                                <field name="currency_id" options="{'no_create':1, 'no_create_edit':1}" groups="base.group_multi_currency"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="x_rate" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')]}" groups="base.group_multi_currency"/>
+                                <field name="x_code" invisible="1" force_save="1"/>
+                                <field name="x_account_default" invisible="1" force_save="1"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <notebook colspan="1">
+                            <page string="Keep Business Accounts">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="Mẫu import có định dạng là xls hoặc xlsx"/>
+                                <field name="payment_lines" colspan="4" nolabel="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                context="{'default_name': x_description, 'default_currency_id': currency_id, 'default_rate': x_rate,'default_analytic_account_id': analytic_account_id, 'default_account_id': x_account_default}">
+                                    <tree string="Cash in line" editable="bottom">
+                                        <field name="name" required="1" string="Interpretation" style="white-space: pre-wrap;"/>
+                                        <field name="payment_id" invisible="1"/>
+                                        <field name="destination_account_id" required="1" domain="[('code','ilike','111'), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
+                                               options='{"no_create": 1, "no_create_edit": 1}'/>
+                                        <field name="account_id" style="white-space: pre-wrap;" required="1"
+                                               domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
+                                               options='{"no_create": 1, "no_create_edit": 1}'/>
+                                        <field name="value"/>
+                                        <field name="value_natural_currency" force_save="1"/>
+                                        <field name="currency_id" invisible="1" force_save="1"/>
+                                        <field name="rate" invisible="1" force_save="1"/>
+                                        <field name="analytic_account_id" style="white-space: pre-wrap;" colspan="4" groups="analytic.group_analytic_accounting"/>
+                                    </tree>
+                                    <form string="Cash In Line">
+                                        <group col="4">
+                                            <field name="payment_id" invisible="1"/>
+                                            <field name="name" string="Interpretation"/>
+                                            <field name="value"/>
+                                            <field name="account_id"/>
+                                            <field name="destination_account_id"/>
+                                            <field name="currency_id" invisible="1" force_save="1"/>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2">
+                                    <field name="x_amount_before_tax" readonly="1" invisible="1"/>
+                                    <field name="x_amount_tax" readonly="1" invisible="1"/>
+                                    <field name="x_amount" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="cash_in_action_account_payments" model="ir.actions.act_window">
+            <field name="name">Cash In</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_mode">tree,kanban,form,graph</field>
+            <field name="context">{'default_payment_type': 'inbound', 'default_x_is_cash_in': True, 'default_cash': 'cash',
+                'default_payment_method_id': 1}
+            </field>
+            <field name="domain">
+                [('payment_type','=','inbound'),('x_is_cash_in','=',True)]
+            </field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('view_cash_in_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_cash_in_form')}),
+                (0, 0, {'view_mode': 'kanban', 'view_id': ref('account.view_account_payment_kanban')}),
+                (0, 0, {'view_mode': 'graph', 'view_id': ref('account.view_account_payment_graph')}),
+
+                ]"/>
+        </record>
+
+        <menuitem id="menu_cash_in_account_payments" name="Cash In" parent="menu_ev_finance_cash"
+                  sequence="5"
+                  groups="account.group_account_user,account.group_account_manager"
+                  action="cash_in_action_account_payments"/>
+    </data>
+</odoo>

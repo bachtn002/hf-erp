@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_promotion_form_view" model="ir.ui.view">
+            <field name="name">pos.promotion.form.view.inherit.ev_pos_promotion_gift_code_product_qty</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='promotion_detail']" position="inside">
+                    <group name="gift_code_product_qty_conditions" string="Condition" attrs="{'invisible': [('type', '!=', 'gift_code_product_qty')]}">
+					<field name="gift_code_product_qty_conditions" nolabel="1" attrs="{'readonly': [('state', '!=', 'draft')]}">
+						<tree editable="bottom">
+							<field name="product_id" required="1" domain="[('available_in_pos','=',True)]" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+							<field name="min_qty" required="1"/>
+						</tree>
+					</field>
+				</group>
+				<group name="gift_code_product_qty_applies" string="Apply" attrs="{'invisible': [('type', '!=', 'gift_code_product_qty')]}">
+					<field name="gift_code_product_qty_applies" nolabel="1" attrs="{'readonly': [('state', '!=', 'draft')]}">
+						<tree editable="bottom">
+							<field name="promotion_gift_id" required="1" domain="[('state','=', 'active'), ('check_promotion', '=', True)]" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+							<field name="gift_qty" required="1"/>
+						</tree>
+					</field>
+				</group>
+                </xpath>
+            </field>
+        </record>
+
+		<!-- Inherit Form View to Modify it -->
+		<record id="pos_promtion_form_inherit" model="ir.ui.view">
+		    <field name="name">promotion_voucher.pos_promtion.form.inherit</field>
+		    <field name="model">pos.promotion</field>
+		    <field name="inherit_id" ref="ev_promotion_voucher.pos_promtion_form_inherit"/>
+		    <field name="arch" type="xml">
+
+		        <xpath expr="//field[@name='x_promotion_condition_or']" position="replace">
+					<field name="x_promotion_condition_or" attrs="{'readonly':[('state', '!=', ('draft'))], 'invisible': [('type','not in',('gift_condition','discount_condition','gift_code_product_qty'))]}"/>
+		        </xpath>
+		    </field>
+		</record>
+    </data>
+</odoo>

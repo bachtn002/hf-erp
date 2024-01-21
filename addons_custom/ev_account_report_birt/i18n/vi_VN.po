@@ -1,0 +1,975 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_report_birt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-02 07:36+0000\n"
+"PO-Revision-Date: 2021-12-02 07:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.report,print_report_name:ev_account_report_birt.print_report_pos_payment_method_xlsx
+msgid "'Report Pos Payment Method'"
+msgstr "Báo cáo phương thức thanh toán"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__account_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__account_is_like
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_account_account_action
+msgid "Account Account Report"
+msgstr "Sổ cái một tài khoản"
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_account_account_t_action
+msgid "Account Account Report T"
+msgstr "Sổ tổng hợp chữ T một tài khoản"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_account_financial_html_report_line
+msgid "Account Report (HTML Line)"
+msgstr "Báo cáo tài khoản (từng dòng HTML)"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_account_financial_html_report
+msgid "Account Report (HTML)"
+msgstr "Báo cáo tài khoản (HTML)"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__account_analytic_id
+msgid "Analytic Account"
+msgstr "Đối tượng cửa hàng"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__balance
+msgid "Balance"
+msgstr "Số dư"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_balances_arising_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_balances_arising
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_balances_arising_view_form
+msgid "Balances Arising"
+msgstr "Bảng cân đối phát sinh (S06-DN)"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_bang_ke_mua_hang
+msgid "Báo cáo bảng kê mua hàng"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_tong_hop_phat_sinh_cong_no_NCC
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_bang_ke_mua_hang_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+msgid "Báo cáo tổng hợp phát sinh công nợ NCC"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.purchase_order_report_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_t_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_journal_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_balances_arising_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_bang_ke_mua_hang_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_by_product_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_NCC_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_by_account_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detailed_ledger_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_fixed_asset_tracking_month_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_fixed_asset_tracking_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_invoice_status_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_augment_reduce_no_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_in_out_no_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_pre_tax_revenue_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_spreadsheet_depreciation_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_spreadsheet_tools_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tools_tracking_month_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tools_tracking_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_out_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_account_report_birt
+#: code:addons/ev_account_report_birt/models/account_financial_report.py:0
+#, python-format
+msgid "Code"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__company_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__create_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__create_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__credit
+msgid "Credit"
+msgstr "Phát sinh có"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__date
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_bang_ke_mua_hang_form
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__debit
+msgid "Debit"
+msgstr "Phát sinh nợ"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__report_pos_payment_method_line_ids
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_detail_debit_NCC_action
+msgid "Detail Debit NCC"
+msgstr "Sổ chi tiết công nợ theo đối tác"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_NCC_form
+msgid "Detail Debit NCC Report"
+msgstr "Sổ chi tiết công nợ theo đối tác"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_detail_debit_NCC
+msgid "Detail Debt NCC"
+msgstr "Sổ chi tiết công nợ theo đối tác"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_detailed_ledger_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_detailed_ledger
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detailed_ledger_view_form
+msgid "Detailed Ledger"
+msgstr "Sổ chi tiết tài khoản"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report_line__display_code
+msgid "Display Code"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report_line__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_ev_account_report_birt_pos_payment_method_xlsx__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__display_name
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_t_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_bang_ke_mua_hang_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_NCC_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+msgid "Export Excel"
+msgstr "Xuất Excel"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_fixed_asset_tracking_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_fixed_asset_tracking
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_fixed_asset_tracking_view_form
+msgid "Fixed Asset Tracking"
+msgstr "Theo dõi tài sản cố định"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_fixed_asset_tracking_month_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_fixed_asset_tracking_month
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_fixed_asset_tracking_month_view_form
+msgid "Fixed Asset Tracking Month"
+msgstr "Theo dõi tài sản cố định theo tháng"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__from_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__date_from
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__date_from
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_t_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_journal_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_by_product_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_NCC_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_by_account_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_augment_reduce_no_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_in_out_no_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_out_form
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_account_report_birt
+#: code:addons/ev_account_report_birt/models/account_financial_report.py:0
+#, python-format
+msgid "Group by should be a journal item field"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report_line__groups_by
+msgid "Groups By"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report_line__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_ev_account_report_birt_pos_payment_method_xlsx__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__intital_balance
+msgid "Intital balance"
+msgstr "Số dư đầu"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__rpt_invoice_status__status__purchase
+msgid "Invoice Purchase"
+msgstr "Hóa đơn mua"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__rpt_invoice_status__status__return
+msgid "Invoice return"
+msgstr "Hóa đơn trả"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__is_like
+msgid "Is Like Account"
+msgstr "Xem các tài khoản gần giống"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report_line____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_ev_account_report_birt_pos_payment_method_xlsx____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in____last_update
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__write_uid
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_bang_ke_mua_hang__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__write_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__license_augment_reduce_no_warehouse__type__augment
+msgid "License Augment"
+msgstr "Chứng từ tăng"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.aciton_license_augment_reduce_no_warehouse
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_license_augment_reduce_no_warehouse
+msgid "License Augment Reduce No Warehouse"
+msgstr "Chứng từ bút toán không qua kho"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__license_in_out_no_move__type__in
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__rpt_all_in_out_move__type__in
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__rpt_all_in_out_warehouse__type__in
+msgid "License IN"
+msgstr "Nhập kho"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_license_in_out_no_move
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_license_in_out_no_move
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_augment_reduce_no_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_in_out_no_move_view_form
+msgid "License In Out No Move"
+msgstr "Chứng từ kho không bút toán"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__license_in_out_no_move__type__out
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__rpt_all_in_out_move__type__out
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__rpt_all_in_out_warehouse__type__out
+msgid "License Out"
+msgstr "Xuất kho"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields.selection,name:ev_account_report_birt.selection__license_augment_reduce_no_warehouse__type__reduce
+msgid "License Reduce"
+msgstr "Chứng từ giảm"
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_bang_ke_mua_hang_action
+msgid "List purchases"
+msgstr "Báo cáo bảng kê mua hàng"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__name
+msgid "Name"
+msgstr "Tên Báo cáo"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_detail_debit_ncc__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__pos_payment_method_id
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__pos_payment_method_id
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Payment Method"
+msgstr "Phương thức thanh toán"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_pre_tax_revenue_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_pre_tax_revenue
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_pre_tax_revenue_view_form
+msgid "Pre Tax Renvenue"
+msgstr "Báo cáo doanh thu trước thuế"
+
+#. module: ev_account_report_birt
+#: code:addons/ev_account_report_birt/models/account_financial_report.py:0
+#, python-format
+msgid "Present"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report_line__display_present
+msgid "Present Code"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.actions.report,name:ev_account_report_birt.print_report_pos_payment_method_xlsx
+msgid "Print Report Pos Payment Method XLSX"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_purchase_order
+msgid "Purchase Order Report"
+msgstr "Báo cáo mua hàng"
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.account_reports_purchase_reports_menu
+msgid "Purchase Reports"
+msgstr "Báo cáo phải thu/phải trả"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_purchase_order
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.purchase_order_report_form
+msgid "Purchase order report"
+msgstr "Báo cáo mua hàng"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_account_journal_general
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_account_journal_general
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_journal_general_form
+msgid "RPT Account Journal General"
+msgstr "Sổ nhật ký chung"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_all_in_out_move
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_all_in_out_move
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_move_view_form
+msgid "RPT All In Out Move"
+msgstr "Tổng hợp nhập xuất theo bút toán"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_all_in_out_warehouse
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_all_in_out_warehouse
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_warehouse_view_form
+msgid "RPT All In Out Warehosue"
+msgstr "Tổng hợp nhập xuất theo giao dịch kho"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_detail_by_product
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_detail_by_product
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_by_product_form
+msgid "RPT Detail By Product"
+msgstr "Bảng kê chi tiết theo sản phẩm"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_detail_debit_by_account
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_detail_debit_by_account
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_by_account_form
+msgid "RPT Detail Debit By Account"
+msgstr "Báo cáo chi tiết công nợ"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_invoice_status_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_invoice_status_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_invoice_status_view_form
+msgid "RPT Invoice Status"
+msgstr "Báo cáo tình trạng hóa đơn"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_vat_in
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_vat_in
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_in_form
+msgid "RPT VAT In"
+msgstr "Bảng kê VAT mua vào"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_vat_out
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_vat_out
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_out_form
+msgid "RPT VAT Out"
+msgstr "Bảng kê VAT bán ra"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_account_account
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_view_form
+msgid "Report Account Account"
+msgstr "Sổ cái một tài khoản"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.action_rpt_account_account_t
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_t_view_form
+msgid "Report Account Account T"
+msgstr "Sổ chữ T một tài khoản"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Report Condition"
+msgstr "Điều kiện xem báo cáo"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.report_pos_payment_method_action
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method_line__report_pos_payment_method_id
+#: model:ir.ui.menu,name:ev_account_report_birt.report_pos_payment_method_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Report Pos Payment Method"
+msgstr "Báo cáo phương thức thanh toán"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Report xlsx"
+msgstr "In báo cáo excel"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report__display_code
+msgid "Show Display Code"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_account_financial_html_report__display_present
+msgid "Show Present Code"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_spreadsheet_depreciation_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_spreadsheet_depreciation
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_spreadsheet_depreciation_view_form
+msgid "Spreadsheet Depreciation"
+msgstr "Bảng tính khấu hao TSCĐ"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_spreadsheet_tools_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_spreadsheet_tools
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_spreadsheet_tools_view_form
+msgid "Spreadsheet Tools"
+msgstr "Bảng tính chi phí CCDC"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__status
+msgid "Status Invoice"
+msgstr "Loại hóa đơn"
+
+#. module: ev_account_report_birt
+#: model:ir.ui.menu,name:ev_account_report_birt.menu_rpt_tong_hop_phat_sinh_cong_no_NCC_1_action
+msgid "Synthesize incurred debt NCC"
+msgstr "Báo cáo tổng hợp phát sinh công nợ NCC"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_account_account_t__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_pos_payment_method__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_account_journal_general__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_balances_arising__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_by_product__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detail_debit_by_account__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_detailed_ledger__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_fixed_asset_tracking_month__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_invoice_status__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_pre_tax_revenue__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_purchase_order__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_depreciation__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_spreadsheet_tools__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_tools_tracking_month__to_date
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_in__date_to
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_vat_out__date_to
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_t_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_journal_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_by_product_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_NCC_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_by_account_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_augment_reduce_no_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_in_out_no_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_out_form
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_tools_tracking_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_tools_tracking
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tools_tracking_view_form
+msgid "Tools Tracking"
+msgstr "Theo dõi công cụ dụng cụ"
+
+#. module: ev_account_report_birt
+#: model:ir.actions.act_window,name:ev_account_report_birt.rpt_tools_tracking_month_atc
+#: model:ir.ui.menu,name:ev_account_report_birt.rpt_tools_tracking_month
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tools_tracking_month_view_form
+msgid "Tools Tracking Month"
+msgstr "Theo dõi công cụ dụng cụ theo tháng"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.report_pos_payment_method_view_form
+msgid "Total"
+msgstr "Tổng"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_augment_reduce_no_warehouse__type
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_license_in_out_no_move__type
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_move__type
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_rpt_all_in_out_warehouse__type
+msgid "Type License"
+msgstr "Loại chứng từ"
+
+#. module: ev_account_report_birt
+#: model:ir.model.fields,field_description:ev_account_report_birt.field_report_tong_hop_phat_sinh_cong_no__partner_ids
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+msgid "Vendors"
+msgstr "NCC"
+
+#. module: ev_account_report_birt
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.purchase_order_report_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_t_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_account_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_account_journal_general_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_all_in_out_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_balances_arising_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_bang_ke_mua_hang_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_by_product_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_NCC_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detail_debit_by_account_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_detailed_ledger_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_fixed_asset_tracking_month_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_fixed_asset_tracking_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_invoice_status_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_augment_reduce_no_warehouse_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_license_in_out_no_move_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_pre_tax_revenue_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_spreadsheet_depreciation_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_spreadsheet_tools_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tong_hop_phat_sinh_cong_no_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tools_tracking_month_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_tools_tracking_view_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_in_form
+#: model_terms:ir.ui.view,arch_db:ev_account_report_birt.rpt_vat_out_form
+msgid "View Report"
+msgstr "Xem báo cáo"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_license_augment_reduce_no_warehouse
+msgid "license.augment.reduce.no.warehouse"
+msgstr "Chứng từ bút toán không qua kho"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_license_in_out_no_move
+msgid "license.in.out.no.move"
+msgstr "Chứng từ kho không bút toán"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_account_account
+msgid "report.account.account"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_account_account_t
+msgid "report.account.account.t"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_bang_ke_mua_hang
+msgid "report.bang.ke.mua.hang"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_detail_debit_ncc
+msgid "report.detail.debit.ncc"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_ev_account_report_birt_pos_payment_method_xlsx
+msgid "report.ev_account_report_birt.pos_payment_method_xlsx"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_pos_payment_method
+msgid "report.pos.payment.method"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_pos_payment_method_line
+msgid "report.pos.payment.method.line"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_report_tong_hop_phat_sinh_cong_no
+msgid "report.tong.hop.phat.sinh.cong.no"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_account_journal_general
+msgid "rpt.account.journal.general"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_all_in_out_move
+msgid "rpt.all.in.out.move"
+msgstr "Tổng hợp nhập xuất kho theo bút toán"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_all_in_out_warehouse
+msgid "rpt.all.in.out.warehouse"
+msgstr "Tổng hợp nhập xuất kho theo giao dịch kho"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_balances_arising
+msgid "rpt.balances.arising"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_detail_by_product
+msgid "rpt.detail.by.product"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_detail_debit_by_account
+msgid "rpt.detail.debit.by.account"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_detailed_ledger
+msgid "rpt.detailed.ledger"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_fixed_asset_tracking
+msgid "rpt.fixed.asset.tracking"
+msgstr "Theo dõi tài sản cố định"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_fixed_asset_tracking_month
+msgid "rpt.fixed.asset.tracking.month"
+msgstr "Theo dõi tài sản cố định theo tháng"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_invoice_status
+msgid "rpt.invoice.status"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_pre_tax_revenue
+msgid "rpt.pre.tax.revenue"
+msgstr "Báo cáo doanh thu trước thuế"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_purchase_order
+msgid "rpt.purchase.order"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_spreadsheet_depreciation
+msgid "rpt.spreadsheet.depreciation"
+msgstr "Bảng tính khấu hao tài sản cố định"
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_spreadsheet_tools
+msgid "rpt.spreadsheet.tools"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_tools_tracking
+msgid "rpt.tools.tracking"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_tools_tracking_month
+msgid "rpt.tools.tracking.month"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_vat_in
+msgid "rpt.vat.in"
+msgstr ""
+
+#. module: ev_account_report_birt
+#: model:ir.model,name:ev_account_report_birt.model_rpt_vat_out
+msgid "rpt.vat.out"
+msgstr ""

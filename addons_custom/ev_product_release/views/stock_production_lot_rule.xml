@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="stock_production_lot_rule_form_view" model="ir.ui.view">
+            <field name="name">stock_production_lot_rule_form</field>
+            <field name="model">stock.production.lot.rule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="production_lot_rule_ids">
+                                    <tree string="rule Detail" editable="bottom" default_order="sequence">
+                                        <field name="rule_id" invisible="1"/>
+                                        <field name="name" invisible="1"/>
+                                        <field name="type" required="1"/>
+                                        <field name="value"
+                                               attrs="{'invisible':[('type','not in',('fix','date'))], 'required':[('type','in',('fix','date'))]}"/>
+                                        <field name="start" attrs="{'invisible':[('type','!=','increment')]}"/>
+                                        <field name="step" attrs="{'invisible':[('type','!=','increment')]}"/>
+                                        <field name="length"
+                                               attrs="{'invisible':[('type','not in',('increment','random'))]}"/>
+                                        <field name="sequence" widget ='handle'/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="type"/>
+                                                <field name="sequence"/>
+                                            </group>
+                                            <group>
+                                                <field name="value"/>
+                                                <field name="start"/>
+                                                <field name="step"/>
+                                                <field name="length"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="stock_production_lot_rule_tree_view" model="ir.ui.view">
+            <field name="name">stock_production_lot_rule_tree</field>
+            <field name="model">stock.production.lot.rule</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_stock_production_lot_rule" model="ir.actions.act_window">
+            <field name="name">Production Lot Rule</field>
+            <field name="res_model">stock.production.lot.rule</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        <menuitem id="menu_stock_production_lot_rule"
+                  action="action_stock_production_lot_rule"
+                  name="Production Lot Rule"
+                  parent="point_of_sale.menu_point_config_product" sequence="50"/>
+    </data>
+</odoo>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="abstract_loan_order_form_view" model="ir.ui.view">
+			<field name="name">abstract.loan.order.form</field>
+			<field name="model">abstract.loan.order</field>
+			<field name="arch" type="xml">
+				<form string="Contract of Loan Borrowing">
+					<header>
+						<button name="action_confirm" states="draft"
+							string="Confirm" type="object" class="oe_highlight"
+							context="{'regenerate':1}"
+							help="Upon confirmation, Odoo will automatically calculate and generate all the data (i.e. disbursements, refund plan, interests) for the contract so that you can track them later" />
+						<button name="action_compute_data_line" states="draft"
+							context="{'regenerate':1}" string="Compute" type="object"
+							groups="base.group_no_one" />
+						<button name="action_draft" states="cancelled"
+							string="Set to Draft" type="object" />
+						<button name="action_disbursement_register_wizard"
+							type="object" string="Register Disbursement" class="oe_highlight"
+							attrs="{'invisible': ['|',('state', '!=', 'confirmed'),('to_receive_amount','&lt;=',0)]}" />
+						<button name="action_invoice" type="object"
+							class="oe_highlight"
+							attrs="{'invisible': ['|',('state', '!=', 'confirmed'),('invoice_state','!=','to_invoice')]}"
+							help="This will opening invoicing wizard to invoice not-fully-invoiced interests" />
+						<button name="action_done" states="confirmed"
+							string="Mark as Done" type="object" />
+						<button name="action_cancel" states="confirmed"
+							string="Cancel" type="object" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,confirmed,done" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_refund_lines" type="object"
+								class="oe_stat_button" icon="fa-dollar"
+								attrs="{'invisible': [('refund_lines_count', '=', 0)]}">
+								<field name="refund_lines_count" widget="statinfo"
+									string="Principal Refunds" />
+							</button>
+							<button name="action_view_interest_lines" type="object"
+								class="oe_stat_button" icon="fa-dollar">
+							</button>
+							<button name="action_view_moves" type="object"
+								class="oe_stat_button" icon="fa-bars"
+								attrs="{'invisible': [('moves_count', '=', 0)]}">
+								<field name="moves_count" widget="statinfo"
+									string="Journal Entries" />
+							</button>
+							<button name="open_reconcile_view" class="oe_stat_button"
+								icon="fa-bars" type="object" string="Reconciled entries"
+								attrs="{'invisible': [('moves_count', '=', 0)]}">
+							</button>
+							<button name="action_view_invoice" type="object"
+								class="oe_stat_button" icon="fa-pencil-square-o"
+								attrs="{'invisible': ['|', ('invoices_count', '=', 0), ('state', '!=', 'confirmed')]}">
+								<field name="invoices_count" widget="statinfo"
+									string="Invoices" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="partner_id" />
+								<field name="loan_amount" attrs="{'readonly': [('state','!=','draft')]}"/>
+								<field name="received_amount"
+									attrs="{'invisible': [('state','=','draft')]}" />
+								<field name="to_receive_amount" invisible="1" />
+								<field name="refunded_amount"
+									attrs="{'invisible': [('state','=','draft')]}" />
+								<field name="currency_id"
+									groups="base.group_multi_currency" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+							<group>
+
+								<field name="date_confirmed" />
+								<label for="loan_duration" />
+								<div>
+									<field name="loan_duration" class="oe_inline" />
+									months
+								</div>
+								<field name="date_end" />
+							</group>
+
+							<group string="Interests">
+								<field name="interest_rate_type_id" />
+								<field name="expiry_interest_rate_type_id" />
+								<field name="interest_cycle" />
+								<field name="interest_period_start_day" />
+								<field name="interest_incl_disburment_date" />
+								<field name="interest_incl_refund_date" />
+								<field name="due_day" />
+							</group>
+							<group string="Accounting">
+								<field name="product_id"
+									context="{'default_is_loan': True}" />
+								<field name="journal_id" />
+								<field name="account_id" />
+								<field name="tax_ids" widget="many2many_tags" />
+								<field name="analytic_account_id"
+									groups="analytic.group_analytic_accounting"
+									domain="[('company_id', '=', company_id)]" />
+								<field name="object_cost_id"
+									groups="analytic.group_analytic_accounting"
+									domain="[('company_id', '=', company_id)]" />
+								<field name="part_id"
+									groups="analytic.group_analytic_accounting"/>
+								<field name="analytic_tag_ids"
+									groups="analytic.group_analytic_accounting"
+									widget="many2many_tags" />
+								<field name="invoice_state" invisible="1" />
+							</group>
+							<group string="Disbursement">
+								<field name="disbursement_method" />
+								<field name="disbursement_method_number"
+									attrs="{'invisible': [('disbursement_method', '=', 'upon_request')]}" />
+
+								<label for="disbursement_method_period"
+									attrs="{'invisible': ['|',('disbursement_method', '=', 'upon_request'),('disbursement_method_number','&lt;=',1)]}" />
+								<div
+									attrs="{'invisible': ['|',('disbursement_method', '=', 'upon_request'),('disbursement_method_number','&lt;=',1)]}">
+									<field name="disbursement_method_period"
+										class="oe_inline" />
+									months
+								</div>
+								<field name="disbursement_start_date"
+									attrs="{'invisible':[('disbursement_method', '=', 'upon_request')],'required':[('disbursement_method', '!=', 'upon_request')], 'readonly':[('disbursement_method', '=', 'end')]}" />
+								<field name="disbursement_end_date"
+									attrs="{'invisible': [('disbursement_method', '!=', 'end')], 'required':[('disbursement_method', '=', 'end')]}" />
+							</group>
+							<group string="Principal Refunds">
+								<field name="principal_refund_method" />
+								<field name="principal_refund_method_number"
+									attrs="{'invisible': [('principal_refund_method', '!=', 'number')]}" />
+								<label for="principal_refund_method_period"
+									attrs="{'invisible': ['|',('principal_refund_method', '!=', 'number'),('principal_refund_method_number','&lt;=',1)]}" />
+								<div
+									attrs="{'invisible': ['|',('principal_refund_method', '!=', 'number'),('principal_refund_method_number','&lt;=',1)]}">
+									<field name="principal_refund_method_period"
+										class="oe_inline" />
+									months
+								</div>
+								<field name="principal_refund_start_date"
+									attrs="{'invisible': [('principal_refund_method', '!=', 'number')], 'required':[('principal_refund_method', '=', 'number')]}" />
+							</group>
+						</group>
+						<notebook>
+							<page string="Terms and Conditions" name="terms_conditions">
+								<field name="terms_conditions" />
+							</page>
+							<page string="Others" name="pg_other">
+								<group>
+									<group>
+										<field name="user_id" />
+									</group>
+								</group>
+
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<!-- tree (list) view -->
+		<record id="abstract_loan_order_tree_view" model="ir.ui.view">
+			<field name="name">abstract.loan.order.tree</field>
+			<field name="model">abstract.loan.order</field>
+			<field name="arch" type="xml">
+				<tree string="Loan Contracts"
+					decoration-muted="state=='cancelled'">
+					<field name="name" />
+					<field name="partner_id" />
+					<field name="loan_amount" />
+					<field name="loan_duration" />
+					<field name="interest_rate_type_id" />
+					<field name="date_confirmed" />
+					<field name="date_end" />
+					<field name="currency_id" groups="base.group_multi_currency" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="abstract_loan_order_search_view">
+			<field name="name">abstract.loan.order.search</field>
+			<field name="model">abstract.loan.order</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="partner_id" />
+					<field name="loan_amount" />
+					<field name="date_confirmed" />
+					<separator />
+					<filter name="ftr_draft" string="Draft"
+						domain="[('state','=','draft')]" />
+					<filter name="ftr_confirmed" string="Confirmed"
+						domain="[('state','=','confirmed')]" />
+					<filter name="ftr_done" string="Done"
+						domain="[('state','=','done')]" />
+					<filter name="ftr_cancelled" string="Cancelled"
+						domain="[('state','=','cancelled')]" />
+					<separator />
+					<filter name="ftr_flat_rate" string="Flat Interest Rate"
+						domain="[('interest_rate_type_id.type','=','flat')]" />
+					<filter name="ftr_floating_rate"
+						string="Floating Interest Rate"
+						domain="[('interest_rate_type_id.type','=','floating')]" />
+					<separator />
+					<group expand="1" string="Group By">
+						<filter string="Partner" name="grp_partner"
+							context="{'group_by':'partner_id'}" />
+						<filter string="Currency" name="grp_currency"
+							context="{'group_by':'currency_id'}"
+							groups="base.group_multi_currency" />
+						<filter string="Company" name="grp_company"
+							context="{'group_by':'company_id'}"
+							groups="base.group_multi_company" />
+						<separator />
+						<filter string="Confirmation Date"
+							name="grp_date_confirmed"
+							context="{'group_by':'date_confirmed'}"
+							help="Group by Contract's Confirmation Date" />
+						<filter string="End Date" name="grp_date_end"
+							context="{'group_by':'date_end'}"
+							help="Group by Contract's Ending Date" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+	</data>
+</odoo>

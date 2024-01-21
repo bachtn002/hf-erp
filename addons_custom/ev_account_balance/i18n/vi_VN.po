@@ -1,0 +1,488 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_balance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 03:50+0000\n"
+"PO-Revision-Date: 2020-08-25 10:53+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: ev_account_balance
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.res_config_settings_account_balance_view_form
+msgid "<span class=\"o_form_label\">Date Opening Balance</span>"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__account_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__account_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__account_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__account_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__account_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__account_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__account_id
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_action
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_tree
+msgid "Account Balance"
+msgstr "Số dư tài khoản"
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_analytic_action
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_analytic_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_analytic_tree
+msgid "Account Balance Analytic"
+msgstr "Số dư TK theo Đơn Vị "
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_bank_action
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_bank_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_bank_tree
+msgid "Account Balance Bank"
+msgstr "Số dư TK ngân hàng"
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance_bank
+msgid "Account Balance Bank Object Model"
+msgstr "Số dư TK ngân hàng"
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_object_cost_action
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_object_cost_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_object_cost_tree
+msgid "Account Balance Object Cost"
+msgstr "Số dư Tk "
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance_analytic
+#: model:ir.model,name:ev_account_balance.model_account_balance_object_cost
+msgid "Account Balance Object Model"
+msgstr "Số dư tài khoản theo ĐTTHCP"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__move_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__move_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__move_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__move_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__move_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__move_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__move_id
+msgid "Account Move"
+msgstr "Bút toán Kế toán"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_res_company__x_account_opening_balance_id
+msgid "Account Opening Balance"
+msgstr "Nhập số dư ban đầu"
+
+#. module: ev_account_balance
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_customer_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_customer_tree_view
+msgid "Account balance customer"
+msgstr "Công nợ Khách Hàng"
+
+#. module: ev_account_balance
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_employee_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_employee_tree_view
+msgid "Account balance employee"
+msgstr "Công nợ nhân viên"
+
+#. module: ev_account_balance
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_account_balance_x_uniq
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_analytic_account_balance_x_uniq
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_bank_account_balance_uniq
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_object_cost_account_balance_x_uniq
+msgid "Account balance is unique"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.ui.menu,name:ev_account_balance.account_balance_vendor_menu
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.account_balance_vendor_tree_view
+msgid "Account balance vendor"
+msgstr "Công nợ nhà cung cấp"
+
+#. module: ev_account_balance
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_vendor_account_balance_vendor_uniq
+msgid "Account balance vendor is unique"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_customer_action
+msgid "Account_balance_customer"
+msgstr "Công nợ Khách Hàng"
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_employee_action
+msgid "Account_balance_employee"
+msgstr "Công nợ nhân viên"
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.account_balance_vendor_action
+msgid "Account_balance_vendor"
+msgstr "Công nợ nhà cung cấp"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản phân tích"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__bank_id
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#. module: ev_account_balance
+#: code:addons/ev_account_balance/models/account_balance.py:0
+#: code:addons/ev_account_balance/models/account_balance_analytic.py:0
+#: code:addons/ev_account_balance/models/account_balance_bank.py:0
+#: code:addons/ev_account_balance/models/account_balance_customer.py:0
+#: code:addons/ev_account_balance/models/account_balance_employee.py:0
+#: code:addons/ev_account_balance/models/account_balance_object_cost.py:0
+#: code:addons/ev_account_balance/models/account_balance_vendor.py:0
+#, python-format
+msgid "Bạn chưa cấu hình ngày chốt số dư!"
+msgstr ""
+
+#. module: ev_account_balance
+#: code:addons/ev_account_balance/models/account_balance_customer.py:0
+#, python-format
+msgid "Bạn chưa cấu hình sổ nhật ký Công nợ khách hàng!"
+msgstr ""
+
+#. module: ev_account_balance
+#: code:addons/ev_account_balance/models/account_balance.py:0
+#: code:addons/ev_account_balance/models/account_balance_analytic.py:0
+#: code:addons/ev_account_balance/models/account_balance_bank.py:0
+#: code:addons/ev_account_balance/models/account_balance_employee.py:0
+#: code:addons/ev_account_balance/models/account_balance_object_cost.py:0
+#: code:addons/ev_account_balance/models/account_balance_vendor.py:0
+#, python-format
+msgid "Bạn chưa cấu hình sổ nhật ký có mã KHAC!"
+msgstr ""
+
+#. module: ev_account_balance
+#: code:addons/ev_account_balance/models/account_balance.py:0
+#: code:addons/ev_account_balance/models/account_balance_analytic.py:0
+#: code:addons/ev_account_balance/models/account_balance_bank.py:0
+#: code:addons/ev_account_balance/models/account_balance_customer.py:0
+#: code:addons/ev_account_balance/models/account_balance_employee.py:0
+#: code:addons/ev_account_balance/models/account_balance_object_cost.py:0
+#: code:addons/ev_account_balance/models/account_balance_vendor.py:0
+#, python-format
+msgid "Bạn chưa cấu hình tài khoản chốt số dư trong công ty!"
+msgstr ""
+
+#. module: ev_account_balance
+#: code:addons/ev_account_balance/models/account_balance_customer.py:0
+#: code:addons/ev_account_balance/models/account_balance_vendor.py:0
+#, python-format
+msgid "Bạn chưa cấu hình tài khoản nhập trong sổ nhật ký khác!"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__company_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__company_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__company_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__company_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__company_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__company_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__create_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__create_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__credit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__credit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__credit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__credit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__credit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__credit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__credit
+msgid "Credit"
+msgstr "Có"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__customer_code
+msgid "Customer code"
+msgstr "Mã KH"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_res_company__x_date_opening_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_res_config_settings__x_date_opening_balance
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.res_config_settings_account_balance_view_form
+msgid "Date Opening Balance"
+msgstr "Ngày chốt số dư đầu kỳ"
+
+#. module: ev_account_balance
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.res_config_settings_account_balance_view_form
+msgid "Date Opening Balance."
+msgstr "Ngày chốt số dư đầu kỳ"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__debit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__debit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__debit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__debit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__debit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__debit
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__debit
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__display_name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__employee
+msgid "Employee Code"
+msgstr "Mã NV"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__file_name
+msgid "File name"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__file_upload
+msgid "File upload"
+msgstr ""
+
+#. module: ev_account_balance
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.import_account_balance_view
+msgid "Hủy"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_balance
+#: model_terms:ir.ui.view,arch_db:ev_account_balance.import_account_balance_view
+msgid "Import"
+msgstr "Nhập"
+
+#. module: ev_account_balance
+#: model:ir.actions.act_window,name:ev_account_balance.import_account_balance_action
+#: model:ir.ui.menu,name:ev_account_balance.import_account_balance_menu
+msgid "Import Account Balance"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__invoice_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__invoice_id
+msgid "Invoice"
+msgstr "Công nợ"
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán phát sinh"
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_move_line
+msgid "Journal Item"
+msgstr "Bút toán"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient____last_update
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__write_uid
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật gần đây bởi"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_transient__write_date
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật gần đây vào"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance__name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_analytic__name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_bank__name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__name
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_object_cost__object_cost_id
+msgid "Object cost"
+msgstr "Đối tượng THCP"
+
+#. module: ev_account_balance
+#: model:ir.ui.menu,name:ev_account_balance.menu_ev_opening_balance
+msgid "Opening Balance"
+msgstr "Số dư tài khoản"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__partner_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_employee__partner_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_customer__payment_id
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__payment_id
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: ev_account_balance
+#: code:addons/ev_account_balance/models/account_balance.py:0
+#: code:addons/ev_account_balance/models/account_balance_analytic.py:0
+#: code:addons/ev_account_balance/models/account_balance_bank.py:0
+#: code:addons/ev_account_balance/models/account_balance_customer.py:0
+#: code:addons/ev_account_balance/models/account_balance_employee.py:0
+#: code:addons/ev_account_balance/models/account_balance_object_cost.py:0
+#: code:addons/ev_account_balance/models/account_balance_vendor.py:0
+#, python-format
+msgid "Thông báo"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_move__x_update_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_move_line__x_update_account_balance
+msgid "Update Account Balance"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_move_line__x_value_backup
+msgid "Value Backup"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.fields,field_description:ev_account_balance.field_account_balance_vendor__vendor_code
+msgid "Vendor Code"
+msgstr "Mã NCC"
+
+#. module: ev_account_balance
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_customer_account_balance_customer
+msgid "You can not have two record with the same account and customer!"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model.constraint,message:ev_account_balance.constraint_account_balance_employee_account_balance_employee
+msgid "You can not have two record with the same account and employee!"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance_customer
+msgid "account.balance.customer"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance_employee
+msgid "account.balance.employee"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance_transient
+msgid "account.balance.transient"
+msgstr ""
+
+#. module: ev_account_balance
+#: model:ir.model,name:ev_account_balance.model_account_balance_vendor
+msgid "account.balance.vendor"
+msgstr ""

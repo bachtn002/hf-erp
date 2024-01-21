@@ -1,0 +1,965 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-11 01:26+0000\n"
+"PO-Revision-Date: 2021-10-11 01:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Price Unit must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Đơn giá phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Price must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Đơn giá phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Product does not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Sản phẩm không tồn tại trong hệ thống hoặc chưa sãn sàng, dòng (%s)"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Quantity must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Số lượng phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Reason does not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Lý do chưa có trên hệ thống, dòng (%s)"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Reason is different from the type stock other, line (%s)"
+msgstr ""
+"\n"
+"Lý do không cùng loại với loại Nhập/Xuất khác, dòng (%s)"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#, python-format
+msgid ""
+"\n"
+"Warehouse dest does not exist in the system, line (%s)"
+msgstr ""
+"\n"
+"Kho nhận yêu cầu không tồn tại trong hệ thống, line (%s)"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_picking__x_account_expense_item
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__account_expense_item
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__account_expense_item
+msgid "Account Expense Item"
+msgstr "Khoản mục chi phí"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_needaction
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_ir_actions_act_window
+msgid "Action Window"
+msgstr "Giao diện thao tác cửa sổ"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_ids
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_state
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_type_icon
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_stock_request
+#: model_terms:ir.actions.act_window,help:ev_stock_request.stock_request_go_action
+msgid "Add a new Request go."
+msgstr "Thêm một yêu cầu Đi."
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__analytic_account_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "Đối tượng cửa hàng"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__state__approve
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Approve"
+msgstr "Chấp thuận"
+
+#. module: ev_stock_request
+#: model_terms:ir.actions.act_window,help:ev_stock_request.stock_request_coordinator_action
+msgid "Approve requests."
+msgstr "Duyệt yêu cầu."
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__state__assigned
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__status__assigned
+msgid "Assigned"
+msgstr "Sẵn sàng"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_attachment_count
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_company__x_auto_create_transfer
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_config_settings__x_auto_create_transfer
+msgid "Auto create transfer"
+msgstr "Tự động tạo dịch chuyển"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.res_config_settings_stock_request_view_form
+msgid "Auto create transfer when coordinator approve."
+msgstr "Tự động tạo dịch chuyển khi điều phối chấp thuận yêu cầu."
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "Bạn cần nhập đơn giá Nhập Khác!"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__company_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập cấu hình"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import__state__confirmed
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__state__confirmed
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__status__confirmed
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: ev_stock_request
+#: model:res.groups,name:ev_stock_request.group_stock_coordinator
+msgid "Coordinator"
+msgstr "Điều phối"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__create_uid
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__create_uid
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__create_uid
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__create_date
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__create_date
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__create_date
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__create_date
+msgid "Created on"
+msgstr "Thời gian tạo"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__date_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__date
+msgid "Date"
+msgstr "Ngày yêu cầu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__warehouse_dest_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__warehouse_dest_id
+msgid "Destination warehouse"
+msgstr "Kho nhận yêu cầu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__warehouse_dest_name
+msgid "Destination warehouse name"
+msgstr "Kho nhận yêu cầu"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+msgid "Details"
+msgstr "Mô tả"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_ir_actions_act_window__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__state__done
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import__state__done
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__state__done
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__status__done
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "Download Import Template"
+msgstr "Tải mẫu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__state__draft
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import__state__draft
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__state__draft
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__status__draft
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__status__draft_picking
+msgid "Draft Picking"
+msgstr "Dự thảo"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__field_binary_import
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__field_binary_import
+msgid "Field Binary Import"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__field_binary_name
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__field_binary_name
+msgid "Field Binary Name"
+msgstr ""
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid ""
+"File not found or in incorrect format. Please check the .xls or .xlsx file "
+"format"
+msgstr ""
+"Không tim thấy file hoặc sai format file. Vui lòng kiểm tra format .xls hoặc"
+" .xlsx của file"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+msgid "Fill quantity"
+msgstr "Đặt số lượng xuất"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_follower_ids
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_channel_ids
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_partner_ids
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__activity_type_icon
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_account_move__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_ir_actions_act_window__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_company__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_picking__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_warehouse__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_exception_icon
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__activity_exception_icon
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_needaction
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_unread
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_needaction
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_has_error
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_has_sms_error
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_has_error
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "Import"
+msgstr "Nhập"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__line_ids
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_is_follower
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_warehouse__x_is_supply_warehouse
+msgid "Is Supply Warehouse"
+msgstr "Là kho cung ứng"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_ir_actions_act_window____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__write_uid
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__write_uid
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__write_uid
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__write_date
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__write_date
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__write_date
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_has_error
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_ids
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "Missing products required!!"
+msgstr "Thiếu sản phẩm!!"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_date_deadline
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_summary
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_type_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__note
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__note
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__note
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__note
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__name
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+msgid "Number"
+msgstr "Số"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_needaction_counter
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_has_error_counter
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__message_unread_counter
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__type__other_input
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import__type__other_input
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Other Input"
+msgstr "Nhập khác"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__type__other_output
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import__type__other_output
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Other Output"
+msgstr "Xuất khác"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__stock_picking_id
+msgid "Other Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__picking_count
+msgid "Picking"
+msgstr "Phiếu Nhập/Xuất Khác"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__picking_count
+msgid "Picking Count"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__picking_count_in
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+msgid "Picking In"
+msgstr "Phiếu nhập khác"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+msgid "Picking out"
+msgstr "Phiếu xuất khác"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "Please choose 2 different warehouses"
+msgstr "Vui lòng chọn 2 kho khác nhau"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "Please insert quantity for confirm"
+msgstr "Vui lòng nhập số lượng xác nhận"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__price_unit
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__price_unit
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__product_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__quantity
+msgid "Quantity"
+msgstr "SL"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__qty_apply
+msgid "Quantity Apply"
+msgstr "SL chấp thuận"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__quantity_done
+msgid "Quantity Done"
+msgstr "SL hoàn thành"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__qty
+msgid "Quantity Request"
+msgstr "Số lượng yêu cầu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__location_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__location_id
+msgid "Reason"
+msgstr "Lý do Nhập/Xuất khác"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__state__reject
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__stock_request_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__request_id
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "Request"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+msgid "Request Come"
+msgstr "Xử lý phiếu yêu cầu chuyển kho nội bộ"
+
+#. module: ev_stock_request
+#: model:ir.actions.act_window,name:ev_stock_request.stock_request_coordinator_action
+#: model:ir.ui.menu,name:ev_stock_request.menu_stock_request_coordinator
+msgid "Request Coordinator Goods"
+msgstr "Duyệt phiếu yêu cầu chuyển kho nội bộ"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+msgid "Request Go"
+msgstr "Tạo phiếu yêu cầu chuyển kho nội bộ"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Request Search"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.actions.act_window,name:ev_stock_request.stock_request_come_action
+#: model:ir.ui.menu,name:ev_stock_request.menu_stock_request_come_action
+msgid "Request come"
+msgstr "Xử lý phiếu yêu cầu chuyển kho nội bộ"
+
+#. module: ev_stock_request
+#: model:ir.actions.act_window,name:ev_stock_request.stock_request_go_action
+#: model:ir.ui.menu,name:ev_stock_request.menu_stock_request_go_action
+msgid "Request go"
+msgstr "Tạo phiếu yêu cầu chuyển kho nội bộ"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__activity_user_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "Send"
+msgstr "Gửi"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "Set Draft"
+msgstr "Chuyển về nháp"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__warehouse_id
+msgid "Source warehouse"
+msgstr "Kho yêu cầu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__warehouse_name
+msgid "Source warehouse name"
+msgstr "Kho yêu cầu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__state
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__state
+msgid "State Picking In"
+msgstr "Trạng thái nhập"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__status
+msgid "State Picking Out"
+msgstr "Trạng thái xuất"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__activity_state
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__valuation_in_account_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__valuation_in_account_id
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.view_location_form_translate_inherit
+msgid "Stock Counterpart Account (Incoming)"
+msgstr "Tài khoản đối ứng (Nhập kho)"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__valuation_out_account_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__valuation_out_account_id
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.view_location_form_translate_inherit
+msgid "Stock Counterpart Account (Outgoing)"
+msgstr "Tài khoản đối ứng (Xuất kho)"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_stock_request
+#: model:ir.ui.menu,name:ev_stock_request.menu_stock_request_goods
+msgid "Stock Request"
+msgstr "Yêu cầu chuyển Kho nội bộ"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_stock_request_line
+msgid "Stock Request Detail"
+msgstr "Chi tiết Yêu cầu"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__stock_request_imp_name
+msgid "Stock Request IMP Name"
+msgstr "Tài liệu gốc"
+
+#. module: ev_stock_request
+#: model:ir.actions.act_window,name:ev_stock_request.stock_request_import_act
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__stock_request_import_id
+#: model:ir.ui.menu,name:ev_stock_request.menu_stock_request_import
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_tree
+msgid "Stock Request Import"
+msgstr "Import phiếu yêu cầu Nhập/Xuất Khác"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__line_ids
+msgid "Stock Request Import Line"
+msgstr "Chi tiết import phiếu yêu cầu nhập/xuất khác"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_coordinator_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "The import form is in xls or xlsx format"
+msgstr "Mẫu import có định dạng là xls hoặc xlsx"
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "The number of requests must be greater than 0!!"
+msgstr ""
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid ""
+"The quantity done for the product \"%s\" doesn't respect the rounding "
+"precision"
+"                                                                      "
+"defined on the unit of measure \"%s\". Please change the quantity done or "
+"the                                                                      "
+"rounding precision of your unit of measure."
+msgstr ""
+"Số lượng thực hiện cho sản phẩm \"%s\" không tôn trọng việc độ chính xác làm"
+" trònđược xác định trên đơn vị đo \"%s\". Vui lòng thay đổi số lượng thực "
+"hiện hoặcđộ chính xác làm tròn của đơn vị đo lường của bạn."
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid ""
+"The quantity done for the product \"%s\" doesn't respect the rounding "
+"precision                                                               "
+"defined on the unit of measure \"%s\". Please change the quantity done or "
+"the                                                               rounding "
+"precision of your unit of measure."
+msgstr ""
+"Số lượng thực hiện cho sản phẩm \"%s\" không tôn trọng việc độ chính xác làm"
+" trònđược xác định trên đơn vị đo \"%s\". Vui lòng thay đổi số lượng thực "
+"hiện hoặcđộ chính xác làm tròn của đơn vị đo lường của bạn."
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__state__to_approve
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "To Approve"
+msgstr "Chờ Duyệt"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__stock_transfer_id
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request__type__transfer
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__transfer_count
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_come_form_view
+msgid "Transfer Out"
+msgstr "Phiếu Xuất Kho"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__type
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__type
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_go_view_search
+msgid "Type"
+msgstr "Loại"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__activity_exception_decoration
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_unread
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__message_unread_counter
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import_line__uom_id
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_line__uom_id
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: ev_stock_request
+#: model:ir.model.fields.selection,name:ev_stock_request.selection__stock_request_import_line__status__wait
+msgid "Wait"
+msgstr "Chờ"
+
+#. module: ev_stock_request
+#: model_terms:ir.actions.act_window,help:ev_stock_request.stock_request_come_action
+msgid "Waiting for a new Request come."
+msgstr "Chờ phiếu yêu cầu đến."
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_stock_request
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request__website_message_ids
+#: model:ir.model.fields,field_description:ev_stock_request.field_stock_request_import__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request__website_message_ids
+#: model:ir.model.fields,help:ev_stock_request.field_stock_request_import__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_stock_request
+#: code:addons/ev_stock_request/models/import_stock_request.py:0
+#: code:addons/ev_stock_request/models/stock_request.py:0
+#, python-format
+msgid "You cannot delete record if the state is not 'Draft'."
+msgstr ""
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "confirm"
+msgstr "Xác nhận"
+
+#. module: ev_stock_request
+#: model_terms:ir.ui.view,arch_db:ev_stock_request.stock_request_import_form
+msgid "detail"
+msgstr "Chi tiết"
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_stock_request_import
+msgid "stock.request.import"
+msgstr ""
+
+#. module: ev_stock_request
+#: model:ir.model,name:ev_stock_request.model_stock_request_import_line
+msgid "stock.request.import.line"
+msgstr ""

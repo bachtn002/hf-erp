@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PosGoogleMap" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('source')]" position="before">
+            <div style="width:640px; margin-left: 25px; font-size: 15px; font-family: Arial">
+                <div id="buyer_get_invoice" style="line-height: 22px">
+                    <t t-if="env.pos.get_order().is_created_by_api || (env.pos.get_order().sale_online &amp;&amp; env.pos.get_order().check_is_not_allow_editing)">
+                        <span class="label">Khách hàng lấy hoá đơn</span>
+                        <t t-if="env.pos.get_order().x_buyer_not_get_invoice">
+                            <input type="checkbox" name="x_buyer_get_invoice" id="x_buyer_get_invoice" disabled="disabled"
+                                   t-on-click="trigger('click-check-buyer-get-invoice')"/>
+                            <br/>
+                            <div id="x_sinvoice" style="display: none; margin-bottom: 10px;">
+                                <button disabled="disabled" t-on-click="trigger('click-get-buyer-info-sinvoice')"
+                                        style="font-size: 13px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-family: Arial;"
+                                        type="button">Thông tin hóa đơn gần nhất</button>
+                                <button disabled="disabled" t-on-click="trigger('click-confirm-tax-code')"
+                                        style="font-size: 13px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-family: Arial; margin-left: 10px;"
+                                        type="button">Kiểm tra mã số thuế</button>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Mã số thuế</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_vat" id="x_sinvoice_vat" t-att-value="env.pos.get_order().x_sinvoice_vat"/></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Tên công ty</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_company_name" id="x_sinvoice_company_name" t-att-value="env.pos.get_order().x_sinvoice_company_name"/></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Địa chỉ</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_address" id="x_sinvoice_address" t-att-value="env.pos.get_order().x_sinvoice_address"/></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Email</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_email" id="x_sinvoice_email" t-att-value="env.pos.get_order().x_sinvoice_email"/></th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <input disabled="disabled" type="checkbox" name="x_buyer_get_invoice" id="x_buyer_get_invoice"
+                                   checked="checked"
+                                   t-on-click="trigger('click-check-buyer-get-invoice')"/>
+                            <br/>
+                            <div id="x_sinvoice" style="display: block; margin-bottom: 10px;">
+                                <button disabled="disabled" t-on-click="trigger('click-get-buyer-info-sinvoice')"
+                                        style="font-size: 13px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-family: Arial;"
+                                        type="button">Thông tin hóa đơn gần nhất</button>
+                                <button disabled="disabled" t-on-click="trigger('click-confirm-tax-code')"
+                                        style="font-size: 13px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-family: Arial; margin-left: 10px;"
+                                        type="button">Kiểm tra mã số thuế</button>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Mã số thuế</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_vat" id="x_sinvoice_vat" t-att-value="env.pos.get_order().x_sinvoice_vat"/></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Tên công ty</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_company_name" id="x_sinvoice_company_name" t-att-value="env.pos.get_order().x_sinvoice_company_name"/></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Địa chỉ</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_address" id="x_sinvoice_address" t-att-value="env.pos.get_order().x_sinvoice_address"/></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="font-weight: normal; padding-right: 5px;">Email</th>
+                                            <th><input disabled="disabled" style="width:500px" type="text" name="x_sinvoice_email" id="x_sinvoice_email" t-att-value="env.pos.get_order().x_sinvoice_email"/></th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <span class="label">Khách hàng lấy hoá đơn</span>
+                        <input type="checkbox" name="x_buyer_get_invoice" id="x_buyer_get_invoice"
+                               t-on-click="trigger('click-check-buyer-get-invoice')"/>
+                        <br/>
+                        <div id="x_sinvoice" style="display: none; margin-bottom: 10px;">
+                            <button t-on-click="trigger('click-get-buyer-info-sinvoice')"
+                                    style="font-size: 13px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-family: Arial;"
+                                    type="button">Thông tin hóa đơn gần nhất</button>
+                            <button t-on-click="trigger('click-confirm-tax-code')"
+                                    style="font-size: 13px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-family: Arial; margin-left: 10px;"
+                                    type="button">Kiểm tra mã số thuế</button>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th style="font-weight: normal; padding-right: 5px;">Mã số thuế</th>
+                                        <th><input style="width:500px" type="text" name="x_sinvoice_vat" id="x_sinvoice_vat"/></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="font-weight: normal; padding-right: 5px;">Tên công ty</th>
+                                        <th><input style="width:500px" type="text" name="x_sinvoice_company_name" id="x_sinvoice_company_name"/></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="font-weight: normal; padding-right: 5px;">Địa chỉ</th>
+                                        <th><input style="width:500px" type="text" name="x_sinvoice_address" id="x_sinvoice_address"/></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="font-weight: normal; padding-right: 5px;">Email</th>
+                                        <th><input style="width:500px" type="text" name="x_sinvoice_email" id="x_sinvoice_email"/></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </div>
+                <div id="home_delivery" style="float: left; width:50%; line-height: 22px">
+                    <t t-if="env.pos.get_order().is_created_by_api || (env.pos.get_order().sale_online &amp;&amp; env.pos.get_order().check_is_not_allow_editing)">
+                        <span class="label">Giao hàng tại nhà </span>
+                        <t t-if="env.pos.get_order().x_home_delivery_so">
+                            <input type="checkbox" name="x_home_delivery" id="x_home_delivery" checked="checked" disabled="disabled"/>
+                        </t>
+                        <t t-else="">
+                            <input type="checkbox" name="x_home_delivery" id="x_home_delivery" disabled="disabled"/>
+                        </t>
+
+                        <br/>
+                        <div id="x_ship_type" style="display: none">
+                            <span class="label">Người nhận </span>
+                            <span style="padding-left: 41px">
+                                <t t-if="env.pos.get_order().x_receiver_so">
+                                    <input type="text" name="x_receiver" id="x_receiver" style="width: 120px; height: 15px" t-att-value="env.pos.get_order().x_receiver_so" />
+                                </t>
+                                <t t-elif="env.pos.get_client()">
+                                    <input type="text" name="x_receiver" id="x_receiver" style="width: 120px; height: 15px" t-att-value="env.pos.get_client().name" />
+                                </t>
+                                <t t-else="">
+                                    <input type="text" name="x_receiver" id="x_receiver" style="width: 120px; height: 15px" readonly="1" />
+                                </t>
+                            </span>
+
+                            <br/>
+                            <span class="label">Số điện thoại</span>
+                            <span style="padding-left: 37px">
+                                <t t-if="env.pos.get_order().x_receiver_phone_so">
+                                    <input type="text" name="x_partner_phone" id="x_partner_phone" style="width: 120px; height: 15px" t-att-value="env.pos.get_order().x_receiver_phone_so" />
+                                </t>
+                                <t t-elif="env.pos.get_client()">
+                                    <input type="text" name="x_partner_phone" id="x_partner_phone" style="width: 120px; height: 15px" t-att-value="env.pos.get_client().phone" />
+                                </t>
+                                <t t-else="">
+                                    <input type="text" name="x_partner_phone" id="x_partner_phone" style="width: 120px; height: 15px" readonly="1" />
+                                </t>
+                            </span>
+
+                            <br/>
+                            <span class="label">Phương thức </span>
+                            <span style="padding-left: 31px">
+                                <select name="ship_type" id="ship_type" style="width: 128px">
+                                    <option value="0">Ship nội bộ</option>
+                                    <option value="1">Ship ngoài</option>
+                                </select>
+                            </span>
+                            <br/>
+
+                            <span class="label">Tiền thu hộ </span>
+                            <span style="padding-left: 46px">
+                                <input type="text" name="x_cod" id="x_cod" style="width: 120px; height: 15px"/>
+                            </span>
+
+                            <br/>
+                            <br/>
+                            <div>
+                                <span class="label">Ghi chú giao hàng</span>
+                                <input type="text" value="Yêu cầu gọi trước khi giao" name="x_ship_note" id="x_ship_note"
+                                       style="width: 630px;height: 25px;"/>
+                            </div>
+
+                            <input id="shop_address" t-att-value="env.pos.shop_address" style="display: none"/>
+                            <input id="shop_lat" t-att-value="env.pos.shop_lat" style="display: none"/>
+                            <input id="shop_long" t-att-value="env.pos.shop_long" style="display: none"/>
+                            <br/>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <span class="label">Giao hàng tại nhà </span>
+                        <t t-if="env.pos.get_order().x_home_delivery_so">
+                            <input type="checkbox" name="x_home_delivery" id="x_home_delivery" checked="checked"/>
+                        </t>
+                        <t t-else="">
+                            <input type="checkbox" name="x_home_delivery" id="x_home_delivery"/>
+                        </t>
+
+                        <br/>
+                        <div id="x_ship_type" style="display: none">
+                            <span class="label">Người nhận </span>
+                            <span style="padding-left: 41px">
+                                <t t-if="env.pos.get_order().x_receiver_so">
+                                    <input type="text" name="x_receiver" id="x_receiver" style="width: 120px; height: 15px" t-att-value="env.pos.get_order().x_receiver_so" />
+                                </t>
+                                <t t-elif="env.pos.get_client()">
+                                    <input type="text" name="x_receiver" id="x_receiver" style="width: 120px; height: 15px" t-att-value="env.pos.get_client().name" />
+                                </t>
+                                <t t-else="">
+                                    <input type="text" name="x_receiver" id="x_receiver" style="width: 120px; height: 15px" readonly="1" />
+                                </t>
+                            </span>
+
+                            <br/>
+                            <span class="label">Số điện thoại</span>
+                            <span style="padding-left: 37px">
+                                <t t-if="env.pos.get_order().x_receiver_phone_so">
+                                    <input type="text" name="x_partner_phone" id="x_partner_phone" style="width: 120px; height: 15px" t-att-value="env.pos.get_order().x_receiver_phone_so" />
+                                </t>
+                                <t t-elif="env.pos.get_client()">
+                                    <input type="text" name="x_partner_phone" id="x_partner_phone" style="width: 120px; height: 15px" t-att-value="env.pos.get_client().phone" />
+                                </t>
+                                <t t-else="">
+                                    <input type="text" name="x_partner_phone" id="x_partner_phone" style="width: 120px; height: 15px" readonly="1" />
+                                </t>
+                            </span>
+
+                            <br/>
+                            <span class="label">Phương thức </span>
+                            <span style="padding-left: 31px">
+                                <select name="ship_type" id="ship_type" style="width: 128px">
+                                    <option value="0">Ship nội bộ</option>
+                                    <option value="1">Ship ngoài</option>
+                                </select>
+                            </span>
+                            <br/>
+
+                            <span class="label">Tiền thu hộ </span>
+                            <span style="padding-left: 46px">
+                                <input type="text" name="x_cod" id="x_cod" style="width: 120px; height: 15px"/>
+                            </span>
+
+                            <br/>
+                            <br/>
+                            <div>
+                                <span class="label">Ghi chú giao hàng</span>
+                                <input type="text" value="Yêu cầu gọi trước khi giao" name="x_ship_note" id="x_ship_note"
+                                       style="width: 630px;height: 25px;"/>
+                            </div>
+
+                            <input id="shop_address" t-att-value="env.pos.shop_address" style="display: none"/>
+                            <input id="shop_lat" t-att-value="env.pos.shop_lat" style="display: none"/>
+                            <input id="shop_long" t-att-value="env.pos.shop_long" style="display: none"/>
+                            <br/>
+                        </div>
+                    </t>
+
+                </div>
+                <div id="div_ship_type" style="display: none; float: left;width: 50%; word-wrap: break-word;font-size: 15px; font-family: Arial; line-height: 19.5px">
+                    <span class="label">Địa chỉ:                                                                                                                                                                                                                                                                                              <!-- <t t-esc="env.pos.receiver_address"/> -->
+                    </span>
+                    <span name="x_address_delivery" id="x_address_delivery">
+                        <t t-esc="env.pos.get_order().x_address_delivery_so"/>
+                    </span>
+                    <br/>
+                    <span class="label">Lat:
+                    </span>
+                    <span name="x_lat" id="x_lat">
+                        <t t-esc="env.pos.get_order().x_lat_so"/>
+                    </span>
+                    <br/>
+                    <span name="label_long" class="label">Long:
+                    </span>
+                    <span name="x_long" id="x_long">
+                        <t t-esc="env.pos.get_order().x_long_so"/>
+                    </span>
+                    <br/>
+                    <span class="label">Khoảng cách (km):
+                    </span>
+                    <span name="x_ship_distance" id="x_ship_distance">
+                        <t t-esc="env.pos.get_order().x_distance_so"/>
+                    </span>
+                    <br/>
+                </div>
+            </div>
+
+            <div id="map_in_pos" style="width: 640px; display: none">
+                <div style="float: left;margin-left:15px">
+                    <t t-if="env.pos.get_order().is_created_by_api || (env.pos.get_order().sale_online &amp;&amp; env.pos.get_order().check_is_not_allow_editing)">
+                        <input disabled="disabled" id="input_navigate" type="text" placeholder="Search Box"/>
+                    </t>
+                    <t t-else="">
+                        <input id="input_navigate" type="text" placeholder="Search Box"/>
+                    </t>
+
+                    <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+                    <div id="map_pos" name="map_pos" style="width:640px;height:220px;border:3px solid white;">
+                    </div>
+                </div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnm2AwV3HhYYGU5gwjoQjjg5uH6VZ5PMY&amp;callback=initMapPos&amp;libraries=places">
+            </script>
+        </xpath>
+    </t>
+
+</templates>

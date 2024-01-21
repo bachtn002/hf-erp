@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="ev_report_custom_v1.stock_transfer_report_template" model="report.template">
+            <field name="name">Stock Transfer Report Template</field>
+            <field name="code">STR-T</field>
+            <field name="description">Stock Transfer Report Template</field>
+            <field name="style_id" ref="ev_report.ev_style"/>
+            <field name="active" eval="True"/>
+            <field name="header_html" type="html">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" style="text-align: left;">
+                                <img src="ev_report_custom_v1/static/src/img/logo.jpg" width="100%"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="text-align: center;">
+                                <span style="font-size: 14px; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-weight: 700;">
+                                    {self.env.company.name}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="text-align: center;">
+                                <span style="font-size: 14px; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-weight: 700;">
+                                    Địa chỉ - {self.env.company.street}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: 17px; font-weight: 700; text-align: center;">
+                                    BÁO CÁO PHIẾU ĐIỀU CHUYỂN CHƯA XỬ LÝ
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="text-align: center;">
+                                <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: 14.6667px; font-style: italic; text-align: center; text-size-adjust: auto;">
+                                        Từ ngày: {self.from_date.strftime('%d/%m/%Y')} - Đến ngày: {self.to_date.strftime('%d/%m/%Y')}
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

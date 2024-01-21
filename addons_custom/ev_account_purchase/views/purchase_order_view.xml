@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="purchase_order_form_view_account_line">
+            <field name="name">purchase_order_form_view_account_line</field>
+            <field name="model">purchase.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="///form/header/button[@name='button_cancel']" position="after">
+                    <button name="action_close_invoice_purchase" type="object" string="Close Invoice Purchase"
+                            attrs="{'invisible': [('invoice_status', '=', 'invoiced')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="import_account_balance_view" model="ir.ui.view">
+            <field name="name">Import Account Balance</field>
+            <field name="model">account.balance.transient</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="file_upload" filename="file_name"/>
+                                <field name="file_name" invisible="1"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="action_import_data" string="Import" type="object" class="oe_highlight"/>
+                            <button special="cancel" string="Hủy"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="import_account_balance_action" model="ir.actions.act_window">
+            <field name="name">Import Account Balance</field>
+            <field name="res_model">account.balance.transient</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="import_account_balance_menu" name="Import Account Balance" parent="ev_account_balance.menu_ev_opening_balance"
+                  action="import_account_balance_action"
+                  sequence="2" groups="account.group_account_user,account.group_account_manager"/>
+
+    </data>
+</odoo>

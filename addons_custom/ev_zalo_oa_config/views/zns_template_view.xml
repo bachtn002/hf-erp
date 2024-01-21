@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="config_zns_template_view_tree_inherit">
+            <field name="name">config_zns_template_view_tree_inherit</field>
+            <field name="model">zns.template</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.zns_template_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='template_name']" position="after">
+                    <field name="oa_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="config_zns_template_view_from_inherit">
+            <field name="name">config_zns_template_view_from_inherit</field>
+            <field name="model">zns.template</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.zns_template_view_from"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='template_name']" position="after">
+                    <field name="oa_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_min_stock_shop,access_min_stock_shop_name,model_min_stock_shop,,1,1,1,1
+access_request_forecast,access_request_forecast_name,model_request_forecast,,1,1,1,1
+access_google_bigquery_config,access_google_bigquery_config_name,model_google_bigquery_config,,1,1,1,1
+access_sale_request_notification,access_sale_request_notification_name,model_sale_request_notification,,1,1,1,1

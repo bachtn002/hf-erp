@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="pos_promotion_gift_code_product_qty_assets"
+              inherit_id="point_of_sale.assets"
+              name="pos_promotion_gift_code_product_qty.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code_product_qty/static/src/js/db.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code_product_qty/static/src/js/models.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_promotion_gift_code_product_qty/static/src/js/Promotion.js"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_request_go_delivery_inherit">
+            <field name="name">stock_request_go_delivery_inherit</field>
+            <field name="model">stock.request</field>
+            <field name="inherit_id" ref="ev_stock_request.stock_request_go_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="x_ship_type"
+                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'transfer')], 'required': [('type', '=', 'transfer')]}"
+                           force_save="1"/>
+                    <field name="x_driver"
+                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('x_ship_type', '!=', 'internal')], 'required': [('x_ship_type', '!=', 'no')]}"
+                           force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="stock_request_come_delivery_inherit">
+            <field name="name">stock_request_come_delivery_inherit</field>
+            <field name="model">stock.request</field>
+            <field name="inherit_id" ref="ev_stock_request.stock_request_come_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_request']" position="after">
+                    <field name="x_ship_type"
+                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'transfer')], 'required': [('type', '=', 'transfer')]}"
+                           force_save="1"/>
+                    <field name="x_driver"
+                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('x_ship_type', '!=', 'internal')], 'required': [('x_ship_type', '!=', 'no')]}"
+                           force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="stock_request_coordinator_delivery_inherit">
+            <field name="name">stock_request_coordinator_delivery_inherit</field>
+            <field name="model">stock.request</field>
+            <field name="inherit_id" ref="ev_stock_request.stock_request_coordinator_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_request']" position="after">
+                    <field name="x_ship_type"
+                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'transfer')], 'required': [('type', '=', 'transfer')]}"
+                           force_save="1"/>
+                    <field name="x_driver"
+                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('x_ship_type', '!=', 'internal')], 'required': [('x_ship_type', '!=', 'no')]}"
+                           force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+<!--        <record model="ir.ui.view" id="stock_return_product_warehouse_delivery_inherit">-->
+<!--            <field name="name">stock_return_product_warehouse_delivery_inherit</field>-->
+<!--            <field name="model">stock.request</field>-->
+<!--            <field name="inherit_id" ref="ev_return_product_warehouse.stock_return_product_warehouse_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='date_request']" position="after">-->
+<!--                    <field name="x_ship_type"-->
+<!--                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'transfer')], 'required': [('type', '=', 'transfer')]}"-->
+<!--                           force_save="1"/>-->
+<!--                    <field name="x_driver"-->
+<!--                           attrs="{'readonly' : [('state', '!=', 'draft')], 'invisible': [('x_ship_type', '!=', 'internal')], 'required': [('x_ship_type', '!=', 'no')]}"-->
+<!--                           force_save="1"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="survey_form_inherit">
+            <field name="name">Form view for survey</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/div[@class='oe_title']" position="after">
+                    <group>
+                        <field name="x_certificate_duration" attrs="{'readonly': [('success_count', '>', 0)]}"/>
+                    </group>
+                </xpath>
+                <field name="question_and_page_ids" position="before">
+                    <field name="x_field_binary_import_question_answer"
+                           filename="x_field_binary_name_question_answer"/>
+                    <field name="x_field_binary_name_question_answer" invisible="1"/>
+                    <button name="download_template_question_answer" type="object"
+                            string="Download Import Template"
+                            class="btn btn-link" style="text-decoration: underline;"
+                            help="File must in the format of xls or xlsx"/>
+                    <button name="action_import_question_answer" type="object" class="oe_highlight"
+                            string="Import"
+                            attrs="{'invisible': [('x_field_binary_import_question_answer', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

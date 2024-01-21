@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="stock_transfer_report_form" model="ir.ui.view">
+            <field name="name">Stock Transfer Report Form</field>
+            <field name="model">stock.transfer.report</field>
+            <field name="arch" type="xml">
+                <form string="Stock Transfer Report Form" create='0' delete='0' copy='0'>
+                    <header>
+                        <field name="has_data" invisible="1"/>
+                        <button name="action_report" type="object" string="Report" class="btn-primary"/>
+                        <button name="action_export_excel" type="object" string="Export Excel"
+                                attrs="{'invisible': [('has_data', '=', False)]}"/>
+                    </header>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <group col="3">
+                                <group col="2">
+                                    <label for="from_date"/>
+                                    <field name="from_date" nolabel="1"/>
+                                    <label for="to_date"/>
+                                    <field name="to_date" nolabel="1"/>
+                                </group>
+                                <group col="2">
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="warehouse_ids" string="Warehouse" widget="many2many_tags"
+                                        options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                                </group>
+                            </group>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <field name="preview_html" nolabel="1" readonly="1" widget="ev_report_preview"/>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_stock_transfer_atc" model="ir.actions.act_window">
+            <field name="name">Stock Transfer Report Action</field>
+            <field name="res_model">stock.transfer.report</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_stock_transfer_report"
+                  name="Stock Transfer Report"
+                  action="rpt_stock_transfer_atc"
+                  parent="stock.menu_warehouse_report"
+                  groups="stock.group_stock_user"
+                  sequence="36"/>
+
+        <menuitem id="menu_stock_transfer_account_report"
+                  name="Stock Transfer Report"
+                  action="rpt_stock_transfer_atc"
+                  parent="ev_stock_report_birt.menu_report_stock"
+                  groups="account.group_account_invoice,account.group_account_user,account.group_account_manager"
+                  sequence="10"/>
+
+        <menuitem id="ev_stock_report_birt.menu_rpt_stock_transfer"
+                  active="False"/>
+
+        <menuitem id="ev_stock_report_birt.menu_rpt_stock_transfer_account"
+                  active="False"/>
+    </data>
+</odoo>

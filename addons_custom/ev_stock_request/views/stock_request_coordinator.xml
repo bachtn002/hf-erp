@@ -1,0 +1,162 @@
+<odoo>
+    <data>
+
+<!--        <record id="stock_request_view_kanban" model="ir.ui.view">-->
+<!--            <field name="name">stock.request.view.kanban</field>-->
+<!--            <field name="model">stock.request</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <kanban>-->
+<!--                    <field name="name"/>-->
+<!--                    <field name="date_request"/>-->
+<!--                    <field name="warehouse_id"/>-->
+<!--                    <field name="warehouse_dest_id"/>-->
+<!--                    <field name="type"/>-->
+<!--                    <field name="state"/>-->
+<!--                    <field name="note"/>-->
+<!--                    <field name="company_id"/>-->
+<!--                    <field name="line_ids"/>-->
+<!--                    <progressbar field="state"-->
+<!--                                 colors="{&quot;draft&quot;: &quot;to_approve&quot;, &quot;approve&quot;: &quot;reject&quot;, &quot;done&quot;: &quot;danger&quot;, &quot;cancel&quot;: &quot;danger&quot;}"/>-->
+<!--                    <templates>-->
+<!--                        <t t-name="kanban-box">-->
+<!--                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">-->
+<!--                                <div class="o_kanban_record_top mb16">-->
+<!--                                    <div class="o_kanban_record_headings mt4">-->
+<!--                                        <strong class="o_kanban_record_title">-->
+<!--                                            <span>-->
+<!--                                                <t t-esc="record.name.value"/>-->
+<!--                                            </span>-->
+<!--                                        </strong>-->
+<!--                                    </div>-->
+<!--                                    <strong>-->
+<!--                                        <field name="date_request"/>-->
+<!--                                    </strong>-->
+<!--                                </div>-->
+<!--                                <div class="o_kanban_record_bottom">-->
+<!--                                    <div class="oe_kanban_bottom_left text-muted">-->
+<!--                                        <span>-->
+<!--                                            <t t-esc="record.note.value"/>-->
+<!--                                        </span>-->
+<!--                                        <field name="activity_ids" widget="kanban_activity"/>-->
+<!--                                    </div>-->
+<!--                                    <div class="oe_kanban_bottom_right">-->
+<!--                                        <field name="state" widget="label_selection"-->
+<!--                                               options="{'classes': {'wait_confirm': 'warning', 'checked_inventory': 'danger', 'ready': 'danger'}}"/>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </templates>-->
+<!--                </kanban>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="stock_request_coordinator_form_view" model="ir.ui.view">
+            <field name="name">Request Form</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <form duplicate="0">
+                    <header>
+                        <button name="action_auto_fill" type="object" string="Fill quantity"
+                                states="to_approve" class="oe_highlight"/>
+                        <button name="action_approve" type="object" string="Approve" states="to_approve" class="oe_highlight"/>
+                        <button name="action_reject" type="object" string="Reject" states="to_approve"/>
+                        <button name="action_cancel_approve" type="object" string="Cancel" states="approve"/>
+                        <field name="state" widget="statusbar" statusbar_visible="to_approve,approve,reject,done,cancel"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <h3 class="text-center">Request Go</h3>
+                        <h3 class="text-center">
+                            <field name="name" readonly="1" required="1"
+                                   style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                   placeholder="Number"/>
+                        </h3>
+                        <group>
+                            <group>
+                                <field name="warehouse_id" required="1" readonly="1"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="warehouse_dest_id" required="1"
+                                       options="{'no_create': 1, 'no_create_edit': 1}" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="date_request" readonly="1"/>
+                                <field name="company_id" readonly="1" force_save="1"/>
+                                <field name="note" placeholder="Note"
+                                attrs="{'readonly' : [('state', '!=', 'to_approve')]}"/>
+                                <field name="type" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="The import form is in xls or xlsx format"/>
+                                <button name="action_import_line" type="object" class="oe_highlight" string="Import"
+                                        attrs="{'invisible': [('field_binary_import', '=', False)]}"/>
+                                <field name="line_ids" model="tree">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                               required="1" readonly="1"/>
+                                        <field name="uom_id" force_save="1" readonly="1"/>
+                                        <field name="qty" readonly="1" force_save="1" decoration-success="1"/>
+                                        <field name="qty_apply" attrs="{'readonly':[('parent.state','!=','to_approve')]}"
+                                               decoration-danger="1"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_request_coordinator_tree_view" model="ir.ui.view">
+            <field name="name">Request Tree</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <tree default_order='date_request desc' decoration-info="state == 'draft'" create="false" delete="false"
+                      decoration-muted="state in ('cancel')" decoration-success="state == 'approve'"
+                      decoration-danger="state not in ('cancel','done','draft')">
+                    <field name="name"/>
+                    <field name="warehouse_id"/>
+                    <field name="warehouse_dest_id"/>
+                    <field name="date_request"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--dieuphoi-->
+        <record id="stock_request_coordinator_action" model="ir.actions.act_window">
+            <field name="name">Request Coordinator Goods</field>
+            <field name="res_model">stock.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('stock_request_coordinator_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('stock_request_coordinator_form_view')})]"/>
+<!--            <field name="context">{'default_type':'coordinator'}</field>-->
+            <field name="domain">[('state','!=','draft')]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Approve requests.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_stock_request_coordinator" parent="menu_stock_request_goods"
+                  sequence="3"
+                  groups="group_stock_coordinator"
+                  action="stock_request_coordinator_action"/>
+
+    </data>
+</odoo>

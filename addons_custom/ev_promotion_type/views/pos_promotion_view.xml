@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="pos_promotion_type_view" model="ir.ui.view">
+            <field name="name">pos_promotion_type_view</field>
+            <field name="model">pos.promotion</field>
+            <field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+					<field name="promotion_type_id" attrs="{'readonly': [('state','!=','draft')]}" no_create="1" no_edit="1" no_open="1" required="1"/>
+				</xpath>
+            </field>
+
+        </record>
+
+        <record id="pos_promotion_tree_view" model="ir.ui.view">
+            <field name="name">pos.promotion.view.tree.inherit.ev_promotion_type</field>
+            <field name="model">pos.promotion</field>
+            <field name="priority">2</field>
+            <field name="inherit_id" ref="ev_pos_promotion.pos_promotion_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state']" position="after">
+                    <field name="promotion_type_id"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+    
+</odoo>

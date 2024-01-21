@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_user_form_inherit">
+            <field name="name">view_pos_user_inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='references']" position="after">
+                    <page name="pos_shop_ref" string="Pos shop">
+                        <group>
+                            <group>
+                                <field name="x_pos_shop_ids" widget="many2many_tags"/>
+                                <field name="x_view_all_shop" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="x_pos_config_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

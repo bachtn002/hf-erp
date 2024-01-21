@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_stock_keeper" model="res.groups">
+            <field name="name">Stock Keeper</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="group_stock_accountant" model="res.groups">
+            <field name="name">Stock Accountant</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>

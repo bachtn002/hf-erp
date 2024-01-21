@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="account_sinvoice_tree_view" model="ir.ui.view">
+            <field name="name">account_sinvoice_tree_view</field>
+            <field name="model">account.sinvoice</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="order_id"/>
+                    <field name="sinvoice_lot_id"/>
+                    <field name="sinvoice_no"/>
+                    <field name="sinvoice_date"/>
+                    <field name="sinvoice_payment_method"/>
+                    <field name="buyer_not_get_invoice"/>
+                    <field name="currency_id"/>
+                    <field name="amount_untax"/>
+                    <field name="amount_tax"/>
+                    <field name="total_amount_tax"/>
+                    <field name="transaction_uuid"/>
+                    <field name="sinvoice_state" widget="badge"
+                           decoration-info="sinvoice_state == 'no_release'"
+                           decoration-success="sinvoice_state == 'released'"
+                           decoration-danger="sinvoice_state not in ('no_release', 'released')"
+                    />
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_sinvoice_view_form" model="ir.ui.view">
+            <field name="name">account_sinvoice_view_form</field>
+            <field name="model">account.sinvoice</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="order_id"/>
+                                <field name="sinvoice_lot_id"/>
+                                <field name="sinvoice_no"/>
+                                <field name="sinvoice_date"/>
+                                <field name="sinvoice_state"/>
+                                <field name="sinvoice_payment_method"/>
+                                <field name="buyer_not_get_invoice"/>
+                                <field name="currency_id"/>
+                                <field name="sinvoice_cancel_date"/>
+                                <field name="amount_untax"/>
+                                <field name="amount_tax"/>
+                                <field name="total_amount_tax"/>
+                                <field name="transaction_uuid"/>
+                                <field name="reservation_code"/>
+                            </group>
+                            <group>
+                                <field name="buyer_name"/>
+                                <field name="buyer_code"/>
+                                <field name="buyer_tax_code"/>
+                                <field name="buyer_address_line"/>
+                                <field name="buyer_email"/>
+                                <field name="buyer_bank_name"/>
+                                <field name="buyer_bank_account"/>
+                                <field name="buyer_id_type"/>
+                                <field name="buyer_id_no"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="account_sinvoice_action" model="ir.actions.act_window">
+            <field name="name">Account SInvoice</field>
+            <field name="res_model">account.sinvoice</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="account_sinvoice_menu"
+                  name="Account Sinvoice"
+                  parent="sinvoice_menu_root"
+                  action="account_sinvoice_action"
+                  sequence="2"
+        />
+    </data>
+</odoo>

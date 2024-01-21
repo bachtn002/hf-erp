@@ -1,0 +1,51 @@
+.pos .actionpad .button.pay {
+    height: 108px;
+}
+
+.pos .searchbox-client-search {
+    padding: 3px 0px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-right: solid 1px #bfbfbf;
+}
+
+.pos .searchbox-client-search input {
+    width: 180px;
+    border: 1px solid #cecbcb;
+    padding: 10px 20px;
+    padding-left: 38px;
+    padding-right: 33px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: "Lato", "Lucida Grande", Helvetica, Verdana, Arial;
+    font-size: 13px;
+    text-align: center;
+}
+
+.pos .searchbox-client-search input:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgb(153, 153, 255) inset;
+    color: rgb(153, 153, 255);
+}
+
+.pos .add-new-customer .new-customer{
+    position: relative;
+    height: 54px;
+    width: 56px;
+    border-bottom:none;
+}
+
+.pos .add-new-customer i.fa-plus{
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    margin-right: 8px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+table.client-list, .searchbox-client{
+    display:none;
+}

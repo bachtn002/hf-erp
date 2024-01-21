@@ -1,0 +1,372 @@
+
+#. module: ev_sale_online_miniapp
+#: model_terms:ir.ui.view,arch_db:ev_sale_online_miniapp.sale_online_form_inherit_payment_info
+msgid "Account Sinvoice"
+msgstr "Hoá đơn điện tử"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__amount_promotion_loyalty
+msgid "Amount Promotion Loyalty"
+msgstr "Phân bổ điểm tích luỹ"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__amount_promotion_total
+msgid "Amount Promotion Total"
+msgstr "Phân bổ giảm giá đơn hàng"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__amount_subtotal_incl
+msgid "Amount Subtotal Incl"
+msgstr "Thành tiền sau CK"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__amount_total
+msgid "Amount Total"
+msgstr "Tổng tiền"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__buyer_not_get_invoice
+msgid "Buyer Not Get Invoice"
+msgstr "Người mua không lấy hoá đơn"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__cancel_reason
+msgid "Cancel Reason"
+msgstr "Lý do huỷ"
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid "Please enter at least one payment method."
+msgstr "Vui lòng nhập ít nhất một phương thức thanh toán."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid ""
+"Cannot enter deductions for accumulated points greater than the total "
+"amount."
+msgstr "Không thể nhập giảm trừ điểm tích luỹ lớn hơn tổng tiền."
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__create_uid
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__create_uid
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__create_date
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__create_date
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__discount_amount
+msgid "Discount Amount"
+msgstr "Số tiền giảm giá"
+
+#. module: ev_sale_online_miniapp
+#: model_terms:ir.ui.view,arch_db:ev_sale_online_miniapp.sale_online_form_inherit_payment_info
+msgid "Discount Info"
+msgstr "Chiết khấu"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__discount_on_product
+msgid "Discount On Product"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__discount_type
+msgid "Discount Type"
+msgstr "Loại chiết khấu"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__discount_on_prod_ids
+msgid "Discounts On Product"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__display_name
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__display_name
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__display_name
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__display_name
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online_order_line.py:0
+#, python-format
+msgid "Greater discount cannot be entered into cash."
+msgstr "Giá trị chiết khấu không thể lớn hơn thành tiền."
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__id
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__id
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__id
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__id
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__is_created_by_api
+msgid "Is Created Api"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online____last_update
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount____last_update
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product____last_update
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line____last_update
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__write_uid
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__write_uid
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__write_date
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__write_date
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__loyalty_point_redeem
+msgid "Loyalty Point Redeem"
+msgstr "Điểm tích luỹ"
+
+#. module: ev_sale_online_miniapp
+#. openerp-web
+#: code:addons/ev_sale_online_miniapp/static/src/js/ticket_screen.js:0
+#, python-format
+msgid "Lỗi"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields.selection,name:ev_sale_online_miniapp.selection__sale_online_discount__discount_type__on_bill
+msgid "On Bill"
+msgstr "Đơn hàng"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields.selection,name:ev_sale_online_miniapp.selection__sale_online_discount__discount_type__on_product
+msgid "On Product"
+msgstr "Sản phẩm"
+
+#. module: ev_sale_online_miniapp
+#: model_terms:ir.ui.view,arch_db:ev_sale_online_miniapp.sale_online_form_inherit_payment_info
+msgid "Payment Info"
+msgstr "Phương thức thanh toán"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__payment_method_id
+msgid "Payment Method Id"
+msgstr "Phương thức thanh toán"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__payment_method_ids
+msgid "Payment Methods"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__x_is_price_promotion
+msgid "Price Promotion"
+msgstr "Số tiền giảm theo chương trình khuyến mại"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__product_code
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__product_code
+msgid "Product Code"
+msgstr "Mã sản phẩm"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__promotion_code
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__promotion_code
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__promotion_code
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_order_line__promotion_code
+msgid "Promotion Code"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__promotion_id
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__promotion_id
+msgid "Promotion Id"
+msgstr "CTKM"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__ref_order
+msgid "Ref Order"
+msgstr "Tham chiếu đơn api"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__sinvoice_address
+msgid "SInvoice Address"
+msgstr "Địa chỉ"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__sinvoice_company_name
+msgid "SInvoice Company Name"
+msgstr "Tên công ty"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__sinvoice_email
+msgid "SInvoice Email"
+msgstr "Email"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__sinvoice_vat
+msgid "SInvoice Vat"
+msgstr "Mã số thuế"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount__sale_online_id
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_discount_on_product__sale_online_id
+msgid "Sale Online"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model,name:ev_sale_online_miniapp.model_sale_online_discount
+msgid "Sale Online Discount"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model,name:ev_sale_online_miniapp.model_sale_online_discount_on_product
+msgid "Sale Online Discount On Product"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__sale_online_discount_ids
+msgid "Sale Online Discounts"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online_payment_info__sale_online_id
+msgid "Sale Online Order"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model,name:ev_sale_online_miniapp.model_sale_online_payment_info
+msgid "Sale Online Payment Info"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__total_discount
+msgid "Total Discount"
+msgstr "Tổng tiền chiết khấu"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__total_discount_on_bill
+msgid "Total Discount On Bill"
+msgstr "Tổng tiền giảm giá trên đơn"
+
+#. module: ev_sale_online_miniapp
+#. openerp-web
+#: code:addons/ev_sale_online_miniapp/static/src/js/ticket_screen.js:0
+#, python-format
+msgid "Vui lòng nhập điểm nhỏ hơn điểm tích lũy"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model,name:ev_sale_online_miniapp.model_sale_online
+msgid "sale.online"
+msgstr "Bán hàng online"
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model,name:ev_sale_online_miniapp.model_sale_online_order_line
+msgid "sale.online.order.line"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#. openerp-web
+#: code:addons/ev_sale_online_miniapp/static/src/js/button_validate_order.js:0
+#, python-format
+msgid "Đơn hàng đã hoàn thành hoặc bị huỷ"
+msgstr ""
+
+#. module: ev_sale_online_miniapp
+#: model:ir.model.fields,field_description:ev_sale_online_miniapp.field_sale_online__amount_total_before_discount
+msgid "Amount Total Before Discount"
+msgstr "Tổng tiền trước chiết khấu"
+
+#. module: ev_sale_online_miniapp
+#: model_terms:ir.ui.view,arch_db:ev_sale_online_miniapp.sale_online_form_inherit_payment_info
+msgid "Set to Draft"
+msgstr "Chuyển về nháp"
+
+#. module: ev_sale_online_miniapp
+#: model_terms:ir.ui.view,arch_db:ev_sale_online_miniapp.sale_online_form_inherit_payment_info
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid "Cannot enter a discount greater than the total amount."
+msgstr "Không thể nhập chiết khấu lớn hơn tổng tiền."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid "You can not copy sale online is created by api!"
+msgstr "Bạn không thể nhân bản đơn online được tạo từ api!"
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid "You can not set total discount on bill negative."
+msgstr "Bạn không thể đặt Tổng tiền giảm giá nhỏ hơn 0."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid "Total amount in payment method greater than Amount total!"
+msgstr "Tổng tiền thanh toán đang lớn hơn Tổng tiền đơn hàng!"
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online_order_line.py:0
+#, python-format
+msgid "You can not set discount negative."
+msgstr "Bạn không thể đặt Chiết khấu nhỏ hơn 0."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online_payment_info.py:0
+#, python-format
+msgid "You can not set amount negative."
+msgstr "Bạn không thể đặt Tổng tiền nhỏ hơn 0."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online_order_line.py:0
+#, python-format
+msgid "You can not set amount subtotal incl negative."
+msgstr "Bạn không thể nhập Tổng tiền nhỏ hơn 0."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online_order_line.py:0
+#, python-format
+msgid "Amount subtotal incl can not greater than amount"
+msgstr "Thành tiền sau CK không thể lớn hơn tổng tiền."
+
+#. module: ev_sale_online_miniapp
+#: code:addons/ev_sale_online_miniapp/models/sale_online.py:0
+#, python-format
+msgid "Order has been completed or cancelled."
+msgstr "Đơn hàng đã hoàn thành hoặc bị huỷ."
+

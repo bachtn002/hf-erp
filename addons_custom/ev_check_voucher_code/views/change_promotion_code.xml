@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+		<record id="change_promotion_code_view_tree" model="ir.ui.view">
+			<field name="name">change_promotion_code_view_tree</field>
+			<field name="model">change.promotion.code</field>
+			<field name="arch" type="xml">
+				<tree string="check_voucher_code_tree" edit="0" create="0" delete="0" default_order="create_date desc">
+					<field name="name"/>
+					<field name="promotion_use_code_old"/>
+					<field name="promotion_use_code"/>
+					<field name="state_before"/>
+					<field name="state_after"/>
+					<field name="user_change"/>
+					<field name="datetime"/>
+				</tree>
+			</field>
+		</record>
+		<record id="change_promotion_code_act" model="ir.actions.act_window">
+			<field name="name">change.promotion.code</field>
+			<field name="res_model">change.promotion.code</field>
+			<field name="view_mode">tree</field>
+			<field name="domain">[]</field>
+			<field name="context">{}</field>
+		</record>
+		<menuitem id="menu_change_promotion_code"
+		          action="change_promotion_code_act"
+		          name="Change Promotion code"
+		          parent="ev_promotion_voucher.menu_promotion_code" sequence="207"/>
+	</data>
+</odoo>

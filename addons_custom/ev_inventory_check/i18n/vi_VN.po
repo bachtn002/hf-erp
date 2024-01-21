@@ -1,0 +1,478 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_inventory_check
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-25 10:11+0000\n"
+"PO-Revision-Date: 2021-11-25 10:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_inventory_check
+#: model:ir.actions.report,print_report_name:ev_inventory_check.action_export_stock_inventory_check
+msgid "'%s' %(object.name)"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "(Ký, họ tên, đóng dấu)"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid ""
+"<b>Cửa hàng trưởng</b>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid ""
+"<b>Nhân viên cửa hàng</b>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid ""
+"<b>Quản lý vùng</b>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid ""
+"<strong style=\"text-align: right;\">\n"
+"                                            ,ngày......tháng......năm......</strong>\n"
+"                                        <br clear=\"both\"/>"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__accounting_date
+msgid "Accounting Date"
+msgstr "Ngày kế toán"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__x_analytic_account_id
+msgid "Analytic Account"
+msgstr "Đối tượng cửa hàng"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+msgid "BIÊN BẢN KIỂM KÊ DỰ THẢO"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "BIÊN BẢN KIỂM KÊ HÀNG HÓA"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Cancel Inventory"
+msgstr "Hủy"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields.selection,name:ev_inventory_check.selection__stock_inventory__state__cancel
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Chênh lệch"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_search_inherit
+msgid "Confirm Warehouse"
+msgstr "Cửa hàng xác nhận"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Continue Inventory"
+msgstr "Chi tiết kiểm kho"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_inventory_check
+#. openerp-web
+#: code:addons/ev_inventory_check/static/src/xml/inventory_lines_warehouse.xml:0
+#, python-format
+msgid "Cửa hàng xác nhận"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Cửa hàng/kho tổng:"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,help:ev_inventory_check.field_stock_inventory__accounting_date
+msgid ""
+"Date at which the accounting entries will be created in case of automated "
+"inventory valuation. If empty, the inventory date will be used."
+msgstr ""
+"Ngày mà các mục kế toán sẽ được tạo trong trường hợp định giá hàng tồn kho "
+"tự động. Nếu trống, ngày tồn kho sẽ được sử dụng."
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_inventory_check.field_report_ev_inventory_check_export_stock_inventory__display_name
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__display_name
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields.selection,name:ev_inventory_check.selection__stock_inventory__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__name
+msgid "Group Name"
+msgstr "Nhóm kiểm kê"
+
+#. module: ev_inventory_check
+#: model:ir.model.constraint,message:ev_inventory_check.constraint_stock_inventory_group_unique_name
+msgid "Group Name must be unique"
+msgstr "Nhóm kiểm kê đã tồn tại"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_product_template__id
+#: model:ir.model.fields,field_description:ev_inventory_check.field_report_ev_inventory_check_export_stock_inventory__id
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__id
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid ""
+"If you cancel this inventory adjustment, all its inventory adjustment lines "
+"will be lost. Are you sure you want to discard it ?"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.actions.report,name:ev_inventory_check.action_export_stock_inventory_check
+msgid "In Excel"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields.selection,name:ev_inventory_check.selection__stock_inventory__state__confirm
+msgid "In Progress"
+msgstr "Đang thực hiện"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__exhausted
+msgid "Include Exhausted Products"
+msgstr "Gồm cả sản phẩm đã hết"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,help:ev_inventory_check.field_stock_inventory__exhausted
+msgid "Include also products with quantity of 0"
+msgstr "Bao gồm cả những sản phẩm có số lượng là 0"
+
+#. module: ev_inventory_check
+#: model:ir.model,name:ev_inventory_check.model_stock_inventory
+msgid "Inventory"
+msgstr "Kho vận"
+
+#. module: ev_inventory_check
+#: model:ir.actions.act_window,name:ev_inventory_check.inventory_group_act
+#: model:ir.model.fields,field_description:ev_inventory_check.field_product_product__x_inventory_group_id
+#: model:ir.model.fields,field_description:ev_inventory_check.field_product_template__x_inventory_group_id
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__x_inventory_group_ids
+#: model:ir.ui.menu,name:ev_inventory_check.inventory_group_menu
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_group_form
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_group_tree
+msgid "Inventory Group"
+msgstr "Nhóm kiểm kê"
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid "Inventory Lines"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Kho"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_inventory_check.field_report_ev_inventory_check_export_stock_inventory____last_update
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory____last_update
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid "Location processing inventory"
+msgstr ""
+"Địa điểm đang kiểm kê! Vui lòng chọn địa điểm khác hoặc đợi kiểm kê kết thúc"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Mã hiệu:"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Mã hàng"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Nhóm hàng"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Phiếu kiểm kê:"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Print Stock Inventory"
+msgstr "In biên bản kiểm kê"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Print Stock Inventory Draft"
+msgstr "In biên bản kiểm kê dự thảo"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__x_category_ids
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_inventory_check
+#: model:ir.model,name:ev_inventory_check.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid "Product quanty must greater than 0"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__product_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Return"
+msgstr "Quay lại"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "STT"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Set to Draft"
+msgstr "Đưa về trạng thái nháp"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Start Inventory"
+msgstr "Bắt đầu kiểm kê"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory_group__stock_inventory_id
+msgid "Stock Inventory"
+msgstr "Kiểm kê kho"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__x_location_id
+msgid "Stock Location"
+msgstr "Địa điểm kiểm kê"
+
+#. module: ev_inventory_check
+#: model:ir.actions.report,name:ev_inventory_check.qweb_stock_inventory_draft_pdf
+#: model:ir.actions.report,name:ev_inventory_check.qweb_stock_inventory_pdf
+msgid "Stock inventory"
+msgstr "Kiểm kê"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Số lượng lý thuyết"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Số lượng thực tế"
+msgstr ""
+
+#. module: ev_inventory_check
+#. openerp-web
+#: code:addons/ev_inventory_check/static/src/js/warehoure_inventory_validate_button_controller.js:0
+#, python-format
+msgid "The inventory has been validated"
+msgstr ""
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid ""
+"The quantity done for the product \"%s\" doesn't respect the rounding "
+"precision                                 defined on the unit of measure "
+"\"%s\". Please change the quantity done or the"
+"                                 rounding precision of your unit of measure."
+msgstr ""
+"Số lượng đã đếm của sản phẩm \"%s\" không phù hợp với"
+" định nghĩa độ chính xác thập phân của "
+"\"%s\". Vui lòng điểu chỉnh lại số lượng"
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Thời điểm bắt đầu:"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Thời điểm kết thúc:"
+msgstr ""
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid "Tracked Products in Inventory Adjustment"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Tên hàng"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.inventory_check_form_inherit
+msgid "Validate Inventory"
+msgstr "Xác nhận kiểm kê"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields.selection,name:ev_inventory_check.selection__stock_inventory__state__done
+msgid "Validated"
+msgstr "Đã xác nhận"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields.selection,name:ev_inventory_check.selection__stock_inventory__state__confirm_warehouse
+msgid "Warehouse Confirm"
+msgstr "Cửa hàng xác nhận"
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__x_address_company
+msgid "X Address Company"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model.fields,field_description:ev_inventory_check.field_stock_inventory__x_products_invisible
+msgid "X Products Invisible"
+msgstr ""
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid ""
+"You can't validate the inventory '%s', maybe this inventory has been already"
+" validated or isn't ready."
+msgstr ""
+
+#. module: ev_inventory_check
+#: code:addons/ev_inventory_check/models/inventory_check.py:0
+#, python-format
+msgid ""
+"You cannot set a negative product quantity in an inventory line:\n"
+"\t%s - qty: %s"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model,name:ev_inventory_check.model_report_ev_inventory_check_export_stock_inventory
+msgid "report.ev_inventory_check.export_stock_inventory"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model:ir.model,name:ev_inventory_check.model_stock_inventory_group
+msgid "stock.inventory.group"
+msgstr ""
+
+#. module: ev_inventory_check
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_draft_view
+#: model_terms:ir.ui.view,arch_db:ev_inventory_check.report_template_stock_inventory_view
+msgid "Đơn vị tính"
+msgstr ""

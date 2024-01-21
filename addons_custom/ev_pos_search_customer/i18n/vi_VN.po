@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_search_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-13 04:25+0000\n"
+"PO-Revision-Date: 2021-09-13 04:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/xml/ProductScreenCustomer.xml:0
+#, python-format
+msgid "Add a customer"
+msgstr ""
+
+#. module: ev_pos_search_customer
+#: code:addons/ev_pos_search_customer/models/number_search_limit.py:0
+#: code:addons/ev_pos_search_customer/models/res_company_inherit.py:0
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_pos_config__x_apply_fix_customer
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_company__x_apply_fix_customer
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_config_settings__x_apply_fix_customer
+#, python-format
+msgid "Apply fix customer"
+msgstr "Cho phép sửa khách hàng ở POS"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/js/CustomerSearch/client_screen_custom.js:0
+#, python-format
+msgid "Change Customer"
+msgstr "Thay đổi khách hàng"
+
+#. module: ev_pos_search_customer
+#: model:ir.model,name:ev_pos_search_customer.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_pos_search_customer
+#: model:ir.model,name:ev_pos_search_customer.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập cấu hình"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/xml/ProductScreenCustomer.xml:0
+#: code:addons/ev_pos_search_customer/static/src/xml/ProductScreenCustomer.xml:0
+#, python-format
+msgid "Create Customer"
+msgstr "Tạo khách hàng"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/xml/ProductScreenCustomer.xml:0
+#, python-format
+msgid "Customer"
+msgstr ""
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/js/CustomerSearch/client_screen_custom.js:0
+#, python-format
+msgid "Deselect Customer"
+msgstr "Bỏ chọn khách hàng"
+
+#. module: ev_pos_search_customer
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_pos_config__display_name
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_search_customer
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_pos_config__id
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_company__id
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_search_customer
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_pos_config____last_update
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_search_customer
+#: code:addons/ev_pos_search_customer/models/number_search_limit.py:0
+#: code:addons/ev_pos_search_customer/models/res_company_inherit.py:0
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_pos_config__x_number_search_limit
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_company__x_number_search_limit
+#: model:ir.model.fields,field_description:ev_pos_search_customer.field_res_config_settings__x_number_search_limit
+#, python-format
+msgid "Number Search Customer Limit"
+msgstr "Số kí tự tìm kiếm khách hàng trong POS"
+
+#. module: ev_pos_search_customer
+#: code:addons/ev_pos_search_customer/models/number_search_limit.py:0
+#, python-format
+msgid "Number Search Customer Limit Error"
+msgstr "Số ký tự không hợp lệ"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/js/CustomerSearch/ProductScreenCustomer.js:0
+#, python-format
+msgid "Offline"
+msgstr ""
+
+#. module: ev_pos_search_customer
+#: model:ir.model,name:ev_pos_search_customer.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/js/CustomerSearch/ProductScreenCustomer.js:0
+#, python-format
+msgid "Promotions"
+msgstr ""
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/xml/ProductScreenCustomer.xml:0
+#, python-format
+msgid "Search Customers"
+msgstr ""
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/js/CustomerSearch/client_screen_custom.js:0
+#, python-format
+msgid "Set Customer"
+msgstr "Chọn khách hàng"
+
+#. module: ev_pos_search_customer
+#. openerp-web
+#: code:addons/ev_pos_search_customer/static/src/js/CustomerSearch/ProductScreenCustomer.js:0
+#, python-format
+msgid "Unable to search customer."
+msgstr ""

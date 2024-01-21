@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="stock.action_picking_tree_all" model="ir.actions.act_window">
+            <field name="name">All Transfers</field>
+        </record>
+    </data>
+</odoo>

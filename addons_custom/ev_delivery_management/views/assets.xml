@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    	
+<!--    <template id="google_map_asset" inherit_id="web.assets_backend"-->
+<!--              name="google_map_asset.assets">-->
+
+<!--        <xpath expr="script[last()]" position="after">-->
+<!--            <script type="text/javascript"-->
+<!--                    src="/ev_delivery_management/static/src/js/LoadMap.js"/>-->
+<!--        </xpath>-->
+
+<!--    </template>-->
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_report_file,report_file_name,model_report_file,,1,1,1,1
+access_report_sql,report_sql_name,model_report_sql,,1,1,1,1

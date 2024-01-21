@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="assets_pos_online" name="ev_pos_online assets" inherit_id="point_of_sale.assets">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/ev_pos_online/static/src/js/pos_online.js"/>
+                <script type="text/javascript" src="/ev_pos_online/static/src/js/ProductsWidget.js"/>
+                <script type="text/javascript" src="/ev_pos_online/static/src/js/ProductScreen.js"/>
+                <script type="text/javascript" src="/ev_pos_online/static/src/js/client_details_edit.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

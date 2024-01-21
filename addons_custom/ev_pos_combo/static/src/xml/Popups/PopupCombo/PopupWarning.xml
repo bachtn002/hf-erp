@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PopupWarning" owl="1">
+       <div class="modal-dialog">
+            <div class="popup popup-textinput">
+                <header class="title">Warning</header>
+                <main class="combo-product-container">
+                    <span>
+                        Please select at least one OPTIONAL PRODUCT
+                    </span>
+                </main>
+                <footer class="footer">
+                    <div class="button confirm" t-on-click="confirm">
+                        OK
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+
+</templates>

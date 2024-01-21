@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="stock_transfer_menu">
+        <div class="o_stock_barcode_main_menu_container o_home_menu_background">
+            <div class="o_stock_barcode_main_menu position-relative">
+                <a href="#" class="o_stock_barcode_menu d-block float-left"><i class="fa fa-chevron-left">Trang Chủ</i></a>
+                <button class="o_stock_package_menu d-block float-right"><i class="fa fa-chevron-left"></i></button>
+                <h1 class="mb-4">Package Scanning</h1>
+
+                <div class="o_stock_barcode_container position-relative d-inline-block mt-4 mb-5">
+                    <img src="/barcodes/static/img/barcode.png" alt="Barcode" class="img-fluid mb-1 mt-1"/>
+                    <span class="o_stock_barcode_laser"/>
+                </div>
+
+                <ul class="text-left mb-sm-5 pl-4">
+                    <li>Scan an <b>stock transfer</b> to create a new package.</li>
+                </ul>
+            </div>
+        </div>
+    </t>
+    <t t-name="scan_package_out_menu">
+         <div class="o_stock_barcode_main_menu_container o_home_menu_background">
+            <div class="o_stock_barcode_main_menu position-relative">
+                <a href="#" class="o_stock_barcode_menu d-block float-left"><i class="fa fa-chevron-left">Trang Chủ</i></a>
+                <button class="o_stock_transfer_out_menu d-block float-right"><i class="fa fa-chevron-left"></i></button>
+                <h1 class="mb-4">Package Scanning</h1>
+
+                <div class="o_stock_barcode_container position-relative d-inline-block mt-4 mb-5">
+                    <img src="/barcodes/static/img/barcode.png" alt="Barcode" class="img-fluid mb-1 mt-1"/>
+                    <span class="o_stock_barcode_laser"/>
+                </div>
+
+                <ul class="text-left mb-sm-5 pl-4">
+                    <li>Scan an <b>stock transfer</b> to scan package out.</li>
+                </ul>
+            </div>
+        </div>
+    </t>
+    <t t-name="scan_package_in_menu">
+         <div class="o_stock_barcode_main_menu_container o_home_menu_background">
+            <div class="o_stock_barcode_main_menu position-relative">
+                <a href="#" class="o_stock_barcode_menu d-block float-left"><i class="fa fa-chevron-left">Trang Chủ</i></a>
+                <button class="o_stock_transfer_in_menu d-block float-right"><i class="fa fa-chevron-left"></i></button>
+                <h1 class="mb-4">Package Scanning</h1>
+
+                <div class="o_stock_barcode_container position-relative d-inline-block mt-4 mb-5">
+                    <img src="/barcodes/static/img/barcode.png" alt="Barcode" class="img-fluid mb-1 mt-1"/>
+                    <span class="o_stock_barcode_laser"/>
+                </div>
+
+                <ul class="text-left mb-sm-5 pl-4">
+                    <li>Scan an <b>stock transfer</b> to scan package in.</li>
+                </ul>
+            </div>
+        </div>
+    </t>
+
+</templates>

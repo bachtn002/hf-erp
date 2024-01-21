@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+access_general_request,general.request,model_general_request,,1,1,1,1
+access_general_request_line,general.request.line,model_general_request_line,,1,1,1,1
+access_import_excel_general,import_excel_general,model_import_xls_wizard_general_request,,1,1,1,1
+access_allotment_request,access_allotment_request_name,model_allotment_request,stock.group_stock_user,1,1,1,1
+access_allotment_request_line,access_allotment_request_line_name.line,model_allotment_request_line,stock.group_stock_user,1,1,1,1
+access_allotment_request_imp,access_allotment_request_imp_name.line,model_allotment_request_import,stock.group_stock_user,1,1,1,1
+
+

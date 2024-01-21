@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="abstract_loan_disbursement_payment_wizard_form_view" model="ir.ui.view">
+            <field name="name">abstract.loan.disbursement.payment.wizard.form</field>
+            <field name="model">abstract.loan.disbursement.payment.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Register Disbursement Payment">
+                    <field name="payment_type" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                    <field name="partner_id" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="journal_id" widget="selection"/>
+                            <field name="hide_payment_method" invisible="1"/>
+                            <field name="payment_method_id" widget="radio"
+                                   attrs="{'invisible': [('hide_payment_method', '=', True)]}"/>
+                            <field name="payment_method_code" invisible="1"/>
+                            <field name="amount"/>
+                            <field name="currency_id"
+                                   groups="base.group_multi_currency"/>
+                        </group>
+                        <group>
+                            <field name="payment_date"/>
+                            <field name="communication"/>
+                        </group>
+                    </group>
+                    <notebook>
+                    </notebook>
+                    <footer>
+                        <button string='Validate'
+                                name="action_payment_create_and_match" type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-default"
+                                special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="loan_borrow_disbursement_payment_wizard_form_view"
+                model="ir.ui.view">
+            <field name="name">loan.borrow.disbursement.payment.wizard.form</field>
+            <field name="model">loan.borrow.disbursement.payment.wizard</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_payment_wizard_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <field name='payment_method_id' position="replace">
+                    <field name="payment_method_id" widget="radio" invisible="1"
+                           attrs="{'invisible': [('hide_payment_method', '=', True)]}"/>
+                </field>
+                <field name='communication' position="after">
+                    <field name="disbursement_method" widget="radio"/>
+                </field>
+                <field name='amount' position="replace">
+                    <!--                <attribute name="invisible">[('disbursement_method', '=', 'beneficiary')]</attribute>-->
+                    <field name="amount" attrs="{'readonly': [('disbursement_method', '=', 'beneficiary')]}"
+                           force_save="1"/>
+                </field>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Disbursements" name="pg_disbursement">
+                        <field name="order_id" force_save="1" invisible="1"/>
+                        <field name="disbursement_ids"/>
+                    </page>
+                    <page string="Payments" name="pg_payment"
+                          attrs="{'invisible': [('disbursement_method', '=', 'in_bank')]}">
+                        <field name="line_ids"
+                               context="{'default_currency_id': currency_id,'default_order_id': order_id}">
+                            <tree string="Payments" editable="bottom"
+                                  options="{'max_value': '100'}">
+<!--                                  style="width:20% !important;text-align: left !important">-->
+                                <field name="x_payment_type" required="1"/>
+                                <field name="x_type" required="1"/>
+                                <field name="partner_id" required="1" style="white-space: pre-wrap;"/>
+                                <field name="purchase_order_ids" style="white-space: pre-wrap;" widget="many2many_tags"
+                                       domain="[('state','not in', ('done','draft','cancel','to_approve'))]"
+                                       attrs="{'invisible': [('x_type', '!=', 'contract')],'required': [('x_type', '=', 'contract')]}"/>
+                                <!--								<field name="invoice_ids" style="white-space: pre-wrap;" widget="many2many_tags"-->
+                                <!--									   domain="[('state','=', 'posted'),('type','=', 'in_invoice'),('invoice_payment_state','!=', 'paid'),]" attrs="{'invisible': ['|',('x_type', 'in', ('contract','lc')),('x_payment_type', '=', 'deposit'),],'required': [('x_type', '=', 'invoice')]}" force_save="1"/>-->
+                                <field name="invoice_ids" widget="many2many_tags"
+                                       domain="[('state','=', 'posted')]"
+                                       force_save="1"
+                                       attrs="{'invisible': ['|',('x_type', 'in', ('contract','lc')),('x_payment_type', '=', 'deposit'),],'required': [('x_type', '=', 'invoice')]}"/>
+
+<!--                                <field name="lc_ids" style="white-space: pre-wrap;" widget="many2many_tags" width="100"-->
+<!--                                       string="Payment LC"-->
+<!--                                       domain="[('state','=', 'done')]" invisible="1"/>-->
+<!--                                       attrs="{'invisible': ['|',('x_type', '!=', 'lc'),('x_payment_type', '=', 'deposit')],'required': [('x_type', '=', 'lc')]}"-->
+                                <field name="destination_account_id" invisible="1" force_save="1"/>
+                                <field name="origin" readonly="1" invisible="1" force_save="1"/>
+                                <field name="currency_id" options='{"no_create": 1, "no_create_edit": 1}' required="1"/>
+                                <field name="rate" force_save="1"/>
+                                <field name="value" required="1"/>
+                                <field name="value_natural_currency" force_save="1"/>
+                                <field name="description"/>
+                                <field name="beneficiary_bank_id" domain="[('partner_id','=', partner_id)]"
+                                       style="white-space: pre-wrap;" options="{'no_edit': True, 'no_create': True}"/>
+<!--                                <field name="part_id" domain="[('is_internal_partner','=', True)]"-->
+<!--                                       style="white-space: pre-wrap;" options="{'no_edit': True, 'no_create': True}"/>-->
+                                <field name="part_id"
+                                       style="white-space: pre-wrap;" options="{'no_edit': True, 'no_create': True}"/>
+                                <field name="object_cost_id" options="{'no_edit': True, 'no_create': True}"
+                                       style="white-space: pre-wrap;"/>
+                                <field name="analytic_account_id" options="{'no_edit': True, 'no_create': True}"
+                                       style="white-space: pre-wrap;"/>
+
+                                <field name="order_id" invisible="1"/>
+                                <field name="payment_type" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <act_window
+                id="action_loan_borrow_disbursement_payment_wizard"
+                name="Register Disbursement Payment"
+                res_model="loan.borrow.disbursement.payment.wizard"
+                binding_model="loan.borrow.disbursement" view_mode="form"
+                context="{'default_payment_type':'inbound','default_partner_type':'lender'}"
+                target="new"/>
+
+        <record id="loan_lend_disbursement_payment_wizard_form_view"
+                model="ir.ui.view">
+            <field name="name">loan.lend.disbursement.payment.wizard.form</field>
+            <field name="model">loan.lend.disbursement.payment.wizard</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_payment_wizard_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Disbursements" name="pg_disbursement">
+                        <field name="disbursement_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <act_window
+                id="action_loan_lend_disbursement_payment_wizard"
+                name="Register Disbursement Payment"
+                res_model="loan.lend.disbursement.payment.wizard"
+                binding_model="loan.lend.disbursement" view_mode="form"
+                context="{'default_payment_type':'outbound','default_partner_type':'borrower'}"
+                target="new"/>
+
+    </data>
+</odoo>

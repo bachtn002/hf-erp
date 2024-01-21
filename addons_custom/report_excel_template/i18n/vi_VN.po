@@ -1,0 +1,937 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_excel_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-25 06:47+0000\n"
+"PO-Revision-Date: 2021-06-25 06:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__field_ids
+msgid " Field Data"
+msgstr " Trường dữ liệu"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "%Y-%m-%d"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/common.py:0
+#: code:addons/report_excel_template/models/common.py:0
+#, python-format
+msgid "'%s' sheet not found"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "<b>Cell</b>: Location of data in excel sheet (e.g., A1, B1, ...)"
+msgstr ""
+"<b>Cell</b>: Vị trí của dữ liệu trong trang tính excel (ví dụ: A1, B1, ...)"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Continue</b>: If not selected, start rolling with specified first row "
+"cells. If selected, continue from previous one2many field"
+msgstr ""
+"<b>Continue</b>: Nếu không được chọn, hãy bắt đầu cuộn với các ô hàng đầu "
+"tiên được chỉ định. Nếu được chọn, hãy tiếp tục từ trường one2many trước đó"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Field Cond.</b>: Python code in <code>${...}</code> to manipulate field "
+"value, e.g., if field = product_id, <code>value</code> will represent "
+"product object, e.g., <code>${value and value.uom_id.name or \"\"}</code>"
+msgstr "<b>Field Cond.</b>: Mã Python trong <code> ${...} </code> để thao tác giá trị trường, ví dụ: nếu field = product_id, <code>value</code> sẽ đại diện cho product đối tượng, ví dụ: <code>${value and value.uom_id.name or \"\"} </code>"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Field</b>: Field of the record, e.g., product_id.uom_id.name. They are "
+"orm compliant."
+msgstr "<b>Field</b>: Trường của bản ghi, ví dụ: product_id.uom_id.name. Họ tuân thủ orm."
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "<b>Note:</b>"
+msgstr "<b>Ghi chú:</b>"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Row Field</b>: Use _HEAD_ for the record itself, and one2many field "
+"(e.g., line_ids) for row data"
+msgstr ""
+"<b>Row Field</b>: Sử dụng _HEAD_ cho chính bản ghi và trường one2many (ví "
+"dụ: line_ids) cho dữ liệu hàng"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Sheet</b>: Name (e.g., Sheet 1) or index (e.g., 1) of excel sheet to "
+"export data to"
+msgstr ""
+"<b>Sheet</b>: Tên (ví dụ: Trang 1) hoặc chỉ mục (ví dụ: 1) của trang tính "
+"excel để xuất dữ liệu sang"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Style w/Cond.</b>: Conditional style by python code in "
+"<code>#?...?</code>, e.g., apply style for specific product, "
+"<code>#?value.name == \"ABC\" and #{font=bold;fill=red} or None?</code>"
+msgstr "<b>Style w/Cond.</b>: Kiểu có điều kiện bằng mã python trong <code> #? ...? </code>, ví dụ: áp dụng kiểu cho sản phẩm cụ thể, <code> #? value.name = = \"ABC \" và #{font = bold; fill = red} hay Không? </code>"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<b>Style</b>: Default style in <code>#{...}</code> that apply to each cell, "
+"e.g., <code>#{align=left;style=text}</code>. See module's <b>style.py</b> "
+"for available styles."
+msgstr "<b>Style</b>: Kiểu mặc định trong <code> # {...} </code> áp dụng cho mỗi ô, ví dụ: <code> #{align = left; style = text} </code> . Xem <b> style.py </b> của mô-đun để biết các kiểu có sẵn."
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "<b>Sum</b>: Add sum value on last row, <code>@{sum}</code>"
+msgstr "<b>Sum</b>: Thêm tổng giá trị vào hàng cuối cùng, <code>@{sum}</code>"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "<code>date, datetime, time</code>: some useful python classes"
+msgstr "<code> date, datetime, time </code>: một số lớp python hữu ích"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "<code>model</code>: active model, e.g., self.env['my.model']"
+msgstr "<code> model </code>: mô hình hoạt động, ví dụ: self.env['my.model']"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"<code>object</code>: record object or line object depends on <b>Row "
+"Field</b>"
+msgstr "<code>object</code>: đối tượng bản ghi hoặc đối tượng dòng phụ thuộc vào <b>Row Field</b>"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "<code>value</code>: value from <b>Field</b>"
+msgstr "<code>value</code>: giá trị từ <b>Field</b>"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Access Rights"
+msgstr "Quyền truy cập"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__act_window_id
+msgid "Act Window"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/report_excel_template.py:0
+#, python-format
+msgid "Action does not exist"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Add data column"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Add header section"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Add row section"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Add sheet section"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_xlsx_styles
+msgid "Available styles for excel"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_wizard
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__excel_cell
+msgid "Cell"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_field__pivot_default__col
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_label__pivot_default__col
+msgid "Cols"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Columns"
+msgstr "Cột"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__is_cont
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#. module: report_excel_template
+#: model:ir.model.fields,help:report_excel_template.field_xlsx_report_export__is_cont
+msgid "Continue data rows after last data row"
+msgstr "Tiếp tục các hàng dữ liệu sau hàng dữ liệu cuối cùng"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__create_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__create_date
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__xlsx_report_export__section_type__data
+msgid "Data"
+msgstr "Dữ liệu"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_input__type__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__style
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__style
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__style
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__style
+msgid "Default Style"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_xlsx_report_export
+msgid "Detailed of how excel data will be exported"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_export__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__display_name
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_styles__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_excel_template__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_end_date_747673
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_end_date_932405
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_end_date_961821
+msgid "End Date"
+msgstr "Cuối ngày"
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid ""
+"Error filling data into Excel sheets\n"
+"%s"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__excel_cell
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__excel_cell
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__excel_cell
+msgid "Excel Cell"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_xlsx_export
+msgid "Excel Export AbstractModel"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_ir_actions_report__report_excel_template_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__file_excel_template
+msgid "Excel Template"
+msgstr "Mẫu excel"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__export_ids
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_wizard
+msgid "Export"
+msgstr "Xuất"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_ir_actions_report__export_excel
+msgid "Export Excel"
+msgstr "Xuất Excel"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"Export Instruction is how to write data from an active data record to specified cells in excel sheet.\n"
+"                                      For example, an active record can be a sale order that user want to export.\n"
+"                                      The record itself will be mapped to the header part of excel sheet. The record can contain multiple one2many fields, which will be written as data lines.\n"
+"                                      You can look at following instruction as Excel Sheet(s), each with 1 header section (_HEAD_) and multiple row sections (one2many fields)."
+msgstr ""
+"Hướng dẫn Xuất là cách ghi dữ liệu từ bản ghi dữ liệu đang hoạt động vào các ô được chỉ định trong trang tính excel. \n"
+" Ví dụ: bản ghi đang hoạt động có thể là đơn hàng bán mà người dùng muốn xuất. \n"
+" Bản thân bản ghi sẽ được ánh xạ tới tiêu đề một phần của trang tính excel. Bản ghi có thể chứa nhiều one2many, sẽ được viết dưới dạng dòng dữ liệu. \n"
+" Bạn có thể xem hướng dẫn sau dưới dạng (các) Trang tính Excel, mỗi trường có 1 phần tiêu đề (_HEAD_) và nhiều phần hàng (one2many fields)."
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__field_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__field_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__field_id
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__field_name
+msgid "Field"
+msgstr "Trường dữ liệu"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__field_cond
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__field_cond
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__field_cond
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__field_cond
+msgid "Field Cond."
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Field Data"
+msgstr "Trường dữ liệu"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__name
+msgid "Field Name"
+msgstr "Trên trường dữ liệu"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Fields Data"
+msgstr "Trường dữ liệu"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Following are more explaination on each column:"
+msgstr "Sau đây là giải thích thêm về mỗi cột:"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"For code block <code>${...}</code> and <code>#?...?</code>, following object"
+" are available,"
+msgstr "Đối với khối mã <code> $ {...} </code> và <code> #? ...? </code>, có sẵn đối tượng sau,"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Form Input"
+msgstr "Nhập liệu"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__format_value
+msgid "Format Value"
+msgstr "Định dạng dữ liệu"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_from_date_532757
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_from_date_655696
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__group_id
+msgid "Group"
+msgstr "Nhóm"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__groups_id
+msgid "Groups"
+msgstr "Nhóm"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__xlsx_report_export__section_type__head
+msgid "Head"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Help with Export Instruction"
+msgstr "Trợ giúp về hướng dẫn xuất"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__id
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_export__id
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__id
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_styles__id
+msgid "ID"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,help:report_excel_template.field_xlsx_report_export__row_field
+msgid "If section type is row, this field is required"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid ""
+"IllegalCharacterError\n"
+"Some exporting data contain special character\n"
+"%s"
+msgstr ""
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"In header section part, map data fields (e.g., number, partner_id.name) into"
+" cells (e.g., B1, B2)."
+msgstr ""
+"Trong phần tiêu đề, ánh xạ các trường dữ liệu (ví dụ: number, "
+"partner_id.name) vào các ô (ví dụ: B1, B2)."
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid ""
+"In row section, data list will be rolled out from one2many row field (e.g., "
+"order_line), and map data field (i.e., product_id.name, uom_id.name, qty) "
+"into the first row cells to start rolling (e.g., A6, B6, C6)."
+msgstr ""
+"Trong phần hàng, danh sách dữ liệu sẽ được cuộn ra từ trường one2many hàng "
+"(ví dụ: order_line) và trường dữ liệu bản đồ (ví dụ: product_id.name, "
+"uom_id.name, qty) vào các ô hàng đầu tiên để bắt đầu cuộn (ví dụ: A6, B6, "
+"C6)."
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__input
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Input"
+msgstr "Nhập liệu"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Input Instruction"
+msgstr "Hướng dẫn nhập liệu"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__instruction
+msgid "Instruction"
+msgstr "Hướng dẫn"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__input_instruction
+msgid "Instruction (Input)"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,help:report_excel_template.field_report_excel_template__instruction
+msgid "Instruction on how to import/export, prepared by system."
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/common.py:0
+#, python-format
+msgid "Invalid style type %s"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/common.py:0
+#, python-format
+msgid "Invalid value %s for style type %s"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid ""
+"Key Error\n"
+"%s"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__label
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__label
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__label
+msgid "Label"
+msgstr "Nhãn"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_export____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export____last_update
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_styles____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__write_uid
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__write_uid
+msgid "Last Updated by"
+msgstr "Sửa lần cuối bởi"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__write_date
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_input__type__many2many
+msgid "Many2many"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_input__type__many2one
+msgid "Many2one"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__menu_id
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_search
+msgid "Menu"
+msgstr "Trình đơn"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__model
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__model_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__model
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__model_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__model_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__model_id
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_excel_template__type__model
+msgid "Model"
+msgstr "Đối tượng"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__model_id2
+msgid "Model 2"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_group__name
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__name
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_search
+msgid "Name"
+msgstr "Tên"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_excel_template__state__draft
+msgid "New"
+msgstr "Mới"
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/wizards/report_excel_template_wizard.py:0
+#, python-format
+msgid "No default view of type '%s' could be found !"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid "Not enough worksheets"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__numerical_order
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__numerical_order
+msgid "Numerical Order"
+msgstr "Số thứ tự"
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/ir_actions_report.py:0
+#, python-format
+msgid "Only one id is allowed for"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__operator
+msgid "Operator"
+msgstr "Toán tử"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__parameter_ids
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__name
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Parameter"
+msgstr "Tham số"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__parent_menu_id
+msgid "Parent Menu"
+msgstr "Menu cha"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_partner_id_871889
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__pivot_default
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__pivot_default
+msgid "Pivot Default"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/common.py:0
+#: code:addons/report_excel_template/models/common.py:0
+#, python-format
+msgid "Position %s is not valid"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__print_menu
+msgid "Print Menu"
+msgstr "Menu In"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+msgid "Query command"
+msgstr "Lệnh truy vấn"
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid "Records in %s exceed max records allowed"
+msgstr "Các bản ghi trong% s vượt quá các bản ghi tối đa được phép"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__report_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__report_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__report_id
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__report_id
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__report_id
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_ir_actions_report
+msgid "Report Action"
+msgstr "Báo cáo hành động"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__type
+msgid "Report Data"
+msgstr "Dữ liệu báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__report_description
+msgid "Report Description"
+msgstr "Mô tả Báo cáo"
+
+#. module: report_excel_template
+#: model:ir.actions.act_window,name:report_excel_template.action_report_excel_template
+#: model:ir.ui.menu,name:report_excel_template.menu_report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_search
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_wizard
+msgid "Report Excel"
+msgstr "Báo cáo excel"
+
+#. module: report_excel_template
+#: model_terms:ir.actions.act_window,help:report_excel_template.action_report_excel_template
+msgid "Report Excel Simple"
+msgstr "Báo cáo excel "
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_form
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_tree
+msgid "Report Excel Template"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_field
+msgid "Report Field"
+msgstr "Trường dữ liệu báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_group
+msgid "Report Group"
+msgstr "Nhóm báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_input
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__input_ids
+msgid "Report Input"
+msgstr "Nhập liệu báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_label
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__label_ids
+msgid "Report Label"
+msgstr "Nhãn báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__report_name
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_tree
+msgid "Report Name"
+msgstr "Tên báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_parameter
+msgid "Report Parameter"
+msgstr "Tham số báo cáo"
+
+#. module: report_excel_template
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_search
+msgid "Report Type"
+msgstr "Loại báo cáo"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__required
+msgid "Required"
+msgstr "Bắt buộc"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__xlsx_report_export__section_type__row
+msgid "Row"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__row_field
+msgid "Row Field"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_field__pivot_default__row
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_label__pivot_default__row
+msgid "Rows"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__section_type
+msgid "Section Type"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__sequence
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__sequence
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__sequence
+msgid "Sequence"
+msgstr "Thứ tự"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_excel_template__state__settings
+msgid "Settings"
+msgstr "Cài đặt"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__sheet
+#: model:ir.model.fields.selection,name:report_excel_template.selection__xlsx_report_export__section_type__sheet
+msgid "Sheet"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid "Sheet %s not found"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__sheet_name
+msgid "Sheet Name"
+msgstr "Tên Sheet"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__show_instruction
+msgid "Show Output"
+msgstr "Hiển thị đầu ra"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__sql
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_excel_template__type__sql
+#: model_terms:ir.ui.view,arch_db:report_excel_template.view_report_excel_template_search
+msgid "Sql"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_start_date_092351
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_start_date_120853
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_start_date_832401
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__style_cond
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__style_cond
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__style_cond
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__style_cond
+msgid "Style w/Cond."
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_field__sum
+#: model:ir.model.fields,field_description:report_excel_template.field_report_label__sum
+#: model:ir.model.fields,field_description:report_excel_template.field_xlsx_report_export__is_sum
+msgid "Sum"
+msgstr "Tính tổng"
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/ir_actions_report.py:0
+#, python-format
+msgid "Template %s on model %s is not unique!"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/common.py:0
+#, python-format
+msgid ""
+"Template with CSV Quoting = False, data must not contain the same char as "
+"delimiter -> \"%s\""
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/xlsx_export.py:0
+#, python-format
+msgid "Template's model mismatch"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_input__type__text
+msgid "Text"
+msgstr "Văn bản"
+
+#. module: report_excel_template
+#: model:ir.model.fields,help:report_excel_template.field_report_excel_template__show_instruction
+msgid ""
+"This is the computed instruction based on tab Import/Export,\n"
+"to be used by xlsx import/export engine"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,help:report_excel_template.field_report_excel_template__input_instruction
+msgid "This is used to construct instruction in tab Import/Export"
+msgstr ""
+
+#. module: report_excel_template
+#: code:addons/report_excel_template/models/report_excel_template.py:0
+#, python-format
+msgid "This model does not exist on the system."
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_to_date_655658
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template_wizard__x_to_date_657191
+msgid "To Date"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_input__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_excel_template__report_url
+msgid "Url Report"
+msgstr ""
+
+#. module: report_excel_template
+#: model:ir.model.fields,field_description:report_excel_template.field_report_parameter__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: report_excel_template
+#: model:ir.model.fields.selection,name:report_excel_template.selection__report_parameter__operator__in
+msgid "in"
+msgstr "trong"
+
+#. module: report_excel_template
+#: model:ir.model,name:report_excel_template.model_report_excel_template_wizard
+msgid "report.excel.template.wizard"
+msgstr ""

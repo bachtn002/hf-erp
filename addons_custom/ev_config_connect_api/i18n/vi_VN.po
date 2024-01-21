@@ -1,0 +1,271 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_config_connect_api
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-22 07:07+0000\n"
+"PO-Revision-Date: 2021-12-22 07:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_config_connect_api
+#: model:ir.ui.menu,name:ev_config_connect_api.connection_api_menu
+msgid "API"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__active
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__active
+msgid "Active"
+msgstr "Lưu trữ"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__code
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__code_api
+msgid "Code API"
+msgstr "Mã API"
+
+#. module: ev_config_connect_api
+#: model:ir.model.constraint,message:ev_config_connect_api.constraint_config_api_code_uniq
+msgid "Code api already exists on the system!"
+msgstr "Mã api đã tồn tại tron hệ thống"
+
+#. module: ev_config_connect_api
+#: model:ir.ui.menu,name:ev_config_connect_api.config_api_menu
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_api_view_form
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_api_view_tree
+msgid "Config API"
+msgstr "Cấu hình API"
+
+#. module: ev_config_connect_api
+#: model:ir.ui.menu,name:ev_config_connect_api.config_connection_menu
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_connection_view_form
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_connection_view_tree
+msgid "Config Connection"
+msgstr "Cấu hình kết nối"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__connection_id
+msgid "Connection"
+msgstr "Kết nối"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__connection_preventive
+msgid "Connection Preventive"
+msgstr "Kết nối dự phòng"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__create_uid
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__create_uid
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__create_uid
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__create_date
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__create_date
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__create_date
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__database
+msgid "Database"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__display_name
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__display_name
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__display_name
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__name
+msgid "Host"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__id
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__id
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__id
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__name
+msgid "IP"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.ui.menu,name:ev_config_connect_api.ip_connection_menu
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.ip_connection_view_form
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.ip_connection_view_tree
+msgid "IP Connection"
+msgstr "IP truy cập"
+
+#. module: ev_config_connect_api
+#: model:ir.model.constraint,message:ev_config_connect_api.constraint_ip_connection_unique_name
+msgid "IP must be unique"
+msgstr "IP đã tồn tại trong hệ thống"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api____last_update
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection____last_update
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection____last_update
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__write_uid
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__write_uid
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__write_uid
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__write_date
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__write_date
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_ip_connection__write_date
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.ui.menu,name:ev_config_connect_api.log_api_menu
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.log_api_view_form
+msgid "Log API"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__name
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__name_api
+msgid "Name API"
+msgstr "Tên API"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__params
+msgid "Params"
+msgstr "Nội dung"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__password
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__preventive
+msgid "Preventive"
+msgstr "Dự phòng"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__code_response
+msgid "Response"
+msgstr "Mã trả về"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__mess_response
+msgid "Response Messege"
+msgstr "Thông báo"
+
+#. module: ev_config_connect_api
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_api_view_search
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_connection_view_search
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.ip_connection_view_search
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.log_api_view_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_api__token
+msgid "Token"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.constraint,message:ev_config_connect_api.constraint_config_api_token_uniq
+msgid "Token api already exists on the system!"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__user
+msgid "User"
+msgstr "Tài khoản"
+
+#. module: ev_config_connect_api
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.config_api_view_form
+msgid "active"
+msgstr "Lưu trữ"
+
+#. module: ev_config_connect_api
+#: model:ir.model,name:ev_config_connect_api.model_config_api
+msgid "config.api"
+msgstr "Cấu hình API"
+
+#. module: ev_config_connect_api
+#: model:ir.model,name:ev_config_connect_api.model_config_connection
+msgid "config.connection"
+msgstr "Cấu hình kết nối"
+
+#. module: ev_config_connect_api
+#: model:ir.actions.act_window,name:ev_config_connect_api.config_api_action
+msgid "config_api_action"
+msgstr "Cấu hình API"
+
+#. module: ev_config_connect_api
+#: model:ir.actions.act_window,name:ev_config_connect_api.config_connection_action
+msgid "config_connection_action"
+msgstr "Cấu hình kết nối"
+
+#. module: ev_config_connect_api
+#: model:ir.model,name:ev_config_connect_api.model_ip_connection
+msgid "ip.connection"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.actions.act_window,name:ev_config_connect_api.ip_connection_action
+msgid "ip_connection_action"
+msgstr "IP truy cập"
+
+#. module: ev_config_connect_api
+#: model_terms:ir.ui.view,arch_db:ev_config_connect_api.log_api_view_tree
+msgid "log"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: model:ir.model,name:ev_config_connect_api.model_log_api
+msgid "log.api"
+msgstr "Log API"
+
+#. module: ev_config_connect_api
+#: model:ir.actions.act_window,name:ev_config_connect_api.log_api_action
+msgid "log_api_action"
+msgstr "Log API"
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_config_connection__port
+msgid "port"
+msgstr ""
+
+#. module: ev_config_connect_api
+#: code:addons/ev_config_connect_api/models/ip_connection.py:0
+#, python-format
+msgid "IP address is invalid! Please check again!"
+msgstr "Địa chỉ IP không hợp lệ! Vui lòng kiểm tra lại."
+
+#. module: ev_config_connect_api
+#: model:ir.model.fields,field_description:ev_config_connect_api.field_log_api__remote_ip
+msgid "Remote IP address"
+msgstr "Địa chỉ IP"

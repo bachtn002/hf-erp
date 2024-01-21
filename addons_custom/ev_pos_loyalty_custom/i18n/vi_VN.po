@@ -1,0 +1,339 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_loyalty_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-28 02:42+0000\n"
+"PO-Revision-Date: 2021-09-28 02:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion
+#: model:ir.model.fields,field_description:ev_pos_promotion.field_res_partner__ref
+#: model:ir.model.fields,field_description:ev_pos_promotion.field_res_users__ref
+msgid "Reference"
+msgstr "Mã nhà cung cấp"
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_program.py:0
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_loyalty_program__x_discount_amount
+#, python-format
+msgid "Amount to be exchanged for points"
+msgstr "Số tiền ứng với điểm sử dụng"
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/xml/button/PopupLoyaltyCustom.xml:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Chưa chọn khách hàng"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__res_partner_id_not_apply
+msgid "Customer Not Apply"
+msgstr "Danh sách khách hàng không áp dụng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__res_partner_id_not_apply_group
+msgid "Customer Not Apply Group"
+msgstr "Nhóm khách hàng không áp dụng"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.ev_pos_loyalty_custom_form_inherit
+msgid "Customer not Apply"
+msgstr "Danh sách khách hàng không áp dụng"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.ev_pos_loyalty_custom_form_inherit
+msgid "Customer not Apply Group"
+msgstr "Nhóm khách hàng không áp dụng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__x_discount_amount
+msgid "Discount Amount"
+msgstr "Giá trị tiền quy đổi"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Giá trị nhập không hợp lệ"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__x_ecommerce
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_users__x_ecommerce
+msgid "Is Ecommerce "
+msgstr "Là sàn thương mại điện tử"
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Khách hàng chưa có điểm tích lũy"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_loyalty_program
+msgid "Loyalty Program"
+msgstr "Chương trình khách hàng thân thiết"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.ui.menu,name:ev_pos_loyalty_custom.menu_loyalty_program_custom
+msgid "Loyalty Programs"
+msgstr "Chương trình khách hàng thân thiết"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_loyalty_rule
+msgid "Loyalty Rule"
+msgstr "Quy tắc CT KH thân thiết"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__product_cate_rule
+msgid "Loại sản phẩm"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__category_id
+msgid "Loại sản phẩm trên POS"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Lỗi"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__x_money_per_point
+msgid "Money Per Point (VND)"
+msgstr "Số tiền trên 1 điểm"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__product_cate_rule_rule
+msgid "Nhóm sản phẩm"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Offline"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/xml/button/PopupLoyaltyCustom.xml:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/xml/edit_list_input_custom.xml:0
+#, python-format
+msgid "Point"
+msgstr "Điểm thưởng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__x_point_cost
+msgid "Point Cost"
+msgstr "Điểm quy đổi"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.ev_pos_loyalty_custom_form_inherit
+msgid "Point Using Rule"
+msgstr "Quy tắc sử dụng điểm"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.ev_pos_loyalty_custom_form_inherit
+msgid "Point exchange rule"
+msgstr "Quy tắc tích điểm"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_program.py:0
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_loyalty_program__x_point_cost
+#, python-format
+msgid "Point used"
+msgstr "Giá trị điểm sử dụng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__pos_config_apply
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.ev_pos_loyalty_custom_form_inherit
+msgid "Pos Apply"
+msgstr "Điểm bán lẻ áp dụng"
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_rule.py:0
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__product_id
+#: model:ir.model.fields.selection,name:ev_pos_loyalty_custom.selection__loyalty_rule__condition_or__product
+#, python-format
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_rule.py:0
+#: model:ir.model.fields.selection,name:ev_pos_loyalty_custom.selection__loyalty_rule__condition_or__product_category
+#, python-format
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/xml/edit_list_input_custom.xml:0
+#: code:addons/ev_pos_loyalty_custom/static/src/xml/edit_list_input_custom.xml:0
+#, python-format
+msgid "Remove"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_rule.py:0
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__condition_or
+#, python-format
+msgid "Rule loyalty"
+msgstr "Tích điểm theo"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.res_partner_loyalty_custom_form_inherit
+msgid "Sàn thương mại điện tử"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__product_rule
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__product_rule_rule
+msgid "Sản phẩm"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__point_per_product
+msgid "Số điểm trên 1 sản phẩm"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_program.py:0
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_loyalty_program__x_money_per_point
+#, python-format
+msgid "The amount corresponding to 1 point"
+msgstr "Số tiền ứng với 1 điểm tích lũy"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.ev_pos_loyalty_custom_form_inherit
+msgid "Tích điểm theo sản phẩm"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: code:addons/ev_pos_loyalty_custom/models/loyalty_program.py:0
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_loyalty_program__product_id
+#, python-format
+msgid "Use to calculate promotion value. Type is service"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__valid_product_ids
+msgid "Valid Product"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_rule__valid_product_ids_test
+msgid "Valid Product Ids Test"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Vui lòng nhập điểm lớn hơn 0"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Vui lòng nhập điểm nhỏ hơn điểm tích lũy"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Vui lòng nhập điểm!"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/xml/button/ButtonLoyaltyCustom.xml:0
+#, python-format
+msgid "Điểm thưởng"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Điểm tích lũy của khách hàng không đồng bộ với trên server"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#. openerp-web
+#: code:addons/ev_pos_loyalty_custom/static/src/js/button/button_loyalty_custom.js:0
+#, python-format
+msgid "Điểm tích lũy của khách hàng không đồng bộ với trên serverr."
+msgstr ""

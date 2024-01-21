@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="loan_lending_disbursement_form_view"
+			model="ir.ui.view">
+			<field name="name">loan.lend.disbursement.form</field>
+			<field name="model">loan.lend.disbursement</field>
+			<field name="inherit_id"
+				ref="abstract_loan_disbursement_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath
+					expr="//button[@name='action_disbursement_register_wizard']"
+					position="attributes">
+					<attribute name="string">Send Money</attribute>
+				</xpath>
+				<xpath expr="//field[@name='partner_id']" position="before">
+					<field name="order_id" />
+				</xpath>
+				<xpath expr="//notebook" position="inside">
+					<page string="Refund Plan" name="pg_refund">
+						<field name="refund_line_ids"
+							context="{'tree_view_ref':'to_loan_management.loan_lending_refund_line_simple_tree_view','default_disbursement_id':active_id}" />
+					</page>
+					<page string="Interest Computation Board" name="pg_interest">
+						<field name="interest_line_ids" readonly="0"
+							context="{'tree_view_ref':'to_loan_management.loan_lending_interest_line_simple_tree_view','default_disbursement_id':active_id}" />
+					</page>
+					<page string="Disbursements Payments"
+						name="pg_disbursement_pay">
+						<field name="payment_match_ids">
+							<tree>
+								<field name="name" string="Payment Ref." />
+								<field name="matched_amount" string="Amount" />
+								<field name="payment_date" />
+								<field name="currency_id" invisible="1" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+
+		<!-- tree (list) view -->
+		<record id="view_loan_lend_disbursement_tree"
+			model="ir.ui.view">
+			<field name="name">loan.lend.disbursement.tree</field>
+			<field name="model">loan.lend.disbursement</field>
+			<field name="inherit_id"
+				ref="abstract_loan_disbursement_tree_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="order_id" />
+				</xpath>
+				<xpath expr="//field[@name='paid_amount']"
+					position="attributes">
+					<attribute name="string">Disbursed Amount</attribute>
+				</xpath>
+				<xpath expr="//field[@name='to_receive_amount']"
+					position="attributes">
+					<attribute name="string">To-Disburse Amount</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_loan_lend_disbursement_calendar"
+			model="ir.ui.view">
+			<field name="name">loan.lend.disbursement.calendar</field>
+			<field name="model">loan.lend.disbursement</field>
+			<field name="inherit_id"
+				ref="abstract_loan_disbursement_calendar_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="order_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="view_loan_lend_disbursement_graph">
+			<field name="name">loan.lend.disbursement.graph</field>
+			<field name="model">loan.lend.disbursement</field>
+			<field name="inherit_id"
+				ref="abstract_loan_disbursement_graph_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']" position="after">
+					<field name="order_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="view_loan_lend_disbursement_search">
+			<field name="name">loan.lend.disbursement.search</field>
+			<field name="model">loan.lend.disbursement</field>
+			<field name="inherit_id"
+				ref="abstract_loan_disbursement_search_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="order_id" />
+				</xpath>
+				<xpath expr="//group/filter[@name='grp_partner']"
+					position="after">
+					<filter string="Contract" name="grp_order"
+						context="{'group_by':'order_id'}" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="loan_lending_disbursement_action">
+			<field name="name">Disbursements</field>
+			<field name="res_model">loan.lend.disbursement</field>
+			<field name="view_mode">tree,form,graph,calendar</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first record
+				</p>
+			</field>
+		</record>
+
+
+<!--		<menuitem id="loan_lending_disbursement_plan"-->
+<!--			name="Disbursements" parent="loan_lending_order_main_menu"-->
+<!--			sequence="20" action="loan_lending_disbursement_action" />-->
+
+	</data>
+</odoo>

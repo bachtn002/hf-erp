@@ -1,0 +1,471 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_return_products
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-24 03:29+0000\n"
+"PO-Revision-Date: 2021-11-24 03:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid ""
+"<span class=\"o_form_label\" invisible=\"1\">\n"
+"                                Request for Quotation\n"
+"                            </span>\n"
+"                            <span class=\"o_form_label\" invisible=\"1\">Purchase\n"
+"                                Order</span>"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_category__active
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.product_category_inherit_view_search
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.product_category_return_account_form
+msgid "Active Category"
+msgstr "Lưu Trữ"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Add a note"
+msgstr "Thêm ghi chú"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Add a product"
+msgstr "Thêm sản phẩm"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Add a section"
+msgstr "Thêm khu vực"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Billed"
+msgstr "Đã xuất hóa đơn"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Billed Quantity"
+msgstr "Số lượng Hoá đơn"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.view_partner_form_inherit_tree_ref
+msgid "Code Ref"
+msgstr "Mã nhà cung cấp"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Confirm Order"
+msgstr "Xác nhận đơn hàng"
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Create Bill"
+msgstr "Tạo hóa đơn"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.actions.act_window,help:ev_stock_return_products.purchase_form_return_action
+msgid "Create a record"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_category__property_customer_return_account_id
+msgid "Customer Return Account"
+msgstr "Tài khoản hạch toán khi khách hàng trả hàng"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Define your terms and conditions ..."
+msgstr "Xác định điều khoản và điều kiện của bạn ..."
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Deliver To"
+msgstr "Xuất từ kho"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_category__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_partner__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move_line__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_category__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_template__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_partner__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_move_line__id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order__x_invoice_confirm_diff
+msgid "Invoice Differrence Purchase"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Invoices and Incoming Shipments"
+msgstr "Hoá đơn và Lô hàng sắp về"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order__x_is_return
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_picking__x_is_return
+msgid "Is return products"
+msgstr "Là đơn trả hàng"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_partner__x_is_supplier
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_users__x_is_supplier
+msgid "Is supplier"
+msgstr "Là nhà cung cấp"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.actions.act_window,help:ev_stock_return_products.purchase_form_return_action
+msgid "It will be converted into a return order."
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_account_move_line
+msgid "Journal Item"
+msgstr "Bút toán"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_category____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_partner____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Lock"
+msgstr "Khoá"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_partner__loyalty_points
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_res_users__loyalty_points
+msgid "Loyalty Points"
+msgstr "Điểm CT KH thân thiết"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Name, TIN, Email, or Reference"
+msgstr "Tên, MST, Email, hoặc Mã"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Other Information"
+msgstr "Thông tin khác"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Outgoing Shipments"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order__x_picking_confirm
+msgid "Picking Confirm"
+msgstr "Cửa hàng đã nhận"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_bank_statement_line__x_picking_type_id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move__x_picking_type_id
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_payment__x_picking_type_id
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#, python-format
+msgid "Please define an accounting purchase journal for the company %s (%s)."
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_product_category
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Chuyển sản phẩm (Chi tiết phiếu kho)"
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_stock_move_line__x_purchase_line_id
+msgid "Purchase Line"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_purchase_order
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_view_tree
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_purchase_order_line
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Purchase Order Line"
+msgstr "Chi tiết mua hàng"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Purchase Order Lines"
+msgstr "Chi tiết mua hàng"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order_line__product_return_qty
+msgid "Quantity return"
+msgstr "SL trả"
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#: code:addons/ev_stock_return_products/models/sale_order.py:0
+#, python-format
+msgid "Quantity return is must be greater than 0."
+msgstr "SL trả phải lơn hơn 0"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Quantity:"
+msgstr "Số lượng:"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_view_tree
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.view_partner_form_inherit_translate
+msgid "Reference"
+msgstr "Mã nhà cung cấp"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,help:ev_stock_return_products.field_purchase_order__partner_ref
+msgid ""
+"Reference of the sales order or bid sent by the vendor. It's used to do the "
+"matching when you receive the products as this reference is usually written "
+"on the delivery order sent by your vendor."
+msgstr ""
+"Dẫn chiếu đến đơn bán hàng hoặc bản chào thầu gửi bởi nhà cung cấp. Nó được "
+"sử dụng để thực hiện việc khớp lúc bạn nhận hàng khi dẫn chiếu này thường "
+"được viết ở lệnh giao hàng gửi từ nhà cung cấp của bạn."
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Return Purchase Order"
+msgstr "Trả lại hàng cho NCC"
+
+#. module: ev_stock_return_products
+#: model:ir.actions.act_window,name:ev_stock_return_products.purchase_form_return_action
+#: model:ir.ui.menu,name:ev_stock_return_products.menu_purchase_order_return_form_action
+msgid "Return Purchase Products"
+msgstr "Trả lại hàng cho NCC"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_product_category__property_return_vendor_account_id
+msgid "Return Vendor Account"
+msgstr "Tài khoản hạch toán khi trả hàng NCC"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Returned"
+msgstr "Đã trả"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order_line__qty_returned
+msgid "Returned Qty"
+msgstr "SL đã trả"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Returned Quantity"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_bank_statement_line__is_revenues_decline
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_move__is_revenues_decline
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_account_payment__is_revenues_decline
+msgid "Revenues Decline"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Section Name (eg. Products, Services)"
+msgstr "Tên Mục (ví dụ: Sản phẩm, Dịch vụ)"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Set to Draft"
+msgstr "Thiết lập về nháp"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,help:ev_stock_return_products.field_res_partner__loyalty_points
+#: model:ir.model.fields,help:ev_stock_return_products.field_res_users__loyalty_points
+msgid "The loyalty points the user won as part of a Loyalty Program"
+msgstr "Điểm thưởng người dùng đạt được trong CT KH thân thiết"
+
+#. module: ev_stock_return_products
+#: model:ir.model.constraint,message:ev_stock_return_products.constraint_res_partner_ref_uniq
+msgid "The ref must be unique!"
+msgstr "Mã nhà cung cấp đã tồn tại trong hệ thống!"
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#, python-format
+msgid ""
+"There is no invoiceable line. If a product has a control policy based on "
+"received quantity, please make sure that a quantity has been received."
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_view_tree
+msgid "Total Untaxed amount"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_view_tree
+msgid "Total amount"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model:ir.model,name:ev_stock_return_products.model_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#, python-format
+msgid ""
+"Unable to cancel this purchase order. You must first cancel the related "
+"vendor bills."
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Unit Price:"
+msgstr "Đơn Giá:"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Unlock"
+msgstr "Hủy khoá"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_view_tree
+msgid "Untaxed"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/res_partner.py:0
+#: code:addons/ev_stock_return_products/models/res_partner.py:0
+#, python-format
+msgid "VAT already exists on the system!"
+msgstr "Mã số thuế đã tồn tại"
+
+#. module: ev_stock_return_products
+#: model:ir.model.fields,field_description:ev_stock_return_products.field_purchase_order__partner_ref
+msgid "Vendor Reference"
+msgstr "Mã nhà cung cấp"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Vendor Refund Bills"
+msgstr "Hóa đơn trả hàng"
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_search_view_inherit
+msgid "Warehouse Unconfirmed"
+msgstr "Đơn hàng chưa nhận"
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/sale_order.py:0
+#, python-format
+msgid "You must set a Customer Location for this partner %s"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#, python-format
+msgid "You must set a Vendor Location for this partner %s"
+msgstr ""
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#, python-format
+msgid "You need to configure the vendor invoice journal."
+msgstr ""
+
+#. module: ev_stock_return_products
+#: code:addons/ev_stock_return_products/models/purchase_order.py:0
+#, python-format
+msgid "You need to configure the vendor return invoice journal."
+msgstr "Bạn cần cấu hình số nhật ký hóa đơn trả hàng có mã RHD."
+
+#. module: ev_stock_return_products
+#: model_terms:ir.ui.view,arch_db:ev_stock_return_products.purchase_order_return_form
+msgid "Print Bill return product"
+msgstr "In Bill trả hàng"

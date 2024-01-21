@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="stock_picking_type_search_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.type.search.inherit</field>
+            <field name="model">stock.picking.type</field>
+            <field name="inherit_id" ref="stock.view_pickingtype_filter"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='warehouse_id']" position="replace">
+                    <field name="warehouse_id" filter_domain="[('warehouse_id.name','ilike',self)]"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

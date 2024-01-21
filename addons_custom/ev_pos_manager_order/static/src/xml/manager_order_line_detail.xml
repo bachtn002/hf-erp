@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ManagerOrderlineDetails" t-inherit="point_of_sale.OrderlineDetails" t-inherit-mode="extension" owl="1">
+        <xpath expr="//li[hasclass('info')]" position="after">
+              <t t-if="line.promotion_id">
+                  <span class="product-name" style="font-size: 13px; color: #6EC89B; text-align: right;">---Promotion:</span>
+                  <span class="price" style="font-size: 13px; color: #6EC89B;">
+                      <t t-esc="env.pos.format_currency_no_symbol((line.price_display_one - line.price_lst)* line.quantity)"/>
+                  </span>
+              </t>
+        </xpath>
+    </t>
+
+</templates>

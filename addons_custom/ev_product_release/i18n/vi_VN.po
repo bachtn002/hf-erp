@@ -1,0 +1,1280 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_release
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 07:36+0000\n"
+"PO-Revision-Date: 2021-10-29 07:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid ""
+"<span attrs=\"{'invisible': [('pricelist_item_count', '=', 1)]}\">\n"
+"                                                    Extra Prices\n"
+"                                                </span>\n"
+"                                                <span attrs=\"{'invisible': [('pricelist_item_count', '!=', 1)]}\">\n"
+"                                                    Extra Price\n"
+"                                                </span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('pricelist_item_count', '=', 1)]}\">\n"
+"                                                    Giá bổ sung\n"
+"                                                </span>\n"
+"                                                <span attrs=\"{'invisible': [('pricelist_item_count', '!=', 1)]}\">\n"
+"                                                    Giá bổ sung\n"
+"                                                </span>"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid ""
+"<strong>Warning</strong>: adding or deleting attributes\n"
+"                                    will delete and recreate existing variants and lead\n"
+"                                    to the loss of their possible customizations."
+msgstr ""
+"<strong>Cảnh báo</strong>: thêm hoặc xoá thuộc tính sẽ\n"
+"                        sẽ xoá và tạo lại toàn bộ biến thể và dẫn đến việc\n"
+"                        mất mát các tuỳ biến có thể xảy ra."
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_product__type
+#: model:ir.model.fields,help:ev_product_release.field_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Sản phẩm lưu kho là sản phẩm bạn muốn quản lý lượng tồn kho của nó. Hệ thống sẽ cần cài thêm phân hệ Kho.\n"
+"Sản phẩm tiêu dùng là sản phẩm bạn không cần quản lý lượng tồn kho.\n"
+"Sản phẩm dịch vụ là sản phẩm bạn cung cấp."
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__account_expense_id
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__account_expense_id
+msgid "Account Expense"
+msgstr "Tài khoản chi phí"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__account_expense_item_id
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__account_expense_item_id
+msgid "Account Expense Item"
+msgstr "Khoản mục chi phí"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Activate"
+msgstr "Kích hoạt"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__activated
+msgid "Activated"
+msgstr "Đã kích hoạt"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__analytic_account_id
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__analytic_account_id
+msgid "Analytic Account"
+msgstr "Bộ phận chịu phí"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_and_condition
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_and_condition
+#, python-format
+msgid "And condition"
+msgstr "Điều kiện và"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#, python-format
+msgid "And condition and or condition not true"
+msgstr "Điều kiện hoặc và điều kiện và không được cùng tích chọn"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Archived"
+msgstr "Đã lưu"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Are you sure you want to enable all in-release Voucher?"
+msgstr ""
+"Bạn có chắc chắn muốn kích hoạt tất cả các mã đã tạo trong lần phát hành "
+"này?"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__available
+msgid "Available"
+msgstr "Có thể sử dụng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_search_view_pos
+msgid "Blank Card"
+msgstr "Phôi thẻ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__blank_card_id
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__blank_card_id
+msgid "Blank card"
+msgstr "Phôi thẻ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__purchase_ok
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__purchase_ok
+msgid "Can be Purchased"
+msgstr "Có thể mua được"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__sale_ok
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__sale_ok
+msgid "Can be Sold"
+msgstr "Có thể bán được"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.update_product_release_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid "Cannot delete record with state is not 'Draft'"
+msgstr "Không thể xoá phiếu phát hành ở trạng thái không phải 'Nháp'"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__card_id
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__card_id
+msgid "Card"
+msgstr "Loại thẻ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_card_discount
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_card_discount
+msgid "Card discount"
+msgstr "Chiết khấu"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_card_value
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_card_value
+msgid "Card value"
+msgstr "Giá trị"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Category"
+msgstr "Danh mục"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__production_lot_rule_id
+msgid "Code"
+msgstr "Quy tắc sinh mã"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_template__type__consu
+msgid "Consumable"
+msgstr "Tiêu dùng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Counterpart Locations"
+msgstr "Địa điểm Đối ứng"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__state__created
+msgid "Created"
+msgstr "Đã tạo"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__create_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__create_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__create_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__create_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__create_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__create_date
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__create_date
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__create_date
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__create_date
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__create_date
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_customer_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__taxes_id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__taxes_id
+msgid "Customer Taxes"
+msgstr "Thuế bán hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__date
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__date
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot_rule_line__type__date
+msgid "Date"
+msgstr "Ngày phát hành"
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_product__taxes_id
+#: model:ir.model.fields,help:ev_product_release.field_product_template__taxes_id
+msgid "Default taxes used when selling the product."
+msgstr "Thuế mặc định dùng khi bán sản phẩm."
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_product__uom_id
+#: model:ir.model.fields,help:ev_product_release.field_product_template__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Đơn vị tình mặc định dùng cho tất cả hoạt động kho."
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_product__uom_po_id
+#: model:ir.model.fields,help:ev_product_release.field_product_template__uom_po_id
+msgid ""
+"Default unit of measure used for purchase orders. It must be in the same "
+"category as the default unit of measure."
+msgstr ""
+"Đơn vị mua hàng mặc định được sử dụng cho các đơn mua hàng phải cùng loại "
+"với đơn vị mặc định."
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Description for Delivery Orders"
+msgstr "Mô tả phiếu xuất hàng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Description for Internal Transfers"
+msgstr "Mô tả phiếu chuyển kho nội bộ"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Description for Receipts"
+msgstr "Mô tả phiếu nhập hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__destroy
+msgid "Destroy"
+msgstr "Hủy"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__stock_production_lot_ids
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__production_lot_rule_ids
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.stock_production_lot_rule_form_view
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_template__check_discount_price__discount
+#, python-format
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__display_name
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_product_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Download Import Template"
+msgstr "Tải tệp mẫu"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__expired
+msgid "Expired"
+msgstr "Hết hạn"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__expired_date
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__expired_date
+msgid "Expired date"
+msgstr "Ngày hết hạn"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__expired_type
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__expired_type
+msgid "Expired type"
+msgstr "Phương thức hết hạn"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__field_binary_import
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__field_binary_import
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__field_binary_import
+msgid "Field Binary Import"
+msgstr "Nhập tệp tin"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__field_binary_name
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__field_binary_name
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__field_binary_name
+msgid "Field Binary Name"
+msgstr ""
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid ""
+"File không được tìm thấy hoặc không đúng định dạng. Vui lòng kiểm tra lại "
+"định dạng file .xls hoặc .xlsx"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "File must in the format of xls or xlsx"
+msgstr "Mẫu import có định dạng là xls hoặc xlsx"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot_rule_line__type__fix
+msgid "Fix"
+msgstr "Cố định"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__expired_type__fixed
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__use_type__fixed
+#: model:ir.model.fields.selection,name:ev_product_release.selection__update_product_release__expired_type__fixed
+#: model:ir.model.fields.selection,name:ev_product_release.selection__update_product_release__use_type__fixed
+msgid "Fixed"
+msgstr "Định trước"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__expired_type__flexible
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_release__use_type__flexible
+#: model:ir.model.fields.selection,name:ev_product_release.selection__update_product_release__expired_type__flexible
+#: model:ir.model.fields.selection,name:ev_product_release.selection__update_product_release__use_type__flexible
+msgid "Flexible"
+msgstr "Linh hoạt"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "General Information"
+msgstr "Thông tin chung"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Generate Voucher"
+msgstr "Tạo mã"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__id
+#: model:ir.model.fields,field_description:ev_product_release.field_res_company__id
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking__id
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__id
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__id
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__id
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_needaction
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_has_error
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_product_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Import"
+msgstr "Nhập"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__import_file
+msgid "Import file"
+msgstr "Sử dụng file"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot_rule_line__type__increment
+msgid "Increment"
+msgstr "Tự tăng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_product_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Information card"
+msgstr "Chính sách áp dụng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Internal Notes"
+msgstr "Ghi chú nội bộ"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Inventory"
+msgstr "Kho vận"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Invoicing"
+msgstr "Lên hóa đơn"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_is_blank_card
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_is_blank_card
+msgid "Is blank card"
+msgstr "Là phôi thẻ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_is_voucher
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_is_voucher
+msgid "Is voucher"
+msgstr "Là phiếu mua hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking_type____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line____last_update
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__last_sequence
+msgid "Last Sequence"
+msgstr "Trình tự cuối cùng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__write_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__write_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__write_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__write_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__write_uid
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__write_date
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__write_date
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__write_date
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__write_date
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__write_date
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__length
+msgid "Length"
+msgstr "Độ dài"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid "Length of Voucher's code is different with allowable length : {}"
+msgstr "Độ dài mã Phiếu mua hàng khác với độ dài được cho phép: {}"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/stock_production_lot_rule.py:0
+#, python-format
+msgid ""
+"Length of Voucher's code is different with allowable length : {}. \n"
+"Your rule's length: {}"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__lock
+msgid "Lock"
+msgstr "Khoá"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Logistics"
+msgstr "Kho vận"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_stock_production_lot
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Lot/Serial"
+msgstr "Lô/Số serial"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__maximum_quantity
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__maximum_quantity
+msgid "Maximum quantity"
+msgstr "Số lượng tối đa"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_product_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Mẫu import có định dạng là xls hoặc xlsx"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__name
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#: code:addons/ev_product_release/models/stock_production_lot_rule.py:0
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__new
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Operations"
+msgstr "Hoạt động"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_or_condition
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_or_condition
+#, python-format
+msgid "Or condition"
+msgstr "Điều kiện hoặc"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_order_id
+msgid "Order"
+msgstr "Đơn bán ra"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_order_use_id
+msgid "Order use"
+msgstr "Đơn sử dụng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Packaging"
+msgstr "Đóng gói"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Payables"
+msgstr "Phải trả"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu lấy hàng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Point of Sale"
+msgstr "Điểm bán lẻ"
+
+#. module: ev_product_release
+#: model:ir.ui.menu,name:ev_product_release.menu_pos_voucher
+msgid "Pos Voucher"
+msgstr "Quản lý Voucher"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_template__check_discount_price__price
+#, python-format
+msgid "Price"
+msgstr "Giá trị"
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_product__list_price
+#: model:ir.model.fields,help:ev_product_release.field_product_template__list_price
+msgid "Price at which the product is sold to customers."
+msgstr "Giá dùng khi sản phẩm được bán cho khách hàng."
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_product_product
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__product_allow_id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_card_allow__product_id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__product_id
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_template_release_tree_view_custom
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__categ_id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__categ_id
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_product_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Product Category sevice"
+msgstr "Nhóm sản phẩm & Dịch vụ"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Product Detail"
+msgstr "Chi tiết sản phẩm"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_template_release_tree_view_custom
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Product Name"
+msgstr "Tên sản phẩm"
+
+#. module: ev_product_release
+#: model:ir.actions.act_window,name:ev_product_release.action_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking__x_product_release_id
+#: model:ir.ui.menu,name:ev_product_release.menu_product_release
+msgid "Product Release"
+msgstr "Phát hành phiếu mua hàng"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__type
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__type
+msgid "Product Type"
+msgstr "Loại sản phẩm"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_product_card_ids
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_product_card_ids
+msgid "Product card"
+msgstr "Sản phẩm & Dịch vụ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_category_card_allow__product_category_allow_id
+msgid "Product category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_product_category_card_ids
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_product_category_card_ids
+msgid "Product category card"
+msgstr "Nhóm sản phẩm & Dịch vụ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_release_id
+msgid "Product release"
+msgstr "Lần phát hành"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__name_product_release
+msgid "Product release name"
+msgstr "Phiếu phát hành"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_product_custom_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Product sevice"
+msgstr "Sản phẩm & Dịch vụ"
+
+#. module: ev_product_release
+#: model:ir.actions.act_window,name:ev_product_release.action_stock_production_lot_rule
+#: model:ir.ui.menu,name:ev_product_release.menu_stock_production_lot_rule
+msgid "Production Lot Rule"
+msgstr "Quy tắc sinh mã voucher"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__uom_po_id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__uom_po_id
+msgid "Purchase Unit of Measure"
+msgstr "Đơn vị tính mua hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid "Quantity must be greater than 0."
+msgstr "Số lượng thẻ phải lớn hơn 0"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot_rule_line__type__random
+msgid "Random"
+msgstr "Ngẫu nhiên"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Receivables"
+msgstr "Các khoản phải thu"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__picking_type_id
+msgid "Release warehouse"
+msgstr "Kiểu giao nhận phôi thẻ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__rule_id
+msgid "Rule"
+msgstr "Quy tắc"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__rule_apply_promotion
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__rule_apply_promotion
+#, python-format
+msgid "Rule apply promotion"
+msgstr "Áp dụng chính sách"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/stock_production_lot_rule_line.py:0
+#, python-format
+msgid "Rule's length: {} greater allowable length {}"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Sales"
+msgstr "Bán hàng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Sales Description"
+msgstr "Mô tả bán hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__list_price
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__list_price
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_template_release_tree_view_custom
+msgid "Sales Price"
+msgstr "Giá bán"
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_product__categ_id
+#: model:ir.model.fields,help:ev_product_release.field_product_template__categ_id
+msgid "Select category for the current product"
+msgstr "Chọn nhóm cho sản phẩm hiện tại"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_template__type__service
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__start
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__state
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__check_discount_price
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__check_discount_price
+#, python-format
+msgid "State Choose"
+msgstr "Loại"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__step
+msgid "Step"
+msgstr "Bước nhảy"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__picking_ids
+msgid "Stock Picking"
+msgstr "Các dịch chuyển"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__product_template__type__product
+msgid "Storable Product"
+msgstr "Sản phẩm lưu kho"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "This note is added to delivery orders."
+msgstr "Ghi chú này sẽ hiển thị trên các phiếu kho."
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid ""
+"This note is added to internal transfer orders (e.g. where to pick the "
+"product in the warehouse)."
+msgstr ""
+"Lưu ý này sẽ được hiển thị khi chuyển hàng nội bộ (vd: nơi lấy sản phẩm này "
+"trong kho)."
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid ""
+"This note is added to receipt orders (e.g. where to store the product in the"
+" warehouse)."
+msgstr ""
+"Lưu ý này sẽ được hiển thị khi nhận hàng (vd: nơi lưu sản phẩm này trong "
+"kho)."
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "This note is added to sales orders and invoices."
+msgstr "Ghi chú này sẽ hiển thị trên đơn bán hàng và hóa đơn."
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "This note is only for internal purposes."
+msgstr "Ghi chú này chỉ dành cho mục đích nội bộ."
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_total_count
+msgid "Total count"
+msgstr "Tổng lần sử dụng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Traceability"
+msgstr "Truy xuất kho"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__count_picking
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+msgid "Transfers"
+msgstr "Phiếu xuất phôi"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__type
+msgid "Type"
+msgstr "Kiểu quy tắc"
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__uom_id
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_form_view
+#: model_terms:ir.ui.view,arch_db:ev_product_release.update_product_release_view_form
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: ev_product_release
+#: model:ir.actions.act_window,name:ev_product_release.update_product_release_act
+msgid "Update Product Release"
+msgstr "Cập nhật phiếu mua hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_use_count
+msgid "Use count"
+msgstr "Số lần đã sử dụng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot__x_use_customer_id
+msgid "Use customer"
+msgstr "Người sử dụng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_product__x_use_policy
+#: model:ir.model.fields,field_description:ev_product_release.field_product_template__x_use_policy
+msgid "Use policy"
+msgstr "Mô tả"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__use_type
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__use_type
+msgid "Use type"
+msgstr "Phương thức sử dụng"
+
+#. module: ev_product_release
+#: model:ir.model.fields.selection,name:ev_product_release.selection__stock_production_lot__x_state__used
+msgid "Used"
+msgstr "Đã sử dụng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__validity
+#: model:ir.model.fields,field_description:ev_product_release.field_update_product_release__validity
+msgid "Validity"
+msgstr "Số tháng hiệu lực"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid "Validity must be greater than 0 !!!"
+msgstr "Số tháng hiệu lực phải hơn hơn 0 !!!"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Variants"
+msgstr "Biến thể"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "Volume"
+msgstr "Thể tích"
+
+#. module: ev_product_release
+#: model:ir.actions.act_window,name:ev_product_release.product_release_action_custom
+#: model:ir.ui.menu,name:ev_product_release.menu_pos_products_release_custom
+#: model_terms:ir.ui.view,arch_db:ev_product_release.product_release_search_view_pos
+msgid "Voucher"
+msgstr "Danh mục SP phiếu mua hàng"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_res_company__x_voucher_code_rule_length
+msgid "Voucher code rule length"
+msgstr "Độ dài ký tự mã voucher"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_picking_type__warehouse_voucher
+msgid "Warehouse voucher"
+msgstr "Dùng để phát hành"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_product_release__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model.fields,help:ev_product_release.field_product_release__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid ""
+"You added duplicate Voucher's code. Please check those again.\n"
+" {}"
+msgstr ""
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#, python-format
+msgid "You can only create discount < 100"
+msgstr ""
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#, python-format
+msgid "You can only create discount > 0"
+msgstr ""
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_template.py:0
+#, python-format
+msgid "You can only create total price > 0"
+msgstr "Bạn chỉ có thể nhập giảm giá lớn hơn 0"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#, python-format
+msgid "You did not config Voucher code rule length."
+msgstr "Bạn chưa cấu hình độ dài cho phép của mã Phiếu mua hàng"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "days"
+msgstr "ngày"
+
+#. module: ev_product_release
+#: model:ir.model.fields,field_description:ev_product_release.field_stock_production_lot_rule_line__name
+msgid "name"
+msgstr "Tên"
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.release_product_template_form_view_custom
+msgid "per"
+msgstr "Mỗi"
+
+#. module: ev_product_release
+#: code:addons/ev_product_release/models/product_release.py:0
+#: code:addons/ev_product_release/wizard/update_product_release.py:0
+#: model:ir.model.fields,help:ev_product_release.field_product_release__use_type
+#: model:ir.model.fields,help:ev_product_release.field_update_product_release__use_type
+#, python-format
+msgid ""
+"predefined method: when customer A buys a voucher, only customer A can use "
+"that voucher, Flexible method: when customer A buys a voucher, anyone who "
+"has that voucher can use it"
+msgstr ""
+"(chỉ áp dụng cho bán voucher)Phương thức định trước : khi khách hàng A mua "
+"voucher thì chỉ khách hàng A mới sử dụng được voucher đó, phương thức linh "
+"hoạt: mã voucher có thể được sử dụng với tất cả khách hàng khi có voucher đó"
+" sau khi mua"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_product_card_allow
+msgid "product.card.allow"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_product_category_card_allow
+msgid "product.category.card.allow"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_product_release
+msgid "product.release"
+msgstr ""
+
+#. module: ev_product_release
+#: model_terms:ir.ui.view,arch_db:ev_product_release.stock_production_lot_rule_form_view
+msgid "rule Detail"
+msgstr "Chi tiết quy tắc"
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_stock_production_lot_rule
+msgid "stock.production.lot.rule"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_stock_production_lot_rule_line
+msgid "stock.production.lot.rule.line"
+msgstr ""
+
+#. module: ev_product_release
+#: model:ir.model,name:ev_product_release.model_update_product_release
+msgid "update.product.release"
+msgstr "Cập nhật phiếu mua hàng"

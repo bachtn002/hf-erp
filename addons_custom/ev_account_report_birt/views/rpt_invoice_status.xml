@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="rpt_invoice_status_view_form" model="ir.ui.view">
+            <field name="name">RPT Invoice Status</field>
+            <field name="model">rpt.invoice.status</field>
+            <field name="arch" type="xml">
+                <form string="RPT Invoice Status">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_date" required="1"/>
+                                <field name="to_date" required="1"/>
+                            </group>
+                            <group>
+                                <field name="status" required="1"/>
+                            </group>
+
+                        </group>
+                        <footer>
+                            <button name="action_export_report" type="object" class="oe_highlight"
+                                    string="View Report"/>
+                            <!--                            <button name="action_report_excel" type="object" class="oe_highlight" string="Export Excel"/>-->
+                            <button string="Cancel" class="btn-default" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_invoice_status_atc" model="ir.actions.act_window">
+            <field name="name">RPT Invoice Status</field>
+            <field name="res_model">rpt.invoice.status</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_invoice_status_view_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="rpt_invoice_status_menu" name="RPT Invoice Status"
+                  parent="account.account_reports_legal_statements_menu"
+                  action="rpt_invoice_status_atc"
+                  sequence="350"/>
+    </data>
+</odoo>

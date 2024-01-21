@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+<!--    <t t-name="TableWidgetDisplay" t-inherit="pos_restaurant.TableWidget" t-inherit-mode="extension" owl="1">-->
+<!--        <xpath expr="//span[hasclass('table-seats')]" position="replace">-->
+<!--        </xpath>-->
+<!--        <xpath expr="//span[hasclass('label')]" position="replace">-->
+<!--            <div>-->
+<!--                <span class="label">-->
+<!--                    <t t-esc="props.table.name"/>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </xpath>-->
+<!--    </t>-->
+
+</templates>

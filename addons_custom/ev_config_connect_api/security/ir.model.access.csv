@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_config_connection,access_config_connection_name,model_config_connection,base.group_user,1,1,1,1
+access_config_api,access_config_api_name,model_config_api,base.group_user,1,1,1,1
+access_log_api,access_log_api_name,model_log_api,base.group_user,1,1,1,1
+access_ip_connection,access_ip_connection_name,model_ip_connection,base.group_user,1,1,1,1

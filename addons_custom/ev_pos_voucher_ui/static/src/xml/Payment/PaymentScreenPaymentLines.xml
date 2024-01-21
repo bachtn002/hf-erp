@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PaymentScreenPaymentLines" t-inherit="point_of_sale.PaymentScreenPaymentLines" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='line.selected']/div[1]" position="inside">
+			<t t-if="line and line.lot_name">
+                <div class="payment-lot">
+                    <i class="payment-lot-info">* Mã: <t t-esc="line.lot_name"/></i>
+                </div>
+            </t>
+		</xpath>
+        <xpath expr="//t[@t-else='']/div[1]" position="inside">
+            <t t-if="line and line.lot_name">
+                <div class="payment-lot">
+                    <i class="payment-lot-info">* Mã: <t t-esc="line.lot_name"/></i>
+                </div>
+            </t>
+		</xpath>
+
+    </t>
+
+</templates>

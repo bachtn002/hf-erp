@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_payment_form_inherit">
+            <field name="name">view_pos_payment_form_inherit</field>
+            <field name="model">pos.payment</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='session_id']" position="after">
+                    <field name="x_pos_shop_id" string="Pos shop" options="{'no_create_edit': True, 'no_open': True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

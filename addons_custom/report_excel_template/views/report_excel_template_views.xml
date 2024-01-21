@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_report_excel_template_tree" model="ir.ui.view">
+            <field name="name">report.excel.template.tree</field>
+            <field name="model">report.excel.template</field>
+            <field name="arch" type="xml">
+                <tree string="Report Excel Template">
+                    <field name="name" string="Report Name"/>
+                    <field name="type"/>
+                    <field name="model_id"/>
+                    <field name="print_menu"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_report_excel_template_form" model="ir.ui.view">
+            <field name="name">report.excel.template.form</field>
+            <field name="model">report.excel.template</field>
+            <field name="arch" type="xml">
+                <form string="Report Excel Template">
+                    <header>
+                        <button name="action_confirm" type="object" states="draft,settings" string="Confirm" class="oe_highlight"/>
+                        <button name="action_back" type="object" states="settings,done" string="Back"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,settings,done"/>
+                    </header>
+                    <sheet>
+                        <field name="id" invisible="1"/>
+                        <group>
+                            <group>
+                                <field name="name" required="True" attrs="{'readonly': [('state','in',['settings','done'])]}"/>
+                                <field name="print_menu"/>
+                                <field name="parent_menu_id" attrs="{'readonly': [('state','in',['settings','done'])], 'required': [('print_menu','!=', True)], 'invisible': [('print_menu','=', True)]}" />
+                                <field name="menu_id" invisible="1" />
+                                <field name="act_window_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="type" required="True" attrs="{'readonly': [('state','in',['settings','done'])], 'required': [('print_menu','!=', True)], 'invisible': [('print_menu','=', True)]}"/>
+                                <field name="model_id" attrs="{'invisible': ['|',('type','!=','model'),('print_menu','!=', True)],'readonly': [('state','in',['settings','done'])]}" />
+                                <field name="model" attrs="{'invisible': [('type','!=','model')],'readonly': ['|', ('state','in',['settings','done']),('print_menu','=', True)]}" />
+                                <field name="file_excel_template" required="1"/>
+                                <field name="sheet_name" attrs="{'invisible': [('print_menu','=', True)], 'required': [('print_menu','!=', True)]}"/>
+                                <field name="model_id2" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Information" attrs="{'invisible': [('print_menu','=', True)]}">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>Form Input</h3>
+                                        <field name="input_ids" attrs="{'readonly': [('state','in',['done'])]}" nolabel="1">
+                                            <tree string="Input" editable="top">
+                                                <field name="sequence" required="1"/>
+                                                <field name="name" required="1"/>
+                                                <field name="label" required="1"/>
+                                                <field name="type" required="1"/>
+                                                <field name="model_id"/>
+                                                <field name="required"/>
+                                                <field name="field_id" readonly="1"/>
+                                                <field name="excel_cell"/>
+                                                <field name="field_cond"/>
+                                                <field name="style"/>
+                                                <field name="style_cond"/>
+                                            </tree>
+                                        </field>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-7" attrs="{'invisible': [('type','not in',['sql'])]}" >
+                                                <h3>Query command</h3>
+                                                <field name="sql" attrs="{'required': [('type','=','sql'),('print_menu','!=', True)],'readonly': [('state','in',['settings','done'])]}" nolabel="1" widget="ace"/>
+                                            </div>
+                                            <div class="col-md-7" attrs="{'invisible': [('type','not in',['model'])]}" >
+                                                <h3>Fields Data</h3>
+                                                <field name="field_ids" attrs="{'readonly': [('state','in',['done'])]}" nolabel="1">
+                                                    <tree string="Field Data" editable="top">
+                                                        <field name="sequence" invisible="1"/>
+                                                        <field name="model" invisible="1"/>
+                                                        <field name="model_id" invisible="1"/>
+                                                        <field name="field_id" domain="[('model_id','=', model_id)]"/>
+                                                        <field name="label" invisible="1"/>
+                                                        <field name="format_value" placeholder="%Y-%m-%d" invisible="1"/>
+                                                        <field name="report_id" invisible="1"/>
+                                                        <field name="excel_cell"/>
+                                                        <field name="field_cond"/>
+                                                        <field name="style"/>
+                                                        <field name="style_cond"/>
+                                                        <field name="sum"/>
+                                                        <field name="numerical_order"/>
+                                                    </tree>
+                                                </field>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row">
+                                                    <div class="col-md-12" attrs="{'invisible': [('type','not in',['sql'])]}">
+                                                        <h3>Columns</h3>
+                                                        <field name="label_ids" attrs="{'readonly': [('state','in',['done'])]}" nolabel="1">
+                                                            <tree string="Columns" editable="top">
+                                                                <field name="name" readonly="1"/>
+                                                                <field name="label" invisible="1"/>
+                                                                <field name="group_id" invisible="1"/>
+                                                                <field name="report_id" invisible="1"/>
+                                                                <field name="excel_cell"/>
+                                                                <field name="field_cond"/>
+                                                                <field name="style"/>
+                                                                <field name="style_cond"/>
+                                                                <field name="sum"/>
+                                                                <field name="numerical_order"/>
+                                                            </tree>
+                                                        </field>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <h3>Parameter</h3>
+                                                        <field name="parameter_ids" attrs="{'readonly': [('state','in',['done'])]}" nolabel="1">
+                                                            <tree string="Parameter" editable="top" >
+                                                                <field name="report_id" invisible="1"/>
+                                                                <field name="model_id" invisible="1"/>
+                                                                <field name="field_id" domain="[('model_id','=', model_id)]" attrs="{'column_invisible':[('parent.type', '!=', 'model')]}"/>
+                                                                <field name="operator" attrs="{'column_invisible':[('parent.type', '!=', 'model')]}"/>
+                                                                <field name="name" readonly="1" attrs="{'column_invisible':[('parent.type', 'not in', ['sql', 'third-party'])]}"/>
+                                                                <field name="input" domain="[('report_id','=', parent.id)]" options='{"create":False,"create_edit": False,"no_open": True}'/>
+                                                            </tree>
+                                                        </field>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </page>
+                            <page string="Export" attrs="{'invisible': [('print_menu','!=', True)]}">
+                                <field name="export_ids">
+                                    <tree name="export_instruction" editable="bottom">
+                                        <control>
+                                            <create string="Add sheet section" context="{'default_section_type': 'sheet'}"/>
+                                            <create string="Add header section" context="{'default_section_type': 'head', 'default_row_field': '_HEAD_'}"/>
+                                            <create string="Add row section" context="{'default_section_type': 'row'}"/>
+                                            <create string="Add data column" context="{'default_section_type': 'data'}"/>
+                                        </control>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="section_type" invisible="1"/>
+                                        <field name="sheet" attrs="{'required': [('section_type', '=', 'sheet')],
+                                                                    'invisible': [('section_type', '!=', 'sheet')]}"/>
+                                        <field name="row_field" attrs="{'required': [('section_type', 'in', ('head', 'row'))],
+                                                                        'invisible': [('section_type', 'not in', ('head', 'row'))]}"/>
+                                        <field name="is_cont" attrs="{'required': [('section_type', 'in', ('head', 'row'))],
+                                                                      'invisible': [('section_type', 'not in', ('head', 'row'))]}"/>
+                                        <field name="excel_cell" attrs="{'required': [('section_type', '=', 'data')],
+                                                                         'invisible': [('section_type', '!=', 'data')]}"/>
+                                        <field name="field_name" attrs="{'invisible': [('section_type', '!=', 'data')]}"/>
+                                        <field name="field_cond" attrs="{'invisible': [('section_type', '!=', 'data')]}"/>
+                                        <field name="is_sum" attrs="{'invisible': [('section_type', '!=', 'data')]}"/>
+                                        <field name="style" attrs="{'invisible': [('section_type', '!=', 'data')]}"/>
+                                        <field name="style_cond" attrs="{'invisible': [('section_type', '!=', 'data')]}"/>
+                                    </tree>
+                                </field>
+                                <div style="margin-top: 4px;">
+                                    <h3>Help with Export Instruction</h3>
+                                    <p>
+                                      Export Instruction is how to write data from an active data record to specified cells in excel sheet.
+                                      For example, an active record can be a sale order that user want to export.
+                                      The record itself will be mapped to the header part of excel sheet. The record can contain multiple one2many fields, which will be written as data lines.
+                                      You can look at following instruction as Excel Sheet(s), each with 1 header section (_HEAD_) and multiple row sections (one2many fields).
+                                    </p>
+                                    <ul>
+                                        <li>In header section part, map data fields (e.g., number, partner_id.name) into cells (e.g., B1, B2).</li>
+                                        <li>In row section, data list will be rolled out from one2many row field (e.g., order_line), and map data field (i.e., product_id.name, uom_id.name, qty) into the first row cells to start rolling (e.g., A6, B6, C6).</li>
+                                    </ul>
+                                    <p>Following are more explaination on each column:</p>
+                                    <ul>
+                                        <li><b>Sheet</b>: Name (e.g., Sheet 1) or index (e.g., 1) of excel sheet to export data to</li>
+                                        <li><b>Row Field</b>: Use _HEAD_ for the record itself, and one2many field (e.g., line_ids) for row data</li>
+                                        <li><b>Continue</b>: If not selected, start rolling with specified first row cells. If selected, continue from previous one2many field</li>
+                                        <li><b>Cell</b>: Location of data in excel sheet (e.g., A1, B1, ...)</li>
+                                        <li><b>Field</b>: Field of the record, e.g., product_id.uom_id.name. They are orm compliant.</li>
+                                        <li><b>Field Cond.</b>: Python code in <code>${...}</code> to manipulate field value, e.g., if field = product_id, <code>value</code> will represent product object, e.g., <code>${value and value.uom_id.name or ""}</code></li>
+                                        <li><b>Sum</b>: Add sum value on last row, <code>@{sum}</code></li>
+                                        <li><b>Style</b>: Default style in <code>#{...}</code> that apply to each cell, e.g., <code>#{align=left;style=text}</code>. See module's <b>style.py</b> for available styles.</li>
+                                        <li><b>Style w/Cond.</b>: Conditional style by python code in <code>#?...?</code>, e.g., apply style for specific product, <code>#?value.name == "ABC" and #{font=bold;fill=red} or None?</code></li>
+                                    </ul>
+                                    <p><b>Note:</b></p>
+                                    For code block <code>${...}</code> and <code>#?...?</code>, following object are available,
+                                    <ul>
+                                        <li><code>value</code>: value from <b>Field</b></li>
+                                        <li><code>object</code>: record object or line object depends on <b>Row Field</b></li>
+                                        <li><code>model</code>: active model, e.g., self.env['my.model']</li>
+                                        <li><code>date, datetime, time</code>: some useful python classes</li>
+                                    </ul>
+                                </div>
+                            </page>
+                            <page string="Input Instruction" attrs="{'invisible': [('print_menu','!=', True)]}" invisible="1">
+                                <field name="input_instruction"/>
+                                <field name="show_instruction"/><label for="show_instruction"/>
+                                <field name="instruction" attrs="{'invisible': [('show_instruction', '=', False)]}"/>
+                            </page>
+                            <page string="Access Rights" attrs="{'invisible': [('print_menu','=', True)]}">
+                                <field name="groups_id"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_report_excel_template_search" model="ir.ui.view">
+            <field name="name">report.excel.template.search</field>
+            <field name="model">report.excel.template</field>
+            <field name="arch" type="xml">
+                <search string="Report Excel">
+                    <field name="name" string="Name"/>
+                    <field name="menu_id" string="Menu"/>
+                    <field name="type" string="Report Type"/>
+                    <field name="sql" string="Sql"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_report_excel_template" model="ir.actions.act_window">
+            <field name="name">Report Excel</field>
+            <field name="res_model">report.excel.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help">
+                Report Excel Simple
+           </field>
+        </record>
+
+        <menuitem
+            name="Report Excel"
+            action="action_report_excel_template"
+            id="menu_report_excel_template"
+            parent="base.reporting_menuitem"
+            groups="base.group_no_one"
+            sequence="50"/>
+    </data>
+</odoo>

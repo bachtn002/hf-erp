@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record id="helpdesk_department_form_view" model="ir.ui.view">
+           <field name="name">helpdesk_department_form_view</field>
+           <field name="model">helpdesk.department</field>
+           <field name="arch" type="xml">
+               <form string="">
+                   <sheet>
+                       <group>
+                           <field name="name"/>
+                           <field name="helpdesk_team_id" options="{'no_create_edit': True}"/>
+                           <field name="emails"/>
+                       </group>
+                       <notebook>
+                           <page string="Department members">
+                               <field name="user_ids" string="Users" widget="many2many">
+                                   <tree editable="bottom" create="0">
+                                       <field name="login" required="1"/>
+                                   </tree>
+                               </field>
+                           </page>
+                       </notebook>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+
+        <record id="helpdesk_department_action" model="ir.actions.act_window">
+            <field name="name">Helpdesk department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">helpdesk.department</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="helpdesk_department_menu" parent="helpdesk.helpdesk_menu_config" action="helpdesk_department_action" sequence="1"/>
+
+    </data>
+</odoo>

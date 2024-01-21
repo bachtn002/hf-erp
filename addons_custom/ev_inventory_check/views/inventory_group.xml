@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inventory_group_tree" model="ir.ui.view">
+            <field name="name">inventory_group_tree</field>
+            <field name="model">stock.inventory.group</field>
+            <field name="arch" type="xml">
+                <tree string="Inventory Group">
+                    <field name="name"/>
+                    <field name="product_ids"/>
+                </tree>
+            </field>
+        </record>
+        <record id="inventory_group_form" model="ir.ui.view">
+            <field name="name">inventory_group_form</field>
+            <field name="model">stock.inventory.group</field>
+            <field name="arch" type="xml">
+                <form string="Inventory Group">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="product_ids" widget="many2many_tags"
+                                   options="{'no_create':1, 'no_create_edit':1}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="inventory_group_act" model="ir.actions.act_window">
+            <field name="name">Inventory Group</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.inventory.group</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="view_product_inventory_group_from_inherit" model="ir.ui.view">
+            <field name="name">product.inventory.group.from.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_id']" position="after">
+                    <field name="x_inventory_group_id" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}" attrs="{'required': [('type', '=', 'product')]}"/>
+                </xpath>
+            </field>
+        </record>
+<!--        vì 1 lý do nào đó attrs k hoạt động buộc phải inherit-->
+        <record id="inventory_group_product_view_inherit" model="ir.ui.view">
+            <field name="name">inventory_group_product_view_inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="view_product_inventory_group_from_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_inventory_group_id']" position="attributes">
+                    <attribute name="attrs">{'required': [('type', '=', 'product')]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <menuitem
+                id="inventory_group_menu"
+                name="Inventory Group"
+                action="inventory_group_act"
+                parent="stock.menu_product_in_config_stock"
+                sequence="3"/>
+    </data>
+</odoo>

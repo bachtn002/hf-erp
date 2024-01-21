@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="abstract_loan_interest_line_form_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.interest.form</field>
+			<field name="model">abstract.loan.interest</field>
+			<field name="arch" type="xml">
+				<form string="Loan Interest">
+					<header>
+						<button name="action_confirm" states="draft"
+							string="Confirm" type="object" />
+						<button name="action_draft" states="cancelled"
+							string="Set to Draft" type="object" />
+						<button name="action_invoice" class="oe_highlight"
+							type="object"
+							attrs="{'invisible':['|',('fully_invoiced','=',True),('state','!=','confirmed')]}" />
+						<button name="action_cancel" states="confirmed,paid"
+							string="Cancel" type="object" />
+						<field name="fully_invoiced" invisible="1" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,confirmed,paid,cancelled" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_invoices" type="object"
+								class="oe_stat_button" icon="fa-pencil-square-o"
+								attrs="{'invisible': [('invoices_count', '=', 0)]}">
+								<field name="invoices_count" widget="statinfo" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="amount" />
+								<field name="invoiced_amount" />
+								<field name="loan_amount" />
+								<field name="date_from" />
+								<field name="date_to" />
+							</group>
+							<group>
+								<field name="nbr_of_days" />
+								<field name="daily_rate" digits="[10,5]"
+									groups="base.group_no_one" />
+								<field name="rate_type_id" />
+								<field name="internal_type" invisible="1" />
+								<field name="rate_line_id"
+									attrs="{'invisible':[('internal_type','=','flat')],'required':[('internal_type','=','floating')]}" />
+								<field name="date_maturity" />
+								<field name="currency_id" invisible="1" />
+							</group>
+						</group>
+						<notebook>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="abstract_loan_interest_line_tree_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.interest.tree</field>
+			<field name="model">abstract.loan.interest</field>
+			<field name="arch" type="xml">
+				<tree string="Loan Interests">
+					<field name="name" />
+					<field name="amount" />
+					<field name="loan_amount" />
+					<field name="date_from" />
+					<field name="date_to" />
+					<field name="nbr_of_days" />
+					<field name="daily_rate" digits="[10,5]"
+						groups="base.group_no_one" />
+					<field name="rate_type_id" />
+					<field name="rate_line_id" />
+					<field name="date_maturity" />
+					<field name="currency_id" invisible="1" />
+					<field name="state" />
+					<field name="fully_invoiced" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="abstract_loan_interest_line_simple_tree_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.interest.tree.simple</field>
+			<field name="model">abstract.loan.interest</field>
+			<field name="arch" type="xml">
+				<tree string="Loan Interests">
+					<field name="name" />
+					<field name="amount" />
+					<field name="loan_amount" />
+					<field name="date_from" />
+					<field name="date_to" />
+					<field name="nbr_of_days" />
+					<field name="daily_rate" digits="[10,5]"
+						groups="base.group_no_one" />
+					<field name="rate_type_id" />
+					<field name="rate_line_id" />
+					<field name="date_maturity" />
+					<field name="currency_id" groups="base.group_multi_currency" />
+					<field name="state" />
+					<field name="fully_invoiced" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="abstract_loan_interest_line_pivot_view"
+			model="ir.ui.view">
+			<field name="name">abstract.loan.interest.pivot</field>
+			<field name="model">abstract.loan.interest</field>
+			<field name="arch" type="xml">
+				<pivot string="Loan Interests">
+					<field name="date_to" type="col" />
+					<field name="amount" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="abstract_loan_interest_search_view">
+			<field name="name">abstract.loan.interest.search</field>
+			<field name="model">abstract.loan.interest</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="date_from" />
+					<field name="date_to" />
+					<field name="date_maturity" />
+					<separator />
+					<filter name="ftr_draft" string="Draft"
+						domain="[('state','=','draft')]" />
+					<filter name="ftr_confirmed" string="Confirmed"
+						domain="[('state','=','confirmed')]" />
+					<filter name="ftr_paid" string="Paid"
+						domain="[('state','=','paid')]" />
+					<filter name="ftr_cancelled" string="Cancelled"
+						domain="[('state','=','cancelled')]" />
+					<separator />
+					<filter name="ftr_to_invoice"
+						domain="[('state','=','confirmed'),('fully_invoiced','=',False)]" />
+					<filter name="ftr_invoiced"
+						domain="[('state','in',['confirmed','paid']),('fully_invoiced','=',True)]" />
+					<separator />
+					<group expand="1" string="Group By">
+						<filter string="Partner" name="grp_partner"
+							context="{'group_by':'partner_id'}" />
+						<filter string="Currency" name="grp_currency"
+							context="{'group_by':'currency_id'}"
+							groups="base.group_multi_currency" />
+						<filter string="Company" name="grp_company"
+							context="{'group_by':'company_id'}"
+							groups="base.group_multi_company" />
+						<separator />
+<!--						<filter string="Disbursement Status"-->
+<!--							name="grp_disbursement_state"-->
+<!--							context="{'group_by':'disbursement_state'}" />-->
+<!--						<separator />-->
+						<filter string="Interest Rate Type" name="grp_rate_type"
+							context="{'group_by':'rate_type_id'}" />
+						<filter string="Floating Interest Rate Line"
+							name="grp_rate_line" context="{'group_by':'rate_line_id'}" />
+						<separator />
+						<filter string="Date From"
+							name="grp_date_from"
+							context="{'group_by':'date_from'}"
+							help="Group Loan Interests by Date From" />
+						<filter string="Date To" context="{'group_by':'date_to'}"
+							name="grp_date_to"
+							help="Group Loan Interests by Date To" />
+						<filter string="Confirmation Date"
+							name="grp_date_confirmed"
+							context="{'group_by':'date_confirmed'}"
+							help="Group Loan Interests by Confirmation Date" />
+						<filter string="Due Date"
+							name="grp_date_maturity"
+							context="{'group_by':'date_maturity'}"
+							help="Group Loan Interests by Due Date" />
+					</group>
+				</search>
+			</field>
+		</record>
+	</data>
+</odoo>

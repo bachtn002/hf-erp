@@ -1,0 +1,520 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_sale_online
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-25 10:49+0000\n"
+"PO-Revision-Date: 2021-10-25 10:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "0838183838"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__amount_total
+msgid "Amount Total"
+msgstr "Tổng tiền"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields.selection,name:ev_sale_online.selection__sale_online__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__product_uom_category_id
+msgid "Category"
+msgstr "Nhóm SP"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online_order_line__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Create Customer"
+msgstr "Tạo mới khách hàng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__create_uid
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__create_date
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__customer
+msgid "Customer Name"
+msgstr "Tên KH"
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#, python-format
+msgid "Customer has been created"
+msgstr "Khách hàng đã được tạo"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__price_list_id
+msgid "Default Pricelist"
+msgstr "Bảng giá"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_config__display_name
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__display_name
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_sale_online
+#: model:ir.model.fields.selection,name:ev_sale_online.selection__sale_online__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Error"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields.selection,name:ev_sale_online.selection__sale_online__state__finish
+msgid "Finish"
+msgstr "Hoàn thành"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/xml/pos_sale_online.xml:0
+#, python-format
+msgid "Ghi chú"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_config__id
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__id
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_needaction
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_has_error
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#, python-format
+msgid "In order to delete a sale, it must be new or cancelled."
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_config____last_update
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online____last_update
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__write_uid
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__write_date
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__order_line_ids
+msgid "List order"
+msgstr ""
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/js/PaymentScreen.js:0
+#, python-format
+msgid "Losing the connection."
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_search
+msgid "Name"
+msgstr "Mã đơn hàng"
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Nguyễn Văn A"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/js/PaymentScreen.js:0
+#: code:addons/ev_sale_online/static/src/js/TicketScreen.js:0
+#, python-format
+msgid "Offline"
+msgstr ""
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/xml/pos_sale_online.xml:0
+#, python-format
+msgid "Order Online:"
+msgstr "Đơn Online:"
+
+#. module: ev_sale_online
+#: model:ir.model.constraint,message:ev_sale_online.constraint_sale_online_name_unique
+msgid "Order number must be unique!"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__phone
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_search
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#, python-format
+msgid "Phone number must be 10 characters"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model,name:ev_sale_online.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_sale_online
+#: model:ir.model,name:ev_sale_online.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__pos_config_id
+msgid "Pos Config"
+msgstr "Điểm bán hàng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__pos_order_id
+msgid "Pos order"
+msgstr "Đơn hàng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__item_ids
+msgid "Pricelist Items"
+msgstr "Bảng giá"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__qty_total
+msgid "Quantity Total"
+msgstr "Tổng số lượng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_pos_order__sale_online
+msgid "Ref Sale Online"
+msgstr "Tham chiếu đơn Online"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.ui.menu,name:ev_sale_online.menu_sale_online
+#: model:ir.ui.menu,name:ev_sale_online.menu_sale_online_point_of_sale
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Sale Online"
+msgstr "Bán hàng online"
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/xml/pos_sale_online.xml:0
+#, python-format
+msgid "Sale Online ID"
+msgstr "Mã đơn hàng"
+
+#. module: ev_sale_online
+#: model:res.groups,name:ev_sale_online.group_sale_online
+msgid "Sale Online User"
+msgstr "Nhân viên bán Online"
+
+#. module: ev_sale_online
+#: model:ir.actions.act_window,name:ev_sale_online.sale_online_act
+#: model:ir.actions.act_window,name:ev_sale_online.sale_online_point_of_sale_user_act
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_tree
+msgid "Sale online"
+msgstr "Bán hàng online"
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Send request"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_sale_online
+#: model:ir.model.fields.selection,name:ev_sale_online.selection__sale_online__state__sent
+msgid "Sent"
+msgstr "Đang gửi"
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Set to Draft"
+msgstr "Chuyển về nháp"
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/xml/pos_sale_online.xml:0
+#, python-format
+msgid "Sync Order Online"
+msgstr "Đồng bộ đơn online"
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "Số 83, Duy Tân, Cầu Giấy, Hà Nội"
+msgstr ""
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online_order_line.py:0
+#, python-format
+msgid "The number of product must be greater than 0!!"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__price_list_id
+msgid ""
+"The pricelist used if no customer is selected or if the customer has no Sale"
+" Pricelist configured."
+msgstr ""
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online_order_line.py:0
+#, python-format
+msgid ""
+"The quantity done for the product \"%s\" doesn't respect the rounding "
+"precision defined on the unit of measure \"%s\". Please change the quantity "
+"done or the rounding precision of your unit of measure."
+msgstr ""
+"Số lượng thực hiện cho sản phẩm \"%s\" không tuân theo độ chính xác làm tròn"
+" được xác định trên đơn vị đo \"%s\". Vui lòng thay đổi số lượng thực hiện "
+"hoặc độ chính xác làm tròn của đơn vị đo lường của bạn."
+
+#. module: ev_sale_online
+#. openerp-web
+#: code:addons/ev_sale_online/static/src/js/TicketScreen.js:0
+#, python-format
+msgid "Unable to sync Order Online."
+msgstr "Không thể đồng bộ đơn online. Hãy kiểm tra kết nối"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,help:ev_sale_online.field_sale_online__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__amount
+msgid "amount total"
+msgstr "Tổng tiền"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__date
+msgid "date"
+msgstr "Ngày mua"
+
+#. module: ev_sale_online
+#: model_terms:ir.ui.view,arch_db:ev_sale_online.sale_online_form
+msgid "detail"
+msgstr "Chi tiết đơn hàng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__name
+msgid "name"
+msgstr "Mã đơn hàng"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__price
+msgid "price"
+msgstr "Giá"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__product_id
+msgid "product"
+msgstr "Sản phẩm"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__sale_online_id
+msgid "sale online id"
+msgstr "Mã sản phẩm"
+
+#. module: ev_sale_online
+#: model:ir.model,name:ev_sale_online.model_sale_online
+msgid "sale.online"
+msgstr "Bán hàng online"
+
+#. module: ev_sale_online
+#: model:ir.model,name:ev_sale_online.model_sale_online_order_line
+msgid "sale.online.order.line"
+msgstr ""
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online__state
+msgid "state"
+msgstr "Trạng thái"
+
+#. module: ev_sale_online
+#: model:ir.model.fields,field_description:ev_sale_online.field_sale_online_order_line__uom
+msgid "uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_sale_online
+#: code:addons/ev_sale_online/models/sale_online.py:0
+#, python-format
+msgid "Đơn hàng đã được đẩy đi"
+msgstr ""

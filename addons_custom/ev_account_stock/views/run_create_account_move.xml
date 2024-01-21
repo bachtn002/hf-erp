@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="run_create_account_move_view" model="ir.ui.view">
+            <field name="name">Run</field>
+            <field name="model">run.create.account.move</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="from_date"/>
+                            <field name="to_date"/>
+                        </group>
+                        <footer>
+                            <button name="action_run" string="Run" type="object" class="oe_highlight"/>
+                            <button special="cancel" string="Hủy"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="run_create_account_move_action" model="ir.actions.act_window">
+            <field name="name">Run Create Account Move</field>
+            <field name="res_model">run.create.account.move</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_run_create_account_move" name="Run Create Account Move" parent="account.menu_finance_entries"
+                  action="run_create_account_move_action"
+                  sequence="6" groups="base.group_no_one"/>
+
+    </data>
+</odoo>

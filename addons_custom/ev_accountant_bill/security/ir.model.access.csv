@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ev_accountant_bill_01,ev_accountant_bill,model_accountant_bill,account.group_account_manager,1,1,1,1
+access_ev_accountant_bill_02,ev_accountant_bill_line,model_accountant_bill_line,account.group_account_manager,1,1,1,1

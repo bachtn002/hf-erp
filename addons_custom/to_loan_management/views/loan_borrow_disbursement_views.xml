@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="loan_borrowing_disbursement_form_view"
+                model="ir.ui.view">
+            <field name="name">loan.borrow.disbursement.form</field>
+            <field name="model">loan.borrow.disbursement</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath
+                        expr="//button[@name='action_disbursement_register_wizard']"
+                        position="attributes">
+                    <attribute name="string">Receive Money</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_generate_refund_lines']" position="after">
+                    <button string="Print BIDV"
+                            name="action_print_template_bidv"
+                            type="object"
+                            attrs="{'invisible': [('disbursement_dt_ids', '=', ())]}"
+                            class="btn-primary"
+                    />
+                    <button string="Print VCB"
+                            name="action_print_template_vcb"
+                            type="object"
+                            attrs="{'invisible': [('disbursement_dt_ids', '=', ())]}"
+                            class="btn-primary"/>
+                    <button string="Print VTB"
+                            name="action_print_template_vtb"
+                            type="object"
+                            attrs="{'invisible': [('disbursement_dt_ids', '=', ())]}"
+                            class="btn-primary"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="order_id"/>
+                    <field name="indenture"/>
+                    <field name="is_compute_by_dt" attrs="{'readonly': [('state', 'not in', ('draft', 'cancelled'))]}"/>
+                </xpath>
+                <xpath expr="//field[@name='full_payment_date']" position="after">
+                    <field name="authorized_person"/>
+                    <field name="authorization_letter"/>
+                    <field name="authorized_date"/>
+                    <field name="partner_domain" invisible="1"/>
+                    <field name="payment_account_id"
+                           options="{'no_create': True, 'no_open': True}"
+                           domain="[('partner_id','=', partner_domain),('x_active','=',True)]"/>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_compute_by_dt', '=', True)]}</attribute>
+                    <attribute name="force_save">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date']" position="attributes">
+                    <attribute name="required">1</attribute>
+                    <attribute name="attrs">{'readonly': [('state', 'not in', ('draft','confirmed'))]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_maturity']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date']" position="before">
+                    <field name="date_start" required="1"/>
+                    <field name="loan_duration" required="1"/>
+                    <field name="date_end" required="1"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+
+                    <page string="Disbursements Detail" attrs="{'invisible': [('is_compute_by_dt', '=', False)]}">
+                        <field name="disbursement_dt_ids"
+                               attrs="{'readonly': [('state', 'not in', ('draft', 'cancelled'))]}"
+                               context="{'default_order_id': order_id}">
+                            <tree string="Payments" editable="bottom"
+                                  options="{'max_value': '100'}"
+                                  >
+<!--                                <button name="action_show_popup_choose_word_tpl" class="oe_highlight" string="Print"-->
+<!--                                        type="object"/>-->
+                                <field name="x_payment_type" required="1"/>
+                                <field name="x_type" required="1"/>
+                                <field name="partner_id" required="1"/>
+                                <field name="purchase_order_ids" widget="many2many_tags"
+                                       domain="[('state','not in', ('done','draft','cancel','to_approve'))]"
+                                       attrs="{'invisible': [('x_type', '!=', 'contract')]}"/>
+<!--                                <field name="invoice_ids" style="white-space: pre-wrap;" widget="many2many_tags"-->
+<!--                                       domain="[('state','=', 'posted'),('type','=', 'in_invoice'),('invoice_payment_state','!=', 'paid'),]"-->
+<!--                                       attrs="{'invisible': ['|',('x_type', 'in', ('contract','lc')),('x_payment_type', '=', 'deposit'),],'required': [('x_type', '=', 'invoice')]}"-->
+<!--                                       force_save="1"/>-->
+                                <field name="invoice_ids" widget="many2many_tags"
+                                       domain="[('state','=', 'posted')]"
+                                       attrs="{'invisible': ['|',('x_type', 'in', ('contract','lc')),('x_payment_type', '=', 'deposit'),],'required': [('x_type', '=', 'invoice')]}"
+                                       force_save="1"/>
+<!--                                <field name="lc_ids" style="white-space: pre-wrap;" widget="many2many_tags" width="100"-->
+<!--                                       string="Payment LC"-->
+<!--                                       domain="[('state','=', 'done')]"-->
+<!--                                       attrs="{'invisible': ['|',('x_type', '!=', 'lc'),('x_payment_type', '=', 'deposit')],'required': [('x_type', '=', 'lc')]}"/>-->
+                                <field name="destination_account_id" invisible="1" force_save="1"/>
+                                <field name="origin" readonly="1" force_save="1"/>
+                                <field name="currency_id" options='{"no_create": 1, "no_create_edit": 1}' required="1"/>
+                                <field name="rate" force_save="1"/>
+                                <field name="value" required="1" sum="Sum value"/>
+                                <field name="value_natural_currency" force_save="1" readonly="1"/>
+                                <field name="description"/>
+                                <field name="beneficiary_bank_id" domain="[('partner_id','=', partner_id)]"
+                                       options="{'no_edit': True, 'no_create': True}"/>
+<!--                                <field name="part_id" domain="[('is_internal_partner','=', True)]"-->
+<!--                                       style="white-space: pre-wrap;" options="{'no_edit': True, 'no_create': True}"/>-->
+                                 <field name="part_id" options="{'no_edit': True, 'no_create': True}"/>
+<!--                                <field name="object_cost_id" options="{'no_edit': True, 'no_create': True}"-->
+<!--                                       style="white-space: pre-wrap;"/>-->
+                                <field name="analytic_account_id" options="{'no_edit': True, 'no_create': True}"/>
+
+                                <field name="order_id" invisible="1"/>
+                                <field name="payment_type" invisible="1"/>
+                            </tree>
+                            <form string="Payments">
+                                <header>
+                                    <button name="action_show_popup_choose_word_tpl" class="oe_highlight" string="Print"
+                                            type="object"/>
+                                </header>
+                                <sheet>
+                                    <group>
+                                        <field name="x_payment_type" required="1"/>
+                                        <field name="x_type" required="1"/>
+                                        <field name="partner_id" required="1" style="white-space: pre-wrap;"/>
+                                        <field name="purchase_order_ids" style="white-space: pre-wrap;"
+                                               widget="many2many_tags"
+                                               domain="[('state','not in', ('done','draft','cancel','to_approve'))]"
+                                               attrs="{'invisible': [('x_type', '!=', 'contract')]}"/>
+<!--                                        <field name="invoice_ids" style="white-space: pre-wrap;" widget="many2many_tags"-->
+<!--                                               domain="[('state','=', 'posted'),('type','=', 'in_invoice'),('invoice_payment_state','!=', 'paid'),]"-->
+<!--                                               attrs="{'invisible': ['|',('x_type', 'in', ('contract','lc')),('x_payment_type', '=', 'deposit'),],'required': [('x_type', '=', 'invoice')]}"-->
+<!--                                               force_save="1"/>-->
+                                         <field name="invoice_ids" style="white-space: pre-wrap;" widget="many2many_tags"
+                                               domain="[('state','=', 'posted')]"
+                                               attrs="{'invisible': ['|',('x_type', 'in', ('contract','lc')),('x_payment_type', '=', 'deposit'),],'required': [('x_type', '=', 'invoice')]}"
+                                               force_save="1"/>
+<!--                                        <field name="lc_ids" style="white-space: pre-wrap;" widget="many2many_tags"-->
+<!--                                               width="100" string="Payment LC"-->
+<!--                                               domain="[('state','=', 'done')]"-->
+<!--                                               attrs="{'invisible': ['|',('x_type', '!=', 'lc'),('x_payment_type', '=', 'deposit')],'required': [('x_type', '=', 'lc')]}"/>-->
+                                        <field name="destination_account_id" invisible="1" force_save="1"/>
+                                        <field name="origin" readonly="1" force_save="1"/>
+                                        <field name="currency_id" options='{"no_create": 1, "no_create_edit": 1}'
+                                               required="1"/>
+                                        <field name="rate" force_save="1"/>
+                                        <field name="value" required="1"/>
+                                        <field name="value_natural_currency" force_save="1" readonly="1"/>
+                                        <field name="description"/>
+                                        <field name="beneficiary_bank_id" domain="[('partner_id','=', partner_id)]"
+                                               style="white-space: pre-wrap;"
+                                               options="{'no_edit': True, 'no_create': True}"/>
+<!--                                        <field name="part_id" domain="[('is_internal_partner','=', True)]"-->
+<!--                                               style="white-space: pre-wrap;"-->
+<!--                                               options="{'no_edit': True, 'no_create': True}"/>-->
+                                         <field name="part_id"
+                                               style="white-space: pre-wrap;"
+                                               options="{'no_edit': True, 'no_create': True}"/>
+                                        <field name="object_cost_id" options="{'no_edit': True, 'no_create': True}"
+                                               style="white-space: pre-wrap;"/>
+                                        <field name="analytic_account_id" options="{'no_edit': True, 'no_create': True}"
+                                               style="white-space: pre-wrap;"/>
+
+                                        <field name="order_id" invisible="1"/>
+                                        <field name="payment_type" invisible="1"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Refund Plan" name="pg_refund">
+                        <field name="refund_line_ids"
+                               context="{'tree_view_ref':'to_loan_management.loan_borrowing_refund_line_simple_tree_view','default_disbursement_id':active_id}"/>
+                    </page>
+                    <page string="Interest Computation Board" name="pg_interest">
+                        <field name="interest_line_ids" readonly="0"
+                               context="{'tree_view_ref':'to_loan_management.loan_borrowing_interest_line_simple_tree_view','default_disbursement_id':active_id}"/>
+                    </page>
+                    <page string="Disbursements Payments"
+                          name="pg_disbursement_pay">
+                        <field name="payment_match_ids">
+                            <tree>
+                                <field name="name" string="Payment Ref."/>
+                                <field name="matched_amount" string="Amount"/>
+                                <field name="payment_date"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="payment_state"/>
+                                <field name="description"/>
+                                <!--                                <button name="action_show_popup_choose_word_tpl" class="oe_highlight" string="Print"-->
+                                <!--                                        type="object"/>-->
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Purchase contract"
+                          name="pg_purchase_contract">
+                        <field name="purchase_order_ids" readonly="1">
+                            <!--<tree>
+                                <field name="name" string="Payment Ref." />
+                                <field name="matched_amount" string="Amount" />
+                                <field name="payment_date" />
+                                <field name="currency_id" invisible="1" />
+                            </tree>-->
+                        </field>
+                    </page>
+                    <page string="Invoice"
+                          name="pg_invoice">
+                        <field name="invoice_ids" readonly="1">
+                            <!--<tree>
+                                <field name="name" string="Payment Ref." />
+                                <field name="matched_amount" string="Amount" />
+                                <field name="payment_date" />
+                                <field name="currency_id" invisible="1" />
+                            </tree>-->
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <!-- tree (list) view -->
+        <record id="view_loan_borrow_disbursement_tree"
+                model="ir.ui.view">
+            <field name="name">loan.borrow.disbursement.tree</field>
+            <field name="model">loan.borrow.disbursement</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_tree_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="order_id"/>
+                    <field name="indenture"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_loan_borrow_disbursement_calendar"
+                model="ir.ui.view">
+            <field name="name">loan.borrow.disbursement.calendar</field>
+            <field name="model">loan.borrow.disbursement</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_calendar_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="order_id"/>
+                    <field name="loan_duration" required="1"/>
+                    <field name="date_end" required="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="loan_borrow_disbursement_pivot_view"
+                model="ir.ui.view">
+            <field name="name">loan.borrow.disbursement.pivot</field>
+            <field name="model">loan.borrow.disbursement</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_pivot_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="order_id" type="row"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view"
+                id="view_loan_borrow_disbursement_graph">
+            <field name="name">loan.borrow.disbursement.graph</field>
+            <field name="model">loan.borrow.disbursement</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_graph_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="order_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view"
+                id="view_loan_borrow_disbursement_search">
+            <field name="name">loan.borrow.disbursement.search</field>
+            <field name="model">loan.borrow.disbursement</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_disbursement_search_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="order_id"/>
+                    <field name="indenture"/>
+                </xpath>
+                <xpath expr="//group/filter[@name='grp_partner']"
+                       position="after">
+                    <filter string="Contract" name="grp_order"
+                            context="{'group_by':'order_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window"
+                id="loan_borrowing_disbursement_action">
+            <field name="name">Disbursements</field>
+            <field name="res_model">loan.borrow.disbursement</field>
+            <field name="view_mode">tree,form,pivot,graph,calendar</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first disbursement</p>
+            </field>
+        </record>
+
+        <menuitem id="loan_borrowing_disbursement_plan" groups="group_loan_management_user"
+                  name="Disbursements" parent="loan_borrowing_order_main_menu"
+                  sequence="20" action="loan_borrowing_disbursement_action"/>
+
+    </data>
+</odoo>

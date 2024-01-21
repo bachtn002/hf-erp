@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="stock_document_report_form" model="ir.ui.view">
+            <field name="name">Stock Document Report Form</field>
+            <field name="model">stock.document.report</field>
+            <field name="arch" type="xml">
+                <form string="Stock Document Report Form" create='0' delete='0' copy='0'>
+                    <header>
+                        <field name="has_data" invisible="1"/>
+                        <button name="action_report" type="object" string="Report" class="btn-primary"/>
+                        <button name="action_report_accountant" type="object" string="Report Accountant" class="btn-primary"/>
+                        <button name="action_export_excel" type="object" string="Export Excel"
+                                attrs="{'invisible': [('has_data', '=', False)]}"/>
+                    </header>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <group col="3">
+                                <group col="2">
+                                    <label for="from_date"/>
+                                    <field name="from_date" nolabel="1"/>
+                                    <label for="to_date"/>
+                                    <field name="to_date" nolabel="1"/>
+                                    <field name="x_all_internal"
+                                           groups="account.group_account_user,account.group_account_invoice,account.group_account_manager"/>
+                                </group>
+                                <group col="2">
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="location_ids" string="Locations" widget="many2many_tags"
+                                           domain="[('usage', '=', 'internal'), ('company_id','=', company_id)]"
+                                           options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                           attrs="{'invisible': [('x_all_internal','=', True)], 'required': [('x_all_internal','=', False)]}"/>
+                                    <field name="product_ids" string="Products" widget="many2many_tags"
+                                           options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                                    <field name="template_id" invisible="1" nolabel="1" groups="base.group_no_one"/>
+                                    <field name="state" required="1"/>
+                                </group>
+                            </group>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <field name="preview_html" nolabel="1" readonly="1" widget="ev_report_preview"/>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="rpt_stock_document_atc" model="ir.actions.act_window">
+            <field name="name">Stock Document Report Action</field>
+            <field name="res_model">stock.document.report</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_stock_document_report"
+                  name="Stock Document Report"
+                  action="rpt_stock_document_atc"
+                  parent="stock.menu_warehouse_report"
+                  sequence="36"/>
+
+        <menuitem id="menu_stock_document_stock_report"
+                  name="Stock Document Report"
+                  action="rpt_stock_document_atc"
+                  parent="ev_stock_report_birt.menu_report_stock"
+                  sequence="10"/>
+
+        <menuitem id="ev_stock_report_birt.menu_rpt_stock_document"
+                  active="False"/>
+
+        <menuitem id="ev_stock_report_birt.menu_rpt_stock_document_account"
+                  active="False"/>
+
+    </data>
+</odoo>

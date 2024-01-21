@@ -1,0 +1,167 @@
+<odoo>
+    <data>
+        <record id="stock_request_go_form_view" model="ir.ui.view">
+            <field name="name">Request Form</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_send" states="draft" string="Send" type="object" class="oe_highlight"/>
+                        <button name="action_back" type="object" string="Back" states="to_approve"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,to_approve,approve,reject,done,cancel"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <div>
+                                <h3 class="text-center">Request Go</h3>
+                                <h3 class="text-center">
+                                    <field name="name" readonly="1" required="1"
+                                           style="margin-right: 35%%; margin-left: 35%%; max-width: 30%%; font-style: italic;"
+                                           placeholder="Number"/>
+                                </h3>
+                            </div>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="warehouse_id"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly':[('state','!=','draft')],'invisible':[('type','!=','transfer')],'required':[('type','=','transfer')]}"/>
+                                <field name="warehouse_dest_id" required="1"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                />
+                                <field name="location_id" attrs="{'readonly':[('state','!=','draft')],
+                                            'invisible':[('type','=','transfer')],
+                                            'required':[('type','!=','transfer')]}"/>
+                                <field name="valuation_in_account_id" force_save="1"
+                                       attrs="{'invisible':[('type','!=','other_output')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="valuation_out_account_id" force_save="1"
+                                       attrs="{'invisible':[('type','!=','other_input')]}"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="account_expense_item"
+                                       attrs="{'invisible':[('type','=','transfer')]}" force_save="1"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="analytic_account_id"
+                                       attrs="{'invisible':[('type','=','transfer')]}"/>
+                            </group>
+                            <group>
+                                <field name="date_request" required="1" readonly="1"/>
+                                <field name="type"
+                                       groups="ev_stock_request.group_stock_coordinator,account.group_account_user"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="company_id" readonly="1" force_save="1"/>
+                                <field name="stock_request_imp_name" readonly="1"
+                                       attrs="{'invisible': [('stock_request_imp_name', '=', False)]}"/>
+                                <field name="note" placeholder="Note" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="field_binary_import" filename="field_binary_name"
+                                       attrs="{'invisible' : [('state', '!=', 'draft')]}"/>
+                                <field name="field_binary_name" invisible="1"/>
+                                <button name="download_template" type="object" string="Download Import Template"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="The import form is in xls or xlsx format"/>
+                                <button name="action_import_line" type="object" class="oe_highlight" string="Import"
+                                        attrs="{'invisible': [('field_binary_import', '=', False)]}"/>
+                                <field name="line_ids" model="tree"
+                                       attrs="{'readonly': [('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                               required="1" attrs="{'readonly' : [('parent.state','!=','draft')]}"/>
+                                        <field name="uom_id" options="{'no_create': 1, 'no_create_edit': 1}"
+                                               required="1" readonly="1" force_save="1"/>
+                                        <field name="qty" decoration-success="1"
+                                               attrs="{'readonly' : [('parent.state','!=','draft')]}"/>
+                                        <field name="qty_apply" required="1" decoration-danger="1"
+                                               attrs="{'readonly' : [('parent.state','!=','to_approve')], 'invisible':[('parent.type','!=','transfer')]}"/>
+                                        <field name="price_unit"
+                                               attrs="{'readonly' : [('parent.state','!=','draft')], 'invisible':[('parent.type','!=','other_input')],'required':[('parent.type','=','other_input')]}"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_request_go_tree_view" model="ir.ui.view">
+            <field name="name">Request Tree</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <tree default_order='name desc' decoration-info="state == 'draft'"
+                      decoration-muted="state in ('cancel')" decoration-success="state == 'to_approve'"
+                      decoration-danger="state not in ('cancel','done','draft')">
+                    <field name="name"/>
+                    <field name="warehouse_id"/>
+                    <field name="warehouse_dest_id"/>
+                    <field name="date_request"/>
+                    <field name="type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="stock_request_go_view_search" model="ir.ui.view">
+            <field name="name">Request Search</field>
+            <field name="model">stock.request</field>
+            <field name="arch" type="xml">
+                <search string="Request Search">
+                    <field name="name"/>
+                    <field name="warehouse_name"/>
+                    <field name="warehouse_dest_name"/>
+                    <separator/>
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                    <filter string="To Approve" name="to_approve" domain="[('state', '=', 'to_approve')]"/>
+                    <filter string="Approve" name="approve" domain="[('state', '=', 'approve')]"/>
+                    <filter string="Reject" name="reject" domain="[('state', '=', 'reject')]"/>
+                    <filter string="Done" name="done" domain="[('state', '=', 'done')]"/>
+                    <filter string="Cancel" name="cancel" domain="[('state', '=', 'cancel')]"/>
+                    <separator/>
+                    <filter string="Transfer" name="transfer" domain="[('type', '=', 'transfer')]"/>
+                    <filter string="Other Input" name="other_input" domain="[('type', '=', 'other_input')]"/>
+                    <filter string="Other Output" name="other_output" domain="[('type', '=', 'other_output')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Type" name="group_by_type" context="{'group_by': 'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!--yeucaudi-->
+        <record id="stock_request_go_action" model="ir.actions.act_window">
+            <field name="name">Request go</field>
+            <field name="res_model">stock.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="stock_request_go_view_search"/>
+            <field name="context">{'receive': False}</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('stock_request_go_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('stock_request_go_form_view')})]"/>
+
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Request go.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_stock_request_goods" parent="stock.menu_stock_root"
+                  name="Stock Request" groups="stock.group_stock_user" sequence="2"/>
+
+        <menuitem id="menu_stock_request_go_action" parent="menu_stock_request_goods" sequence="1"
+                  groups="stock.group_stock_user"
+                  action="stock_request_go_action"/>
+    </data>
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="stock_card_form_view" model="ir.ui.view">
+            <field name="name">Stock card</field>
+            <field name="model">stock.card</field>
+            <field name="arch" type="xml">
+                <form string="Stock card">
+                    <sheet>
+                        <group>
+                            <div>
+                                <h1 style="text-align: center;">THẺ KHO (SỔ KHO)</h1>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="company_id" readonly="1" force_save="1"/>
+                                <field name="location_id" domain="[('company_id','=',company_id)]"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="product_id" options="{'no_create': 1, 'no_create_edit': 1}" domain="[('type','!=','service')]"/>
+                                <field name="product_uom" readonly="1" force_save="1" attrs="{'invisible':[('product_uom', '=', False)]}"/>
+                            </group>
+                            <group>
+                                <field name="from_date"/>
+                                <field name="to_date"/>
+                                <field name="opening_stock" readonly="1" force_save="1"
+                                       attrs="{'invisible':[('opening_stock', '=', False)]}"/>
+                                <field name="closing_stock" readonly="1" force_save="1"
+                                       attrs="{'invisible':[('closing_stock', '=', False)]}"/>
+                            </group>
+                        </group>
+                        <button name="action_generate" type="object" string="Generate" class="oe_highlight"/> -
+                        <button name="action_print" type="object" string="Print PDF" class="oe_highlight"/> -
+                        <button name="action_print_excel" type="object" string="Print Excel" class="oe_highlight"/>
+                        <field name="move_lines" readonly="1" force_save="1">
+                            <tree decoration-info="qty_out == 0" decoration-danger="qty_in == 0">
+                                <field name="date"/>
+                                <field name="picking_name"/>
+                                <field name="reference"/>
+                                <field name="x_description"/>
+                                <field name="partner_name"/>
+                                <field name="note"/>
+                                <field name="qty_in" sum="Qty in"/>
+                                <field name="qty_out" sum="Qty out"/>
+                                <field name="qty_inventory"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_stock_card" model="ir.actions.act_window">
+            <field name="name">Stock card</field>
+            <field name="res_model">stock.card</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock_card_form_view"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="menu_sc_stock_card" name="Stock Card" groups="stock.group_stock_user"
+                  parent="stock.menu_warehouse_report" sequence="15"
+                  action="action_stock_card"/>
+    </data>
+</odoo>

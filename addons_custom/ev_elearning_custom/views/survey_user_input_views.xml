@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="survey_user_input_view_tree_inherit">
+            <field name="name">survey.user_input.view.tree</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='deadline']" position="after">
+                    <field name="x_date_expired"/>
+                    <field name="x_certificate_state"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_user_input_view_form_inherit">
+            <field name="name">survey.user_input.view.form</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/field[@name='user_input_line_ids']" position="before">
+                    <group>
+                        <field name="x_date_expired" attrs="{'readonly': True}"/>
+                        <field name="x_certificate_state" attrs="{'readonly': True}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

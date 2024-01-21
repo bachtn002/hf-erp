@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="stock_quant_current_xlsx"
+            model="stock.quant.current"
+            string="In excel"
+            report_type="xlsx"
+            name="ev_stock_report_birt.stock_quant_current_xlsx"
+            file="ev_stock_report_birt.stock_quant_current_xlsx"
+            print_report_name="'Báo cáo tồn kho hiện tại'"
+            menu="False"
+    />
+</odoo>

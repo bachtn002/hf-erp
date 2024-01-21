@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_template_stamp_package_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_print_stamp_product.print_stamp_template" t-lang="en_US">
+                          <div class="page" style="font-size:40px; font-family: Arial;">
+                            <div style="padding-top: 85px; transform: rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);">
+                                <div class="logo" style="text-align:center; padding-bottom:7px ">
+                                    <img height="auto" width="335px" style="object-fit: cover; position: relative;" t-att-src="'/ev_stock_package/static/img/Logo-Homefarm-chuan-R-den.png'" class=""/>
+                                </div>
+
+                                <div class="barcode" style="margin-left: -70px; margin-bottom:2px;text-align:center ;height:  ;background-color:  ">
+                                    <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 890, 135)" style="width:; height:"/>
+                                    <span style="margin-left: 70px; font-size:37px; letter-spacing: 6px">
+                                        <t t-esc="o.name"/>
+                                    </span>
+                                </div>
+
+                                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height:45px; font-weight: bold">Kho nhận:
+                                        <t t-if="len(o.stock_transfer_id.warehouse_dest_name) &lt; 23">
+                                            <span style="font-weight: normal">
+                                                <t t-esc="o.stock_transfer_id.warehouse_dest_name"/>
+                                            </span>
+                                        </t>
+                                        <t t-else="">
+                                            <span style="font-size:32px; font-weight: normal">
+                                                <t t-esc="o.stock_transfer_id.warehouse_dest_name"/>
+                                            </span>
+                                        </t>
+                                </div>
+
+                                <div style="line-height:45px; font-weight:bold">Số phiếu ĐC:
+                                    <span style="font-weight: normal">
+                                        <t t-esc="o.stock_transfer_id.name"/>
+                                    </span>
+                                </div>
+
+                                <div style="line-height:45px; font-weight:bold">Ngày đóng gói:
+                                    <span style="font-weight: normal">
+                                        <t t-esc="o.date_packaged.date().strftime('%d/%m/%Y')"/>
+                                    </span>
+                                </div>
+
+                                <div style="line-height:45px; font-weight:bold; padding-bottom: 35px">Khối lượng:
+                                    <t t-esc="o.weight"/>
+                                    <span style="padding-left: 3px;">kg</span>
+                                </div>
+                            </div>
+                            <div style="">
+                                <div class="logo" style="text-align:center; padding-bottom:7px ">
+                                    <img height="auto" width="335px" style="object-fit: cover; position: relative;" t-att-src="'/ev_stock_package/static/img/Logo-Homefarm-chuan-R-den.png'" class=""/>
+                                </div>
+
+                                <div class="barcode" style="margin-left: -70px; margin-bottom:2px;text-align:center ;height:  ;background-color:  ">
+                                    <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 890, 135)" style=""/>
+                                    <span style="margin-left: 70px; font-size:37px; letter-spacing: 6px">
+                                        <t t-esc="o.name"/>
+                                    </span>
+                                </div>
+
+                                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height:45px; font-weight: bold">Kho nhận:
+                                        <t t-if="len(o.stock_transfer_id.warehouse_dest_name) &lt; 23">
+                                            <span style="font-weight: normal">
+                                                <t t-esc="o.stock_transfer_id.warehouse_dest_name"/>
+                                            </span>
+                                        </t>
+                                        <t t-else="">
+                                            <span style="font-size:32px; font-weight: normal">
+                                                <t t-esc="o.stock_transfer_id.warehouse_dest_name"/>
+                                            </span>
+                                        </t>
+                                </div>
+
+                                <div style="line-height:45px; font-weight:bold">Số phiếu ĐC:
+                                    <span style="font-weight: normal">
+                                        <t t-esc="o.stock_transfer_id.name"/>
+                                    </span>
+                                </div>
+
+                                <div style="line-height:45px; font-weight:bold">Ngày đóng gói:
+                                    <span style="font-weight: normal">
+                                        <t t-esc="o.date_packaged.date().strftime('%d/%m/%Y')"/>
+                                    </span>
+                                </div>
+
+                                <div style="line-height:45px; font-weight:bold;">Khối lượng:
+                                    <t t-esc="o.weight"/>
+                                    <span style="padding-left: 3px;">kg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="paperformat_qweb_stamp_package" model="report.paperformat">
+            <field name="name">80mm Stamp Package</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">75</field>
+            <field name="page_width">55</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">180</field>
+        </record>
+
+        <record id="qweb_stamp_package" model="ir.actions.report">
+            <field name="name">Stamp Package</field>
+            <field name="model">stock.package.transfer</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ev_stock_package.report_template_stamp_package_view</field>
+            <field name="report_file">ev_stock_package.report_template_stamp_package_view</field>
+            <field name="paperformat_id" ref="ev_stock_package.paperformat_qweb_stamp_package"/>
+            <field name="print_report_name">'Stamp Package- %s' % (object.name)</field>
+        </record>
+
+    </data>
+</odoo>

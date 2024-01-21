@@ -1,0 +1,833 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_stock_picking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-16 06:33+0000\n"
+"PO-Revision-Date: 2021-12-16 06:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Transfers %s: You cannot validate these transfers if no quantities are reserved nor done. To force these transfers, switch in edit more and encode the done quantities."
+msgstr ""
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Transfers %s: You need to supply a Lot/Serial number for products %s."
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,print_report_name:ev_stock_picking.qweb_stock_picking_bill_transfer
+msgid "'Picking Bill Transfer- %s' % (object.name)"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,print_report_name:ev_stock_picking.qweb_stock_picking_in
+#: model:ir.actions.report,print_report_name:ev_stock_picking.qweb_stock_picking_in_user
+msgid "'Picking In - %s' % (object.name)"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,print_report_name:ev_stock_picking.qweb_stock_picking_out
+msgid "'Picking Out - %s' % (object.name)"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,print_report_name:ev_stock_picking.qweb_stock_picking_bill
+msgid "'Picking bill - %s' % (object.name)"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "(Ký, họ tên)"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "- Họ và tên người giao:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Họ và tên người nhận hàng:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Lý do xuất:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "- Nhập tại kho:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Số chứng từ gốc kèm theo:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Số điện thoại:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Tham chiếu:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Tổng số tiền (Viết bằng chữ):"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Xuất tại kho (ngăn lô):"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Địa chỉ (bộ phận):"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "- Địa điểm:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "<b style=\"margin-left: 25px\">PHIẾU NHẬP KHO</b>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "<b style=\"margin-left: 25px\">PHIẾU XUẤT KHO</b>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "<b>Cộng</b>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid ""
+"<b>Kế toán trưởng</b>\n"
+"                                        <br/>\n"
+"                                        <b>(Hoặc bộ phận có nhu cầu nhập)</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "<b>Mẫu số: 01 - VT</b>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid ""
+"<b>Người giao hàng</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid ""
+"<b>Người giao</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid ""
+"<b>Người lập phiếu</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid ""
+"<b>Người nhận hàng</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid ""
+"<b>Người nhận</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid ""
+"<b>Thủ kho</b>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "<i>(Ban hành theo Thông tư số: 200/2014/TT-BTC</i>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "<i>Ngày 22/12/2014 của Bộ Tài chính)</i>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid ""
+"<span style=\"text-align: center; font-weight: bold;font-size:20px;\">\n"
+"                                        Phiếu nhập điều chuyển\n"
+"                                    </span>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid ""
+"<span style=\"text-align: center; font-weight: bold;font-size:20px;\">\n"
+"                                        Phiếu xuất điều chuyển\n"
+"                                    </span>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid ""
+"<span style=\"text-align: center; font-weight: bold;font-size:20px;\">\n"
+"                                    Phiếu nhập kho\n"
+"                                </span>"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_company__x_allow_backorder
+msgid "Allow Backorder"
+msgstr "Cho phép tạo dở dang"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_config_settings__x_allow_backorder
+msgid "Allow backorder"
+msgstr "Cho phép tạo dở dang"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.product_product_print_stamp_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.production_lot_print_stamp_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__create_uid
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__create_uid
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__create_uid
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__create_date
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__create_date
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__create_date
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "Có: 331"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_journal_general__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_template__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_company__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_production_lot__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Effective Date"
+msgstr "Ngày hoàn thành"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__expiration_date
+msgid "Expiration Date"
+msgstr "Hạn sử dụng"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_journal_general__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_move__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_template__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_company__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_production_lot__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields.selection,name:ev_stock_picking.selection__stock_picking__x_type_transfer__in_transfer
+msgid "In Transfer"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__journal_general_ids
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_account_journal_general_form_inherit
+msgid "Journal general"
+msgstr "Sổ nhật ký chung"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid "Kho nhận:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid "Kho xuất:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_journal_general____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_template____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_company____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_production_lot____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__write_uid
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__write_uid
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__write_uid
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__write_date
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__write_date
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__write_date
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_print_stamp__production_lot_ids
+msgid "Lot detail"
+msgstr "Chi tiết"
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lô/Số serial"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "Mã sản phẩm"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid "NCC:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "Ngày"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid "Ngày nhập"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid "Ngày xuất"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.actions.act_window,help:ev_stock_picking.action_picking_tree_in
+msgid "No Picking In found. Let's create one!"
+msgstr "Không phiếu nhập kho. Hãy tạo một phiếu nhập kho!"
+
+#. module: ev_stock_picking
+#: model_terms:ir.actions.act_window,help:ev_stock_picking.action_picking_tree_int
+msgid "No Picking Internal found. Let's create one!"
+msgstr "Không phiếu dịch chuyển nội bộ. Hãy tạo một phiếu dịch chuyển nội bộ!"
+
+#. module: ev_stock_picking
+#: model_terms:ir.actions.act_window,help:ev_stock_picking.action_picking_tree_out
+msgid "No Picking Out found. Let's create one!"
+msgstr "Không phiếu xuất kho. Hãy tạo một phiếu xuất kho!"
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid "Not enough goods! Product \"%s\" is not in stock \"%s\":%s "
+msgstr "Không đủ hàng! Sản phẩm \"%s\" không đủ hàng trong kho \"%s\":%s "
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "Nợ: 1561"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields.selection,name:ev_stock_picking.selection__stock_picking__x_type_transfer__out_transfer
+msgid "Out Transfer"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.actions.act_window,name:ev_stock_picking.action_picking_tree_in
+msgid "Picking In"
+msgstr "Phiếu Nhập kho"
+
+#. module: ev_stock_picking
+#: model:ir.actions.act_window,name:ev_stock_picking.action_picking_tree_int
+msgid "Picking Internal"
+msgstr "Phiếu Điều chỉnh nội bộ"
+
+#. module: ev_stock_picking
+#: model:ir.actions.act_window,name:ev_stock_picking.action_picking_tree_out
+msgid "Picking Out"
+msgstr "Phiếu Xuất kho"
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid "Please add some items to move."
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Print"
+msgstr "In bill nhập hàng"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Print Picking In"
+msgstr "In Phiếu Nhập hàng(kế toán)"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Print Picking In User"
+msgstr "In Phiếu Nhập hàng"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Print Picking Out"
+msgstr "In Phiếu Giao hàng"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.product_product_print_stamp_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.production_lot_print_stamp_form_view
+msgid "Print Stamps"
+msgstr "In Nhãn"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Print bill transef"
+msgstr "In bill điều chuyển"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.product_product_print_stamp_form_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.production_lot_print_stamp_form_view
+msgid "Print stamp"
+msgstr "In Nhãn"
+
+#. module: ev_stock_picking
+#: model:ir.actions.act_window,name:ev_stock_picking.action_stock_picking_print_stamp
+msgid "Print stamps"
+msgstr "In Nhãn"
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_product_print_stamp__product_ids
+msgid "Product detail"
+msgstr "Chi tiết"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.production_lot_print_stamp_form_view
+msgid "Production lots"
+msgstr "Chi tiết"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.product_product_print_stamp_form_view
+msgid "Products"
+msgstr "Chi tiết"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.stock_move_kanban_inherit
+msgid "Register lots, packs, location"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "STT"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__scheduled_date
+msgid "Scheduled Date"
+msgstr "Ngày dự kiến"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,help:ev_stock_picking.field_stock_picking__scheduled_date
+msgid ""
+"Scheduled time for the first part of the shipment to be processed. Setting "
+"manually a value here would set it as expected date for all the stock moves."
+msgstr ""
+"Thời gian dự kiến cho phần đầu tiên của lô hàng được xử lý. Thiết lập thủ "
+"công một giá trị tại đây sẽ thiết lập nó như là ngày dự kiến cho tất cả dịch"
+" chuyển kho."
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_stock_picking_production_lot_form
+msgid "Stamp printing"
+msgstr "In Nhãn"
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,name:ev_stock_picking.qweb_stock_picking_bill_transfer
+msgid "Stock Picking Bill Transfer"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,name:ev_stock_picking.qweb_stock_picking_in
+#: model:ir.actions.report,name:ev_stock_picking.qweb_stock_picking_in_user
+#: model:ir.ui.menu,name:ev_stock_picking.menu_stock_picking_in
+msgid "Stock Picking In"
+msgstr "Phiếu Nhập kho"
+
+#. module: ev_stock_picking
+#: model:ir.ui.menu,name:ev_stock_picking.menu_stock_picking_int
+msgid "Stock Picking Internal"
+msgstr "Phiếu Điều chỉnh nội bộ"
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,name:ev_stock_picking.qweb_stock_picking_out
+#: model:ir.ui.menu,name:ev_stock_picking.menu_stock_picking_out
+msgid "Stock Picking Out"
+msgstr "Phiếu Xuất kho"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_account_journal_general__picking_id
+msgid "Stock Picking Ref"
+msgstr "Phiếu dịch chuyển kho"
+
+#. module: ev_stock_picking
+#: model:ir.actions.report,name:ev_stock_picking.qweb_stock_picking_bill
+msgid "Stock Picking bill"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid "Sản phẩm"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid "Số PO:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "Số lượng"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid "Số phiếu nhập"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_view
+msgid "Số phiếu nhập:"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_bill_transfer_view
+msgid "Số phiếu xuất"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "Theo chứng từ"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "Thành tiền"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "Thực nhập"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "Thực xuất"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid "Transfers %s: Please add some items to move."
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.actions.act_window,help:ev_stock_picking.action_picking_tree_in
+#: model_terms:ir.actions.act_window,help:ev_stock_picking.action_picking_tree_int
+#: model_terms:ir.actions.act_window,help:ev_stock_picking.action_picking_tree_out
+msgid "Transfers allow you to move products from one location to another."
+msgstr ""
+"Chuyển hàng cho phép bạn di chuyển sản phẩm từ địa điểm này sang địa điểm "
+"khác."
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__x_type_transfer
+msgid "Type Transfer"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid ""
+"Tên, nhãn hiệu, quy cách, phẩm chất\n"
+"                                                vật tư, dụng cụ,sản phẩm, hàng hóa"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__x_warehouse_in_id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__x_warehouse_in_name
+msgid "Warehouse In"
+msgstr "Kho nhập"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__x_warehouse_out_id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__x_warehouse_out_name
+msgid "Warehouse Out"
+msgstr "Kho xuất"
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_product_product_print_stamp
+msgid "Wizard product print stamps"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_production_lot_print_stamp
+msgid "Wizard production lot print stamps"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_stock_picking__x_check_warehouse
+msgid "X Check Warehouse"
+msgstr ""
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid "You can not delete"
+msgstr ""
+
+#. module: ev_stock_picking
+#: code:addons/ev_stock_picking/models/stock_picking.py:0
+#, python-format
+msgid "You need to supply a Lot/Serial number for products %s."
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "Yêu cầu"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_account_journal_general
+msgid "account.journal.general"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__barcode
+msgid "barcode"
+msgstr "Mã vạch"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__default_code
+msgid "default code"
+msgstr "Mã nội bộ"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__name
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__name
+msgid "name"
+msgstr "Tên sản phẩm"
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__number_of_codes
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__number_of_codes
+msgid "number of codes"
+msgstr "Số lượng in mã"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "năm"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__product_id
+msgid "product"
+msgstr "Sản phẩm"
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_product_line
+msgid "product.line"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model,name:ev_stock_picking.model_production_lot_line
+msgid "production.lot.line"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "tháng"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model:ir.model.fields,field_description:ev_stock_picking.field_product_line__product_uom_id
+#: model:ir.model.fields,field_description:ev_stock_picking.field_production_lot_line__product_uom_id
+msgid "uom_qty"
+msgstr "Đơn vị"
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+msgid "Đơn giá"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_user_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_in_view
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.report_template_stock_picking_out_view
+msgid "Đơn vị tính"
+msgstr ""
+
+#. module: ev_stock_picking
+#: model_terms:ir.ui.view,arch_db:ev_stock_picking.view_picking_form_inherit_button_header
+msgid "Print Bill picking return"
+msgstr "In Bill trả hàng"

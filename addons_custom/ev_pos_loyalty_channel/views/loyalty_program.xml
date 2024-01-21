@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="view_loyalty_program_form" model="ir.ui.view">
+            <field name="name">loyalty.program.form.inherit.ev_pos_loyalty_channel</field>
+            <field name="model">loyalty.program</field>
+            <field name="inherit_id" ref="pos_loyalty.view_loyalty_program_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook/page[last()]" position="after">
+                    <page string="Allow Pos Channels">
+                        <field name="x_pos_channel_ids">
+                            <tree create="0" edit="0">
+                                <field name="code"/>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

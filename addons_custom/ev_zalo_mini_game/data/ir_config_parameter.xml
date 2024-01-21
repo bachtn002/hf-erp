@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="syntax_mini_game" model="ir.config_parameter">
+            <field name="key">syntax_mini_game</field>
+            <field name="value">#mini_game</field>
+        </record>
+
+        <record id="url_mini_game" model="ir.config_parameter">
+            <field name="key">url_mini_game</field>
+            <field name="value">https://minigame.homefarm.vn/game/gameH</field>
+        </record>
+    </data>
+</odoo>

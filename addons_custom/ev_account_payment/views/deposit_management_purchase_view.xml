@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="deposit_management_purchase_order_tree" model="ir.ui.view">
+            <field name="name">deposit.management.purchase.order.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="arch" type="xml">
+                <tree string="Purchase Order" create="false" delete="false" edit="false">
+                    <field name="message_unread" invisible="1"/>
+                    <field name="partner_ref" optional="hide"/>
+                    <field name="name" string="Reference" readonly="1"/>
+                    <field name="origin" optional="show"/>
+                    <field name="date_order" invisible="not context.get('quotation_only', False)" optional="show"/>
+                    <field name="date_approve" invisible="context.get('quotation_only', False)" optional="show"/>
+                    <field name="partner_id" readonly="1"/>
+                    <field name="company_id" readonly="1" options="{'no_create': True}"
+                        groups="base.group_multi_company" optional="show"/>
+                    <field name="date_planned" invisible="context.get('quotation_only', False)" optional="show"/>
+                    <field name="user_id" optional="show"/>
+                    <field name="x_deposit_amount"/>
+                    <field name="x_allocated_amount"/>
+                    <field name="x_remaining_amount"/>
+                    <field name="amount_untaxed" sum="Total Untaxed amount" string="Untaxed" widget="monetary" optional="hide"/>
+                    <field name="amount_total" sum="Total amount" widget="monetary" optional="show"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="x_status_deposit" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+    <!--        form-->
+        <record id="deposit_management_purchase_order_form" model="ir.ui.view">
+            <field name="name">deposit.management.purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field eval="1000" name="priority"/>
+            <field name="arch" type="xml">
+                <form string="Deposit Management">
+                    <header>
+                        <button name="action_allocate" class="oe_highlight" string="Allocate" type="object"
+                        attrs="{'invisible': [('x_status_deposit', '=', 'allocated')]}"/>
+                        <field name="x_status_deposit" widget="statusbar" statusbar_visible="deposit,allocating,allocated" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <field name="state" invisible="1"/>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_view_invoice"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible':['|', ('invoice_count', '=', 0), ('state', 'in', ('draft','sent','to approve'))]}">
+                                <field name="invoice_count" widget="statinfo" string="Vendor Bills"/>
+                                <field name='invoice_ids' invisible="1"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <span class="o_form_label" attrs="{'invisible': [('state','not in',('draft','sent'))]}">
+                                Request for Quotation
+                            </span>
+                            <span class="o_form_label" attrs="{'invisible': [('state','in',('draft','sent'))]}">Purchase
+                                Order
+                            </span>
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" widget="res_partner_many2one"
+                                       context="{'res_partner_search_mode': 'supplier', 'show_vat': True}"
+                                       placeholder="Name, TIN, Email, or Reference"
+                                />
+                                <field name="partner_ref"/>
+                                <field name="currency_id" groups="base.group_multi_currency" force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="date_order" attrs="{'invisible': [('state','=','purchase')]}"/>
+                                <field name="date_approve" attrs="{'invisible': [('state','!=','purchase')]}"/>
+                                <field name="origin" attrs="{'invisible': [('origin','=',False)]}"/>
+                                <field name="company_id" groups="base.group_multi_company"
+                                       options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <notebook >
+                            <page string="Payment Lines">
+                                <field name="x_payment_line_ids" readonly="1" invisible="1">
+                                    <tree string="Payment card line" editable="bottom">
+                                        <field name="name" required="1" string="Interpretation" style="white-space: pre-wrap;"/>
+                                        <field name="destination_account_id" style="white-space: pre-wrap;"/>
+                                        <field name="account_id" style="white-space: pre-wrap;"/>
+                                        <field name="value"/>
+                                        <field name="value_natural_currency"/>
+                                        <field name="currency_id" invisible="1" force_save="1"/>
+                                        <field name="rate" invisible="1" force_save="1"/>
+                                        <field name="payment_id"/>
+                                    </tree>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="x_deposit_amount"/>
+                                    <field name="x_allocated_amount"/>
+                                    <field name="x_remaining_amount"/>
+                                    <field name="amount_untaxed" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_tax" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                </group>
+                                <field name="notes" class="oe_inline"
+                                       placeholder="Define your terms and conditions ..."/>
+                                <div class="oe_clear"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="deposit_management_purchase_order_action" model="ir.actions.act_window">
+            <field name="name">Deposit Management Purchase Order</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">
+                [('x_status_deposit','in',('deposit','allocating','allocated'))]
+            </field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('deposit_management_purchase_order_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('deposit_management_purchase_order_form')})
+                ]"/>
+        </record>
+
+        <menuitem id="menu_deposit_management_purchase_order" name="Deposit Management Purchase Order" parent="account.menu_finance_payables"
+                  sequence="100"
+                  groups="account.group_account_user,account.group_account_manager"
+                  action="deposit_management_purchase_order_action"/>
+    </data>
+</odoo>

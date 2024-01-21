@@ -1,0 +1,138 @@
+<odoo>
+    <data>
+        <record id="type_send_zns_view_tree" model="ir.ui.view">
+            <field name="name">Type Send ZNS Tree</field>
+            <field name="model">type.send.zns</field>
+            <field name="arch" type="xml">
+                <tree string="Type Send ZNS Tree">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+        <record id="type_send_zns__view_from" model="ir.ui.view">
+            <field name="name">Type Send ZNS Form</field>
+            <field name="model">type.send.zns</field>
+            <field name="arch" type="xml">
+                <form string="Type Send ZNS Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="token" style="word-break: break-word;"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="type_send_zns_view_search" model="ir.ui.view">
+            <field name="name">Type Send ZNS</field>
+            <field name="model">type.send.zns</field>
+            <field name="arch" type="xml">
+                <search string="Type Send ZNS Search">
+                    <field name="name" filter_domain="[('name','ilike',self)]"/>
+                    <field name="code" filter_domain="[('app_id','ilike',self)]"/>
+                    <!--                    <field name="secret_key" filter_domain="[('secret_key','ilike',self)]"/>-->
+                </search>
+            </field>
+        </record>
+
+        <record id="type_send_zns_action" model="ir.actions.act_window">
+            <field name="name">Type Send ZNS</field>
+            <field name="res_model">type.send.zns</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="type_send_zns_view_search"/>
+        </record>
+
+        <record id="type_send_zns_view_kanban" model="ir.ui.view">
+            <field name="name">Type Send ZNS Kanban</field>
+            <field name="model">type.send.zns</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors o_stock_kanban" create="0">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div name="type_send_zns">
+                                <div>
+                                    <div t-attf-class="o_kanban_card_header">
+                                        <div class="o_kanban_card_header_title">
+                                            <div class="o_primary" t-if="!selection_mode">
+                                                <a type="object" name="get_send_zns_action_type">
+                                                    <field name="name"/>
+                                                </a>
+                                            </div>
+                                            <div class="o_primary" t-if="selection_mode">
+                                                <field name="name"/>
+                                            </div>
+                                        </div>
+                                        <div class="o_kanban_manage_button_section" t-if="!selection_mode">
+                                            <a class="o_kanban_manage_toggle_button" href="#">
+                                                <i class="fa fa-ellipsis-v" role="img" aria-label="Manage"
+                                                   title="Manage"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="container o_kanban_card_content" t-if="!selection_mode">
+                                        <div class="row">
+                                            <div class="col-6 o_kanban_primary_left">
+                                                <button class="btn btn-primary" name="get_send_zns_action_type"
+                                                        type="object">
+                                                    <span>View Details</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container o_kanban_card_manage_pane dropdown-menu" role="menu">
+                                    <div class="row">
+                                        <div class="col-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div role="menuitem" class="o_kanban_card_manage_title">
+                                                <span>View</span>
+                                            </div>
+                                            <div role="menuitem">
+                                                <a name="get_send_zns_action_type" type="object">All</a>
+                                            </div>
+                                            <div role="menuitem">
+                                                <a name="get_action_zns_tree_draft" type="object">Draft</a>
+                                            </div>
+                                            <div role="menuitem">
+                                                <a name="get_action_zns_tree_queue" type="object">Queue</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 o_kanban_card_manage_section o_kanban_manage_new">
+                                            <div role="menuitem" class="o_kanban_card_manage_title">
+                                            </div>
+                                            <div role="menuitem">
+                                                <a name="get_action_zns_tree_error" type="object">Error</a>
+                                            </div>
+                                            <div role="menuitem">
+                                                <a name="get_action_zns_tree_quota" type="object">Quota</a>
+                                            </div>
+                                            <div role="menuitem">
+                                                <a name="get_action_zns_tree_done" type="object">Done</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <record id="type_send_zns_kanban_action" model="ir.actions.act_window">
+            <field name="name">Type Send ZNS Kanban</field>
+            <field name="res_model">type.send.zns</field>
+            <field name="view_mode">kanban</field>
+            <field name="search_view_id" ref="type_send_zns_view_search"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<odoo noupdate="1">
+<!--    <record id="delivery_management_user" model="ir.rule">-->
+<!--        <field name="name">Delivery Management User</field>-->
+<!--        <field name="model_id" ref="model_delivery_management"/>-->
+<!--        <field name="domain_force">['|', '|',('create_uid', '=', user.id),('store_id', '=', user.x_pos_shop_ids.ids),-->
+<!--            ('view_all', '=', user.x_view_all_shop)]-->
+<!--        </field>-->
+<!--        <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>-->
+<!--    </record>-->
+    <!--    <record id="delivery_management_manager" model="ir.rule">-->
+    <!--        <field name="name">Delivery Management Manager</field>-->
+    <!--        <field name="model_id" ref="model_delivery_management"/>-->
+    <!--        <field name="domain_force">[(1, '=', 1)]-->
+    <!--        </field>-->
+    <!--        <field name="groups" eval="[(4, ref('stock.group_stock_manager'))]"/>-->
+    <!--    </record>-->
+</odoo>

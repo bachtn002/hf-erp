@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name="PromotionPopup" owl="1">
+		<div role="dialog" class="modal-dialog">
+			<div class="popup popup-text">
+				<header class="title">
+					<t t-esc ="props.title"/>
+				</header>
+                <main class="body">
+					<p t-if="state.promotions.length &lt; 1">Data not found.</p>
+                    <PromotionList t-if="state.promotions.length > 0"
+                                   promotions="state.promotions"
+                                   onClickPromotionItem="handleOnClickPromotionItem"/>
+				</main>
+                <footer class="footer">
+          			<div class="button cancel" t-on-click="cancel">
+            			<t t-esc="props.cancelText"/>
+					</div>
+                    <t t-if="state.promotions.length &gt; 0">
+            			<div class="button confirm" t-on-click="onClickSelect">
+              				<t t-esc="props.selectOneText"/>
+					  	</div>
+                        <div class="button confirm" t-on-click="onClickSelectAll">
+              				<t t-esc="props.selectAllText"/>
+					  	</div>
+					</t>
+				</footer>
+			</div>
+        </div>
+	</t>
+
+</templates>

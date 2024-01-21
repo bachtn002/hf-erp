@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="stock_transfer_form_delivery_inherit">
+            <field name="name">stock_transfer_form_delivery_inherit</field>
+            <field name="model">stock.transfer</field>
+            <field name="inherit_id" ref="ev_stock_transfer.stock_transfer_from_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='warehouse_dest_id']" position="after">
+                    <field name="x_ship_type" readonly="1" force_save="1"/>
+                    <field name="x_driver" readonly="1"
+                           attrs="{'invisible': [('x_ship_type', '!=', 'internal')]}"
+                           force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="stock_transfer_to_delivery_inherit">
+            <field name="name">stock_transfer_to_delivery_inherit</field>
+            <field name="model">stock.transfer</field>
+            <field name="inherit_id" ref="ev_stock_transfer.stock_transfer_to_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='warehouse_dest_id']" position="after">
+                    <field name="x_ship_type" readonly="1" force_save="1"/>
+                    <field name="x_driver" readonly="1"
+                           attrs="{'invisible': [('x_ship_type', '!=', 'internal')]}"
+                           force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

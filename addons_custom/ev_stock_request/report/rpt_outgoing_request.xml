@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HoiHD -->
+<odoo>
+    <data>
+        <template id="outgoing_request_report_id">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="ev_stock_request.ev_internal_stock_request" t-lang="en_US">
+                        <div class="page" style="font-size: 14px; font-family: Times New Roman">
+                            <style>
+                                .table {
+                                border-collapse: collapse;
+                                border-color: black;
+                                width:100%
+                                }
+                                .table > tbody > tr > th {border: 1px solid black; padding: 5px;}
+                                .table > tbody > tr > td {border: 1px solid black; padding: 5px;}
+                                .table > tr {border: 1px solid black; padding: 5px;}
+                                .table > tr > td {border: 1px solid black; padding: 5px;}
+                            </style>
+                            <div style="width: 100%; font-size:13px;">
+                                <div style="width: 50%; float: left;padding-right:20px;">
+                                    <p>
+                                        <span t-field="o.company_id"/>
+                                    </p>
+                                    <p>
+                                        ĐT:
+                                        <span t-field="o.company_id.phone"/>
+                                    </p>
+                                    <p>*****************</p>
+                                </div>
+                                <div style="width: 50%; float: left;padding-left:20px;text-align:center;">
+                                    <strong>Mẫu số 01 - VT</strong>
+                                    <br/>
+                                    Ban hành theo thông tư số 15/2006/TT-BTC
+                                    <br/>
+                                    Ngày 20/03/2006 của Bộ Trưởng BTC
+                                </div>
+                            </div>
+                            <br clear="both"/>
+                            <div>
+                                <div style="text-align: center;margin: 0px; padding: 0px;padding-top:70px;">
+                                    <h2>ORDER HÀNG</h2>
+                                    <p class="text-center" style="font-style: italic;">
+                                        Ngày
+                                        <span t-field="o.date" t-options="{'format': 'dd'}"/>
+                                        tháng
+                                        <span t-field="o.date" t-options="{'format': 'MM'}"/>
+                                        năm
+                                        <span t-field="o.date" t-options="{'format': 'yyyy'}"/>
+                                    </p>
+                                    <p class="text-center" style="font-style: italic;">
+                                        Số:
+                                        <span t-field="o.name"/>
+                                    </p>
+                                </div>
+                                <br clear="both"/>
+                                <div style="font-size: 13px; width: 100%; margin:0px; padding: 0px;">
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td><b>Kho đến:</b>
+                                                <span t-field="o.dest_warehouse_id.code"/>
+                                                -
+                                                <span t-field="o.dest_warehouse_id.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Kho nhận yêu cầu:</b>
+                                                <span t-field="o.warehouse_id.code"/>
+                                                -
+                                                <span t-field="o.warehouse_id.name"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br clear="both"/>
+                                <div style="font-size: 13px;">
+                                    <table style="margin-bottom: 3px; border-bottom: solid 1px #000;"
+                                           class="table table-bordered mt32">
+                                        <tr style="padding:1px; margin: 1px;text-align: left;">
+                                            <th class="text-center" width="5%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">STT</p>
+                                            </th>
+                                            <th class="text-center" width="15%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Mã số</p>
+                                            </th>
+                                            <th class="text-center" width="30%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Tên sản phẩm</p>
+                                            </th>
+                                            <th class="text-center" width="10%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Đơn vị</p>
+                                            </th>
+                                            <th class="text-center" width="8%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Số lượng</p>
+                                            </th>
+                                            <th class="text-center" width="8%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">SL Xác nhận</p>
+                                            </th>
+                                            <th class="text-center" width="12%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">Lot/Serial</p>
+                                            </th>
+                                            <th class="text-center" width="12%" style="padding:1px; margin: 1px;">
+                                                <p style="padding:1px; margin: 1px;">HSD</p>
+                                            </th>
+                                        </tr>
+                                        <t t-set="number" t-value="0"/>
+                                        <tr t-foreach="o.line_ids" t-as="line" style="padding:1px; margin: 1px;">
+                                            <t t-set="number" t-value="number+1"/>
+                                            <td style="text-align: center;">
+                                                <t t-esc="number"/>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <span t-field="line.product_id.default_code"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.product_id.product_tmpl_id.name"/>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <span t-field="line.product_uom.name"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="line.qty"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="line.qty_confirm"/>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <t t-set="sum_qty" t-value="0"/>
+                                            <t t-set="sum_qty_confirm" t-value="0"/>
+                                            <p t-foreach="o.line_ids" t-as="line">
+                                                <t t-set="sum_qty" t-value="sum_qty+line.qty"/>
+                                                <t t-set="sum_qty_confirm" t-value="sum_qty_confirm+line.qty_confirm"/>
+                                            </p>
+                                            <td colspan="4" style="text-align: right;">
+                                                <strong>Tổng cộng</strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <strong>
+                                                    <t t-esc="sum_qty"/>
+                                                </strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <strong>
+                                                    <t t-esc="sum_qty_confirm"/>
+                                                </strong>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br clear="both"/>
+                                <div class="margin-top:30px;"/>
+                                <p>Ghi chú:</p>
+                                <span t-field="o.note"/>
+                                <div style="text-align: right;padding-right: 50px;">Ngày .......... tháng .......... năm ..........</div>
+                                <br clear="both"/>
+                                <div style="width: 100%; text-align: center;">
+                                    <div style="text-center; width: 35%; float: left;">
+                                        <strong>LẬP PHIẾU</strong>
+                                        <br/>
+                                        <p style="text-style: italic;">(Ký, họ tên)</p>
+                                    </div>
+                                    <div style="text-center; width: 30%; float: left;">
+                                        <strong>PHÊ DUYỆT</strong>
+                                        <br/>
+                                        <p style="text-style: italic;">(Ký, họ tên)</p>
+                                    </div>
+                                    <div style="text-center; width: 35%; float: left;">
+                                        <strong>THỦ KHO</strong>
+                                        <br/>
+                                        <p style="text-style: italic;">(Ký, họ tên)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record id="paperformat_qweb_outgoing_request_report" model="report.paperformat">
+            <field name="name">A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">20</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">96</field>
+        </record>
+        <report id="outgoing_export_request"
+                model="stock.request"
+                string="Outgoing Request Report"
+                name="ev_stock_request.outgoing_request_report_id"
+                file="ev_stock_request.outgoing_request_report_id"
+                report_type="qweb-pdf"
+                print_report_name="'Outgoing Request - %s' % (object.name or '')"
+                paperformat="ev_stock_request.paperformat_qweb_outgoing_request_report"
+                menu="False"/>
+    </data>
+</odoo>

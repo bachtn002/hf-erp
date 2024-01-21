@@ -1,0 +1,188 @@
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model,name:ev_api_miniapp.model_delivery_management
+msgid "Delivery Management"
+msgstr "Quản lý vận đơn"
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_delivery_management__display_name
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields.selection,name:ev_api_miniapp.selection__sync_state_miniapp__state__done
+msgid "Done"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields.selection,name:ev_api_miniapp.selection__sync_state_miniapp__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields.selection,name:ev_api_miniapp.selection__sync_state_miniapp__state__error
+msgid "Error"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_history.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_point.py:0
+#: code:addons/ev_api_miniapp/controllers/api_pos_promotion.py:0
+#: code:addons/ev_api_miniapp/controllers/api_promotion_code_partner.py:0
+#: code:addons/ev_api_miniapp/controllers/api_uom.py:0
+#, python-format
+msgid "Get data successfully!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_delivery_management__id
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_create_sale_online.py:0
+#, python-format
+msgid "INVALID_PARAMETER_PAYMENT_INFO"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_delivery_management____last_update
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.ui.menu,name:ev_api_miniapp.sync_state_miniapp_menu
+msgid "Log Sync State Miniapp"
+msgstr "Log đồng bộ trạng thái vận đơn"
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__message
+msgid "Message"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_history.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_point.py:0
+#: code:addons/ev_api_miniapp/controllers/api_pos_promotion.py:0
+#: code:addons/ev_api_miniapp/controllers/api_promotion_code_partner.py:0
+#: code:addons/ev_api_miniapp/controllers/api_uom.py:0
+#, python-format
+msgid "Missing connection!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_history.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_point.py:0
+#: code:addons/ev_api_miniapp/controllers/api_promotion_code_partner.py:0
+#, python-format
+msgid "Missing partner's phone!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#, python-format
+msgid "Missing product_code params!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#, python-format
+msgid "Missing shop_code params!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_history.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_point.py:0
+#: code:addons/ev_api_miniapp/controllers/api_pos_promotion.py:0
+#: code:addons/ev_api_miniapp/controllers/api_promotion_code_partner.py:0
+#: code:addons/ev_api_miniapp/controllers/api_uom.py:0
+#, python-format
+msgid "Missing token connection code!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__params
+msgid "Params"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model,name:ev_api_miniapp.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields.selection,name:ev_api_miniapp.selection__sync_state_miniapp__state__queue
+msgid "Queue"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__response
+msgid "Response"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model.fields,field_description:ev_api_miniapp.field_sync_state_miniapp__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_api_miniapp
+#: model:ir.actions.act_window,name:ev_api_miniapp.action_sync_state_miniapp
+msgid "Sync State Miniapp"
+msgstr "Đồng bộ trạng thái vận đơn"
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_history.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_point.py:0
+#: code:addons/ev_api_miniapp/controllers/api_pos_promotion.py:0
+#: code:addons/ev_api_miniapp/controllers/api_promotion_code_partner.py:0
+#: code:addons/ev_api_miniapp/controllers/api_uom.py:0
+#, python-format
+msgid "Token connection code no matching!"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: model:ir.model,name:ev_api_miniapp.model_sync_state_miniapp
+msgid "Update State Shipping Order"
+msgstr ""
+
+#. module: ev_api_miniapp
+#: code:addons/ev_api_miniapp/controllers/api_inventory_on_hand.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_history.py:0
+#: code:addons/ev_api_miniapp/controllers/api_loyalty_point.py:0
+#: code:addons/ev_api_miniapp/controllers/api_pos_promotion.py:0
+#: code:addons/ev_api_miniapp/controllers/api_promotion_code_partner.py:0
+#: code:addons/ev_api_miniapp/controllers/api_uom.py:0
+#, python-format
+msgid ""
+"Your ip address is not allowed to access this API. Contact to your Admin!"
+msgstr ""

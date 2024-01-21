@@ -1,0 +1,398 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_promotion_gift_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-19 06:32+0000\n"
+"PO-Revision-Date: 2022-10-19 06:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion_gift_code
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code/static/src/xml/receipt.xml:0
+#, python-format
+msgid ".Thời hạn sử dụng:"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code/static/src/xml/receipt.xml:0
+#, python-format
+msgid ".Điều kiện áp dụng:"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Accept payments with a Six payment terminal"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Accept payments with a Vantiv payment terminal"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Accept payments with an Adyen payment terminal"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Adyen"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Cash Roundings"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__create_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__create_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Currencies"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__partner_id
+msgid "Customer"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.view_partner_property_inherit_form_pos
+msgid "Customer gift code"
+msgstr "Lịch sử tặng mã code"
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Default Sales Tax"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Default sales tax for products"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Define the smallest coinage of the currency used to pay by cash"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_config__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_promotion_voucher__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Documentation"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__gift_code
+msgid "Gift Code"
+msgstr "Mã"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_partner__x_pos_promotion_gift_code_history_ids
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_users__x_pos_promotion_gift_code_history_ids
+msgid "Gift Code History"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields.selection,name:ev_pos_promotion_gift_code.selection__pos_promotion__type__gift_code_total_amount
+msgid "Gift Code Total Amount"
+msgstr "Tặng code theo tổng giá trị đơn hàng"
+
+#. module: ev_pos_promotion_gift_code
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code/static/src/xml/pos_gift_code_detail.xml:0
+#, python-format
+msgid "Give away promo code:"
+msgstr "Tặng code CTKM: "
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__total_amount
+msgid "Giảm giá theo tổng giá trị đơn hàng"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_config__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_promotion_voucher__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Inventory"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Inventory Management"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_config_settings__is_display_code
+msgid "Is Display Code"
+msgstr "Hiển thị mã code được tặng"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_config__is_display_code_pos
+msgid "Is Display Code Pos"
+msgstr "Hiển thị mã code được tặng"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_config____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_promotion_voucher____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__write_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__write_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion__type
+msgid "Loại"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Payment Terminals"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Payments"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Point of Sale"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__pos_order_id
+msgid "Pos Order"
+msgstr "Đơn hàng POS"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_history__pos_promotion_id
+msgid "Pos Promotion"
+msgstr "CTKM"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_pos_promotion_gift_code_history
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_order__x_promotion_gift_code_history_ids
+msgid "Pos Promotion Gift Code History"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_pos_promotion_gift_code_total_amount
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion__promotion_gift_code_total_amount_ids
+msgid "Pos Promotion Gift Code Total Amount"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_pos_promotion
+msgid "Pos promotion"
+msgstr "Chường trình khuyến mại"
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Pricelists"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Pricing"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__promotion_id
+msgid "Promotion"
+msgstr "CTKM"
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model,name:ev_pos_promotion_gift_code.model_promotion_voucher
+msgid "Promotion Code"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_code.field_pos_promotion_gift_code_total_amount__promotion_code_id
+msgid "Promotions Give Code"
+msgstr "Chương trình khuyến mại"
+
+#. module: ev_pos_promotion_gift_code
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code/static/src/xml/receipt.xml:0
+#, python-format
+msgid ""
+"Quý khách vui lòng tra cứu ví ưu đãi trên Zalo OA Homefarm để xem ưu đãi. "
+"Hãy quét ngay để truy cập"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Record transactions in foreign currencies"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Set multiple prices per product, automated discounts, etc."
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Set up the display of the gift code on the invoice"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Six"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code/static/src/xml/receipt.xml:0
+#, python-format
+msgid "THẺ QUÀ TẶNG"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Taxes"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid ""
+"The transactions are processed by Adyen. Set your Adyen credentials on the "
+"related payment method."
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid ""
+"The transactions are processed by Six. Set the IP address of the terminal on"
+" the related payment method."
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid ""
+"The transactions are processed by Vantiv. Set your Vantiv credentials on the"
+" related payment method."
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "This adds the choice of a currency on pricelists."
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "This tax is applied to any new product created in the catalog."
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: code:addons/ev_pos_promotion_gift_code/models/pos_promotion_gift_code_total_amount.py:0
+#, python-format
+msgid "Total amount"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#. openerp-web
+#: code:addons/ev_pos_promotion_gift_code/static/src/xml/receipt.xml:0
+#, python-format
+msgid "Tặng riêng quý khách mã ưu đãi"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Update quantities in stock"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_code
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_code.res_config_settings_view_form_inherit_order_receipt
+msgid "Vantiv (US & Canada)"
+msgstr ""

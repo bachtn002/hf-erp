@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ev_stock_edit_date_done
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-18 10:15+0000\n"
+"PO-Revision-Date: 2019-06-18 10:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_stock_edit_date_done
+#: model_terms:ir.ui.view,arch_db:ev_stock_edit_date_done.view_change_date_done
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_stock_edit_date_done
+#: model_terms:ir.ui.view,arch_db:ev_stock_edit_date_done.view_change_date_done
+msgid "Change Date"
+msgstr "Thay đổi ngày"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model,name:ev_stock_edit_date_done.model_stock_change_date_done
+#: model_terms:ir.ui.view,arch_db:ev_stock_edit_date_done.view_change_date_done
+msgid "Change Date Done"
+msgstr "Thay đổi ngày hoàn thành"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.actions.act_window,name:ev_stock_edit_date_done.action_view_change_date_done
+msgid "Change date done"
+msgstr "Thay đổi ngày hoàn thành"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_stock_edit_date_done
+#: model_terms:ir.ui.view,arch_db:ev_stock_edit_date_done.view_change_date_done
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,help:ev_stock_edit_date_done.field_stock_picking__date_done
+msgid "Date at which the transfer has been processed or cancelled."
+msgstr "Ngày mà việc chuyển kho đã được xử lý hoặc hủy bỏ."
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__new_date
+msgid "Date done"
+msgstr "Ngày hoàn thành"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_picking__date_done
+msgid "Date of Transfer"
+msgstr "Ngày chuyển kho"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,field_description:ev_stock_edit_date_done.field_stock_change_date_done__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model.fields,help:ev_stock_edit_date_done.field_stock_change_date_done__new_date
+msgid "The actual date of completion."
+msgstr "Ngày thực sự hoàn thành."
+
+#. module: ev_stock_edit_date_done
+#: model:ir.model,name:ev_stock_edit_date_done.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: ev_stock_edit_date_done
+#: model_terms:ir.ui.view,arch_db:ev_stock_edit_date_done.view_picking_form_inherit_edit
+msgid "Update date"
+msgstr "Cập nhật ngày"
+
+#. module: ev_stock_edit_date_done
+#: code:addons/ev_stock_edit_date_done/models/stock_change_date_done.py:29
+#, python-format
+msgid "You cannot update date done transfers after inventory."
+msgstr "Bạn không thể cập nhật ngày hoàn thành sau khi đã kiểm kho"
+
+#. module: ev_stock_edit_date_done
+#: model_terms:ir.ui.view,arch_db:ev_stock_edit_date_done.view_change_date_done
+msgid "_Apply"
+msgstr "_Áp dụng"
+

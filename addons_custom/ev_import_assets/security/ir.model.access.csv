@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_import_asset,access_import_asset_name,model_import_asset,account.group_account_user,1,1,1,1
+access_import_asset_line,access_import_asset_line_name,model_import_asset_line,account.group_account_user,1,1,1,1
+access_import_asset_line_import,access_import_asset_line_import_name,model_import_asset_line_import,account.group_account_user,1,1,1,1
+
+

@@ -1,0 +1,16 @@
+.o_ev_pos_promotion__promotion-container {
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-top: 3px solid #6EC89B;
+    max-height: 150px;
+    min-height: 88px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.o_ev_pos_promotion__promotion-container__title {
+    text-align: left;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+

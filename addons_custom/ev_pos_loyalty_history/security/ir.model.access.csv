@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_customer_point_history,ev_pos_loyalty.customer_point_history,model_customer_point_history,point_of_sale.group_pos_user,1,1,1,1
+access_customer_point_history_all,ev_pos_loyalty.customer_point_history_all,model_customer_point_history,,1,1,1,1
+
+

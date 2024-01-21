@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preverse">
+
+    <t t-name="ClearPromotionButton" owl="1">
+        <div class="control-button" t-on-click="onClick">
+            <i class="fa fa-trash-o"></i>
+            <span>Clear Promotions</span>
+        </div>
+    </t>
+
+</templates>

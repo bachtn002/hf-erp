@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_lot_rule_form_inherit_view" model="ir.ui.view">
+            <field name="name">product_lot_rule_form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_code']" position="before">
+					<field name="x_product_lot_rule" required="1" options="{'no_create':1, 'no_create_edit':1, 'no_open':1}" domain="[('active', '=', True)]" />
+				</xpath>
+                <xpath expr="//field[@name='default_code']" position="replace">
+                    <field name="default_code" attrs="{'readonly': [('default_code', '==', False)], 'invisible': [('product_variant_count', '>', 1)]}" required="0"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

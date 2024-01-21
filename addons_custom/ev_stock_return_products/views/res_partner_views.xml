@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_partner_form_inherit_translate" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.translate</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']//group[@name='misc']//field[@name='ref']" position="before">
+                    <field name="x_is_supplier"/>
+                    <field name="supplier_rank" invisible="1"/>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']//group[@name='misc']//field[@name='ref']" position="attributes">
+                    <attribute name="string">Reference</attribute>
+                    <attribute name="attrs">{'required': [('x_is_supplier', '=', True)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+         <record id="view_partner_form_inherit_tree_ref" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="ref" string="Code Ref"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

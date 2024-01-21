@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="product_category_return_account_form">
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_expense_categ_id']" position="after">
+                    <field name="property_customer_return_account_id" required="1"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

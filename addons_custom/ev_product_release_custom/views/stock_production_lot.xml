@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="production_lot_tree_view_custom" model="ir.ui.view">
+            <field name="name">stock.production.lot.custom.tree</field>
+            <field name="model">stock.production.lot</field>
+            <field name="priority">999</field>
+            <field name="arch" type="xml">
+                <tree string="Lots/Serial Numbers" edit="0" create="0" delete="0" default_order="create_date desc">
+                    <field name="product_id" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="name" decoration-bf="1" string="Code voucher"/>
+                    <field name="x_release_id"/>
+                    <!--                    <field name="name_product_release"/>-->
+                    <field name="x_order_id"/>
+                    <field name="x_order_use_id"/>
+                    <field name="x_customer_id"/>
+                    <field name="x_use_customer_id"/>
+                    <field name="x_state" widget="badge"/>
+                </tree>
+            </field>
+        </record>
+        <record id="search_product_lot_filter_inherit" model="ir.ui.view">
+            <field name="name">Production Lots Filter Custom</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.search_product_lot_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+<!--                    <field name="name_product_release"/>-->
+                    <field name="x_release_id"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="action_production_lot_vouchers_inherit" model="ir.actions.act_window">
+            <field name="name">Code Vouchers</field>
+            <field name="res_model">stock.production.lot</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                              (0, 0, {'view_mode': 'tree', 'view_id': ref('ev_product_release_custom.production_lot_tree_view_custom')})]"/>
+            <field name="search_view_id" ref="stock.search_product_lot_filter"/>
+            <field name="context"
+                   eval="{'search_default_group_by_product': 1,
+                           'display_complete': True}"/>
+            <field name="domain">[('x_release_id', '!=', False)]</field>
+        </record>
+
+<!--        <menuitem action="action_production_lot_vouchers_inherit"-->
+<!--                  id="menu_action_production_lot_vouchers_inherit"-->
+<!--                  parent="ev_pos_erpviet.menu_pos_config_custom"-->
+<!--                  sequence="100"/>-->
+        <menuitem action="action_production_lot_vouchers_inherit"
+                  id="menu_action_production_lot_vouchers_inherit"
+                  parent="ev_product_release.menu_pos_voucher"
+                  sequence="100"/>
+
+    </data>
+</odoo>

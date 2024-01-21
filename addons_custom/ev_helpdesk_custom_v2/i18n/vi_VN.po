@@ -1,0 +1,272 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_helpdesk_custom_v2
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-15 04:50+0000\n"
+"PO-Revision-Date: 2023-03-15 04:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_res_users__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_res_users__x_helpdesk_department_ids
+msgid "Helpdesk departments"
+msgstr "Bộ phận hỗ trợ được phép"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model,name:ev_helpdesk_custom_v2.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_res_users__x_is_allow_helpdesk_department
+msgid "Is allow helpdesk department"
+msgstr "Chỉ xem xử lý ticket của tôi"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket__x_solution_detail
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__solution_detail
+msgid "Solution detail"
+msgstr "Hướng dẫn chi tiết"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket__x_shop_id
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.tickets_followup_ev_helpdesk_custom_v2
+msgid "Pos shop"
+msgstr "Cửa hàng"
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_template_view_form
+msgid "Assign"
+msgstr "Giao ticket"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields.selection,name:ev_helpdesk_custom_v2.selection__helpdesk_ticket_template__state__assigned
+msgid "Assigned"
+msgstr "Đã giao"
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_template_view_form
+msgid "Back to draft"
+msgstr "Trờ về nháp"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields.selection,name:ev_helpdesk_custom_v2.selection__helpdesk_ticket_template__state__cancel
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_template_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__create_uid
+msgid "Created by"
+msgstr "Người giao"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields.selection,name:ev_helpdesk_custom_v2.selection__helpdesk_ticket_template__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.actions.act_window,name:ev_helpdesk_custom_v2.helpdesk_ticket_template_action
+msgid "Helpdesk Ticket Template"
+msgstr "Tạo ticket đồng thời"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__ref_helpdesk_ticket
+msgid "Helpdesk ticket"
+msgstr "Ref ticket"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model,name:ev_helpdesk_custom_v2.model_helpdesk_ticket_template
+#: model:ir.ui.menu,name:ev_helpdesk_custom_v2.helpdesk_ticket_template_menu
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_template_view_form
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_template_view_tree
+msgid "Helpdesk ticket template"
+msgstr "Giao ticket đồng thời"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_template_view_form
+msgid "Subject..."
+msgstr "Chủ đề..."
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__ticket_type_id
+msgid "Ticket type"
+msgstr "Loại ticket"
+
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_stage__x_is_done
+msgid "Is done"
+msgstr "Là giao đoạn Hoàn thành"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_stage__x_is_receive
+msgid "Is receive"
+msgstr "Là giai đoạn Tiếp nhận"
+
+#. module: ev_helpdesk_custom_v2
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket.py:0
+#, python-format
+msgid "Problem Solution is required!"
+msgstr "Phương hướng giải quyết là bắt buộc!"
+
+#. module: ev_helpdesk_custom_v2
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket.py:0
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket.py:0
+#, python-format
+msgid "User is required!"
+msgstr "Người xử lý là bắt buộc!"
+
+#. module: ev_helpdesk_custom_v2
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket_template.py:0
+#, python-format
+msgid "You only sent at state cancel!"
+msgstr "Bạn chỉ có thể gửi ở trạng thái Hủy!"
+
+#. module: ev_helpdesk_custom_v2
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket_template.py:0
+#, python-format
+msgid "You only sent at state draft!"
+msgstr "Bạn chỉ có thể gửi ở trạng thái Nháp!"
+
+#. module: ev_helpdesk_custom_v2
+#: model:res.groups,name:ev_helpdesk_custom_v2.helpdesk_ticket_assigner
+msgid "Helpdesk Ticket Assigner"
+msgstr "Giao ticket đồng thời"
+
+#. module: ev_helpdesk_custom_v2
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket.py:0
+#, python-format
+msgid "My All Tickets"
+msgstr "Tất cả ticket"
+
+#. module: ev_helpdesk_custom_v2
+#: code:addons/ev_helpdesk_custom_v2/models/helpdesk_ticket.py:0
+#, python-format
+msgid "My Department Tickets Assigned"
+msgstr "Xử lý ticket"
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_ticket_partner_view_form_inherit
+msgid "Note..."
+msgstr "Ghi chú..."
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.tickets_followup_ev_helpdesk_custom_v2
+msgid "Solution Detail"
+msgstr "Hướng dẫn chi tiết"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__user_ids
+msgid "Users"
+msgstr "Phân công cho"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket_template__helpdesk_department_id
+msgid "Helpdesk Department"
+msgstr "Bộ phận hỗ trợ"
+
+#. module: ev_helpdesk_custom_v2
+#: model:ir.model.fields,field_description:ev_helpdesk_custom_v2.field_helpdesk_ticket__x_ref
+msgid "Reference No"
+msgstr "Số tham chiếu"
+
+#. module: ev_helpdesk_custom_v2
+#. openerp-web
+#: code:addons/ev_helpdesk_custom_v2/static/src/xml/helpdesk_team_templates.xml:0
+#, python-format
+msgid "My Tickets"
+msgstr "Các ticket của tôi"
+
+#. module: ev_helpdesk_custom_v2
+#. openerp-web
+#: code:addons/ev_helpdesk_custom_v2/static/src/xml/helpdesk_team_templates.xml:0
+#, python-format
+msgid "Tickets"
+msgstr "Ticket"
+
+#. module: ev_helpdesk_custom_v2
+#. openerp-web
+#: code:addons/ev_helpdesk_custom_v2/static/src/xml/helpdesk_team_templates.xml:0
+#, python-format
+msgid "High Priority ("
+msgstr "Độ ưu tiên cao ("
+
+#. module: ev_helpdesk_custom_v2
+#. openerp-web
+#: code:addons/ev_helpdesk_custom_v2/static/src/xml/helpdesk_team_templates.xml:0
+#, python-format
+msgid "Urgent ("
+msgstr "Khẩn cấp ("
+
+#. module: ev_helpdesk_custom_v2
+#. openerp-web
+#: code:addons/ev_helpdesk_custom_v2/static/src/xml/helpdesk_team_templates.xml:0
+#, python-format
+msgid "Avg Open Hours"
+msgstr "Giờ mở cửa trung bình"
+
+#. module: ev_helpdesk_custom_v2
+#. openerp-web
+#: code:addons/ev_helpdesk_custom_v2/static/src/xml/helpdesk_team_templates.xml:0
+#, python-format
+msgid "SLA Failed"
+msgstr "SLA Thất bại"
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_team_view_kanban_inherit
+msgid "SLA Issues"
+msgstr ""
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_team_view_kanban_inherit
+msgid "Unassigned Tickets"
+msgstr "Các ticket chưa phân công"
+
+#. module: ev_helpdesk_custom_v2
+#: model_terms:ir.ui.view,arch_db:ev_helpdesk_custom_v2.helpdesk_team_view_kanban_inherit
+msgid "See Customer Satisfaction"
+msgstr "Xem độ hài lòng của khách hàng"

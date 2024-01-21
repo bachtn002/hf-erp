@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.rule" id="res_branch_multi_company_rule">
+            <field name="name">Branch Multi Company Rule</field>
+            <field name="model_id" ref="ev_branch.model_res_branch"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record model="ir.module.category" id="module_branch_management">
+            <field name="name">Branch</field>
+            <field name="sequence">11</field>
+        </record>
+        <record id="group_branch_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_branch_management"/>
+        </record>
+        <record id="group_branch_user_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="module_branch_management"/>
+            <field name="implied_ids" eval="[(4, ref('group_branch_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+    </data>
+</odoo>

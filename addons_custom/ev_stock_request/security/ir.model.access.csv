@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_request,stock_request_user,model_stock_request,stock.group_stock_user,1,1,1,1
+access_stock_request_line,stock_request_line_user,model_stock_request_line,stock.group_stock_user,1,1,1,1
+
+
+access_import_stock_request,import_stock_request_name,model_stock_request_import,,1,1,1,1
+access_import_stock_request_line,import_stock_request_line_name,model_stock_request_import_line,,1,1,1,1
+
+access_stock_request_purchase,stock_request_purchase_user,model_stock_request,purchase.group_purchase_user,1,1,1,0
+access_stock_request_line_purchase,stock_request_line_purchase_user,model_stock_request_line,purchase.group_purchase_user,1,1,1,0
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		
+		<record id="partner_group_tree_view" model="ir.ui.view">
+			<field name="name">partner_group_tree_view</field>
+			<field name="model">res.partner.group</field>
+			<field name="arch" type="xml">
+				<tree string="partner_group_tree_view">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="partner_group_form_view" model="ir.ui.view">
+			<field name="name">partner_group_form_view</field>
+			<field name="model">res.partner.group</field>
+			<field name="arch" type="xml">
+				<form string="partner_group_form_view">
+					<sheet>
+						<group name="general">
+							<field name="name"/>
+						</group>
+						<div>
+							<label for="import_file"/>
+							<field name="import_file"/>
+							<field name="field_binary_import_promotion_partner"
+							       filename="field_binary_name_promotion_partner" attrs="{'invisible': [('import_file', '=', False)]}"/>
+							<field name="field_binary_name_promotion_partner" invisible="1"/>
+							<button name="download_template_res_partner_group" type="object"
+							        string="Download Import Template"
+							        attrs="{'invisible': [('import_file', '=', False)]}"
+							        class="btn btn-link" style="text-decoration: underline;"
+							        help="File must in the format of xls or xlsx"/>
+							<button name="action_import_line_promotion_partner_group" type="object" class="oe_highlight" attrs="{'invisible': [('import_file', '=', False)]}"
+							        string="Import"/>
+						</div>
+						<group>
+							<field name="x_partner_ids">
+								<tree>
+									<field name="name"/>
+									<field name="phone"/>
+									<field name="email"/>
+									<field name="city"/>
+									<field name="country_id"/>
+								</tree>
+							</field>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="partner_group_action">
+			<field name="name">Partner Group</field>
+			<field name="res_model">res.partner.group</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="ev_pos_promotion.partner_group_tree_view"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Add a new record.
+				</p>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

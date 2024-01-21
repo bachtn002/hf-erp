@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="ev_report_menu_categ" name="EV Report Configs" sequence="10" parent="base.menu_custom" />
+
+    </data>
+</odoo>

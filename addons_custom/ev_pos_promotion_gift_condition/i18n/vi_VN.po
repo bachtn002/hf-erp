@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_promotion_gift_condition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-31 01:50+0000\n"
+"PO-Revision-Date: 2021-08-31 01:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion_gift_condition
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_condition.pos_promotion_form_view_gift_condition
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: ev_pos_promotion_gift_condition
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_gift_condition.pos_promotion_form_view_gift_condition
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__create_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__create_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields.selection,name:ev_pos_promotion_gift_condition.selection__pos_promotion__type__gift_condition
+msgid "Gift Condition"
+msgstr "Mua sản phẩm A tặng sản phẩm B"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__write_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__write_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model,name:ev_pos_promotion_gift_condition.model_pos_promotion
+msgid "Pos promotion"
+msgstr "Chường trình khuyến mại"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__product_id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__category_id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__category_id
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__promotion_id
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__promotion_id
+msgid "Promotion"
+msgstr "Chương trình Khuyến mại"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion__pos_promotion_gift_apply_ids
+msgid "Promotion Gift Apply"
+msgstr "Áp dụng"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion__pos_promotion_gift_condition_ids
+msgid "Promotion Gift Condition Apply"
+msgstr "Điều kiện áp dụng"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_apply__qty
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion_gift_condition_apply__total_amount
+msgid "Total Amount"
+msgstr "Tổng tiền tối thiểu"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model.fields,field_description:ev_pos_promotion_gift_condition.field_pos_promotion__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: ev_pos_promotion_gift_condition
+#: code:addons/ev_pos_promotion_gift_condition/models/pos_promotion_gift_apply.py:0
+#: code:addons/ev_pos_promotion_gift_condition/models/pos_promotion_gift_condition_apply.py:0
+#, python-format
+msgid "You can only create quantity > 0"
+msgstr "Bạn chỉ có thể nhập số lượng lớn hơn 0"
+
+#. module: ev_pos_promotion_gift_condition
+#: code:addons/ev_pos_promotion_gift_condition/models/pos_promotion_gift_condition_apply.py:0
+#, python-format
+msgid "You can only create total amount > 0"
+msgstr "Bạn chỉ có thể nhập tổng giá trị đơn hàng lớn hơn 0"
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model,name:ev_pos_promotion_gift_condition.model_pos_promotion_gift_apply
+msgid "pos.promotion.gift.apply"
+msgstr ""
+
+#. module: ev_pos_promotion_gift_condition
+#: model:ir.model,name:ev_pos_promotion_gift_condition.model_pos_promotion_gift_condition_apply
+msgid "pos.promotion.gift.condition.apply"
+msgstr ""

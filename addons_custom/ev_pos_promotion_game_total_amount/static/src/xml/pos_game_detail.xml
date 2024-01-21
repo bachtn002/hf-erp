@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template id="template" xml:space="preserve">
+    <t t-name="OrderWidgetGameReward" owl="1">
+        <t t-if="get_game_turn_reward() != '0'">
+            <div class="summary clearfix">
+                <div class="line">
+                    <div class="entry total">
+                        <span class="badge" style="font-size:15px; color:red">Game turn reward: </span>
+                        <span class="value" style="font-size:15px; color:red">
+                            <t t-esc="get_game_turn_reward()"/>
+                        </span>
+                        <br/>
+                        <span class="value" style="font-size:13px">
+                            <t t-esc="get_game_turn_detail()"/>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-else="">
+            <div></div>
+        </t>
+    </t>
+</template>

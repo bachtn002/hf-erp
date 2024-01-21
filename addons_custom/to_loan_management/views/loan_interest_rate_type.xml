@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- window action -->
+		<!-- The following tag is an action definition for a "window action", that 
+			is an action opening a view or a set of views -->
+
+
+		<!-- Form view -->
+		<record id="view_loan_interest_rate_type_form"
+			model="ir.ui.view">
+			<field name="name">loan.interest.rate.type.form</field>
+			<field name="model">loan.interest.rate.type</field>
+			<field name="arch" type="xml">
+				<form string="Interest Rate Type">
+					<header>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name" class="oe_inline"
+									placeholder="Rate type title here..." />
+							</h1>
+						</div>
+
+						<group>
+							<group>
+								<field name="type" />
+								<label for="flat_rate"
+									attrs="{'invisible':[('type', '!=', 'flat')]}" />
+								<div class="o_row" name="flat_rate"
+									attrs="{'invisible':[('type', '!=', 'flat')]}">
+									<field name="flat_rate"
+										attrs="{'invisible':[('type', '!=', 'flat')], 'required': [('type', '=', 'flat')]}" />
+									<span>%</span>
+								</div>
+								<field name="interest_rate_period" />
+							</group>
+							<group>
+								<field name="fixed_days_of_month" />
+								<field name="days_of_month"
+									attrs="{'invisible':[('fixed_days_of_month', '=', False),], 'required': [('fixed_days_of_month','=',True)]}" />
+								<field name="fixed_days_of_year" />
+								<field name="days_of_year"
+									attrs="{'invisible':[('fixed_days_of_year', '=', False),], 'required': [('fixed_days_of_year','=',True)]}" />
+								<field name="product_id" />
+							</group>
+						</group>
+						<separator string="Floating Rate Lines"
+							attrs="{'invisible':[('type', '!=', 'floating')]}" />
+						<field name="floating_rate_ids" nolabel="1"
+							attrs="{'invisible':[('type', '!=', 'floating')]}">
+							<tree string="Floating Rate Lines" editable="top">
+								<field name="rate" />
+								<field name="date_from" />
+								<field name="date_to" />
+							</tree>
+							<form string="Floating Rate Line">
+								<group>
+									<group>
+										<label for="rate" />
+										<div class="o_row">
+											<field name="rate" />
+											<span>%</span>
+										</div>
+									</group>
+									<group>
+										<field name="date_from" />
+										<field name="date_to" />
+									</group>
+								</group>
+							</form>
+						</field>
+						<div class="oe_clear" />
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<!-- tree (list) view -->
+		<record id="view_loan_interest_rate_type_tree"
+			model="ir.ui.view">
+			<field name="name">loan.interest.rate.type.tree</field>
+			<field name="model">loan.interest.rate.type</field>
+			<field name="arch" type="xml">
+				<tree string="Floating Rate">
+					<field name="name" />
+					<field name="type" />
+					<field name="flat_rate" />
+					<field name="interest_rate_period" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="view_loan_interest_rate_type_search">
+			<field name="name">loan.interest.rate.type.search</field>
+			<field name="model">loan.interest.rate.type</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="type" />
+					<field name="flat_rate" />
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="loan_interest_rate_type_action">
+			<field name="name">Interest Rate Type</field>
+			<field name="res_model">loan.interest.rate.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first record
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="loan_interest_rate_config_menu"
+			name="Interest Rates" parent="loan_configuration_main_menu"
+			sequence="40" />
+
+		<menuitem id="loan_interest_rate_type_menu"
+			name="Interest Rate Type" parent="loan_interest_rate_config_menu"
+			sequence="20" action="loan_interest_rate_type_action" />
+	</data>
+</odoo>

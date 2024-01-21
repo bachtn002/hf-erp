@@ -1,0 +1,257 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_combo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-26 01:39+0000\n"
+"PO-Revision-Date: 2021-04-26 01:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/OrderLine.xml:0
+#, python-format
+msgid "---Combo"
+msgstr "---Combo"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Screens/ReceiptScreen/OrderReceipt.xml:0
+#, python-format
+msgid "---Combo"
+msgstr "---Combo"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Popups/PopupCombo/PopupCombo.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__pos_category_id
+msgid "Categories"
+msgstr "Nhóm sản phẩm POS"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Screens/ProductScreen/ComboButton.xml:0
+#: code:addons/ev_pos_combo/static/src/xml/Screens/ProductScreen/ProductItemCombo.xml:0
+#: model_terms:ir.ui.view,arch_db:ev_pos_combo.combo_product_template_form_inherit
+#, python-format
+msgid "Combo"
+msgstr "Combo"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Popups/PopupCombo/PopupCombo.xml:0
+#, python-format
+msgid "Combo Product"
+msgstr "Sản phẩm Combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line__combo_product_id
+msgid "Combo Product Id"
+msgstr "Sản phẩm bán Combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_product__x_product_combo_ids
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_template__x_product_combo_ids
+msgid "Combos"
+msgstr "Combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_config__display_name
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__display_name
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_config__x_enable_combo
+#: model_terms:ir.ui.view,arch_db:ev_pos_combo.pos_combo_pos_config_view_form_inherit
+msgid "Enable Combo"
+msgstr "Kích hoạt Combo"
+
+#. module: ev_pos_combo
+#: model_terms:ir.ui.view,arch_db:ev_pos_combo.pos_combo_pos_config_view_form_inherit
+msgid "Hide UOM for combo product"
+msgstr "Ẩn đơn vị với sản phẩm combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_config__id
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line__id
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__id
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_product__x_is_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_template__x_is_combo
+msgid "Is Combo"
+msgstr "Là Combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line__is_combo_line
+msgid "Is Combo Order line"
+msgstr "Là dòng chi tiết combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line__is_main_combo_product
+msgid "Is Main Combo Product"
+msgstr "Là sản phẩm chính trong combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_config____last_update
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo____last_update
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__no_of_items
+msgid "No. of Items"
+msgstr "Tổng số lượng sản phẩm"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Popups/PopupCombo/PopupCombo.xml:0
+#, python-format
+msgid "OK"
+msgstr "Xác nhận"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/js/Popups/PopupCombo.js:0
+#, python-format
+msgid "Please add enough products for the combo before continuing"
+msgstr "Vui lòng thêm đủ sản phẩm cho combo trước khi tiếp tục"
+
+#. module: ev_pos_combo
+#: model:ir.model,name:ev_pos_combo.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_pos_combo
+#: model:ir.model,name:ev_pos_combo.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Chi tiết đơn hàng bán lẻ"
+
+#. module: ev_pos_combo
+#: model:ir.model,name:ev_pos_combo.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_pos_combo
+#: model:ir.model,name:ev_pos_combo.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_pos_combo
+#: model:ir.model,name:ev_pos_combo.model_product_combo
+msgid "Product combo"
+msgstr "SẢn phẩm Combo"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__product_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/OrderLine.xml:0
+#: code:addons/ev_pos_combo/static/src/xml/Screens/ReceiptScreen/OrderReceipt.xml:0
+#, python-format
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__require
+msgid "Required"
+msgstr "Bắt buộc"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__require_one
+msgid "Required one"
+msgstr "Không bắt buộc"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Popups/PopupCombo/ProductGroupCombo.xml:0
+#, python-format
+msgid "Select up to"
+msgstr "Chọn tối đa"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/xml/Popups/PopupCombo/ProductCombo.xml:0
+#: code:addons/ev_pos_combo/static/src/xml/Popups/PopupCombo/ProductCombo.xml:0
+#, python-format
+msgid "Selected"
+msgstr "Đã chọn"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_config__x_edit_combo
+msgid "Single Click Product for Edit Combo"
+msgstr "Chọn Combo khi thêm sản phẩm"
+
+#. module: ev_pos_combo
+#: model_terms:ir.ui.view,arch_db:ev_pos_combo.pos_combo_pos_config_view_form_inherit
+msgid "Single Click Product for Edit Combo"
+msgstr "Chọn Combo khi thêm sản phẩm"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_pos_order_line__tech_combo_data
+msgid "Tech Combo Info"
+msgstr "Chi tiết Combo đã chọn"
+
+#. module: ev_pos_combo
+#: model:ir.model.fields,field_description:ev_pos_combo.field_product_combo__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: ev_pos_combo
+#: model_terms:ir.ui.view,arch_db:ev_pos_combo.pos_combo_pos_config_view_form_inherit
+msgid "Use combo feature in restaurant"
+msgstr "Sử dụng combo trong quán bar/nhà hàng"
+
+#. module: ev_pos_combo
+#. openerp-web
+#: code:addons/ev_pos_combo/static/src/js/Popups/PopupCombo.js:0
+#, python-format
+msgid "Warning"
+msgstr "Cảnh báo"

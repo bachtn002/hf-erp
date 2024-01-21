@@ -1,0 +1,359 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_cost_price_combo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-08 07:52+0000\n"
+"PO-Revision-Date: 2021-12-08 07:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__account_fiscal_month_id
+msgid "Accounting Period"
+msgstr "Kỳ kế toán"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields.selection,name:ev_cost_price_combo.selection__cost_price_combo__state__calculate
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+msgid "Calculate"
+msgstr "Tính toán"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields.selection,name:ev_cost_price_combo.selection__cost_price_combo__state__cancel
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_cost_price_combo
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields.selection,name:ev_cost_price_combo.selection__cost_price_combo__state__confirm
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__cost_price
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__cost_price
+msgid "Cost Price"
+msgstr "Giá vốn"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__cost_price_combo_id
+#: model:ir.ui.menu,name:ev_cost_price_combo.cost_price_combo_menu
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_tree
+msgid "Cost Price Combo"
+msgstr "Tính giá vốn combo"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__detail_ids
+msgid "Cost Price Combo Detail"
+msgstr "Chi tiết combo"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__line_ids
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__cost_price_combo_line_id
+msgid "Cost Price Combo Line"
+msgstr "Chi tiết"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__create_uid
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__create_uid
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__create_date
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__create_date
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__date
+msgid "Date"
+msgstr "Ngày tính toán"
+
+#. module: ev_cost_price_combo
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__display_name
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__display_name
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields.selection,name:ev_cost_price_combo.selection__cost_price_combo__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields.selection,name:ev_cost_price_combo.selection__cost_price_combo__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__id
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__id
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__message_needaction
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo____last_update
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail____last_update
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__write_uid
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__write_uid
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__write_date
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__write_date
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__name
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+msgid "Name"
+msgstr "Tên phiếu"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__product_id
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_cost_price_combo
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_detail__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model_terms:ir.ui.view,arch_db:ev_cost_price_combo.cost_price_combo_view_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,help:ev_cost_price_combo.field_cost_price_combo__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_cost_price_combo
+#: model:ir.model.fields,field_description:ev_cost_price_combo.field_cost_price_combo_line__uom_id
+msgid "Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_cost_price_combo
+#: model:ir.model,name:ev_cost_price_combo.model_cost_price_combo
+msgid "cost.price.combo"
+msgstr "Tính giá vốn combo"
+
+#. module: ev_cost_price_combo
+#: model:ir.model,name:ev_cost_price_combo.model_cost_price_combo_detail
+msgid "cost.price.combo.detail"
+msgstr "Chi tiết combo"
+
+#. module: ev_cost_price_combo
+#: model:ir.model,name:ev_cost_price_combo.model_cost_price_combo_line
+msgid "cost.price.combo.line"
+msgstr "Chi tiết"
+
+#. module: ev_cost_price_combo
+#: model:ir.actions.act_window,name:ev_cost_price_combo.cost_price_combo_action
+msgid "cost_price_combo_action"
+msgstr "Tính giá vốn combo"

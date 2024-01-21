@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_slide_slide_form" model="ir.ui.view">
+            <field name="name">slide.slide.form.inherit.ev_elearning_custom</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='is_preview']" position="after">
+                    <field name="is_published"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

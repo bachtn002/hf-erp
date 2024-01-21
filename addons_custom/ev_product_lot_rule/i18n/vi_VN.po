@@ -1,0 +1,242 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_product_lot_rule
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-31 03:22+0000\n"
+"PO-Revision-Date: 2022-03-31 03:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__active
+msgid "Active"
+msgstr "Trạng thái"
+
+#. module: ev_product_lot_rule
+#: model:res.groups,name:ev_product_lot_rule.group_config_product_lot_rule
+msgid "Config Product Lot Rule"
+msgstr "Quy tắc tạo mã sản phẩm"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__create_uid
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__create_date
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model_terms:ir.ui.view,arch_db:ev_product_lot_rule.product_lot_rule_view_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__display_name
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__display_name
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_product_lot_rule
+#: model:res.groups,name:ev_product_lot_rule.group_edit_defaut_code
+msgid "Edit default code"
+msgstr "Sửa mã nội bộ sản phẩm"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields.selection,name:ev_product_lot_rule.selection__product_lot_rule_line__type__fix
+msgid "Fix"
+msgstr "Cố định"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__fix_value
+msgid "Fix Value"
+msgstr "Giá trị cố định"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__id
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__id
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields.selection,name:ev_product_lot_rule.selection__product_lot_rule_line__type__increment
+msgid "Increment"
+msgstr "Tự tăng"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule____last_update
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line____last_update
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__last_sequence
+msgid "Last Sequence"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__write_uid
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__write_date
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule_line.py:0
+#, python-format
+msgid "Length of fix value is greater allowable rule length"
+msgstr "Độ dài của Giá trị cố định lớn hơn độ dài quy tắc"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__name
+msgid "Name"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule_line.py:0
+#: code:addons/ev_product_lot_rule/models/product_lot_rule_line.py:0
+#, python-format
+msgid "Number product code of rule is max"
+msgstr "Số lượng mã sản phẩm của quy tắc đã đạt giới hạn"
+
+#. module: ev_product_lot_rule
+#: model:ir.model,name:ev_product_lot_rule.model_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_product__x_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_template__x_product_lot_rule
+msgid "Product Lot Rule"
+msgstr "Quy tắc tạo mã sản phẩm"
+
+#. module: ev_product_lot_rule
+#: model:ir.actions.act_window,name:ev_product_lot_rule.product_lot_rule_action
+msgid "Product Lot Rule Action"
+msgstr "Quy tắc tạo mã sản phẩm"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__product_lot_rule_id
+msgid "Product Lot Rule ID"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.model,name:ev_product_lot_rule.model_product_lot_rule_line
+msgid "Product Lot Rule Line"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__product_lot_rule_line_ids
+msgid "Product Lot Rule Line Ids"
+msgstr ""
+
+#. module: ev_product_lot_rule
+#: model:ir.ui.menu,name:ev_product_lot_rule.product_lot_rule_menu
+msgid "Product Lot Rule Menu"
+msgstr "Quy tắc tạo mã sản phẩm"
+
+#. module: ev_product_lot_rule
+#: model:ir.model,name:ev_product_lot_rule.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: ev_product_lot_rule
+#: model_terms:ir.ui.view,arch_db:ev_product_lot_rule.product_lot_rule_view_form
+msgid "Rule Details"
+msgstr "Chi tiết quy tắc"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__rule_len
+msgid "Rule Length"
+msgstr "Độ dài mã"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__name
+msgid "Rule Name"
+msgstr "Tên quy tắc"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__start_increment
+msgid "Start Increment"
+msgstr "Bắt đầu"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.constraint,message:ev_product_lot_rule.constraint_product_lot_rule_name_unique
+msgid "The name must be unique!"
+msgstr "Tên quy tắc đã tồn tại"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule_line__type
+msgid "Type"
+msgstr "Kiểu quy tắc"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_template.py:0
+#, python-format
+msgid "You do not have permission to edit this record"
+msgstr "Bạn không có quyền chỉnh sửa bản ghi"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule.py:0
+#, python-format
+msgid ""
+"Attention: Length of fix value and start increment is greater than rule "
+"length !"
+msgstr "Độ dài 'Giá trị cố định' và 'Bắt đầu' lớn hơn 'Độ dài mã'"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule.py:0
+#, python-format
+msgid "Attention: Length of fix value is not equal rule length"
+msgstr "Độ dài 'Giá trị cố định' không bằng 'Độ dài mã'"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule.py:0
+#, python-format
+msgid "Attention: Not more than 2 lines "
+msgstr "Chỉ được thiết lập tối đa 2 kiểu quy tắc"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule.py:0
+#, python-format
+msgid "Attention: Rule len must be different 0"
+msgstr "Độ dài mã phải lớn hơn 0"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_lot_rule.py:0
+#, python-format
+msgid "Start increment must be greater than 0"
+msgstr "'Bắt đầu' phải lớn hơn 0"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_template.py:0
+#, python-format
+msgid "You do not have permission to edit this default code"
+msgstr "Bạn không có quyền chỉnh sửa mã nội bộ"
+
+#. module: ev_product_lot_rule
+#: code:addons/ev_product_lot_rule/models/product_template.py:0
+#: code:addons/ev_product_lot_rule/models/product_template.py:0
+#, python-format
+msgid "Length of default code {} is not equal length of this rule {}"
+msgstr "Độ dài Mã nội bộ {} không bằng với độ dài của Quy tắc tạo mã {}"
+
+#. module: ev_product_lot_rule
+#: model:ir.model.fields,field_description:ev_product_lot_rule.field_product_lot_rule__max_value_from_default_code
+msgid "Max value default code"
+msgstr ""

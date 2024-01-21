@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="menu_pos_config_custom" name="Setting" parent="point_of_sale.menu_point_root" sequence="90"/>
+
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pos_note_member_app" model="ir.ui.view">
+            <field name="name">view_pos_note_member_app</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='extra']//field[@name='pricelist_id']" position="after">
+                    <field name="x_note_member_app" force_save="1" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

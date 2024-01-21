@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preverse">
+
+    <t t-name="ConfirmPaymentPopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-text o_ev_pos_promotion--popup">
+                <header class="title bg-warning">
+                    <t t-esc="props.title"/>
+                </header>
+                <main class="body">
+                    <i class="fa fa-info-circle"></i>
+                    <p>
+                        <t t-esc="props.body"/>
+                    </p>
+                </main>
+                <footer class="footer">
+                    <div class="button" t-on-click="cancel">
+<!--                        <t t-esc="props.cancelText"/>-->
+                        Close
+                    </div>
+                    <div class="button" t-on-click="onClickApplySelected">
+                        <t t-esc="props.applySelectedText"/>
+                    </div>
+                    <div class="button" t-on-click="onClickApplyAll">
+                        <t t-esc="props.applyAllText"/>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+    </t>
+
+</templates>

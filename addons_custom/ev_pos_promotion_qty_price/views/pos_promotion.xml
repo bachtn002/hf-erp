@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="pos_promotion_form_view_quantity_price" model="ir.ui.view">
+		<field name="name">pos_promotion_form_view_quantity_price</field>
+		<field name="model">pos.promotion</field>
+		<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='promotion_detail']" position="inside">
+				<button name="%(promotion_price_import_act)d" type="action" string="Import Promotion Price"
+				        icon="fa-upload" class="oe_highlight"
+				        attrs="{'invisible': ['|','|',('state', '!=', 'draft'),('import_file', '=', False),('type', '!=', 'qty_price')]}"/>
+				<button name="download_template_promotion_qty_price" type="object"
+				        string="Download Import Template"
+				        attrs="{'invisible': ['|','|',('state', '!=', 'draft'),('import_file', '=', False),('type', '!=', 'qty_price')]}"
+				        class="btn btn-link" style="text-decoration: underline;"
+				        help="File must in the format of xls or xlsx"/>
+				<field name="pos_promotion_qty_price_ids"
+				       attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('type', '!=', 'qty_price')]}">
+					<tree editable="bottom">
+						<!--                        <field name="category_id"-->
+						<!--                               options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>-->
+						<field name="product_id" domain="[('available_in_pos','=',True)]"
+						       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+<!--						<field name="qty"/>-->
+                        <field name="qty"/>
+                        <field name="check_discount_price"/>
+						<field name="price_unit" attrs="{'invisible': [('check_discount_price','not in',('price'))]}"/>
+						<field name="discount" attrs="{'invisible': [('check_discount_price','not in',('discount'))]}"/>
+						<field name="promotion_id" invisible="1"/>
+					</tree>
+				</field>
+			</xpath>
+		</field>
+	</record>
+</odoo>

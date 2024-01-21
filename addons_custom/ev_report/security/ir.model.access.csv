@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_report_template,access_report_template,model_report_template,base.group_user,1,1,1,1
+
+access_report_style,access_report_style,model_report_style,base.group_user,1,1,1,1
+
+access_report_style_line,access_report_style_line,model_report_style_line,base.group_user,1,1,1,1

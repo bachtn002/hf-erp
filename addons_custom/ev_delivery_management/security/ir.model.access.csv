@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_delivery_management,access_delivery_management_name,model_delivery_management,,1,1,1,1
+access_delivery_partner,access_delivery_partner_name,model_delivery_partner,,1,1,1,1
+access_webhook_grab,access_webhook_grab_name,model_webhook_grab,,1,1,1,1
+access_webhook_aha,access_webhook_aha_name,model_webhook_aha,,1,1,1,1

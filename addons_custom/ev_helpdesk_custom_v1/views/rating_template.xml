@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="log_rating_template">
+            <div><b style="color: red;">Evaluate: </b><t t-esc="rating"/></div>
+            <div><b style="color: red;">Feedback: </b><t t-esc="feedback"/></div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="NumpadWidgetInherit" t-inherit="point_of_sale.NumpadWidget" t-inherit-mode="extension" owl="1">
+        <xpath expr="//button[hasclass('numpad-minus')]" position="replace">
+            <button class="input-button numpad-minus"
+                    t-att-class="{
+                    'disabled-mode': !hasNumpadMinus
+                }" t-att-disabled="!hasNumpadMinus"
+                    t-on-click="sendInput('-')"
+                >+/-</button>
+        </xpath>
+    </t>
+
+    <t t-name="PSNumpadInputButtonInherit" t-inherit="point_of_sale.PSNumpadInputButton" t-inherit-mode="extension" owl="1">
+        <xpath expr="//button" position="replace">
+            <button t-attf-class="{{ _class }}"
+                    t-att-class="{'disabled-mode': !hasNumpadMinus}"
+                    t-att-disabled="!hasNumpadMinus"
+                t-on-click="trigger('input-from-numpad', { key: props.value })">
+                <t t-slot="default">
+                    <t t-if="props.text">
+                        <t t-esc="props.text" />
+                    </t>
+                    <t t-else="">
+                        <t t-esc="props.value" />
+                    </t>
+                </t>
+            </button>
+        </xpath>
+    </t>
+</templates>

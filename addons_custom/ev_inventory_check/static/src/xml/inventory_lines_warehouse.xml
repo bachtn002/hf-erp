@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="WarehouseInventoryLines.Buttons">
+        <button type="button" class='btn btn-primary o_button_validate_inventory'>
+             Cửa hàng xác nhận
+        </button>
+    </t>
+<!--    <t t-extend="ListView.buttons">-->
+<!--        <t t-jquery="button.o_list_button_add" t-operation="after">-->
+<!--           <button t-if='widget' type="button" class="btn btn-secondary o_button_to_call_wizard">-->
+<!--                Kế toán xác nhận-->
+<!--           </button>-->
+<!--        </t>-->
+<!--    </t>-->
+
+</templates>

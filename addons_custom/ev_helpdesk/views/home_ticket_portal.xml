@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <template id="home_ticket_portal" name="My Portal">
+        <t t-call="portal.frontend_layout">
+            <div class="o_home_ticket_portal">
+                <div class="background-image">
+                    <div class="background-text">
+                        <h1 style="font-size: 59px;margin-bottom: 27px;">HOMEFARM HELPDESK PORTAL</h1>
+                        <p style="font-size: 24px;margin-bottom: 60px;">HOMEFARM support teams will receive and handel all your requests as soon as possible.
+                        </p>
+                        <a style="text-decoration: none;" href="/my/tickets/" class="btn-primary button-ticket" title="Đăng nhập">Create a request</a>
+                        <a t-att-href="link_drive" class="button_drive_links button-ticket" target="_blank">Link Drive</a>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+        <template id="frontend_layout" inherit_id="portal.frontend_layout" name="Language image">
+            <xpath expr="//ul[@id='top_menu']" position="inside">
+                <li>
+                    <t t-call="ev_helpdesk.language_selector_helpdesk"/>
+                </li>
+            </xpath>
+        </template>
+
+        <template id="language_selector_helpdesk" name="Language Selector">
+        <t t-set="active_lang" t-value="list(filter(lambda lg : lg[0] == lang, languages))[0]"/>
+        <t t-set="language_selector_visible" t-value="len(languages) &gt; 1"/>
+        <div t-attf-class="js_language_selector #{_div_classes}" t-if="language_selector_visible" style=" margin-top: 6px; ">
+            <button class="btn btn-sm btn-outline-secondary border-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                 <t t-set="flag_image_src" t-value="active_lang[4]"/>
+                <img class="o_lang_flag" t-attf-src="#{flag_image_src}?height=25"/>
+                <span t-if="not no_text"
+                        class="align-middle"
+                        t-esc="active_lang[2].split('/').pop()"/>
+            </button>
+            <div class="dropdown-menu" role="menu" style="top: 35px;left: 75%;">
+                <t t-foreach="languages" t-as="lg">
+                    <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang_code=lg[0])"
+                    class="dropdown-item js_change_lang"
+                    t-att-data-url_code="lg[1]">
+                        <span t-if="not no_text"
+                              t-esc="lg[2].split('/').pop()"/>
+                    </a>
+                </t>
+            </div>
+        </div>
+    </template>
+    </data>
+</odoo>

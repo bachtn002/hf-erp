@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="scan_package_transfer_template" xml:space="preserve">
+
+    <t t-name="stock_transfer_barcode_lines_template">
+        <t t-if="lines">
+            <t t-foreach="lines" t-as="line">
+                <div class="o_barcode_line list-group-item d-flex flex-row flex-nowrap"
+                     t-att-data-id="line.virtual_id || line.id"
+                     t-att-data-barcode="line.product_barcode"><!--Name pack use to scan barcode instead of barcode like product-->
+                    <div class="flex-grow-1 flex-column flex-nowrap" style="width: 50%;vertical-align: text-middle;">
+                        <div class="pb-1">
+                            <i class="fa fa-fw fa-tags"/>
+                            <span class="product-label"
+                                  t-esc="line.display_name"/>
+                        </div>
+                        <div name="quantity"> <!-- Name used for inheritance -->
+                            <i class="fa fa-fw fa-cube"/>
+                            <span t-attf-class="o_barcode_scanner_qty text-monospace badge #{' '}"> <!-- @SLE: Eventually add contextual classes: "badge-warning", "badge-danger", "badge-success"  -->
+                                <span class="qty-done d-inline-block text-left" t-esc="line.qty_done || 0"/>
+                                <span t-esc="'/ ' + line.qty"/>
+                            </span>
+                            <span t-if="line.uom_id" t-esc="line.uom_id"/>
+                            <span t-else="">Chiếc</span>
+                    </div>
+                    </div>
+                    <div class="o_barcode_line_actions d-flex align-items-center pl-4">
+                        <a class="o_edit text-muted" href="#" title="Edit"><i class="fa fa-2x fa-pencil"/></a>
+                    </div>
+<!--                    <t t-if="!istouchSupported">-->
+                    <button class="o_line_button o_add_unit btn btn-primary ml-2 ml-sm-4"
+                            t-att-data-reserved="(line.qty - line.qty_done)">
+                        + 1
+                    </button>
+                    <button class="o_line_button o_remove_unit btn btn-primary ml-2 ml-sm-4">
+                        - 1
+                    </button>
+<!--                    </t>-->
+                </div>
+            </t>
+        </t>
+    </t>
+
+</templates>

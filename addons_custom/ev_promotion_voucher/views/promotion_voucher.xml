@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="promotion_voucher_tree" model="ir.ui.view">
+            <field name="name">promotion.voucher.tree</field>
+            <field name="model">promotion.voucher</field>
+            <field name="arch" type="xml">
+                <tree string="Promotion Voucher" default_order='name desc' decoration-info="state=='draft'"
+                      decoration-muted="state=='cancel'"
+                      decoration-success="state=='created'">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="expired_date"/>
+                    <field name="validity"/>
+                    <field name="promotion_id"/>
+                    <field name="production_lot_rule_id"/>
+                    <field name="promotion_use_code"/>
+                    <field name="state" widget="badge" decoration-info="state=='draft'"
+                           decoration-muted="state=='cancel'"
+                           decoration-success="state=='created'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="promotion_voucher_form" model="ir.ui.view">
+            <field name="name">promotion.voucher.form</field>
+            <field name="model">promotion.voucher</field>
+            <field name="arch" type="xml">
+                <form string="Promotion Voucher">
+                    <header>
+                        <!--						attrs="{'invisible': [('import_file', '=', False)]}"-->
+                        <button name="action_active" string="Activate" type="object" states="created"
+                                class="oe_highlight"
+                                confirm="Are you sure you want to enable all in-release Promotion Voucher?"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="created"/>
+                        <button name="%(ev_promotion_voucher.update_promotion_code_act)d" string="Update" type="action"
+                                class="oe_highlight" attributes="{'invisible': [('state', '=', 'cancel')]}"/>
+                        <button name="action_generate_serial" type="object" states="draft"
+                                string="General Code" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,created,active" readonly="0" clickable="0"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h2 style="text-align:center">
+                                <field name="name" readonly="1" forcesave="1"/>
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="company_id" options="{'no_open':1, 'no_create':1}" invisible="1"/>
+                                <field name="date" attrs="{'readonly': [('state', '!=', 'draft')],'required': 1}"/>
+                                <field name="expired_type"
+                                       attrs="{'readonly': [('state', '!=', 'draft')],'required': 1}"/>  <!-- added by HoiHD: Chi bat buoc khi la CP va VC -->
+                                <field name="expired_date"
+                                       attrs="{'invisible': [('expired_type', '=', 'flexible')],'required': [('expired_type', '=', 'fixed')],'readonly': [('state', '!=', 'draft')]}"/> <!-- added by HOIHD: chi bat buoc khi la VC va CP-->
+                                <field name="validity" invisible="1"
+                                       attrs="{'required': [('expired_type', '=', 'flexible')],'readonly': [('state', '!=', 'draft')]}"/> <!-- added by HOIHD: chi bat buoc khi la VC va CP-->
+                                <field name="quantity"
+                                       attrs="{'readonly': [('state', '!=', 'draft')],'required': 1,'invisible': [('import_file', '=', True)]}"/>
+                            </group>
+                            <group>
+                                <field name="create_uid"/>
+                                <field name="promotion_id"
+                                       domain="[('state', '=', 'active'),('check_promotion','=', True)]"
+                                       attrs="{'readonly': [('state', '!=', 'draft')],'required': 1}"/>
+                                <field name="production_lot_rule_id" domain="[('active', '=', True)]"
+                                       attrs="{'readonly': [('state', '!=', 'draft')],'required': 0,'invisible': [('import_file', '=', True)]}"/>
+                                <field name="promotion_use_code"
+                                       attrs="{'readonly': [('state', '!=', 'draft')],'required': 0,'invisible': [('import_file', '=', True)]}"/>
+                                <field name="import_file" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detail">
+                                <button name="print_promotion_code" type="object" class="oe_highlight"
+                                        string="Print Promotion Code"
+                                        attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                                <field name="field_binary_import_promotion_code"
+                                       filename="field_binary_name_promotion_code"
+                                       attrs="{'invisible': ['|',('import_file', '=', False),('state','!=','draft')]}"/>
+                                <field name="field_binary_name_promotion_code" invisible="1"/>
+                                <button name="download_template_promotion_code" type="object"
+                                        string="Download Import Template"
+                                        attrs="{'invisible': ['|',('import_file', '=', False),('state', '!=', 'draft')]}"
+                                        class="btn btn-link" style="text-decoration: underline;"
+                                        help="File must in the format of xls or xlsx"/>
+                                <button name="action_import_line_promotion_code" type="object" class="oe_highlight"
+                                        string="Import"
+                                        attrs="{'invisible': ['|','|',('field_binary_import_promotion_code', '=', False),('import_file', '=', False),('state', '!=', 'draft')]}"/>
+                                <field name="promotion_voucher_line" widget="section_and_note_one2many"
+                                       mode="tree,kanban" nolabel="1"
+                                       readonly="1">
+                                    <!--                                    <tree editable="bottom" >-->
+                                    <tree delete="0" create="0">
+                                        <field name="name"/>
+                                        <field name="promotion_use_code"/>
+                                        <field name="state_promotion_code"/>
+                                        <field name="date"/>
+                                        <field name="expired_date"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="name" options="{'no_open':1, 'no_create':1}"/>
+                                                <field name="state_promotion_code"/>
+                                                <field name="date"/>
+                                                <field name="expired_date"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <!--							<page name="pos_config" string="POS Apply">-->
+                            <!--								<field name="pos_configs" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+                            <!--							</page>-->
+                            <!--							<page string="Status">-->
+                            <!--								<button name="print_promotion_code_status" type="object" class="oe_highlight"-->
+                            <!--								        string="Print Excel"-->
+                            <!--								        attrs="{'invisible': [('state', '=', 'draft')]}"/>-->
+                            <!--								<field name="promotion_voucher_status"-->
+                            <!--								       mode="tree,kanban" nolabel="1"-->
+                            <!--								       readonly="1">-->
+                            <!--									<tree>-->
+                            <!--										<field name="promotion_code"/>-->
+                            <!--										<field name="pos_order"/>-->
+                            <!--										<field name="date"/>-->
+                            <!--									</tree>-->
+                            <!--									<form>-->
+                            <!--										<group>-->
+                            <!--											<group>-->
+                            <!--												<field name="promotion_code" options="{'no_open':1, 'no_create':1}"/>-->
+                            <!--												<field name="pos_order"/>-->
+                            <!--												<field name="date"/>-->
+                            <!--											</group>-->
+                            <!--										</group>-->
+                            <!--									</form>-->
+                            <!--								</field>-->
+                            <!--							</page>-->
+                            <page string="Trạng thái sử dụng">
+                                <button name="print_promotion_code_status" type="object" class="oe_highlight"
+                                        string="Print Excel"
+                                        attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                                <field name="promotion_voucher_count"
+                                       mode="tree,kanban" nolabel="1"
+                                       readonly="0">
+                                    <tree>
+                                        <field name="promotion_code"/>
+                                        <field name="pos_order_uid"/>
+                                        <field name="date"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="promotion_code"/>
+                                                <field name="pos_order_uid"/>
+                                                <field name="date"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="promotion_voucher_act" model="ir.actions.act_window">
+            <field name="name">Promotion Voucher</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">promotion.voucher</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

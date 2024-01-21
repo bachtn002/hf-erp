@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_transaction_payment_qrcode" model="ir.rule">
+            <field name="name">view_transaction_payment_qrcode</field>
+            <field name="model_id" ref="model_payment_qrcode_transaction"/>
+            <field name="domain_force">['|', ('pos_shop_id', 'in', user.x_pos_shop_ids.ids), ('view_all_shop', '=', user.x_view_all_shop)]</field>
+        </record>
+    </data>
+</odoo>

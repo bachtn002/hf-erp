@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_pos_pos_form_inherit">
+			<field name="name">view_pos_pos_form_inherit</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='products']/field[@name='lines']/tree/field[@name='price_subtotal_incl']"
+				       position="after">
+                    <field name="x_is_price_promotion"/>
+					<field name="amount_promotion_loyalty"/>
+					<field name="amount_promotion_total"/>
+                    <field name="x_product_promotion"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

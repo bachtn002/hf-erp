@@ -1,0 +1,272 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_invoice_from_picking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-15 08:25+0000\n"
+"PO-Revision-Date: 2020-12-15 08:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__stock_picking__invoice_status__invoiced
+msgid "Billed"
+msgstr "Có hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__wizard_stock_picking_invoice__invoice_type__out_refund
+msgid "Create Customer Credit Note"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__wizard_stock_picking_invoice__invoice_type__out_invoice
+msgid "Create Customer Invoice"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.actions.act_window,name:ev_invoice_from_picking.action_stock_picking_create_invoice
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.inherit_view_stock_picking_form
+msgid "Create Invoice"
+msgstr "Tạo hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Create Invoices"
+msgstr "Tạo hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__wizard_stock_picking_invoice__invoice_type__in_invoice
+msgid "Create Vendor Bill"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__wizard_stock_picking_invoice__invoice_type__in_refund
+msgid "Create Vendor Refund"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__account_move__invoice_picking_type_code__outgoing
+msgid "Customers"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Disc.%"
+msgstr "giảm giá.%"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_move__display_name
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_move__display_name
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__group_by_partner
+msgid "Group By Partner"
+msgstr "Nhóm theo đối tác"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_move__id
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_move__id
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_picking__id
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_picking__invoice_ids
+msgid "Invoice"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__invoice_date
+msgid "Invoice Date"
+msgstr "Ngày tạo hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__invoice_line_ids
+msgid "Invoice Detail"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Invoice Lines"
+msgstr "Chi tiết"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_picking__invoice_status
+msgid "Invoice Status"
+msgstr "Trạng thái hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__invoice_type
+msgid "Invoice Type"
+msgstr "Kiểu hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_picking__invoice_ids_count
+msgid "Invoices"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model,name:ev_invoice_from_picking.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Journal Items"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_move____last_update
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_move____last_update
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_wizard_stock_picking_invoice__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__stock_picking__invoice_status__no
+msgid "Nothing to Bill"
+msgstr "Không có hóa đơn"
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid ""
+"Partner not found. For create invoice, into picking must have the partner."
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_bank_statement_line__stock_picking_ids
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_move__stock_picking_ids
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_payment__stock_picking_ids
+msgid "Picking Ref."
+msgstr "Tham chiếu bên dịch chuyển"
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid "Please define an accounting sales journal for this company."
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Price"
+msgstr "Giá bán"
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid "Select only Delivery Orders / Receipts for create Invoice."
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid "Select only type Delivery / Receipts for create Invoice."
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid "Selected picking must have in Done State."
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid "Selected picking must have same Operation Type."
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model,name:ev_invoice_from_picking.model_stock_move
+msgid "Stock Move"
+msgstr "Hoạt động kho"
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Subtotal"
+msgstr "Tổng"
+
+#. module: ev_invoice_from_picking
+#: code:addons/ev_invoice_from_picking/wizard/wizard_stock_picking_invoice.py:0
+#, python-format
+msgid "There's nothing left to bill '%s'"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "Total"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model,name:ev_invoice_from_picking.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_bank_statement_line__invoice_picking_type_code
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_move__invoice_picking_type_code
+#: model:ir.model.fields,field_description:ev_invoice_from_picking.field_account_payment__invoice_picking_type_code
+msgid "Type picking"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model_terms:ir.ui.view,arch_db:ev_invoice_from_picking.wizard_stock_picking_invoice_form_view
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: ev_invoice_from_picking
+#: model:ir.model.fields.selection,name:ev_invoice_from_picking.selection__account_move__invoice_picking_type_code__incoming
+msgid "Vendors"
+msgstr ""
+
+#. module: ev_invoice_from_picking
+#: model:ir.model,name:ev_invoice_from_picking.model_wizard_stock_picking_invoice
+msgid "Wizard Stock Picking Description"
+msgstr ""

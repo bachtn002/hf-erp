@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- form view -->
+        <record id="rpt_detail_by_product_form" model="ir.ui.view">
+            <field name="name">RPT Detail By Product</field>
+            <field name="model">rpt.detail.by.product</field>
+            <field name="arch" type="xml">
+                <form string="RPT Detail By Product">
+                    <group>
+                        <group>
+                            <field name="date_from" required="1" string="From date"/>
+                            <field name="date_to" required="1" string="To date"/>
+                        </group>
+                        <group>
+                            <field name="account_id" options="{'no_edit':True,'no_create':True,'no_create_edit':True}"
+                                   required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_export_report" type="object" class="oe_highlight" string="View Report"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="action_rpt_detail_by_product" model="ir.actions.act_window">
+            <field name="name">RPT Detail By Product</field>
+            <field name="res_model">rpt.detail.by.product</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="rpt_detail_by_product_form"/>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_rpt_detail_by_product" groups="account.group_account_user"
+                  name="RPT Detail By Product" action="action_rpt_detail_by_product"
+                  parent="account.account_reports_legal_statements_menu"
+                  sequence="101"/>
+
+    </data>
+</odoo>

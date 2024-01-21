@@ -1,0 +1,238 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_promotion_qty_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-31 01:35+0000\n"
+"PO-Revision-Date: 2021-08-31 01:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/wizard/promotion_qty_price_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Price unit must be greater than 0, line (%s)"
+msgstr ""
+"\n"
+"Đơn giá phải lớn hơn 0, dòng (%s)"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/wizard/promotion_qty_price_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Product does not exist in the system, line (%s)"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/wizard/promotion_qty_price_imp.py:0
+#, python-format
+msgid ""
+"\n"
+"Quantity must be greater than 0, line (%s)"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__product_id
+msgid "Apply Product"
+msgstr "Sản phẩm áp dụng"
+
+#. module: ev_pos_promotion_qty_price
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_qty_price.promotion_price_import_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__promotion_price_file
+msgid "Choose File"
+msgstr "Chọn File"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__create_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__create_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#: model:ir.model.fields.selection,name:ev_pos_promotion_qty_price.selection__pos_promotion_qty_price__check_discount_price__discount
+#, python-format
+msgid "Discount Promotion"
+msgstr "Chiết khấu"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__display_name
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_promotion_qty_price
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_qty_price.pos_promotion_form_view_quantity_price
+msgid "Download Import Template"
+msgstr "Tải file mẫu"
+
+#. module: ev_pos_promotion_qty_price
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_qty_price.pos_promotion_form_view_quantity_price
+msgid "File must in the format of xls or xlsx"
+msgstr "File phải là định dạng xls hoặc xlsx"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__id
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_qty_price.pos_promotion_form_view_quantity_price
+msgid "Import Promotion Price"
+msgstr "Nhập file chi tiết"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/wizard/promotion_qty_price_imp.py:0
+#, python-format
+msgid "Import file must be an excel file"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price____last_update
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__write_uid
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__write_date
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_promotion_qty_price_import__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model,name:ev_pos_promotion_qty_price.model_pos_promotion
+msgid "Pos promotion"
+msgstr "Chường trình khuyến mại"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#: model:ir.model.fields.selection,name:ev_pos_promotion_qty_price.selection__pos_promotion_qty_price__check_discount_price__price
+#, python-format
+msgid "Price Promotion"
+msgstr "Giảm giá"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__price_unit
+msgid "Price Unit"
+msgstr "Giảm giá"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__category_id
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__promotion_id
+msgid "Promotion"
+msgstr "Chương trình khuyến mãi"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion__pos_promotion_qty_price_ids
+msgid "Promotion Quantity Price"
+msgstr "Chương trình khuyến mãi giá bán theo số lượng mua"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields.selection,name:ev_pos_promotion_qty_price.selection__pos_promotion__type__qty_price
+msgid "Quantity Price"
+msgstr "Giá bán theo số lượng mua"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion_qty_price__check_discount_price
+#, python-format
+msgid "State Promotion"
+msgstr "Loại"
+
+#. module: ev_pos_promotion_qty_price
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_qty_price.promotion_price_import_form
+msgid "Submit"
+msgstr "Xác nhận"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model.fields,field_description:ev_pos_promotion_qty_price.field_pos_promotion__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: ev_pos_promotion_qty_price
+#: model_terms:ir.ui.view,arch_db:ev_pos_promotion_qty_price.promotion_price_import_form
+msgid "Upload"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.actions.act_window,name:ev_pos_promotion_qty_price.promotion_price_import_act
+msgid "Upload File"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#, python-format
+msgid "You can only create discount < 100"
+msgstr "Bạn chỉ có thể nhập chiết khấu nhỏ hơn 100"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#, python-format
+msgid "You can only create discount > 0"
+msgstr "Bạn chỉ có thể nhập chiết khấu lớn hơn 0"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#, python-format
+msgid "You can only create price unit > 0"
+msgstr "Bạn chỉ có thể nhập đơn giá lớn hơn 0"
+
+#. module: ev_pos_promotion_qty_price
+#: code:addons/ev_pos_promotion_qty_price/models/pos_promotion_qty_price.py:0
+#, python-format
+msgid "You can only create quantity > 0"
+msgstr "Bạn chỉ có thể nhập số lượng lớn hơn 0"
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model,name:ev_pos_promotion_qty_price.model_pos_promotion_qty_price
+msgid "pos.promotion.qty.price"
+msgstr ""
+
+#. module: ev_pos_promotion_qty_price
+#: model:ir.model,name:ev_pos_promotion_qty_price.model_promotion_qty_price_import
+msgid "promotion.qty.price.import"
+msgstr ""

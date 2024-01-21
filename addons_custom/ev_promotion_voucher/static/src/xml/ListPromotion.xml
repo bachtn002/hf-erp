@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preverse">
+
+    <t t-name="PromotionVoucherList" owl="1">
+        <ul class="body_custom">
+            <t t-foreach="props.promotions" t-as="item" t-key="item.cid">
+                <PromotionVoucherItem promotion="item"/>
+            </t>
+        </ul>
+    </t>
+
+</templates>

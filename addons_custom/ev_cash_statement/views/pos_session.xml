@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_cash_pos_session_form_inherit">
+            <field name="name">view_pos_order_inherit</field>
+            <field name="model">pos.session</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='open_cashbox_pos']" position="after">
+                    <button name="input_cash_statement" type="object"
+                            string="Input Cash Statement" class="oe_highlight"
+                            attrs="{'invisible': [('x_check_cash_statement', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='cash_register_id']" position="after">
+                    <field name="x_check_cash_statement" invisible="1"/>
+                    <field name="x_money_total_cash_app" invisible="1"/>
+                    <field name="x_amount_total_cash_iput" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='config_id']" position="attributes">
+                    <attribute name="options">{'no_create':1, 'no_create_edit':1,'no_open': 1}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='config_id']" position="after">
+                    <field name="x_cash_fund_balance" invisible="1"/>
+                </xpath>
+                <xpath expr="//page[@name='cash_control']" position="after">
+                    <page name="cash_statement" string="Cash statement">
+                        <button name='print_cash_statement_pdf' type="object" string="Print cash statement"
+                                icon="fa-download" class="oe_highlight"/>
+                        <field name="x_cash_statement_ids" attrs="{'readonly': [('state', '!=', 'opened')]}"
+                               options="{'create': False}">
+                            <tree delete="false" editable="bottom">
+                                <field name="date" readonly="1"/>
+                                <field name="denominations" widget="integer"/>
+                                <field name="quantity"/>
+                                <field name="amount" widget="integer"/>
+                            </tree>
+                        </field>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                            <field name="x_amount_total_cash"
+                                   class="oe_subtotal_footer_separator"
+                                   widget="monetary"/>
+                            <field name="x_amount_total_cash_app"
+                                   class="oe_subtotal_footer_separator"
+                                   widget="monetary"/>
+                            <field name="x_difference_amount"
+                                   class="oe_subtotal_footer_separator"
+                                   widget="monetary"/>
+                        </group>
+                        <group>
+                            <field name="x_reason_money_difference" attrs="{'invisible': [('x_difference_amount', '=', 0)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

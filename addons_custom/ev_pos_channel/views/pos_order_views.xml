@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_pos_pos_form_channel" model="ir.ui.view">
+            <field name="name">view_pos_pos_form_channel</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='x_note_return']" position="after">
+                    <field name="pos_channel_id" options="{'no_create': True, 'no_create_edit':True}" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

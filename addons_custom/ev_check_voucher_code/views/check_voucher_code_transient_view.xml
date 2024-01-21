@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="check_voucher_code_transient_form_view" model="ir.ui.view">
+            <field name="name">Check voucher code</field>
+            <field name="model">check.voucher.code.transient</field>
+            <field name="arch" type="xml">
+                <form string="Check voucher code transient">
+                    <sheet>
+                        <group>
+                            <div>
+                                <h1 style="text-align: center;">Check voucher code</h1>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="name" required="1"
+                                       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+                                <field name="check" invisible="1"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <button name="check_voucher_code" type="object" string="Check" class="oe_highlight"/>
+                        <!--
+                        <button name="update_voucher_code" type="object" string="Update voucher status"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('check', '=', False)]}"/> -->
+                        <group>
+                            <field name="x_state" readonly="1"/>
+                            <field name="x_order_use_id"
+                                   options="{'no_create': True,'no_create_edit': True}" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="check_voucher_code_transient_action" model="ir.actions.act_window">
+            <field name="name">Check voucher code transient</field>
+            <field name="res_model">check.voucher.code.transient</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="check_voucher_code_transient_form_view"/>
+            <field name="target">inline</field>
+        </record>
+        <menuitem id="menu_check_voucher_code_transient"
+                  action="check_voucher_code_transient_action"
+                  name="Check voucher code transient"
+                  parent="ev_product_release.menu_pos_voucher" sequence="200"/>
+    </data>
+</odoo>

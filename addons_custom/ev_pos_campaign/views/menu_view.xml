@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+<!--		<menuitem id="campaign_promotion_menu" name="Campaign Promotion"-->
+<!--		          parent="ev_pos_erpviet.menu_pos_config_custom"-->
+<!--		          action="ev_pos_campaign.campaign_promotion_act" sequence="102"/>-->
+		<menuitem id="campaign_promotion_menu"
+              parent="ev_pos_promotion.menu_pos_promotion"
+              sequence="14"
+              action="ev_pos_campaign.campaign_promotion_act"/>
+	</data>
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="merge_partner_view_tree" model="ir.ui.view">
+            <field name="name">merge_partner_view_tree</field>
+            <field name="model">merge.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Merge Partner" default_order='create_date desc'>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="partner_id"/>
+                    <field name="partner_merge_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="merge_partner_view_form" model="ir.ui.view">
+            <field name="name">merge_partner_view_form</field>
+            <field name="model">merge.partner</field>
+            <field name="arch" type="xml">
+                <form string="Merge Partner">
+                    <header>
+                        <button name="action_merge" string="Merge" type="object" states="draft"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+
+                                <field name="name" readonly="1"
+                                       attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1"
+                                       attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="partner_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                       required="1"
+                                       options="{'no_quick_create': True,'no_create_edit': True}"/>
+                            </group>
+                            <group>
+                                <field name="partner_merge_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                       required="1"
+                                       options="{'no_quick_create': True,'no_create_edit': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="merge_partner_view_search" model="ir.ui.view">
+            <field name="name">merge_partner_view_search</field>
+            <field name="model">merge.partner</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="name"/>
+                    <field name="partner_id"
+                           filter_domain="['|',('partner_id.phone', 'ilike', self), ('partner_id.name', 'ilike', self)]"/>
+                    <field name="partner_merge_id"
+                           filter_domain="['|',('partner_merge_id.phone', 'ilike', self), ('partner_id.name', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="merge_partner_action" model="ir.actions.act_window">
+            <field name="name">merge_partner_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">merge.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="merge_partner_view_search"/>
+        </record>
+
+
+        <menuitem id="merge_partner_menu"
+                  name="Merge Partner"
+                  action="merge_partner_action"
+                  groups="point_of_sale.group_pos_manager"
+                  parent="point_of_sale.menu_point_of_sale"
+                  sequence="100"/>
+    </data>
+</odoo>

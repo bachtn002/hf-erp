@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+data_warehouse_01,ev_data_warehouse_01,model_ev_data_warehouse,stock.group_stock_manager,1,1,1,1
+data_warehouse_02,ev_data_warehouse_02,model_ev_data_location,stock.group_stock_manager,1,1,1,1
+data_warehouse_03,ev_data_warehouse_03,model_ev_data_location_detail,stock.group_stock_manager,1,1,1,1
+
+access_stock_quant,access_stock_quant_name,stock.model_stock_quant,stock.group_stock_manager,1,1,1,1

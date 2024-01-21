@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="view_report_pos_order_inherit_form" model="ir.ui.view">
+            <field name="name">view_report_pos_order_inherit_form</field>
+            <field name="model">report.pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_report_pos_order_pivot"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='price_total']" position="after">
+                    <field name="x_margin" type="measure"
+                           groups="account.group_account_user,account.group_account_invoice,account.group_account_manager,purchase.group_purchase_user"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

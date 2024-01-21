@@ -1,0 +1,221 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_shop
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 03:56+0000\n"
+"PO-Revision-Date: 2021-10-28 03:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: ev_pos_shop
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_config_form_inherit
+msgid "Allow price correction"
+msgstr "Cho phép sửa giá"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__code
+msgid "Code"
+msgstr "Mã cửa hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_config_form_inherit
+msgid "Disable +/-"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__display_name
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_payment__display_name
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session__display_name
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__display_name
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__x_enable_lunisolar
+msgid "Enable +/-"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_payment__id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session__id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config____last_update
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_payment____last_update
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session____last_update
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop____last_update
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.pos_shop_form_view
+msgid "List user"
+msgstr "Danh sánh người dùng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__manage_shop_id
+msgid "Manager shop"
+msgstr "Quản lý cửa hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__name
+msgid "Name"
+msgstr "Tên cửa hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: ev_pos_shop
+#: model:ir.model,name:ev_pos_shop.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: ev_pos_shop
+#: model:ir.model,name:ev_pos_shop.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_pos_shop
+#: model:ir.model,name:ev_pos_shop.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Thanh toán Điểm bán hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model,name:ev_pos_shop.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Ca bán hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model,name:ev_pos_shop.model_pos_shop
+msgid "Pos Shop"
+msgstr "Cửa hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__pos_config_ids
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users__x_pos_config_ids
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.pos_shop_form_view
+msgid "Pos config"
+msgstr "Điểm bán lẻ"
+
+#. module: ev_pos_shop
+#: model:ir.actions.act_window,name:ev_pos_shop.action_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__x_pos_shop_id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_order__x_pos_shop_id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_payment__x_pos_shop_id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session__x_pos_shop_id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users__x_pos_shop_ids
+#: model:ir.ui.menu,name:ev_pos_shop.menu_pos_shop
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_config_form_inherit
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_order_form_inherit_manu
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_payment_form_inherit
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_session_form_inherit
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.view_pos_user_form_inherit
+msgid "Pos shop"
+msgstr "Cửa hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__x_price_correction
+msgid "Price Correction"
+msgstr "Sửa giá"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session__cash_fund_balance
+msgid "Cash fund balance"
+msgstr "Số dư quỹ tiền lẻ"
+
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__region
+msgid "Region"
+msgstr "Vùng miền"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users__security_pos_shop
+msgid "Security Pos Shop"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__security_user_no_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_order__security_user_no_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_payment__security_user_no_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session__security_user_no_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__security_user_no_shop
+msgid "Security User No Shop"
+msgstr ""
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__x_user_id
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__user_ids
+msgid "User"
+msgstr "Nhân viên"
+
+#. module: ev_pos_shop
+#: model:ir.model,name:ev_pos_shop.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_config__x_view_all_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_order__x_view_all_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_payment__x_view_all_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_session__x_view_all_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__x_view_all_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_res_users__x_view_all_shop
+msgid "View All Shop"
+msgstr "Xem tất cả cửa hàng"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__warehouse_id
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: ev_pos_shop
+#: model:ir.model.fields,field_description:ev_pos_shop.field_pos_shop__active
+#: model_terms:ir.ui.view,arch_db:ev_pos_shop.pos_shop_form_view
+msgid "active"
+msgstr "Lưu trữ"

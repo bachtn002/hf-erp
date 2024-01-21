@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_promotion,access_pos_promotion,model_pos_promotion,base.group_user,1,1,1,1
+access_partner_group,assset_partner_group,model_res_partner_group,base.group_user,1,1,1,1
+access_custom_weekdays,assset_custom_weekdays,model_custom_weekdays,base.group_user,1,1,1,1
+

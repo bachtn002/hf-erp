@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_shop_view_inherit_merchant_id" model="ir.ui.view">
+            <field name="name">pos_shop_view_inherit_merchant_id</field>
+            <field name="model">pos.shop</field>
+            <field name="inherit_id" ref="ev_pos_shop.pos_shop_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='manage_shop_id']" position="after">
+                    <field name="merchant_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

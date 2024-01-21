@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="update_promotion_code_view_form" model="ir.ui.view">
+            <field name="name">update_promotion_code_view_form</field>
+            <field name="model">update.promotion.code</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="expired_type"/>
+                                <field name="date"/>
+                                <field name="expired_date"
+                                       attrs="{'invisible': [('expired_type', '=', 'flexible')], 'required': [('expired_type', '=', 'fixed')]}"/>
+                            </group>
+                            <group>
+                                <field name="promotion_id"
+                                       domain="[('state', '=', 'active'),('check_promotion','=', True)]"
+                                       options="{'no_open':1, 'no_create_edit':1, 'no_create':1}"/>
+                                <field name="promotion_use_code"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update" string="Update" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="update_promotion_code_act" model="ir.actions.act_window">
+            <field name="name">Update Promotion Code</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update.promotion.code</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="update_promotion_code_view_form"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

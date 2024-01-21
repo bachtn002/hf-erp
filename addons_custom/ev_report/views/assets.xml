@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="ev_report assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/ev_report/static/src/scss/styles.scss" />
+
+            <script type="text/javascript" src="/ev_report/static/src/js/fields/widgets/ev_report_preview.js"/>
+        </xpath>
+    </template>
+</odoo>

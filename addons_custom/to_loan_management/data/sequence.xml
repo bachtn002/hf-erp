@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="seq_borrow_order" model="ir.sequence">
+			<field name="name">Borrowing Loan Contract Sequence</field>
+            <field name="code">borrow.order</field>
+			<field name="prefix">BLC</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+		</record>
+		
+		<record id="seq_borrow_disbursement" model="ir.sequence">
+			<field name="name">Borrowing Loan Disbursement Sequence</field>
+			<field name="code">loan.borrowing.disbursement</field>
+			<field name="prefix">BLD</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>
+		
+		<record id="seq_borrow_refund" model="ir.sequence">
+			<field name="name">Borrowing Loan Refund Sequence</field>
+			<field name="code">loan.borrowing.refund</field>
+			<field name="prefix">BLR</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>
+		
+		<record id="seq_borrow_interest" model="ir.sequence">
+			<field name="name">Borrowing Loan Interest Sequence</field>
+			<field name="code">loan.borrow.interest</field>
+			<field name="prefix">BLI</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>
+		
+		<record id="seq_lend_order" model="ir.sequence">
+            <field name="name">Lending Loan Contract Sequence</field>
+            <field name="code">lend.order</field>
+            <field name="prefix">LLC</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+		
+		<record id="seq_lend_disbursement" model="ir.sequence">
+			<field name="name">Lending Loan Disbursement Sequence</field>
+			<field name="code">loan.lending.disbursement</field>
+			<field name="prefix">LLD</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>		
+		<record id="seq_lend_refund" model="ir.sequence">
+			<field name="name">Lending Loan Refund Sequence</field>
+			<field name="code">loan.lending.refund</field>
+			<field name="prefix">LLR</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>
+		 <record id="seq_lend_interest" model="ir.sequence">
+			<field name="name">Lending Loan Interest Sequence</field>
+			<field name="code">loan.lend.interest</field>
+			<field name="prefix">LLI</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>
+    </data>
+
+</odoo>

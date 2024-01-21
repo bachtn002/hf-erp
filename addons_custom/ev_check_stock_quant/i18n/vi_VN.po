@@ -1,0 +1,362 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_check_stock_quant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-17 01:12+0000\n"
+"PO-Revision-Date: 2021-09-17 01:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.actions.server,name:ev_check_stock_quant.check_data_daily_cron_ir_actions_server
+#: model:ir.cron,cron_name:ev_check_stock_quant.check_data_daily_cron
+#: model:ir.cron,name:ev_check_stock_quant.check_data_daily_cron
+msgid "Check data daily"
+msgstr "Kiểm tra dữ liệu hằng ngày"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__company_id
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__company_id
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_check_stock_quant
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_daily_form_view
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_form_view
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: ev_check_stock_quant
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_daily_form_view
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__create_uid
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__create_uid
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__create_date
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__create_date
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields.selection,name:ev_check_stock_quant.selection__ev_data_warehouse__type__daily
+msgid "Daily"
+msgstr "Hằng ngày"
+
+#. module: ev_check_stock_quant
+#: model:ir.actions.act_window,name:ev_check_stock_quant.action_data_location
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__data_location_id
+msgid "Data Location"
+msgstr "Dữ liệu theo địa điểm"
+
+#. module: ev_check_stock_quant
+#: model:ir.actions.act_window,name:ev_check_stock_quant.action_data_warehouse
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__data_warehouse_id
+#: model:ir.ui.menu,name:ev_check_stock_quant.menu_data_warehouse
+msgid "Data Warehouse"
+msgstr "Xử lý dữ liệu kho"
+
+#. module: ev_check_stock_quant
+#: model:ir.actions.act_window,name:ev_check_stock_quant.action_data_warehouse_daily
+#: model:ir.ui.menu,name:ev_check_stock_quant.menu_data_warehouse_daily
+msgid "Data Warehouse Daily"
+msgstr "Xử lý dữ liệu kho hàng ngày"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__date
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__date
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__display_name
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__display_name
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__display_name
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_stock_move__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields.selection,name:ev_check_stock_quant.selection__ev_data_warehouse__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields.selection,name:ev_check_stock_quant.selection__ev_data_warehouse__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields.selection,name:ev_check_stock_quant.selection__ev_data_warehouse__state__get_data
+msgid "Get Data"
+msgstr "Lấy dữ liệu"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__id
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__id
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__id
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_stock_move__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_needaction
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_has_error
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location____last_update
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail____last_update
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse____last_update
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_stock_move____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__write_uid
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__write_uid
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__write_date
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__write_date
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__lines
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__lines
+msgid "Lines"
+msgstr "Các dòng"
+
+#. module: ev_check_stock_quant
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_daily_form_view
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_form_view
+msgid "Load Data"
+msgstr "Lấy dữ liệu"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__location_id
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__location_id
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_daily_form_view
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_form_view
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location__name
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__name
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__name
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_daily_form_view
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_warehouse_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__uom_id
+msgid "Product Uom"
+msgstr "Đơn vị tính"
+
+#. module: ev_check_stock_quant
+#: model_terms:ir.ui.view,arch_db:ev_check_stock_quant.data_location_form_view
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__qty_difference
+msgid "Quantity Difference"
+msgstr "SL chênh lệch"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__qty_move
+msgid "Quantity Move"
+msgstr "SL dịch chuyển"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__qty_quant
+msgid "Quantity Quant"
+msgstr "SL hiện tại"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields.selection,name:ev_check_stock_quant.selection__ev_data_warehouse__type__start
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_check_stock_quant
+#: model:ir.model,name:ev_check_stock_quant.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__stock_move_id
+msgid "Stock move"
+msgstr "Dịch chuyển"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_location_detail__stock_quant_id
+msgid "Stock quant"
+msgstr "Tồn kho"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_stock_move__x_update_data
+msgid "Update Data"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,field_description:ev_check_stock_quant.field_ev_data_warehouse__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model.fields,help:ev_check_stock_quant.field_ev_data_warehouse__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử giao tiếp trang web"
+
+#. module: ev_check_stock_quant
+#: code:addons/ev_check_stock_quant/models/data_warehouse.py:0
+#, python-format
+msgid "You cannot delete record state Done."
+msgstr "Bạn không thể xóa bản ghi khác trạng thái nháp"
+
+#. module: ev_check_stock_quant
+#: model:ir.model,name:ev_check_stock_quant.model_ev_data_location
+msgid "ev.data.location"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model,name:ev_check_stock_quant.model_ev_data_location_detail
+msgid "ev.data.location.detail"
+msgstr ""
+
+#. module: ev_check_stock_quant
+#: model:ir.model,name:ev_check_stock_quant.model_ev_data_warehouse
+msgid "ev.data.warehouse"
+msgstr ""

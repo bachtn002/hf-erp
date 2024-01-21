@@ -1,0 +1,12 @@
+.o_ev_pos_promotion--popup header {
+    background-color: orange !important;
+    color: white;
+}
+
+.o_ev_pos_promotion--popup i {
+    font-size: 100px;
+    color: orange;
+}
+.pos .popup .button {
+    width: 30%;
+}

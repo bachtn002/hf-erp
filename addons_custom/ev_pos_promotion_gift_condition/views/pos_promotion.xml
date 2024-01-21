@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="pos_promotion_form_view_gift_condition" model="ir.ui.view">
+		<field name="name">pos_promotion_form_view_gift_condition</field>
+		<field name="model">pos.promotion</field>
+		<field name="inherit_id" ref="ev_pos_promotion.pos_promotion_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='promotion_detail']" position="inside">
+				<group name="gift_condition_condition" string="Condition"
+				       attrs="{'invisible': [('type', '!=', 'gift_condition')]}">
+					<field name="pos_promotion_gift_condition_ids" nolabel="1"
+					       attrs="{'readonly': [('state', '!=', 'draft')]}">
+						<tree editable="bottom">
+<!--							<field name="category_id"-->
+<!--							       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>-->
+							<field name="product_id" domain="[('available_in_pos','=',True)]"
+							       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+							<field name="qty"/>
+							<field name="promotion_id" invisible="1"/>
+						</tree>
+					</field>
+				</group>
+				<group name="gift_condition_apply" string="Apply"
+				       attrs="{'invisible': [('type', '!=', 'gift_condition')]}">
+					<field name="pos_promotion_gift_apply_ids" nolabel="1"
+					       attrs="{'readonly': [('state', '!=', 'draft')]}">
+						<tree editable="bottom">
+<!--							<field name="category_id"-->
+<!--							       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>-->
+							<field name="product_id" domain="[('available_in_pos','=',True)]"
+							       options="{'no_edit':True,'no_create':True,'no_create_edit':True}"/>
+							<field name="qty"/>
+							<field name="promotion_id" invisible="1"/>
+						</tree>
+					</field>
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+            <act_window
+            name="Create Invoice"
+            res_model="wizard.stock.picking.invoice"
+            binding_model="stock.picking"
+            view_mode="form"
+            target="new"
+            id="action_stock_picking_create_invoice" />
+
+        <record id="inherit_view_stock_picking_form" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form//header" position="inside">
+                    <button type="action" name="%(action_stock_picking_create_invoice)d" string="Create Invoice" class="btn btn-primary"
+                        attrs="{'invisible':['|', '|',('picking_type_code', '=', 'internal'),('invoice_ids_count', '!=', 0), ('state','!=','done')]}"/>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="view_account_invoices" type="object" class="oe_stat_button" 
+                        icon="fa-pencil-square-o" attrs="{'invisible':[('invoice_ids_count','=',0)]}">
+                        <field name="invoice_ids_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_vpicktree_inherit_invoice_status" model="ir.ui.view">
+            <field name="name">stock.picking.vpicktree</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="invoice_status" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

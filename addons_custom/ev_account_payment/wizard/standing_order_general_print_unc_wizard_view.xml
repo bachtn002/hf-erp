@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_standing_order_general_unc_view_form" model="ir.ui.view">
+        <field name="name">wizard_standing_order_general_unc_view_form</field>
+        <field name="model">standing.order.general.unc</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="general_id" invisible="1"/>
+                <group class="text-left">
+                    <field name="x_bank_id" required="1"/>
+                </group>
+                <footer>
+                    <button name="action_print_unc" type="object" string="Print UNC" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

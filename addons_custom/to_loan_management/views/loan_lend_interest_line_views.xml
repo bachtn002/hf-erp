@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="loan_lending_interest_line_form_view"
+                model="ir.ui.view">
+            <field name="name">loan.lend.interest.line.form</field>
+            <field name="model">loan.lend.interest.line</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_interest_line_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_invoice']"
+                       position="attributes">
+                    <attribute name="string">Create Invoice</attribute>
+                    <attribute name="help">This will open invoicing wizard for your
+                        to create bill for your loan interests
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoices_count']" position="attributes">
+                    <attribute name="string">Invoices</attribute>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="before">
+                    <field name="disbursement_id"/>
+                    <field name="order_id"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Invoice Lines" name="pg_inv_lines"
+                          groups="base.group_no_one">
+                        <field name="invoice_line_ids" groups="base.group_no_one">
+                            <tree edit="bottom">
+                                <field name="product_id"/>
+<!--                                <field name="origin" invisible="1"/>-->
+                                <field name="name"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="account_id"
+                                       groups="account.group_account_user"
+                                       domain="[('company_id', '=', company_id), ('internal_type', '=', 'other')]"/>
+                                <field name="analytic_account_id"
+                                       groups="analytic.group_analytic_accounting"
+                                       domain="[('company_id', '=', company_id)]"/>
+                                <field name="analytic_tag_ids"
+                                       groups="analytic.group_analytic_accounting"
+                                       widget="many2many_tags"/>
+                                <field name="quantity"/>
+<!--                                <field name="uom_id" groups="uom.group_uom"/>-->
+                                <field name="price_unit"/>
+                                <field name="discount" groups="base.group_no_one"/>
+<!--                                <field name="invoice_line_tax_ids" widget="many2many_tags"-->
+<!--                                       context="{'type':type}"-->
+<!--                                       domain="[('type_tax_use','=','sale'),('company_id', '=', company_id)]"-->
+<!--                                       options="{'no_create': True}"/>-->
+                                <field name="price_subtotal"/>
+                                <field name="currency_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="loan_lending_interest_line_tree_view"
+                model="ir.ui.view">
+            <field name="name">loan.lend.interest.line.tree</field>
+            <field name="model">loan.lend.interest.line</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_interest_line_tree_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="disbursement_id"/>
+                    <field name="order_id"/>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="after">
+                    <field name="disbursement_state"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="loan_lending_interest_line_simple_tree_view"
+                model="ir.ui.view">
+            <field name="name">loan.lend.interest.line.tree.simple</field>
+            <field name="model">loan.lend.interest.line</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_interest_line_tree_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']"
+                       position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="loan_lending_interest_line_pivot_view"
+                model="ir.ui.view">
+            <field name="name">loan.lend.interest.line.pivot</field>
+            <field name="model">loan.lend.interest.line</field>
+            <field name="inherit_id"
+                   ref="abstract_loan_interest_line_pivot_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_to']" position="before">
+                    <field name="order_id" type="row"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="loan_lending_interest_line_search_view">
+            <field name="name">loan.lend.interest.line.search</field>
+            <field name="model">loan.lend.interest.line</field>
+            <field name="inherit_id" ref="abstract_loan_interest_search_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_maturity']" position="after">
+                    <separator/>
+                    <field name="disbursement_id"/>
+                    <field name="order_id"/>
+                </xpath>
+                <xpath expr="//filter[@name='ftr_to_invoice']" position="attributes">
+                    <attribute name="string">To Invoice</attribute>
+                </xpath>
+                <xpath expr="//filter[@name='ftr_invoiced']" position="attributes">
+                    <attribute name="string">Fully Invoiced</attribute>
+                </xpath>
+                <xpath expr="//group/filter[@name='grp_partner']"
+                       position="after">
+                    <filter string="Disbursement" name="grp_disbursement"
+                            context="{'group_by':'disbursement_id'}"/>
+                    <filter string="Contract" name="grp_order"
+                            context="{'group_by':'order_id'}"/>
+                </xpath>
+                <xpath expr="//group/filter[@name='grp_company']"
+                       position="after">
+                    <filter string="Disbursement Status"
+                            name="grp_disbursement_state"
+                            context="{'group_by':'disbursement_state'}"/>
+                    <separator/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window"
+                id="loan_lending_interest_line_action">
+            <field name="name">Loan Lend Interest</field>
+            <field name="res_model">loan.lend.interest.line</field>
+            <field name="view_mode">tree,pivot,form</field>
+        </record>
+
+<!--        <menuitem id="loan_lending_interest_line_menu"-->
+<!--                  name="Interests" parent="loan_lending_order_main_menu" sequence="40"-->
+<!--                  action="loan_lending_interest_line_action"/>-->
+
+        <record id="action_server_loan_lending_interest_confirm" model="ir.actions.server">
+            <field name="name">Interest Immediate Confirm</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_loan_lend_interest_line"/>
+            <field name="state">code</field>
+            <field name="code">records.action_confirm()</field>
+            <field name="binding_model_id" ref="model_loan_lend_interest_line"/>
+            <field name="binding_type">action</field>
+        </record>
+    </data>
+</odoo>

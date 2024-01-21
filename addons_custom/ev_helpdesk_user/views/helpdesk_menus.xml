@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="action_open_helpdesk_portal" model="ir.actions.act_url">
+            <field name="name">Helpdesk Portal</field>
+            <field name="target">self</field>
+            <field name="url">/helpdesk/home</field>
+        </record>
+
+        <menuitem
+                id="open_helpdesk_portal_menu"
+                action="action_open_helpdesk_portal"
+                web_icon="ev_helpdesk_user,static/description/icon.png"
+                sequence="50"/>
+
+    </data>
+</odoo>

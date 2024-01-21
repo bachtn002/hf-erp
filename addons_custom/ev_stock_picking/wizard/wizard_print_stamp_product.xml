@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_product_print_stamp_form_view" model="ir.ui.view">
+            <field name="name">product.product.print.stamp.form</field>
+            <field name="model">product.product.print.stamp</field>
+            <field name="arch" type="xml">
+                <form>
+                    <notebook>
+                        <page string="Products">
+                            <field name="product_ids" options="{'no_create_edit': True, 'no_create': True, 'no_open': True}"
+                                   widget="section_and_note_one2many" mode="tree">
+                                <tree string="Print stamp" create="false" delete="false" editable="bottom">
+                                    <field name="name" readonly="1" force_save="1"/>
+                                    <field name="barcode" readonly="1" force_save="1"/>
+                                    <field name="default_code" readonly="1" force_save="1"/>
+                                    <field name="product_uom_id" readonly="1" force_save="1"/>
+                                    <field name="number_of_codes"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="print_stamp" string="Print Stamps" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- form -->
+        <record id="rpt_report_sql_form_view" model="ir.ui.view">
+            <field name="name">rpt_report_sql_form</field>
+            <field name="model">report.sql</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="run_sql" type="object" class="btn-danger" string="Run"/>
+                    </header>
+                    <sheet>
+                        <field name="sql" nolabel="1" placeholder="Add your query..."/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- action -->
+        <record id="rpt_report_sql_action" model="ir.actions.act_window">
+            <field name="name">Run Query</field>
+            <field name="res_model">report.sql</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem id="menu_rpt_report_sql" action="rpt_report_sql_action"
+                  name="Run Query" parent="base.menu_custom"
+                  groups="base.group_no_one" sequence="59"/>
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+posting_01,izi_account_posting_01,model_account_posting,account.group_account_manager,1,1,1,1
+posting_02,izi_account_posting_02,model_account_posting_config,account.group_account_manager,1,1,1,1
+posting_03,izi_account_posting_03,model_account_posting_line,account.group_account_manager,1,1,1,1
+

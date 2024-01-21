@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="log_user_api_view_form" model="ir.ui.view">
+            <field name="name">log.user.api.view.form</field>
+            <field name="model">log.user.api</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="params" required="1"/>
+                                <field name="call_date" required="1"/>
+                                <field name="status" required="1"/>
+                                <field name="message"/>
+                                <field name="user_not_create"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="log_user_api_view_tree" model="ir.ui.view">
+            <field name="name">log.user.api.view.tree</field>
+            <field name="model">log.user.api</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="params"/>
+                    <field name="call_date"/>
+                    <field name="status"/>
+                    <field name="message"/>
+                    <field name="user_not_create"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="log_user_api_action" model="ir.actions.act_window">
+            <field name="name">Log User Api</field>
+            <field name="res_model">log.user.api</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+        </record>
+
+        <menuitem
+                id="log_user_api_menu"
+                name="Log User Api"
+                parent="base.menu_administration"
+                sequence="3"
+                action="log_user_api_action"
+                groups="base.group_system"/>
+    </data>
+</odoo>

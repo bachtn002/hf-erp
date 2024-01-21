@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_process_rule_company_rule" model="ir.rule">
+            <field name="name">Product Process Rule Company</field>
+            <field name="model_id" ref="ev_product_process.model_product_process_rule"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="product_process_company_rule" model="ir.rule">
+            <field name="name">Product Process Rule Company</field>
+            <field name="model_id" ref="ev_product_process.model_product_process"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="group_stock_cancel" model="res.groups">
+            <field name="name">Stock Cancel</field>
+            <field name="category_id" ref="base.module_category_inventory_inventory"/>
+            <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+        </record>
+
+<!--        <record id="product_process_branch_rule" model="ir.rule">-->
+<!--            <field name="name">Product Process Branch</field>-->
+<!--            <field name="model_id" ref="ev_product_process.model_product_process"/>-->
+<!--            <field name="domain_force">[('branch_id','=',user.branch_id.id)]</field>-->
+<!--            <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>-->
+<!--        </record>-->
+
+<!--        <record id="sale_order_branch_manager_rule" model="ir.rule">-->
+<!--            <field name="name">Product Process Branch Manager</field>-->
+<!--            <field name="model_id" ref="ev_product_process.model_product_process"/>-->
+<!--            <field name="domain_force">[('branch_id','in',[branch.id for branch in user.branch_ids])]</field>-->
+<!--            <field name="groups" eval="[(4, ref('stock.group_stock_manager'))]"/>-->
+<!--        </record>-->
+    </data>
+</odoo>

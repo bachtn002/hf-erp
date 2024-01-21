@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="zns_template_view_from_inherit_rate" model="ir.ui.view">
+            <field name="name">zns_template_view_from_inherit_rate</field>
+            <field name="model">zns.template</field>
+            <field name="inherit_id" ref="ev_zalo_notification_service.zns_template_view_from"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="%(param_rate_zns_action)d" type="action"
+                                string="Get Rate ZNS" class="oe_highlight"
+                                attrs="{'invisible': ['|',('template_tag', '!=', 'post_transaction'), ('status', '!=', 'enable')]}"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

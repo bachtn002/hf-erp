@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="EditListInputCustom" owl="1">
+        <div>
+            <input type="text" t-model="props.item.text" class="popup-input list-line-input"
+                   placeholder="Point" t-on-keyup="onKeyup" />
+            <i class="oe_link_icon fa fa-trash-o" role="img" aria-label="Remove" title="Remove"
+               t-on-click="trigger('remove-item', props.item)"></i>
+        </div>
+    </t>
+</templates>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<templates id="template" xml:space="preserve">-->
+<!--	<t t-name="EditListInput" t-inherit="point_of_sale.EditListInput" t-inherit-mode="extension" owl="1">-->
+<!--		<xpath expr="//div//input[hasclass('popup-input list-line-input')]" position="attributes">-->
+<!--			<attribute name="placeholder">e.g. www.foo.com</attribute>-->
+<!--		</xpath>-->
+<!--	</t>-->
+<!--</templates>-->

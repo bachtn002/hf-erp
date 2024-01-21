@@ -1,0 +1,472 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_loyalty_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-12 06:12+0000\n"
+"PO-Revision-Date: 2021-05-12 13:19+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_needaction
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_needaction
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_exception_decoration
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_exception_decoration
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_state
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_state
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_type_icon
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_type_icon
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_attachment_count
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_attachment_count
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields.selection,name:ev_pos_loyalty_custom.selection__customer_point_history__state__available,
+msgid "Available"
+msgstr "Tồn tại"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.customer_rank_form_view
+msgid "Categories"
+msgstr "Nhóm SP"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__categories_ids
+msgid "Categories not apply for pos loyalty"
+msgstr "Nhóm SP không được áp dụng chính sách hạng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.actions.act_window,help:ev_pos_loyalty_custom.action_customer_rank
+msgid "Create new rank."
+msgstr "Tạo hạng mới."
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__create_uid
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__create_uid
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__create_date
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__create_date
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__customer_point_history_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_users__customer_point_history_ids
+msgid "Customer Point History"
+msgstr "Lịch sử điểm"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.actions.act_window,name:ev_pos_loyalty_custom.action_customer_rank
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__x_rank_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_users__x_rank_id
+#: model:ir.ui.menu,name:ev_pos_loyalty_custom.customer_manager_menu
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.customer_rank_form_view
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.customer_rank_tree_view
+msgid "Customer Rank"
+msgstr "Hạng khách hàng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_customer_point_history
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.view_partner_property_inherit_form
+msgid "Customer point history"
+msgstr "Lịch sử điểm"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_customer_rank
+msgid "Customer rank"
+msgstr "Hạng khách hàng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_customer_rank_history
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__customer_rank_history_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_users__customer_rank_history_ids
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.view_partner_property_inherit_form
+msgid "Customer rank history"
+msgstr "Lịch sử hạng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__x_date_rank
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_users__x_date_rank
+msgid "Date Rank"
+msgstr "Ngày lên hạng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__date_rank
+msgid "Date rank"
+msgstr "Ngày lên hạng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__display_name
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__expire_date
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__expire_date
+msgid "Expire date"
+msgstr "Ngày hết hạn"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields.selection,name:ev_pos_loyalty_custom.selection__customer_point_history__state__expired
+msgid "Expired"
+msgstr "Đã hết hạn"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_follower_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_follower_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_channel_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_channel_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_partner_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_partner_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__activity_type_icon
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__activity_type_icon
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_exception_icon
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_exception_icon
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__activity_exception_icon
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__activity_exception_icon
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_needaction
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_unread
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_needaction
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_unread
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_needaction
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_has_error
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_has_sms_error
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_has_error
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_has_sms_error
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_has_error
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_is_follower
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_is_follower
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program____last_update
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__write_uid
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__write_uid
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__write_date
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__write_date
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model,name:ev_pos_loyalty_custom.model_loyalty_program
+msgid "Loyalty Program"
+msgstr "Chương trình khách hàng thân thiết"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_main_attachment_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_has_error
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_has_error
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_loyalty_program__x_month_expire
+msgid "Month Expire"
+msgstr "Tháng tính hạn"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__name
+msgid "Name"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_date_deadline
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_date_deadline
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_summary
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_summary
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_type_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_type_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_needaction_counter
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_has_error_counter
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_needaction_counter
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_needaction_counter
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_has_error_counter
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_has_error_counter
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__message_unread_counter
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__message_unread_counter
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__partner_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__point
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__point
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__point
+msgid "Point"
+msgstr "Điểm"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__pos_order_id
+msgid "Pos order"
+msgstr "Đơn hàng"
+
+#. module: ev_pos_loyalty_custom
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.customer_rank_form_view
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__product_ids
+msgid "Products not apply for pos loyalty"
+msgstr "SP không được áp dụng chính sách hạng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__product_id
+msgid "Promotional Products "
+msgstr "Sản phẩm chiết khấu"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__rank_id
+#: model_terms:ir.ui.view,arch_db:ev_pos_loyalty_custom.customer_rank_form_view
+msgid "Rank"
+msgstr "Hạng"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__activity_user_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__activity_user_id
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_has_sms_error
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__activity_state
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__activity_state
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__activity_exception_decoration
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__activity_exception_decoration
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_unread
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_unread
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__message_unread_counter
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__message_unread_counter
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_point_history__website_message_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank__website_message_ids
+#: model:ir.model.fields,field_description:ev_pos_loyalty_custom.field_customer_rank_history__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_pos_loyalty_custom
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_point_history__website_message_ids
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank__website_message_ids
+#: model:ir.model.fields,help:ev_pos_loyalty_custom.field_customer_rank_history__website_message_ids
+msgid "Website communication history"
+msgstr ""

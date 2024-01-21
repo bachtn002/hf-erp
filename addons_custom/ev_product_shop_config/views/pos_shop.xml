@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_product_shop_form_inherit">
+            <field name="name">view_product_shop_form_inherit</field>
+            <field name="model">pos.shop</field>
+            <field name="inherit_id" ref="ev_pos_shop.pos_shop_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[2]" position="after">
+                    <page name="product_shop" string="List Product">
+                    <div class="oe_edit_only">
+                        <button name="open_import_product" type="object"
+                                string="Import" class="oe_highlight"/>
+                        <button name="get_import_product_template" type="object" string="Tải file mẫu"
+                                            icon="fa-download" class="oe-highlight"/>
+                    </div>
+                        <field name="product_ids"
+                               options="{'no_create': True,'no_create_edit': True, 'no_open': True}">
+                            <tree>
+                                <field name="name"/>
+                                <field name="default_code"/>
+                                <field name="uom_id"/>
+                            </tree>
+                            <form create="0" edit="0">
+                                <group>
+                                    <group>
+                                        <field name="name" readonly="1"/>
+                                        <field name="default_code" readonly="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="uom_id"
+                                               options="{'no_create': True,'no_create_edit': True, 'no_open': True}"
+                                               readonly="1"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_pos_voucher_ui
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-03 09:23+0000\n"
+"PO-Revision-Date: 2021-09-03 09:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Payment/PaymentScreenPaymentLines.xml:0
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Payment/PaymentScreenPaymentLines.xml:0
+#, python-format
+msgid "* Mã:"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Payment/PaymentVoucherPopup.xml:0
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Sale/VoucherPopup.xml:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#: code:addons/ev_pos_voucher_ui/models/pos_order.py:0
+#, python-format
+msgid "Chưa có mã Lô/Seri cho sản phẩm %s."
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#: code:addons/ev_pos_voucher_ui/models/pos_order.py:0
+#, python-format
+msgid "Chưa có mã Voucher/Coupon cho thanh toán %s."
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#: model:ir.model.fields,field_description:ev_pos_voucher_ui.field_pos_order__display_name
+#: model:ir.model.fields,field_description:ev_pos_voucher_ui.field_pos_payment__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_pos_voucher_ui
+#: model:ir.model.fields,field_description:ev_pos_voucher_ui.field_pos_order__id
+#: model:ir.model.fields,field_description:ev_pos_voucher_ui.field_pos_payment__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#: model:ir.model.fields,field_description:ev_pos_voucher_ui.field_pos_order____last_update
+#: model:ir.model.fields,field_description:ev_pos_voucher_ui.field_pos_payment____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/js/Sale/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Lỗi"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Payment/PaymentVoucherPopup.xml:0
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Sale/EditListPopup.xml:0
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Sale/VoucherPopup.xml:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#: model:ir.model,name:ev_pos_voucher_ui.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: ev_pos_voucher_ui
+#: model:ir.model,name:ev_pos_voucher_ui.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Thanh toán Điểm bán hàng"
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/xml/Sale/ButtonVoucher.xml:0
+#, python-format
+msgid "Sale Voucher"
+msgstr "Bán Voucher"
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/js/Payment/PaymentScreen.js:0
+#, python-format
+msgid "Voucher Invalid"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/js/Sale/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Voucher quantity is only 1"
+msgstr "Số lượng voucher phải là 1"
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/js/Sale/ButtonVoucher.js:0
+#: code:addons/ev_pos_voucher_ui/static/src/js/Sale/ProductScreen/OrderWidget.js:0
+#: code:addons/ev_pos_voucher_ui/static/src/js/Sale/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Vui lòng nhập mã phiếu mua hàng để bán!"
+msgstr ""
+
+#. module: ev_pos_voucher_ui
+#. openerp-web
+#: code:addons/ev_pos_voucher_ui/static/src/js/Payment/PaymentScreen.js:0
+#, python-format
+msgid "Vui lòng nhập mã phiếu mua hàng để thanh toán!"
+msgstr ""

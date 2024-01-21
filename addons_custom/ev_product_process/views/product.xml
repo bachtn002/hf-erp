@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_template_property_form_inherit_manu">
+            <field name="name">product.template.form.view.manu</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.view_template_property_form"/>
+            <field name="arch" type="xml">
+                <field name="property_stock_inventory" position="after">
+                    <field name="x_property_stock_manufactory_id" invisble="1"/>
+                </field>
+            </field>
+        </record>
+<!--        <record id="product_template_inherit_view_tree" model="ir.ui.view">-->
+<!--            <field name="name">product_template_inherit_view_tree</field>-->
+<!--            <field name="model">product.template</field>-->
+<!--            <field name="inherit_id" ref="stock.view_stock_product_template_tree"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='qty_available']" position="attributes">-->
+<!--                    <attribute name="groups">purchase.group_purchase_user</attribute>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//field[@name='virtual_available']" position="attributes">-->
+<!--                    <attribute name="groups">purchase.group_purchase_user</attribute>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="product_template_kanban_stock_inherit_view" model="ir.ui.view" >-->
+<!--            <field name="name">Product Template Kanban Stock Inherit</field>-->
+<!--            <field name="model">product.template</field>-->
+<!--            <field name="inherit_id" ref="stock.product_template_kanban_stock_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='qty_available']" position="attributes">-->
+<!--                    <attribute name="groups">purchase.group_purchase_user</attribute>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+        <menuitem id="point_of_sale.pos_config_menu_action_product_pricelist"
+                  name="Price List"
+                  parent="purchase.menu_purchase_products"
+                  action="product.product_pricelist_action2"
+                  groups="purchase.group_purchase_user"
+                  sequence="20"/>
+    </data>
+</odoo>

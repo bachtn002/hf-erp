@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="abstract_loan_refund_payment_wizard_form_view" model="ir.ui.view">
+			<field name="name">abstract.loan.refund.payment.wizard.form</field>
+			<field name="model">abstract.loan.refund.payment.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Register Refund Payment">
+					<field name="payment_type" invisible="1" />
+					<field name="partner_type" invisible="1" />
+					<field name="partner_id" invisible="1" />
+					<group>
+						<group>
+							<field name="journal_id" widget="selection" />
+							<field name="hide_payment_method" invisible="1" />
+							<field name="payment_method_id" widget="radio"
+								attrs="{'invisible': [('hide_payment_method', '=', True)]}" />
+							<field name="payment_method_code" invisible="1" />
+							<field name="amount" />
+							<field name="currency_id" groups="base.group_multi_currency" />
+						</group>
+						<group>
+							<field name="payment_date" />
+							<field name="communication" />
+						</group>
+					</group>
+					<notebook>
+					</notebook>
+					<footer>
+						<button string='Validate'
+							name="action_payment_create_and_match" type="object"
+							class="btn-primary" />
+						<button string="Cancel" class="btn-default"
+							special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="loan_borrow_refund_payment_wizard_form_view"
+			model="ir.ui.view">
+			<field name="name">loan.borrow.refund.payment.wizard.form</field>
+			<field name="model">loan.borrow.refund.payment.wizard</field>
+			<field name="inherit_id" ref="abstract_loan_refund_payment_wizard_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<page string="Refunds" name="pg_refund">
+						<field name="refund_ids" />
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<act_window id="action_loan_borrow_refund_payment_wizard"
+			name="Register Refund Payment"
+			res_model="loan.borrow.refund.payment.wizard"
+			binding_model="loan.borrow.refund.line" view_mode="form"
+			context="{'default_payment_type':'outbound','default_partner_type':'lender'}"
+			target="new" />
+
+		<record id="loan_lend_refund_payment_wizard_form_view" model="ir.ui.view">
+			<field name="name">loan.lend.refund.payment.wizard.form</field>
+			<field name="model">loan.lend.refund.payment.wizard</field>
+			<field name="inherit_id" ref="abstract_loan_refund_payment_wizard_form_view" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<page string="Refunds" name="pg_refund">
+						<field name="refund_ids" />
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<act_window id="action_loan_lend_refund_payment_wizard"
+			name="Register Refund Payment"
+			res_model="loan.lend.refund.payment.wizard"
+			binding_model="loan.lend.refund.line" view_mode="form"
+			context="{'default_payment_type':'inbound','default_partner_type':'borrower'}"
+			target="new" />
+
+	</data>
+</odoo>

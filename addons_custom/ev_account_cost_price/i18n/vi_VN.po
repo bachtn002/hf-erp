@@ -1,0 +1,621 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_account_cost_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-08 11:13+0000\n"
+"PO-Revision-Date: 2021-11-08 18:14+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__account_move_name
+msgid "Account move name"
+msgstr "Bút toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__account_fiscal_month_id
+msgid "Accounting Period"
+msgstr "Kỳ kế toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__activity
+msgid "Activity"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_detail__amount
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_line__amount
+msgid "Amount"
+msgstr "Giá trị"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__type__auto
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period_line__method_add__auto
+msgid "Auto"
+msgstr "Tự động"
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Back"
+msgstr "Trở lại"
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid "Bạn đã khóa kỳ vào ngày "
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__state__calculate
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Calculate"
+msgstr "Tính toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__state__cancel
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_account_cost_price
+#: model:res.groups,name:ev_account_cost_price.group_cost_price_period_cancel
+msgid "Cancel cost price period"
+msgstr "Hủy tính toán giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__category_ids
+msgid "Categories"
+msgstr "Nhóm SP"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__company_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__company_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Condition"
+msgstr "Điều kiện tính toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__state__confirm
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__cost
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__cost
+msgid "Cost"
+msgstr "Giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.ui.menu,name:ev_account_cost_price.menu_action_cost_price_period
+msgid "Cost of Goods in the Period"
+msgstr "Tính giá vốn hàng hóa"
+
+#. module: ev_account_cost_price
+#: model:ir.actions.act_window,name:ev_account_cost_price.action_cost_price_period_manual
+#: model:ir.ui.menu,name:ev_account_cost_price.menu_cost_price_period_manual
+msgid "Cost of Goods in the Period Manual"
+msgstr "Cập nhật giá vốn thủ công"
+
+#. module: ev_account_cost_price
+#: model:ir.actions.act_window,name:ev_account_cost_price.action_cost_price_period
+msgid "Cost of Goods in the Period Materials"
+msgstr "Tính giá vốn hàng hóa"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__cost_price_period_line_id
+msgid "Cost price period line"
+msgstr "Chi tiết"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__create_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__create_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__create_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__create_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__create_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__create_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__create_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__create_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__datetime
+msgid "Date"
+msgstr "Ngày tính toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__date_from
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__date_from
+msgid "Date From"
+msgstr "Từ ngày"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__date_to
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__date_to
+msgid "Date To"
+msgstr "Đến ngày"
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid "Date from cannot later date to"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_detail__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_line__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_product__display_name
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__state__done
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Download Import Template"
+msgstr "Tải tập tin mẫu"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__state__draft
+msgid "Draft"
+msgstr "Bản thảo"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__field_binary_import
+msgid "Field Binary Import"
+msgstr "Thêm tập tin"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__field_binary_name
+msgid "Field Binary Name"
+msgstr "Tên tập tin"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid "Giá vốn của SP  nhỏ hơn 0"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_detail__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_line__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_product__id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_needaction
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_has_error
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Import"
+msgstr "Cập nhật"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__qty_initial
+msgid "Initial Qty"
+msgstr "SL đầu kỳ"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__value_initial
+msgid "Initial Value"
+msgstr "Giá trị đầu kỳ"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__inventory_valuation_group_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__inventory_valuation_group_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__inventory_valuation_group_id
+msgid "Inventory Valuation Group"
+msgstr "Nhóm kế toán kho"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_detail____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_process_line____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_product____last_update
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__write_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__write_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__write_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__write_uid
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__write_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__write_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__write_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__write_date
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__lines
+msgid "Lines"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period__type__manual
+#: model:ir.model.fields.selection,name:ev_account_cost_price.selection__cost_price_period_line__method_add__manual
+msgid "Manual"
+msgstr "Thủ công"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__method_add
+msgid "Method Add"
+msgstr "Phương thức tính toán"
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_line_form_view
+msgid "Move lines"
+msgstr "Chi tiết"
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Mẫu import có định dạng là xls hoặc xlsx"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__name
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Name"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__note1
+msgid "Note1"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__note2
+msgid "Note2"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__period_id
+msgid "Period Cost"
+msgstr "Đơn tính toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__period_line_id
+msgid "Period Line"
+msgstr "Chi tiết"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__period_lines
+msgid "Periods"
+msgstr "Chi tiết"
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.product_product_view_form_inherit_price_history
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.product_template_price_history_form_view
+msgid "Price History"
+msgstr "Lịch sử giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_product
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__product_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__product_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_product__product_price_ids
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_template__product_price_ids
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.product_product_view_form_inherit_price_history
+msgid "Product Price"
+msgstr "Giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_product__price_history_ids
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_template__price_history_ids
+msgid "Product Price History"
+msgstr "Lịch sử giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_price
+msgid "Product Price List"
+msgstr "Giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_price_history
+msgid "Product Price List History"
+msgstr "Lịch sử giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid ""
+"Product must be Average in Cost Method and Manual in Valuation Stock and "
+"'product' in Product Type "
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__qty_in
+#: model_terms:ir.ui.view,arch_db:ev_account_cost_price.cost_price_period_form_view
+msgid "Quantity in"
+msgstr "SL nhập"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_product__x_sequence_calculate
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_template__x_sequence_calculate
+msgid "Sequence Calculate"
+msgstr "Trình tự tính giá vốn"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__standard_price
+msgid "Standard Price"
+msgstr "Giá tính toán"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price__product_tmpl_id
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_product_price_history__product_tmpl_id
+msgid "Template"
+msgstr "Sản phẩm"
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid "The last period you counted was  to "
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_detail__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period_line__value_in
+msgid "Value in"
+msgstr "Giá trị nhập"
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,field_description:ev_account_cost_price.field_cost_price_period__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model.fields,help:ev_account_cost_price.field_cost_price_period__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid ""
+"You cannot add/modify entries prior to and inclusive of the lock date %s."
+msgstr ""
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid ""
+"You cannot add/modify entries prior to and inclusive of the lock date %s. "
+"Check the company settings or ask someone with the 'Adviser' role"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: code:addons/ev_account_cost_price/models/cost_price_period.py:0
+#: code:addons/ev_account_cost_price/models/cost_price_period_bk.py:0
+#, python-format
+msgid "You cannot delete record state != Draft."
+msgstr "Bạn không thể xóa bản ghi ở trạng thái khác Bản thảo!"
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_cost_price_period
+msgid "cost.price.period"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_cost_price_period_detail
+msgid "cost.price.period.detail"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_cost_price_period_line
+msgid "cost.price.period.line"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_process
+msgid "product.process"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_process_detail
+msgid "product.process.detail"
+msgstr ""
+
+#. module: ev_account_cost_price
+#: model:ir.model,name:ev_account_cost_price.model_product_process_line
+msgid "product.process.line"
+msgstr ""

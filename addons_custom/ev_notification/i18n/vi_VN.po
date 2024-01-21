@@ -1,0 +1,425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_viber_client
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 04:00+0000\n"
+"PO-Revision-Date: 2020-12-04 04:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__state__cancel
+msgid "Cancel"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__create_uid
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__create_date
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_viber_form_view
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_web_form_view
+msgid "Details"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__display_name
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__type__email
+msgid "Email"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model,name:ev_viber_client.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__viber_user_info__viber_lang__en
+msgid "English"
+msgstr "Tiếng Anh"
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__state__exception
+msgid "Exception"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_hr_employee__id
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__id
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__id
+msgid "ID"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__message_needaction
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__viber_lang
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification____last_update
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__write_uid
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__write_date
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message
+msgid "Message"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__type
+msgid "Message Type"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ev_viber_client
+#: code:addons/ev_viber_client/controllers/viber_object.py:0
+#, python-format
+msgid "Missing Viber Bot config: {0}. Please contact to Administrator"
+msgstr "Hệ thống chưa cấu hình tham số cho Viber Bot: {0}. Vui lòng liên hệ với Administrator"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__name
+msgid "Name"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ev_viber_client
+#: model_terms:ir.actions.act_window,help:ev_viber_client.res_notification_viber_action
+msgid "No Viber Notification. Let's create one!"
+msgstr "Chưa có thông báo Viber. Hãy tạo một thông báo"
+
+#. module: ev_viber_client
+#: model_terms:ir.actions.act_window,help:ev_viber_client.res_notification_web_action
+msgid "No Web Notification. Let's create one!"
+msgstr "Chưa có thông báo trên hệ thống. Hãy tạo một thông báo"
+
+#. module: ev_viber_client
+#: model:ir.ui.menu,name:ev_viber_client.menu_res_notification_root
+msgid "Notification"
+msgstr "Thông báo"
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_viber_form_view
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_web_form_view
+msgid "Notification Manager"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model,name:ev_viber_client.model_res_notification
+msgid "Notification management"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.viber_info_form_view
+msgid "Receive message able"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__state__received
+msgid "Received"
+msgstr "Đã nhận"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_viber_form_view
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_web_form_view
+msgid "Retry"
+msgstr "Thử lại"
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_viber_form_view
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_web_form_view
+msgid "Send"
+msgstr "Gửi"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__sent_datetime
+msgid "Sent Datetime"
+msgstr "Thời gian gửi"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__subscribed
+msgid "Subscribed"
+msgstr "Đã theo dõi"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,help:ev_viber_client.field_res_notification__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__type__viber
+#: model:ir.ui.menu,name:ev_viber_client.menu_res_notification_viber
+msgid "Viber"
+msgstr ""
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.viber_info_form_view
+msgid "Viber Info"
+msgstr "Thông tin Viber"
+
+#. module: ev_viber_client
+#: model:ir.actions.act_window,name:ev_viber_client.res_notification_viber_action
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_viber_tree_view
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_web_tree_view
+msgid "Viber Notification"
+msgstr "Thông báo Viber"
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_viber_filter
+msgid "Viber Notification Search"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__employee_id
+msgid "Viber Receiver"
+msgstr "Người nhận"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_hr_employee__x_viber_id
+msgid "Viber User"
+msgstr "Người dùng Viber"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__phone_number
+msgid "Viber number"
+msgstr "SDT Viber"
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_viber_user_info__viber_uid
+msgid "Viber uid"
+msgstr "Người dùng Viber"
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__viber_user_info__viber_lang__vi
+msgid "Vietnamese"
+msgstr "tiếng Việt"
+
+#. module: ev_viber_client
+#: model:ir.model.fields.selection,name:ev_viber_client.selection__res_notification__type__web
+msgid "Web"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.actions.act_window,name:ev_viber_client.res_notification_web_action
+#: model:ir.ui.menu,name:ev_viber_client.menu_res_notification_web
+msgid "Web Notification"
+msgstr "Thông báo Web"
+
+#. module: ev_viber_client
+#: model_terms:ir.ui.view,arch_db:ev_viber_client.res_notification_web_filter
+msgid "Web Notification Search"
+msgstr ""
+
+#. module: ev_viber_client
+#: model:ir.model.fields,field_description:ev_viber_client.field_res_notification__web_receiver_id
+msgid "Web Receiver"
+msgstr "Người nhận"
+
+#. module: ev_viber_client
+#: model:ir.model,name:ev_viber_client.model_viber_user_info
+msgid "viber_user.info"
+msgstr ""

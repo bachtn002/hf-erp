@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="pos_manager_order_assets" inherit_id="point_of_sale.assets" name="ev_pos_manager_order.assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/ev_pos_manager_order/static/src/js/ManagerOrder.js"/>
+            <script type="text/javascript"
+                    src="/ev_pos_manager_order/static/src/js/ManagerOrderLine.js"/>
+        </xpath>
+    </template>
+</odoo>

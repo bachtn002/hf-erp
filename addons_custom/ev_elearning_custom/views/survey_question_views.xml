@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="survey_question_form_inherit">
+            <field name="name">Form view for survey question</field>
+            <field name="model">survey.question</field>
+            <field name="inherit_id" ref="survey.survey_question_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form//sheet//notebook//page//field[@name='suggested_answer_ids']//tree//field[@name='answer_score']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_correct', '=', False)],
+                        'column_invisible': ['|', ('parent.scoring_type', '=', 'no_scoring'), ('parent.question_type', '=', 'matrix')]}
+                    </attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

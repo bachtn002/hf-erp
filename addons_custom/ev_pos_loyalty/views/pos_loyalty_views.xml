@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_pos_loyalty_inherit" model="ir.ui.view">
+            <field name="name">loyalty.program.inherit</field>
+            <field name="model">loyalty.program</field>
+            <field name="inherit_id" ref="pos_loyalty.view_loyalty_program_form"/>
+            <field name="arch" type="xml">
+<!--                <field name="points" position="after">-->
+<!--                    <field name="x_month_expire" required="1"/>-->
+<!--                </field>-->
+                <xpath expr="//div" position="after">
+                    <div>
+                        <label for="x_month_expire"/>
+                        <field name="x_month_expire" required="1"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
